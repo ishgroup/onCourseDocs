@@ -1,0 +1,534 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin+Sketch);
+
+/* Reset - Blank canvas, go. */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-spacing: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	vertical-align: baseline;
+  border-collapse: collapse;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	color: #555;
+	background-color: #fff;
+	font-size: 0.82em;
+	font-family: Corbel,"Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Helvetica,sans-serif;;
+	line-height: 1.6em;
+}
+
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+div.table-contents td, div.table-contents th {
+	border-collapse: separate;
+	border-spacing: 0;
+	line-height: 1.6em;
+	font-size: 0.9em;
+	border: 1pt solid lightgrey;
+	padding: 5px;
+    
+}
+caption, th, td {
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 3em;
+	padding: 0.8em 0 0.4em;
+  color: #F69256;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.part a,
+.chapter a {
+    color: #C8706B;
+}
+
+.part a:hover,
+.chapter a:hover,
+div.toc span.section a:hover{
+    color: #FF8A00
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+a {
+	text-decoration: none !important;
+    color: #C8706B;
+}
+a:hover{
+    color: #FF8A00;
+}
+
+/* Header */
+div.navheader {
+	color: #666;
+	font-size: 85%;
+    border-top: 13px solid #75a994;
+    background: #efebd5;
+    padding: 15px 0;
+}
+.navheader table,
+.navfooter table{
+    width: 98%;
+    margin: 0 1%;
+}
+.navheader table tbody tr:first-child [align="center"],
+.navfooter table tbody tr:first-child [align="center"]{
+    padding-bottom: 5px;
+}
+div.navheader hr {
+	display: none;
+}
+div.navheader a{
+	color: #7d7d7d;
+}
+div.navheader a:hover{
+    color: #000000
+}
+div.navheader  table  tbody  tr  th{
+    text-align: center;
+    color: #000000;
+}
+
+div.navheader td[align=right] {
+    text-align: right !important;
+}
+
+div.navheader > table > tbody > tr + tr > td[align=right] {
+	text-align: right;
+}
+/* Main area */
+/* Book */
+.book h3{
+    color: #C8706B;
+}
+
+body > .book,
+body > .part,
+body > .chapter {
+    background: #fff;
+    padding: 15px 20px 5px;
+}
+
+.legalnotice a:hover{
+    color: #C8706B;
+    border-bottom: 1px dotted #C8706B;
+}
+.list-of-tables dt{
+    color: #C8706B;
+    padding-left: 30px;
+}
+.list-of-tables p {
+    color: #F69256;
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+}
+p.copyright{
+    clear: right;
+}
+/* Footer */
+div.navfooter {
+	border-top: 1px solid #B2AEB2;
+	color: #666;
+	font-size: 85%;
+    background: #4c3b35;
+    padding: 15px 0;
+}
+div.navfooter hr {
+	display: none;
+}
+div.navfooter a{
+    color: #c0bba4;
+}
+div.navfooter a:hover{
+    color: #fff;
+}
+div.navfooter > table > tbody > tr > td[align=center], div.navfooter > table > tbody > tr + tr > td[align=center] {
+	text-align: center;
+}
+div.navfooter > table > tbody > tr > td[align=right] {
+	text-align: right;
+}
+
+/* Front page TOC */
+.book .toc, div.list-of-tables {
+  padding: 20px 0;
+}
+
+.book .toc dt {
+	padding-top: 2px;
+}
+
+.book .toc > dl > dt {
+	line-height: 1.3;
+	padding-top: 30px;
+	font-size: 1.5em;
+	font-family: 'Cabin Sketch', cursive;
+}
+
+/* Second level sections */
+.book .toc > dl > dd > dl > dt {
+  padding-top: 15px;
+}
+
+/* Third level sections */
+.book .toc > dl > dd > dl > dd > dl > dt,
+.book .toc > dl > dd > dl > dt .section{
+	padding-left: 50px;
+	font-size: 0.9em;
+}
+
+.titlepage hr {
+	display: none;
+}
+
+
+.toc a {
+	color: #555;
+}
+
+/* TOC -Parts */
+.part .toc dt {
+  padding-bottom: 5px;
+}
+
+.part .toc > dl > dt {
+  padding-top: 15px;
+}
+
+
+/* Second level sections */
+.part .toc > dl > dd > dl > dt {
+  padding-left: 25px;
+}
+
+/* TOC - Chapters */
+
+.chapter .toc {
+	float: left;
+	position: relative;
+	left: -210px;
+	font-size: 0.9em;
+  padding: 0;
+  font-size: 0.85em;
+  width: 165px;
+  margin-right: -100%;
+}
+
+.chapter .toc dt {
+  padding-top: 10px;
+  line-height: 1.4em;
+}
+
+/* Don't show TOC heading */
+.chapter div.toc > p {
+	display: none;
+}
+
+.chapter div.toc a {
+	text-decoration: none;
+  padding: 0;
+}
+
+.chapter > .titlepage h2.title {
+	border-bottom: 1px solid #F69256;
+	color: #F69256;
+	font-size: 2.6em;
+	font-family: 'Cabin Sketch', cursive;
+	line-height: 1;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+.chapter .chapter > p {
+	margin-bottom: 1em;
+	margin-left: 220px;
+}
+
+/* Main TOC */
+div.list-of-examples > p, div.toc > p {
+	font-family: 'Cabin Sketch', cursive;
+	color: #F69256;
+	margin: 20px 0 10px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #F69256;
+	line-height: 1;
+}
+div.list-of-examples dl {
+	font-size:85%;
+}
+
+/* Main content pages */
+div.chapter {
+	border-left: 1px solid #F69256;
+	margin-left: 200px;
+	padding-bottom: 5px;
+	padding-left: 30px;
+	padding-top: 0px;
+}
+
+div.chapter h2 {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 2em;
+	padding-bottom: 12px;
+  color: #F69256;
+}
+
+div.chapter h3 {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 1.5em;
+	padding-bottom: 6px;
+  color: #c86f6b;
+  padding-top: 30px;
+}
+
+div.chapter h4, div.chapter h5 {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 1.1em;
+  color: #f89157;
+  margin-top: 20px;
+}
+
+.chapter p {
+	margin-bottom: 0.6em;
+}
+
+/* Title */
+div.book h1.title {
+  text-align: right;
+	line-height: 1em;
+}
+
+.chapter > .titlepage {
+	left: -210px;
+	position: relative;
+	clear: both;
+	background: white;
+	padding-bottom: 30px;
+	padding-top: 20px;
+}
+
+.titlepage h2.title {
+  color: #F69256;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2.6em;
+  line-height: 1;
+  margin-bottom: 10px;
+  padding-top: 60px;
+}
+
+/* first heading with no text above it */
+.chapter .toc + .section h2.title {
+  padding-top: 0;
+}
+
+/* Simple lists */
+
+table.simplelist {
+	margin-left: 20px;
+	margin-top: 12px;
+}
+
+table.simplelist tr td {
+	padding-bottom: 0.6em;
+}
+
+.qandaset table tr td {
+  padding-top: 12px;
+  line-height: 1.6em;
+}
+
+/* Ordered lists */
+div.orderedlist {
+	line-height: 1.6em;
+}
+div.orderedlist ol {
+	margin-left: 30px;
+}
+div.orderedlist li {
+	list-style-type: decimal;
+	margin-bottom: 0.6em;
+}
+
+/* Itemised lists */
+div.itemizedlist {
+	margin-bottom: 10px;
+}
+
+div.itemizedlist ul {
+	margin-left: 30px;
+}
+div.itemizedlist li {
+	list-style: disc;
+	padding-top: 4px;
+}
+
+/* Variable lists */
+div.variablelist {
+	padding-top: 16px;
+}
+div.variablelist .title {
+	padding-top: 16px;
+}
+div.variablelist dt {
+	font-style: italic;
+}
+div.variablelist dd {
+	margin-bottom: 0.6em;
+}
+
+/* Q & A set */
+div.qandaset > dl {
+	margin-bottom: 0.6em;
+}
+
+/* Caution boxes */
+div.caution {
+	background: #BF3030;
+	color: #F3D9D9;
+}
+
+/* Tip boxes */
+div.tip {
+	background: none repeat scroll 0 0 #006D7F;
+	color: #D6E6E6;
+}
+
+div.caution, div.tip {
+	float: right;
+	font-size: 0.9em;
+	line-height: 1.4em;
+	margin: 20px auto !important;
+	padding: 16px 12px 16px 18px;
+	position: relative;
+	width: 220px;
+}
+
+div.caution h3, div.tip h3 {
+  color: white;
+  font-size: 2em;
+  padding-top: 0;
+}
+
+/* Pre-formatted code */
+
+pre {
+	white-space: pre-wrap;				/* css-3 */
+	white-space: -moz-pre-wrap !important;	 /* Mozilla, since 1999 */
+	white-space: -pre-wrap;			/* Opera 4-6 */
+	white-space: -o-pre-wrap;		/* Opera 7 */
+	word-wrap: break-word;				/* Internet Explorer 5.5+ */
+}
+
+pre.programlisting {
+	font-family: monospace;
+	color: #666;
+	margin-left: 20px;
+	font-size: 90%;
+	-moz-tab-size: 2;
+	tab-size: 2;
+	line-height: 1.4;
+}
+
+.tip pre.programlisting {
+	color: #b5f1da;
+	font-size:120%;
+	margin: 5px 0 0 0;
+}
+
+
+.copyright {
+	font-size: 0.7em;
+	color: #999;
+	text-align: right;
+}
+.legalnotice {
+	font-size: 0.7em;
+	color: #666666;
+	line-height: 1.5em;
+	width: 50%;
+}
+.legalnotice-title {
+	font-weight: bold;
+}
+
+.book .toc p, .part .toc p {
+	color: #F69256;
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 1.8em;
+	line-height: 1;
+	margin: 20px 0 10px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #F69256;
+}
+.chapter .toc p b{
+    display: none;
+}
+
+/* Authorgroup */
+div.authorgroup {
+	text-align: right;
+	color: #999;
+}
+div.authorgroup a {
+	color: #999;
+}
+div.authorgroup div.author {
+	display: inline-block;
+    float: right;
+	margin-left: 20px;
+}
+
+/* Images */
+
+img {
+	padding: 10px 0 10px ;
+}
+
+div.caption {
+	font-size: 0.8em;
+	color: #AAA;
+	margin: -8px 0 9px 0;
+	line-height: 1.2em;
+}
+
+.chapter a:hover {
+    color: #FF8A00;
+
+}
+
+/* table styles */
+
+div.navfooter > table > tbody > tr > td[align="right"],
+div.navfooter > table > tbody > tr > td[align="left"] {
+    color: #fff;
+}
+
+.note {
+  background: #EFEBD5;	
+}

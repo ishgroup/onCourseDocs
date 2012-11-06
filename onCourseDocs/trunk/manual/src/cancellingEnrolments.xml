@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="cancellingEnrolments">
+	<title>Cancellations, Transfers and Refunds</title>
+	<section xml:id="cancellingEnrolments-single">
+		<title>Cancelling a single enrolment</title>
+		<para>It is important to remember that within the accrual financial system of onCourse, that
+			every action has an opposite. When an enrolment is created, an invoice is generated to the
+			payer. When the payer pays the invoice, a payment in record is created. If you want to cancel
+			an invoice or refund a payment, you need to generate an equal and opposite record. To reverse
+			an invoice, you create a credit note (a negative invoice) and to give someone back their
+			money, you need to create a payment out. This section outlines the common processes involved
+			in creating credit notes and refunds.</para>
+		<example>
+			<title>How to cancel a single enrolment</title>
+			<para>If you need to remove a student from a class, due to them withdrawing or failing to
+				attend, you need to cancel their enrolment. If you wish to provide them with a credit note
+				or refund (either full or partial) you can do this at the time of the enrolment
+				cancellation. </para>
+			<para>The first step is to cancel and credit the existing enrolment.</para>
+			<orderedlist>
+				<listitem>
+					<para>Find the enrolment in the Enrolments window</para>
+				</listitem>
+				<listitem>
+					<para>Highlight the enrolment by clicking on it</para>
+				</listitem>
+				<listitem>
+					<para>Click on the cogwheel option in the top right hand corner and choose “Cancel 1
+						enrolment”. This will bring up a dialog with a checkbox offering to also
+						refund the paid enrolment fee. If you keep this ticked, you will create a
+						create note as part of this process. If you uncheck it, you will retain all
+						the student's fees as part of your business income.</para>
+				</listitem>
+				<listitem>
+					<para>Hit “Proceed”.</para>
+				</listitem>
+			</orderedlist>
+			<para>This will cancel the enrolment, and create a credit note in the system for the value of
+				the existing enrolment. Note that the credit note will apply to the original payer of the
+				invoice. This may not be the student who enrolled in the class, but their employer, parent
+				or other third party.</para>
+		</example>
+		<tip>
+			<para>Please note that a payment back to the student will not be automatically created after
+				cancelling an enrolment. That student might want use the credit to enrol into another class.
+				Or you may wish to contact the student and arrange a refund. The next sections explain these
+				options in detail.</para>
+		</tip>
+		<para> You can also elect to charge a cancellation fee (with or without tax) as per your college
+			policies. The difference between the fee paid, and the cancellation fee charged will be
+			available as credit to the student, or can be refunded to them. You can select to have this administrative fee deposited into the income account of your choice. </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/cancel_enrolment.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Cancelling an enrolment and charging a cancellation fee</para>
+			</caption>
+		</mediaobject>
+	</section>
+	<section>
+		<title>Creating a manual credit note</title>
+		<para>On occasion, you may need to create a credit note of refund for a student with out using
+			the enrolment cancellation process. This may be because you wish to offer the student a credit
+			to apply to further training (perhaps their was problem with the class they attended), because
+			they purchased another product outside of the class enrolment, or because you created a credit
+			note for the wrong amount during the enrolment cancellation.</para>
+		<para>Before you can issue any type of refund, you must create a credit note. You can do this
+			manually in the invoice window </para>
+		<example>
+			<title>How to create a manual credit note</title>
+			<orderedlist>
+				<listitem>
+					<para>Begin by opening the Invoice window. In the top right hand corner are a plus and
+						minus button. Click on the plus</para>
+				</listitem>
+				<listitem>
+					<para>In the new Invoice record window, type the name of the contact you wish to give the
+						credit note/refund too. The contact needs to already exist within onCourse. </para>
+				</listitem>
+				<listitem>
+					<para>In the invoice lines section of the window, click on the plus button to add
+						charges/credits to the record. Give your item a title, select the general
+						ledger income account it will be debited from, enter the appropriate
+						negative amount in the 'Price Each Ex Tax' field. </para>
+				</listitem>
+				<listitem>
+					<para>Enter any other relevant information and save the credit note. You will now see in
+						the list view window an unbalanced invoice for a negative amount. This is the credit
+						note.</para>
+				</listitem>
+			</orderedlist>
+		</example>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/Manual_credit_note.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Creating a manual credit note</para>
+			</caption>
+		</mediaobject>
+	</section>
+	<section>
+		<title>Manual discounts after enrolment</title>
+		<para>Sometimes students enrol in classes and pay the full fee, and after enrolment they realise a
+			discount needs to be provided as the student was eligible for a reduced enrolment
+			fee.</para>
+		<para>In onCourse, when a discount is issued the COS account Discounts Given is credited and
+			the chosen income account is debited. </para>
+		<para>To create a manual discount, follow the steps above to issue a manual credit note, but
+			enter an amount in the Discount Each ex tax field. This will create a credit note, but
+			add the cost of the discount to the COS account, just like if it was taken during the
+			enrolment.</para>
+		<para>Please note that discounts processed manually will not be linked to the class and will
+			not show in the class budget.</para>
+	</section>
+	<section>
+		<title>Using the credited amount as credit towards another enrolment</title>
+		<para>Contacts with credit will appear in the invoices window as ‘unbalanced' invoices, showing
+			with a negative balance. The next time the contact enrols, or pays for another student's
+			enrolment, they will automatically be offered their credit to use towards their fees in the
+			Quick Enrol process.</para>
+		<para>This information will show in the bottom of the quick enrol window next to previous owing
+			as a minus amount. The amount due for payment will automatically adjust. </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/credit_note_qe.png"
+					format="png" />
+			</imageobject>
+			<caption>
+				<para>A student enrolling in a class with a credit note of $200 automatically applied to
+					their balance</para>
+			</caption>
+		</mediaobject>
+	</section>
+	<section>
+		<title>Refunding a student</title>
+		<para>If you wish to give a contact back their money, you need to create a payment out record.
+			You can return cash to the payer, write a cheque, or if they have paid by a credit card
+			through onCourse (not via an EFTPOS terminal) you can automatically reverse the payment back
+			to their card. Manual credit card reversals can also be done through an EFTPOS terminal, but
+			you will need to contact the payer to get their card details first.</para>
+		<example>
+			<title>How to refund a student</title>
+			<orderedlist>
+				<listitem>
+					<para>In onCourse go to "Accounts" then "Payment Out"</para>
+				</listitem>
+				<listitem>
+					<para>Enter the name of the contact who has the credit note</para>
+				</listitem>
+				<listitem>
+					<para> You will see the total balance of their credit notes available to be refunded. Some
+						contacts may have multiple credit notes. You can refund all or a part of their total
+						balance. You can not refund more than the total balance.</para>
+				</listitem>
+				<listitem>
+					<para>Chose the method with which you wish to refund the contact. If you choose credit
+						card, any available transaction will be available from the list to reverse.</para>
+				</listitem>
+				<listitem>
+					<para>Save the payment out record. The contacts credit note balance will be reduced by the
+						amount you have just refunded.</para>
+				</listitem>
+			</orderedlist>
+		</example>
+		<section>
+			<title>A few notes on onCourse credit card reversals</title>
+			<para>onCourse does not store credit card numbers. What it does store is a transaction
+				reference number supplied by the bank. This transaction reference number allows you to
+				reverse up to the original amount paid during the transaction. This means you can refund the
+				payer with complete confidence that the payment is being returned to the original credit
+				card that paid for the enrolment.</para>
+			<para>There are some limitations that you need to be aware of however:</para>
+			<para>1. Credit card transactions are only available to reverse up to three months after the
+				after the initial date of purchase. An attempted refund to a transaction older than this
+				will fail.</para>
+			<para>2. Each transaction can only be reversed ONCE. This means that if a single transaction
+				paid for multiple enrolments, say 3 x $100 enrolments with one transaction of $300, and one
+				enrolment is cancelled and refunded to the value of $100, the remaining $200 can not be
+				refunded from the same transaction. If you want to refund the remaining $200 you will need
+				to contact the person for their card number and process it manually though an EFTPOS
+				terminal. This is a limitation imposed by the banks, not onCourse.</para>
+			<para>3. You can only refund UP TO the original amount of the transaction. You can not refund
+				the student more than they paid per transaction. For example, if two $100 enrolments we paid
+				for in separate credit card transactions by the same contact and both cancelled and eligible
+				for a refund, you would need to process two payments out of $100 each, once against each
+				transaction.</para>
+			<para>4. If the credit card you are attempting to refund has been cancelled by it's owner, or
+				expired, the attempt to refund it will fail. You will need to contact the student and
+				arrange an alternate refund method.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/accounts_paymentout.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Creating a payment out record for a refund processed</para>
+				</caption>
+			</mediaobject>
+		</section>
+	</section>
+	<section>
+		<title>Cancelling A Class</title>
+		<para> If your class is not financially viable, or needs to be cancelled for other reasons,
+			onCourse has the tools to allow you to cancel the enrolments, notify the students, refund the
+			students or provide them with credit notes, and use their credit to book them in to another,
+			or the next available class. </para>
+		<para>You can use the onCourse communication tools to contact the students and notify them that
+			their class has been cancelled, to see what kind of tool are available, see <link
+				xlink:href="#messages">messaging</link> to notify students that the class has been cancelled
+			go to "Class" and search for the cancelled class , then click on the cog wheel on the top
+			right hand side of the window and select "end message to students from 1 class". You need to
+			do this before you cancel the class. If you wish to print a class roll or other report to note
+			student responses against, you should also do this before cancelling a class. Once a class is
+			cancelled, all student enrolments are changed from 'active' to 'cancelled' preventing them
+			from printing on standard reports or being contacted as students of the class.</para>
+		<para>To cancel the class, select the class in the classes window and from the cogwheel option
+			at the top right, select “cancel class”. This action will credit the students with any amount
+			paid (or the payer of the enrolment, if someone other than the student paid) allowing you to
+			refund them, or use the credit towards another enrolment. You may also choose to apply a
+			administrative fee if you wish. </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/cancel_class.png"
+					format="png" />
+			</imageobject>
+			<caption>
+				<para>Cancelling a class</para>
+			</caption>
+		</mediaobject>
+	</section>
+	<section>
+		<title>Student Transfers</title>
+		<subtitle>How To Transfer A Student From One Class To Another</subtitle>
+		<para>If you wish to transfer a student, first you need to cancel their existing enrolment, then
+			enrol them into a new class.</para>
+		<para>Follow the steps above for cancelling a single enrolment. This will cancel the enrolment,
+			and create a credit note in the system for the value of the existing enrolment. </para>
+		<para>Now open a quick enrol screen and enrol the student into the new class that they wish to
+			pursue, as per the instructions above to enrol a student in credit.</para>
+		<section>
+			<title>What if the value of the new enrolment is more expensive than the old class or less
+				expensive?</title>
+			<para> As onCourse tracks the amount owing for the student, no money is lost by the system by
+				cancelling and refunding (be careful: as just canceling the enrolment will not do anything
+				to the amount owing – if you also want to provide credit for a transfer or refund you need
+				to tick the checkbox ‘create a credit note to refund student for the amount charged') </para>
+			<para> At the quick enrol stage, you may choose to charge them a transfer fee (click on the
+				“+” symbol) next to “Other Charges”, or give them a discount or concession if you wish.
+			</para>
+		</section>
+		<section>
+			<title>Why can't I just edit the existing enrolment? </title>
+			<para> onCourse tracks enrolments and financial data in a way which leaves a complete audit
+				trail. So at any time you will be able to see all the enrolment history for every student,
+				including enrolments they have withdrawn from. This is very important for financial auditing
+				and system security reasons which especially when several staff might be making changes or
+				looking at the history in the system. </para>
+			<para>Furthmore the refund/quick enrol process makes the workflow clearer when the new class
+				has a different cost to the old. The operator is explicitly prompted to apply transfer fees
+				(as applicable) or inform the student about the different cost. By then applying a fee or
+				discount, general ledger adjustments are kept accurate and clear. </para>
+		</section>
+		<section>
+			<title>How can I fix a mistake I made where I charged the student the wrong amount or credited
+				a credit note in error?</title>
+			<para>Remember that the opposite of an invoice is a credit note. If the student owes you more
+				than you originally charged them, create a manual invoice for the difference. If you
+				charged them too much in error, create a manual credit note for the difference. If
+				you want to check the balance of a student's account, go to the contact window and
+				print a statement report. This will show all invoices, credit notes, payments in and
+				payments out at the current balance of their account e.g. do they owe you money, do
+				you owe them money, or is everything square? You can also use the contra pay feature
+				to use the balance of a credit note to 'pay off' an outstanding balance on an
+				invoice. Select the credit note in the invoice window, and using the cog wheel
+				option 'Contra Invoice..' locate the invoice you want to pay. This only works for
+				credit notes/invoices for the same contact. </para>
+		</section>
+		<section>
+			<title> How can I use one contact's credit to pay for another student's enrolment? </title>
+			<para> If the contact in credit wishes to use their credit towards another person's enrolment,
+				follow the steps for <uri>3rd Party Payments</uri>, ensuring that you select the contact in
+				credit as the payer. </para>
+		</section>
+	</section>
+</chapter>

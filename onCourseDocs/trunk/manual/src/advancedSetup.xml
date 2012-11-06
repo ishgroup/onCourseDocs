@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="advancedSetup">
+	<title>Advanced Setup and Configuration</title>
+	<para>This chapter outlines the other setup options beyond the General Preferences set up, and
+		advanced configuration options for access control, users and groups, using external
+		databases and server memory allocation.</para>
+	<para>All of these options are available from the File > Preferences menu</para>
+	<section>
+		<title>Financial Setup</title>
+		<section>
+			<title>Finances and Accounting</title>
+			<section>
+				<title>Account set up</title>
+				<para>onCourse has full general ledger capabilities, ensuring you are always aware of your
+					profit and loss, liabilities and cash position.</para>
+				<para>To edit or add general ledger accounts, go to ‘Financial' -> ‘Accounts'</para>
+				<para>You can create your own accounts as needed, by selecting the ‘+' option. </para>
+				<para>Accounts no longer needed can be disabled.</para>
+				<para>A range of reports are available to keep you on top of your financial position.</para>
+			</section>
+			<section>
+				<title>Financial Preferences</title>
+				<para>Navigate here by clicking on “File” -> “Preferences” -> “Financial” from the top
+					menu.</para>
+				<para>Select the currency you wish to use and any local tax (e.g.GST) which may
+					apply.</para>
+				<para>Default accounts have been selected. Make any changes necessary or edit the accounts
+					to add or disable options.</para>
+				<para>If your college usually takes payment at the time of enrolment, then we
+					suggest you leave the option 'Quick enrol payments default to $0' unchecked. If
+					you usually invoice clients for payment, then select this option so you do not
+					always have to override Quick Enrol.</para>
+			</section>
+		</section>
+		<section>
+			<title>Tags</title>
+			<para>Tags are a way to customise onCourse to group and sort data based on your business
+				rules. They are also integral to website navigation. Refer to the chapter on <link
+					xlink:href="#tagging">tags</link> for more information.</para>
+		</section>
+		<section>
+			<title>Custom fields</title>
+			<para>You can create custom fields for contacts which are searchable. This allows you to create
+				fields for, and record information that is particular to your business. Some examples of how
+				this field may be used are payroll numbers, licence numbers, student numbers that stay with
+				the student between training organisations and date of initial contact. These fields can be
+				made mandatory. You can add as many additional fields as you need to, that apply to contacts.
+				These fields will appear on the bottom of the ‘general' tab in each contacts record.</para>
+		</section>
+		<section>
+			<title>Concession types</title>
+			<para>In many organisations and businesses, discounts are offered to customers based on special
+				group membership or criteria such as students, special card holders etc.</para>
+			<para>In onCourse, we can use Concession Types to define which groups of people have access to discounts by:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Associating the concession type to contact record by editing contacts/students;
+						and</para>
+				</listitem>
+				<listitem>
+					<para>Associating the concession type to a discount (see documentation on <link
+						xlink:href="#discounts">creating
+						discounts)</link></para>
+				</listitem>
+			</itemizedlist>
+			<para>Some concession types may be available for your students to add to their own record during
+				the online enrolment process, for example a Senior's Card. Other types you may want
+				to restrict to only allowing the concession to be added to the student record via
+				the onCourse client, for example College Staff. </para>
+			<para>If you require an expiry date on the concession type, any discounts that apply to
+				that concession type will not be available if the student's concession is
+				expired.</para>
+			<para>You may also choose to make entering a card number mandatory. Please note onCourse
+				is not able to validate the authenticity of card numbers due. This is an open test
+				field (string type) and will accept letters and numbers.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/create_concession.png"
+						format="png" />
+				</imageobject>
+				<caption>
+					<para>Defining the parameters of a concession type for Seniors</para>
+				</caption>
+			</mediaobject>
+			<example>
+				<title>How to create a concession type</title>
+				<orderedlist>
+					<listitem>
+						<para>Go to File -> Preferences -> Concession Types</para>
+					</listitem>
+					<listitem>
+						<para>Click the add button ( + )</para>
+					</listitem>
+					<listitem>
+						<para>Name your concession type and choose if you want it to be available for self selection
+							on the web, if it requires a number or has an expiry date.</para>
+					</listitem>
+				</orderedlist>
+				<para>Once you have created the concession type, go to discounts to define who can use it and
+					how it can be used.</para>
+			</example>
+		</section>
+		<section>
+			<title>Contact relation types</title>
+			<para>You can define how you relate contacts to each other via contact relation types. Some types
+				are already defined by default, but you can edit or delete them as needed.</para>
+			<para>A relationship has two sides i.e. parent and child. Some times both sides will
+				have the same name e.g. partner and partner. Relationships can be used to link
+				contacts together for payment and enrolment purposes e.g. when an employer pays for
+				their staff member, and also for marketing e.g. to define the HR Managers at
+				companies you deliver training to, so you can promote up coming courses.</para>
+			<para>To add or edit relationships, go to File > Preferences > Contact Relationship
+				Types and create a new record.</para>
+		</section>
+		<section>
+			<title>Reports</title>
+			<para>The report window shows a list of all the reports included in the onCourse software,
+				including sub reports. More information about reports and exports can be found in
+				the  <link xlink:href="#reports">reporting chapter</link></para>
+			<para>This is where you can add or export the existing report templates for you to
+				customise.</para>
+		</section>
+			<section>
+				<title>Export templates</title>
+				<para>This screen lists all the available export templates. Both XML and CSV templates are
+					available for most data within onCourse, allowing you to export your onCourse data for use
+					with other types of software, like spreadsheets, other databases and desktop publishing tools.
+					If you create your own custom exports, or commission ish to create some on your behalf, you
+					can add them to onCourse by clicking the <guibutton>+</guibutton>,  locating the export
+					template on your computer, and importing it into onCourse. The template will be immediately
+					added to the list. If the template already existed and this was just an updated template, then
+					the version number will be incremented.</para>
+			<para>Export templates can be exported using the cogwheel function for your to edit and
+				customise.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/export_tab.png"
+							format="png" />
+					</imageobject>
+					<caption>
+						<para>The "Export" tab</para>
+					</caption>
+				</mediaobject>
+			</section>
+		<section>
+			<title>Email Templates</title>
+			<para>These templates are the emails that are sent automatically on enrolment and payment. We
+				highly recommend you customise the fixed text in these templates to meet your own
+				terms and conditions for payment, refunds and transfers.</para>
+			<para>The email templates include tags, or fields from the database which you can add or
+				remove. If you edit the text in the tag name &lt;between these symbols> you will
+				prevent the template from working correctly.</para>
+			<para>These templates also require you to complete some contact details, for example the
+				AVETMISS details, to generate your college email, phone and fax numbers.</para>
+		</section>
+		<section>
+			<title>Tutor Roles</title>
+			<para>Tutor roles are related to the payroll function. Defining a variety of tutor roles allows
+				you to define a range of payrates that apply to your teaching staff. More
+				information is available in the <link xlink:href="#payroll">payroll chapter</link></para>
+		</section>
+		</section>
+	<section>
+		<title>Enabling advanced onCourse Features</title>
+		<para>Extend capabilities of onCourse by contacting us and enabling:</para>
+		<itemizedlist>
+			<listitem>
+				<para>An automatically updated website that is capable of web enrolments </para>
+			</listitem>
+			<listitem>
+				<para>Credit card processing (via website and onCourse client) </para>
+			</listitem>
+			<listitem>
+				<para>Delivery of SMS messages to students, tutors, classes or any contact with a mobile
+					number within onCourse.</para>
+			</listitem>
+			<listitem>
+				<para>Budgeting</para>
+			</listitem>
+			<listitem>
+				<para>Access Control (more about this below)</para>
+			</listitem>
+			<listitem>
+				<para>External database choices </para>
+			</listitem>
+		</itemizedlist>
+		<para>To do this you'll need to contact ish for a user name and password to activate those
+			features. You will be able to enter those details in your preferences within onCourse and your
+			website will be automatically updated. </para>
+	</section>
+	<section xml:id="advancedSetup-accessControl">
+		<title>Access Control (authorisation)</title>
+		<para>Access control in onCourse is the ability assign different access rights and roles to
+			different users in your organisation. There are two main aspects of Access control, "Users"
+			and "Access". Access rights restrict what parts of onCourse users can modify, print, view or
+			delete. This is an advanced feature, available for onCourse "Professional and Enterprise"
+			customers. Four pre-defined user roles are available within the system, Enrolment Officer,
+			Administration Manager, Course Manager and Financial Manager. You can modify these and create
+			new access rights groups as needed. Each user within your organisation can be given Admin
+			access rights (full access) or be added to any of your access groups. Select the access rights
+			when creating or editing user profiles, as above.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/access_control_menu.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>"Users" and "Access" menus</para>
+			</caption>
+		</mediaobject>
+		<section>
+			<title>Users</title>
+			<para>Go to File -> Preferences and select Users Add the names, user names and passwords for
+				each onCourse user. There are no limits to the number of users in onCourse. Users can be
+				deactivated if they leave your organisation.</para>
+			<itemizedlist>
+				<listitem>
+					<para>Login - What you use along with the password to login into onCourse e.g: Login :
+						John</para>
+				</listitem>
+				<listitem>
+					<para>Password</para>
+				</listitem>
+				<listitem>
+					<para>First Name</para>
+				</listitem>
+				<listitem>
+					<para>Last Name</para>
+				</listitem>
+				<listitem>
+					<para>Default administration centre - The Default administration centre refers to the
+						physical site where your staff are working. From the drop down menu select that site.
+					</para>
+				</listitem>
+				<listitem>
+					<para>Email</para>
+				</listitem>
+				<listitem>
+					<para>Active - selecting this allows the user to login to onCourse. If active is not
+						selected, the user will receive an "authentication failed" message at the onCourse login
+						screen.</para>
+				</listitem>
+				<listitem>
+					<para>Admin - Checking this will allow the user to be an admin, they will have many access
+						rights and can assign roles and rights to other users.</para>
+				</listitem>
+				<listitem>
+					<para>Last logged on - not editable, just tells you when that user last logged on.</para>
+				</listitem>
+			</itemizedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/users_screenshot.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>The "new user" window</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Access</title>
+			<para>To access the "Users" menu, in onCourse go to File > Preferences > Access.</para>
+			<para>Here you can create roles for users, e.g; "Administration Manager." This window is a
+				very useful and powerful tool that allows you to assign differing roles depending on your
+				preferences. An example would be the organisations accountant getting access to the
+				"Account" side of onCourse rather than a user who would not know much about accounting. Once
+				you click on the + button on the top right hand side of the window, you will be able to edit
+				the following: </para>
+			<itemizedlist>
+				<title>Before we delve into the specifics of the Access menu, it's important to know what
+					each option means, note that if an option like "create" is greyed out, it usually means
+					that it doesn't apply to that particular area of onCourse.:</title>
+				<listitem>
+					<para>View - When this is selected, the user will be able to view what the box falls
+						under, e.g; User John can view contacts because the "view" checkbox is checked under
+						"contacts".</para>
+				</listitem>
+				<listitem>
+					<para>Edit - The user can edit whatever is checked, e.g; User John can edit contact
+						details because the "edit" checkbox under "contact" is checked.</para>
+				</listitem>
+				<listitem>
+					<para>Create - The user can create whatever is checked, e.g; User John can create a
+						contact because the "create" checkbox under "contact" is checked</para>
+				</listitem>
+				<listitem>
+					<para>Delete - The user can delete whatever is checked, e.g; User John can delete a
+						contact because the "delete" checkbox under "contact" is checked</para>
+				</listitem>
+				<listitem>
+					<para>Print - The user can print whatever is checked, e.g; User John can print a report
+						because the "print" checkbox under "report" is checked</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<title>What can you edit in the "Access" menu?</title>
+				<listitem>
+					<para>Name - here you define the name of the role, e.g; "Administration Manager".</para>
+				</listitem>
+				<listitem>
+					<para>People and companies</para>
+					<itemizedlist>
+						<listitem>
+							<para>Contact</para>
+						</listitem>
+						<listitem>
+							<para>Users</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Course Management</para>
+					<itemizedlist>
+						<listitem>
+							<para>Course</para>
+						</listitem>
+						<listitem>
+							<para>VET course details</para>
+						</listitem>
+						<listitem>
+							<para>Class</para>
+						</listitem>
+						<listitem>
+							<para>Enrolment outcomes</para>
+						</listitem>
+						<listitem>
+							<para>Budget</para>
+						</listitem>
+						<listitem>
+							<para>Session</para>
+						</listitem>
+						<listitem>
+							<para>Waiting list</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>VET Management</para>
+					<itemizedlist>
+						<listitem>
+							<para>Qualification reference data</para>
+						</listitem>
+						<listitem>
+							<para>Certificate</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Resources</para>
+					<itemizedlist>
+						<listitem>
+							<para>Site</para>
+						</listitem>
+						<listitem>
+							<para>Room</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Financial</para>
+					<itemizedlist>
+						<listitem>
+							<para>Enrolment</para>
+						</listitem>
+						<listitem>
+							<para>Custom enrolment discount</para>
+						</listitem>
+						<listitem>
+							<para>Discount</para>
+						</listitem>
+						<listitem>
+							<para>Tutor roles</para>
+						</listitem>
+						<listitem>
+							<para>Tutor pay</para>
+						</listitem>
+						<listitem>
+							<para>invoice</para>
+						</listitem>
+						<listitem>
+							<para>Credit note</para>
+						</listitem>
+						<listitem>
+							<para>Payment In</para>
+						</listitem>
+						<listitem>
+							<para>Payment Out</para>
+						</listitem>
+						<listitem>
+							<para>Purchase</para>
+						</listitem>
+						<listitem>
+							<para>Account</para>
+						</listitem>
+						<listitem>
+							<para>Transaction</para>
+						</listitem>
+						<listitem>
+							<para>Financial preferences</para>
+						</listitem>
+						<listitem>
+							<para>Banking</para>
+						</listitem>
+						<listitem>
+							<para>Reconcilliation</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Special actions</para>
+					<itemizedlist>
+						<listitem>
+							<para>Class duplication/rollover</para>
+						</listitem>
+						<listitem>
+							<para>Class cancellation</para>
+						</listitem>
+						<listitem>
+							<para>Exporting to inDesign</para>
+						</listitem>
+						<listitem>
+							<para>Creating certificate from class</para>
+						</listitem>
+						<listitem>
+							<para>Contact merging</para>
+						</listitem>
+						<listitem>
+							<para>Enrolment cancellation</para>
+						</listitem>
+						<listitem>
+							<para>Export AVETMISS</para>
+						</listitem>
+						<listitem>
+							<para>Data import</para>
+						</listitem>
+						<listitem>
+							<para>Export DET AVETMISS</para>
+						</listitem>
+						<listitem>
+							<para>Override tutor payrate</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Messaging</para>
+					<itemizedlist>
+						<listitem>
+							<para>Email up to 50 contacts</para>
+						</listitem>
+						<listitem>
+							<para>Email over 50 contacts</para>
+						</listitem>
+						<listitem>
+							<para>SMS up to 50 contacts</para>
+						</listitem>
+						<listitem>
+							<para>SMS over 50 contacts</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Web and content management</para>
+					<itemizedlist>
+						<listitem>
+							<para>Attachment</para>
+						</listitem>
+						<listitem>
+							<para>Tag</para>
+						</listitem>
+						<listitem>
+							<para>Web page</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Other</para>
+					<itemizedlist>
+						<listitem>
+							<para>Report</para>
+						</listitem>
+						<listitem>
+							<para>General preferences</para>
+						</listitem>
+						<listitem>
+							<para>Change administration centre</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+			</itemizedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/access_window.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>The "role" window</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Setting up Active Directory (AD) authentication and authorisation.</title>
+			<para>The below example has been completed with Windows Server 2003 R2 SP2 and onCourse
+				1.7.13. onCourse has the ability to use an external LDAP/AD server for authentication and
+				authorisation, what we mean by this is that you do not need to use the onCourse user and
+				group database but you can use your already setup AD database. Firstly on your Windows
+				Server 2003 Machine go to "My Computer" right click and select "Properties" and you will
+				find the following screen.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/Windows_2003_system_properties.png" format="png" />
+				</imageobject>
+			</mediaobject>
+			<para>Please take careful note of the "Full Computer Name" and the "Domain" as with this
+				information you now have the building blocks for our configuration.</para>
+			<para>Now the next thing we need to get the LDAP/AD authentication working is either the
+				Administrator password or, a user account which is a member of the Administrators group.
+				This is because when a query happens on the AD server it is required to login first before
+				it can do any searches on users. If your administrators want to lock it down further they
+				are welcome to do so, we only need read access to all user and group objects in the AD as
+				well as the passwords for all of those users. So now we enter "Active Directory Users and
+				Computers" and create our user: <mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/Create_a_win_2003_user.png" format="png" />
+					</imageobject>
+				</mediaobject> and add it to the administrators group and remember your password!</para>
+			<para>Now we have everything we need! Complete the setup screen as follows:</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/onCourse_LDAP_AD_screen_setup.png" format="png" />
+				</imageobject>
+			</mediaobject>
+			<para>Once you have substituted all of the settings as necessary press the "Test Connection"
+				button to ensure that onCourse can bind to the LDAP server. Once that works, you can then go
+				to the "Users" section of this configuration page and place "sAMAccountName" and
+				(objectClass=user) for the search filter. Now test a user in your domain and see if it
+				authenticates. If it works, congratulations you are now authenticating against your AD
+				server!</para>
+		</section>
+		<section>
+			<title>AD Authorisation</title>
+			<para>Authorisation is the process of giving your users the correct rights when they are
+				logged in, this has a direct relationship with the different roles you can setup or create
+				within onCourse. If you wish to use your AD server to allocate roles to your users, complete
+				the following:</para>
+			<para>At the top of your "Active Directory Users and Computers" create an "Organizational
+				Unit" (OU) and call it "onCourse".</para>
+			<para>In that OU create security groups which reflect the names of the roles in onCourse. Say
+				for example the roles which are build into onCourse (you can find this in "File" -->
+				"Preferences" --> "Access" in onCourse):</para>
+			<para>
+				<itemizedlist>
+					<listitem>
+						<para>Administration Manager</para>
+					</listitem>
+					<listitem>
+						<para>Course Manager</para>
+					</listitem>
+					<listitem>
+						<para>Enrolment Officer</para>
+					</listitem>
+					<listitem>
+						<para>Financial Manager</para>
+					</listitem>
+				</itemizedlist>
+			</para>
+			<para>You can add or delete roles here as you wish but a corresponding group must exist in AD
+				for the authorisation/access rights to be allocated.</para>
+			<para>When you have created those groups in AD add the necessary users who belong to each
+				group.</para>
+			<para>We can then turn it on the onCourse preferences under LDAP/Authorisation and Roles and
+				set it up the same as the following picture:</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/LDAP_AD_authorisation_settings.png" format="png" />
+				</imageobject>
+			</mediaobject>
+			<para>That is all for Windows Server AD/LDAP authentication and authorisation! good
+				luck!</para>
+		</section>
+	</section>
+	<section xml:id="serverconfigurationfile">
+		<title>Server configuration file</title>
+		<para>Sometimes the onCourse server defaults aren't perfect for your office. Ports may be
+			blocked, another server might already be set up. We've added the ability to specify useful
+			parameters in a configuration file that onCourse Server will check on startup. </para>
+		<para>Create a text file called with the name “onCourse.cfg” and place in the same folder as the
+			onCourse Server executable, whether that be running on Windows (.exe), OSX (.app) or
+			Unix/Linux (.jar). </para>
+		<para> The directives allowed in this file are:
+			<programlisting>
+		ip – specify which IP addresses to listen on. Repeat this line as many times as you require.
+		port – specify which port to listen on for non-SSL client connections (Specify the port as 0 to disable non-SSL connections)
+		ssl_port – specify which port to listen on for SSL client connection. (Specify the port as 0 to disable SSL connections)
+		db – specify and URI for your database.
+	 </programlisting></para>
+		<para> A sample onCourse.cfg might contain:
+			<programlisting>
+		port=0
+		ssl_port=8182
+		db=jdbc:mysql//db.example.com/onCourse
+		ip=192.168.0.1
+		ip=192.168.0.2
+			</programlisting></para>
+		<para>examples of URLs for internal Derby database (OS X, FreeBSD):
+			<programlisting>
+		db=jdbc:derby:/Users/admin/onCourse/
+		db=file:/Users/admin/onCourse/
+</programlisting></para>
+		<para>examples of URLs for internal Derby databse (Windows):<programlisting>
+		db=jdbc:derby:/C:/onCourse/
+		db=file:/C:/onCourse/
+				</programlisting><note>
+				<para>
+					<simplelist>
+						<member> use 3 slashes after the protocol name “file” in both cases </member>
+						<member> use /, not \ also under Windows </member>
+						<member> onCourse will replace all white spaces with “%20”, If you use windows or there
+							are white spaces in the URI path you must surround the URI with “. </member>
+					</simplelist>
+				</para>
+			</note></para>
+	</section>
+	<section>
+		<title>Using an external database</title>
+		<para>In order to connect to external databases such as MySQL and MS SQL, onCourse Server needs
+			to know where the external database lives. This can be done by using a server configuration
+			file, see <xref xlink:href="#serverconfigurationfile" /> below. Starting the server with
+			special arguments (in the cases of headless configurations commonly found on Unix-derivative
+			systems such as FreeBSD, Linux and Solaris), or choosing the external database option through
+			GUI when first starting onCourse Server. <note>
+				<para>connecting to an external database is a paid for feature, you must contact us to
+					enable it. </para>
+			</note></para>
+		<para>A valid URI contains the following information: <simplelist>
+				<member> host, e.g. 203.29.62.146 or delish.ish.com.au </member>
+				<member> port, e.g. 1376, 3306 or 1521 </member>
+				<member> database name, e.g. onCourse </member>
+				<member> user name, e.g. oncourse </member>
+				<member> password, e.g. oncourse </member>
+				<member> every vendor has its own URI (URL) format which has to be used (remind quotations)
+				</member>
+			</simplelist> MS SQL Server:
+			<programlisting>
+				  db=jdbc:jtds:sqlserver://&lt;host>:&lt;port>/&lt;dbName>;user=username;password=password
+				  db=jdbc:jtds:sqlserver://203.29.62.146:1376/onCourse;user=oncourse;password=oncourse
+				</programlisting>
+			MySQL:
+			<programlisting>
+				  db=jdbc:mysql://&lt;host>:&lt;port>/&lt;dbname>?user=username&amp;password=password
+				  db=jdbc:mysql://delish.ish.com.au:3306/onCourse?user=oncourse&amp;password=oncourse
+				</programlisting>
+			It is not necessary to specify a port, if the default port is used. </para>
+		<para> More information about URIs at <link
+				xlink:href="http://blogs.msdn.com/ie/archive/2006/12/06/file-uris-in-windows.aspx"
+				>http://blogs.msdn.com/ie/archive/2006/12/06/file-uris-in-windows.aspx</link>
+		</para>
+	</section>
+	<section>
+		<title>Server Memory Allocation</title>
+		<para>In addition, you can specify a different memory utilisation for onCourse Server. onCourse
+			Server will try to use all the memory you allocate to it, since it makes use of that memory
+			for caching. Up to a certain point, adding more memory will help, but after that more memory
+			will have no effect or even slow things down since the server has more work to do managing all
+			that cache. You will have to tune your settings according to your own needs, but the default
+			will do fairly well for most installations.</para>
+		<para>If you are running Linux or Unix, you will find the necessary settings in the startup
+			script. On Windows you need to create a text file with the name onCourseServer.vmoptions or
+			onCourseService.vmoptions. The name of this file before the dot must match exactly the name of
+			your executable before the dot. In that file put
+			this:<programlisting>-Xmx1500M</programlisting></para>
+		<para>That will increase the cache to 1500 Mb for onCourse Server. About another 80Mb will be
+			used by the application itself, so the total usage will be those two combined. On Windows
+			32bit, never go past 1.5Gb for onCourse because of limitations in Windows. A Unix or OSX 32bit
+			environment will allow you to assign up 3.5Gb.</para>
+		<para>The onCourseServer.log will report errors of java.lang.OutOfMemoryError if you have given
+			the onCourse Server insufficient RAM for your usage requirements. Prior to this your end users
+			may also detect processing errors, such as failing enrolments.</para>
+		<para>Beyond what you have allocated to onCourse, make sure the server has sufficient RAM to run
+			the operating system and other applications. It is very important that the server doesn't swap
+			memory to disk at any time or you will encounter major performance problems.</para>
+		<para>In a 64bit operating system you can install more than 4Gb of RAM in the server memory. OS
+			X users will be running 64bit by default. We recommend installing 64bit operating systems for
+			all servers.</para>
+	</section>
+</chapter>

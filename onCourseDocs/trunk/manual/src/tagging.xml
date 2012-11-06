@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="tagging">
+	<title>Tags and Tag Groups</title>
+	<section xml:id="tagging-usingTags">
+		<title>Using Tags</title>
+		<para> Tags can be created and added by navigating to "File" -> "Preferences" -> "Tags". This
+			will bring up a list of Tag groups. Tags are flexible ways for you to categorise your data and
+			organise the navigation of your website. </para>
+		<para> You can create a Tag group which may contain any number of arbitrary tags, choose to
+			which pieces of information such as Courses, Classes, Students etc, that you wish to apply it
+			to, whether it's mandatory for all records to have a tag, and if you want to limit each record
+			to only one tag from within this tag group. </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/tag_application.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Configuring a tag and what it will be applied to within onCourse</para>
+			</caption>
+		</mediaobject>
+		<para>The tag preferences edit view also allows a user to apply a sort order to those tags. If you
+			wish to display the tags in a given order, you simply drag and drop a given tag item
+			within a group to the place in the heirarchy you wish it to go. </para>
+		<para>In the following screen image, by hi-lighting a given tag within the list, you can then drag and drop that tag into another position in the overall list. This tag display order will also be mimicked on your onCourse website for tags under the "Subjects" tag group</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/adjustment_of_tag_weighting.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Adjusting the tag weighting via tag group edit view</para>
+			</caption>
+		</mediaobject>
+		<section>
+			<title>Subjects Tag Group</title>
+		<para> The main tag group, used to drive your website and in the export of courses and classes
+			for print production, is the "Subjects" tag group. You can create the subjects that are
+			appropriate for your college, and any sub categories needed. You can decide if tagging is
+			mandatory or optional, and if courses can have more than one tag. Giving courses multiple tags
+			mean they can be listed in multiple place on your website. For example, an MYOB course could
+			be tagged with both 'Accounting' and 'Computers'.</para>
+		<para>You can add any number of tags by clicking on the "+" icon. To add a subcategory tag,
+			first click on a tag to select it and then click once again on the "+" icon</para>	
+		<para>When setting up your subject tags, it is advisable to only apply these subject tags to
+			courses and not to classes, students or sites. The reason for this relates back to the
+			hierarchical structure of the subject tag and the information that is connected back to a
+			course.</para>
+		<para>For example, a course within the database will have a class connected to it and within
+			that class you would have a tutor assigned, room allocated and students enrolled in that
+			class. What this means from a filtering perspective within the database, is that by merely
+			applying a subject tag to a course, when you apply the filter of the subject tag within any
+			window, any information such as class or student or tutor or site which is connected back to a
+			tagged course, will automatically be displayed.</para>
+		<para>To further illustrate this, in the following image, you can see in the class window, the
+			information has been filtered by the "general dentistry" subject tag. So even though the
+			classes listed are not tagged with that "general dentistry" subject tag, because these classes
+			all relate to a course that has been given the '"general dentistry" subject tag, they will
+			display automatically.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/filtering_class_by_course_subject_tag.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Filtering Classes by a Course subject tag</para>
+			</caption>
+		</mediaobject>
+		</section>
+		<section>
+			<title>Tags as Filtering Tool within onCourse Client</title>
+			<para>The tags that display within the left hand pane of a given window, provide the user with a number of different options in terms of searching and sorting of information. You can utilise the tags within the a window in a number of ways:
+			<itemizedlist>
+				<listitem>
+					<para>Use the tags to filter / view records within a given window. You can also use your tags
+							within advanced search by use of the search parameter of "tagged with
+							(including children)". This means the search will include any records
+							which have been tagged with second or third level tags within the
+							heirarchy (also known as "children")</para></listitem>
+				<listitem>
+					<para>Expand and collapse a given tag group within the left hand pane by clicking on the name of the tag group (show / hide)</para>
+				</listitem>
+				<listitem>
+					<para>Tag groups for courses and classes are shown twice as filter options in the contact window, once for filtering students enrolled in, and a second time to filter for tutors teaching classes that are tagged with that tag option.</para>
+				</listitem>
+			</itemizedlist>
+			</para>
+		</section>
+		<section>
+			<title>Tags on your onCourse Website</title>
+		<para>This same logic of displaying all related information from a tagged course, is also
+			utilized on your website, so when you click on "general dentistry" on your website, those
+			courses with that tag and all related classes, tutor and room information will automatically
+			be displayed, without the need to apply that subject tag to any other piece of data within the
+			database, other than the course. </para>
+		<para>The subject tag group also has a special meaning when used as a filter within the contacts
+			window. When used in conjunction to the core student filters, it means "show all students
+			enrolled in classes that belong to courses tagged with....". When used in conjunction with the
+			tutor core filters it means "show all tutors assigned to classes that belong to courses tagged
+			with....". </para>
+		<para>If you apply the tag directly to contact records as well as courses, the meaning of the
+			filter will change to also include the meaning above "AND show me all the contacts tagged
+			with" which can lead to a returned results list that doesn't make much sense to the user.
+		</para>
+	</section>	
+		<section>
+			<title>Tagging as it relates to the Website URL</title>
+			<para>If you set up a first level tag within the subjects tag group which is entitled "Arts", the
+				URL for that tag on your website would display as /courses/arts</para>
+			<para>You can also display second and third level tag heirarchy within the URL, here is an
+				example of a second level tag entitled "Photography" under the Arts tag:
+				courses/arts/photography</para>
+			<para>Whilst the default tag structure for website URL's are set to recognize tags under the
+				Subjects tag group, you can also apply first level tags from other tag groups, as
+				long as you define the tag group as being <guilabel>web visible</guilabel>. An
+				example of utilzing a different tag group within a URL would be as follows:
+				/courses/VET.</para>
+			<note>
+				<para>Within the tag group edit view window, you can add an abbreviated version of the tag name.
+					This abbreviated tag name will only be applicable to the URL for that tag, the
+					onCourse client will always display the longer version that tag name within
+					onCourse. To create the abbreviated name, simply tick the <guilabel>show abbreviated name</guilabel> box within the tag settings, you can then enter the abbreviated name in the new field that appears. </para>
+			</note>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/abbreviated_tag_name.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Example of an abbreviated tag name which can be set within the tag preferences of
+						onCourse</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Utilizing Tag Web Descriptions</title>
+			<para>Just as the Courses and Classes flow through via the website from whichever Subjects tag
+				you attach via onCourse, you can also add a tag web description, which will display
+				on your website at the top of the course list for that tag. </para>
+		<para>As you can see in the above image, in order to display the web description and any images you may attach, you need to do the following:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Flag the tag as <guilabel>web visible</guilabel>within the tag set up</para>
+				</listitem>
+				<listitem>
+					<para>Using rich text, enter the information, description of the tag into the <guilabel>detail</guilabel>field for that tag</para>
+				</listitem>
+				<listitem>
+					<para>You can also add images to the tag web description by uploading the image to onCourse via
+						the <guilabel>Resources > Attachments</guilabel>menu. </para>
+					<para>For more information about rich text and adding images, refer to the <xref xlink:href="#richText"/> chapter of the User Handbook.</para>
+				</listitem>
+			</itemizedlist>
+		</section>
+	</section>
+	<section xml:id="tagging-flexible">
+		<title>A flexible way to add classification and structure to your data</title>
+		<para>Did you ever want a program to classify information in a way that was specific to your
+			business, but found that it involved expensive modifications to the software? Not so
+			with onCourse – you can structure your courses and classes in a way that suits your
+			college. Like to organise and work with classes by term or semester? No problem. Want to
+			classify classes by region or subject area? Easy. Need to separate tutors into those
+			currently working for your college, those proposing new programs that haven't run yet
+			and those held in reserve in case a regular staff member is absent? Can do. We call it
+			tagging. You call it running your college and interacting with your business critical
+			data in the most efficient way possible.</para>
+		<para>The “tagging” concept for courses, classes, web pages and other content allows you to
+			build rich ways to navigate through your data. You may wish to group all courses as part of a
+			specific promotion and have that grouping display as a list on your web site. Or you may wish
+			to have a purely internal classification of areas of responsibility for classes. Think of this
+			like categories and subcategories which extend as many levels as you want and with much more
+			flexibility, not just for the web site but for your internal use as well. </para>
+		<itemizedlist>
+			<title>Scenario 1:</title>
+			<listitem>
+				<para>The scenario: Your college produces a quarterly publication that contains all
+					scheduled programs for that term. When your staff are working with classes and enrolments,
+					they are usually working within the current term open for enrolment </para>
+			</listitem>
+			<listitem>
+				<para>The solution: Tag classes by year and term</para>
+			</listitem>
+			<listitem>
+				<para>How do you tag classes by year and term? Follow these steps:</para>
+			</listitem>
+		</itemizedlist>
+		<orderedlist>
+			<listitem>
+				<para>In onCourse, select file, preferences, tags</para>
+			</listitem>
+			<listitem>
+				<para>Add a new tag group</para>
+			</listitem>
+			<listitem>
+				<para>Create a name such as “Year and Term”</para>
+			</listitem>
+			<listitem>
+				<para>Decide what your tag will be applied to. In this case, we will select Classes and
+					because we want every class to be assigned a year and term (but only one), select both
+					mandatory and limit to one tag</para>
+			</listitem>
+			<listitem>
+				<para>Click on the plus sign to add a tag. The first tag we create will be the current year.
+					Name the tag 2007 (the name and short name can be the same)</para>
+			</listitem>
+			<listitem>
+				<para>Click on the 2007 that has now appeared in the list and click the plus sign again.
+					This will allow you to add sub tags to 2007 – the terms.</para>
+			</listitem>
+			<listitem>
+				<para>Create each of the Terms you wish to refer to. e.g. Term 1, Term 2, Term 3, Term 4.
+					Ensure each time you wish to add a sub tag you select the parent tag (2007) before
+					selecting to add the new tag. If you make a mistake, you can select the minus sign to
+					remove the tag.</para>
+			</listitem>
+			<listitem>
+				<para>Save your tags. You are now ready to assign them to classes.</para>
+			</listitem>
+		</orderedlist>
+		<itemizedlist>
+			<title>Scenario 2</title>
+			<listitem>
+				<para>The scenario: You manage a lot of casual, sessional and contract staff that provide a
+					range of classes for your college. Keeping them organised in to types of staff would make
+					it easier to contact them at appropriate times</para>
+			</listitem>
+			<listitem>
+				<para>The solution: Create a range of tutor tags that you can use to run searches on, then
+					sms or email them as needed.</para>
+			</listitem>
+			<listitem>
+				<para>How do you create a range of tutor tags? Follow these steps:</para>
+			</listitem>
+		</itemizedlist>
+		<orderedlist>
+			<listitem>
+				<para>In onCourse, select file, preferences, tags</para>
+			</listitem>
+			<listitem>
+				<para>Add a new tag group</para>
+			</listitem>
+			<listitem>
+				<para>Create a name such as “Tutor Type”</para>
+			</listitem>
+			<listitem>
+				<para>These tags will apply to tutors. Not every tutor will fit in to one of these tag
+					groups, and some may fit in to more than one, so we will keep the remaining options
+					(mandatory and limit to one tag) empty</para>
+			</listitem>
+			<listitem>
+				<para>Click on the plus sign to add a tag. Some tag types may be VET Tutor, ELLN Tutor,
+					Contract Tutor, General Program Tutor, Pending Tutor</para>
+			</listitem>
+			<listitem>
+				<para>You can add descriptions to each tag type so your fellow staff members know what the
+					tag means.</para>
+			</listitem>
+			<listitem>
+				<para>You may wish to create sub categories within some tutor types</para>
+			</listitem>
+			<listitem>
+				<para>Save your tags. You are now ready to assign them to tutors.</para>
+			</listitem>
+		</orderedlist>
+	</section>
+	<section xml:id="tagging-filter">
+		<title>Creating a filter in advanced search to make tagging more powerful.</title>
+		<para>You can create a filter that will list classes for a Term. You can create Tag Groups and
+			sub-tags to achieve this, however you can also achieve the same result with less work:</para>
+		<example>
+			<title>How to create a Filter using Advanced Search: </title>
+			<orderedlist>
+				<listitem>
+					<para> Click on the magnify glass in the top left-hand corner </para>
+				</listitem>
+				<listitem>
+					<para> In the Advanced Find window; - choose to Find records matching ALL of the following
+						- Start date/time : after : [The day before the first day of term 1] - then click "Add
+						Search Line" and set Start date/time : before : [The day after the last day of term 1]
+					</para>
+				</listitem>
+				<listitem>
+					<para> Click on the Cog Wheel, then choose Save Find, name the Find to "Term 1", you can
+						choose to make this filter visible to yourself or, to all staff using onCourse, then
+						click Save.</para>
+				</listitem>
+			</orderedlist>
+			<para>If you recieve the following message: "There are X records linked to this tag. Making
+				this tag mandatory can cause those records XX_XX to become invalid, are you sure you want to
+				proceed?", you should select no. It's best to avoid making any classes invalid. </para>
+			<para>In this case, we would recommend not making the tag mandatory initially, then going to
+				all classes and tagging them with the relevant term. Once all classes have been tagged with
+				a term, then you can go back to your tag settings and make it mandatory. </para>
+		</example>
+	</section>
+	<section xml:id="tagging-bulk">
+		<title>Tagging and Untagging multiple records</title>
+		<para>A great feature in onCourse is "Bulk tagging", this is just like regular tagging except
+			you are applying this tag to multiple elements like courses, classes, contacts etc</para>
+		<example>
+			<title>How to bulk tag</title>
+			<orderedlist>
+				<listitem>
+					<para>First, make sure that you have tags created, if not go to File > Preferences > Tags
+						and set this up (see above for more on this).</para>
+				</listitem>
+				<listitem>
+					<para>When tags are created, open up a list view window like "Tutors"</para>
+				</listitem>
+				<listitem>
+					<para>Highlight a few tutors by multi-selecting</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/multiTag1.png" format="png" />
+						</imageobject>
+						<caption>
+							<para>Multi selecting the records to tag</para>
+						</caption>
+					</mediaobject>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/multiTag2.png" format="png" />
+						</imageobject>
+						<caption>
+							<para>The Add/Remove options when you right click on tags</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+				<listitem>
+					<para>On the left, go to the tag you want, e/g; "Subject > Computing" and right click on
+						it</para>
+				</listitem>
+				<listitem>
+					<para>Once you right click on the tag you want you have two options:</para>
+					<orderedlist>
+						<listitem>
+							<para>"Add this tag to X highlighted records"</para>
+						</listitem>
+						<listitem>
+							<para>"Remove this tag from X highlighted records"</para>
+						</listitem>
+					</orderedlist>
+				</listitem>
+				<listitem>
+					<para>After you select your option click on "continue" and wait for it to process.</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/multiTag3.png" format="png" />
+						</imageobject>
+						<caption>
+							<para>Confirm your tagging selection</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+			</orderedlist>
+			<para> After all this is finished, the records you highlighted will now have that tag.</para>
+			<para>To bulk remove tags from records, simply follow the steps above but choose "Remove this
+				tag from X highlighted records " instead of "Add this tag to X highlighted records"</para>
+		</example>
+		<para> More information about the bulk <uri>email and SMS functionality</uri> in onCourse.
+		</para>
+	</section>
+</chapter>

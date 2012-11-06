@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="classes">
+	<title>Creating Classes</title>
+	<section xml:id="classesCreating">
+		<title>onCourse Terms and Definitions</title>
+		<variablelist>
+			<varlistentry>
+				<term>Course</term>
+				<listitem>
+					<para>A course is the training product delivered by your organisation. For example:
+						Computers for Beginners, Advanced Jewellery Making or MYOB for Professionals. A course
+						can be given any course code to identify that course uniquely. </para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Class</term>
+				<listitem>
+					<para>A class is the instance of a course run at a particular time and date, led by one or
+						more tutors and with a group of students enrolled. Classes may meet for one or more
+						sessions depending on the subject outline and timetable. </para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Timetable</term>
+				<listitem>
+					<para>Each class has a timetable which represents each meeting between the students and
+						the tutor(s). The timetable can link to rooms and sites and each session in the
+						timetable has the flexibility to be allocated to a different tutor or a different room.
+					</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Students</term>
+				<listitem>
+					<para>A student is a person enrolled in a class.</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/courseclassttimetable.png" />
+			</imageobject>
+			<caption>
+				<para>Course, class and timetable</para>
+			</caption>
+		</mediaobject>
+		<para>
+			<example>
+				<title>Example course and classes</title>
+				<para>Let's consider a course "Computers for Beginners". It is assigned course code "CFB".
+					The class with code "CFB-1" starts 1/4/2010 from 10am to 2pm with tutor Joanne Smith and
+					costs $800. Another class "CFB-2" starts 6/5/2010 from 7pm to 9pm with tutor and costs
+					$825. </para>
+			</example>
+		</para>
+	</section>
+	<section>
+		<title>Working with Classes</title>
+		<subtitle>Navigating the list and record windows</subtitle>
+		<para>All records in onCourse can be viewed in either a list view or record view. You need to
+			open the list view to access individual records. </para>
+		<para>To access the class records go to either the splash screen and click on
+				<guibutton>Class</guibutton> or the onCourse menu <menuchoice>
+				<guimenuitem>Courses</guimenuitem>
+				<guisubmenu>Classes</guisubmenu>
+			</menuchoice> . This will open the Class list view window. </para>
+		<itemizedlist>
+			<title>The onCourse list view</title>
+			<listitem>
+				<para>
+					<emphasis role="bold">Parts of the window</emphasis> -On the right hand part of the window
+					are the class records listed in a summary view. The title bar shows you how many records
+					you have. The top section of the window contains the search function and the add and
+					delete records button. You will also find a cog wheel button that allows for special
+					functions for one or more records in the list. In the left hand side of the list window
+					are quick searches to enable you to work with groups of data. </para>
+			</listitem>
+			<listitem>
+				<para>
+					<emphasis role="bold">Record Summaries</emphasis> - The list of records in this window
+					allows you to enter a record by double clicking, or select the record to perform special
+					functions by single clicking. A selected record will be highlighted. You can select one or
+					more records in the list by using shift-click to select a range, or control-click to
+					select a group of individual records. </para>
+			</listitem>
+			<listitem>
+				<para>
+					<emphasis role="bold">Columns and sorting</emphasis> - Column headings can be used to sort
+					records in the list. Click on the header to sort in alphabetical order. Click it again to
+					sort by reverse alphabetical order. You can also drag the columns around and modify their
+					width to set your preferred layout. 9</para>
+			</listitem>
+			<listitem>
+				<para>
+					<emphasis role="bold">Quick Search</emphasis> - By typing the first few letters of the
+					course name or code into the quick search field, you can reduce the list of records to
+					those that match. </para>
+			</listitem>
+			<listitem>
+				<para>
+					<emphasis role="bold">Advanced Search</emphasis> - Advanced search can be accessed by
+					clicking on the Magnifying glass image in the quick search field. This will open the query
+					editor to allow you to choose which fields and which data you want to search on. You can
+					add multiple criteria to your searches. </para>
+			</listitem>
+			<listitem>
+				<para>
+					<emphasis role="bold">Saved Searches</emphasis> - After performing an advanced search, you
+					can choose to save the search parameters to allow you to quickly run the search again. To
+					save a search, click on the cogwheel within the query editor and select 'save find'. The
+					saved search will appear in the left hand part of the window. </para>
+			</listitem>
+			<listitem>
+				<para>
+					<emphasis role="bold">Tag Groups</emphasis> - Any tag groups you have created that relate
+					to classes or their parent record, courses, like Subject, will appear here. By checking
+					any of these check boxes you will see the list of records on the right hand side reduced
+					to records that match that criteria. You can tag records in bulk by selecting a group of
+					records on the right and right clicking on a tag name on the left. </para>
+			</listitem>
+			<listitem>
+				<para>
+					<emphasis role="bold">Core Filters</emphasis> - Core filters reduce the list of records to
+					those that match the filter criteria. By default, most onCourse windows open with filters
+					applied so you are only working with your current records. You can switch core filters on
+					and off by ticking the checkboxes. By default, each time the class window opens the core
+					filters of <guilabel>current classes</guilabel> and <guilabel>future classes</guilabel>
+					are selected. You can check the other core filters as needed. </para>
+			</listitem>
+		</itemizedlist>
+		<tip>
+			<para>Filters and searches work together in onCourse. If you run a search and do not see the
+				result you expect, this may be because a filter that is checked is preventing the record you
+				are searching for from being displayed. </para>
+		</tip>
+		<para>You can enter a class record by double clicking on it in the window.</para>
+	</section>
+	<section xml:id="classesCreating-recordTabs">
+		<title>Class Record Tabs</title>
+		<section>
+			<title>General</title>
+			<para>This is a summary tab for the class showing information like the timetable summary, fee and
+				applicable discounts, tutor summary and important notes regarding whether the Class
+				running costs have been met. You can also flag a given Class as <guilabel>Self Paced</guilabel>, if the Class does not have a set timetable. This is a very important tab as it allows you to change the status of
+				the class. You can select from the following options:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Enrolment disabled</para>
+				</listitem>
+				<listitem>
+					<para>Enrolment allowed</para>
+				</listitem>
+				<listitem>
+					<para>Enrolment allowed and visible online</para>
+				</listitem>
+				<listitem>
+					<para>Cancelled</para>
+				</listitem>
+			</itemizedlist>
+			<para>As well as all this, the general tab has a handy summary above the status drop down menu: </para>
+			<itemizedlist>
+				<listitem>
+					<para>Timetable Summary - including number of sessions, start and end dates (if applicable),
+						Site and Room information</para>
+				</listitem>
+				<listitem>
+					<para>Budget Summary - including Class fee which can be adjusted via the
+							<guilabel>edit</guilabel> link to amend the fee amount. </para>
+				</listitem>
+				<listitem>
+					<para>Discounts applicable to this Class</para>
+				</listitem>
+				<listitem>
+					<para>Indicative information on number of enrolments required to meet the Class running
+						costs</para>
+				</listitem>
+				<listitem>
+					<para>Tutor Summary - listing all Lecturers staff assigned to the Class</para>
+				</listitem>
+			</itemizedlist>
+			<para>This overview and these calculations are designed to show you at a glance if the class is financially viable based on the budget expenses and current enrolment numbers.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/class_general_tab.png" />
+				</imageobject>
+				<caption>
+					<para>Example of content within the Class general tab</para>
+				</caption>
+			</mediaobject>
+			<para>If you select <guilabel>Self Paced</guilabel> learning within the general tab, the tab will
+				update to display additional fields for the operator to add the <guilabel>Maximum
+					days to complete</guilabel> and the <guilabel>Expected study hours</guilabel> for this
+					Class. You can also select a <guilabel>Virtual site</guilabel>for
+				this Class.  Please note that by nominating that the Class is to be self paced, the
+				Class record will no longer display the Timetable tab, as this is not relevant for a
+				Class with no set timetable. </para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/class_general_tab_self_paced_settings.png" />
+				</imageobject>
+				<caption>
+					<para>Set the maximum days to complete and expected study hours within the General tab of the Class record</para>
+				</caption>
+			</mediaobject>
+			<para>The left hand pane of the Class window now also includes a core filter which allows the
+				user to view / select self paced classes.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/self_paced_core_filter.png" />
+				</imageobject>
+			</mediaobject>
+			<note>
+				<para>When setting a given Class as <guilabel>Self Paced</guilabel>, the start date and end date
+					for the student outcomes are set as follows: </para>
+				<itemizedlist>
+					<listitem><para>Start Date is the date the student enrols in the Class</para></listitem>
+					<listitem><para>End date is the start date plus the maximum days to complete that has been set for the Class
+							via the General tab.</para></listitem>
+				</itemizedlist>
+				</note>
+		</section>
+		<section>
+			<title>Tutor</title>
+			<para> This tab allows you to add one or more tutors to the class. Tutors type can be defined,
+				tutors can be confirmed and tutor payrates set. You can also choose if the tutor is
+				to be published as part of the class promotional material, either online or in a
+				printed format. Select the "In Publicity" checkbox to have the tutor appear on your
+				onCourse website linked to the class and in any exports or reports you run. </para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/class_tutor_tab.png" />
+				</imageobject>
+				<caption>
+					<para>Edit view of Tutor window to allow a Tutor to be assigned and tutor role to be set</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Budget</title>
+			<para><xref xlink:href="#budgets"/></para>
+			
+		</section>
+		<section>
+			<title>Timetable</title>
+			<para>The timetable tab is used to create sessions for your class, from here you can set the
+				following:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Site</para>
+				</listitem>
+				<listitem>
+					<para>Room</para>
+				</listitem>
+				<listitem>
+					<para>Tutor(s)</para>
+				</listitem>
+				<listitem>
+					<para>First session starts - The start time of the first session</para>
+				</listitem>
+				<listitem>
+					<para>Session Duration</para>
+				</listitem>
+				<listitem>
+					<para>Payable time - the time payable to the tutor, example 30mins unpaid for lunch</para>
+				</listitem>
+			</itemizedlist>
+			<para>The timetable tab let's you view sessions through different time frames, close to the
+				bottom of the page contains the five tabs to do just that:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Day</para>
+				</listitem>
+				<listitem>
+					<para>Week</para>
+				</listitem>
+				<listitem>
+					<para>8 Weeks</para>
+				</listitem>
+				<listitem>
+					<para>Month</para>
+				</listitem>
+				<listitem>
+					<para>List - offers a summary of all sessions and their attributes like start date and time,
+						tutors and duration.</para>
+				</listitem>
+			</itemizedlist>
+			<para>In the class timetable, you can also see if any sessions or resources you have chosen
+				conflict with other existing bookings. This might be other classes in the same room,
+				or with the same tutor, or unavailability bookings for the resources you have
+				chosen.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/doublebooking.png" />
+				</imageobject>
+				<caption>
+					<para>This class shows a number of sessions with double booked resources</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>VET</title>
+			<para>This tab relates to RTOs. AVETMISS funding source information can be set here for the whole
+				class group, and modified on a student by student basis via their enrolment or
+				outcome records as needed. Please note some of these fields are state specific. </para>
+		</section>
+		<section>
+			<title>Web</title>
+			<para>You can add class specific web information to this tab, plus class specific attachments.
+				Most advertising information will come from the course record. Content added to this tab
+				will appear in the class display box with the heading: Important information. It is
+				recommended that you only use this field for limited content, like 'Funding available for
+				existing workers' or 'This class is assessment only for RPL/RCC candidates"</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/website_class_description.png" />
+				</imageobject>
+				<caption>
+					<para>Example of content in the class Web tab displayed within the class summary</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Notes</title>
+			<para>This tab allows you to make your own internal notes regarding the class. These are not
+				published to the website. </para>
+		</section>
+		<section>
+			<title>Enrolments</title>
+			<para>You can see a list of the students enrolled on this tab. The list view is quite simple, it
+				shows you four columns:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Name</para>
+				</listitem>
+				<listitem>
+					<para>Class</para>
+				</listitem>
+				<listitem>
+					<para>Course name</para>
+				</listitem>
+				<listitem>
+					<para>Status</para>
+				</listitem>
+			</itemizedlist>
+			<para>Only students who currently have a status of active are enrolled in the class. Student's
+				you see on this list with statuses of cancelled or credited have withdrawn from the
+				class and are no longer counted in the enrolment totals.</para>
+			<para>You can click on the open record icon next to the student's name to open their full record
+				and confirm details of their payment status, contact details or previous enrolment
+				history.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/class_enrolment_tab.png" />
+				</imageobject>
+				<caption>
+					<para>Enrolment tab of Class Record including links to student records</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Attendance</title>
+			<para>For each session created, and each student enrolled or tutor attached to the class, an
+				attendance record will be created. Both students and tutors can be marked and you can add
+				notes to the attendance record. The percentage attendance will be calculated. Tutor
+				attendance is used for payroll calculations. You can mark a tutor or student with the
+				following drop down options by clicking on 'mark all tutors' or 'mark all students or by
+				clicking the individual dates listed: </para>
+			<itemizedlist>
+				<listitem>
+					<para>Attended - accompanied by a green tick</para>
+				</listitem>
+				<listitem>
+					<para>Absent with reason - accompanied by a grey cross</para>
+				</listitem>
+				<listitem>
+					<para>Absent without reason - accompanied by a red cross</para>
+				</listitem>
+				<listitem>
+					<para>Partial attendance- accompanied by a clear tick</para>
+				</listitem>
+				<listitem>
+					<para>Not marked - accompanied by little icon of person</para>
+				</listitem>
+			</itemizedlist>
+			<para>You can also add notes to attendance records e.g. provided medical certificate. You will
+				also see a calculation of the percentage the class the student has attended, to
+				monitor the student's attendance requirements.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/markedattendance.png" />
+				</imageobject>
+				<caption>
+					<para>Students showing different attendance statuses and percentages</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Outcomes</title>
+			<para>This is a tab relevant to RTOs. For each enrolled student, all the applicable outcomes
+				for the class are shown here. For each unit of competency set in the parent course, the
+				students enrolled will have an outcome record. Outcomes can be set and modified here. The
+				list view contains the following columns:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Module/Course</para>
+				</listitem>
+				<listitem>
+					<para>Name</para>
+				</listitem>
+				<listitem>
+					<para>Status</para>
+				</listitem>
+				<listitem>
+					<para>Start date</para>
+				</listitem>
+				<listitem>
+					<para>End date</para>
+				</listitem>
+				<listitem>
+					<para>Delivery mode</para>
+				</listitem>
+				<listitem>
+					<para>National code</para>
+				</listitem>
+			</itemizedlist>
+			<note>
+				<para>When setting a given Class as <guilabel>Self Paced</guilabel>, the start date and end date
+					for the student outcomes are set as follows: </para>
+				<itemizedlist>
+					<listitem><para>Start Date is the date the student enrols in the Class</para></listitem>
+					<listitem><para>End date is the start date plus the maximum days to complete that has been set for the Class
+						via the General tab.</para></listitem>
+				</itemizedlist>
+			</note>
+		</section>
+	</section>
+	<section>
+		<title>Special Class Functions</title>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/cog.png"
+					format="png" />
+			</imageobject>
+			<caption>
+				<para>The cog wheel - used to perform special actions to selected classes</para>
+			</caption>
+		</mediaobject>
+		<para> On the classes view screen you will see a cog wheel icon on the right hand side of the
+			window. If you highlight one or more classes and then click on the cog wheel, a drop down menu
+			will appear offering a range of different options. Some of these functions are only available
+			through the cog wheel, while others are options that you can set in an individual class, but
+			though the cog wheel can set for a group of classes. </para>
+		<itemizedlist>
+			<listitem>
+				<para>
+					<emphasis role="bold">Send message to students from x class</emphasis> - This option
+					allows you to send email and/or sms, or postal messages to students enrolled in the
+					selected class or classes. You might use this option to let all the students enrolled in
+					classes with a particular tutor know that their tutor is sick and classes this week are
+					cancelled. </para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Send message to tutors from x class</emphasis> - You can contact
+					the tutor from one or more classes using this options. You might use it to notify all
+					tutors who are teaching this term of a staff meeting. </para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Duplicate x class</emphasis> - To create another instance of an
+					existing class, the duplicate function will save you the effort of setting all the
+					information again. Need to offer another class in a fortnight? Duplicate the class and
+					move it forward by 14 days. You can also move a whole term of classes forward to the next
+					term in one action. </para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Cancel class</emphasis> - If a class is not viable, you can use
+					this cogwheel function to cancel it and create credit notes for all the enrolled students.
+					Students can't enrol in cancelled classes. </para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">AVETMISS export</emphasis> - Exporting AVETMISS from the classes
+					window allows you to export the data for one or more classes for a funding submission. A
+					whole term or year's worth of data can be exported from the Export window. </para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Create certificates</emphasis> - For VET classes, this will
+					create Statements of Attainment or Qualifications for all eligible students. For all other
+					classes, this option will create a Certificate of Attendance for all enrolled students.
+				</para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Generate payslips for x class</emphasis> - Use this option to
+					create payslips for a selected group of classes. </para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Show class on website</emphasis> - You can add classes in bulk
+					to your onCourse website with this option, instead of doing it one at a time in the
+					individual class window. </para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Remove class from website</emphasis> - Use this option to remove
+					classes in bulk from your onCourse website. </para>
+			</listitem>
+		</itemizedlist>
+	</section>
+	<section>
+		<title>Creating Classes</title>
+		<subtitle>Creating an instance of a course</subtitle>
+		<para> It is very important that before you try to create a class you have already created a
+			course.</para>
+		<para>Through the classes screen you can:</para>
+		<itemizedlist>
+			<listitem>
+				<para> Create classes and make them ready for enrolment </para>
+			</listitem>
+			<listitem>
+				<para> Allocate rooms </para>
+			</listitem>
+			<listitem>
+				<para> Assign Tutors </para>
+			</listitem>
+			<listitem>
+				<para> Set the price of classes and applicable discounts </para>
+			</listitem>
+			<listitem>
+				<para> Create sessions and timetables </para>
+			</listitem>
+			<listitem>
+				<para> Keep check of enrolments </para>
+			</listitem>
+			<listitem>
+				<para> Update budgeting information </para>
+			</listitem>
+			<listitem>
+				<para> Enter and update your VET funding information </para>
+			</listitem>
+			<listitem>
+				<para> Enter student outcomes </para>
+			</listitem>
+			<listitem>
+				<para> Publish your classes on your website ready to take online enrolments </para>
+			</listitem>
+		</itemizedlist>
+		<para>When you create a class, you bring together all the different elements of data that you
+			have already entered into onCourse. Information relating to tutors, courses, sites and rooms
+			etc. gets linked through the classes screen to create the event that is your class. That means
+			once you have entered the relevant information on the different tabs in the classes screen,
+			then the students, the class, the course, the tutor and the sessions all become connected
+			through out your onCourse program. The relationship between these different pieces of
+			information becomes linked in onCourse and allows you to access your required information
+			through a variety of different screens. </para>
+		<para>For example when you assign a tutor to a class through the class screen, this information
+			is also duplicated on the tutor's contact screen. So when you look at that tutor's screen you
+			will see what class, which location and when the tutor is scheduled to teach.</para>
+		<para>Once you have created a class, if you wish to offer the same program again, but starting
+			on a different date, it is a simple process to duplicate the class. This allows all the
+			information you have already set up to be copied into a new class, but moves the sessions
+			forward to your new start date. You can also manage class duplications in bulk, copying all
+			your classes from one semester to the next. </para>
+		<tip>
+			<para>Many colleges develop special codes to assist in identifying classes in groups like
+				categories or regions to make them easier to remember and search on. A simple method is to
+				number or alphabetise the classes. For example if your course is Dancing For Beginners and
+				the course code is DFB, you may wish to create the class code for the first class of this
+				course as “01” or “A”. This will then allow future classes in this same course to be listed
+				in order ie. 01, 02 or A, B, C etc. When you duplicate the class the number or letter will
+				automatically increment. </para>
+		</tip>
+		<example>
+			<title>How to create a new class</title>
+			<orderedlist>
+				<listitem>
+					<para>Go to Course Setup from the class list window, click on the the
+							<guibutton>+</guibutton> button in the top right hand corner of the screen. A new
+						class screen will open to the general tab. </para>
+				</listitem>
+				<listitem>
+					<para>All classes must be linked to a course you have already created. Begin setting up
+						your class by typing the course name and select it from the drop down list. Once you
+						have entered the course name you will see that the course code is automatically entered
+						in the “course code” field. </para>
+				</listitem>
+				<listitem>
+					<para>You will need to create a class code. Your class code must be unique, that is a code
+						not used by any other class already created for that course. Please note that the class
+						code must not have any spaces or hyphens between characters. The pink coloured field
+						will change from invalid (pink) to valid (white) once you have entered your information
+						correctly. </para>
+				</listitem>
+				<listitem>
+					<para>Create minimum and maximum enrolments for your class. The minimum amount of
+						enrolments is usually determined by the college as the least number of students needed
+						to make the class financially or educationally viable. The maximum is often the capacity
+						of the venue. This is the minimum amount of data needed to create a class. Projected
+						enrolments are optional, but can be used to calculate your projected income for the
+						class. Projected enrolments are usually a number between the minimum and maximum - how
+						many students you expect to enrol.</para>
+				</listitem>
+				<listitem>
+					<para>Message Alert for Operator: You are able to write a message here for the people who
+						are creating classes and sessions or enrolling students. It may be for a change of venue
+						or time or that a certain discount is being offered. You can enter the text directly by
+						typing in this window and it will appear as red text in the Quick Enrol window when this
+						class is selected. </para>
+				</listitem>
+				<listitem>
+					<para>Now go to the tutor tab. This is where you can assign tutors to classes. Click on
+						the <guibutton>+</guibutton> sign on the right hand side of the screen. A drop down
+						sheet will appear. Type the tutor's name in the tutor field, surname first. This is an
+						autcomplete field so once you start typing, a selection of tutor's names you have
+						previously entered will be listed. Select the tutor you want from the list. </para>
+				</listitem>
+				<listitem>
+					<para>You can optionally select the "In Publicity" checkbox. If this option is checked,
+						the tutor will appear on your onCourse website linked to the class and in any exports or
+						reports you run. </para>
+				</listitem>
+				<listitem>
+					<para>Optionally select the role the tutor will have eg. as tutor, supervisor,
+						co-ordinator etc. You can also enter the date on which they were confirmed to teach this
+						class. This may come at a later date, and if you have an onCourse website they may also
+						self confirm through their onCourse web portal. </para>
+				</listitem>
+				<listitem>
+					<para>You have the choice to “add the selected tutor to class sessions” by ticking this
+						box. This means that the selected tutor will be attached to any sessions you have
+						already created in the timetable. Click <guibutton>Ok</guibutton>. </para>
+				</listitem>
+				<listitem>
+					<para>You can add a tutor wage at this step, or later when setting up the budget. Enter
+						the rate and how it is calculated e.g. per hour. </para>
+				</listitem>
+				<listitem>
+					<para>Repeat these steps to enter an additional tutor or course supervisor. </para>
+				</listitem>
+				<listitem>
+					<para>Go to the Budget tab to set the class fee and any applicable discounts. You can also
+						add additional income and expenses to the class budget here. </para>
+				</listitem>
+				<listitem>
+					<para>To set a student fee for the class firstly, select whether or not to charge GST for
+						the class (see the DEST website regarding the application of GST to education). Next to
+						the “tax” window are arrows offering you the options “GST”, that is to include GST in
+						the class price or “N” to have no tax charged. Make your selection and either enter your
+						student fee in the field “fee ex tax” which is the class fee excluding tax or enter in
+						the total fee including tax in the “total fee” field. Either field in which you enter
+						the fee will then calculate the alternate fee so you can see the class fee inclusive and
+						exclusive of GST fees. </para>
+				</listitem>
+				<listitem>
+					<para>Income Account is a drop down menu that gives you the option of assigning the income
+						generated from this particular class to a certain account. The default setting is
+						Student Enrolments. Choose your preferred account if it is not the default option.
+					</para>
+				</listitem>
+				<listitem>
+					<para>If you wish to apply a concession or promotional code to this class, you need to add
+						them from already created promotions and concessions. To add an already created discount
+						to your selected class, click on the + sign on the right hand side of the screen. A drop
+						down menu will appear asking for promotional code or a discount name. Enter either of
+						these things and then click ok. The details of the discount will appear in the discounts
+						box. </para>
+				</listitem>
+			</orderedlist>
+		</example>
+		<example>
+			<title>How to create sessions</title>
+			<para>The following is a detailed example of how you would add sessions for a class on
+				different days of the week. This example will use the scenario of a user wanting to add
+				sessions on Monday, Wednesday and Saturday. </para>
+			<orderedlist>
+				<listitem>
+					<para>On the timetable tab enter the start date and time for the first Monday session. In
+						onCourse, the date and time share a field, so you need to type something like 3/4/2010
+						3pm. You can also click on the calendar icon to use the date selector tool to find the
+						start date of your choice. </para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/class_time.png" />
+						</imageobject>
+						<caption>
+							<para>Field showing the session start time</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+				<listitem>
+					<para>Enter a duration for the session in hours and minutes e.g. 6 hrs. You can also
+						choose to repeat the sessions. By default, there is one session, but by changing the
+						number in the session field you can make as many repeating sessions as you like. (if you
+						are making 5 Monday sessions, enter 5) </para>
+				</listitem>
+				<listitem>
+					<para>If the tutor will not be paid for the full duration for the session (e.g. an upaid
+						lunch break) change the value in the payable time option.</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/payable_hours.png" />
+						</imageobject>
+						<caption>
+							<para>You can have an amount of hours for the session time and an amount for payable
+								hours</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+				<listitem>
+					<para>By default, session repetition will be set to weekly. By clicking on More options
+						you can change the repeat to hourly, daily, weekly, monthly or yearly, and make the
+						repeat every 2 weeks or 3 months, for example. If you choose a daily repeat you can
+						choose to skip weekends. (For this example, to create the 5 sessions on Mondays, choose
+						weekly) </para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/month_view.png" />
+						</imageobject>
+						<caption>
+							<para>The class session as it appears in the calendar month view</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+				<listitem>
+					<para>Press the button 'create sessions'.</para>
+				</listitem>
+				<listitem>
+					<para>Now you need to do all of this again (from step 1 to 4) for the Wednesday sessions.
+						Go the the tab on the timetable labelled 'New' to add these new sessions to your
+						existing Monday sessions. </para>
+				</listitem>
+				<listitem>
+					<para>Do it all again with a single session on the Saturday and save and close the record.
+					</para>
+				</listitem>
+			</orderedlist>
+		</example>
+	</section>
+	<section>
+		<title>Publishing classes online</title>
+		<para> If you have published the course online, you can then publish the classes online for
+			students to enrol in. All classes published are considered open for enrolment. You can not
+			prevent students from enrolling in a class once it has been published online, so it is
+			advisable to ensure all the advertising details are correct prior to publishing. </para>
+		<para>The marketing information for most of your programs will be located in the course web tab.
+			Only where there is information particular to this instance of the class would you need to add
+			information to the class web tab. For example, if each instance of the class required students
+			to bring different materials because they worked on new projects each term, would you publish
+			this information in the class tab. </para>
+		<para>Classes can be published online by selecting the option on the general tab 'enrolment
+			allowed and visible online'. You can also add or remove classes to the website in bulk using
+			the cogwheel function in the classes list view. </para>
+		<para>Only current and future classes will show online. Classes with no start or end date set
+			will not be published, and classes that are complete i.e. the end date has passed, will be
+			automatically removed from your onCourse website. onCourse does not prevent students from
+			enrolling once the class is commenced, but commenced classes are clearly marked on the
+			website. </para>
+		<para>The minimum and maximum places you set in the class are also used on your onCourse website
+			to show students if there are places still available. The website will not show students the
+			maximum number of places, or how many students have already enrolled. This is what the website
+			will display: </para>
+		<itemizedlist>
+			<listitem>
+				<para> if the class is full: it will read ‘class full' </para>
+			</listitem>
+			<listitem>
+				<para> If the class has been cancelled it will read 'Cancelled'. If you have published class
+					information in a hard copy brochure, we recommend leaving cancelled classes on the website
+					so perspective students can see that the class they are looking for is not available.
+				</para>
+			</listitem>
+			<listitem>
+				<para> if there are six or more places available, it will read ‘places available' </para>
+			</listitem>
+			<listitem>
+				<para> if there are between one and five places available, it will give a count of the
+					places available, for example it may read ‘3 places available'. </para>
+			</listitem>
+		</itemizedlist>
+		<para>Providing an enrolment count when their are less than five places available creates a
+			sense of urgency: The student knows there are only a few places available, so they will
+			hopefully be motivated to enrol as soon as possible, so they don't miss out on joining the
+			class. </para>
+	</section>
+	<section>
+		<title>Creating class budgets</title>
+		<para>The budget feature is enabled with some paid onCourse support contracts. Check your
+			college's support agreement to see if this feature has been enabled for your organisation. </para>
+		<para>Class budgets allow users to add additional income, expense and wages lines to assist your
+			program coordinators to determine the profitability of a class. In addition to the
+			income collected from your current enrolments, you can predict the income and expenses
+			you will incur for any projected number of enrolments. </para>
+		<para>This function can be particularly useful for long term income planning. For example, if
+			you are in a position to schedule your classes a year in advance, you can predict the income
+			for each class based on the class budget. Throughout the year you can compare your actuals to
+			your predicted income and see how you are tracking against the budget. </para>
+		<para>For more information about how to create a class budget and track expenditure and income for classes, refer to the Budget chapter of the User Handbook</para>	
+	</section>
+	<section>
+		<title>Adding RTO and VET data to class records</title>
+		<para>To assit you in reporting accurate AVETMISS data, some information can be set and
+			collected at the class level. You can always modify information at the individual student or
+			outcome level later if needed. The information you set at the class level is the usual case
+			scenario e.g. the main funding source for this particular group of students. </para>
+		<para>The VET information can all be found on the VET Tab - most of these fields are only
+			relevant to RTOs and businesses who report AVETMISS statistics as part of a government funding
+			arrangement. If this doesn't apply to you, you can safely ignore these fields. </para>
+		<example>
+			<title>Setting the VET information for a class</title>
+			<orderedlist>
+				<listitem>
+					<para>In the “delivery mode” field choose the delivery mode of the selected class from the
+						drop down menu. Do the same for the “funding source national” field. The options in the
+						list are set by the AVETMISS standard. Note that this information can be updated per
+						student once you have enrolments. </para>
+				</listitem>
+				<listitem>
+					<para>Enter your “funding source state” (this field is only used by some states, check
+						with your reporting body for the appropriate codes for your state) </para>
+				</listitem>
+				<listitem>
+					<para>There are two NSW only fields here, DET booking identifier (NSW only field) and
+						Course site identifier (NSW only field). If you are in NSW and submitting data to the
+						Training Market, they will supply you with the data required for these fields for each
+						of your contracts. </para>
+				</listitem>
+				<listitem>
+					<para>Purchasing contract identifier and Purchasing contract scheduler are fields is used
+						by some states. You should check with your reporting body for the appropriate codes for
+						your state and the circumstances where you are required to supply them. </para>
+				</listitem>
+				<listitem>
+					<para>Both your nominal hours and classroom hours will be calculated. Nominal hours are
+						calculated based on the hours you set at the unit of competency level. Classroom hours
+						are based on the timetabled hours for the class. The nominal or classroom hours
+						multipled by the number of students enrolled is used to calculate your student contact
+						hours. Where you have provided them, your reportable hours will default to the nominal
+						hours, or classroom hours if nominal hours haven't been set up. If you wish to report
+						different hours, override the data in the reportable hours field with the numbers of
+						your choice. </para>
+				</listitem>
+				<listitem>
+					<para>There are additional AVETMISS funding fields in the student enrolment record that
+						you can set for each individual you report. These include Study reason, Fee
+						exemption/concession type, Client identifier: Apprenticeships, Training contract:
+						Apprenticeships and Full time flag (QLD only). </para>
+				</listitem>
+			</orderedlist>
+		</example>
+	</section>
+	<section>
+		<title>Working with classes that have enrolments</title>
+		<para>After you have set up your classes and taken enrolments, there is a range of additional
+			information available to you from the class record. </para>
+		<para>Visit the enrolment tab to see the list of students enrolled in the class. The list will
+			be automatically updated each time a new enrolment is processed in onCourse. Where you can see
+			the student's names listed, you will see a small icon to the right of their names. When you
+			click on this icon the selected student's contact screen will be opened so you can access
+			their contact details and other history with your college. </para>
+		<para>Only student's marked as Active are currently enrolled in the class and are counted
+			towards the class numbers. Students marked as credited or cancelled have been removed from the
+			class list, but their name still appears here for historical record keeping purposes. </para>
+		<para>Double clicking on a student's on student name on the class Enrolment tab will cause a
+			drop down screen to appear. This is their Enrolment record. You can also access the Enrolment
+			record from the Enrolment window. This screen will open on the General tab and will show the
+			student's name and their enrolment details. The top half of this screen are display only
+			fields and will show information which has already been entered during the enrolment process.
+			Here you will see the course-class code, the course name, the status of the student and the
+			source, whether or not a discount has been applied and the price of the class before the
+			discount. There is also an invoice hyperlink. Click on this and the invoice for the student
+			and this class will open. This is also accessible through the invoice screen. </para>
+		<para>Keep in mind that the invoice for a particular student may not be in the enrolled
+			student's name. For example, if a company pays for a team of their staff to attend a class,
+			the invoice will be to the company. </para>
+		<para>The bottom half of the enrolment screen contains fields particular to RTOs who submit
+			AVETMISS data. These include Study reason, Fee exemption/concession type, Client identifier:
+			Apprenticeships, Training contract: Apprenticeships and Full time flag (QLD only). You can set
+			this information for each student as it applies to them. </para>
+		<para>In addition to the enrolment records, the class window now contains a list of outcomes for
+			each student enrolled. See the RTO Guide for more information about setting and modifying
+			outcomes. </para>
+		<para>You can also see and mark student and tutor attendance in the class window. </para>
+	</section>
+	<section>
+		<title>Marking Student and Tutor attendance</title>
+		<para>Attendance tracking is both useful for calculating tutor wages and also to determine the
+			overall attendance percentage for a student. This is particularly relevant if you are required
+			to meet CRICOS overseas student attendance requirements. </para>
+		<para>For every session you create for a class, a corresponding attendance record will be
+			created. Each session can be marked as Unmarked, Attended or Absent without reason by simply
+			clicking on the icon for the student for the session. </para>
+		<para>Alternatively, you can mark all students for a session or all sessions for a student by
+			clicking on triangle next to the date or student's name and choosing one of the options. </para>
+		<para>As you begin to mark attendance for a student, a percentage attended will be calculated
+			and displayed. When attendance reaches 80% or less a yellow notice icon will be displayed.
+			When attendance reaches 70% or less a red warning icon will be displayed. These will assist
+			you in monitoring if students are meeting the course attendance requirements. </para>
+		<para>You can also mark attendance as Absent with reason and Partial attendance by right
+			clicking on the attendance icon. For both of these attendance types you also need to record a
+			note against the student's record as to why they are absent, and for partial attendance you
+			need to record the time that was attended so the percentage attendance calculation can be
+			recorded. Absent with reason will still be taken into account as an absence for the purposes
+			of determining percentage attendance. </para>
+		<para>When you run a tutor's payslip, you will have the option to count all scheduled sessions
+			towards their payment, or only those you have marked as attended or partially attended.
+		</para>
+	</section>
+</chapter>

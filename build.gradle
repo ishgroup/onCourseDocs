@@ -69,7 +69,7 @@ task explodeXSL(type: Copy) {
 }
 
 subprojects {
-	task docbookHtml(type: DocbookHtml, depends: explodeXSL) {
+	task docbookHtml(type: DocbookHtml, dependsOn: 'explodeXSL') {
 		description = 'Generates chunked docbook html output.'
         outputDir = file("${buildDir}/html")
 		stylesheet = file("${stylesheetDir}/html.xsl")
@@ -87,7 +87,7 @@ subprojects {
         }
 	}
 
-	task docbookPdf(type: DocbookFoPdf, depends: explodeXSL) {
+	task docbookPdf(type: DocbookFoPdf, dependsOn: 'explodeXSL') {
 		description = 'Generates PDF docbook output.'
 		extension = 'fo'
         outputDir = file("${buildDir}/pdf")

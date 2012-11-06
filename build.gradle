@@ -1,8 +1,5 @@
 import org.xml.sax.XMLReader
 import org.xml.sax.InputSource
-import org.apache.xml.resolver.CatalogManager
-import org.apache.xml.resolver.tools.CatalogResolver
-
 import javax.xml.parsers.SAXParserFactory
 import javax.xml.transform.*
 import javax.xml.transform.sax.SAXSource
@@ -10,13 +7,9 @@ import javax.xml.transform.sax.SAXResult
 import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.stream.StreamSource
 
-import java.util.zip.*
 import org.apache.fop.apps.*
 
-import org.gradle.api.logging.LogLevel
-
 import com.icl.saxon.TransformerFactoryImpl
-import org.slf4j.LoggerFactory
 
 buildscript {
 	repositories {
@@ -47,29 +40,29 @@ apply plugin: 'base'
 version = "trunk-SNAPSHOT"
 ext {
     stylesheetDir = "${projectDir}/stylesheets"
-    docbookxsltPath = "${buildDir}/xslt"
-}
-
-configurations {
-    docbookxslt
-}
-
-dependencies {
-    repositories {
-        maven {
-            url 'http://repo.ish.com.au/content/groups/public'
-        }
-    }
-    docbookxslt 'net.sf.docbook:docbook-xsl:1.77.1:resources@zip'
-}
-
-task explodeXSL(type: Copy) {
-    from zipTree(configurations.docbookxslt.singleFile)
-    into docbookxsltPath
 }
 
 subprojects {
-	task docbookHtml(type: DocbookHtml, dependsOn: 'explodeXSL') {
+
+    configurations {
+        docbookxslt
+    }
+
+    dependencies {
+        repositories {
+            maven {
+                url 'http://repo.ish.com.au/content/groups/public'
+            }
+        }
+        docbookxslt 'net.sf.docbook:docbook-xsl:1.77.1:resources@zip'
+    }
+
+    task explodeXSL(type: Copy) {
+        from zipTree(configurations.docbookxslt.singleFile)
+        into "${parent.buildDir}/xslt"
+    }
+
+    task docbookHtml(type: DocbookHtml, dependsOn: 'explodeXSL') {
 		description = 'Generates chunked docbook html output.'
         outputDir = file("${buildDir}/html")
 		stylesheet = file("${stylesheetDir}/html.xsl")
@@ -82,7 +75,11 @@ subprojects {
             }
             copy {
                 into "${buildDir}/html/css"
-                from "../css"
+                from "${parent.projectDir}/css"
+            }
+            copy {
+                into "${buildDir}/html/js"
+                from "${parent.projectDir}/js"
             }
         }
 	}
@@ -107,11 +104,6 @@ public class Docbook extends DefaultTask {
 	@Input
 	String extension = 'html';
 
-	@Input
-	boolean highlightingEnabled = true;
-
-	String admonGraphicsPath;
-
 	@InputDirectory
 	File sourceDirectory = new File(project.getProjectDir(), "src");
 
@@ -123,9 +115,6 @@ public class Docbook extends DefaultTask {
 
 	@OutputDirectory
 	File outputDir = project.getBuildDir()
-
-	@InputFiles
-	Configuration classpath
 
 	@TaskAction
 	public final void transform() {

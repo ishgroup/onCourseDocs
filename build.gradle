@@ -1,15 +1,21 @@
-import org.xml.sax.XMLReader
+import com.icl.saxon.TransformerFactoryImpl
+import org.apache.fop.apps.FOUserAgent
+import org.apache.fop.apps.Fop
+import org.apache.fop.apps.FopFactory
+import org.apache.fop.apps.MimeConstants
 import org.xml.sax.InputSource
+import org.xml.sax.XMLReader
+
+import java.util.logging.Level
 import javax.xml.parsers.SAXParserFactory
-import javax.xml.transform.*
-import javax.xml.transform.sax.SAXSource
+import javax.xml.transform.Result
+import javax.xml.transform.Source
+import javax.xml.transform.Transformer
+import javax.xml.transform.TransformerFactory
 import javax.xml.transform.sax.SAXResult
+import javax.xml.transform.sax.SAXSource
 import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.stream.StreamSource
-
-import org.apache.fop.apps.*
-
-import com.icl.saxon.TransformerFactoryImpl
 
 buildscript {
 	repositories {
@@ -38,9 +44,6 @@ buildscript {
 
 apply plugin: 'base'
 version = "trunk-SNAPSHOT"
-ext {
-    stylesheetDir = "${projectDir}/stylesheets"
-}
 
 subprojects {
 
@@ -62,11 +65,10 @@ subprojects {
         into "${parent.buildDir}/xslt"
     }
 
-    task docbookHtml(type: DocbookHtml, dependsOn: 'explodeXSL') {
+    task docbookHtml(type: Docbook, dependsOn: 'explodeXSL') {
 		description = 'Generates chunked docbook html output.'
-        outputDir = file("${buildDir}/html")
-		stylesheet = file("${stylesheetDir}/html.xsl")
-		classpath = buildscript.configurations.classpath
+        outputFile = file("${buildDir}/html/index.html")
+		stylesheet = file("${rootDir}/stylesheets/html.xsl")
 
         doLast {
             copy {
@@ -75,24 +77,33 @@ subprojects {
             }
             copy {
                 into "${buildDir}/html/css"
-                from "${parent.projectDir}/css"
+                from "${rootDir}/css"
             }
             copy {
                 into "${buildDir}/html/js"
-                from "${parent.projectDir}/js"
+                from "${rootDir}/js"
             }
         }
 	}
 
-	task docbookPdf(type: DocbookFoPdf, dependsOn: 'explodeXSL') {
-		description = 'Generates PDF docbook output.'
-		extension = 'fo'
-        outputDir = file("${buildDir}/pdf")
-		stylesheet = file("${stylesheetDir}/pdf.xsl")
-		classpath = buildscript.configurations.classpath
-	}
+    task docbookPdfPrepare(type: Docbook, dependsOn: 'explodeXSL') {
+        description = 'Generates PDF fo output.'
+        outputFile = file("${buildDir}/pdf/index.fo")
+        stylesheet = file("${rootDir}/stylesheets/pdf.xsl")
+    }
 
-	[docbookHtml, docbookPdf]*.sourceFileName = 'index.xml'
+	task docbookPdf(type: DocbookPdf, dependsOn: 'docbookPdfPrepare') {
+		description = 'Generates PDF final output.'
+        sourceFile = file("${buildDir}/pdf/index.fo")
+        outputFile = file("${buildDir}/pdf/${project.name}.pdf")
+
+        doFirst {
+            copy {
+                into "${buildDir}/pdf/images"
+                from "${projectDir}/src/images"
+            }
+        }
+	}
 
 	task docbook(dependsOn: [docbookHtml, docbookPdf]) {
 		group = 'Documentation'
@@ -101,20 +112,14 @@ subprojects {
 }
 
 public class Docbook extends DefaultTask {
-	@Input
-	String extension = 'html';
-
 	@InputDirectory
 	File sourceDirectory = new File(project.getProjectDir(), "src");
-
-	@Input
-	String sourceFileName = "index.xml";
 
 	@InputFile
 	File stylesheet;
 
-	@OutputDirectory
-	File outputDir = project.getBuildDir()
+	@OutputFile
+	File outputFile
 
 	@TaskAction
 	public final void transform() {
@@ -132,101 +137,62 @@ public class Docbook extends DefaultTask {
 
 		SAXParserFactory factory = new org.apache.xerces.jaxp.SAXParserFactoryImpl();
 		factory.setXIncludeAware(true);
-        outputDir.mkdirs();
+        XMLReader reader = factory.newSAXParser().getXMLReader();
+        TransformerFactory transformerFactory = new TransformerFactoryImpl();
 
-		File srcFile = new File(sourceDirectory, sourceFileName);
-		String outputFilename = srcFile.getName().substring(0, srcFile.getName().length() - 4) + '.' + extension;
+		File srcFile = new File(sourceDirectory, "index.xml");
+        InputSource inputSource = new InputSource(srcFile.getAbsolutePath());
 
-		File outputFile = new File(outputDir, outputFilename);
-
+        outputFile.getParentFile().mkdirs();
 		Result result = new StreamResult(outputFile.getAbsolutePath());
-		InputSource inputSource = new InputSource(srcFile.getAbsolutePath());
 
-		XMLReader reader = factory.newSAXParser().getXMLReader();
-		TransformerFactory transformerFactory = new TransformerFactoryImpl();
 		URL url = stylesheet.toURL();
 		Source source = new StreamSource(url.openStream(), url.toExternalForm());
 		Transformer transformer = transformerFactory.newTransformer(source);
 
+        String rootFilename = outputFile.getName();
+        rootFilename = rootFilename.substring(0, rootFilename.lastIndexOf('.'));
+       // transformer.setParameter("root.filename", rootFilename);
+        //transformer.setParameter("base.dir", outputFile.getParent() + File.separator);
 
-		preTransform(transformer, srcFile, outputFile);
+        transformer.setParameter("base.dir",'file://' + project.getProjectDir().getAbsolutePath() + '/src');
 
 		transformer.transform(new SAXSource(reader, inputSource), result);
-
-		postTransform(outputFile);
-	}
-
-	protected void preTransform(Transformer transformer, File sourceFile, File outputFile) {
-	}
-
-	protected void postTransform(File outputFile) {
 	}
 }
 
-/**
- */
-class DocbookHtml extends Docbook {
-	@Override
-	protected void preTransform(Transformer transformer, File sourceFile, File outputFile) {
-		String rootFilename = outputFile.getName();
-		rootFilename = rootFilename.substring(0, rootFilename.lastIndexOf('.'));
-		transformer.setParameter("root.filename", rootFilename);
-		transformer.setParameter("base.dir", outputFile.getParent() + File.separator);
-	}
-}
+public class DocbookPdf extends DefaultTask {
 
-/**
- */
-class DocbookFoPdf extends Docbook {
-    @Input
-    String extension = 'fo';
+    @InputFile
+    File sourceFile;
 
-    /**
-	 * <a href="http://xmlgraphics.apache.org/fop/0.95/embedding.html#render">From the FOP usage guide</a>
-	 */
-	@Override
-	protected void postTransform(File foFile) {
-		FopFactory fopFactory = FopFactory.newInstance();
+    @OutputFile
+    File outputFile;
 
-		OutputStream out = null;
-		final File pdfFile = getPdfOutputFile(foFile);
-		logger.debug("Transforming 'fo' file " + foFile + " to PDF: " + pdfFile);
+    @TaskAction
+    public final void transform() {
+        FopFactory fopFactory = FopFactory.newInstance();
+        fopFactory.setStrictValidation(false);
+		OutputStream out = new BufferedOutputStream(new FileOutputStream(outputFile));
 
 		try {
-			out = new BufferedOutputStream(new FileOutputStream(pdfFile));
-
 			Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, out);
 
 			TransformerFactory factory = TransformerFactory.newInstance();
 			Transformer transformer = factory.newTransformer();
 
-			Source src = new StreamSource(foFile);
+           // transformer.setParameter('highlight.xslthl.config', new File(project.getParent().getBuildDir(), 'xslt/docbook/highlighting/xslthl-config.xsl').toURI() );
+            fopFactory.setBaseURL('file://' + project.getProjectDir().getAbsolutePath() + '/src');
+            FOUserAgent foUserAgent = fopFactory.newFOUserAgent();
+            foUserAgent.setBaseURL(fopFactory.getBaseURL());
+			Source src = new StreamSource(sourceFile);
 
 			Result res = new SAXResult(fop.getDefaultHandler());
-
-			switch (project.gradle.startParameter.logLevel) {
-				case LogLevel.DEBUG:
-				case LogLevel.INFO:
-					break;
-				default:
-					// only show verbose fop output if the user has specified 'gradle -d' or 'gradle -i'
-					LoggerFactory.getILoggerFactory().getLogger('org.apache.fop').level = Level.ERROR
-			}
 
 			transformer.transform(src, res);
 
 		} finally {
-			if (out != null) {
-				out.close();
-			}
+			out.close();
 		}
-
-		if (!foFile.delete()) {
-			logger.warn("Failed to delete 'fo' file " + foFile);
-		}
-	}
-
-	private File getPdfOutputFile(File foFile) {
-		return new File(foFile.parent, this.project.rootProject.name + '-reference.pdf')
 	}
 }

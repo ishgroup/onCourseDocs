@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ish.oncourse.angel</groupId>
+	<artifactId>doc</artifactId>
+	<name>onCourse documentation</name>
+	<version>4.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>manual</module>
+		<module>web</module>
+		<module>design</module>
+	</modules>
+
+	<distributionManagement>
+		<site>
+			<id>website</id>
+			<url>scp://astonish.ish.com.au/usr/fileshare/website-deploy/ish/onCourse/doc/${doc.version}/</url>
+		</site>
+	</distributionManagement>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.agilejava.docbkx</groupId>
+					<artifactId>docbkx-maven-plugin</artifactId>
+					<version>2.0.11</version>
+					<dependencies>
+						<dependency>
+							<groupId>org.docbook</groupId>
+							<artifactId>docbook-xml</artifactId>
+							<version>4.4</version>
+							<scope>runtime</scope>
+						</dependency>
+					</dependencies>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>1.6</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		
+		<plugins>
+			<plugin>
+				<groupId>com.agilejava.docbkx</groupId>
+				<artifactId>docbkx-maven-plugin</artifactId>
+				<configuration>
+					<xincludeSupported>true</xincludeSupported>
+					<highlightSource>true</highlightSource>
+					<targetDirectory>${basedir}/target/site/</targetDirectory>
+					<sourceDirectory>disabled-for-parent-pom</sourceDirectory>
+					<includes>index.xml</includes>
+					<entities>
+						<entity>
+							<name>version</name>
+							<value>${project.version}</value>
+						</entity>
+					</entities>
+				</configuration>
+				<executions>
+					<execution>
+						<id>build-pdf</id>
+						<configuration>
+							<foCustomization>${project.parent.basedir}/stylesheets/pdf.xsl</foCustomization>
+							<postProcess>
+								<delete failonerror="false">
+									<fileset dir="target/site/" includes="*.fo"/>
+								</delete>
+								<move file="target/site/index.pdf" tofile="target/site/${project.artifactId}.pdf"/>
+							</postProcess>
+						</configuration>
+						<phase>none</phase>
+						<goals>
+							<goal>generate-pdf</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>build-html</id>
+						<configuration>
+							<htmlCustomization>${project.parent.basedir}/stylesheets/html.xsl</htmlCustomization>
+							<chunkedOutput>true</chunkedOutput>
+							<postProcess>
+								<copy todir="${basedir}/target/site/css">
+									<fileset dir="${project.parent.basedir}/css"/>
+								</copy>
+								<copy todir="${basedir}/target/site/js">
+									<fileset dir="${project.parent.basedir}/js"/>
+								</copy>
+								<copy todir="${basedir}/target/site/images">
+									<fileset dir="${basedir}/src/images"/>
+								</copy>
+							</postProcess>
+						</configuration>
+						<phase>site</phase>
+						<goals>
+							<goal>generate-html</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<configuration>
+					<generateReports>false</generateReports>
+					<sourceDirectory>src</sourceDirectory>
+					<includes>index.xml</includes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>cleanup-maven</id>
+						<phase>site</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<delete failonerror="false">
+									<filelist dir="target/site/css" files="maven-base.css,maven-theme.css,print.css,site.css"/>
+									<!-- collapsed.gifx is deliberately mispelt since we want to leave one image behind to avoid a maven problem with deploying a completely empty site -->
+									<filelist dir="target/site/images" files="collapsed.gifx,external.png,icon_info_sml.gif,icon_warning_sml.gif,newwindow.png,expanded.gif,icon_error_sml.gif,icon_success_sml.gif"/>
+								</delete>
+								<delete dir="target/site/images/logos" failonerror="false"/>
+							</target>
+						</configuration>
+
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh</artifactId>
+				<version>1.0-beta-7</version>
+			</extension>
+		</extensions>
+	</build>
+</project>

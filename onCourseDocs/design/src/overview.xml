@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="overview">
+	<title>An overview</title>
+	<section>
+		<title>Customising onCourse Web</title>
+		<para>onCourse Web is designed to be extremely flexible, allowing you to create almost any design or concept you choose for
+			your site. When you engage your graphic designer to work on your brand and website, you will want to make your onCourse
+			website reflect your organisation at every level. That means not only skinning the site to reflect your colour and logo, but
+			changing the very heart of how it works and looks. onCourse has been built with this in mind and we don't force you in any
+			particular direction.</para>
+		<para>If you are after quick simple results, skip straight to the stylesheet <link xlink:href="#css">css chapter</link> and
+			focus on changing just the stylesheets to get the look you are after. A lot can be done with little effort in this way. If
+			you want to make changes to the structure of the site itself, read onto the <link xlink:href="#templates">templates
+				chapter</link> for an understanding on how to change the html which makes up the site.</para>
+		<para>If you are not a web designer and reading this manual, you may find many of the concepts quite challenging. Don't worry:
+			you can still edit content using the online CMS without understanding anything here. Your designer, or ish, will be able to
+			work on the page design and create something into which you can drop your content.</para>
+	</section>
+	<section>
+		<title>Staging server</title>
+		<para>To work on your onCourse website you will be given ftp access to a staging server. Via ftp you will be able to edit
+			<link xlink:href="#static">'static'</link> files such as images, stylesheets, javascript and more, as well as dynamic resources which include the templates
+			for generating all the pages on your site.</para>
+		<para>You will have both a <emphasis>staging</emphasis> and a <emphasis>live</emphasis> website.</para>
+		<section xml:id="staging">
+			<title>Staging site</title>
+			<para>If your college name is Acme, you will be given a website at http://acme.staging.oncourse.net.au. Any changes you make
+				via ftp will be visible only at this site, so you can make design changes and experiment in any way you choose without
+				disturbing your live website.</para>
+			<para>When you make changes to your staging website, your live website is not affected. Each night at around 3am Sydney time
+				the content of your live data is copied over to the staging site, overwriting the contents of the CMS. You will also get
+				updated courses, classes and other data from your live website. Any changes you made to static files such as css or
+				dynamic resource templates via ftp are <emphasis role="bold">not</emphasis> overwritten.</para>
+			<para>The staging server is slower than the production servers since it is not load balanced, has all caching disabled and
+				isn't optimised for performance. This means that changes you make will be visible much more quickly: useful when you are
+				building your site.</para>
+		</section>
+		<section xml:id="live">
+			<title>Live site</title>
+			<para>You will also be given a website http://acme.live.oncourse.net.au and one or more production domains (eg.
+				http://www.acme.com.au). You will also have one special domain which uses an SSL certificate for processing payments. The
+				production servers are load balanced across multiple physical servers for reliability and performance.</para>
+		</section>
+		<section xml:id="deploying">
+			<title>Deploying your changes</title>
+			<para>When your changes are uploaded and tested on staging, you can deploy those changes to the live site easily. Using your
+				ftp account, just touch (make any minor change) to the file /s/deploy.txt. Within about 30 seconds, and your changes will
+				be pushed to the live website, but you might need to wait a bit longer for various caches to expire before all your
+				changes are visible.</para>
+		</section>
+	</section>
+	<section xml:id="specialPages">
+		<title>Special pages</title>
+		<para>Some URLs in your site are reserved for special pages. These pages are delivered by the onCourse software itself. To
+			customise them, consult the templates chapter for details of how these pages are created. These pages include:<variablelist>
+				<varlistentry>
+					<term>/courses</term>
+					<listitem>
+						<para>A list of all courses which are marked as web visible.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/courses/arts</term>
+					<listitem>
+						<para>A list of all courses tagged with the tag "arts" from the "subject" tag group.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/course/ABC</term>
+					<listitem>
+						<para>The detail of the course with code ABC.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/class/ABC-123</term>
+					<listitem>
+						<para>The detail of the class with code ABC-123</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/sites</term>
+					<listitem>
+						<para>A list of all sites marked as web visible.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/site/12</term>
+					<listitem>
+						<para>The detail of site with internal id 12.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/tutor/23</term>
+					<listitem>
+						<para>The detail of the tutor with internal id 23.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/enrol</term>
+					<listitem>
+						<para>All pages under this path are reserved for the enrolment processing pages.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/cms</term>
+					<listitem>
+						<para>All pages under this path are reserved for the cms.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/asset</term>
+					<listitem>
+						<para>All pages under this path are reserved for the asset delivery system.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/asset/binarydata?id=123456</term>
+					<listitem>
+						<para>An attachment from onCourse referenced by an internal id. This might be an image, pdf or other file.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist></para>
+	</section>
+	<section>
+		<title>Building CMS pages</title>
+		<para>Pages which are not 'special' are delivered from the CMS. That is, you are able to create
+			pages and assign them to any URL you choose. The following graph shows the relationship
+			between the onCourse database, websites, pages, themes and layouts. We'll go into each
+			of these things in more detail shortly.</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" format="jpg" fileref="images/intro.jpg" />
+				</imageobject>
+				<caption>
+					<para>Object hierarchy</para>
+				</caption>
+			</mediaobject>
+		</para>
+		<section>
+			<title>The database</title>
+			<para>Starting from the top of the diagram we have the onCourse database itself. This is the application which contains
+				courses, classes, tags, students, tutors, and so on. The data in the onCourse database is entered completely within the
+				onCourse client/server applications and is automatically synchronised with the web application every few minutes.</para>
+		</section>
+		<section>
+			<title>The website</title>
+			<para>Each onCourse database can drive one or many websites. Each website will have one or more domains which are used to
+				access them. So Acme Training might have the general leisure learning site at http://acme.edu.au and the corporate
+				training at http://www.acme-corporate.com.au and also http://www.acme-corporate.com. The leisure and corporate sites can
+				have completely different content (pages), different graphic design (layouts) and even display different sets of
+				courses.</para>
+		</section>
+		<section>
+			<title>The pages</title>
+			<para>The website is made up of pages entered through the CMS. For full details on how to write and build web pages, consult
+				the onCourse website and CMS handbook. Each page has content (text, pictures, etc) and will be linked to a theme.</para>
+		</section>
+		<section>
+			<title>The theme</title>
+			<para>Themes are a way of grouping pages and giving them their own character. You can place blocks on a theme, so you might
+				create a theme for policies, another theme for news, and one for general pages. The policy theme could then include a
+				block on the right side with information for students about lodging complaints and contacting the principal. The news
+				theme might contain a block down the left with a random 'hot' course and a block across the top with a rotating banner ad.
+				Finally, the general theme contains a block on one side with navigation elements and assorted other blocks of special
+				offers.</para>
+			<para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" format="jpg" fileref="images/ThemeEditor.png" />
+					</imageobject>
+					<caption>
+						<para>Theme Editor</para>
+					</caption>
+				</mediaobject>
+			</para>
+		</section>
+		<section>
+			<title>The layout</title>
+			<para>The final piece of this structure is the layout. This is where you as a designer will weave your magic. The layout is
+				represented by a folder in the resources/layouts folder you access by ftp. You can place templates inside that folder
+				where each template overrides a certain piece of html on the page. In this way you have full control over the entire
+				layout and design of the site, right down to every line of html sent to the browser.</para>
+			<para>There is always a layout called 'default' which is used by the system for the special pages outlined above. You can
+				create as many layouts you like and link them to themes you create in the CMS.</para>
+		</section>
+	</section>
+	<section>
+		<title>FTP file layout</title>
+		<para>When you login with ftp you will see several folders: <itemizedlist>
+				<listitem>
+					<para>resources</para>
+					<itemizedlist>
+						<listitem>
+							<para>conf</para>
+						</listitem>
+						<listitem>
+							<para>layouts</para>
+							<itemizedlist>
+								<listitem>
+									<para>default</para>
+								</listitem>
+							</itemizedlist>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>s</para>
+					<itemizedlist>
+						<listitem>
+							<para>stylesheets</para>
+						</listitem>
+						<listitem>
+							<para>fonts</para>
+						</listitem>
+						<listitem>
+							<para>img</para>
+						</listitem>
+						<listitem>
+							<para>js</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+			</itemizedlist>The <emphasis role="bold">s</emphasis> folder contains static files which are not parsed by the application
+			server. These include css, fonts, images and javascript. Keeping things organised within the folders as provided will make
+			everything easier, but you are free to create whatever additional folders you need to here. The <emphasis role="bold"
+				>resources</emphasis> folder contains configuration files inside <emphasis role="bold">conf</emphasis> and template
+			overrides inside the <emphasis role="bold">layouts</emphasis> folder. One layout is provided for you called <emphasis
+				role="bold">default</emphasis>. It starts off empty, since it inherits all the templates from a set of global defaults.
+			See <xref xlink:href="#templates" /></para>
+	</section>
+</chapter>

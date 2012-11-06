@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="payroll">
+	<title>Tutor pay</title>
+	<para>In this chapter, we cover how to set up standard rates of pay for your Tutors, how to
+		include Tutor costs within the overall class budget, confirming Tutor attendance / hours worked
+		and how to generate Tutor pay from onCourse. </para>
+	<para>Before you work through this section, you need to ensure you have already set up a class
+		with a timetable. You will also need to ensure you have created a Tutor record. </para>
+	<section xml:id="payroll-payRates">
+		<title>Setting standard pay rates</title>
+		<para>onCourse allows you to map standard pay rates to Tutor types. These are used by default,
+			but can be overridden per class as needed. Some standard Tutor type names are included by
+			default, but these can be changed or deleted as needed.</para>
+		<example>
+			<title>How to create Tutor pay rates</title>
+			<orderedlist>
+				<listitem>
+					<para>To open the window go to <guimenu>File</guimenu> >
+							<guimenuitem>Preferences</guimenuitem> > <guimenuitem>Tutor roles
+						</guimenuitem>.</para>
+				</listitem>
+				<listitem>
+					<para>Select one of the existing wage types to edit and modify or create a new wage type
+						by clicking the <guibutton>+</guibutton> button.<inlinemediaobject>
+							<imageobject>
+								<imagedata fileref="images/definedTutorRolesList.png" />
+							</imageobject>
+						</inlinemediaobject></para>
+				</listitem>
+				<listitem>
+					<para>Give a name and a public label to the wage role, for example 'VET Tutor Step 1'. The
+						public label shows as the role in the class interface. </para>
+				</listitem>
+				<listitem>
+					<para>Set the expense account for the wage</para>
+				</listitem>
+				<listitem>
+					<para>Click on the <guibutton>+</guibutton> button within the pay rate window to add a
+						payrate for this Tutor type.<inlinemediaobject>
+							<imageobject>
+								<imagedata fileref="images/payroll_payrate_window.png" />
+							</imageobject>
+						</inlinemediaobject></para>
+				</listitem>
+				<listitem>
+					<para>In the drop down sheet, define how this type of Tutors wage is calculated from the
+						options available e.g. 'Per timetabled hour'</para>
+				</listitem>
+				<listitem>
+					<para>In the <guilabel>rate</guilabel> field, define the dollar amount per your selected type
+						the Tutor is to be paid e.g. $55 per hour. </para>
+				</listitem>
+				<listitem>
+					<para>On-costs allows you to take into account any additional expenses related to employing
+						these staff, such as superannuation, leave loading, payroll tax and workers
+						compensation costs. A common on-cost used calculating additional employee
+						costs in Australia is 20%</para>
+				</listitem>
+				<listitem>
+					<para>Setting the start date for this pay rate allows you to keep track of historical payrate
+						increases, and ensures that if a Tutors pay calculation falls across a
+						change in pay conditions, all sessions delivered before the change will be
+						calculated at the old rate, with sessions delivered after the change in rate
+						to be calculated at the new rate. By default this field is set to a
+						historical date five years past for the first entry you create, but you can
+						change it to the date of you choice. </para>
+				</listitem>
+				<listitem>
+					<para>Click <guibutton>Ok</guibutton> and <guibutton>Save</guibutton> and close the
+						record. You will be returned to the list screen where you can add or edit another pay rate.<inlinemediaobject>
+							<imageobject>
+								<imagedata fileref="images/definedTutorRole.png" />
+							</imageobject>
+						</inlinemediaobject></para>
+				</listitem>
+			</orderedlist>
+		</example>
+		<caution>
+			<para>If your payrate doesn't start until today, but the class start date is prior to today,
+				no automatic pay rate will be found when you add the Tutor to the class. You can still
+				create a manual pay line in the class. Also, if the payrate changes during the class
+				progress, i.e. class spans June and July, and at the start of the financial year a new pay
+				rate applies, that class budget information will only show the original pay rate in the cost
+				calculations, but the actual payslip calculations will be correct as to the timing of each
+				session and the pay rate that applied as each session was delivered.</para>
+		</caution>
+	</section>
+	<section xml:id="payroll-classBudget">
+		<title>Class budget with Tutor pay</title>
+		<para>Once you have defined the default payrates for the various classifications of Tutors you
+			employ, you can use these to automatically add wages costs to your class budgets. You can do
+			this by adding Tutors to classes. </para>
+		<tip>
+			<para>If you do not know who the individual Tutor will be in advance to your class scheduling,
+				we recommend you set up a Tutor named something like 'To Be Advised' whom you can assign to
+				classes. This will allow you take wages into account in your initial class budget and
+				viability calculations. When you know the name of the individual who will be running the
+				class you can replace TBA with the actual Tutor, and make any changes to their pay rate as
+				required.</para>
+		</tip>
+		<example>
+			<title>Assigning a Tutor and payrate to a class in one step</title>
+			<orderedlist>
+				<listitem>
+					<para>In the class window, navigate to the Tutor tab. Here you can add one or more Tutors,
+						Coordinators, Assistants or other staff to the class.</para>
+				</listitem>
+				<listitem>
+					<para>Click on the <guibutton>+</guibutton> to add a new Tutor to the class or double
+						click on a Tutor already added to the class to add a wage to their record.</para>
+				</listitem>
+				<listitem>
+					<para>In the Tutor edit sheet, type in the surname of the Tutor you wish to add to the
+						class. This field will look up Tutors you have already created in the database. You can
+						not add new Tutors from here.</para>
+				</listitem>
+				<listitem>
+					<para>When you select the Tutors role, the automatic pay rate set for this role will be
+						added. You can override the wage at this point for this individual Tutor for this
+						class.</para>
+				</listitem>
+				<listitem>
+					<para>Click <guibutton>Ok</guibutton> to add the Tutor to the class.<inlinemediaobject>
+							<imageobject>
+								<imagedata fileref="images/addTutorToClass.png" />
+							</imageobject>
+						</inlinemediaobject></para>
+				</listitem>
+				<listitem>
+					<para>Continue to add additional Tutors to the class, and define their wages as required. </para>
+				</listitem>
+				<listitem>
+					<para>If you have added a coordinator or other assisting staff member to the Tutor list of the
+						class you can choose to remove them from publicity (printing in the brochure
+						and showing on your onCourse website) by unchecking the option 'Show this
+						Tutor in class information'</para>
+				</listitem>
+				<listitem>
+					<para>If you need to edit the Tutor wage once you have set it, you will need to go to the
+						class budget tab to make changes. Double click on the wage you wish to edit and check
+						the option 'override assigned role's pay rate'.<inlinemediaobject>
+							<imageobject>
+								<imagedata fileref="images/payroll_wage_override.png" />
+							</imageobject>
+						</inlinemediaobject></para>
+				</listitem>
+				<listitem>
+					<para>Once you have clicked on 'override assigned role's pay rate', you will then be able
+						to adjust the role, account code and rate. <inlinemediaobject>
+							<imageobject>
+								<imagedata fileref="images/editWageInClass.png" />
+							</imageobject>
+						</inlinemediaobject></para>
+				</listitem>
+				<listitem>
+					<para>If you did not have a wage added when the Tutor was added to the class, e.g. for a
+						historical class, you can add the wage on the budget tab. Go to <guibutton>+</guibutton>
+						<guibutton>Wage </guibutton> and select the Tutor from the list.</para>
+				</listitem>
+				<listitem>
+					<para>You can also add Tutors to the class directly from the timetable, during the session
+						set up of edit process. If you add Tutors here, you will need to manually add the Tutor
+						pay rate from the budget tab.</para>
+				</listitem>
+			</orderedlist>
+		</example>
+		<para>You don't need to do all the above if you already have the Tutor added to the timetable in
+			your class. Instead you can go directly to the Budget tab and add a new budget line, filling
+			out the relevant Tutor pay details as you go.</para>
+		<para>You can also add additional lines to the tutor payroll for other pay types. You are
+			limited to one line per type (per timetabled hour, per session, per enrolment ect) for
+			each tutor. This allows you to add the standard tutors pay rate, and perhaps and
+			assessment allowance per enrolment or a set up/pack up allowance per session. To add the
+			additional pay rate type:</para>
+		<orderedlist>
+		<listitem>
+				<para>In the class record, go to the budget tab and select the add budget
+					item</para>
+			</listitem>
+			<listitem>
+				<para>Select add wage and select your tutor's name. </para>
+			</listitem>
+			<listitem>
+				<para>If this is the second or subsequent line for your tutor, you will need to
+					select the 'override tutor wage' option</para>
+			</listitem>
+			<listitem>
+				<para>Add the specifics for the new wage line item ensuring you choose a different
+					type to any existing pay lines</para>
+			</listitem>
+		</orderedlist>
+		<example>
+			<title>How to record a Tutor as being Unavailable for a Given Class</title>
+			<para>Sometimes Tutors cannot make it to their classes, whatever the reason, you can flag that
+				Tutor as not available in the following way:</para>
+			<orderedlist>
+				<listitem>
+					<para>In onCourse, go to "Tutor"</para>
+				</listitem>
+				<listitem>
+					<para>Double click on a record to open a Tutor profile</para>
+				</listitem>
+				<listitem>
+					<para>From here click on the "timetable" tab</para>
+				</listitem>
+				<listitem>
+					<para> Click on the "list" option and in the bottom square, there is the "availability
+						rules" section (see screenshot)</para>
+				</listitem>
+				<listitem>
+					<para>Click on the + sign on the top right hand side of the "availability rules" section
+						and you can edit the busy period as well as the option to select "all day" which, as the
+						name suggests, will block the whole day for that Tutor.</para>
+				</listitem>
+			</orderedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/unavailabilities.png" format="png" />
+				</imageobject>
+			</mediaobject>
+		</example>
+	</section>
+	<section xml:id="payroll-attendance">
+		<title>Confirming Attendance and exceptions</title>
+		<para>Not only is attendance used for students, it can also be used to record whether your
+			Tutors showed up and if they stayed for longer or shorter than their rostered time. You do not
+			have to use this function in order to pay Tutors, but it can be very useful. Tutor attendance
+			can be set for each session on the class Attendance tab.</para>
+		<example>
+			<title>Setting Tutor attendance for Tutor pay</title>
+			<orderedlist>
+				<listitem>
+					<para>Open a class record and navigate to the attendance tab.</para>
+				</listitem>
+				<listitem>
+					<para>For each session, click on the attendance icon and set the appropriate attendance.
+						Click once for attended, twice for not attended. Three clicks will set the session back
+						to unmarked.<inlinemediaobject>
+							<imageobject>
+								<imagedata fileref="images/payroll_tutor_attendance.png" />
+							</imageobject>
+						</inlinemediaobject></para>
+				</listitem>
+				<listitem>
+					<para>To set the attendance to partial attendance, or absent with reason, right click on
+						the attendance icon and select one of these options. When you select one of these values
+						a drop down sheet will appear with fields for additional information to be set. Either
+						of these options need to be approved for Tutor pay in the window.</para>
+				</listitem>
+				<listitem>
+					<para>To set partial attendance, you need to enter in the sheet how many minutes of the
+						scheduled session minutes the person was in attendance for. Approving this Tutor pay
+						variation means the person will be paid for the full session. Leaving it unapproved
+						means they will be paid only for their time in attendance. <inlinemediaobject>
+							<imageobject>
+								<imagedata fileref="images/payroll_partial_attendance.png" />
+							</imageobject>
+						</inlinemediaobject></para>
+				</listitem>
+			</orderedlist>
+		</example>
+	</section>
+	<section xml:id="payroll-payslips">
+		<title>Generating Tutor pay</title>
+		<para>onCourse generates Tutor pay records in bulk, for a given point in time, based on the
+			attendance records for Tutor. While generating Tutor pay records the admin user is given
+			choices as to whether unmarked or unapproved attendance should be included.<example>
+				<title>Generating, editing and finalising Tutor pay</title>
+				<orderedlist>
+					<listitem>
+						<para>Before Tutor pay can be created you'll need a fully setup class, with timetable,
+							Tutors and wages.</para>
+					</listitem>
+					<listitem>
+						<para>Open list of classes</para>
+					</listitem>
+					<listitem>
+						<para>Highlight classes for which Tutor pay is to be generated</para>
+					</listitem>
+					<listitem>
+						<para>Select the "Generate Tutor pay for xx classes " menu item under the cogwheel icon<inlinemediaobject>
+								<imageobject>
+									<imagedata fileref="images/generateTutorPayStep1.png" />
+								</imageobject>
+							</inlinemediaobject></para>
+					</listitem>
+					<listitem>
+						<para>Select whether unmarked or unapproved attendance is to be taken under consideration when
+							generating Tutor pay. This only applies to per session or per timetabled
+							hour pay. Other types of pay (such as fixed rate) does not rely on
+							attendance marking or approval at all. In those instances where a fixed
+							rate is to be paid, a  pay run can be generated anytime after the Class
+							has commenced. <inlinemediaobject>
+								<imageobject>
+									<imagedata fileref="images/generateTutorPayStep2.png"/>
+								</imageobject>
+							</inlinemediaobject></para>
+					</listitem>
+					<listitem>
+						<para>Press save and wait until a new list view, showing all newly created Tutor pay
+							records is displayed.</para>
+					</listitem>
+					<listitem>
+						<para>Once Tutor pay records have been created they can be edited. Each Tutor pay record
+							has a list of items grouped by class and based on the relevant
+							attendance/wages/sessions for that class.</para>
+					</listitem>
+					<listitem>
+						<para>Additional Tutor pay items can be added, they will be listed in at the bottom of
+							the list.<inlinemediaobject>
+								<imageobject>
+									<imagedata fileref="images/editTutorPay.png" />
+								</imageobject>
+							</inlinemediaobject></para>
+					</listitem>
+					<listitem>
+						<para>Tutor pay can be modified until its finalised, which happens once the record has
+							been exported using <guimenu>File</guimenu> > <guimenuitem>Import/Export</guimenuitem>
+							> <guimenuitem>Tutor pay </guimenuitem>.</para>
+					</listitem>
+					<listitem>
+						<para>Another way to finalise a Tutor pay record select it and choose "Finalise Tutor
+							pay" from cogwheel menu. The finalised Tutor pay records display status
+							"Paid/Exported"</para>
+					</listitem>
+				</orderedlist>
+			</example></para>
+		<caution>
+			<para>Tutor pay can have following statuses: New, Completed, Approved and Paid/Exported. Only
+				a status of "Paid / Exported" prevents the editing of the record. </para>
+		</caution>
+	</section>
+</chapter>

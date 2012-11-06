@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="tara_overview">
+	<title>skillsOnCourse</title>
+	<section>
+		<title>Introduction</title>
+		<para>skillsOnCourse is a web site for tutors and students which allows them to interact with your
+			college and with each other. Every student and tutor is automatically given a login when their
+			record is created in onCourse or when they enrol online. skillsOnCourse has been optimised for
+			mobile and touch pad devices, as well as desktop browsers.</para>
+		<para>skillsOnCourse gives tutors the information they need without having to contact you
+			regularly. "Is my class full?", "Will my class go ahead?", "Can I get a class roll", "I need
+			to get a message out to my students before the next session." These are all things that your
+			teaching staff will ask you every day; now you have a 24 hour assistant to help tutors get the
+			answers they need.</para>
+		<para>Students will also enjoy the skillsOnCourse portal. They can quickly and easily get the
+			information they need about their classes and timetable, as well as interact with other
+			students and their tutors.</para>
+	</section>
+	<section>
+		<title>Creating accounts and logging in</title>
+		<para>All students when they are created in onCourse, will automatically have a skillsOnCourse
+			account set up for them. The first time a student enrols in your college, they will be sent an
+			email which allows them to log into skillsOnCourse and set their password. Tutors are also
+			given an account when their record is created in onCourse.</para>
+		<para>The skillsOnCourse login screen will prompt the student or tutor to enter their details.
+			Like the onCourse enrolment process, a student is identified by name and email address to
+			avoid forcing students and tutors remember another user id.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="40%" contentdepth="40%"
+					fileref="images/tara_web_login_screen.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>skillsOnCourse web login page </para>
+			</caption>
+		</mediaobject>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="40%" contentdepth="40%"
+					fileref="images/Skills_onCourse_mobile_login.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>skillsOnCourse mobile login page </para>
+			</caption>
+		</mediaobject>
+		<section>
+			<title>Recovering and Resetting Passwords</title>
+			<para>The main login screen for the skillsOnCourse portal includes a 'forgot password' link. The
+				user will need to provide a name and valid email address in order to initiate the process.
+				If the student or tutor does not have an email address in onCourse then they must contact
+				the college so that you can manually update their record. It is important that you implement
+				an appropriate set of policies around how to authenticate users over the phone when they
+				request that their email address be changed or added, since that email address will give
+				them access to the full profile and history of the user. </para>
+			<para>If the user clicks on the forgot password link and enters the other details, an email will
+				be sent to them with a link to enable them create a new password. This link will be valid
+				for 24 hours only, after that time the link within the email will not work. Once the student
+				has reset their password, they can continue using skillsOnCourse.</para>
+			<para><programlisting>Dear {name},
+
+To reset your SkillsOnCourse password, simply click the link below. That will take you to a web page
+where you can create a new password. Please note that the link will expire 24 hours after
+this email was sent.
+				
+  {recoveryLink}
+
+If you weren't trying to reset your password, don't worry - your account is still secure and no
+one has been given access to it. Most likely, someone just mistyped their email address
+while trying to reset their own password.</programlisting></para>
+		</section>
+		<section>
+			<title>Updating Your Details</title>
+			<para>Once logged in, users are able to update their contact details via the 'My Profile'
+				menu. This screen also enables them to update their password and subscribe to receive
+				marketing material via email SMS or post, as well as signing up to receive a regular
+				newsletter. </para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/tara_web_my_profile_screen_student.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>My profile page of skillsOnCourse desktop version</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/Skills_onCourse_mobile_profile.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>My profile page of skillsOnCourse mobile site</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Updating AVETMISS Details</title>
+			<para>If a student is undertaking an RTO Course, they can provide / update the required
+				AVETMISS information via the profile page.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/tara_web_my_profile_avetmiss_page_1.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>AVETMISS Information Part 1</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/tara_web_my_profile_avetmiss_page_2.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>AVETMISS Information Part 2</para>
+				</caption>
+			</mediaobject>
+		</section>
+	</section>
+	<section>
+		<title>Navigating skillsOnCourse</title>
+		<para>Students and Tutors are able to navigate their way around skillsOnCourse via the left hand
+			menu options. By clicking on the 'skillsOnCourse' logo in the top left hand corner of the
+			page, they can return to the home page of the site. Because the site is built using modern
+			html techniques, the user can safely use the back button on their browser or bookmark any page
+			they like. When they return to a bookmarked page they will be asked to log in and will then be
+			redirected to the page they bookmarked.</para>
+		<para>If a student or tutor is updating their profile, they must submit their changes before
+			navigating away from that page. The same logic applies to any new posts / messages to the
+			forum and if a student is submitting a rating for a given class. If they leave the page
+			without saving the changes, those changes are lost.</para>
+	</section>
+	<section>
+		<title>Timetable Information</title>
+		<para>The user timetable can be viewed as either a list of sessions or as a month or calendar
+			view. The timetable will display all classes on a given day, by clicking on a given day the
+			session information will display at the bottom of the page, including course name, room, venue
+			and tutor information. Timetables are applicable either to classes a student is enrolled in,
+			or to sessions being taught by a tutor.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="40%" contentdepth="40%"
+					fileref="images/tara_web_timetable_month_view_generic.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>skillsOnCourse timetable by month view</para>
+			</caption>
+		</mediaobject>
+		<para>The timetable can also be displayed as a list. </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="40%" contentdepth="40%"
+					fileref="images/tara_web_timetable_list_view.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>skillsOnCourse timetable by list view</para>
+			</caption>
+		</mediaobject>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="40%" contentdepth="40%"
+					fileref="images/Skills_onCourse_mobile_timetable.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>skillsOnCourse Timetable can also be viewed via the mobile site</para>
+			</caption>
+		</mediaobject>
+	</section>
+	<section>
+		<title>Discussion Forum</title>
+		<para>A discussion forum is available as a resource to class tutors and students. Each forum is
+			specific to a given class and can be switched on or off by the College when the class is
+			created within onCourse. The forum can also be set up to be automatically disabled a certain
+			number of days after the class finished. This forum, which is moderated by the tutor, enables
+			tutors and students to discuss, within a secure environment, all aspects of a given
+			class.</para>
+		<para>All communication is visible to the entire class. Direct contact between students is not
+			available for privacy and personal security reasons, and is not always appropriate in a shared
+			learning environment. Should a student wish to contact another student privately they should
+			exchange personal contact details outside of skillsOnCourse</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="40%" contentdepth="40%"
+					fileref="images/tara_web_message_list_view.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Discussion Forum - view of all current discussions</para>
+			</caption>
+		</mediaobject>
+		<section>
+			<title>Create New Discussion Thread</title>
+			<para>Students and tutors are able to start a new discussion thread within a given forum. To do
+				this simply click on the 'new discussion' link within the forum view of the skillsOnCourse
+				portal. The new discussion page will then appear: simply select the class which you wish to
+				create the discussion for, add a subject and a message as appropriate. Once this information
+				is provided, click on 'Start New Discussion'. </para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/tara_web_message_new_discussion.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Discussion Forum - create new discussion</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Add new Comment to Existing Discussion</title>
+			<para>Students and tutors are able to add new comments to an existing discussion thread.
+				Tutors also have the ability to delete a comment or post which is deemed to be
+				inappropriate. The comment is kept within the system (for legal reasons) but hidden from
+				view.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/tara_web_message_discussion_add_comment.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Adding a comment to an existing discussion</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/Skills_onCourse_mobile_messages.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Discussion Forum - add a comment - mobile version</para>
+				</caption>
+			</mediaobject>
+		</section>
+	</section>
+	<section>
+		<title>Class information</title>
+		<para>Students can access up to date class information such as the date of the next session,
+			venue and room information, download course materials in advance of the course, as well as
+			receive course related messages from Tutors and fellow students. </para>
+		<para>Tutors can submit the course materials documents to the College in advance of the class in
+			order for them to be made available to students. Class materials will be uploaded by College
+			staff via the onCourse client as attachments (PDF is the best format for ease of use on many
+			systems) and flagged as 'web visible (private)'. Both tutors and students will be able to
+			access and download these PDF documents from skillsOnCourse. At this stage it is not possible
+			for tutors to directly upload attachments for their class, since the college needs to review
+			content to ensure it is appropriate and has the appropriate copyright clearance.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="40%" contentdepth="40%"
+					fileref="images/tara_web_class_detail_view_student.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Students can access detailed class information via the skillsOnCourse portal</para>
+			</caption>
+		</mediaobject>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="40%" contentdepth="40%"
+					fileref="images/Skills_onCourse_mobile_class_info.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Students can also access all their class materials via the mobile site</para>
+			</caption>
+		</mediaobject>
+		<section>
+			<title>Getting Directions to a Classroom</title>
+			<para>The skillsOnCourse class detail view provides a link to Google maps, providing detailed
+				directions for getting to the venue.</para>
+		</section>
+	</section>
+	<section>
+		<title>Tutor Specific Features</title>
+		<para>Some features are only visible to tutors, including real time marking of the attendance
+			roll for a given class.</para>
+		<section>
+			<title>Viewing and Marking a Class Roll</title>
+			<para>Tutors can access the attendance roll for the class they are teaching, updating the
+				attendance records in real time. As skillsOnCourse is enabled for mobile devices and touch
+				pads, this makes it even simpler to update attendance rolls in real time. The attendance
+				roll can also list contact details such as mobile and email addresses for students, allowing
+				the tutor to easily contact students who have not shown up for their scheduled
+				classes.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/tara_web_class_attendance_roll_tutor.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Live attendance tracking via the skillsOnCourse portal</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/Skills_onCourse_mobile_class_roll.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Live attendance tracking can also be done via the mobile site </para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Moderating forums</title>
+			<para> The tutor has the ability to moderate content and remove any posts that are deemed to
+				be off-topic or inappropriate.</para>
+		</section>
+		<section>
+			<title>Approving Class Information</title>
+			<para>Class tutors have the ability to sign off course and class content. There is also a
+				dialog box available to the tutor so they can send in comments and or suggested amendments
+				to the course copy. College staff then approve and update the changes via the onCourse
+				client. Tutors cannot edit the course schedule or description themselves, since it needs to
+				be properly approved by College staff.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/tara_web_class_approval_tutor.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Tutors can amend and approve class content</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/Skills_onCourse_mobile_content_approval.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Tutors can also send approval for class content via the mobile site</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Viewing of Survey Results</title>
+			<para>Once a student completes the survey, the tutor is able to view those results. This
+				provides the tutor with an overall average of ranking results for tutor, course and venue
+				for a given class or classes. As well as giving the tutor the ability to review all comments
+				posted by the students. The comments are may be anonymously by a student, in which case
+				there is nothing which identifies which student made a particular comment.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/tara_web_survey_summary_view_tutor.png" format="png" />
+				</imageobject>
+				<caption>
+					<para> Summary view of completed surveys for tutor </para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/Skills_onCourse_mobile_survey_results.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Summary view of completed surveys via the mobile site</para>
+				</caption>
+			</mediaobject>
+		</section>
+	</section>
+	<section>
+		<title>Student Specific Features</title>
+		<para>Students have their own feature set, including the ability to update their account
+			details, access forums and message boards, as well as complete an online survey for a class
+			that they have completed. It is also an invaluable resource for accessing and downloading
+			class materials in advance of a given class.</para>
+		<para>If a student enrols in a class that has an online forum, the College will specify the
+			amount of time students within that class will have access to that forum after the completion
+			of the class. If for example the tutor wishes to send the students additional information and
+			or continue with a discussion, the forum can remain open to allow that communication to take
+			place.</para>
+		<para>The skillsOnCourse account will remain open for the student to access indefinitely, even if
+			a forum is no longer available to the student. </para>
+		<section>
+			<title>Rating Classes</title>
+			<para>Class students will now have the ability to provide a 'rating' for the class they have
+				completed. This rating is based upon three key criteria, tutor, course and venue. The
+				student simply selects the number of stars to be given to each of these criteria. </para>
+			<para>Students can provide a written comment within this survey function. The student can
+				decide whether the comment can be published by the College for use in future marketing
+				activity such as testimonials. The survey screen will include a brief statement asking the
+				student to confirm if they want their comment to be made publicly available, they give their
+				consent via a tick box on screen. The student has the further ability to post an 'anonymous'
+				comment or be identified by their first name and initial of surname.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/tara_web_survey_entry_student.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Students can rate classes by content, tutor and venue</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%"
+						fileref="images/Skills_onCourse_mobile_survey.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Students can complete the survey via the mobile site</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Contributing to Class Forums</title>
+			<para>If a student enrols in a class that has an online forum, they are able to participate in
+				that forum, by either adding comments to an existing discussion thread or by adding a new
+				discussion thread within the forum. As the tutor is the overall moderator of the forum, it
+				is only them (and not the student) who can delete comments that are deemed inappropriate. </para>
+			<para>The class forum can remain open after a class has been completed, if the students of the
+				class and the tutor want to continue their online communications. </para>
+		</section>
+	</section>
+	<section>
+		<title>Guide to Managing the skillsOnCourse for college staff </title>
+		<para>skillsOnCourse provides a range of new functionality for college staff, providing a number
+			of improvements to communication methods between students and college staff, as well as
+			between college staff and their tutors</para>
+		<section>
+			<title>Uploading of PDF Documents </title>
+			<para>College staff will be able to upload a PDF document or other documents via the class or
+				course edit window of onCourse. Each attachment can be flagged as 'web visible (private)' in
+				order to make it visible only to student enrolled in the class. Setting the attachment as
+				'web visible (public)' means that it is visible to everyone browsing the main college
+				website. Use this option for things students will need before making a decision to enrol.
+			</para>
+		</section>
+		<section>
+			<title>Creation of Forums for Classes</title>
+			<para>The College will have the ability to nominate as to whether a forum is appropriate for a
+				given class, as not all classes will require a forum. This configuration is managed within
+				the class edit window of onCourse. </para>
+		</section>
+		<section>
+			<title>New Reporting Functionality for Class Surveys</title>
+			<para>New reports are available in onCourse to provide summary and detailed views of all class
+				survey results. As the survey itself is based upon the three key parameters of rating the
+				tutor, course and venue, this provides Colleges with a much greater level of analysis of
+				classes across all types and subjects. It also provides the College with access to
+				invaluable testimonials and comments from students, if the student has given their approval
+				for their comments to be published. </para>
+		</section>
+	</section>
+</chapter>

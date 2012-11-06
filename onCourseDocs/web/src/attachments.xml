@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="images_and_attachments">
+	<title>Attaching images and documents</title>
+	<section>
+		<title>Adding files</title>
+		<para>onCourse provides an effortless way to display images and documents (for example JPG, PNG,
+			GIF and PDF files) with your website. Within onCourse add attachment by the Resource
+			menu and creating a new Attachment record. Using this tool you can upload pictures and
+			other attachments. There is a limit of 10Mb for any file you try to upload in this way.
+			Larger files, such as video, are better hosted with specialised services such as
+			YouTube.</para>
+		<para>Alternatively, you can upload or link attachments directly from the edit view inside
+			Course, Class, Tutor, Student, Site or many other places within onCourse. This links the
+			attachment directly to that resource.</para>
+			
+			<section><title>Duplicate files</title><para>onCourse is
+				clever enough to de-duplicate files when you upload them. So if you add a 1Mb PDF to
+				the system and then sometime later upload the same file again to onCourse, only one
+				copy will be stored and linked to both places. This reduces the size of your
+				database. In order for this to work, the two files must be absolutely identical. The
+				slightest difference and the two files will be both stored.</para></section>
+	</section>
+	<section>
+		<title>Displaying media online</title>
+		<para>If you wish to display attachments and images on your website, firstly make sure that you
+			have ticked the "available on web" option for that attachment inside onCourse. Then you
+			have several ways of showing content online, depending on where you want to display
+			it.</para>
+		<section>
+			<title>Linked to specific pages</title>
+			<para>If you attach a file to a course and mark it as 'available on web' that attachment will be
+				shown on the course description page. This makes it very simple to add pictures or
+				perhaps a PDF with further course information. Remember that Google and other search
+				engines will not do a good job with indexing content in Word, PDF or other formats.
+				So if you want the best exposure online and the best search engine results, put your
+				course descriptions as text directly into the course description.</para>
+			<para>Attaching a PDF to the course can be useful for specific files such as a pre-enrolment questionnaire, additional information
+				about course requirements, software exercise files, and so on. Including these files is achieved exactly the same way as including
+				an image on your page... open the Course, click the Web tab and then the Plus sign to browse the files. We recommend documents are
+				uploaded as PDF as they can be universally accessed no matter what computer the student is running.</para>
+			<para>
+				<orderedlist>
+					<title>How to attach an image to the Course page</title>
+					<listitem>
+						<para>Open the Course to which you wish to add the attachment and click on the Web tab.</para>
+					</listitem>
+					<listitem>
+						<para>Now simply click on the <guibutton>+</guibutton> button in the
+							attachments section and select the existing image or upload a new
+							one.</para>
+					</listitem>
+					<listitem>
+						<para>Once the data updates online, the course detail page ( /course/ABC )
+							will now have your new image or attachment at the bottom.</para>
+					</listitem>
+				</orderedlist>
+			</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/upload_image_to_course.png" width="100%" />
+				</imageobject>
+				<caption>
+					<para>Upload an image to your course via the web page of the given course</para>
+				</caption>
+			</mediaobject>
+			<para>
+				<orderedlist>
+					<title>How to attach an image to the online Tutor resume</title>
+					<listitem>
+						<para>In onCourse open the Tutor to which you wish to add the attachment and
+							click on the Notes tab.</para>
+					</listitem>
+					<listitem>
+						<para>Now simply click on the <guibutton>+</guibutton> button in the
+							attachments section and select the existing image or upload a new
+							one.</para>
+					</listitem>
+					<listitem>
+						<para>Once the data updates online, the tutor page ( /tutor/123 ) will now
+							have your new image or attachment at the bottom.</para>
+					</listitem>
+				</orderedlist>
+			</para>
+		</section>
+	</section>
+	<section>
+		<title>Rich text</title>
+		<para>Sometimes you want to position images and attachments not just at the end of the
+			course description, but on other pages withint your site. You may want to display an
+			image on a regular CMS page or link to a course handbook pdf download within a block in
+			the side margin on your site. Any rich text enabled text field within onCourse can
+			display this content, such as:<simplelist>
+				<member>pages</member>
+				<member>blocks</member>
+				<member>course description</member>
+				<member>tutor resume</member>
+				<member>class description</member>
+				<member>site description</member>
+			</simplelist></para>
+		<section xml:id="images_and_attachments-image">
+			<title>{image}</title>
+			<para>You may want to attach images and other files to courses, classes, sites, rooms
+				and tutors and have them appear on the website. This is easy to do. Just attach the
+				file you want in onCourse, mark it as 'Visible on web' and that file will be
+				automatically transferred and attached to your site. These files will appear by
+				default at the bottom of the relevant page. So for instance, just attach a PDF to a
+				course to have that document appear as a link at the bottom of the course
+				description. Likewise, pictures will appear at the bottom of the page. If however
+				you would like to position the image somewhere else (say, next to the relevant
+				paragraph of text) you can do so with a special rich text entry called
+				{image}.</para>
+			<section>
+				<title>Usage</title>
+				<programlisting>{image name:"duck" align:"right" caption:"This is a duck"}</programlisting>
+				<variablelist>
+					<title>Parameters</title>
+					<varlistentry>
+						<term>
+							<optional>name</optional>
+						</term>
+						<listitem>
+							<para>Optional. The name of the image. If this is not given and the id
+								is also not given, then a random image is displayed from those
+								linked to the relevant database object. For example, if the rich
+								text is a course description, then the random image will be one of
+								the images linked to that course; if the rich text is a tutor
+								profile, then the random image will be chosen from those attached to
+								the tutor.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<optional>id</optional>
+						</term>
+						<listitem>
+							<para>Optional. If you know the internal reference of the binary image
+								object, you can use that here instead of the name. If both id and
+								name are passed, then the name will be ignored.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<optional>align</optional>
+						</term>
+						<listitem>
+							<para>[left, right, center, centre] Optional. By default, images are
+								left aligned.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<optional>alt</optional>
+						</term>
+						<listitem>
+							<para>Optional. If supplied, the image will be given this 'alt' tag
+								which is mainly useful for accessibility purposes. That is, people
+								with vision difficulties may have a screen reader which can read out
+								the names of images. If this value is not supplied, the alt tag is
+								set to the image name.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<optional>caption</optional>
+						</term>
+						<listitem>
+							<para>Optional. A caption to display under the image.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<optional>width</optional>
+						</term>
+						<listitem>
+							<para>Optional. Specify the width of the image in pixels as it will
+								display on the webpage. If not supplied, the image will display at
+								its full size.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<optional>height</optional>
+						</term>
+						<listitem>
+							<para>Optional. Specify the height of the image in pixels as it will
+								display on the webpage. If not supplied, the image will display at
+								its full size.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<optional>class</optional>
+						</term>
+						<listitem>
+							<para>Optional. A CSS class will be added to this image for styling
+								purposes.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<optional>link</optional>
+						</term>
+						<listitem>
+							<para>Optional. If supplied, this image will be made an href link to the
+								destination you specify.</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</section>
+		</section>
+		<section xml:id="images_and_attachments-attachment">
+			<title>{attachment}</title>
+			<para>Link to an attachment. When you user clicks on the link, the file will be
+				downloaded so you will want to use well accepted file formats such as PDF.</para>
+			<section>
+				<title>Usage</title>
+				<programlisting>{attachment name:"course_guide"}</programlisting>
+				<variablelist>
+					<title>Parameters</title>
+					<varlistentry>
+						<term>name</term>
+						<listitem>
+							<para>The name of the attachment as you specified it in the onCourse
+								attachment entry screen.</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</section>
+		</section>
+		<section xml:id="images_and_attachments-video">
+			<title>{video}</title>
+			<para>Embed a video on your page. You will not upload the video directly to onCourse,
+				but instead use a third party service like YouTube - their servers are optimised for
+				video delivery and the performance and tools more helpful.</para>
+			<section>
+				<title>Usage</title>
+				<programlisting>{video type:"youtube" id:"youtube_id" "height:"400" width:"600"}</programlisting>
+				<variablelist>
+					<title>Parameters</title>
+					<varlistentry>
+						<term>type</term>
+						<listitem>
+							<para>Currently only "youtube" is supported.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>id</term>
+						<listitem>
+							<para>This is the remote id of the video. For example, a youtube video
+								which has a URL of http://www.youtube.com/watch?v=YGwtEzZPb7M would
+								have an id of 'YGwtEzZPb7M'</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<optional>height</optional>
+						</term>
+						<listitem>
+							<para>The height in pixels you want to force the video to. If you leave
+								this option out, it will default to the standard player size.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<optional>width</optional>
+						</term>
+						<listitem>
+							<para>The width in pixels you want to force the video to. If you leave
+								this option out, it will default to the standard player size.</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</section>
+		</section>
+	</section>
+</chapter>

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="courses">
+	<title>Creating Courses</title>
+	<section>
+		<title>onCourse Terms and Definitions</title>
+		<variablelist>
+			<varlistentry>
+				<term>Course:</term>
+				<listitem>
+					<para>A course is the training product delivered by your organisation. For example:
+						Dancing for Beginners, Advanced Jewellery Making or MYOB for Professionals. A course can
+						be given any course code to identify that course uniquely.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Class:</term>
+				<listitem>
+					<para>A class is the instance of a course run at a particular time and date, led by one or
+						more tutors and with a group of students enrolled. Classes may meet for one or more
+						sessions depending on the subject outline and timetable. Classes are the things which
+						you sell (or give away for free) and into which students enrol.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Timetable:</term>
+				<listitem>
+					<para>Each class has a timetable which represents each meeting between the students and
+						the tutor(s). The timetable can link to rooms and sites and each session in the
+						timetable has the flexibility to be allocated to a different tutor or a different
+						room.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Students:</term>
+				<listitem>
+					<para>A student is a person enrolled in a class.</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/courseclassttimetable.png" />
+			</imageobject>
+			<caption>
+				<para>Course, class and timetable</para>
+			</caption>
+		</mediaobject>
+		<para>
+			<example>
+				<title>Example course and classes</title>
+				<para>Let's consider a course "Dancing for Beginners". It is assigned course code "DFB". The
+					class with code "DFB-1" starts 1/4/2010 from 10am to 2pm with tutor Joanne Smith and costs
+					$800. Another class "DFB-2" starts 6/5/2010 from 7pm to 9pm with tutor George Jones and
+					costs $825.</para>
+			</example>
+		</para>
+	</section>
+	<section>
+		<title>Working with Courses</title>
+		<subtitle>Navigating the list and record windows</subtitle>
+		<para>All records in onCourse can be viewed in either a list view or record view. You need to
+			open the list view to access individual records.</para>
+		<para>To access the course records go to either the splash screen and click on
+				<guibutton>Course</guibutton> or the onCourse menu <menuchoice>
+				<guimenuitem>Courses</guimenuitem>
+				<guisubmenu>Courses</guisubmenu>
+			</menuchoice> . This will open the Course list view window.</para>
+		<section>
+			<title>The onCourse list view</title>
+			<itemizedlist>
+				<listitem>
+					<para> Parts of the window - On the right hand part of the window are the course records
+						listed in a summary view. The title bar shows you how many records you have. The top
+						section of the window contains the search function and the add and delete records
+						button. You will also find a cog wheel button that allows for special functions for one
+						or more records in the list. In the left hand side of the list window are quick searches
+						to enable you to work with groups of data. </para>
+				</listitem>
+				<listitem>
+					<para> Record summaries - The list of records in this window allows you to enter a record
+						by double clicking, or select the record to perform special functions by single
+						clicking. A selected record will be highlighted. You can select one or more records in
+						the list by using shift-click to select a range, or control-click to select a group of
+						individual records. </para>
+				</listitem>
+				<listitem>
+					<para> Columns and sorting - Column headings can be used to sort records in the list.
+						Click on the header to sort in alphabetical order. Click it again to sort by reverse
+						alphabetical order. You can also drag the columns around and modify their width to set
+						your preferred layout. </para>
+				</listitem>
+				<listitem>
+					<para>Quick Search - By typing the first few letters of the course name into the quick
+						search field, you can reduce the list of records to those that match.</para>
+				</listitem>
+				<listitem>
+					<para>Advanced Search - can be accessed by clicking on the Magnifying glass image in the
+						quick search field. This will open the query editor to allow you to choose which fields
+						and which data you want to search on. You can add multiple criteria to your
+						searches.</para>
+				</listitem>
+				<listitem>
+					<para>Saved Searches - After performing an advanced search, you can choose to save the
+						search parameters to allow you to quickly run the search again. To save a search, click
+						on the cogwheel within the query editor and select 'save find'. The saved search will
+						appear in the left hand part of the window.</para>
+				</listitem>
+				<listitem>
+					<para>Tag Grups - Any tag groups you have created that relate to courses, like Subject,
+						will appear here. By checking any of these check boxes you will see the list of records
+						on the right hand side reduced to records that match that criteria. You can tag records
+						in bulk by selecting a group of records on the right and right clicking on a tag name on
+						the left.</para>
+				</listitem>
+				<listitem>
+					<para>Core filters - reduce the list of records to those that match the filter criteria.
+						By default, most onCourse windows open with filters applied so you are only working with
+						your current records. You can switch core filters on and off by ticking the
+						checkboxes.</para>
+				</listitem>
+			</itemizedlist>
+			<tip>
+				<para>Filters and searches work together in onCourse. If you run an search and do not see
+					the result you expect, this may be because a filter that is checked is preventing the
+					record you are searching for from being displayed.</para>
+			</tip>
+			<para>You can enter a course record by double clicking on it in the window.</para>
+		</section>
+		<section>
+			<title>Creating Courses</title>
+			<para>A course is the subject being delivered. Courses are your college's product. They are
+				what your business sells. They may be accredited or non-accredited, part time, full time or
+				just one time. </para>
+			<para>For example, a course might be Jewellery Making for Beginners, Advanced Belly Dancing or
+				MYOB for Professionals. A course can have many classes and each class can run for one or
+				more sessions. </para>
+			<para>By setting up courses, you have something to advertise. You will need to name and
+				describe your courses in order to entice your students to enrol. </para>
+			<tip>
+				<para>You need only enter the course name and course code to create your courses in
+					onCourse, you can return to the record later more information, like a description for your
+					website or print marketing. </para>
+			</tip>
+			<example>
+				<title>How to create a new course</title>
+				<orderedlist>
+					<listitem>
+						<para>Click on the the <guibutton>+</guibutton> button in the top right hand corner of
+							the screen. A new course screen will open on the general tab. </para>
+					</listitem>
+					<listitem>
+						<para> Enter a name for your course and a course code in the relevant fields. Your
+							course code must be unique, that is a code not used by any other course already
+							created. Please note that the course code must not have any spaces between characters.
+							So the course code for “Dancing for Beginners 1”, written using the first letter of
+							each word, must be entered as DFB1 and not DFB 1.</para>
+					</listitem>
+					<listitem>
+						<para>If you want students to be able to go on the waiting list for this course check
+							the <guilabel>allows waiting lists</guilabel> box. The <guilabel>currently
+								offered</guilabel> box will be checked by default. This allows you to create classes
+							later on. If you decide to retire this course from your list of offerings you can
+							uncheck this later. Courses that aren't currently offered can not have new classes
+							created for them.</para>
+					</listitem>
+					<listitem>
+						<para>Below is the <guilabel>print brochure description</guilabel> box. There are two
+							options for entering descriptions: print brochure description on the general tab, and
+							web description on the web tab. Usually, print materials are limited to descriptions
+							of two or three lines, whereas on the web, your space is unlimited. If you do not
+							intend to use onCourse to create a print based brochure, you do not need to enter any
+							information in the print brochure description field. Text entered here can later be
+							exported in an XML format ready for import into a print design product like Adobe
+							InDesign.</para>
+					</listitem>
+					<listitem>
+						<para>Move to the web tab. Text entered in the web description field can be written in
+							rich text format. A guide to using rich text can be found here <xref
+								xlink:href="#richtext.html" /> You can preview the text by hovering over the blue A
+							at the bottom of the text field. You can also attach images, files or documents to the
+							web page. To advertise this course online, select <guilabel>Enabled and visible
+								online</guilabel> in the general tab.</para>
+					</listitem>
+					<listitem>
+						<para> When you have entered your information, click <guibutton>save</guibutton> and you
+							will be returned to the course list page. Notice that the course you have entered is
+							now listed. You can return to edit this course at any time by double clicking on
+							it.</para>
+					</listitem>
+				</orderedlist>
+			</example>
+			<caution>
+				<title>Field Validation</title>
+				<para>You will notice that before entering text, the course and code box is coloured pink.
+					Once you have entered valid text the colouring disappears. Should the box remain pink, it
+					means that you have not entered the text correctly and need to review your entry. You will
+					not be able to save the record as the save button will be disabled. There will be a
+					warning icon that will provide you with information as to why the data you have entered is
+					not accepted if you hover over it.</para>
+			</caution>
+		</section>
+	</section>
+	<section xml:id="coursesVET">
+		<title>VET Courses</title>
+		<para>If you are an RTO who offers short accredited programs, or full qualifications, you will
+			appreciate the ease in which you can set up your courses with the right unit and qualification
+			details. This then flows through to recording outcomes, creating transcripts and
+			certifications, and generating AVETMISS compliant data.</para>
+		<para>You must ensure that in the File > General > Preferences > AVETMISS you have the 'show RTO
+			related screens and menus' option enabled. This makes the VET tabs in the course and class
+			records and the AVETMISS tab in the student record visible for data entry.</para>
+		<para>In the VET tab of the course record you can select the Qualification and the Units from
+			the built in NTIS data for your chosen course. If your course is VET, but not from a training
+			package or accredited course, you can also flag it VET here and allocate its Field of
+			Education ID. This is something you may need to do as part of your government funding
+			requirements for non accredited courses.</para>
+		<tip>
+			<para>Do you deliver state accredited courses? You will find the course listed in onCourse but
+				not the modules that make up the course. This is because they are not publicly available on
+				NTIS. You can send us the modules names and codes and we manually add them to onCourse for
+				you.</para>
+		</tip>
+		<para>onCourse does not contain the qualification packaging rules, so it is up to you as the RTO
+			to ensure that you are compliant with your own scope of registration and the requirements of
+			the training packages you are authorised to deliver. You should refer to these requirements
+			when creating your courses and only select those units which are allowed to contribute towards
+			that particular qualification.</para>
+		<orderedlist>
+			<title>There are a few different ways you can structure VET Courses within onCourse:</title>
+			<listitem>
+				<para> A full Qualification where you know all the units the students will complete in
+					advance i.e. all students will complete the same core and elective units. Students will
+					graduate with a complete Qualification.</para>
+			</listitem>
+			<listitem>
+				<para>A full Qualification where all students will undertake the core units, but may all
+					select different elective units. Students will graduate with a complete
+					Qualification.</para>
+			</listitem>
+			<listitem>
+				<para>A short course which has one or more units of competency embedded within it. The units
+					may or may not all contribute to the same Qualification. Students will graduate with a
+					Statement of Attainment.</para>
+			</listitem>
+			<listitem>
+				<para>A short course where you know which qualification a student will be working towards in
+					advance, but the students in the class will complete a variable number and selection of
+					units. Some may achieve a Statement of Attainment, some may be working towards a full
+					Qualification, and some may simply receive a non-vet Statement of Attendance.</para>
+			</listitem>
+			<listitem>
+				<para>A course which is not linked to any national or state accredited training packages or
+					accredited courses, but has a vocational learning outcome. Depending on your reporting
+					requirements, these courses may also contribute towards your annual VET delivery.</para>
+			</listitem>
+		</orderedlist>
+		<para>In onCourse outcomes (records of undertaking and achieving a unit of competency) flow down
+			from the course to the student via an enrolment in a class. If a course has 15 units attached
+			to it, when a student is enrolled in a class for that course, the student will have 15
+			outcomes created for them - one for each unit. You can always modify the units for the student
+			in their own enrolment, for example if they change to a different elective. What this means is
+			that you can save yourself a lot of data entry work if you set your course up with all the
+			units to begin with. </para>
+		<caution xml:id="immutableCaution">
+			<title>Changing units in a course</title>
+			<para>Once a course has a class with an enrolment in it you CAN NOT change the units of
+				competency assigned to the course. This is because onCourse has created an immutable
+				relationship with this data - if you changed it at the course level, every student ever
+				enrolled in a class for this course would have their outcomes changed. You can always retire
+				the old course and create a new course to use in the future. The new course can have the
+				same name but will have to have a different course code. This type of issue can be tricky,
+				so take care when going through the steps. Remember that if an immutable (state cannot be
+				modified after it has been set) relationship in onCourse is formed, it is quite hard to
+				remove or delete any half of the relationship. Immutable relationships are formed so as to
+				restrict or deny any removal of vital database elements, like a course, if a course was
+				allowed to be removed at the click of button, things like classes, students, invoices,
+				payments etc will be adversely affected.</para>
+		</caution>
+		<example>
+			<title>How to "remove" a unit of competency from a class</title>
+			<para>You cannot actually remove a Unit of competency from a course (see the red caution box
+				on the right), you can only cancel the old course and then create a new course with/without
+				the unit of competency you want included/removed. This is because changing the units of
+				competency changes the very nature of the course. It isn't the same course as before and
+				students enrolling in the new version of your course should be aware that they are enrolling
+				into something quite different from the old course</para>
+			<orderedlist>
+				<title>What to do to achieve this:</title>
+				<listitem>
+					<para>First go to "Course", from here double click on the course record e.g; Computers -
+						Beginners"</para>
+				</listitem>
+				<listitem>
+					<para>Once opened, disable the course by selecting "course disabled" from the "status"
+						drop down menu in the "general tab" (see screenshot below)</para>
+				</listitem>
+				<listitem>
+					<para>After the course is disabled, create a new course (see above for more on how to
+						create a new course)</para>
+				</listitem>
+			</orderedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/disabling_course.png" />
+				</imageobject>
+				<caption>
+					<para>Disabling a course</para>
+				</caption>
+			</mediaobject>
+			<para>After the new course is created (with a slightly different name from the old course),
+				you must give the course a different course code.</para>
+		</example>
+		<example>
+			<title>Creating a VET Course</title>
+			<orderedlist>
+				<listitem>
+					<para>Follow the instructions to create a new course. Open the course record to the
+							<guibutton>VET tab</guibutton>.</para>
+				</listitem>
+				<listitem>
+					<para>Enter the <guilabel>National Code</guilabel>. The fields are clairvoyant, so as you
+						type in them, onCourse will search for and list the qualifications in the built in NTIS
+						database. Select the qualification by clicking on it. You can also search for
+						qualification by name in <guilabel>Qualification</guilabel>. Omit the words Certificate
+						in or Diploma of in your search. For example, search for the Certificate IV in Aged Care
+						by typing 'Aged Care'.</para>
+				</listitem>
+				<listitem>
+					<para> The qualification information is broken into different fields so the Certificate IV
+						Training and Assessment would read <guilabel>National code</guilabel> - TAA40104
+							<guilabel>Qualification</guilabel> - Training and Assessment
+							<guilabel>Level</guilabel> - Certificate IV </para>
+				</listitem>
+				<listitem>
+					<para>You can then add modules and the units by clicking the <guibutton>+</guibutton>icon
+						on the right hand side of the screen. This will open a drop down screen.</para>
+				</listitem>
+				<listitem>
+					<para>Enter the <guilabel>National Code</guilabel> or <guilabel>Title</guilabel> These
+						fields are also clairvoyant so make your selection and press ok. You will then be
+						returned to the course screen where you will see the modules and units listed. To add
+						more units simply click on the <guibutton>+</guibutton>sign and repeat the process. To
+						delete any units, click the <guibutton>-</guibutton> sign. When you are done, click
+							<guibutton>save</guibutton>. You can also set the nominal hours for the units as you
+						attach them to the course.</para>
+				</listitem>
+			</orderedlist>
+		</example>
+		<section>
+			<title>How can I create a VET course where the students are completing a partial unit of
+				competency?</title>
+			<para>Remember that in onCourse a course is about the product you are selling to your
+				students. Sometimes you may break a program of study e.g. full qualification into lots of
+				short courses for students to buy, complete and over time, work towards the final outcome of
+				a qualification.</para>
+			<para>In onCourse, courses don't have to be linked to a qualification or a unit of competency.
+				They can just be a non-accredited course.</para>
+			<para>If students are working towards a unit of competency that they will complete in another
+				course, you may like to indicate this in the program description that you use for marketing
+				purposes. If the student only completes this course, they will only be eligible for a
+				non-accredited Certificate of Attendance, not a Statement of Attainment.</para>
+			<para>You can set up this type of program in onCourse by attaching the Qualification that the
+				student will be working towards in the VET tab of the course, but not adding any Units of
+				Competency to the course. You do not have to add the Qualification at all - this is
+				optional, and would not be appropriate if the program of study never led to any formal
+				Qualification outcome.</para>
+			<para>When students enrol in this course, they will get a dummy outcome (used for reporting
+				purposes in some states) with the name of the course. You can set this dummy outcome to pass
+				(81) or fail (82). Using this outcome, you will then know when the student enrols in the
+				next course (where the units have been attached) that they have successfully completed the
+				part one component.</para>
+			<para>When you set up the second part of the course, you will add the qualification and the
+				units to the VET tab, so when the student enrols they will get the appropriate units of
+				competency added to their record. Then you are able to record their final outcome result as
+				per the standard list of VET options.</para>
+			<para>In the example below, a student is working towards a cluster of units from the
+				Certificate I in IT. Only when they have completed the second course, Understanding Computer
+				Basics, are they eligible to be assessed against the unit outcomes. The first course,
+				Computing Basics, has no units attached, and the second course has three units attached. </para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/computing_basics.png" />
+				</imageobject>
+				<caption>
+					<para>1st course: The Qualification is attached to the course, but the student has not
+						completed any units of competency by completing this course</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/understanding_computer_basics.png" />
+				</imageobject>
+				<caption>
+					<para>2nd course: The Qualification and Units are attached to this course. After
+						completing part 1 and 2 the student can now be assessed.</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/vet_student_outcomes.png" />
+				</imageobject>
+				<caption>
+					<para>The student record shows a 'dummy' outcome for the course with no units. They have
+						completed it successfully. Now they can be assessed against the other units.</para>
+				</caption>
+			</mediaobject>
+		</section>
+	</section>
+</chapter>

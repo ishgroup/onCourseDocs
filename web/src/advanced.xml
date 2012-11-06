@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="advanced">
+	<title>onCourse CMS - Advanced</title>
+	<section>
+		<title>Advanced techniques with onCourse</title>
+		<para>Other than directly editing the content of pages within your site, there are a number of
+			other parts of your site you might like to edit. These things can be accessed from the
+			toolbar: Site Settings, Blocks, Pages, Menus and Themes.</para>
+	</section>
+	<section xml:id="siteSettings">
+			<title>Site settings</title>
+			<section>
+				<title>Introduction</title>
+				<para>The onCourse website CMS allows users to manage a number of different aspects of how their website and portal displays information. </para>
+				<para>This includes determining which fields are display within online forms, what
+					information can be viewed through the Skills onCourse portal and it allows the addition
+					of social media links. These options can be accessed by clicking on the Site Settings
+					tab within the CMS. </para>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/cms_settings_home_page.png" width="100%" />
+					</imageobject>
+					<caption>
+						<para>CMS Site Settings menu options and link to onCourse CMS User Handbook</para>
+					</caption>
+				</mediaobject>
+			</section>
+			<section>
+				<title>Contact entry</title>
+				<para>This page enables users to determine whether fields within the Enrolment and Mailing list online forms are shown or hidden, as well as the ability to set a given field as mandatory. You can also set whether or not the AVETMISS questions should display at the bottom of
+					the Enrolment Form. </para>
+				<para>Please note that the fields for First Name, Last Name and Email address are the
+					minimum required fields that can be displayed and therefore these fields cannot be
+					edited. </para>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/cms_contact_entry_page.png" width="100%" />
+					</imageobject>
+					<caption>
+						<para>Manage the display of fields within the enrolment and mailing list forms</para>
+					</caption>
+				</mediaobject>
+			</section>
+			<section>
+				<title>Skills onCourse</title>
+				<para>The CMS settings page allows Colleges to manage the amount of information that is able to be viewed by Tutors on the Skills onCourse portal. It is also possible to specify as to which email address tutor feedback is sent to within the College.  </para>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/cms_skillsonCourse_setting_page.png" width="100%" />
+					</imageobject>
+					<caption>
+						<para>Manage the information  that tutors can access via the tutor portal</para>
+					</caption>
+				</mediaobject>
+				<para>When viewing the class roll via the Skills onCourse, Colleges can determine whether
+					they want their tutors to be able to view the email address, phone numbers of each
+					student on the class roll. Please note that it is not possible to not display the
+					contact details for one class, but display it for another, as this setting is
+					universally applied. </para>
+				<para>See the following screen from the Skills onCourse portal which shows where the student contact details display within the class roll. By specifying that you do not want the contact details to be displayed, this class list would simply show as a list of student names. </para>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/cms_set_portal_info_display.png" width="100%" />
+					</imageobject>
+					<caption>
+						<para>Manage the display of student email and telephone contacts within the class roll on Skills onCourse</para>
+					</caption>
+				</mediaobject>
+			</section>
+			<section>
+				<title>Website</title>
+				<para>The onCourse CMS now gives you access to a powerful social media linking tool called
+					'Add This'. This free application will enable a college to insert social media links
+					into courses and web pages, as well as giving you access to analytical tools to gain
+					insight into your audience. </para>
+				<para>In order to add these social media links, you need to set up a free account with 'Add
+					This',  including specifying which social media links you wish to display on your
+					website, the size and format of those links, as well as the free analytics tools that
+					are part of your account set up. </para>
+				<para>Once you have set up the 'Add This' account by following the link within the CMS, all
+					you need to do to insert the id into the field provided and then specify as to whether
+					you wish these links to appear on your course description and or web page. </para>
+				<para>Once you set up your AddThis account you will be given a snippet of html to
+					put into your site. It might look something like this:</para>
+				<para><programlisting language="html">&lt;!-- AddThis Button BEGIN -->
+&lt;div class="addthis_toolbox addthis_default_style ">
+&lt;a class="addthis_button_preferred_1">&lt;/a>
+&lt;a class="addthis_button_preferred_2">&lt;/a>
+&lt;a class="addthis_button_preferred_3">&lt;/a>
+&lt;a class="addthis_button_preferred_4">&lt;/a>
+&lt;a class="addthis_button_compact">&lt;/a>
+&lt;a class="addthis_counter addthis_bubble_style">&lt;/a>
+&lt;/div>
+&lt;script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f0fc25723d304e0">&lt;/script>
+&lt;!-- AddThis Button END--></programlisting></para>
+				<para>Take the code following "pubid" in the last line and insert it into the field within the CMS site settings page. In this case enter "ra-4f0fc25723d304e0"</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/cms_website_settings_page.png" width="100%" />
+					</imageobject>
+					<caption>
+						<para>Set up and manage the addition of social media links to your website</para>
+					</caption>
+				</mediaobject>
+				<para>If you insert the social media links to your course information, it displays as
+					follows. The list of available links does include the ability to email a friend. </para>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/adding_social_media_links.png" width="100%" />
+					</imageobject>
+					<caption>
+						<para>Example of how you can add social media links to any courses on your website</para>
+					</caption>
+				</mediaobject>
+			</section>
+			<section>
+				<title>Payment Options</title>
+				<para>Often times Colleges want to redirect their clients to a specific web page once the
+					online enrolment process has been completed.  You can do this simply by entering the URL
+					you wish to redirect your students to. Please note that this URL is universally applied
+					for all online enrolments. </para>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/cms_payment_settings_page.png" width="100%" />
+					</imageobject>
+					<caption>
+						<para>Specify page that students will be directed to after completing online enrolment</para>
+					</caption>
+				</mediaobject>
+			</section>
+		
+	</section>
+	<section xml:id="blocks">
+		<title>Blocks</title>
+		<para>Blocks are the cornerstone to your website's variety and page dynamics. For example if you
+			wanted an element (a banner for example) on every page of your web site, then blocks are your
+			answer. If you wanted an area on several different pages dedicated to a contact form, blocks
+			are ideal. Blocks are re-usable snippets of text, pictures, rich text markup, javascript,
+			etc.</para>
+		<para>The block listing page allows you to easily add and edit blocks. Give them a name which
+			means something to you as users of the website will never see the name. However just creating
+			a block will not achieve anything of itself. You need to place that block onto your site in
+			one of two ways:<simplelist>
+				<member>within a <emphasis role="bold">Theme</emphasis>. See <xref xlink:href="#themes"
+					 /></member>
+				<member>using <emphasis role="bold">rich text markup</emphasis>. See <xref
+						xlink:href="#richText" /></member>
+			</simplelist></para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/blocks.png"
+					format="png" />
+			</imageobject>
+			<caption>
+				<para>Adding a Block through the Theme Editor</para>
+			</caption>
+		</mediaobject>
+	</section>
+	<section xml:id="pages">
+		<title>Pages</title>
+		<para>This list of all the pages in your site gives you quick access to find the page you need,
+			then edit or delete that page. The search box to the top right gives you quick access to find
+			pages by name.</para>
+	</section>
+	<section xml:id="menus">
+		<title>Menus</title>
+		<para><mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="50%" align="right" contentdepth="100%"
+						fileref="images/dragDrop_menu.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Drag and Drop Menu hierarchy </para>
+				</caption>
+			</mediaobject>Most websites will have a primary navigation menu which users will use to find
+			their way around. In this place you can add new menu items, and link them to particular pages
+			or external URLs. The user interface here is very simple: click on the menu name to edit it.
+			The name is visible to users of your website. Drag the menu items into a different order or
+			nest them within other menu items. And click to edit the URL (that is, the page to which the
+			menu links).</para>
+	</section>
+	<section xml:id="themes">
+		<title>Themes</title>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/themeEditor2.png"
+						format="png" />
+				</imageobject>
+				<caption>
+					<para>Themes - adding variety</para>
+				</caption>
+			</mediaobject>Themes are a way to describe a page structure made up by a number of blocks and
+			by a design layout created for you by your designer. There will always be a layout called
+			"default" available and many sites will need no more than just that one layout. If you want
+			different parts of your site to have very different looks, ask your designer to create
+			alternative layouts for you to use.</para>
+		<para>Each theme can have a number of blocks arranged in any way you choose. There are five
+			regions available:<simplelist>
+				<member>header</member>
+				<member>left</member>
+				<member>content</member>
+				<member>right</member>
+				<member>footer</member>
+			</simplelist></para>
+		<para>Each region can contain one or more blocks which you drag from the right area. To remove a
+			block just drag it back into the list of unused blocks on the right. You can order the blocks
+			on the page by dragging them into the position of your choice. Remember, that when the page is
+			shown the content area will also contain any content for the page itself. The blocks are shown
+			above the page content, although your web designer can change that if they choose.</para>
+	</section>
+</chapter>

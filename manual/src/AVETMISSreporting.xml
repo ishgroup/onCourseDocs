@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="AVETMISS">
+	<title>AVETMISS Reporting</title>
+	<section>
+		<title>What is AVETMISS?</title>
+		<para>AVETMISS stands for Australian Vocational Education and Training Management Information
+			Statistical Standard.</para>
+		<para>In the AQTF 2010, Condition 6 Certification &amp; Issuing of Qualifications &amp;
+			Statements of Attainment states: "The RTO must have a student records management database in
+			place that has the capacity to provide the registering body with AVETMISS compliant
+			data."</para>
+		<para>If you are using onCourse, you're in luck - onCourse is the only free AVETMISS compliant
+			student management database currently available to the Australian RTO market. onCourse
+			exports AVETMISS data compliant with the current 6.1 VET Provider specifications, and
+			also complies with the 6.0 standard for state based reporting agencies that have chosen
+			not to update to 6.1.</para>
+		<para>The AVETMISS data you are required to submit are made up of a series of files with names
+			like NAT00120. These files must be supplied as plain text in a fixed width format. These files
+			are not very easy to create or read by a human as if one character is in the wrong place, the
+			whole file can be rejected. The courses, classes, students and outcomes you create in onCourse
+			will be exported out of onCourse into these files for you, ready to lodge as required.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/AVETMISS_NAT120.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>This is what the NAT000120 file looks like when ready for submission.</para>
+			</caption>
+		</mediaobject>
+		<para>"</para>
+	</section>
+	<section>
+		<title>What do I have to lodge?</title>
+		<para>NCVER publishes the National <link
+				xlink:href="http://www.ncver.edu.au/avetmiss/21055.html">AVETMISS VET Provider
+				Specifications and AVETMISS Data Element Definitions.</link> If you don't have a copy of
+			these, we recommend downloading them for your reference. Depending on the state where you are
+			lodging, you will also need to meet some state specific variations. These can be found here: </para>
+		<para>
+			<link
+				xlink:href="https://www.training.nsw.gov.au/training_providers/training_market/doing_business/index.html"
+				>New South Wales</link>
+		</para>
+		<para>
+			<link xlink:href="http://www.training.qld.gov.au/training-organisations/detconnect/index.html"
+				>Queensland</link>
+		</para>
+		<para>
+			<link xlink:href="http://www.skills.vic.gov.au/corporate/providers/data-collection"
+				>Victoria</link>
+		</para>
+		<para>
+			<link
+				xlink:href="http://www.trainingwa.wa.gov.au/trainingwa/detcms/navigation/working-in-training/training-providers/"
+				>Western Australia</link>
+		</para>
+		<para>
+			<link
+				xlink:href="http://www.training.sa.gov.au/InformationforNewClients/AVETMISSReporting/tabid/222/Default.aspx"
+				>South Australia</link>
+		</para>
+		<para>
+			<link xlink:href="http://www.skills.tas.gov.au/providers/rtos/status/avetmiss/avetmiss"
+				>Tasmania</link>
+		</para>
+		<para>
+			<link xlink:href="http://www.det.act.gov.au/vetadmin">Australia Capital
+				Territory</link>
+		</para>
+		<para>
+			<link xlink:href="http://www.det.nt.gov.au">Northern
+				Territory</link>
+		</para>
+		<section>
+			<title>Training Organisation (NAT00010) file</title>
+			<para>All the data in this file is collected in the onCourse general preferences window. Go to
+				File > Preferences > General. Select the AVETMISS tab and enter the contact details of your
+				business.</para>
+		</section>
+		<section>
+			<title>Training Organisation Delivery Location (NAT00020) File</title>
+			<para>These are your onCourse sites. Set up each site where you deliver training and enter the
+				address details. You can ignore the latitude and longitude fields. onCourse will require you
+				to create at least one room for each site (this has nothing to do with AVETMISS, it is part
+				of our timetabling feature) so to make it simple, give each site a room with a generic name
+				like 'default'.</para>
+		</section>
+		<section>
+			<title>Course (NAT00030) File and Module/Unit of Competency (NAT00060) File</title>
+			<para>This information comes from the onCourse Course detail (what we call a 'course' in
+				onCourse is different to what AVETMISS calls a course). When you create a new course in
+				onCourse, go to the VET tab and add the Qualification and Unit(s) that you are delivering as
+				part of this program. All the NTIS data is built in so when you start typing the code, the
+				rest of the unit information will appear to select from the list. You can set up full
+				qualification courses here or short courses with one or more units. </para>
+			<para>As you add the units, add the nominal hours information to each unit. </para>
+			<para>Remember NTIS doesn't record or publish the module details of state accredited courses.
+				If you would like us to add the accredited course modules you deliver to onCourse, please
+				contact us and we will import them for you at no additional charge. To get students enrolled
+				into courses, you will next need to create one or more classes, then use Quick Enrol to
+				enrol your students. </para>
+			<para>
+				<link xlink:href="http://www.ish.com.au/s/onCourse/doc/latest/manual/courses.html">More instructions
+					on how to create a course</link>
+			</para>
+			<para>
+				<link xlink:href="http://www.ish.com.au/s/onCourse/doc/latest/manual/classes.html">More
+					instruction on how to create classes</link>
+			</para>
+			<para>
+				<link xlink:href="http://www.ish.com.au/s/onCourse/doc/latest/manual/processingEnrolments.html"
+					>More instruction on how to enrol students</link>
+			</para>
+			<para>
+				<link xlink:href="http://trainingsupport.otte.vic.gov.au/p_trgpck.cfm">Link to Victorian
+					Nominal Hours</link>
+			</para>
+		</section>
+		<section>
+			<title>Client (NAT00080) File and Client Postal Details (NAT00085) File and Disability
+				(NAT00090) File and Prior Educational Achievement (NAT00100) File </title>
+			<para>Client files in onCourse are called contacts. Create each of your students as contacts
+				in onCourse, ensuring you fill in their address details and the data on the AVETMISS tab.
+				Unique client identifiers are auto assigned. You don't see these in the contact detail, but
+				you can search on them from the contact window if you later get a validation error for one
+				of your clients.</para>
+		</section>
+		<section>
+			<title>Enrolment (NAT00120) File</title>
+			<para>This is the biggest and most critical file - all the detail about what students have
+				enrolled in and completed and whether or not your going to get payment for it. This
+				information comes from a variety of locations in onCourse, so field by field we'll cover it
+				here:</para>
+			<section>
+				<title>Training Organisation Delivery Location Identifier</title>
+				<para>This is a reference back to the site you have set up.</para>
+			</section>
+			<section>
+				<title>Client Identifier</title>
+				<para>This is a reference back to the student you have set up.</para>
+			</section>
+			<section>
+				<title>Module/Unit of Competency Identifier</title>
+				<para>If you set the unit in the course, and have enrolled your student in a class, an
+					outcome record will be created for each unit. But if you have a student who chooses a
+					different elective or you need to add or remove units for an individual student, open the
+					enrolment window, find the enrolment you want to modify and on the outcome tab, make the
+					appropriate changes.</para>
+			</section>
+			<section>
+				<title>Qualification/Course Identifier</title>
+				<para>This is a reference back to the course you have set up.</para>
+			</section>
+			<section>
+				<title>Enrolment Activity Start Date and Enrolment Activity End Date</title>
+				<para>This is set in the class you have enrolled the student in. When you set up a class in
+					onCourse, set a start date and time and end date and time on the General tab. If you need
+					to modify the start or end date for an individual student, you can do it through the
+					enrolment (as described above) or through the class window by looking on the Outcome tab
+					and changing the date in the field for the student/unit combination of your choice.
+				</para>
+			</section>
+			<section>
+				<title>Delivery Mode Identifier</title>
+				<para>This is set in the Class on the VET tab. You can also make changes for individual
+					students on the Outcome list or through their individual enrolment.</para>
+			</section>
+			<section>
+				<title>Outcome Identifier - National</title>
+				<para>You can set the outcome identifier (we call it status) on the Outcomes tab in the
+					Class window. If you select all the records in the list and right click on them, you can
+					set them all to 'Successful (20)' and then go back and change the others that should be
+					other statuses (like RPL or Not Yet Competent) one by one. Or you can set them all one by
+					one, whichever you prefer.</para>
+			</section>
+			<section>
+				<title>Scheduled Hours</title>
+				<para>The scheduled hours reported are the nominal hours that you set in the unit of
+					competency. If you added the nominal hours when setting up the course it will report here.
+					You can override the Scheduled Hours in the individual outcome.</para>
+			</section>
+			<section>
+				<title>Funding Source - National</title>
+				<para>You can set this in the class window on the VET tab, but change it for each outcome in
+					the class Outcomes tab or for each student in their Enrolment record on the General tab.
+					Double click the outcome to see this field.</para>
+			</section>
+			<section>
+				<title>Commencing Course Identifier</title>
+				<para>We calculate this for you by comparing the student's record to their previous
+					enrolment records.</para>
+			</section>
+			<section>
+				<title>Training Contract Identifier - New Apprenticeships and Client Identifier - New
+					Apprenticeships</title>
+				<para>This information can be entered on the General tab on the student Enrolment.</para>
+			</section>
+			<section>
+				<title>Study Reason Identifier</title>
+				<para>You can provide an answer to this question during the enrolment process, or after
+					enrolment by going to the General tab on the student Enrolment.</para>
+			</section>
+			<section>
+				<title>VET in Schools Flag</title>
+				<para>This is always reported as N (for no)</para>
+			</section>
+			<section>
+				<title>Outcome Identifier - Training Organisation</title>
+				<para>This field is always exported as blank.</para>
+			</section>
+			<section>
+				<title>Funding Source - State Training Authority</title>
+				<para>You can enter this information in the Class VET tab or in the individual student's
+					outcome record on the Class Outcomes Tab or the Enrolment Outcomes tab. Double click the
+					outcome to see this field.</para>
+			</section>
+			<section>
+				<title>Client Tuition Fee</title>
+				<para>This is the fee you charged the student at the time of enrolment. To charge a fee, set
+					a class fee in the Class General tab. VET courses are usually GST exempt. During the
+					enrolment process, you can charge the student the full fee or give them a manual discount
+					if they meet fee exemption criteria. The fee they pay here is what is reported. Create a
+					full cash payment for each student. Don't worry about the invoices that are automatically
+					created here - they have nothing to do with AVETMISS.</para>
+			</section>
+			<section>
+				<title>Fee Exemption/Concession Type Identifier</title>
+				<para>This is set in the student's Enrolment record on the General Tab.</para>
+			</section>
+			<section>
+				<title>Purchasing Contract Identifier and Purchasing Contract Schedule Identifier</title>
+				<para>These are set in the class on the VET tab</para>
+			</section>
+			<section>
+				<title>Hours Attended</title>
+				<para>This is only used when a student withdraws from a unit without completing it. If you
+					need to set the hours attended you can find the field in the Outcome record on either the
+					Class Outcomes Tab or the Enrolment Outcomes Tab. Double click the outcome to see this
+					field.</para>
+			</section>
+		</section>
+		<section>
+			<title>State Specific NAT000120 fields</title>
+			<para>Some states have added extra fields to the AVETMISS standard. These are the ones were
+				have added to onCourse. Please let us know if you are asked to provide something else that
+				is not in the list below so we can add it to onCourse.</para>
+			<section>
+				<title>(NSW) Booking ID and (NSW) Course Site ID</title>
+				<para>These are set in the Class window on the VET tab.</para>
+			</section>
+			<section>
+				<title>(NSW) Training Plan Developed</title>
+				<para>Exported from the option set the Enrolment record value from the field of the same
+					name.</para>
+			</section>
+			<section>
+				<title>(QLD) Full Time Learning Option </title>
+				<para>In the Enrolment window on the General Tab there is a Full Time Flag (QLD).</para>
+			</section>
+			<section>
+				<title>(VIC &amp; QLD) Hours Attended</title>
+				<para>This is only used when a student withdraws from a unit without completing it. If you
+					need to set the hours attended you can find the field in the Outcome record on either the
+					Class Outcomes Tab or the Enrolment Outcomes Tab. Double click the outcome to see this
+					field called 'Reportable Hours'.</para>
+			</section>
+			<section>
+				<title>(VIC) Course Commencement Date</title>
+				<para>The class start date is always exported here.</para>
+			</section>
+			<section>
+				<title>(VIC) Eligibility Exemption indicator</title>
+				<para>Exported from the option set the Enrolment record value from the field of the same
+					name.</para>
+			</section>
+			<section>
+				<title>(VIC) VET FEE-HELP (Income Contingent Loan) Indicator</title>
+				<para>Exported from the option set the Enrolment record value from the field of the same
+					name.</para>
+			</section>
+			<section>
+				<title>(VIC) Industry code (ANZSIC)</title>
+				<para>Export the ANZIC code only when VET Funding Source State data is either LSG, PSG or
+					SSG</para>
+			</section>
+		</section>
+		<section>
+			<title>Qualification Completed (NAT000130) File</title>
+			<para>To set a student as having completed a qualification, you need to issue a Certificate
+				for them. onCourse will create AQF compliant certificates for your students, but for the
+				purposes of lodging AVETMISS, you don't need to print or issue them. </para>
+			<para>To create a Certificate record, open the certificate window and click plus. Type the
+				name of the student and the qualification you wish to issue and choose the outcomes from the
+				student's record you wish to add to the certificate. Check the option "satisfies
+				requirements for complete qualification" and save the record. If you are exporting a NSW DET
+				export, and have set all the outcomes for an enrolment (e.g. they are no longer blank) a
+				NAT000130 file will be automatically created for you, even if you have not delivered a full
+				qualification to the student. This is because NSW DET uses the NAT00130 file for a different
+				purpose than the national standard. </para>
+			<para>
+				<link xlink:href="http://www.ish.com.au/s/onCourse/doc/latest/manual/rto.html">More information
+					on creating Certificates in onCourse</link>
+			</para>
+		</section>
+	</section>
+	<section xml:id="AVETMISSExports">
+		<title>AVETMISS Exports</title>
+		<subtitle>How to get your AVETMISS data out of onCourse to submit to the government funding body
+			of your choice</subtitle>
+		<para>There are two ways to export your data. One is via a date based range and the other is by
+			selecting one or more particular classes you want to export. The date based export will export
+			every outcome in your database (including non-VET outcomes) that have activity during the
+			period you have selected. This type of export is useful for customers who need to report their
+			entire business activity to a monitoring or funding agency. Choosing this type of export will
+			automatically export an outcome of 70 for all outcomes which have end dates outside the
+			reporting range you define. You never need to set an outcome of 70 in onCourse. All non-VET
+			outcomes will also be exported as 81, unless you have manually defined them within onCourse as
+			82..</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/AVETMISS_export_menu.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Select AVETMISS export from the menu</para>
+			</caption>
+		</mediaobject>
+		<example>
+			<title>How to export date range AVETMISS data</title>
+			<orderedlist>
+				<listitem>
+					<para>Go to the file menu, select <guimenuitem>import/export</guimenuitem> and choose
+							<guimenuitem>Export AVETMISS...</guimenuitem></para>
+				</listitem>
+				<listitem>
+					<para>Select the state you are exporting to. AVETMISS standard is only accepted by NT.
+						Every other state has its own variations. The AQTF Competency Completion report is also
+						available to select from this menu. </para>
+				</listitem>
+				<listitem>
+					<para>You can optionally select to export all blank outcomes with the value 81. This is
+						useful only for testing purposes where you are trying to identify lodgement errors other
+						than blank outcomes.</para>
+				</listitem>
+				<listitem>
+					<para> Select the date range you wish to export and where you wish to export the files to,
+						e.g. your desktop, and select proceed. The 10 text files will then be created ready to
+						be submitted to the government reporting agency of your choice.</para>
+				</listitem>
+			</orderedlist>
+		</example>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/AVETMISS_export_GUI.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Ensure you select the right 'AVETMISS flavour' for the State where you report</para>
+			</caption>
+		</mediaobject>
+		<example>
+			<title>How to export AVETMISS for one or more classes</title>
+			<para>Sometimes you may wish to export one or a select group of classes only. You can do this
+				from the class window.</para>
+			<orderedlist>
+				<listitem>
+					<para>Open the class window and run the query or filter to return the classes you wish to
+						export</para>
+				</listitem>
+				<listitem>
+					<para>Highlight from this list the classes you want to export</para>
+				</listitem>
+				<listitem>
+					<para>In the cog wheel, select AVETMISS export</para>
+				</listitem>
+				<listitem>
+					<para>Select the State or requirement you are exporting for. Your files will be saved in a
+						folder in the location you have chosen. You will not export any outcomes as 70 using
+						this method.</para>
+				</listitem>
+			</orderedlist>
+		</example>
+		<section>
+			<title>Validation Rules and State Variations in AVETMISS Reporting</title>
+			<para>While there is a National Standard known as AVETMISS, each state in Australia tends to
+				use a slightly different variation on that standard. We have also added some global rules to
+				AVETMISS exporting to assist in reducing validation errors. These includes things
+				like:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Not exporting birth dates for clients younger than 6 or older than 94, even where
+						set in the database</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<listitem>
+					<para>Automatically exporting OSPC as the postcode for students you have recorded as
+						international students</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<listitem>
+					<para>Not exporting a value for Proficiency in Spoken English (even when set in the
+						database) if you reported the student speaks English as their main language</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<listitem>
+					<para>Defining the client as Still in School when they are younger than 16 and not
+						reporting Still at School for clients who are older than 16 and reported as being
+						employed</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<listitem>
+					<para>Exporting NOT PROVIDED where no suburb has been entered in the student's address
+						record</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<listitem>
+					<para>Setting the delivery mode in the NAT00120 automatically to 90 where the outcome is
+						reported as RPL, RCC or credit transfer</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<listitem>
+					<para>Reporting all scheduled hours as 0 where the outcome is a credit transfer</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<listitem>
+					<para>Automatically calculate the Commencing Course Enrolment Identifier based on the
+						students other enrolments</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<listitem>
+					<para>Not report a Study Reason Identifier if the course is non-VET</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<listitem>
+					<para>Exporting all non-VET outcomes that have not been set with a status of 81
+						and any outcome ending after your chosen reporting period will be exported
+						as a 70, regardless of what it has been set as in your data.</para>
+				</listitem>
+				<listitem>
+					<para>Allow user to optionally select to export an outcome of 81 or 90 for any
+						VET outcome which is currently not set when exporting their AVETMISS
+						data.</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<listitem>
+					<para>Export the client Title in the NAT00085 as Mr if male or Ms if female, if not
+						otherwise specified</para>
+				</listitem>
+			</itemizedlist>
+			<section>
+				<title>AVETMISS Standard</title>
+				<para>This export is to the AVETMISS VET Provider Collection Specifications National Length
+					only, for each of the NAT file specifications. Customers reporting in NSW using
+					the OLIV portal are advised to use this export option. This export option stops
+					at the National Record Collection point for each file and doesn't include any of
+					the state specific files.</para>
+				<para>If you require a standard AVETMISS export option with the state specific
+					record length, we recommend using the TAS export option.</para>
+			</section>
+			<section>
+				<title>NSW DET</title>
+				<para>This export option is for reporting to the NSW Training Market and meets the requirements
+					of the ePayments May 2011 Data Specifications. This means you will export blank
+					spaces for the outcome where the outcome has not been set for this
+					option.</para>
+				<para>After the update to AVETMISS 6.1, a new below the line filed has been added to
+					the national standard called the Specific program identifier at position 123 in
+					the NAT00120. This field can not be exported in the NSW DET version of the
+					export as it conflicts with the location of the DET specific Booking ID. NSW DET
+					do not expect to update their exporting option to comply with the 6.1 standard,
+					as version 7 is expected to be released at the end of 2012.</para>
+				<para>There is also a NAT00130 record file that is created to indicate the student's
+					enrolment is completed. There is a record created for this file either because you have
+					created a Qualification certificate in onCourse for the student or because all their
+					outcomes from the class are set and all the outcome end dates are before the end date of
+					the export specified. If you are doing a final export you must ensure you choose an end
+					date before the day of export but after the last end date of the outcomes when exporting -
+					initial and midway exports don't need the outcome start and end dates specified.</para>
+			</section>
+			<section>
+				<title>Victoria</title>
+				<para>This export option is used to report against the Victorian VET Student Statistical
+					Collection Guidelines – 2011 v 1.3.1.</para>
+				<para>At the end of the NAT00010 file, the additional data 'onCourse' is exported</para>
+				<para>If supplied, you can export the Victorian Student Number in the NAT00080</para>
+				<para>In the NAT00120, onCourse automatically exports the Course Commenced Date from the
+					start date of the enrolment</para>
+				<para>In the NAT00120, onCourse will only export the ANZIC code only when VET Funding Source
+					State data is either LSG, PSG or SSG</para>
+				<para>In the NAT00120, onCourse will Only export Hours Attended data where the student
+					outcome is marked as withdrawn</para>
+			</section>
+			<section>
+				<title>Queensland</title>
+				<para>onCourse will export the Unique Learner Identifier in the NAT00080 where it has been
+					provided</para>
+				<para>In the NAT00120, onCourse will export the delivery mode of 90 in the NAT00120 where
+					the outcome has not been set by the user</para>
+				<para>In the NAT00120, the additional QLD only outcome of 90 Result Not Available, will be
+					exported if set in the outcome record.</para>
+				<para>In the NAT00120, onCourse will Only export Hours Attended data where the student
+					outcome is marked as withdrawn</para>
+				<para>In the NAT00120, onCourse will export the Full Time Learning option where this has
+					been set in the student's enrolment.</para>
+			</section>
+			<section>
+				<title>Tasmania</title>
+				<para>onCourse will export the client Title in the NAT00085 as Mr if male or Ms if female,
+					if not otherwise specified (this was added specifically for Tasmania, but applies to all
+					exports)</para>
+			</section>
+			<section>
+				<title>South Australia</title>
+				<para>onCourse will export the value @@ for the Delivery Mode in the NAT00120 if the outcome
+					is set as Did Not Start</para>
+			</section>
+			<section>
+				<title>Northern Territory</title>
+				<para>NT does not have any additional requirements, but they do require the below the
+					optional below the line fields to be completed and reported on. We recommend using the TAS
+					export for NT.</para>
+			</section>
+		</section>
+		<section>
+			<title>How to give your AVETMISS data to the people who want to pay you</title>
+			<para>Either of the methods above will have created a folder on your computer with text files,
+				all with funny names like NAT00080 and NAT00130. These are things you need to give to the
+				government to get paid. Often, you will need to upload them to a website where they will be
+				validated.</para>
+			<para>For some types of lodgement you will also need to supply the NAT00085 file. This isn't
+				outlined above, but is essentially the same as the NAT00080 but with your students personal
+				addresses and other contact details. It will be automatically generated when you create an
+				AVETMISS export. Be aware of the privacy implications of supplying this file to third
+				parties. We suggest only supplying it when it is a requirement of your funding.</para>
+			<para>Your local friendly funding body can help you from here on in if you encounter
+				difficulties with their lodgement process. Customers with onCourse support plans can also
+				log a task in squish for additional assistance.</para>
+		</section>
+	</section>
+	<section>
+		<title>AVETMISS FAQ</title>
+		<para>Want to know something specific about onCourse and AVETMISS? Post your question in <link
+				xlink:href="http://forum.ish.com.au/categories/avetmiss">our forums</link>. Response to
+			common questions will be added here also.</para>
+		<section>
+			<title>Can I stop a class and all it's students being exported for AVETMISS?</title>
+			<para>Yes. In the class VET tab, select the option 'Do not report for AVETMISS'.</para>
+		</section>
+		<section>
+			<title>How can I get my State Accredited Modules added to onCourse?</title>
+			<para>We add custom modules on request. We need to add them manually to onCourse as they are
+				not published by NTIS. You can send an Excel file to ish with the following information:
+				Unit code, Unit Title and the Field of Education ID (6 characters).</para>
+			<para> Once these have been added by us, your onCourse server will download the changes within
+				48 hours, and they will be available in the Unit of Competency list with the other included
+				units. You may like to also read the information <link
+					xlink:href="http://www.ish.com.au/s/onCourse/doc/latest/manual/download-install.html">about
+					Trouble Shooting Connection Problems</link> if the units do not download
+				automatically.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/Add_manual_units.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>You can provide the list of Units to add to onCourse in an excel spreadsheet</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Where do I enter the State Funding Codes in onCourse for the state where I am reporting
+				to?</title>
+			<para>There are two places where you can set your State Funding Source codes. The first in on
+				the VET tab of the class. This is a useful place to set the code when all (or most) of the
+				students in the class have the same funding source applying to them.</para>
+			<para>First you will need to make sure you have an up to date list of the appropriate State
+				Funding Codes to use within your reporting state. onCourse doesn't maintain a list of these
+				codes, you will need to contact your local reporting officer to obtain this
+				information.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/Class_State_funding.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Enter your State Funding Source code in the field highlighted.</para>
+				</caption>
+			</mediaobject>
+			<para>If a student has a different funding code which applies to them, you can just change
+				their outcomes funding codes to make it different to the one set at the class level. If all
+				students in the class have different funding codes, you don't need to set anything at the
+				class level, but can set each outcome separately. Double click on the outcome line in the
+				Class Outcomes tab to set this information. You can also access this list from the
+				individual student's Contact or Enrolment record.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/Outcome_State_Funding.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Enter your State Funding Source code in the field highlighted for each
+						outcome.</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>How do I record a student's outcome who has completed a different elective from the
+				rest of class?</title>
+			<para>Once you have set up the outcomes at the Course level, every student enrolling in a
+				Class from that Course will have all of the outcomes applied to their record. If a student
+				chooses a different elective from the one you have set a the course level you can change
+				their outcome so it is linked to a different Unit of Competency.</para>
+			<para>You can do this by going into Class Outcome tab and double clicking on the outcome you
+				wish to change. Type the Module code or Module name into the field and click Ok to link to a
+				new outcome.</para>
+			<para>If you wish to add or delete an outcome from the student's record, you need to do this
+				from the Enrolment Outcome tab. You will see a + and a - button in the top right hand
+				corner. Use these to add or delete outcome records as required. </para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/Adding_outcome.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Adding an additional Outcome via the student's Enrolment record.</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>How do I record information about a clients traineeship?</title>
+			<para>When a student is completing a traineeship, you will have been given a 'Training
+				Contract Identifier' and a Client 'Identifier' by your state funding body. They may call
+				them by different names, but the important thing to confirm is that they are the data that
+				exports into the NAT000120 in positions 70 &amp; 80 respectively.</para>
+			<para>This data is entered into the onCourse enrolment window. This data will need to be
+				entered after enrolment by going to the Enrolment window, locating the student's enrolment
+				record and double clicking on it. On the general tab you will find these fields.</para>
+			<para>If you have broken the traineeship into multiple enrolments, each with one or more units
+				of competency, you will need to enter this information into each enrolment record for the
+				student that relates to the traineeship. This information is not recorded as part of the
+				student's master contact record, as the student may also have other enrolment records which
+				don't form part of this traineeship.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/trainee_fields.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Highlighted trainee fields in the student's enrolment record.</para>
+				</caption>
+			</mediaobject>
+		</section>
+	</section>
+</chapter>

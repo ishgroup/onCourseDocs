@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="generalPrefs">
+	<title>General Preferences</title>
+	<para>When you begin onCourse with a new database the setup wizard set up will take you through
+		the steps required to set up onCourse for the first time. You will be guided step by step and
+		prompted to enter the relevant information you need to set up onCourse to ensure it runs
+		efficiently and effectively. You can also return to modify your general preferences at any time
+		in the future.</para>
+	<tip>
+		<para>You can save your changes as you work through the preferences tabs by clicking
+			<guibutton>save</guibutton> This will also close the window, but you can open it again from
+			File > Preferences > General </para>
+	</tip>
+	<section>
+		<title>General Preferences Terms and Definitions</title>
+		<para> The General Preferences screen is where you set up the basic administration functions of
+			onCourse. Starting here provides the initial set up for onCourse.</para>
+		<variablelist>
+			<varlistentry>
+				<term>Services</term>
+				<listitem>
+					<para>The services tab is an important part of general preferences as it displays what
+						kind of features your organisation have available (depending on which support plan you
+						have), you will also be able to input your organisation URL address on the services tab.
+					</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Messaging</term>
+				<listitem>
+					<para>The messaging tab allows you to set preferences for mail.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Class Defaults</term>
+				<listitem>
+					<para>This tab allows you to set the defaults for minimum and maximum number of places, the delivery mode and funding source of a Class. </para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>LDAP</term>
+				<listitem>
+					<para>Stands for Light Directory Access Protocol and allows users to be authenticated by either
+						LDAP or AD (Active Directory). If you don't know what this is, then you definitely don't
+						need it.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Maintenance</term>
+				<listitem>
+					<para>The maintenance tab allows you to set backup preferences and change whether you
+						would like automatic logout on or not. </para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>AVETMISS</term>
+				<listitem>
+					<para>Stands for the Australian Vocational Education and Training Management Information
+						Statistical Standard which is the national reporting standard for Australian Registered
+						Training Organisations, it is essential that these fields are all filled out fully and
+						correctly as it is a major part of AVETMISS reporting.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Printing</term>
+				<listitem>
+					<para>Provides settings for the printing of reports. </para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</section>
+	<section>
+		<title>Setting your General Preferences</title>
+		<para>In onCourse go to
+			<guimenuitem>file</guimenuitem><guisubmenu>preferences</guisubmenu><guisubmenu>general</guisubmenu>
+			This is the main page of General Preferences. You will notice that the services tab is
+			highlighted which is where we will begin. </para>
+		<tip>
+			<para>Entry fields coloured pink are the only places that need information entered in order to
+				activate onCourse. Fields coloured white do not require any data to be entered, they are
+				optional and the onCourse system will run smoothly if they are not filled in. The pink
+				coloured box will change to white once you have entered your information correctly and
+				pressed enter. If the box does not change to white then you will need to review your
+				information and try entering again.</para>
+		</tip>
+		<orderedlist>
+			<listitem>
+				<para>On the Services tab, Enter the <guilabel>College Name </guilabel>e.g. Rosewood College
+					This is a required field and you will not be able to proceed with the set up process
+					without first entering a college name.</para>
+			</listitem>
+			<listitem>
+				<para>To the right enter the <guilabel>ABN</guilabel> e.g 18 123 456 789</para>
+			</listitem>
+			<listitem>
+				<para>Now enter the <guilabel>College Website URL</guilabel> e.g. rosewoodcollege.com.au
+				</para>
+			</listitem>
+			<listitem>
+				<para>Below you will see Features not enabled. You need to purchase an onCourse support contract
+					to enable these additional features. onCourse is still fully functional as an enrolment
+					system without these services. If you have purchased an onCourse support agreement we will
+					enable the services for your plan.<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/services_tab.png" format="png" />
+						</imageobject>
+						<caption>
+							<para>The "Services" tab</para>
+						</caption>
+					</mediaobject>
+				</para>
+			</listitem>
+		</orderedlist>
+		<section xml:id="generalPrefs-merchantId">
+			<title>Linking your credit card merchant ID</title>
+			<para>In order to use the onCourse integrated credit card gateway you need to contact ish with
+				your merchant details from your bank. ish will be able to then link your account to
+				onCourse and provide a quick way to take payments both in the office and your
+				onCourse powered website.</para>
+			<itemizedlist>
+				<listitem>
+					<para>Visit this page <link
+						xlink:href="http://www.ish.com.au/oncourse/documentation/administrator-guide/internet-merchant-number-guide"
+						> here</link> to learn how to request your merchant/terminal ID from your bank to
+						allow internet payments and see specific banking details for different australian
+						banks.</para>
+				</listitem>
+				<listitem>
+					<para>Contact ish on 02 9550 5501 or email sales@ish.com.au if you have any further
+						questions or don't quite understand everything.</para>
+				</listitem>
+			</itemizedlist>
+		</section>
+		<section xml:id="generalPrefs-enablingGateway">
+			<title>Enabling the credit card gateway in onCourse</title>
+			<para>To enable the credit card gateway in onCourse you would need to follow these
+				steps:</para>
+			<itemizedlist>
+				<listitem>
+					<para>in onCourse got to File > Preferences > General, you will land on the "services"
+						tab by default.</para>
+				</listitem>
+				<listitem>
+					<para>From the "services" tab make sure the "enable credit card processing from onCourse
+						client" is checked so that the credit card details can go through successfully to your
+						chosen bank. If this checkbox is not checked, onCourse will assume that you are using
+						an alternative method of processing any credit cards like an eftpos terminal, you can
+						still choose credit card in Quick Enrol, however you won't be able to enter the credit
+						card details. As you can see in the image below, the checkbox is checked, thus
+						allowing credit card processing.</para>
+				</listitem>
+			</itemizedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/creditCardProcessing.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>The "enable credit card processing from onCourse client" is checked, allowing
+						credit card processing.</para>
+				</caption>
+			</mediaobject>
+		</section>
+	</section>
+	<section>
+		<title>Messaging</title>
+		<para>onCourse makes it easy to send emails and SMS to the students and teachers that are listed
+			on your contacts list. In order to do this you first need to configure the email settings. </para>
+		<orderedlist>
+			<listitem>
+				<para>Outgoing emails: Enter the host name or IP (internet provider) address of the mail
+					server in <guilabel>Outgoing Mail Server Address SMTP</guilabel></para>
+			</listitem>
+			<listitem>
+				<para>In the <guilabel>Email from address</guilabel> enter the address from which you want
+					contacts to see that emails are sent from. ie. info@rosewoodcollege.com.au</para>
+			</listitem>
+			<listitem>
+				<para>The <guilabel>System Administrator Email Address</guilabel> is the address that
+					undeliverable mail and bounces will go to (if you don't use VERP). You will need a valid
+					email account that will be accepted by that mail server. You should contact your mail
+					administrator to verify that these details are correct. </para>
+			</listitem>
+			<listitem>
+				<para>Underneath is the <guilabel>emails queued</guilabel> notification. This field will
+					notify you of how many emails are in the queue waiting to be sent. Say you are sending out
+					a bulk email to prospective students to remind them of the start date of the new term, the
+					number in this feild will tell you how many emails have yet to be sent, ie. how many
+					remain in the queue. You can not enter any data into this field.</para>
+			</listitem>
+		</orderedlist>
+		<section>
+			<title>Handing bounced emails (VERP)</title>
+			<para>VERP - Variable Envelope Return Paths is a feature which automatically handles bounced
+				emails from onCourse. When this is enabled, emails are sent out with a special From address
+				that looks like "bounces+124673@rosewoodcollege.com.au". The Reply-To address is set
+				normally with the standard from address you have defined in "Email from address", so a user
+				can reply without any problems. The number after the plus sign is used to identify the
+				Contact in onCourse to whom this email was originally sent: this is important because emails
+				could be forwarded several times in remote mail systems and the bounce may not come from the
+				address you expect.</para>
+			<para>This "plus addressing" notation is a standard internet protocol and most mail servers
+				support it. You simply define the base email account (eg. "bounces@rosewoodcollege.com.au")
+				and the mail server will ignore the part after the plus. </para>
+			
+			
+			<orderedlist>
+				<listitem>
+					<para>If you wish to activate this function then tick the option, <guilabel>detect and process
+						bounced emails</guilabel>.</para>
+				</listitem>
+				<listitem>
+					<para>Enter the <guilabel>incoming mail server address (POP3)</guilabel> then enter the
+						<guilabel>email address to where the bounced emails are sent</guilabel> eg.
+						bounces@rosewoodcollege.com.au. </para>
+				</listitem>
+				<listitem>
+					<para>Enter the <guilabel>account name</guilabel> followed by the <guilabel>account
+						password</guilabel>. This will be used to retrieve mail from that account by
+						POP.</para>
+				</listitem>
+			</orderedlist>
+			
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/messaging_tab.png"
+						format="png" />
+				</imageobject>
+				<caption>
+					<para>The "Messaging" tab</para>
+				</caption>
+			</mediaobject>
+			<para> The SMS box enables you to send texts. You may want to text students a reminder for the
+				new term start date or for a change of venue or contact tutors about their hours or pay. You
+				can send bulk texts direct from the onCourse program. What you enter into the <guilabel>SMS
+					from</guilabel> field is what the receivers of your SMS messages will see as the sender
+				details. Put in a mobile number for people to reply to or, if you do not have an inbound SMS
+				number, you can put the name of your organisation. (eg. 'Rosewood') <caution>
+					<para>Only use a mobile number in this field if you have an inbound mobile account intended
+						for this purpose. If you use the name of your business it will be clear to the receiver of
+						your SMS who the message came from, but they will be unable to press 'reply' on their
+						mobile phone to send you a response.</para>
+				</caution></para>
+		</section>
+	</section>
+	<section>
+		<title>Class Defaults</title>	
+		<para>The Class Defaults tab allows the user to set the defaults for minimum and maximum places in
+			a given Class, as well as the delivery mode and funding source.</para>
+		<para>Note that these defaults can be manually overidden at the individual Class level.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/class_defaults_tab.png"
+					format="png" />
+			</imageobject>
+		</mediaobject>
+	</section>
+	<section>
+		<title>LDAP </title>
+		<para> LDAP - stands for Light Directory Access Protocol and allows users to be authenticated by
+			either LDAP or AD (Active Directory), tying your onCourse user accounts and log ins to
+			the account and logins your staff use to access other IT resources on your network. This
+			is a feature that is enabled as part of a purchased onCourse support plan. Contact us if
+			you need help on setting this up. <mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/LDAP_tab.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>The "LDAP" tab</para>
+				</caption>
+			</mediaobject></para>
+	</section>
+	<section>
+		<title>Maintenance</title>
+		<para>The maintenance screen controls how often and where your data is backed up. This feature is
+			recommended for users who are not connecting onCourse to an external server such as MySQL or
+			SQL Server, as these external servers have their own daily scheduled backup routines. </para>
+		<para>With the amount of information you will eventually have stored on your onCourse program,
+			the backing up of this data is essential. onCourse is designed to enable you to schedule when
+			and where the back ups take place. You can also set onCourse to have an automatic logout. This
+			means that if onCourse is left open on the computer but no one is using it, after a specified
+			amount of time it will automatically logout and save any recently entered data. </para>
+		<para>Prior to setting up your backup schedule, you need to determine which folder location you
+			are going to save these backup files to. It is important to ensure that you save the backups
+			on a different drive to the one where you have installed your onCourse server, that way if
+			your hardware / drives do fail, your backup files are safe. You also need to ensure that you
+			create the folders that you have specified in the file path, otherwise the backup files that
+			are created will not be able to be found. </para>
+		<caution>
+			<para>Running an onCourse back up to a location on your server is not the only step you need
+				to take to secure your data. You should also make sure that the backup file is saved to an
+				offsite location on a regular basis in case of hardware of other physical failure of your
+				computer.</para>
+		</caution>
+		<para>An example file extension for a Mac could be as follows:</para>
+		<para>/Users/Shared/</para>
+		<para>[Note: the Mac file path uses the unix system of a forward slash to separate directory and
+			file components and make sure you have a forward slash at the front of the file path].</para>
+		<para>An example file extension for Windows could be as follows:</para>
+		<para>C:\onCourse\backups\</para>
+		<para>[Note: the Windows backup directory uses a back slash to separate directory and file
+			components. It is also recommended that you do not save your backups to your Program File
+			folder within Windows as this is not designed for data files].</para>
+		<orderedlist>
+			<para>The process for setting up your maintenance preferences is the same for both Mac and
+				Windows users, follow these instructions to set up onCourse to backup your important
+				data:</para>
+			<listitem>
+				<para>Navigate to File > Preferences > General > Maintenance tab </para>
+			</listitem>
+			<listitem>
+				<para>Automatic Logout: If you select this option, it will give you a field on the right
+					hand side. Place an amount of minutes e.g; 15 to set the amount of time onCourse can be
+					left idle before it shuts itself down and saves all recently made changes and
+					additions.</para>
+			</listitem>
+			<listitem>
+				<para>Server backup directory: type the Windows or Mac path to the folder you wish to backup to
+					as per the examples above.</para>
+			</listitem>
+			<listitem>
+				<para>Days of week: choose how often you want to backup.</para>
+			</listitem>
+			<listitem>
+				<para>Backup time: choose the time you want to run a backup. We recommend a time when the least
+					amount of network traffic is occurring but with enough time to complete the backup before
+					the next work day starts. </para>
+			</listitem>
+			<listitem>
+				<para>Maximum backups kept: choose how many backups you want to keep before deleting the oldest
+					ones. </para>
+			</listitem>
+			<listitem>
+				<para>Next backup number: this is appeneded to the name of the backup file and is automatically
+					incremented on each backup. For example, onCourseBackup_00001.zip </para>
+			</listitem>
+			<listitem>
+				<para>Click "Save". Note that changes to the backup schedule may not take effect until you
+					restart onCourse server.</para>
+			</listitem>
+		</orderedlist>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/maintenance_tab.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>The "Maintenance" tab</para>
+			</caption>
+		</mediaobject>
+	</section>
+	<section>
+		<title>AVETMISS</title>
+		<para> The AVETMISS screen is where you record your organisation's details that will be used for
+			all AVETMISS report lodgements. If you are not an RTO you can uncheck <guilabel>Show RTO
+				related screens and menus</guilabel> to hide windows in onCourse that aren't relevant to
+			your organisation. You should still enter your organisation address and contact details in
+			this window, even if you aren't an RTO as onCourse uses them to populate data in templated
+			email messages.</para>
+		<orderedlist>
+			<listitem>
+				<para>Enter your legal <guilabel>training organisation name</guilabel> and from the drop down
+					menu <guilabel>type</guilabel>select by the type of training organisation. </para>
+			</listitem>
+			<listitem>
+				<para>In the <guilabel>Identifier</guilabel> field enter your NTIS RTO id in the
+					field.</para>
+			</listitem>
+			<listitem>
+				<para>Enter your organisations <guilabel>Address</guilabel>, <guilabel>Suburb</guilabel>,
+					<guilabel>State</guilabel> and <guilabel>postcode</guilabel> in the appropriate
+					fields.</para>
+			</listitem>
+			<listitem>
+				<para>Optional contact details: Here you have the option to enter a <guilabel>contact
+					name</guilabel>, a <guilabel>fax</guilabel> number, <guilabel>email address</guilabel>
+					and <guilabel>telephone number</guilabel>.</para>
+			</listitem>
+		</orderedlist>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/AVETMISS_tab.png"
+					format="png" />
+			</imageobject>
+			<caption>
+				<para>The "AVETMISS" tab</para>
+			</caption>
+		</mediaobject>
+		<tip>
+			<para>You can also choose to limit your staff to creating courses only from pre-approved units
+				and qualifications that you mark within onCourse as ‘offered'. This assists you in
+				ensuring your AQTF requirements of only delivering current approved courses on your
+				scope. To use this feature, first flag those you are approved to deliver in the
+				qualifications and module/units table, then come back to this window and check
+				<guilabel>Show only 'offered' qualifications and modules</guilabel>. We do not
+				recommend checking this option as part of your initial setup as it will lock you out
+				of all the embedded units. </para>
+		</tip>
+		<para>On this tab you can also set the signatory name and post-nominals. This name will print on
+			the signature line for all onCourse certificate reports. If you leave it blank, the word
+			'Principal' will print.</para>
+	</section>
+	<section>
+		<title>Printing</title>
+		<para>You can create a custom header for all onCourse reports, with your contact details and
+			logo. In the field <guilabel>Header text (address) which comes below the college printed name
+				on all printed reports</guilabel> you can enter six lines of text. It is usual to put your
+			contact details (address, email URL) in this area</para>
+		<para>To add a logo to your header, click <guibutton>Set print header logo</guibutton>. You will
+			then need to select the logo image file from its location on your computer. Make sure the
+			image is the right size for printing and in a high quality format. Usually PNG will be better
+			than JPG for printing.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/printing_tab.png"
+					format="png" />
+			</imageobject>
+			<caption>
+				<para>The "Printing" tab</para>
+			</caption>
+		</mediaobject>
+	</section>
+</chapter>

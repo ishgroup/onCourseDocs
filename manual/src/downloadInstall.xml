@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="download-install">
+	<title>Downloading and installing onCourse</title>
+	<para>onCourse is free to download and use and is available for download at <link
+			xlink:href="http://www.ish.com.au/onCourse/download"> http://www.ish.com.au/download </link>. </para>
+	<para>You will need to download two applications: onCourse Client and onCourse Server. The Server
+		application manages your data and the Client application allows you to log in, edit and view
+		your data. You will usually only need one onCourse Server application running, and onCourse
+		Client installed on every workstation which needs access. </para>
+	<tip>
+		<para>There are no limits to the number of clients you connect to your server. There is no
+			'single-user' version of onCourse, but you can run the server and client on the same
+			machine.</para>
+		<para>You should normally only run <emphasis>one</emphasis> onCourse Server on your network to
+			avoid problems that arise from having multiple databases.</para>
+	</tip>
+	<section xml:id="requirements">
+		<title>System and hardware requirements</title>
+		<para>One of the following operating systems is required to run onCourse Client.</para>
+		<itemizedlist>
+			<listitem>
+				<para>Windows XP or later with Java 1.6. Windows Vista and Windows 7 are supported, but all
+					desktop and server versions of Windows should work fine.</para>
+			</listitem>
+			<listitem>
+				<para>Mac OS X 10.4 (Tiger) or later</para>
+			</listitem>
+		</itemizedlist>
+		<para>One of the following operating systems is required to run onCourse Server.</para>
+		<itemizedlist>
+			<listitem>
+				<para>Windows XP or later with Java 1.6. Windows Vista and Windows 7, Windows Server 2000,
+					Windows Server 2003, Windows Server 2008 are supported, but all desktop and server
+					versions of Windows should work fine.</para>
+			</listitem>
+			<listitem>
+				<para>Mac OS X 10.5 (Leopard) or later </para>
+			</listitem>
+			<listitem>
+				<para>FreeBSD with Java 1.6 or later</para>
+			</listitem>
+			<listitem>
+				<para>Linux with Java 1.6 or later</para>
+			</listitem>
+			<listitem>
+				<para>Solaris 10 with Java 1.6 or later</para>
+			</listitem>
+		</itemizedlist>
+		<para>The actual operating system configuration is largely irrelevant to onCourse. onCourse will
+			not run any better or worse on a 'server' operating system. Use any operating system you feel
+			comfortable in supporting.<tip>
+				<para>Although the operating system isn't that important, make sure that you are running the
+					most recent version of Java available for your system and keep it updated.</para>
+			</tip></para>
+		<para>onCourse Client requires a minimum of 512Mb of free RAM to run. onCourse Server will run
+			in 1024Mb of RAM, however we recommend 1.5Gb as a minimum and more RAM is beneficial for the
+			Server application in larger installations. Note that if you are running a 32bit operating
+			system you are limited to 1.5Gb and we recommend running onCourse Server on a 64bit operating
+			system. Note that the above RAM requirements are the RAM needed for onCourse itself; you
+			require more RAM to run other applications and the operating system itself.</para>
+		<para>onCourse will run with less RAM than the minimums above, however the performance will
+			suffer if the application has to write to virtual memory on disk.</para>
+		<para>If you want to utilise more than the minimum amounts of RAM for the onCourse Server you
+			must change the server configuration to allow it to take advantage of your extra RAM. See
+				<xref xlink:href="#serverconfigurationfile" /></para>
+	</section>
+	<section>
+		<title>Network requirements</title>
+		<para>onCourse Client makes a network connection to onCourse Server, by default on port 8181
+			(unencrypted) or 8182 (encrypted). One or both of these ports must be open on any firewall you
+			have in place. By default onCourse Server 2.1 and above set the Windows firewall to allow
+			those ports inbound: in other operating systems you may need to put a manual rule in place if
+			you have a server-based firewall.</para>
+		<para>onCourse will work fastest if you have a gigabit or better ethernet connection from the
+			client to the server, but it will also work acceptably over slower connections. Depending on
+			your data size you may be able to work from an onCourse Client on an ADSL connection, but you
+			need to ensure that the onCourse Server has a good <emphasis role="bold">outbound</emphasis>
+			data link. Many consumer grade ADSL connections have a slow outbound data speed so you need
+			SHDSL or at least ADSL with Annex M. Ask your ISP about these things.</para>
+		<para>onCourse Server also requires outbound access to oncourse-replicate.ish.com.au on port
+			443. This allows the server to download the latest NTIS course data, send SMS and synchronise
+			data to your website.</para>
+		<para>Finally, onCourse Server will try to send email to a mail server on port 25. You can
+			configure that within the preferences window to point to your preferred SMTP mail
+			server.</para>
+	</section>
+	<section>
+		<title>Virtualisation</title>
+		<para>onCourse will run perfectly fine in a virtualised environment such as VMWare. Ensure that
+			you have sufficient RAM and CPU allocated to onCourse and consult your VMWare expert for
+			tuning. onCourse Client will rarely write to disk and onCourse Server only writes log files to
+			disk unless you are using the built-in database option.</para>
+		<para>Many colleges choose to run onCourse Client under Terminal Services. This is a good option
+			if you use Terminal Services to manage your client deployment and can give you better
+			performance if your client workstations are at the other end of a slow network link.</para>
+	</section>
+	<section>
+		<title>Database considerations</title>
+		<para>onCourse Server can be used with its built-in database, or for larger installations with
+			an external database. You can choose between the following databases:</para>
+		<itemizedlist>
+			<listitem>
+				<para>Built-in</para>
+			</listitem>
+			<listitem>
+				<para>MySql (minimum requirement is version 5.0)</para>
+			</listitem>
+			<listitem>
+				<para>Microsoft SQL Server (minimum requirement is version 2008)</para>
+			</listitem>
+		</itemizedlist>
+		<para>Most users should choose the built-in database option as it is by far the simplest and
+			performs very well even for databases of over 100,000 students and a dozen simultaneous users.
+			The other database choices will require an Enterprise support plan from ish (see our onCourse
+			services and web site pricing guide for further information <link
+				xlink:href="http://www.ish.com.au/oncourse/features/pricing">onCourse Price Guide </link>),
+			and could be more appropriate if you already have existing database skills and infrastructure
+			and have more advanced reporting and auditing requirements.</para>
+		<para>When setting up or upgrading a database on MS SQL, the simplest approach is to create a
+			new user, which will have db owner level of security permissions. If you instead use the SA
+			user the upgrade will not work.</para>
+		<caution>
+			<para>If you use the built-in database, make sure that you put your data file on a disk
+				connected directly to the computer onCourse Server is running on. That is, do NOT put the
+				data file on a disk which is shared over the network (eg. on a NAS device or file
+				server).</para>
+		</caution>
+	</section>
+	<section xml:id="installation">
+		<title>Installation</title>
+		<para>Download the server version for your operating system from the website: <link
+				xlink:href="http://www.ish.com.au/onCourse/download">www.ish.com.au/oncourse/download
+			</link>. You can mix platforms within the one installation, so for example the server could be
+			running on Linux, some clients on Windows and others on Mac.</para>
+		<section os="windows" xml:id="install-windows">
+			<title>onCourse on Windows</title>
+			<section>
+				<title>onCourse Server Download and Installation</title>
+				<orderedlist>
+					<listitem>
+						<para>Download the server version for Windows: <link
+								xlink:href="http://www.ish.com.au/node/72">www.ish.com.au/oncourse/start
+							</link>.</para>
+					</listitem>
+					<listitem>
+						<para>You will have the option to open the zip file or save it to your computer. Select
+							your preferred option. </para>
+					</listitem>
+					<listitem>
+						<para>Once the file has downloaded, extract the file to somewhere on your computer you
+							want to save the onCourse program, for example 'Program Files'</para>
+					</listitem>
+					<listitem>
+						<para>Double click on the server application onCourse Server.exe to start it </para>
+					</listitem>
+				</orderedlist>
+				<para><emphasis role="bold">For new users:</emphasis>If this is the first time that you've
+					run the onCourse server, you will be prompted to either create a new database from scratch
+					or run with a sample database. Using the sample database will let you get a feel of the
+					onCourse software with some pre-populated data, like Courses, Classes, Tutors and
+					Students. Selecting <emphasis role="italic">New File</emphasis> will let you start adding
+					your own data for your College. We recommend you select the <emphasis role="italic">Sample
+						File</emphasis> database to use until you get the hang of onCourse. It's easy to remove
+					the sample database when you are ready to start using your own data. Which ever option you
+					choose, you will be asked to choose a location to store the database. The location can be
+					anywhere on your computer where you wish to keep the data and can be changed later.
+					onCourse will create a folder called onCourse.iocdata wherever you choose to store your
+					data file.</para>
+				<para><emphasis role="bold">For existing users:</emphasis>If you already have created a data
+					file during a previous installation of onCourse, you will not be asked to create a new
+					data file. onCourse will continue to use your previous data file unless you have moved or
+					deleted it. This location will be confirmed each time the server starts. If onCourse does
+					not automatically find your data file it will ask you to select from three options. Choose
+						<emphasis role="italic">Existing File</emphasis> and point it to the storage location of
+					your data file. </para>
+			</section>
+			<section>
+				<title>onCourse Client Download and Installation</title>
+				<orderedlist arch="">
+					<listitem>
+						<para>Download the client for Windows: <link xlink:href="http://www.ish.com.au/node/72"
+								>www.ish.com.au/oncourse/start </link>. You can put it on the same computer as the
+							server or a different computer. </para>
+					</listitem>
+					<listitem>
+						<para>You will have the option to open the zip file or save it to your computer. Select
+							your preferred option</para>
+					</listitem>
+					<listitem>
+						<para>Once the file has downloaded, extract the file to somewhere on your computer you
+							want to save the onCourse program, for example 'Program Files'</para>
+					</listitem>
+					<listitem>
+						<para>Double click on the client application onCourse.exe to run it (you need to have
+							the server already running)</para>
+					</listitem>
+					<listitem>
+						<para>The initial user name is "admin". Enter the password "admin"</para>
+					</listitem>
+					<listitem>
+						<para>Click on the "advanced"button to see the server details</para>
+					</listitem>
+					<listitem>
+						<para>Click on the "Find Server" button that appears, then click "login"</para>
+					</listitem>
+				</orderedlist>
+				<para>By default, the host appears as "localhost" and the port as 8181. If you are using
+					Windows Vista or have a firewall installed, you may need to allow traffic through that
+					port for onCouse to run. </para>
+				<para>If the login failed, you will need to manually find the host name or IP address of the
+					computer you started ish onCourse Server on. If they are running on the same computer, you
+					can use "localhost". If the Server is on another computer, it might have an IP addrress
+					which looks like "192.168.0.10". You can find the IP address in "Control Panels>Network
+					connections" under Windows. </para>
+				<para>If you start the onCourse client before the onCourse server has finished loading, you
+					will get an error message. If it is your first time starting the server, it may take a few
+					minutes as the data file populates. Check the status of the server, wait a few minutes and
+					try again. </para>
+			</section>
+		</section>
+		<section os="macosx">
+			<title>onCourse on Mac OS X</title>
+			<section>
+				<title>onCourse Server Download and Installation</title>
+				<orderedlist>
+					<listitem>
+						<para> Download the server version for Mac: <link
+								xlink:href="http://www.ish.com.au/node/72">www.ish.com.au/oncourse/start
+							</link>.</para>
+					</listitem>
+					<listitem>
+						<para> You will have the option to open the zip file or save it to your computer. Select
+							the preferred option. </para>
+					</listitem>
+					<listitem>
+						<para> Mount the disk image by double clicking on it, Copy onCourse Server from the
+							window that pops up into your "Applications" folder. </para>
+					</listitem>
+					<listitem>
+						<para>Double click on the server application onCourseServer.dmg to start it </para>
+					</listitem>
+				</orderedlist>
+				<para><emphasis role="bold">For new users:</emphasis>If this is the first time that you've
+					run the onCourse server, you will be prompted to either create a new database from scratch
+					or run with a sample database. Using the sample database will let you get a feel of the
+					onCourse software with some pre-populated data, like Courses, Classes, Tutors and
+					Students. Selecting <emphasis role="italic">New File</emphasis>will let you start adding
+					your own data for your College. We recommend you select the database to use until you get
+					the hang of onCourse. It's easy to remove the sample database when you are ready to start
+					using your own data. Which ever option you choose, you will be asked to choose a location
+					to store the database. The location can be anywhere on your computer where you wish to
+					keep the data and can be changed later. onCourse will create a folder called
+					onCourse.iocdata wherever you choose to store your data file. </para>
+				<para><emphasis role="bold">For existing users:</emphasis>If you already have created a data
+					file during a previous installation of onCourse, you will not be asked to create a new
+					data file. onCourse will continue to use your previous data file unless you have moved or
+					deleted it. This location will be confirmed each time the server starts. If onCourse does
+					not automatically find your data file it will ask you to select from three options. Choose
+						<emphasis role="italic">Existing File</emphasis> and point it to the storage location of
+					your data file. </para>
+			</section>
+			<section>
+				<title>onCourse Client Download and Installation</title>
+				<orderedlist>
+					<listitem>
+						<para> Download the client version for Mac OS X. It can be on the same computer as the
+							server or a different computer. This will be a file called onCourse.dmg </para>
+					</listitem>
+					<listitem>
+						<para> You will have the option to open the zip file or save it to your computer. Select
+							your preferred option </para>
+					</listitem>
+					<listitem>
+						<para> Mount the disk image by double clicking on it. Copy onCourseClient from the
+							window that pops up into your "Applications" folder</para>
+					</listitem>
+					<listitem>
+						<para>Double click on the client application onCourse.dmg to run it (you need to have
+							the server already running)</para>
+					</listitem>
+					<listitem>
+						<para>The initial user name is "admin". Enter the password "admin"</para>
+					</listitem>
+					<listitem>
+						<para>Click on the "advanced" button that appears, click "login" </para>
+					</listitem>
+				</orderedlist>
+				<para> By default, the host appears as "localhost" and the port as 8181. If the login
+					failed, you will need to manually find the host name or IP address of the computer you
+					started the ish onCourse Server. If they are running on the same computer, you can use
+					"localhost". If the server is on another computer, it might have an IP address which looks
+					like "192.168.0.10". You can find the IP address in "System Preferences > Network" on a
+					Mac. </para>
+				<para>If you start the onCourse client before the onCourse server has finished loading, you
+					will get an error message. If it is your first time starting the server, it may take a few
+					minutes as the data file populates. Check the status of the server, wait a few minutes and
+					try again. </para>
+			</section>
+		</section>
+		<section>
+			<title>Running onCourse</title>
+			<section>
+				<title>Running the Server</title>
+				<section>
+					<title>For new users:</title>
+					<para>
+						<inlinemediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/serverChooseDatabase.png" />
+							</imageobject>
+						</inlinemediaobject>
+					</para>
+					<para>If this is the first time that you've run onCourse server, you will be prompted to
+						choose one of the following: <simplelist>
+							<member>"New File" - for new database which will let you start adding your own data
+								for your College.</member>
+							<member>"Sample File" - pre-populated with a range of sample records to allow you to
+								get a feel for the onCourse software without needing to enter lots of data.</member>
+							<member>"Existing File" - used to locate a onCourse database you previously
+								created.</member>
+						</simplelist></para>
+					<para>We recommend you select the "Sample File" until you get the hang of OnCourse. It's
+						easy to remove the sample database when you are ready to start using your own data.
+						Which ever option you choose, will be asked to choose a location to store the database.
+						The location can be anywhere on your computer where you wish to keep the data and can be
+						changed later. onCourse will create a folder called "onCourse.iocdata" wherever you
+						choose to store your data file. </para>
+				</section>
+				<section>
+					<title>For existing users</title>
+					<para>If you already have created a data file during a previous installation of OnCourse,
+						you will not be asked to create a new data file. OnCourse will continue to use your
+						previous data file unless you have moved or deleted it. If OnCourse does not
+						automatically find your data file it will ask you to select from the three options.
+						Choose "Existing File" and point it to the storage location of your data file. </para>
+				</section>
+			</section>
+			<section>
+				<title>Running the Client</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/adminlogin.png"
+						 />
+					</imageobject>
+					<caption>
+						<para>The relationship option, click "select" to choose a type of relationship between
+							contacts</para>
+					</caption>
+				</mediaobject>
+				<orderedlist arch="">
+					<listitem>
+						<para>Username is "admin". Password is "admin". </para>
+					</listitem>
+					<listitem>
+						<para>Click the on the "advanced" button to see the server details </para>
+					</listitem>
+					<listitem>
+						<para>Click on "Find Server" button that appears, then click "login"</para>
+					</listitem>
+				</orderedlist>
+				<para> If you have a workstation firewall installed, you may need to allow traffic through
+					that port for OnCourse to run. </para>
+				<para> If the login failed, you will need to manually find the host name or IP address of
+					the computer where ish onCourse Server is running. If they are running on the same
+					computer, you can use "localhost". If the server is on another computer, it might have an
+					IP address which looks like "192.168.0.10". You can find the IP address in "Control Panels
+					> Network connections". </para>
+				<tip>
+					<para>If you see a line on the Server that says "Application service running" with a
+						twirling busy icon next to it, this means the server is busy and will be unable to
+						accept client connections. Wait until the icon goes away before connecting a client. If
+						you start the OnCourse client before the OnCourse server has finished loading, you will
+						get an error message. If this is your first time starting the server, it may take a few
+						minutes as the data file populates. Check the status of the server, wait a few minutes
+						and try again. </para>
+				</tip>
+			</section>
+		</section>
+		<section>
+			<title>Installing onCourse Server on other platforms</title>
+			<section os="freebsd">
+				<title>onCourseServer on FreeBSD</title>
+				<section>
+					<title>Installing</title>
+					<orderedlist>
+						<listitem>
+							<para>Download the FreeBSD server package (onCourseServer.tgz) onto your FreeBSD box.
+							</para>
+						</listitem>
+						<listitem>
+							<para>Run as root:
+								<programlisting language="shell">
+pkg_add onCourseServer.tgz
+echo 'onCourseServer_enable="YES"' >> /etc/rc.conf</programlisting></para>
+						</listitem>
+					</orderedlist>
+					<para>Our package places onCourse Server into the FreeBSD default location and creates a
+						startup script to run when the machine reboots.</para>
+				</section>
+				<section>
+					<title>Uninstalling the server</title>
+					<orderedlist>
+						<listitem>
+							<para> Type the following command as root in a shell:
+								<programlisting language="shell">pkg_delete onCourseServer-&lt;version></programlisting></para>
+						</listitem>
+					</orderedlist>
+					<para>then press enter to safely remove all components of onCourse Server except for your
+						very valuable data. </para>
+					<tip>
+						<para> You can figure out what packagename and version of onCourse Server is installed
+							by running
+							<programlisting language="shell">pkg_info -v | grep -i oncourse</programlisting></para>
+					</tip>
+				</section>
+				<section>
+					<title>Starting and stopping the server</title>
+					<para> onCourse Server is not started immediately after the install, you will need to
+						execute as root:
+						<programlisting>/usr/local/etc/rc.d/onCourseServer start</programlisting></para>
+					<para> And of course stopping the server is just:
+						<programlisting>/usr/local/etc/rc.d/onCourseServer stop</programlisting></para>
+				</section>
+				<section>
+					<title>Upgrading</title>
+					<para> In order to upgrade to a newer version of onCourse Server, run as root:
+						<programlisting>
+/usr/local/etc/rc.d/onCourseServer stop
+pkg_delete onCourseServer-&lt;package version>
+pkg_add onCourseServer.tgz
+/usr/local/etc/rc.d/onCourseServer start</programlisting></para>
+				</section>
+				<section>
+					<title>Other notes</title>
+					<itemizedlist>
+						<listitem>
+							<para> You will need Java installed. Consult the FreeBSD docs on how to best do that.
+								You can set the amount of memory that Java will allocate to onCourse Server by
+								adding to /etc/rc.conf: <programlisting>onCourseServer_mem="768M"</programlisting>
+								replacing 768 with however much memory you wish. </para>
+						</listitem>
+						<listitem>
+							<para> Make sure you have the latest timezones installed via the ports system, which
+								can be done by installing the "zoneinfo" port.</para>
+						</listitem>
+						<listitem>
+							<para> You will also need to add an argument to the startup parameters of
+								onCourseServer in rc.conf along the lines of
+								<programlisting>onCourseServer_flags="-Duser.timezone=Australia/Sydney"</programlisting>
+								replacing Australia/Sydney with the timezone that you wish the server to be in.
+							</para>
+						</listitem>
+					</itemizedlist>
+				</section>
+			</section>
+			<section os="unix">
+				<title>Linux, Solaris and any other Unix</title>
+				<orderedlist>
+					<listitem>
+						<para>You will need a recent JVM installed in order to run onCourse. Please review the
+								<link xlink:href="#requirements">requirements.</link></para>
+					</listitem>
+					<listitem>
+						<para>Download the unix package and transfer this file onto your server.</para>
+					</listitem>
+					<listitem>
+						<para>Extract the contents of the package into the /opt directory using the tar command line
+							utility, ie:</para>
+						<programlisting>sudo tar xvzf onCourseServer.tgz -C /opt</programlisting>
+					</listitem>
+					<listitem>
+						<para>This should extract a directory onCourse with two files in it. <simplelist>
+								<member> onCourseServer.sh </member>
+								<member> onCourseServer.jar </member>
+							</simplelist></para>
+					</listitem>
+					<listitem>
+						<para>Run the onCourseServer.sh script to start the server (Please read the onCourseServer.sh
+							carefully as this will explain how to start successfully).</para>
+					</listitem>
+					<listitem>
+						<para>
+							<programlisting>sudo bash /opt/onCourse/onCourseServer.sh</programlisting>
+						</para>
+					</listitem>
+				</orderedlist>
+			</section>
+		</section>
+	</section>
+	<section>
+		<title>Upgrading onCourse</title>
+		<para>How to install a new version of onCourse</para>
+		<section>
+			<title>What is an onCourse upgrade?</title>
+			<para>Periodically, ish release new versions of the onCourse client and server software. These
+				new releases may include new features, new reports or important fixes from previous version. </para>
+			<para>When we release a new version we also publish release notes outlining the changes we
+				have made in plain English. All onCourse releases or product updates are available freely to
+				download for all users on both paid and free plans. We will send a message to all users on
+				our onCourse mailing list and also publish information about the release on our blog. </para>
+			<para>Users can choose how and when to upgrade their business software. Both the server and
+				client software will need to be upgraded, meaning that you will not be able to
+				access your onCourse database during the upgrade process. Usually this will take
+				less than 10 minutes. Your onCourse website will continue to function and take
+				enrolments during the upgrade process.</para>
+		</section>
+		<section>
+			<title>Backing up your onCourse datafile</title>
+			<para>All the important customer and business information you have entered into onCourse is
+				stored in a file called onCourse.iocdata on your server machine. When you first installed
+				onCourse you would have specified the location for this file, but if you can't remember
+				where you saved it you can search your machine for this file. The file may appear as a
+				folder on some operating systems. </para>
+			<para>This file is very important. As a general rule, you should ensure you have set the
+				internal onCourse backup process to run daily. You then should ensure that the backup file
+				is copied to an offsite storage location, like a remote server in another office or taken
+				offsite daily on a USB or tape drive.</para>
+			<para> In addition to this automatic backup process, you can also manually backup onCourse
+				prior to running an upgrade. To do this you need to first make sure all your users have
+				logged out of onCourse client and that you have shut down the onCourse server software (or
+				stopped the onCourse service if running as a service on a Windows machine). </para>
+			<para>1. Shut down the onCourse server </para>
+			<para>2. Locate the onCourse.iocdata file </para>
+			<para>3. Make a copy of the onCourse.iocdata file and save it in another folder or drive </para>
+			<para>4. Rename the copied onCourse.iocdata file something like
+				onCourse.manualbackup1-3-10</para>
+		</section>
+		<section>
+			<title>Upgrading the onCourse datafile</title>
+			<para>Now you have made a backup of your most recent datafile you are ready to upgrade your
+				database.</para>
+			<para> To upgrade, you first need to have downloaded the most recent onCourse server
+				software</para>
+			<para>Run the downloaded install package and install the new version of the onCourse server in
+				the same location as the previous copy of the onCourse server. This will overwrite the
+				server software. </para>
+			<para>When you run the new copy of the server software it will automatically upgrade your
+				onCourse data to the latest version. This process may take up some time if significant
+				changes were made or if you are upgrading from a much older version. </para>
+			<para>Please contact us with a copy of your onCourseServer.log file if during this process you
+				get a message that the upgrade process has failed.</para>
+		</section>
+		<section>
+			<title>Upgrading the onCourse clients</title>
+			<para>On all machines where your users access onCourse, you will need to make sure that the
+				local copy of the onCourse client software is upgraded. </para>
+			<para>If an older version of the client attempts to access the server, it will be unsuccessful
+				and get a message about the server being a newer version. </para>
+			<para>To upgrade the clients, ensure you downloaded the most recent onCourse client
+				software</para>
+			<para>Run the downloaded install package and install the new version of the onCourse client in
+				the same location as the previous copy of the onCourse client on each machine. This will
+				overwrite the client software. </para>
+			<para>Ensure the server software is back up and running before attempting to log in the new
+				client. All user names and passwords will stay the same as prior to the upgrade.</para>
+		</section>
+		<section>
+			<title>Can I downgrade my onCourse software?</title>
+			<para>No, after you have upgraded you can not then downgrade your onCourse data file. This is
+				because structural changes will have been made as part of any upgrade process which means
+				the data is no longer compatible with the previous version.</para>
+			<para> If you need to downgrade or run a previous version of onCourse for any reason, you can
+				use the manual backup file you made prior to upgrade. Please note that any new data you have
+				entered after the upgrade will not be available from your backup. You can request copies of
+				previous versions of the onCourse software installation files from ish at any time.</para>
+		</section>
+		<section>
+			<title>I have been running the onCourse sample file, now I want to start my own new datafile.
+				How can I do this?</title>
+			<para>1. On the machine running the onCourse server, ensure the server software is shut down. </para>
+			<para>2. Find the location of the onCourse.iocdata (most likely in C/Program Files/onCourse on
+				a Windows machine) </para>
+			<para>3. Rename the onCourse.iocadata file something like onCourse.iocdata.olddata. Changing
+				the file extension means the server software won't recognise or open the file when it next
+				starts up. </para>
+			<para>4. Run the onCourse server. Because you hid the old datafile it will ask you if you want
+				to start a new, sample or existing datafile. Choose new and save the datafile in the same
+				location as before. This will create a new onCourse.iocdata file </para>
+			<para>5. Once the server has completed the start up process, connect an onCourse client. Allow
+				about 5 minutes for the NTIS data to download. You can check it has completed by looking in
+				the 'Unit of Competency' window. It will say 0 shown of 39874 odd records in the window
+				header bar when it has completed. </para>
+			<para>6. You are now ready to start the process again of setting up your sites, courses,
+				classes, students and enrolments </para>
+		</section>
+		<section>
+			<title>Running multiple versions of the onCourse Server</title>
+			<para>If you have an onCourse website it is very important that you never run two copies of
+				your onCourse datafile simultaneously or attempt to revert to an onCourse backup without
+				contacting ish first. We can ensure your backup datafile does not try to override your
+				website data when you run it. This includes customers who wish to run a test or training
+				installation of a new onCourse software version using their current datafile.</para>
+		</section>
+	</section>
+	<section>
+		<title>Troubleshooting connection problems</title>
+		<para>When you run into problems with connecting a client to the server, the login window will
+			often display some messages in red text to inform you of difficulties. Here some common causes
+			for each error message.</para>
+		<qandaset>
+			<qandaentry>
+				<question>
+					<para>A connection to the server could not be established.</para>
+				</question>
+				<answer>
+					<orderedlist>
+						<listitem>
+							<para>This is generally a networking issue or onCourse server may not be running. </para>
+						</listitem>
+						<listitem>
+							<para>Your workstation or the server may not be connected to the network.</para>
+						</listitem>
+						<listitem>
+							<para>You have ticked Secure connection (SSL) in the advanced options, but the server
+								is not running in SSL mode.</para>
+						</listitem>
+						<listitem>
+							<para>You have not ticked Secure connection (SSL) in the advanced options, but the
+								server is running in SSL mode only.</para>
+						</listitem>
+					</orderedlist>
+				</answer>
+			</qandaentry>
+			<qandaentry>
+				<question>
+					<para>The server and client versions are incompatible. The "client/server" is a more
+						recent build.</para>
+				</question>
+				<answer>
+					<orderedlist>
+						<listitem>
+							<para>You are attempting to connect an older client with a newer server.</para>
+						</listitem>
+						<listitem>
+							<para>You are attempting to connect a newer client with an older server.</para>
+						</listitem>
+					</orderedlist>
+					<para>Ensure the client and server are the same versions. Download them from <link
+							xlink:href="http://www.ish.com.au/onCourse/download"
+							>http://www.ish.com.au/download</link>
+					</para>
+				</answer>
+			</qandaentry>
+			<qandaentry>
+				<question>
+					<para>Authentication failed.</para>
+				</question>
+				<answer>
+					<orderedlist>
+						<listitem>
+							<para>Either the password is incorrect or the username is incorrect or both.</para>
+						</listitem>
+						<listitem>
+							<para>If you have never logged in before, try "admin" as the username and "admin" as
+								the password.</para>
+						</listitem>
+					</orderedlist>
+				</answer>
+			</qandaentry>
+			<qandaentry>
+				<question>
+					<para>None of the NTIS Qualifications or Units of Competency have downloaded, or there
+						seem to be some missing.</para>
+				</question>
+				<answer>
+					<para>The mechanism within onCourse that is utilised by our clients with an onCourse
+						managed webservice is also used to poll our webserver periodically for any changes to
+						the NTIS data, including customers using the free onCourse community version, to ensure
+						you have the latest version of the data (and also to save us packaging this data within
+						our application download - the first time your sever connects you will have downloaded
+						the 37,000 odd unit of competency records) </para>
+					<para>Your server makes a connection once a day to https://oncourse-replicate.ish.com.au
+						on port 443. If this port is blocked by your firewall, you won't be able to access any
+						of the NTIS data updates. Make sure you can visit this URL and that the firewall allows
+						traffic.</para>
+				</answer>
+			</qandaentry>
+		</qandaset>
+	</section>
+</chapter>

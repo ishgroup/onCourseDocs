@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="richText">
+	<title>Rich Text markup</title>
+	<section>
+		<title>Formatting text</title>
+		<para>Many places in onCourse where can enter large amounts of text to display on the website
+			will allow you to enter "rich text". This includes web pages, course descriptions, tutor
+			profiles, site descriptions and much more. Rich text is used for simple styling of your text,
+			without you needing to know any HTML. The headings, fonts and bullet point styles used on your
+			website are determined by your template and design. Anywhere you can enter rich text, you can
+			also enter HTML, if you have these skills. Look for the following symbol next to the text
+			field: <mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="40%" contentdepth="40%" fileref="images/Picture_2_1.png"
+						format="png" />
+				</imageobject>
+			</mediaobject>
+		</para>
+		<para>Hovering over this symbol in the onCourse client will give you a very basic rendering of
+			your rich text. If you entered it correctly, it will show headings and bullets. This is a
+			quick way to check you markup before the content is saved to your website. You can also enter
+			rich text in any web page or block within the CMS.</para>
+		<section>
+			<title>Simple guide to rich text</title>
+			<table frame="all">
+				<title>Common formatting options</title>
+				<tgroup cols="3">
+					<thead>
+						<row>
+							<entry>You type</entry>
+							<entry>Output</entry>
+							<entry>Notes</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry>
+								<programlisting>The sun was *shining on the sea*</programlisting>
+							</entry>
+							<entry>The sun was <emphasis role="bold">shining on the sea</emphasis></entry>
+							<entry>All text between the * will be bold. Don't put a space between the * and the
+								text.</entry>
+						</row>
+						<row>
+							<entry>
+								<programlisting>Shining with _all its might_</programlisting>
+							</entry>
+							<entry>Shining with <emphasis role="italics">all its might</emphasis></entry>
+							<entry>All text between the _ will be italics. Don't put a space between the _ and the
+								text.</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<programlisting>* Now this was very odd
+										* because it was
+										* the middle of the night</programlisting>
+								</para>
+							</entry>
+							<entry>
+								<itemizedlist>
+									<listitem>
+										<para>Now this was very odd</para>
+									</listitem>
+									<listitem>
+										<para>because it was</para>
+									</listitem>
+									<listitem>
+										<para>the middle of the night</para>
+									</listitem>
+								</itemizedlist>
+							</entry>
+							<entry>Make sure you put a space after the * on each line.</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<programlisting># Now this was very odd
+										# because it was
+										# the middle of the night</programlisting>
+								</para>
+							</entry>
+							<entry>
+								<orderedlist>
+									<listitem>
+										<para>Now this was very odd</para>
+									</listitem>
+									<listitem>
+										<para>because it was</para>
+									</listitem>
+									<listitem>
+										<para>the middle of the night</para>
+									</listitem>
+								</orderedlist>
+							</entry>
+							<entry>Make sure you put a space after the # on each line.</entry>
+						</row>
+						<row>
+							<entry>
+								<programlisting>h1. The Moon</programlisting>
+							</entry>
+							<entry>
+								<emphasis role="bold">The Moon</emphasis>
+							</entry>
+							<entry>Use the h1. for a large heading (you can also use h2. h3. h4. and h5. for
+								smaller headings). Ensure you use a lower case h and full stop and space after the
+								number. Leave a blank line of text between your heading text and the following
+								paragraph, or all the text to follow will be rendered as a heading also.</entry>
+						</row>
+						<row>
+							<entry>
+								<programlisting>"Alice":http://hole.example.com</programlisting>
+							</entry>
+							<entry>
+								<link xlink:href="http://hole.example.com">Alice</link>
+							</entry>
+							<entry>The text wrapped in the quotes becomes the hyperlink text and the url which
+								follows is the link the user will be redirected to upon clicking.</entry>
+						</row>
+						<row>
+							<entry>
+								<programlisting>"Rabbit":/course/stew</programlisting>
+							</entry>
+							<entry>
+								<link xlink:href="http://hole.example.com/course/stew">Rabbit</link>
+							</entry>
+							<entry>An internal hyperlink is similar, however you do not have to provide the full
+								path name. You only need to provide the text that appears after your domain
+								name.</entry>
+						</row>
+						<row>
+							<entry>
+								<programlisting>"Queen":mailto:red@hole.example.com</programlisting>
+							</entry>
+							<entry>
+								<link xlink:href="mailto://red@hole.example.com">Queen</link>
+							</entry>
+							<entry>To create a mailto link, the text inside the quotes becomes the hyperlink which
+								will open your users default mail client, followed by the email address.</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<para>For further information about rich text, please look at the <link
+				xlink:href=" http://en.wikipedia.org/wiki/Textile_%28markup_language%29">Textile
+				documentation</link>. We use textile with some special extra additions for dynamic course
+				content.</para>
+		</section>
+	</section>
+	<section>
+		<title>Inserting dynamic content</title>
+		<para>Using <emphasis role="bold">rich text markup</emphasis> onCourse is able to draw from many
+			parts of your data. Maybe you wish to display a banner, linked to a random course from a
+			subset of high priority courses; or display a collapsible menu of subject. Maybe you'd like to
+			add the complete contents from one group of specially tagged blocks of content.</para>
+		<para>By using the dynamic content rich text markup your web pages will always be up to date.
+			If you change a course description, then everywhere that course is referenced will
+			automatically update.</para>
+		<para>There are many types of content you can insert into a page and you can use the
+			following markup anywhere rich text is supported. That is, you can insert images, course
+			lists, video and much more inside other web pages, course descriptions, tutor resumes
+			and any other place you see the rich text symbol.</para>
+		<para/>
+		<table frame="all">
+			<title>Dynamic rich text</title>
+			<tgroup cols="2">
+				<colspec colname="c1" colnum="1" colwidth="1.0*"/>
+				<colspec colname="c2" colnum="2" colwidth="1.0*"/>
+				<thead>
+					<row>
+						<entry>What you want</entry>
+						<entry>Rich text to use</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry>Position an image within some text</entry>
+						<entry>{image}</entry>
+					</row>
+					<row>
+						<entry>Link to an attachment</entry>
+						<entry>{attachment}</entry>
+					</row>
+					<row>
+						<entry>Insert a re-usable CMS block within some text</entry>
+						<entry>{block}</entry>
+					</row>
+					<row>
+						<entry>Display a course description within another page</entry>
+						<entry>{course}</entry>
+					</row>
+					<row>
+						<entry>Show a list of courses</entry>
+						<entry>{courses}</entry>
+					</row>
+					<row>
+						<entry>Display a list of subjects</entry>
+						<entry>{tags}</entry>
+					</row>
+					<row>
+						<entry>Embed a page inside another page</entry>
+						<entry>{page}</entry>
+					</row>
+					<row>
+						<entry>Display a video within a page </entry>
+						<entry>{video}</entry>
+					</row>
+					<row>
+						<entry>Display a form within a page</entry>
+						<entry>{form}</entry>
+					</row>
+					<row>
+						<entry>Add text field into a given form</entry>
+						<entry>{text}</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</section>
+	<section>
+		<title>{block}</title>
+		<para>Start by creating a new Block in the CMS editor (see <xref xlink:href="#blocks" />) and
+			giving it the title of "bannerAd1". Put some text in there an image with a link to some
+			special offer. Once this Block is saved it can be displayed in either your content or
+			another block, throughout your website by the simple inclusion of the rich text
+			markup</para>
+		<section>
+			<title>Usage</title>
+			<programlisting>{block name:"bannerAd1"}</programlisting>
+			<variablelist>
+				<title>Parameters</title>
+				<varlistentry>
+					<term>name</term>
+					<listitem>
+						<para>The name of the Web Block. If you have more than one block with this name, it
+							will randomly select one.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</section>
+	</section>
+	<section xml:id="Course">
+		<title>{course}</title>
+		<para>The second rich text markup we consider is <emphasis role="bold">{course}</emphasis>
+			This tag functions to embed specific onCourse Course data into a page or web block. It can
+			display data/content either at random, or specified from a particular grouping - ie evening
+			classes. If a course is chosen at random - courses can be restricted by specific tagging and
+			basic class information can also be displayed.</para>
+		<para>You might like to highlight particular courses on your front page ("Course of the Week"
+			for example), or display a random course in a 'block' in the sidebar across all pages of
+			your website - the possibilities are endless.</para>
+		<section>
+			<title>Usage</title>
+			<programlisting>{course tag:"/Subjects/Leisure/Arts" showclasses:"false"}</programlisting>
+			<variablelist>
+				<title>Parameters</title>
+				<varlistentry>
+					<term>
+						<optional>tag</optional>
+					</term>
+					<listitem>
+						<para>Optional. Defines the path to a tag. The full path to the tag must be specified.
+							e.g. "/Subjects/Leisure/Arts and Craft". This option is ignored if the "code"
+							parameter is passed. A random course will be displayed from the tag specified. If no
+							tag is defined, "/Subjects" is assumed.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>code</optional>
+					</term>
+					<listitem>
+						<para>Optional. Specifies a particular course code to display. If this option is not
+							defined, a random course will be shown.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>showclasses</optional>
+					</term>
+					<listitem>
+						<para>[true, false] Optional. A unordered list of all the classes available for this
+							course will also be displayed. Default is false.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</section>
+	</section>
+	<section xml:id="tags-courses">
+		<title>{courses}</title>
+		<para>The third rich text markup we should look at is <emphasis role="bold"
+			>{courses}</emphasis> This variation of the "course" code will display a List of courses
+			within your content or "block"; and can be sorted dynamically by number of filters
+			including; by start date; alphabetical listing, and others. </para>
+		<para>For example the Courses markup could be used if you wished to create a home page... or
+			landing page that contained the most popular courses, alternatively Courses that were about
+			to start through the coming week. To do so, what you would need to do is open the relevant
+			page - home page or other, and place the following rich text markup: (replace
+			'yourTopicsHere' with an appropriate list)</para>
+		<section>
+			<title>Usage</title>
+			<programlisting>{courses tag:"/Subjects/Leisure/Arts" sort:"alphabetical" limit:"3"}</programlisting>
+			<variablelist>
+				<title>Parameters</title>
+				<varlistentry>
+					<term>
+						<optional>tag</optional>
+					</term>
+					<listitem>
+						<para>Defines the path to a tag. The full path to the tag must be specified. e.g.
+							"/Subjects/Leisure/Arts". All courses with this tag will be displayed. If no tag is
+							given then "/Subjects" is assumed by default.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>limit</optional>
+					</term>
+					<listitem>
+						<para>Optional. Specifies the number of the courses to display. If no limit is
+							defined, all valid entries are displayed.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>sort</optional>
+					</term>
+					<listitem>
+						<para>[date, alphabetical, availability] Optional. Defines the sort criteria. Default
+							behaviour is alphabetical.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>order</optional>
+					</term>
+					<listitem>
+						<para>[asc, desc] Optional. Default is descending.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</section>
+	</section>
+	<section xml:id="tags-tags">
+		<title>{tags}</title>
+		<para>Tags are the most common way of creating navigation to your courses and classes. You
+			might organise your courses into subject categories, e.g.:</para>
+		<itemizedlist>
+			<listitem>
+				<para>Arts</para>
+			</listitem>
+			<listitem>
+				<para>Leisure</para>
+				<itemizedlist>
+					<listitem>
+						<para>Cooking</para>
+					</listitem>
+					<listitem>
+						<para>Crafts</para>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+			<listitem>
+				<para>Business</para>
+			</listitem>
+			<listitem>
+				<para>Languages</para>
+			</listitem>
+			<listitem>
+				<para>Sports</para>
+			</listitem>
+		</itemizedlist>
+		<para>Using onCourse's powerful tagging system, you might also organise your courses according
+			to skill level:</para>
+		<itemizedlist>
+			<listitem>
+				<para>Beginners</para>
+			</listitem>
+			<listitem>
+				<para>Intermediate</para>
+			</listitem>
+			<listitem>
+				<para>Advanced</para>
+			</listitem>
+			<listitem>
+				<para>Masterclass</para>
+			</listitem>
+		</itemizedlist>
+		<para>Or, perhaps by target audience:</para>
+		<itemizedlist>
+			<listitem>
+				<para>Kids</para>
+				<itemizedlist>
+					<listitem>
+						<para>1 - 4 years old</para>
+					</listitem>
+					<listitem>
+						<para>5 - 8 years old</para>
+					</listitem>
+					<listitem>
+						<para>9 - 12 years old</para>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+			<listitem>
+				<para>Teens</para>
+			</listitem>
+			<listitem>
+				<para>Adults</para>
+			</listitem>
+		</itemizedlist>
+		<para>You may then want to display that tag structure on your website to allow users to
+			navigation through it. Clicking on any tag will take the user to a URL like
+			/courses/leisure/crafts and all the relevant courses will be displayed on that page. To
+			place a tree of tag options on a page, simply use the rich text "{tags}". Further options
+			allow you to customise the output.</para>
+		<section>
+			<title>Usage</title>
+			<programlisting>{tags name:"/Subjects/Leisure/Craft" maxLevels:"3" showDetail:"true" hideTopLevel:"false"}</programlisting>
+			<variablelist>
+				<title>Parameters</title>
+				<varlistentry>
+					<term>
+						<optional>name</optional>
+					</term>
+					<listitem>
+						<para>Optional. Defines the path to a tag. The full path to the tag must be specified.
+							e.g. "/Subjects/Leisure/Craft" and will display all child tags including the
+							specified tag. If no name is provided then it will default to "/Subjects".</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>maxLevels</optional>
+					</term>
+					<listitem>
+						<para>Optional. Defining this option will limit how many levels of the tag tree will
+							be displayed. For example, "1" will only show the top level tag and nothing else. If
+							nothing is provided here then all levels of the tag tree are shown.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>showDetail</optional>
+					</term>
+					<listitem>
+						<para>[true, false] Optional. If true, a tag's description (as defined in the onCourse
+							client) will also be displayed. The default option is false.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>hideTopLevel</optional>
+					</term>
+					<listitem>
+						<para>[true, false] Optional. If true, the top level tag is not displayed. The default
+							option is false.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</section>
+		<section>
+			<title>Sample HTML output</title>
+			<programlisting language="xml">
+				<![CDATA[<div class="taggroup-2405">
+  <ul>
+    <li class="hasChildren childSelected">
+      <a href="/courses">Personal Development</a>
+      <ul>
+        <li><a href="/courses/personal+development/work">Work</a></li>
+        <li class="selected"><a href="/courses/personal+development/life">Life</a></li>
+        <li><a href="/courses/personal+development/love">Love</a></li>
+      </ul>
+    </li>
+  </ul>
+</div]]>
+			</programlisting>
+			<para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="40%" contentdepth="40%"
+							fileref="images/WelcomePageSubjectTag.png" format="png" />
+					</imageobject>
+					<caption>
+						<para>The output of {tags} with a little css styling applied.</para>
+					</caption>
+				</mediaobject>
+			</para>
+		</section>
+	</section>
+	<section>
+		<title>{page}</title>
+		<para>You may want to display content from one page within another page. Use this rich text
+			element to embed content.</para>
+		<section>
+			<title>Usage</title>
+			<programlisting>{page code:"123"}</programlisting>
+			<variablelist>
+				<title>Parameters</title>
+				<varlistentry>
+					<term> code </term>
+					<listitem>
+						<para>The page number you wish to embed. This is the same as the number at the end of
+							the default URL for the target page ("/page/123").</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</section>
+	</section>
+	<section>
+		<title>{form}</title>
+		<para>You are able to use this markup to display a form on the page which anyone can fill in.
+			This can be very useful as a 'contact us' form for example. When the user enters the
+			required data, an email is sent to the address you nominate with the information entered.
+			This is the only rich text markup which requires a closing bit of markup to designate where
+			the form ends. Don't forget to insert {form} at the end!</para>
+		<section>
+			<title>Usage</title>
+			<programlisting>{form name:"email us" email:"sales@acmecollege.com.au"}
+				{text label:"Email address" required:true}
+				{text label:"First Name" required:true}
+				{text label:"Last name" required:true}
+				{text label:"Phone number" required:false}
+				{text label:"Reason for complaint" required:true lines:8}
+				{form}</programlisting>
+			<variablelist>
+				<title>Parameters</title>
+				<varlistentry>
+					<term>name</term>
+					<listitem>
+						<para>The name of the form. It is not visible to the user on the webpage.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>email</term>
+					<listitem>
+						<para>This is where the email will be sent. It is not visible to the user on the
+							webpage.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>url</optional>
+					</term>
+					<listitem>
+						<para>After the user submits the form, they will be redirected to this URL. If not
+							supplied, they will be returned to the current page.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</section>
+	</section>
+	<section>
+		<title>{text}</title>
+		<para>This markup is only useful inside {form} markup (see the previous section). You use this
+			to add a text field into the form.</para>
+		<section>
+			<title>Usage</title>
+			<programlisting>{text label:"Reason for complaint" required:true lines:8}</programlisting>
+			<variablelist>
+				<title>Parameters</title>
+				<varlistentry>
+					<term>label</term>
+					<listitem>
+						<para>The visible label shown next to the field.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>required</optional>
+					</term>
+					<listitem>
+						<para>If you set this to "true" then the user cannot submit the form without entering
+							some value here. Setting this to any other value or leaving it out means that the
+							field is optional.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>lines</optional>
+					</term>
+					<listitem>
+						<para>Setting this to "true" displays a text area 10 lines high. You can also
+							explicitly set this to any other integer number of lines. If this value is not set,
+							a single line text field will be shown.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>maxlength</optional>
+					</term>
+					<listitem>
+						<para>This can be set to any integer value greater than 1 and limits the input in this
+							field to this number of characters. Note that spaces count toward this
+							maximum.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</section>
+	</section>
+	<section>
+		<title>{radiolist}</title>
+		<para>This markup is only useful inside {form} markup. You use this to add a set of radio
+			buttons into the form, of which only one can be selected.</para>
+		<section>
+			<title>Usage</title>
+			<programlisting>{radiolist label:"Age range" default:"20-25" options:"20-25,26-30,31-35,36-40,41-45,46-50,50+"}</programlisting>
+			<variablelist>
+				<title>Parameters</title>
+				<varlistentry>
+					<term>label</term>
+					<listitem>
+						<para>The visible label shown next to the field.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>default</optional>
+					</term>
+					<listitem>
+						<para>This is the radio button which is selected by default. If nothing is supplied
+							here, then there is no default selected.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>required</optional>
+					</term>
+					<listitem>
+						<para>If you set this to "true" then the user cannot submit the form without entering
+							some value here. Setting this to any other value or leaving it out means that the
+							field is optional.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>options</optional>
+					</term>
+					<listitem>
+						<para>This comma separated list of options will be displayed as the list of radio
+							button options. You must have at least two options.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</section>
+	</section>
+	<section>
+		<title>{popuplist}</title>
+		<para>This markup is only useful inside {form} markup. You use this to add a popup list into
+			the form, of which only one can be selected.</para>
+		<section>
+			<title>Usage</title>
+			<programlisting>{popuplist label:"Age range" default:"20-25" options:"20-25,26-30,31-35,36-40,41-45,46-50,50+"}</programlisting>
+			<variablelist>
+				<title>Parameters</title>
+				<varlistentry>
+					<term>label</term>
+					<listitem>
+						<para>The visible label shown next to the field.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>default</optional>
+					</term>
+					<listitem>
+						<para>This is the item which is selected by default. If nothing is supplied here, then
+							there is no default selected.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>required</optional>
+					</term>
+					<listitem>
+						<para>If you set this to "true" then the user cannot submit the form without entering
+							some value here. Setting this to any other value or leaving it out means that the
+							field is optional.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>options</optional>
+					</term>
+					<listitem>
+						<para>This comma separated list of options will be displayed as the list of options.
+							You must have at least two options.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</section>
+	</section>
+	<section>
+		<title>{image}</title>
+		<para>Please <xref xlink:href="#images_and_attachments-image"/> in the attachment chapter.</para>
+	</section>
+	<section>
+		<title>{video}</title>
+		<para>Please <xref xlink:href="#images_and_attachments-video"/> in the attachment chapter.</para>
+	</section>
+	<section>
+		<title>{attachment}</title>
+		<para>Please <xref xlink:href="#images_and_attachments-attachment"/> in the attachment chapter.</para>
+	</section>
+</chapter>

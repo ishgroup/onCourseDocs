@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="static">
+	<title>Static files</title>
+	<section xml:id="css">
+		<title>Stylesheets</title>
+		<para>One of the first ways you'll want to modify the look of your site is by changing css stylesheets. onCourse stylesheets are a little
+			different from what you might be used to, so you will want to read this before diving straight in. Inside the '<emphasis role="bold"
+				>/s/stylesheets</emphasis>' folder on the ftp server are two further folders: 'css' and 'src'. It is important that you do not edit
+			the files in 'css' directly, but instead edit the files in src:</para>
+		<para>
+			<programlisting>/s/stylesheets/src/</programlisting>
+		</para>
+		<para>You will see that the file site.scss contains the following by default:<programlisting>@import "base";</programlisting></para>
+		<para>Add any stylesheet modifications you want to below this line, but don't remove the import of the base stylesheets. That import
+			brings in the basic stylesheet definitions which are required for your onCourse site: shortlists, course and class listings, enrolment
+			templates and much more.</para>
+		<section xml:id="scss">
+			<title>SCSS</title>
+			<para>onCourse uses a variation of CSS called SCSS. This extends the basic stylesheet concepts and adds some very useful abilities:<simplelist>
+					<member>
+						<link xlink:href="http://sass-lang.com/#nesting">nested rules</link></member>
+					<member>
+						<link xlink:href="http://sass-lang.com/#variables">variables</link></member>
+					<member>
+						<link xlink:href="http://sass-lang.com/#mixins">mixins</link></member>
+					<member>
+						<link xlink:href="http://sass-lang.com/#extend">selector inheritance</link></member>
+				</simplelist></para>
+			<para>Every time you edit any file in /s/stylesheets/src/, the destination /s/stylesheets/css/site.css is automatically regenerated. This
+				usually takes only a couple of seconds, so you can see the results almost immediately. This is why you should not edit the site.css
+				file directly, as any changes you make will be overwritten.</para>
+			<para>If you don't want to bother with learning SCSS that's fine. Just write ordinary CSS in the site.scss file. As your stylesheets
+				become more complex, you will find that SCSS gives you valuable shortcuts to achieving what you want.</para>
+			<para>If you would like to break up your stylesheets into more manageable pieces, add another import statement under the 'base' import
+				like this:<programlisting>@import "base";
+@import "colours";</programlisting></para>
+			<para>Then create a file /s/stylesheets/src/_colours.scss (with the underscore). When you make changes to that file, onCourse will
+				automatically merge any content from _colours.scss into the main css for your site. Comments will be stripped out, so don't hesitate
+				to put lots of useful notes in your scss files. The output will be merged and compressed (minified) before serving out as part of
+				the page load. This process can make a big improvement to page load speeds.</para>
+		</section>
+		<section>
+			<title>Compass</title>
+			<para>By default your stylesheets include Compass. This css library gives you lots of free functionality that you'd otherwise have to
+				write by hand. <link xlink:href="http://compass-style.org/reference/compass/">Read up on this library</link> and get instant rounded
+				corners across all browsers, typography features, reset, and much much more. As just one simple example
+				<programlisting>ul.pretty   +pretty-bullets("my-icon.png")</programlisting></para>
+			<para>will give you a fancy bulleted list with icons of your choosing. Or <programlisting>@include border-radius( 25px );</programlisting></para>
+			<para>gives you rounded corners in all browsers without having to remember to put Opera, webkit, Mozilla and html5 elements into your
+				css.</para>
+		</section>
+		<section>
+			<title>Compression</title>
+			<para>No matter how many separate files you break up your stylestyles into, or how many comments you insert to document your work, the
+				output will be compressed into one file and minified. This means whitespace is stripped and the file is pretty hard to read. However
+				browsers will be able to parse it just fine.</para>
+			<para>Finally we compress the file with gzip to serve it across the internet as fast as possible.</para>
+		</section>
+	</section>
+	<section xml:id="js">
+		<title>Javascript</title>
+		<para>Upload your javascript files into <programlisting>/s/js/</programlisting></para>
+		<para>Just like with css, javascript is merged and (optionally) minified to accelerate page loading. Start with site.js and notice these
+			lines at the top</para>
+		<para>
+			<programlisting>//= minify off
+//= require base.js
+//= require extra.js</programlisting>
+		</para>
+		<para>This is telling you that minification is disabled and that the javascript files base.js and extra.js are automatically merged into
+			the output. This isn't quite the same as scss. The output file is called all.js and the files which are merged don't need to start
+			with an underscore.</para>
+		<section>
+			<title>Minification</title>
+			<para>Unlike CSS, the javascript is not automatically minified. This is because sometimes javascript minification can actually break
+				your javascript (particularly if it contains errors). Browsers will often manage to figure out your broken javascript, but once
+				minified errors really cause problems.</para>
+			<para>You can enable minification by changing the "off" to "on" and saving the file. Wait about 30 seconds (it takes a while to run
+				the code) and then review your site in staging before pushing it to live.</para>
+		</section>
+		<section>
+			<title>Base</title>
+			<para>Base.js is included from a hidden place you cannot see. It pulls in some javascript essential for the functioning of onCourse,
+				shopping cart, enrolments, searching and much more. It also pulls in some libraries you probably know of:</para>
+			<para>
+				<itemizedlist>
+					<listitem>
+						<para>jquery</para>
+					</listitem>
+					<listitem>
+						<para>jquery-ui</para>
+					</listitem>
+					<listitem>
+						<para>jquery.cookie</para>
+					</listitem>
+					<listitem>
+						<para>jquery.nyroModal</para>
+					</listitem>
+					<listitem>
+						<para>jquery.tooltip</para>
+					</listitem>
+					<listitem>
+						<para>jquery.cycle</para>
+					</listitem>
+					<listitem>
+						<para>jquery.utils</para>
+					</listitem>
+					<listitem>
+						<para>jquery.validate</para>
+					</listitem>
+					<listitem>
+						<para>jquery.juitter</para>
+					</listitem>
+				</itemizedlist>
+			</para>
+		</section>
+	</section>
+	<section>
+		<title>Video</title>
+		<para>Although it is possible to load video files directly into the static folder, the onCourse servers are not optimised for serving
+			video. You will get much better results by hosting your video at a site such as YouTube or Vimeo and linking to them from within your
+			pages. Not only do they have servers placed in data centres around the world, but also the allow streaming of video. That is, the
+			video can start playing even before all of the file has downloaded.</para>
+	</section>
+</chapter>

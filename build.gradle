@@ -30,7 +30,7 @@ buildscript {
 				'org.apache.xmlgraphics:batik-dom:1.7',
                 'org.apache.xmlgraphics:batik-svggen:1.7',
                 'org.apache.xmlgraphics:batik-svg-dom:1.7@jar',
-				'org.apache.avalon.framework:avalon-framework-api:4.3.1']
+                'org.apache.avalon.framework:avalon-framework-impl:4.3.1']
 
 		classpath 'saxon:saxon:6.5.3',
 				'xerces:xercesImpl:2.9.1',
@@ -165,6 +165,8 @@ public class DocbookPdf extends DefaultTask {
     public final void transform() {
         FopFactory fopFactory = FopFactory.newInstance();
         fopFactory.setBaseURL(project.getProjectDir().getAbsolutePath() + '/src');
+        fopFactory.setUserConfig('file://' + project.getRootDir().getAbsolutePath() + '/fonts/fop-conf.xml');
+
         fopFactory.setStrictValidation(false);
 		OutputStream out = new BufferedOutputStream(new FileOutputStream(outputFile));
 

@@ -6,7 +6,6 @@ import org.apache.fop.apps.MimeConstants
 import org.xml.sax.InputSource
 import org.xml.sax.XMLReader
 
-import java.util.logging.Level
 import javax.xml.parsers.SAXParserFactory
 import javax.xml.transform.Result
 import javax.xml.transform.Source
@@ -66,9 +65,6 @@ allprojects {
 }
 
 subprojects {
-
-
-
     task docbookHtml(type: Docbook, dependsOn: parent.tasks['explodeXSL']) {
 		description = 'Generates chunked docbook html output.'
         outputFile = file("${buildDir}/html/index.html")
@@ -177,7 +173,7 @@ public class DocbookPdf extends DefaultTask {
 
 			TransformerFactory factory = TransformerFactory.newInstance();
 			Transformer transformer = factory.newTransformer();
-
+            transformer.setParameter('highlight.xslthl.config', 'file://' + project.getRootDir().getAbsolutePath() + '/build/xslt/docbook/highlighting/xslthl-config.xml' );
             FOUserAgent foUserAgent = fopFactory.newFOUserAgent();
             foUserAgent.setBaseURL(fopFactory.getBaseURL());
 			Source src = new StreamSource(sourceFile);

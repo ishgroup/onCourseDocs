@@ -160,8 +160,9 @@ public class Docbook extends DefaultTask {
         //transformer.setParameter("base.dir", outputFile.getParent() + File.separator);
 
         transformer.setParameter("base.dir",'file://' + project.getProjectDir().getAbsolutePath() + '/src');
+        transformer.setParameter('highlight.xslthl.config', 'file://' + project.getRootDir().getAbsolutePath() + '/build/xslt/docbook/highlighting/xslthl-config.xml' );
 
-		transformer.transform(new SAXSource(reader, inputSource), result);
+        transformer.transform(new SAXSource(reader, inputSource), result);
 	}
 }
 
@@ -176,6 +177,7 @@ public class DocbookPdf extends DefaultTask {
     @TaskAction
     public final void transform() {
         FopFactory fopFactory = FopFactory.newInstance();
+        fopFactory.setBaseURL(project.getProjectDir().getAbsolutePath() + '/src');
         fopFactory.setStrictValidation(false);
 		OutputStream out = new BufferedOutputStream(new FileOutputStream(outputFile));
 
@@ -185,8 +187,6 @@ public class DocbookPdf extends DefaultTask {
 			TransformerFactory factory = TransformerFactory.newInstance();
 			Transformer transformer = factory.newTransformer();
 
-           // transformer.setParameter('highlight.xslthl.config', new File(project.getParent().getBuildDir(), 'xslt/docbook/highlighting/xslthl-config.xsl').toURI() );
-            fopFactory.setBaseURL('file://' + project.getProjectDir().getAbsolutePath() + '/src');
             FOUserAgent foUserAgent = fopFactory.newFOUserAgent();
             foUserAgent.setBaseURL(fopFactory.getBaseURL());
 			Source src = new StreamSource(sourceFile);

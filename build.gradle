@@ -43,7 +43,7 @@ buildscript {
 
 allprojects {
     apply plugin: 'base'
-    version = "4.0"
+    version = project.hasProperty('docVersion') ? project.docVersion : 'unspecified'
 
     configurations {
         docbookxslt
@@ -110,6 +110,9 @@ subprojects {
 
     task upload(dependsOn: docbook) {
         description = 'Upload documentation to website.'
+        if (version == "unspecified") {
+            throw new GradleException("Version is ${version}. Documentation needs a final version to be uploaded.")
+        }
         doLast {
             // Invoke the scp Ant task. (Use gradle -i upload to see the output of the Ant task.)
             ant.scp(todir: "deploy@astonish.ish.com.au:/usr/fileshare/website-deploy/ish/onCourse/doc/${version}/${project.name}",

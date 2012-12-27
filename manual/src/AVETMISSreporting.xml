@@ -662,5 +662,18 @@
 				</caption>
 			</mediaobject>
 		</section>
+		<section>
+			<title>Why do some outcomes in the NAT000120 export with start and end dates of 00000000?</title>
+			<para>This is a date that has not been defined, e.g. instead of exporting an eight digit date
+				like 01012012, it has exported no date, or a string of zeros as placeholders.</para>
+			<para>What this means is that the class the outcome belongs to has no sessions defined.
+				With no sessions, there are no start or end dates available. Also, if you have a
+				self paced class where you have not defined the duration, the start date will be the
+				date of enrolment as usual, but the end date will default to 12 months after the
+				start date.</para>
+			<para>Look for any unscheduled or self paced classes in your onCourse records, and add
+				either some session information or manual start and end dates to each outcome in the
+				class.</para>
+		</section>
 	</section>
 </chapter>

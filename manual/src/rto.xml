@@ -10,14 +10,124 @@
 				xlink:href="#coursesVET">courses chapter</link>. Classes for the course inherit the
 			units set at the course level. You can see these units in the Training Plan on the
 			outcomes tab of the class.</para>
-		<para>When a student enrols in the class, the units of competency attached to the course
-			become the outcomes attached to the student's enrolment. You can see these outcomes in
-			the class on the outcomes tab, in the student's record on the enrolment tab, and on the
-			enrolment record on the outcomes tab.</para>
-		<para>Via the enrolment record, outcomes added in error can be deleted from the enrolment
-			record and additional outcomes can be added. Adding or deleting outcomes needs to be
-			done per enrolment. Outcomes can not be added to the class or directly to the student
-			record.</para>
+		<para>When a student enrols in the class, the units of competency attached to the course become
+			the outcomes attached to the student's enrolment. The start and end date of class become
+			the start and end date of the outcomes, unless you choose to define different dates in
+			the training plan. The settings on the class VET tab become the default settings for
+			each outcome for that class, but can be changed on an outcome by outcome basis. Within
+			the class level outcomes can be changed or set, but can not be deleted and new outcomes
+			can not be added here. </para>
+		<para>You can see the outcomes that have been assigned to each student  in the class on the
+			outcomes tab, in the student's record on the enrolment tab, and on the enrolment record
+			on the outcomes tab.</para>
+		<para>Via the student's enrolment record, outcomes added in error can be deleted from the
+			enrolment record and additional outcomes can be added. Adding or deleting outcomes needs
+			to be done per enrolment. Outcomes can not be added to the class or directly to the
+			student record.</para>
+	</section>
+	<section>
+		<title>Creating Class Training Plans</title>
+		<para>Where a class has multiple units of competency assigned to it, you may wish to create a
+			training plan to define at which points during the class delivery each unit begins and
+			ends. </para>
+		<para>For some government funding training, is it important in the AVETMISS reporting to
+			show the sequence of the delivery of units by having varied start and end dates.
+			Training plans allow you to achieve this.</para>
+		<para>Training plans are linked to sessions and can be found in the class timetable. </para>
+		<para>By default, all units of competency are assigned to all sessions unless you choose to
+			change this in the training plan. Units can not be assigned to no sessions as they would
+			then have no start or end date, creating errors in AVETMISS reporting.</para>
+		<para>The Training Plan report allows you to provide hard copy evidence of the outcomes
+			delivered in each sessions of you class and the tutors you have assigned to deliver
+			them. This report may be useful to provide to government funding bodies or ASQA
+			auditors, as well as being used for internal planning and resource management.</para>
+		<example>
+			<title>How to create a class training plan</title>
+			<orderedlist>
+				<listitem>
+					<para>For an existing VET class, open the class record and go to the Timetable
+						tab. </para>
+				</listitem>
+				<listitem>
+					<para>Select a session from the list to view the Training Plan in the left hand
+						panel of the timetable. By default, all the available units will be
+						ticked.</para>
+				</listitem>
+				<listitem>
+					<para>Progressing through each session, select and de-select the units in the left hand panel
+						which will be delivered in that session.</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/training_plan_timetable.png" format="png" />
+						</imageobject>
+						<caption>
+							<para>Selecting units of competency to be delivered in the first class session</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+				<listitem>
+					<para>Note that the first session where the unit is delivered and the last
+						session where the unit is delivered will become the start and end dates of
+						the outcomes. If there are sessions in between these two where the unit is
+						not selected, this will have no impact on your AVETMISS reporting, only your
+						internal resource management.</para>
+				</listitem>
+				<listitem>
+					<para>For each session in the timetable, you can define one or more tutors and
+						one or more units. These combine to form the training plan.</para>
+				</listitem>
+				<listitem>
+					<para>Once the class record has been saved, the start and end dates now set for
+						each unit are available on the class Outcomes panel, in the training plan
+						section. The lower half of the window shows the outcomes assigned to student
+						enrolled in this class.</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/training_plan_outcomes.png" format="png" />
+						</imageobject>
+						<caption>
+							<para>Showing the start and end dates for each unit assigned to this class on the outcomes tab</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+				<listitem>
+					<para>The start dates and end dates defined by each unit must fall within the
+						sessions of the class. You can not manually set a date in a training plan
+						outside the class boundaries, but you can do this on an outcome by outcome
+						basis if required.</para>
+				</listitem>
+				<listitem>
+					<para>If a student's outcome has been modified manually e.g. the end date has
+						been extended beyond the duration of the class, the Training Plan settings
+						will not modify the manual overrides you have created. </para>
+				</listitem>
+				<listitem>
+					<para>To print the training plan report for class, save and close the record and
+						ensure the class is selected in the class list view. Select File > Print >
+						Training Plan to print the report. </para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/TP_Report_pg1.png" format="png" />
+						</imageobject>
+						<caption>
+							<para>Training Plan Report showing the unit list and their start and end dates</para>
+						</caption>
+					</mediaobject>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/TP_Report_pg2.png" format="png" />
+						</imageobject>
+						<caption>
+							<para>Training Plan Report showing the units shceduled for delivery for each session and the tutors responsible for their delivery</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+			</orderedlist>
+		</example>
 	</section>
 	<section>
 		<title>Setting and modifying outcomes</title>

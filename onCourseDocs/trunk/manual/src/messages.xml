@@ -2,17 +2,33 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
 	version="5.0" xml:id="messages">
 	<title>Sending messages</title>
+	<para>onCourse can send a mix of email, SMS or postal mail messages to the contacts you have
+		collected contact details for. Contacts can also manage their subscription and
+		un-subscription to your mailing lists via their onCourse web portal.</para>
+	<para>Whenever you create a message using the onCourse interface, the collected list of contacts
+		is automatically de-duplicated so you don't send someone the same message twice, and the
+		list can be sent a combination of email, SMS and postal mail depending on the contact
+		details you have available. Selected contacts without the chosen method or methods or
+		communication available can be exported into a separate list so you can manually contact
+		them.</para>
+	<para>Contacts who have asked not to be contacted via particular methods e.g. SMS are
+		automatically suppressed from messaging lists. You can override this suppression in the case
+		of emergency contact e.g. a message to advise students that their tutor is sick and a
+		session is cancelled.</para>
+	<para>onCourse messaging is for outbound messages only. Inbound messages will be sent to the
+		reply address specified in your message and will not be visible in onCourse.</para>
 	<section>
 		<title>Selecting people to contact</title>
 		<section>
 			<title>From contact, tutor or student lists</title>
-			<para>If you wish to find a group of contacts who have a particular history of interactions
-				with your college, onCourse will allow you to perform advanced search functions, then use
-				the combined email, sms and mail messaging tool to contact these clients. For example, you
-				can search for all students who enrolled in a course containing the word “french” in the
-				last 365 days and then send them all an invitation to enrol in your new class, Provence
-				Study Tour, prior to its public release. Any of the standard and advanced search mechanisms
-				in the contact list view can be used to choose people to send a message to.</para>
+			<para>If you wish to find a group of contacts who have a particular history of interactions with
+				your college, onCourse will allow you to perform advanced search functions, then use
+				the combined email, SMS and mail messaging tool to contact these clients. For
+				example, you can search for all students who enrolled in a course containing the
+				word “french” in the last 365 days and then send them all an invitation to enrol in
+				your new class, Provence Study Tour, prior to its public release. Any of the
+				standard and advanced search mechanisms in the contact list view can be used to
+				choose people to send a message to.</para>
 			<para>Once you have made your selection, highlight the people you wish to contact and choose
 				"send message..." from the cog wheel in the top right. You can send a message in this way to
 				1 person or 20,000 people, and onCourse has special code to optimise delivery to very large
@@ -27,44 +43,37 @@
 		<section>
 			<title>From waiting lists</title>
 			<para>Highlight one or more records in the waiting list view and choose "send message..." from
-				the cog wheel in the top right. Every potential student will be sent a message of your
-				creation. A good way to use this is to search for all waiting list records for a particular
-				course or group of courses. Then send them a message to let them know a new class has just
-				been scheduled and let them know to enrol online or call the office.</para>
+				the cog wheel in the top right. Every potential student will be sent a message of
+				your creation. A good way to use this is to search for all waiting list records for
+				a particular course or group of courses. Then send them a message to let them know a
+				new class has just been scheduled and let them know to enrol online or call the
+				office. Read <xref xlink:href="#waitingLists"/> for more information about waiting lists.</para>
+		</section>
+		<section>
+			<title>From mailing lists</title>
+			<para>In the mailing list window, selecting the mailing list name you wish to contact the
+				subscribers of and select 'send email' from the cog wheel option in the top right
+				hand corner. Read <xref xlink:href="#mailinglists"/> for more information about mailing lists.</para>
 		</section>
 	</section>
 	<section>
-		<title>Sending SMS, Email and postal (snail) mail</title>
+		<title>Sending an integrated mail message</title>
 		<para>ish onCourse integrates email, SMS and postal export functionality within the database.
 			This means that not only can you quickly contact all students who studied with you last term,
 			or quickly reschedule a class when the tutor calls in sick, but that a full history of all
 			these messages are stored right in the students' records.</para>
-		<para>Sophisticated bounce processing is in place for email and SMS, notifying you if a message
-			is undeliverable.</para>
-		<para>Do you wish you could send an email to everyone in a class AND send a postal mail in one
-			go? Well now you can, if you wish to send a postal (snail) mail to someone, they must not have
-			an email in their record (for obvious reasons). To send a person a postal mail, follow these
-			steps:</para>
-		<orderedlist>
-			<listitem>
-				<para>In onCourse, go to "class" which is under the "customer service" tab</para>
-			</listitem>
-			<listitem>
-				<para>Once in "class", highlight the class that contains a person without an email in their
-					record.</para>
-			</listitem>
-			<listitem>
-				<para>Go to the cogwheel at the top and select "Send message to students from X class", the
-					X represents the amount of people enrolled into that class.</para>
-			</listitem>
-			<listitem>
-				<para>Once the "send message" window appears, you will need to go to the bottom "Export
-					postal addresses for mail merge" you can choose "including people are emailed" to send a
-					postal mail to a student who already recieves an email. You can even uncheck "send email"
-					from the top so as to only send postal mails to people. See screenshot below to get a
-					better idea about this.</para>
-			</listitem>
-		</orderedlist>
+		<para>Sophisticated bounce processing is in place for email, notifying you if a message is
+			undeliverable.</para>
+		<para>After you have selected the list of people you wish to contact using one of the
+			methods described in the previous section, you can begin selecting the methods which you
+			will use to contact them.</para>
+		<para>For example, if you have 26 contacts selected in a message window and of those 26, 22
+			have email addresses available to contact, there will be 4 people who are listed as
+			'wont be contacted'.  If you have mobile phone numbers for those four people you could
+			chose to SMS them only, by selecting the option 'send SMS' and not including people who
+			are emailed. By using this combined method you can reach more people via their preferred
+			medium, or in the case of emergencies, attempt to reach people via multiple
+			mediums.</para>
 		<para>
 			<mediaobject>
 				<imageobject>
@@ -72,17 +81,288 @@
 						fileref="images/messagingStudents.png" />
 				</imageobject>
 				<caption>
-					<para> The "send message window" </para>
+					<para> In this example, all 9 contact have an available email address, so no other method of communication is needed to reach them. </para>
 				</caption>
 			</mediaobject>
 		</para>
+		<section>
+			<title>Understanding email messaging</title>
+			<para>Email messaging in onCourse is managed by your own mail server. In the Preferences >
+				General > Messaging window you can set up the email server address and account
+				details. You can also set up how bounced emails are processed. More information is
+				available in <xref xlink:href="#generalPrefs"/></para>
+			<para>Not every email you send from onCourse will reach the intended contact. There are many
+				reasons for this and they include:</para>
+			<orderedlist>
+				<listitem>
+					<para>The email address you collected from the student was incorrect. This is less likely if
+						the student enrolled online and was required to type in their email address
+						themselves rather than have a staff member translate it from a handwritten
+						form. Common errors include incorrect domain names e.g. bigpond.com.au
+						instead of bigpond.com and simple typos. If the user account you are trying
+						to send to doesn't exist, you should expect an undeliverable message to the
+						'from' address used when you sent the message and the message will be marked
+						as failed in onCourse.</para>
+				</listitem>
+				<listitem>
+					<para>The user's account marked your message as spam. onCourse emails are sent one at a time to
+						your email server, so if the user has successfully received email from you
+						in the past, there is no difference between a message sent out of onCourse
+						than one sent directly from your own email account. There is no notification
+						to you if the message is marked as spam, and will show as 'sent' in
+						onCourse. Their spam filter may have quarantined your message for reasons
+						like using keywords in your message body such as 'special offer', 'Dear
+						sir/madam' or other negatively scoring terms. Read up on keywords that are
+						commonly blocked at <link
+							xlink:href="http://spamassassin.apache.org/tests_3_3_x.html">Spam
+							Assassin</link></para>
+				</listitem>
+				<listitem>
+					<para>The user's account is full, or otherwise unavailable for accepting
+						messages. The user account may have been disabled by their system
+						administrator, i.e. if an employee has left an organisation, or is possibly
+						unavailable due to technical issues like their mail server losing it's
+						internet connection. Your own mail server may attempt to resend the message,
+						depending or the response it has received. You may see the message in
+						onCourse remains in a queued state. On the sixth failed attempt the message
+						will be discarded and you will see in onCourse the message marked as failed
+						and the users email address marked as undeliverable.</para>
+				</listitem>
+				<listitem>
+					<para>Problems with your own mail server sending large numbers of outbound
+						messages. If you are sending a large number of emails for an email campaign,
+						your own mail server may have some established rules to block potential spam
+						activity from inside your network. Before you begin sending 500 or more
+						messages, speak to your mail server manager and ensure there are no system
+						policies that will prevent you from running your marketing campaign.</para>
+				</listitem>
+			</orderedlist>
+			<section>
+				<title>Plain text and HTML messages</title>
+				<para>When sending an email, you can choose to send either a plain text or HTML email message.
+					HTML messages are formatted and usually include images, hyperlinks and styled
+					font and content. A plain text email message is just that - it contains only
+					plain text without any additional styling.</para>
+				<para>You may be familiar with the experience of your own email browser blocking the
+					images or content of HTML emails. In most instances, the user can choose to show
+					these blocked images once they have confirmed that the message is from a trusted
+					source. Alternatively, many HTML emails include a link such as 'view this email
+					in a browser' for people whose email clients do not allow them to easily view
+					HTML.</para>
+				<para>It also takes a little more work to layout and format an HTML message, so
+					sometimes sending a plain text message when you have a simple and
+					straightforward message to convey is all that is required e.g. remember to bring
+					your assignments to class tonight. For an email message with a broader reach,
+					say a marketing campaign that is aiming to remind clients of your brand, educate
+					them about new products you offer and entice them to click through and make a
+					purchase, HTML is a more sophisticated choice.</para>
+				<para>By default, the onCourse messaging system will open in the plain text message
+					mode. If you are sending an HTML message, you will need to prepare the HTML
+					using a tool such as the onCourse website page creation tool, and then copy and
+					paste the HTML into the onCourse message window, or the URL of the HTML message
+					into the 'Web URL for HTML Message field'.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/HTML_message.png" />
+					</imageobject>
+					<caption>
+						<para>An email message with HTML content.</para>
+					</caption>
+				</mediaobject>
+			</section>
+		</section>
+		<section>
+			<title>Understanding SMS Messaging</title>
+			<para>SMS messaging is available in onCourse and can be a method of communication for
+				any contacts with a valid mobile number. Note that only the phone number recorded in
+				the mobile phone field is used - if you have recorded a mobile phone number in the
+				work or home number fields, it will not be available for SMS.</para>
+			<para>There is no requirement for formatting the mobile phone number in onCourse to make
+				it accessible. 10 digits are standard for a mobile phone, beginning in Australia
+				with 04. Whether or not you format your phone numbers with spaces it up to you -
+				onCourse will strip out these characters during the outbound SMS, without modifying
+				any of the data you have stored.</para>
+			<para>A small charge per use applies to SMS messaging, as per your onCourse contract
+				agreement. The outbound message from information is defined in the File >
+				Preferences > General > Messaging > SMS from field. Most companies use their
+				business name here, so they do not need to identify themselves in the message body.
+				Like email, SMS messaging is outbound only, and if you use a name in the from field,
+				there is no ability for the customer to respond. Alternatively you could use a valid
+				mobile number in your settings, if you wished to accept inbound SMS also, and
+				remember to identify your business name in each SMS you send.</para>
+			<para>It is important to remember that SMS messages are not delivered in real time, even
+				though most peoples experiences of mobile phones work that way. Like email, SMS
+				messages are handled through a delivery network but in this case delivery rules are
+				all managed by the receiver's mobile phone provider. Most providers give about a two
+				day time-to-live on SMS messages. This means if the phone is off the network (no
+				coverage or switched off) and re-registers on the network within two days that the
+				message was sent, then it will be received. If the phone is off the network for
+				longer than that, then the mobile phone provider may discard the message entirely.
+				There is no notification back to the sender if the message is successfully delivered
+				or discarded.</para>
+			<para>Inside the contact record in onCourse, the message is marked as sent if it makes
+				it successfully to the outbound SMS gateway. Beyond that point the message can not
+				be tracked. Please contact ish if you find SMS messages are failing as there may be
+				instances where the SMS gateway is experiencing a fault.</para>
+		</section>
+			<section>
+			<title>Postal mail</title>
+			<para>The postal mail option in onCourse exports the mailing address and email addresses of the
+				selected contacts into a CSV file. You can then use this file to mail merge the
+				address data with your message prepared in a word processing or desktop publishing
+				tool, or provide this file to a mailing house distributing your marketing
+				materials.</para>
+			<para>The name of the postal mail export is recorded in the contacts messages tab for
+				future reference. </para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/postal_CSV.png" />
+					</imageobject>
+					<caption>
+						<para> An example of a postal mail CSV export. </para>
+					</caption>
+				</mediaobject>
+		</section>
 	</section>
 	<section>
-		<title>No spam please</title>
+		<title>Exporting contact details for other messaging tools</title>
+		<para>Using the postal export option as outlined in the previous section is the simplest way
+			to export name, address and email data for importing data into other messaging
+			tools.</para>
+		<para>If you require more information than what is available in this export option, you can
+			run a standard CSV export on the contact record table and customise the output as
+			required. More information about exports is available in <xref xlink:href="#importExport"/></para>
+	</section>
+	<section>
+		<title>Messaging opt in and opt out</title>
 		<para>Students have the option to opt out of all marketing communication from your organisation,
 			or from a particular method of marketing such as SMS. However, if you have urgent information
 			to convey, such as a class cancellation, you are still able to use your communication tools to
 			contact them quickly while respecting their request not to receive unsolicited marketing
 			emails or SMS. </para>
+		<para>During the online enrolment process, students can opt of our messaging from any type
+			when they are providing their contact details. By default, all types of communication
+			are set to allow. Student's can also log into their portal at any time and change their
+			preferences.</para>
+		<para>onCourse users can also manually reset the availability of each of the postal, SMS and
+			email settings using the cog wheels in the contact window.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/message_settings.png" />
+			</imageobject>
+			<caption>
+				<para> In this example, the student accepts postal marketing messages,  has provided a mobile
+					phone where SMS messages have failed to be delivered, and opted out of both SMS
+					and email marketing. </para>
+			</caption>
+		</mediaobject>
+		<para>When a contacts address has been marked as undeliverable, either automatically by repeat
+			failed sending attempts, or manually e.g. return to sender postal mail, this contact
+			will not be sent any further messages using the onCourse integrated messaging tool to
+			the undeliverable medium.</para>
+		<para>Using the advanced search function, you can search for contacts who have undeliverable
+			methods of contact and make an effort to follow them up to obtain up to date contact
+			details.</para>
+		<para>Mailing lists can also be opted in and out, with out opting out of a method communication
+			altogether. For example, a user can opt out of the 'Lifestyle and leisure courses'
+			mailing list, without refusing other marketing email communication. More information
+			about mailing lists is available in <xref xlink:href="#mailinglists"/></para>
+	</section>
+	<section>
+		<title>Message permissions and message history</title>
+		<para>Within the onCourse File > Preferences > Access settings, an onCourse user group can
+			be set to allow emails an SMSs to over or under 50 contacts. This is to prevent onCourse
+			enrolment staff, for example, accidentally sending an email blast to your entire
+			database but allows them sufficient permission to contact all the students from a single
+			class and advise them of changed conditions.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/message_permissions.png" />
+			</imageobject>
+			<caption>
+				<para> User account settings to allow over or under 50 contacts per message type. </para>
+			</caption>
+		</mediaobject>
+		<para>Each message that is sent from onCourse is also stored within the contacts record. The
+			message can be double clicked on to show the content of the message. This can provide an
+			added level of security and allow you to quickly follow up any student's query regarding
+			a message they received from your college. All automatic messages sent from onCourse are
+			also recorded here. </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/messages_sent.png" />
+			</imageobject>
+			<caption>
+				<para>A contact record showing the delivery status of the contacts messages </para>
+			</caption>
+		</mediaobject>
+	</section>
+	<section>
+		<title>Automatic messages in onCourse</title>
+		<para>When a student enrols in a class and an invoice is created, two automatic emails are sent
+			from onCourse. These emails are sent for both online enrolments and enrolments processed
+			through the office. Where the payer is a different person to the enrolling student, the
+			invoice is emailed to the payer while the enrolment confirmation is emailed to the
+			student. If the payer and the student is the same person, they will receive two
+			emails.</para>
+		<para>onCourse uses standard templates to send plain text emails to payers and students.
+			These emails can be resent from the enrolment window cogwheel or the invoice window
+			cogwheel. These reports can also be printed in hard copy and mailed to the student if
+			required. Note that the format for the printed and emailed invoices and enrolment
+			confirmation are different, due to the different mediums they are sent with, but they
+			contain the same information.</para>
+		<para>The automatic enrolment confirmation email includes a block of text with the class
+			start date and time and link through to the full website description, maps, tutor
+			profile and other details of the class.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/email_confirmation.png" />
+			</imageobject>
+			<caption>
+				<para>A plain text email showing the basic information a student needs to attend class, with a link to more information</para>
+			</caption>
+		</mediaobject>
+		<para>The tax invoice which is provided to the payer shows the total amount payable, amount paid,
+			tax applicable and amount outstanding. For many payers this invoice is also the payment
+			receipt where they have paid some or all of the fee on enrolment.</para>
+		<para>When an enrolment is cancelled an automatic message template for email and/or SMS is
+			generated to advise the student. You can choose to edit, send as is or discard this
+			message. By default, it will also be sent to people who have opted out of email or SMS
+			marketing as it is an informational message.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/message_cancelled.png" />
+			</imageobject>
+			<caption>
+				<para>A template email and SMS notification for a student whose enrolment has been cancelled.</para>
+			</caption>
+		</mediaobject>
+	</section>
+	<section>
+		<title>Modifying message templates</title>
+		<para>The automatic email templates are available to edit under File > Preferences > Email
+			templates.</para>
+		<para>Each template includes some suggested wording, as well as a range of form fields
+			(think mail merge) already embedded in the template. In the top right hand corner is a
+			drop down list of all available merge fields.</para>
+		<para>You can choose to reformat these templates at any time, keeping in mind that in
+			Australia there are minimum legal requirements regarding the content of a Tax Invoice,
+			including the display of GST included/GST free items and the business ABN.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/enrol_email_template.png" />
+			</imageobject>
+			<caption>
+				<para>The customisable enrolment template automatically sent to all enrolling students who provide an email address.</para>
+			</caption>
+		</mediaobject>
 	</section>
 </chapter>

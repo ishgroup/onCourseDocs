@@ -417,7 +417,7 @@
 			allow you to customise the output.</para>
 		<section>
 			<title>Usage</title>
-			<programlisting>{tags name:"/Subjects/Leisure/Craft" maxLevels:"3" showDetail:"true" hideTopLevel:"false"}</programlisting>
+			<programlisting>{tags name:"/Subjects/Leisure/Craft" maxLevels:"3" showDetail:"true" hideTopLevel:"false" template:"TagItem.tml"}</programlisting>
 			<variablelist>
 				<title>Parameters</title>
 				<varlistentry>
@@ -456,6 +456,14 @@
 					<listitem>
 						<para>[true, false] Optional. If true, the top level tag is not displayed. The default
 							option is false.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>template</optional>
+					</term>
+					<listitem>
+						<para>Optional. The name of the template to use for rendering each item in the tag list. Defaults to TagItem.tml. If you set this to something else, make sure you create the appropriate file in your website resources.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>

@@ -1,176 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
-	version="5.0" xml:id="importExport">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="importExport">
 	<title>Importing and exporting</title>
-	<para>onCourse offers you a large number of ways to get data into and out of the system. One of
-		the key advantages of onCourse is that the data is completely under your control.</para>
+	<para>onCourse offers you a large number of ways to get data into and out of the system. One of the key advantages of onCourse is that the
+		data is completely under your control.</para>
 	<section>
 		<title>Exporting</title>
 		<section>
 			<title>From the list view</title>
-			<para>Each list view in onCourse has the ability to export data in an almost infinite variety
-				of formats. Simply highlight the records you wish to export and choose "Export" from under
-				the File menu. A dialog will appear giving you some choices:<itemizedlist>
+			<para>Each list view in onCourse has the ability to export data in an almost infinite variety of formats. Simply highlight the records
+				you wish to export and choose "Export" from under the File menu. A dialog will appear giving you some choices:<itemizedlist>
 					<listitem>
-						<para>Export format: This popup allows you to specify the format of the export data. For
-							most data CSV and XML are the default options, but you are able to add as many more
-							export templates as you choose.</para>
+						<para>Export format: This popup allows you to specify the format of the export data. For most data CSV and XML are the default
+							options, but you are able to add as many additional export templates as you choose.</para>
 					</listitem>
 					<listitem>
 						<para>Based on:<itemizedlist>
 								<listitem>
-									<para>All available records: every record of that type. So if you are exporting
-										'classes' then every class in the database will be exported. Careful, this could
-										be a lot of data and might take some time to export as the information is sent
+									<para>All available records: every record of that type. So if you are exporting 'classes' then every class in the database
+										will be exported. Careful, this could be a lot of data and might take some time to export as the information is sent
 										from the server to the client and then saved to disk.</para>
 								</listitem>
 								<listitem>
-									<para>Listed records: every record in the list you were just looking at. This is
-										the result of whatever search you had just performed.</para>
+									<para>Listed records: every record in the list you were just looking at. This is the result of whatever search you had
+										just performed.</para>
 								</listitem>
 								<listitem>
-									<para>Highlighted records: only those records you had highlighted in the list.
-										This is the quickest way to export a few selected records, particularly when you
-										need to choose them by hand from your query results.</para>
+									<para>Highlighted records: only those records you had highlighted in the list. This is the quickest way to export a few
+										selected records, particularly when you need to choose them by hand from your query results.</para>
 								</listitem>
 							</itemizedlist></para>
 					</listitem>
-				</itemizedlist>onCourse enables you to export your data in raw XML format, this includes
-				courses, classes, sessions, tutors, sites and rooms all of which can be easily be imported
-				into a publishing product such as Adobe InDesign and customised however you wish. The
-				resulting file can then be sent to the printing company of your choice. There are advanced
-				instructions for importing and working with XML here. ish is also able to work with you to
-				assist you in the production of printed course catalogues if do not have existing design or
-				printing capabilities, or access to desktop publishing software.</para>
+				</itemizedlist>onCourse enables you to export your data in raw XML format, this includes courses, classes, sessions, tutors, sites
+				and rooms all of which can be easily be imported into a publishing product such as Adobe InDesign and customised however you wish.
+				The resulting file can then be sent to the printing company of your choice. There are advanced instructions for importing and
+				working with XML here. ish is also able to work with you to assist you in the production of printed course catalogues if do not have
+				existing design or printing capabilities, or access to desktop publishing software.</para>
 		</section>
 		<section>
 			<title>Direct access to the SQL database</title>
-			<para>Although we largely recommend that you produce reports within onCourse itself, it is
-				also possible to connect to the backend database directly. If you are using a third party
-				database like mySQL or MS-SQL you will already know how to do this. If you are using the
-				built in database which comes with onCourse server, use the following connection properties,
-				with a tool such as Squirrel SQL Client:
-				<programlisting>
+			<para>Although we largely recommend that you produce reports within onCourse itself, it is also possible to connect to the backend
+				database directly. If you are using a third party database like MySQL or MS-SQL you will already know how to do this. If you are
+				using the built in database which comes with onCourse server, use the following connection properties. Start with a tool such as
+				Squirrel SQL or DBeaver and use them to browse your data. Once you have that working, you can use any reporting tool (JasperBI,
+				Automate, Crystal Reports, etc) to extract and report on
+				data.<programlisting>
 	       JDBC Driver:  org.apache.derby.jdbc.ClientDriver
 	       JDBC URL: jdbc:derby://&lt;server hostname&gt;/onCourse
 	       username: report
 	       password: 948ty
             </programlisting></para>
-			<para>It is important to note that you should NEVER write to the database. Not only do you
-				risk introducing bad data, but you bypass all of the onCourse 'business logic' which holds
-				together the financial and relational integrity of the data.</para>
+			<para>It is important to note that you should NEVER write to the database. Not only do you risk introducing bad data, but you bypass
+				all of the onCourse 'business logic' which holds together the financial and relational integrity of the data.</para>
 		</section>
 		<section>
 			<title>AVETMISS export</title>
-			<para>To export your AVETMISS go to the file menu, select import/export and choose Export
-				AVETMISS. Select the date range you wish to export and where you wish to export the files
-				to, e.g. your desktop, and select proceed. The 10 txt files will then be created ready to be
-				submitted to the government reporting agency of your choice. Easy as! </para>
+			<para>To export your AVETMISS go to the file menu, select import/export and choose Export AVETMISS. Select the date range you wish to
+				export and where you wish to export the files to, e.g. your desktop, and select proceed. The 10 txt files will then be created ready
+				to be submitted to the government reporting agency of your choice. Easy as! </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/export_avetmiss.png" format="png" />
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/export_avetmiss.png" format="png" />
 				</imageobject>
 			</mediaobject>
 		</section>
 		<section>
 			<title>Sending messages</title>
-			<para>Although you can send emails and SMS directly from onCourse, you can also export a list
-				of contact email and postal details so that you can use an external mailing system, mail
-				merge in Word or send a list of addresses to an external mailing house. More details about
-				how to export from the messages window can be found in <xref xlink:href="#messages"
-				 />.</para>
+			<para>Although you can send emails and SMS directly from onCourse, you can also export a list of contact email and postal details so
+				that you can use an external mailing system, mail merge in Word or send a list of addresses to an external mailing house. More
+				details about how to export from the messages window can be found in <xref xlink:href="#messages" />.</para>
 		</section>
 		<section>
-			<title>Custom export templates</title>
-			<subtitle>Advanced tricks and tips</subtitle>
-			<para>You've seen how easy it can be to export course information from onCourse. Now we'll go
-				into a little more depth with how to customise the output and create any type of publication
-				you can dream of. In particular, exporting to InDesign for brochure production is
-				particularly easy.</para>
-			<section>
-				<title>Exporting data for printed brochures</title>
-				<para>Your publication will only be as good as your data. Make sure you have entered information
-					in the brochure description fields for your courses (and maybe also classes if
-					there are specific notes there). Ensure they have the correct sessions, prices
-					and other information. Now open the class list view and perform a search to find
-					the classes you want. Perhaps you will choose a a subject or select classes by
-					date, price or anything else you can think of. Now highlight the records you
-					wish to export. You might like to deselect specific classes from your list
-					because they don't require advertising or you haven't confirmed that it will
-					proceed. When you are done, choose File > Import/Export > Export Classes and
-					select the option 'InDesign brochure'. You can also select just the plain
-					'Export to XML' if you are using a different page design product.</para>
-			</section>
-			<section>
-				<title>Transforming the XML using XSLT (optional) </title>
-				<para>If you have a publication you produce repeatedly you might like to automate the
-					process of getting the text into the right format. XSLT is a technology which transforms
-					XML according to a set of rules. Don't be overwhelmed by the acronyms: the process is
-					simple enough. XML is the format of the data you just exported from onCourse – a set of
-					tags identify each element in the data. A &lt;course&gt; or &lt;startDate&gt; is a marker
-					which let's you know what the information represents. There is no styling or design in the
-					XML, it represents pure data with no prettiness. The XML from onCourse has a schema
-					advanced users might like to see <link xlink:href="http://www.ish.com.au/s/schema/4/html/"> here.</link></para>
-				<para>You can create an XSL file which is a set of instructions on how to style that XML.
-					The output is often more XML, but could be a web page, RSS feed, PDF file or even a Word
-					document. XSL instructions can be used to create almost any type of document imaginable.
-					Any material which comes from a database can be treated in this way – for example, the
-					printed White Pages telephone directory is produced in this manner.</para>
-				<para>XML and XSL can be a little daunting at first, but they offer the promise for huge
-					savings in efforts particularly when preparing longer course guides and documents.</para>
-				<para>Some things you can do with XSL:</para>
-				<itemizedlist>
-					<listitem>
-						<para>Format date and time (eg. “2 Jan 2008”)</para>
-					</listitem>
-					<listitem>
-						<para>Reorder elements</para>
-					</listitem>
-					<listitem>
-						<para>Add extra text (eg. “82“ becomes “8 sessions of 2 hrs”)</para>
-					</listitem>
-					<listitem>
-						<para>Remove elements (the sample XSL removes all the session information)</para>
-						<mediaobject>
-							<imageobject>
-								<imagedata scalefit="1" width="100%" contentdepth="100%"
-									fileref="images/XMLbefore.png" format="png" />
-							</imageobject>
-							<caption>
-								<para> XML from onCourse. </para>
-							</caption>
-						</mediaobject>
-						<mediaobject>
-							<imageobject>
-								<imagedata scalefit="1" width="100%" contentdepth="100%"
-									fileref="images/XMLafter.png" format="png" />
-							</imageobject>
-							<caption>
-								<para> After XSL transform. </para>
-							</caption>
-						</mediaobject>
-					</listitem>
-				</itemizedlist>
-			</section>
-			<section>
-				<title>Writing XSL</title>
-				<para>Writing an XSL file from scratch can be tricky if you've never done it before. ish is able
-					to offer services to produce a file for your needs or you may be able to find a
-					local specialist. We recommend Oxygen for any serious editing and testing of XSL
-					files.</para>
-			</section>
-			<section>
-				<title>Running your XSL transform:</title>
-				<para>If you write an XSL using version 1 of the specification, then InDesign can process it
-					directly while you import the XML.</para>
-			</section>
-			<section>
-				<title>Importing into InDesign</title>
-				<para>Whether or not you processed your XML with XSL, you can now import it into InDesign. Adobe
-					have a helpful document and another with some example XSL. </para>
-				<para>The process is simple:</para>
+			<title>Exporting to Adobe Indesign</title>
+			<para>onCourse already comes with a template for exporting to Adobe Indesign.</para>
+			<para>
 				<orderedlist>
+					<listitem>
+						<para>Open the class list view</para>
+					</listitem>
+					<listitem>
+						<para>Use the searching feature to find the classes you want in your brochure. This might be one or a thousand classes.</para>
+					</listitem>
+					<listitem>
+						<para>Choose "export" from the File menu. Select the "Indesign" output format. Export this data and save it to disk somewhere.
+							It will be an XML file, ready for inDesign.</para>
+					</listitem>
+				</orderedlist>
+			</para>
+			<para>Now fire up Adobe Indesign and import this file.<orderedlist>
 					<listitem>
 						<para>
 							<menuchoice>
@@ -180,28 +96,95 @@
 						</para>
 					</listitem>
 					<listitem>
-						<para>Choose your XML file</para>
+						<para>Choose your XML file which you just exported from onCourse.</para>
 					</listitem>
 					<listitem>
-						<para>If you are having InDesign process an XSL 1.0 file you can now choose it</para>
+						<para>Ticking “Link” will keep the InDesign document linked to your source XML so that changes to the XML flow through</para>
 					</listitem>
 					<listitem>
-						<para>Ticking “Link” will keep the InDesign document linked to your source XML so that changes
-							to the XML flow through</para>
+						<para>The structure of the data will now appear in the left column. You can drag any element into a text box in your layout and
+							have the text automatically flow through.</para>
 					</listitem>
 					<listitem>
-						<para>The structure of the data will now appear in the left column. You can drag any
-							element into a text box in your layout and have the text automatically flow
-							through.</para>
-					</listitem>
-					<listitem>
-						<para>Use the “map tags to styles…” menu item to map the tags against your paragraph and
-							character style sheets. Once this is done you can save the mapping so that next time
-							you create this document with fresh data all the styles are linked quickly and
+						<para>Use the “map tags to styles…” menu item to map the tags against your paragraph and character style sheets. Once this is
+							done you can save the mapping so that next time you create this document with fresh data all the styles are linked quickly and
 							simply.</para>
 					</listitem>
-				</orderedlist>
-			</section>
+				</orderedlist></para>
+			<para>If you now spend a bit of time tidying up your stylesheets (both character styles and paragraph styles) in inDesign you can set
+				up the whole process to be almost completely automated. Next time you export from onCourse, the data will flow right into inDesign
+				complete with all the formatting you need. Just paginate your brochure, place in some pictures and you are done.</para>
+			<para>When you are ready to customise your export further, read the following section on how to edit the export formatter.</para>
+		</section>
+		<section>
+			<title>Custom export templates</title>
+			<para>You've seen how easy it can be to export course information from onCourse. Now we'll go into a little more depth and you will be
+				able to customise the output and create any type of publication you can dream of.</para>
+			<para>If you have a publication you produce repeatedly you might like to automate the process of getting the text into the right
+				format. XSLT is a technology which transforms XML according to a set of rules. Don't be overwhelmed by the acronyms: the process is
+				simple enough. XML is the format of the data created by onCourse – a set of tags identify each element in the data. A &lt;course&gt;
+				or &lt;startDate&gt; is a marker which let's you know what the information represents. There is no styling or design in the XML, it
+				represents pure data with no prettiness. The XML from onCourse has a schema you can <link
+					xlink:href="http://www.ish.com.au/s/schema/4/html/"> see here.</link></para>
+			<para>You can create an XSL file which is a set of instructions on how to style that XML. The output is often more XML, but could be a
+				web page, CSV, RSS feed, PDF file or even a Word document. XSL instructions can be used to create almost any type of document
+				imaginable. Any material which comes from a database can be treated in this way – for example, the printed White Pages telephone
+				directory (where it still exists!) is produced in this manner.</para>
+			<para>XML and XSL can be a little daunting at first, but they offer the promise for huge savings in efforts particularly when
+				preparing longer course guides and documents.</para>
+			<para>Some things you can do with XSL:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Format date and time (eg. “2 Jan 2008”)</para>
+				</listitem>
+				<listitem>
+					<para>Reorder elements</para>
+				</listitem>
+				<listitem>
+					<para>Add extra text (eg. “82“ becomes “8 sessions of 2 hrs”)</para>
+				</listitem>
+				<listitem>
+					<para>Remove elements (the sample XSL removes all the session information)</para>
+				</listitem>
+			</itemizedlist>
+			<para>As an example, here is that the XML looks like directly from onCourse: <mediaobject>
+					<imageobject><imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/XMLbefore.png" format="png" />
+					</imageobject>
+					<caption>
+						<para> XML from onCourse. </para>
+					</caption>
+				</mediaobject></para>
+			<para>And here is what it looks like after the inDesign transformation: <mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/XMLafter.png" format="png" />
+					</imageobject>
+					<caption>
+						<para> After XSL transform. </para>
+					</caption>
+				</mediaobject></para>
+		</section>
+		<section>
+			<title>Writing XSL</title>
+			<para>Writing an XSL file from scratch can be tricky if you've never done it before. ish is able to offer services to produce a file
+				for your needs or you may be able to find a local specialist. We recommend Oxygen for any serious editing and testing of XSL files.
+				As a starting point, go to File -> Preferences. Choose the Export templates and double click on one of the templates. This will save
+				the template to disk so that you can view and edit it. You will notice a block of XML at the top of the file which defines some
+				basic parameters:</para>
+			<para>
+				<programlisting>	&lt;ish:onCourse>
+		&lt;ish:name>CSV&lt;/ish:name>
+		&lt;ish:entity>Contact&lt;/ish:entity>
+		&lt;ish:version>6&lt;/ish:version>
+		&lt;ish:keyCode>ish.onCourse.contactCsv&lt;/ish:keyCode>
+	&lt;/ish:onCourse></programlisting>
+			</para>
+			<para>The "name" is the user visible name which appears in the export dialog. The "entity" defines which type of record can be
+				formatted by this XSLT. The "version" is used to track your changes and the "keyCode" is a unique identifier for this export format.
+				If you use an existing keyCode, then when you import your changed file it will replace the one already in onCourse. We recommend you
+				change this to anything else to define your own formats.</para>
+			<para>When you are ready, make sure your template conforms to <link xlink:href="http://www.ish.com.au/s/schema/4/html/"> our
+					schema</link> and import your new template back into onCourse by clicking on the plus icon above the list of export
+				templates.</para>
 		</section>
 	</section>
 	<section xml:id="import">
@@ -214,36 +197,30 @@
 					<para>Export AVETMISS 80 and 85 files from your legacy enrolment system </para>
 				</listitem>
 				<listitem>
-					<para>Run onCourse client and choose “File” -> “Import/Export”. Select the two files you
-						exported in step 1. </para>
+					<para>Run onCourse client and choose “File” -> “Import/Export”. Select the two files you exported in step 1. </para>
 				</listitem>
 				<listitem>
-					<para>This process can take a while if you have large numbers of students since each
-						record is validated as it is imported. </para>
+					<para>This process can take a while if you have large numbers of students since each record is validated as it is imported.
+					</para>
 				</listitem>
 			</orderedlist>
 		</section>
 		<section>
 			<title>XML import</title>
-			<para>Using a published XML format you will be able to migrate your data easily to onCourse,
-				so long as you are able to export to this format from your existing system. This will bring
-				across students, sites, rooms, courses, classes, tutors, enrolments and outcomes to
-				onCourse. </para>
-			<para> In order to perform this import, connect onCourse client to the server. After logging
-				in, choose “File” -> “Import/Export” -> “Import XML”. Choose your XML data file and let the
-				process run to completion (this will take some time for large datasets). It is usual to
-				begin this process with a clean, empty data file, however that is not necessary. </para>
-			<para> Note that the import process validates every record as it is imported. If validation
-				errors occur (eg. a student birth date in the future) that record will be rejected and
-				logged in an error file called "import.log" </para>
-			<para>We also have the <link xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd"
-					>formal XML schema</link> and <link
-					xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd.html">user
-					friendly documentation</link> available from our website. </para>
+			<para>Using a published XML format you will be able to migrate your data easily to onCourse, so long as you are able to export to this
+				format from your existing system. This will bring across students, sites, rooms, courses, classes, tutors, enrolments and outcomes
+				to onCourse. </para>
+			<para> In order to perform this import, connect onCourse client to the server. After logging in, choose “File” -> “Import/Export” ->
+				“Import XML”. Choose your XML data file and let the process run to completion (this will take some time for large datasets). It is
+				usual to begin this process with a clean, empty data file, however that is not necessary. </para>
+			<para> Note that the import process validates every record as it is imported. If validation errors occur (eg. a student birth date in
+				the future) that record will be rejected and logged in an error file called "import.log" </para>
+			<para>We also have the <link xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd">formal XML schema</link> and <link
+					xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd.html">user friendly documentation</link> available from our
+				website. </para>
 			<para>Other legacy systems</para>
-			<para>Please contact ish for tools which can help you export data from your legacy databases
-				and import into onCourse. In the past we have created export helpers for systems such as
-				GLEP. </para>
+			<para>Please contact ish for tools which can help you export data from your legacy databases and import into onCourse. In the past we
+				have created export helpers for systems such as GLEP. </para>
 		</section>
 	</section>
 </chapter>

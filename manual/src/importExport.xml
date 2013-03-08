@@ -86,19 +86,21 @@
 			<subtitle>Advanced tricks and tips</subtitle>
 			<para>You've seen how easy it can be to export course information from onCourse. Now we'll go
 				into a little more depth with how to customise the output and create any type of publication
-				you can dream of. In particular, exporting to Indesign for brochure production is
+				you can dream of. In particular, exporting to InDesign for brochure production is
 				particularly easy.</para>
 			<section>
-				<title>Exporting the classes you need</title>
-				<para>Your publication will only be as good as your data. Make sure you have entered
-					information in the brochure description fields for your courses (and maybe also classes if
-					there are specific notes there). Ensure they have the correct sessions, prices and other
-					information. Now open the class list view and perform a search to find the classes you
-					want. Perhaps you will choose a a subject or select classes by date, price or anything
-					else you can think of. Now highlight the records you wish to export. You might like to
-					deselect specific classes from your list because they don't require advertising or you
-					haven't confirmed that it will proceed. When you are done, choose “export classes as XML”
-					from the cog wheel icon in the bottom right. </para>
+				<title>Exporting data for printed brochures</title>
+				<para>Your publication will only be as good as your data. Make sure you have entered information
+					in the brochure description fields for your courses (and maybe also classes if
+					there are specific notes there). Ensure they have the correct sessions, prices
+					and other information. Now open the class list view and perform a search to find
+					the classes you want. Perhaps you will choose a a subject or select classes by
+					date, price or anything else you can think of. Now highlight the records you
+					wish to export. You might like to deselect specific classes from your list
+					because they don't require advertising or you haven't confirmed that it will
+					proceed. When you are done, choose File > Import/Export > Export Classes and
+					select the option 'InDesign brochure'. You can also select just the plain
+					'Export to XML' if you are using a different page design product.</para>
 			</section>
 			<section>
 				<title>Transforming the XML using XSLT (optional) </title>
@@ -109,18 +111,14 @@
 					tags identify each element in the data. A &lt;course&gt; or &lt;startDate&gt; is a marker
 					which let's you know what the information represents. There is no styling or design in the
 					XML, it represents pure data with no prettiness. The XML from onCourse has a schema
-					advanced users might like to see here </para>
+					advanced users might like to see <link xlink:href="http://www.ish.com.au/s/schema/4/html/"> here.</link></para>
 				<para>You can create an XSL file which is a set of instructions on how to style that XML.
 					The output is often more XML, but could be a web page, RSS feed, PDF file or even a Word
 					document. XSL instructions can be used to create almost any type of document imaginable.
 					Any material which comes from a database can be treated in this way – for example, the
-					printed White Pages telephone directory is produced in this manner. A sample XSL file is
-					available on this page for you to look at and modify for your needs.</para>
+					printed White Pages telephone directory is produced in this manner.</para>
 				<para>XML and XSL can be a little daunting at first, but they offer the promise for huge
 					savings in efforts particularly when preparing longer course guides and documents.</para>
-				<para> Find the CoursesExample.xsl (XML 3 KB) here: <link
-					xlink:href="http://www.ish.com.au/s/oncourse-schema/CoursesExample.xsl" />
-				</para>
 				<para>Some things you can do with XSL:</para>
 				<itemizedlist>
 					<listitem>
@@ -157,20 +155,20 @@
 			</section>
 			<section>
 				<title>Writing XSL</title>
-				<para>Writing an XSL file from scratch can be tricky if you've never done it before. ish is
-					able to offer services to produce a file for your needs or you may be able to find a local
-					specialist. If you want something simple, customise the sample file attached to this page.
-					We recommend Oxygen for any serious editing and testing of XSL files.</para>
+				<para>Writing an XSL file from scratch can be tricky if you've never done it before. ish is able
+					to offer services to produce a file for your needs or you may be able to find a
+					local specialist. We recommend Oxygen for any serious editing and testing of XSL
+					files.</para>
 			</section>
 			<section>
 				<title>Running your XSL transform:</title>
-				<para>If you write an XSL using version 1 of the specification, then Indesign can process it
+				<para>If you write an XSL using version 1 of the specification, then InDesign can process it
 					directly while you import the XML.</para>
 			</section>
 			<section>
-				<title>Importing into Indesign</title>
-				<para>Whether or not you processed your XML with XSL, you can now import it into Indesign.
-					Adobe have a helpful document and another with some example XSL. </para>
+				<title>Importing into InDesign</title>
+				<para>Whether or not you processed your XML with XSL, you can now import it into InDesign. Adobe
+					have a helpful document and another with some example XSL. </para>
 				<para>The process is simple:</para>
 				<orderedlist>
 					<listitem>
@@ -185,11 +183,11 @@
 						<para>Choose your XML file</para>
 					</listitem>
 					<listitem>
-						<para>If you are having Indesign process an XSL 1.0 file you can now choose it</para>
+						<para>If you are having InDesign process an XSL 1.0 file you can now choose it</para>
 					</listitem>
 					<listitem>
-						<para>Ticking “Link” will keep the Indesign document linked to your source XML so that
-							changes to the XML flow through</para>
+						<para>Ticking “Link” will keep the InDesign document linked to your source XML so that changes
+							to the XML flow through</para>
 					</listitem>
 					<listitem>
 						<para>The structure of the data will now appear in the left column. You can drag any
@@ -238,14 +236,10 @@
 			<para> Note that the import process validates every record as it is imported. If validation
 				errors occur (eg. a student birth date in the future) that record will be rejected and
 				logged in an error file called "import.log" </para>
-			<para> An example import xml file can be downloaded from <link
-					xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImportSample0.xml">here.</link>
-			</para>
-			<para> We also have the <link
-					xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd">formal XML
-					schema</link> and <link
-					xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd.html">user friendly
-					documentation</link> available from our website. </para>
+			<para>We also have the <link xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd"
+					>formal XML schema</link> and <link
+					xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd.html">user
+					friendly documentation</link> available from our website. </para>
 			<para>Other legacy systems</para>
 			<para>Please contact ish for tools which can help you export data from your legacy databases
 				and import into onCourse. In the past we have created export helpers for systems such as

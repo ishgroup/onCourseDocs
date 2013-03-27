@@ -15,6 +15,9 @@ import javax.xml.transform.sax.SAXResult
 import javax.xml.transform.sax.SAXSource
 import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.stream.StreamSource
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import org.apache.tools.ant.filters.*
 
 buildscript {
 	repositories {
@@ -67,13 +70,23 @@ allprojects {
         from zipTree(configurations.docbookxslt.singleFile)
         into "${buildDir}/xslt"
     }
+
+    task processResources(type: Copy) {
+        into "${buildDir}"
+        from "src"
+        filter(ReplaceTokens,tokens: [
+            version: version, 
+            publishedDate: new SimpleDateFormat("dd MMM yyyy").format(new Date()),
+            copyrightYear : new SimpleDateFormat("yyyy").format(new Date())])
+    }
 }
 
 subprojects {
-    task docbookHtml(type: Docbook, dependsOn: parent.tasks['explodeXSL']) {
+    task docbookHtml(type: Docbook, dependsOn: [processResources, parent.tasks['explodeXSL']]) {
 		description = 'Generates chunked docbook html output.'
         outputFile = file("${buildDir}/html/index.html")
 		stylesheet = file("${rootDir}/stylesheets/html.xsl")
+        sourceDirectory = file( "${buildDir}" )
 
         doLast {
             copy {
@@ -91,10 +104,11 @@ subprojects {
         }
 	}
 
-    task docbookPdfPrepare(type: Docbook, dependsOn: parent.tasks['explodeXSL']) {
+    task docbookPdfPrepare(type: Docbook, dependsOn: [processResources, parent.tasks['explodeXSL']]) {
         description = 'Generates PDF fo output.'
         outputFile = file("${buildDir}/pdf/index.fo")
         stylesheet = file("${rootDir}/stylesheets/pdf.xsl")
+        sourceDirectory = file( "${buildDir}" )
     }
 
 	task docbookPdf(type: DocbookPdf, dependsOn: 'docbookPdfPrepare') {

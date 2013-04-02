@@ -1497,7 +1497,7 @@
 				hand corner and select 'Save report file on disk'. This saved file will be the jrxml
 				file you need to open in iReport to edit.</para>
 			<para>Jasper report is a specially formatted text file. For ease of use the file can be edited
-				with a visual editor called iReport.  The report file format is called XML, this is
+				with a visual editor called iReport.  The report file format is XML and this is
 				a snippet from an example report file:</para>
 			<programlisting><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1508,9 +1508,6 @@
 	<property name="isVisible" value="true"/>
 	<property name="versionNumber" value="8"/>
 	<property name="keyCode" value="ish.onCourse.classTutorListReport"/>
-	<property name="ish.oncourse.title" value="Class Tutor"/>
-	<property name="ish.oncourse.filePrefix" value="classTutor"/>
-	<property name="ish.oncourse.pdfFileName" value="ClassTutor.pdf"/>
 	<property name="sortOn" value="tutor.contact.lastName"/>
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
@@ -1553,21 +1550,23 @@
 			</tip>
 		</section>
 		<section>
-			<title>The Essentials (Custom Report Properties)</title>
-			<para>Each report has to be identified in the system, therefore it is given an unique
-				parameter called 'keyCode'. To avoid confusion all reports created by ish group start with
-				'ish.' prefix. We strongly recommend that for any reports you customise, you use a different
-				prefix, like a name of the college. the keyCode can be edited in iReport using by choosing
-				from the menu Edit->Custom properties</para>
+			<title>Report Properties</title>
+			<para>onCourse expects to see certain properties added to each report. The properties can be edited in iReport using by choosing from the menu Edit->Custom properties or by just editing the XML by hand. If you look at the example above, you'll see all the common properties visible. At a minimum you need "keycode", "versionNumber" and "entity". Without these, your report will not be accepted by onCourse.</p>
+			<p>A list of the onCourse special parameters:</para>
 			<para>Other parameters which are compulsory are:</para>
 			<itemizedlist>
 				<listitem>
-					<para>versionNumber - an integer number, has to be increased every time a report is
-						upgraded </para>
+					<para>keyCode - Each report has to be identified in the system, therefore it is given an unique
+				property called 'keyCode'. We strongly recommend that for any reports you customise, you use a different
+				code. This will avoid an update of onCourse software overriding your report with new version from our developers.</para>
+				</listitem>
+				<listitem>
+					<para>versionNumber - a whole number, has to be increased every time a report is
+						changed otherwise your modifications may not be visible.</para>
 				</listitem>
 				<listitem>
 					<para>entity - identifies which is the starting point for the report, ie. report with
-						value 'Certificate' will be available in print menu for list of certificates. </para>
+						value 'Certificate' will be available in print menu for list of certificates.</para>
 				</listitem>
 				<listitem>
 					<para>isVisible - can only take value of 'true' or 'false', indicates whether the report
@@ -1575,17 +1574,15 @@
 				</listitem>
 				<listitem>
 					<para>isSubreport - some reports are just injected inside others, this allows to specify
-						this fact </para>
+						this fact and hide this report from the user choice</para>
 				</listitem>
 				<listitem>
 					<para>ish.oncourse.reports.following - use this property if you need print many reports as
-						one, just add to this ptopery a report's key (or keys). If you need put more then one
-						key - divide keys with ";" </para>
+						one, just add to this property a report's key (or keys). If you need put more then one
+						key - separate keys with ";". Any reports in here will be automatically printed after the initial report. This is particularly useful for certificates.</para>
 				</listitem>
 				<listitem>
-					<para>ish.oncourse.reports.isObjectOnSeparatePage - this property are used in situation
-						when we need print all objects on one page, by default we print one object on separate
-						page </para>
+					<para>ish.oncourse.reports.isObjectOnSeparatePage - if this property is set, then each record is printed on a separate page. This is useful for invoices (for example) which should start a new page after every invoice record.</para>
 				</listitem>
 			</itemizedlist>
 			<para>ish.oncourse.title, ish.oncourse.filePrefix and ish.onCourse.pdfFileName are currently

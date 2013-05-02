@@ -78,8 +78,8 @@
 			need to ensure that the onCourse Server has a good <emphasis role="bold">outbound</emphasis>
 			data link. Many consumer grade ADSL connections have a slow outbound data speed so you need
 			SHDSL or at least ADSL with Annex M. Ask your ISP about these things.</para>
-		<para>onCourse Server also requires outbound access to oncourse-replicate.ish.com.au on port
-			443. This allows the server to download the latest NTIS course data, send SMS and synchronise
+		<para>onCourse Server also requires outbound access to oncourse-replicate.ish.com.au on port 443.
+			This allows the server to download the latest TGA course data, send SMS and synchronise
 			data to your website.</para>
 		<para>Finally, onCourse Server will try to send email to a mail server on port 25. You can
 			configure that within the preferences window to point to your preferred SMTP mail
@@ -579,9 +579,9 @@ pkg_add onCourseServer.tgz
 				to start a new, sample or existing datafile. Choose new and save the datafile in the same
 				location as before. This will create a new onCourse.iocdata file </para>
 			<para>5. Once the server has completed the start up process, connect an onCourse client. Allow
-				about 5 minutes for the NTIS data to download. You can check it has completed by looking in
-				the 'Unit of Competency' window. It will say 0 shown of 39874 odd records in the window
-				header bar when it has completed. </para>
+				about 5 minutes for the TGA data to download. You can check it has completed by
+				looking in the 'Unit of Competency' window. It will say 0 shown of 52000 odd records
+				in the window header bar when it has completed. </para>
 			<para>6. You are now ready to start the process again of setting up your sites, courses,
 				classes, students and enrolments </para>
 		</section>
@@ -661,20 +661,21 @@ pkg_add onCourseServer.tgz
 			</qandaentry>
 			<qandaentry>
 				<question>
-					<para>None of the NTIS Qualifications or Units of Competency have downloaded, or there
-						seem to be some missing.</para>
+					<para>None of the TGA Qualifications or Units of Competency have downloaded, or there seem to
+						be some missing.</para>
 				</question>
 				<answer>
-					<para>The mechanism within onCourse that is utilised by our clients with an onCourse
-						managed webservice is also used to poll our webserver periodically for any changes to
-						the NTIS data, including customers using the free onCourse community version, to ensure
-						you have the latest version of the data (and also to save us packaging this data within
-						our application download - the first time your sever connects you will have downloaded
-						the 37,000 odd unit of competency records) </para>
-					<para>Your server makes a connection once a day to https://oncourse-replicate.ish.com.au
-						on port 443. If this port is blocked by your firewall, you won't be able to access any
-						of the NTIS data updates. Make sure you can visit this URL and that the firewall allows
-						traffic.</para>
+					<para>The mechanism within onCourse that is utilised by our clients with an onCourse managed
+						webservice is also used to poll our webserver periodically for any changes
+						to the TGA data, including customers using the free onCourse community
+						version, to ensure you have the latest version of the data (and also to save
+						us packaging this data within our application download - the first time your
+						sever connects you will have downloaded the 52,000 odd unit of competency
+						records) </para>
+					<para>Your server makes a connection once a day to https://oncourse-replicate.ish.com.au on
+						port 443. If this port is blocked by your firewall, you won't be able to
+						access any of the TGA data updates. Make sure you can visit this URL and
+						that the firewall allows traffic.</para>
 				</answer>
 			</qandaentry>
 		</qandaset>

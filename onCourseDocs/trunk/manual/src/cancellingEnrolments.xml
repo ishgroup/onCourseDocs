@@ -152,12 +152,16 @@
 		</mediaobject>
 	</section>
 	<section>
-		<title>Refunding a student</title>
-		<para>If you wish to give a contact back their money, you need to create a payment out record.
-			You can return cash to the payer, write a cheque, or if they have paid by a credit card
-			through onCourse (not via an EFTPOS terminal) you can automatically reverse the payment back
-			to their card. Manual credit card reversals can also be done through an EFTPOS terminal, but
-			you will need to contact the payer to get their card details first.</para>
+		<title>Refunding a student via Payment Out</title>
+		<para>If you wish to give a contact back their money, you need to create a payment out record. You
+			can return cash to the payer, write a cheque, or if they have paid by a credit card
+			through onCourse (not via an EFTPOS terminal) you can automatically reverse the payment
+			back to their card. Manual credit card reversals can also be done through an EFTPOS
+			terminal, but you will need to contact the payer to get their card details first. </para>
+		<tip>
+			<para>If you refund a fee via an EFTPOS terminal, you will still need to record a payment out
+				entry within onCourse, simply select payment type 'EFT'.</para>
+		</tip>
 		<example>
 			<title>How to refund a student</title>
 			<orderedlist>
@@ -173,8 +177,10 @@
 						balance. You can not refund more than the total balance.</para>
 				</listitem>
 				<listitem>
-					<para>Chose the method with which you wish to refund the contact. If you choose credit
-						card, any available transaction will be available from the list to reverse.</para>
+					<para>Chose the method with which you wish to refund the contact. If you choose credit card,
+						any available transaction will be available from the list to reverse. The
+						list of available transactions is ordered  by date with the most recent
+						transaction at the top of the list. As shown in the example below. </para>
 				</listitem>
 				<listitem>
 					<para>Save the payment out record. The contacts credit note balance will be reduced by the
@@ -182,6 +188,15 @@
 				</listitem>
 			</orderedlist>
 		</example>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/payment_out_via_credit_card.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Selecting the credit card transaction to be refunded from the drop down list</para>
+			</caption>
+		</mediaobject>
 		<section>
 			<title>A few notes on onCourse credit card reversals</title>
 			<para>onCourse does not store credit card numbers. What it does store is a transaction

@@ -85,6 +85,10 @@
 			<para>All the data in this file is collected in the onCourse general preferences window. Go to
 				File > Preferences > General. Select the AVETMISS tab and enter the contact details of your
 				business.</para>
+			<para>In Queensland, you are required to report your QLD Provider ID in place of the
+				National ID. You will need to enter this number in the 'Identifier' field prior to
+				your export. You may wish to change this field back to your National ID after
+				export, as the data from here is also used to generate your Certificates.</para>
 		</section>
 		<section>
 			<title>Training Organisation Delivery Location (NAT00020) File</title>
@@ -135,6 +139,10 @@
 				Unique client identifiers are auto assigned. You don't see these in the contact detail, but
 				you can search on them from the contact window if you later get a validation error for one
 				of your clients.</para>
+			<para>To meet the AVETMISS 7 changes, onCourse automatically splits addresses into the
+				required building name, unit name, street number and street name fields for export.
+				In the user interface, the address field remains the same - enrolling students and
+				administrative staff only need to enter the data in a single field.</para>
 		</section>
 		<section>
 			<title>Enrolment (NAT00120) File</title>
@@ -316,14 +324,15 @@
 			<para>To set a student as having completed a qualification, you need to issue a Certificate
 				for them. onCourse will create AQF compliant certificates for your students, but for the
 				purposes of lodging AVETMISS, you don't need to print or issue them. </para>
-			<para>To create a Certificate record, open the certificate window and click plus. Type the
-				name of the student and the qualification you wish to issue and choose the outcomes from the
-				student's record you wish to add to the certificate. Check the option "satisfies
-				requirements for complete qualification" and save the record. If you are exporting a NSW DET
-				export, and have set all the outcomes for an enrolment (e.g. they are no longer blank) a
-				NAT000130 file will be automatically created for you, even if you have not delivered a full
-				qualification to the student. This is because NSW DET uses the NAT00130 file for a different
-				purpose than the national standard. </para>
+			<para>To create a Certificate record, open the certificate window and click plus. Type the name
+				of the student and the qualification you wish to issue and choose the outcomes from
+				the student's record you wish to add to the certificate. Check the option "satisfies
+				requirements for complete qualification" and save the record. </para>
+			<para>If you are exporting a NSW DET export, and have set all the outcomes for an
+				enrolment (e.g. they are no longer blank) a NAT000130 file will be automatically
+				created for you, even if you have not delivered a full qualification to the student.
+				This is because NSW DET uses the NAT00130 file for a different purpose than the
+				national standard. </para>
 			<para>
 				<link xlink:href="http://www.ish.com.au/s/onCourse/doc/latest/manual/rto.html">More information
 					on creating Certificates in onCourse</link>

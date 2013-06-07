@@ -331,19 +331,27 @@
 	</section>
 	<section xml:id="MYOB">
 		<title>Exporting to MYOB</title>
-		<para> If your organisation utilizes MYOB as the key financial system, you can generate a export
+		<para> If your organisation utilizes MYOB as the key financial system, you can generate an export
 			that is specifically designed for importing data directly into MYOB. There are 2
 			different pathways within the onCourse Client to access and generate the financial data
 			export for MYOB.</para>
 		<section>
 			<title>Generating the Export via the Financial Summary Extract Menu</title>
-
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_via_Summary_Extract.png" format="png" />
-				</imageobject>
-			</mediaobject>
-			<para>The benefit of utilizing the Summary Extract path when exporting financial data, is that onCourse enables you to set the date range for the data that is to be exported. As well as remembering the date up to when the last data export was run. </para>
+			<para>The steps involved in running this export are as follows:</para>
+<orderedlist>
+	<listitem>
+		<para>Go to Financial > Summary Extracts and select MYOB Export</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_via_Summary_Extract.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Selecting MYOB Export via Summary Extract menu</para>
+			</caption>
+		</mediaobject>
+	</listitem>
+	<listitem>
+		<para>Set the 'from' and 'to' date range for the next MYOB Export</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_set_date_range.png" format="png" />
@@ -352,18 +360,65 @@
 				<para>Select date range for MYOB Export</para>
 			</caption>
 		</mediaobject>
+		<note><para>The benefit of utilizing the Summary Extract path when exporting financial data, is that onCourse enables you to set the date range for the data that is to be exported. As well as remembering the date up to when the last data export was run. </para></note>
+	</listitem>
+	<listitem>
+		<para>Click on the <guilabel>Export</guilabel>button to run the export. Note that the resulting
+						file will be generated as a text file. </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_data_output.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>Extract of MYOB Export viewed via Microsoft Excel</para>
+			</caption>
+		</mediaobject>
+	</listitem>
+</orderedlist>
+
+			
+			
+		
 		</section>
 <section>
 	<title>Generating the Export via the Transaction Window</title>
-<para></para>
-	<mediaobject>
-		<imageobject>
-			<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_Window.png" format="png" />
-		</imageobject>
-		<caption>
-			<para>Selecting MYOB Export from Import/Export dialog box</para>
-		</caption>
-	</mediaobject>	
+<para>Unlike the approach of generating the MYOB Export via the Summary Extract menu of onCourse, by
+				running the export via the Transactions window, you can define exactly which
+				transactions you wish to export to the resulting text file. The steps involved in
+				running this export via the Transactions window are as follows: </para>
+	<orderedlist>
+		<listitem>
+			<para>Filter and hilight the transaction records you wish to export within the Transaction
+						window</para>
+		</listitem>
+		<listitem>
+			<para>Go to File > Import/Export > Export Transactions to bring up the export dialog box</para>
+		</listitem>
+		<listitem>
+			<para>Select <guilabel>MYOB</guilabel> from the drop down list of export formats</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_Window.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Selecting MYOB Export from Import/Export dialog box</para>
+				</caption>
+			</mediaobject>	
+		</listitem>
+		<listitem>
+			<para>Click on the <guilabel>Export</guilabel>button to run the export. Note that the resulting
+				file will be generated as a text file. </para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_data_output.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Extract of MYOB Export viewed via Microsoft Excel</para>
+				</caption>
+			</mediaobject>
+		</listitem>
+	</orderedlist>
+	
 </section>				
 	</section>
 	<section xml:id="import">

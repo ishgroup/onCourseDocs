@@ -161,7 +161,7 @@
                     with 'Java Web Start'</emphasis></para>
             <para><emphasis role="bold">A:</emphasis>  Your computer may not have Java installed, or
                 the latest version of Java. The onCourse URL should prompt you to download the
-                latest version of Java, which you can do manually at any time from <link
+                latest version of Java, which you can do at any time from <link
                     xlink:href="http://www.java.com/en/">http://www.java.com/en/</link></para>
             <para><emphasis role="bold">Q: After going to the URL, my browser has given me a
                     security warning. What do I do?</emphasis></para>
@@ -169,6 +169,10 @@
                 security settings of your browser. If you choose to 'trust' the certificate, you
                 shouldn't see this warning again. If you don't 'trust' the certificate, you won't be
                 able to proceed with accessing the onCourse application.</para>
+            <para><emphasis role="bold">Q: Isn't Java a security risk?</emphasis></para>
+            <para><emphasis role="bold">A: </emphasis>No. Java has been around a very long time and is used
+            at large and small companies by billions of people every day. It powers more websites than just about
+            any other technology. However it has been used in the past for things called applets in your browser and this technology has had flaws which allowed malicious websites to do nasty things. onCourse is different: running the webstart version is exactly the same as running an application on your desktop directly and opens no new security holes. When you see advice about turning off Java in your browser that is related to these applets and not to the way onCourse runs or any other Java applications run.</para>
             <para><emphasis role="bold">Q: When I try to log in, the window shakes and gives me an
                     Authentication Error.</emphasis></para>
             <para><emphasis role="bold">A:</emphasis> This means your login name or password is
@@ -178,11 +182,11 @@
                     server could not be contacted".</emphasis></para>
             <para><emphasis role="bold">A: </emphasis>If it is your first time accessing onCourse,
                 this may mean that your local network settings are blocking the traffic between the
-                onCourse client and server. Check with your IT staff that SSL traffic over port 6003
+                onCourse client and server. Check with your IT staff that outbound traffic over port 6003
                 is enabled.</para>
             <para>For users who have logged in successfully before, but are now seeing this error,
                 this may mean the hosted cloud server is down for maintenance (you will have
-                received notification). Please <link
+                received notification) or that your local internet is down. Please <link
                     xlink:href="https://www.ish.com.au/about/contact">contact ish</link>.</para>
         </section>
     </section>

@@ -300,7 +300,7 @@
 			'yourTopicsHere' with an appropriate list)</para>
 		<section>
 			<title>Usage</title>
-			<programlisting>{courses tag:"/Subjects/Leisure/Arts" sort:"alphabetical" limit:"3"}</programlisting>
+			<programlisting>{courses tag:"/Subjects/Leisure/Arts" limit:"3" sort:"alphabetical" order:"asc" style:"titles"}</programlisting>
 			<variablelist>
 				<title>Parameters</title>
 				<varlistentry>
@@ -318,8 +318,8 @@
 						<optional>limit</optional>
 					</term>
 					<listitem>
-						<para>Optional. Specifies the number of the courses to display. If no limit is
-							defined, all valid entries are displayed.</para>
+						<para>The maximum amount of courses that will be shown. If no limit is defined, the default
+							setting is that all valid entries are displayed.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -327,8 +327,12 @@
 						<optional>sort</optional>
 					</term>
 					<listitem>
-						<para>[date, alphabetical, availability] Optional. Defines the sort criteria. Default
-							behaviour is alphabetical.</para>
+						<para>[alphabetical, date, availability] Optional. What fields you can use to sort the
+							courses; </para>
+						<para>alphabetical: course.name. </para>
+						<para>date: course.startDate </para>
+						<para>availability: course.availableEnrolmentPlaces </para>
+						<para>default: alphabetical</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -336,7 +340,19 @@
 						<optional>order</optional>
 					</term>
 					<listitem>
-						<para>[asc, desc] Optional. Default is descending.</para>
+						<para>[asc, desc] Optional. ascending or descending order. Default is ascending.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>
+						<optional>style</optional>
+					</term>
+					<listitem>
+						<para>[titles, details] Optional. Which predefined template will be used to show every
+							course:</para>
+						<para>titles: shows only name of course </para>
+						<para>details: shows full information about this course</para>
+						<para>default: details</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>

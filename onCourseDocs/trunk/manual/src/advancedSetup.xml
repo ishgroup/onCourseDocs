@@ -684,7 +684,7 @@
 		ssl_port – specify which port to listen on for SSL client connection. (Specify the port as 0 to disable SSL connections)
 		db – specify and URI for your database.
 		max_concurrent_users - maximum number of users who can connect at once
-		enable_client_server_compression - disable server/client compression (default is enabled)
+		client_server_compression_level - compression between client and server connection. 0 is off, 6 is default and 9 is the maximum compression setting. More compression uses more CPU at each end.
 	 </programlisting></para>
 		<para> A sample onCourse.cfg might contain:
 			<programlisting>
@@ -694,7 +694,7 @@
 		ip=192.168.0.1
 		ip=192.168.0.2
 		max_concurrent_users=10
-		enable_client_server_compression=false
+		client_server_compression_level=8
 			</programlisting></para>
 		<para>examples of URLs for internal Derby database (OS X, FreeBSD):
 			<programlisting>

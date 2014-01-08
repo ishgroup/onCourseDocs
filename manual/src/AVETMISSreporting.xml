@@ -337,10 +337,21 @@
 		</section>
 		<section>
 			<title>Qualification Completed (NAT000130) File</title>
-			<para>To set a student as having completed a qualification, you need to issue a
-				Certificate for them. onCourse will create AQF compliant certificates for your
-				students, but for the purposes of lodging AVETMISS, you don't need to print or issue
-				them. </para>
+			<para>If student has successfully completed all the outcomes of a course marked as
+				'sufficient for a full qualification', and the last outcome end date is before the
+				end date of the reporting period, a NAT000130 record will be automatically generated
+				for them. You do not need to do anything to ensure this record is created. </para>
+			<para>For students who have completed a number of short courses to build up sufficient
+				units to meet the requirements of gaining a qualification, you will need to create a
+				certificate record in onCourse for them to create the NAT00130 file record. Again,
+				the end date of their last outcome needs to be before the end date of the export for
+				the record to be included in the AVETMISS export.</para>
+			<para>i.e. If a student completes a range of unit across 2012 and 2013, with the last
+				end date of their outcome being 20/12/2013 their completion record will be recorded
+				for 2013, even if you don't get around to creating their certificate record until
+				early 2014.</para>
+			<para>onCourse will create AQF compliant certificates for your students, but for the purposes of
+				lodging AVETMISS, you don't need to print or issue them. </para>
 			<para>To create a Certificate record, open the certificate window and click plus. Type
 				the name of the student and the qualification you wish to issue and choose the
 				outcomes from the student's record you wish to add to the certificate. Check the

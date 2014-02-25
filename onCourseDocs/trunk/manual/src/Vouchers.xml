@@ -40,12 +40,33 @@
         </orderedlist>
     </example>
     <section>
-        <title>Creating a voucher product</title>
-        <para> Step by step examples and screenshots. 2 x voucher types</para>
-    </section>
+    <title>onCourse Terms and Definitions</title>
+    <variablelist>
+        <varlistentry>
+            <term>Voucher Type</term>
+            <listitem>
+                <para>A voucher is a product which can be sold and later redeemed for other
+                    purchases or enrolments. Vouchers can be redeemed for a monetary value or
+                    for a fixed number of enrolments in a set range of courses. The voucher type
+                    describes how much the voucher costs to purchase, how long it is valid for
+                    and what it can be redeemed for.</para>
+            </listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Voucher</term>
+            <listitem>
+                <para>Vouchers are the list of purchased voucher type products. Vouchers can be
+                    purchased and redeemed through Quick Enrol. This list shows who purchaed the
+                    voucher, who it is redeemable by and what the remaining value of the voucher
+                    includes. Every voucher has a unique code that must be quoted for
+                    redemption.</para>
+            </listitem>
+        </varlistentry>
+    </variablelist>
+  </section>
     <section>
         <title>Issuing a Voucher</title>
-        <para>For most cases when a user wants to by a voucher, they will nominate the price they
+        <para>For most cases when a user wants to buy a voucher, they will nominate the price they
             wish to purchase the voucher for, and that the price will also be the redemption value
             of the voucher. (Type 1) This type of voucher product will be created by default for all
             onCourse instances and be called "Gift certificate". It will only be enabled if the
@@ -74,5 +95,152 @@
                     redesigned enrolment page). </para>
             </listitem>
         </itemizedlist>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/voucher_email.png"/>
+            </imageobject>
+            <caption>
+                <para>Confirmation message after purchasing voucher online</para>
+            </caption>
+        </mediaobject>
+    </section>
+    <section>
+               <title>Voucher Type</title>
+        <section>
+                <title>General</title>
+                <para>To view, edit ot create a voucher type you can go to either the splash screen
+                    and click on Voucher type box in the Marketing tab or the onCourse menu File →
+                    Preferences  → Voucher type.<mediaobject>
+                        <imageobject>
+                            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                fileref="images/Voucher_Type_General.png"/>
+                        </imageobject>
+                        <caption>
+                            <para>View of the general tab in a new voucher type record</para>
+                        </caption>
+                    </mediaobject>
+                    <itemizedlist>
+                        <para>There are a number of fields in this tab, they are:</para>
+                        <listitem>
+                            <para>SKU - this refers to a stock-keeping unit, a unique identifier for
+                                each distinct product and service that can be purchased. You can
+                                create whatever product code you want for this voucher.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Name - allows you to name the voucher.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Liability Account - allows you to choose the liability account you
+                                want to be used.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Expiry date - this allows you to create a expiry date for the
+                            voucher for the date of purchase e.g. 365 days.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Options for redeement - you can select whether you want the
+                            voucher to be able to be redeemed for an enrolment/s, for the purchased
+                            price or for different price.</para>
+                        </listitem>
+                    </itemizedlist>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                fileref="images/Voucher_Type_General_Enrolment_In.png"/>
+                        </imageobject>
+                        <caption>
+                            <para>View of the general tab if the option for redeement is left with
+                                the default option "enrolment in"</para>
+                        </caption>
+                    </mediaobject>
+                </para>
+                <para>
+                    <itemizedlist>
+                        <para>By clicking on the + button you open up a window thats gives you three
+                            options to choose what course/s the voucher can be redeemed against,
+                            they are:</para>
+                        <listitem>
+                            <para>Course - allows you to choose a specific course that the voucher
+                                can be redeemed against</para>
+                        </listitem>
+                        <listitem>
+                            <para>All courses tagged with - allows you to choose a group of courses
+                                that have the same tag</para>
+                        </listitem>
+                        <listitem>
+                            <para>All enabled courses - allows you to use this voucher for any
+                                course available</para>
+                            <note>
+                                <para>If you want to apply a voucher to more than one specifc course
+                                    then you can use the first option "Course" one by one for each
+                                    course.</para>
+                            </note>
+                        </listitem>
+                    </itemizedlist>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                fileref="images/Voucher_Type_General_Courses.png"/>
+                        </imageobject>
+                        <caption>
+                            <para>View of the three options you can apply the voucher to.</para>
+                        </caption>
+                    </mediaobject>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                fileref="images/Voucher_Type_General_Purchase_Price.png"/>
+                        </imageobject>
+                        <caption>
+                            <para>View of the general tab if the option "purchase price" is selected
+                                from the drop down box</para>
+                        </caption>
+                    </mediaobject>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                fileref="images/Voucher_Type_General_Price.png"/>
+                        </imageobject>
+                        <caption>
+                            <para>View of the general tab if the option "price" is selected from the
+                                drop down box</para>
+                        </caption>
+                    </mediaobject>
+                </para>
+        </section>
+         <section>
+                <title>Web</title>
+             
+                <para>This tab allows you to choose if this voucher is available to be purchased, by
+                    what methods, and if you wish to include any text on your website about it.<itemizedlist>
+                        <para>There are two checkboxes on this tab, they are:</para>
+                        <listitem>
+                            <para>Can be purchased online - allows people to to buy this voucher on
+                                your website</para>
+                        </listitem>
+                        <listitem>
+                            <para>Is on sale - means this is now avaiable to be purchased</para>
+                        </listitem>
+                    </itemizedlist>
+                    <note>
+                        <para>If only the "Is on sale" checkbox is selected then the voucher can
+                            only be puchased via the phone or over the counter.</para>
+                    </note>
+                </para>
+                <para>You can also add a more indepth description that will be displayed on the
+                website (as long as both checkboxes are selected) in the Web desciption
+                field.</para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="100%" contentdepth="100%"
+                            fileref="images/Voucher_Type_Web.png"/>
+                    </imageobject>
+                    <caption>
+                        <para>View of the web tab in a new voucher type record</para>
+                    </caption>
+                </mediaobject>
+            
+        </section>
     </section>
 </chapter>

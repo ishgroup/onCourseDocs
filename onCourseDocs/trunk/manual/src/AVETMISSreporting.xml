@@ -578,24 +578,54 @@
 			</section>
 			<section>
 				<title>NSW DET</title>
-				<para>This export option is for reporting to the NSW Training Market and meets the
-					requirements of the ePayments May 2011 Data Specifications. This means you will
-					export blank spaces for the outcome where the outcome has not been set for this
+				<para>This export option is for reporting to the NSW Training Market and meets the requirements
+					of the ePayments January 2013 Data Specifications. This means you will export
+					blank spaces for the outcome where the outcome has not been set for this
 					option.</para>
-				<para>After the update to AVETMISS 6.1, a new below the line filed has been added to
-					the national standard called the Specific program identifier at position 123 in
-					the NAT00120. This field can not be exported in the NSW DET version of the
-					export as it conflicts with the location of the DET specific Booking ID. NSW DET
-					do not expect to update their exporting option to comply with the 6.1 standard,
-					as version 7 is expected to be released at the end of 2012.</para>
-				<para>There is also a NAT00130 record file that is created to indicate the student's
-					enrolment is completed. There is a record created for this file either because
-					you have created a Qualification certificate in onCourse for the student or
-					because all their outcomes from the class are set and all the outcome end dates
-					are before the end date of the export specified. If you are doing a final export
-					you must ensure you choose an end date before the day of export but after the
-					last end date of the outcomes when exporting - initial and midway exports don't
-					need the outcome start and end dates specified.</para>
+				<para>Any data reported for training delivered from 1/1/2014 will need to be
+					reported against the AVETMISS 7 standard. Only training that completed in 2013
+					can be reported against the AVETMISS 6.1 Standard.</para>
+				<para>NSW has three special NSW only 'below the line' fields that are used in
+					reporting. They are the Booking ID (NAT00120 position 143), Course Site ID
+					(NAT00120 position 153) and Training Plan developed (NAT00120 position 163). The
+					first two fields can be found in the class VET tab, with the Training Plan
+					developed field located on the enrolment general tab.</para>
+				<para>When reporting, the way your data is set up will determine if the export will
+					trigger an initial, midway or final payment.</para>
+				<para>An initial payment will be triggered the first time you lodge the data for a new student
+					and course combination. Usually you would report some or all of the units of
+					competency that the student will be completing during the course, but with no
+					outcome status.</para>
+				<para>NSW also likes to see that the start and end dates of the various units in the
+					course are not all the same i.e. they do not all start and end on the same day.
+					We recommend you use the training plan feature in the class timetable to vary
+					the start and end dates across the course duration.</para>
+				<para>A midway payment is determined when you show progress in the course. This
+					could be because you have enrolled the student in additional units of
+					competency, or because the student has achieved an outcome for some of the units
+					of competency you reported in the initial lodgement.</para>
+				<para>If you try to report after the initial, a changed status where all the units
+					have an outcome, this will trigger the midway and final payment in one
+					action.</para>
+				<para>Keep in mind that you will always get an error if you try to report a
+					student's final outcome status prior to the outcome end date. If you do have a
+					final status you wish to report, then change the outcome end date to a date
+					prior the day you want to lodge the data.</para>
+				<para>The special difference between a midway and final payment is the generation of
+					the NAT00130 (course completion) record. onCourse generates this automatically,
+					you don't need to set anything in the student's record.</para>
+				<para>The NAT00130 record file is created to indicate the student's enrolment is completed.
+					There is a record created for this file either because all their outcomes from
+					the class are set and all the outcome end dates are before the end date of the
+					export specified. If all of the outcomes have a successful status (e.g.
+					competent, RPL granted, credit transfer ect) then the NAT00130 will have a Y,
+					for a successful course completion. If any of the outcomes have an unsuccessful
+					status (e.g. withdrawn, not yet competent, did not start) then the NAT00130 will
+					output a N for non-successful completion.</para>
+				<para>If you are doing a final export you must ensure you choose an end date before
+					the day of export but after the last end date of the outcomes when exporting -
+					initial and midway exports don't need the outcome start and end dates
+					specified.</para>
 			</section>
 			<section>
 				<title>Victoria</title>
@@ -648,10 +678,19 @@
 					outcome is set as Did Not Start</para>
 			</section>
 			<section>
-				<title>Northern Territory</title>
-				<para>NT does not have any additional requirements, but they do require the below
-					the optional below the line fields to be completed and reported on. We recommend
-					using the TAS export for NT.</para>
+				<title>Northern Territory &amp; the Australian Capital Territory</title>
+				<para>NT &amp; ACT do not have any additional requirements, but they do require the below the
+					optional below the line fields to be completed and reported on. We recommend
+					using the TAS export for NT or ACT.</para>
+			</section>
+			<section>
+				<title>Western Australia</title>
+				<para>WA use a whole different standard again, called RAPT. The files you generate when you
+					choose WA RAPT are quite different to the AVETMISS files that are generated in
+					other states and territories. See the chapter <para>
+						<link xlink:href="http://www.ish.com.au/s/onCourse/doc/latest/manual/rapt.html"
+							>about RAPT</link>
+					</para> </para>
 			</section>
 		</section>
 		<section>
@@ -775,6 +814,8 @@
 				entered after enrolment by going to the Enrolment window, locating the student's
 				enrolment record and double clicking on it. On the general tab you will find these
 				fields.</para>
+			<para>In NSW, you will need to put your Training Contract ID into BOTH of these fields,
+				as NSW doesn't issue a separate Client Identifier for trainees.</para>
 			<para>If you have broken the traineeship into multiple enrolments, each with one or more
 				units of competency, you will need to enter this information into each enrolment
 				record for the student that relates to the traineeship. This information is not

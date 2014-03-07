@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"  
-	version="5.0" xml:id="processingEnrolments">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="processingEnrolments">
 	<title>Processing Enrolments</title>
 	<section>
 		<title>Terms and Definitions</title>
@@ -66,8 +65,7 @@
 			</listitem>
 			<listitem>
 				<para> You can also bring up the Quick Enrol page if you hold down the command button on your
-					keyboard and press the E button once, this is called a <emphasis role="bold"
-						>Keyboard Shortcut</emphasis>. Please note you can only issue this command
+					keyboard and press the E button once, this is called a <emphasis role="bold">Keyboard Shortcut</emphasis>. Please note you can only issue this command
 					if you are in an active window of onCourse, not any other program. </para>
 			</listitem>
 		</itemizedlist>
@@ -159,7 +157,7 @@
 			</listitem>
 			<listitem>
 				<para>If there is a third party payer you will need to add them as a contact and create a
-					realtionship to the student. This can be found at the bottom of the page under
+					relationship to the student. This can be found at the bottom of the page under
 					the General tab in the contacts record, it will say 'Above contact is X of the
 					payer'.</para>
 			</listitem>
@@ -170,21 +168,42 @@
 		</itemizedlist>
 		<section>
 			<title>How to use Quick Enrol to create an enrolment and issue an invoice</title>
-			<para>When processing an enrolment via the onCourse client, it is possible to issue an invoice if
-				the customer does not wish to pay the course fee at the point of enrolment. This is
-				done by unchecking the box/s inside the 'PAYMENTS' button .</para>
+			<para>The most important thing to remember about Quick Enrol is that all enrolments processed in
+				a single onCourse Quick Enrol process generate one invoice to a single payer. This
+				could be for one student enrolling and paying for themselves in one or more classes,
+				or another contact enrolling and paying for one or more students to enrol in one or
+				more classes. If two friends are enrolling in a class together and paying
+				separately, you would process their enrolments as two separate Quick Enrol
+				processes.</para>
+			<para>Every Quick Enrol process generates an invoice, even if there is no payment
+				involved. Sometimes, this invoice will be for $0.00, for example if there is no cost
+				to enrol in the selected class. Sometimes the invoice will be paid in full on
+				enrolment, and also be a receipt of payment. Sometimes the invoice will be partially
+				paid or not paid at all. The default setting for Quick Enrol to default payments to
+				full payment or no payment is set in the Financial Preferences window.</para>
+			<para>When processing an enrolment via the onCourse client, it is possible to issue an invoice to
+				the customer who won't be paying the course fee at the time of enrolment, even if
+				your usual preference is set to pay in full. This is done by changing the payment
+				method to 'no payment' from the default option 'credit card'.</para>
 			<orderedlist>
 				<listitem>
-					<para>Open "Quick Enrol", see above for instructions.</para>
+					<para>Open "Quick Enrol"</para>
 				</listitem>
 				<listitem>
-					<para>In the "Enter contact..." field, type in a name of the conact you are trying to enrol. If
-						the correct contact populates on the right hand window, then select them, if
-						the person you need is not in the system, you can create their profile by
+					<para>In the "Enter contact..." field, type in a name of the contact you are trying to enrol.
+						If the correct contact populates on the right hand window, then select them,
+						if the person you need is not in the system, you can create their profile by
 						clicking on the 'Select' button on the right hand side on the window next to
-						the text 'New contact'. Then by filling out the fields and selecting either
-						"Student", "Tutor" or "Company", depending on who they are (payer or student
-						etc).</para>
+						the text 'New contact' and then complete their contact detail
+						information.</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/autocomplete.png"/>
+						</imageobject>
+						<caption>
+							<para>Use the autocomplete to locate and select the student</para>
+						</caption>
+					</mediaobject>
 				</listitem>
 				<listitem>
 					<para>After the contact is selected, click on the "Enter course or item" field on the left hand
@@ -192,45 +211,42 @@
 				</listitem>
 				<listitem>
 					<para>From here input either a course code or course name, again these fields are autocomplete
-						so if you were to type e.g "Comp", the rest of the word "Computer" will come
-						up showing courses that contain that word in the title. </para>
+						so if you were to type e.g "Comp", courses that begin with those letters,
+						e.g. 'Computers for Beginners', 'Computers for Seniors' will be available to
+						select. </para>
 				</listitem>
 				<listitem>
 					<para>Once the course is located then selected, the classes will be presented to
-						you in the "Choose a class" list view, highlight the class you want,
-						remembering that the "Show finished classes" checkbox can be selected to
+						you in the "Choose a class" list view, highlight the class you want. By default, only current and future classes will be shown.</para>
+					
+						<para>The "Show finished classes" checkbox can be selected to
 						include classes that are now past their end date, e.g "Computers -
-						Beginners" is scheduled to end on 24/11/13, and the date is 25/11/13,
-						selecting "Show finished classes" ensures that "Computers - Beginners" is
-						shown in the class list view.</para>
+						Beginners ABC-123" is scheduled to end on 24/11/13, and the date is 25/11/13,
+						selecting "Show finished classes" ensures that "Computers - Beginners ACBC-123" is
+						shown in the class list view and can be selected for enrolment.</para>
 				</listitem>
 				<listitem>
-					<para>You can now add a MEMBERSHIP, VOUCHER, or PRODUCT, if applicable. This can
+					<para>You can now add a MEMBERSHIP, VOUCHER, or PRODUCT, if other purchases are being made with this enrolment. This can
 						be done by either searching for a membership number or name; voucher code;
 						or a product name, or alternatively clicking on one of the 'Show all'
 						buttons on the right hand side of the page.</para>
 				</listitem>
 				<listitem>
-					<para>If you wish to review the invoice, you can so this by clicking on the
-						'ITEMS' button (more information on this can be found in Section
-						1.3.2)</para>
+					<para>If you wish to review the invoice, you can so this by clicking on the 'ITEMS'
+						button</para>
 				</listitem>
 				<listitem>
 					<para>If you have either a voucher or promotion code you can input this into the 'Enter voucher
-						or promotion...' field, then click on the + symbol to apply. (not
-						compulsory).</para>
+						or promotion...' field, then click on the + symbol to apply</para>
 				</listitem>
 				<listitem>
-					<para>You can now review the invoice/s by clicking on the PAYMENTS button on the left hand side
-						of the page (more information on this can be found below in Section
-						1.3.3).</para>
+					<para>You can now review the invoice/s the payment will apply to by clicking on the PAYMENTS button on the left hand side
+						of the page. This only is necessary if the student has previous invoices with balances outstanding. </para>
 				</listitem>
 				<listitem>
-					<para>Next, select the Credit card button from the left hand side to arrange the payment
-						method; the payment amount; and who the payer will be (more information on
-						this can be found in Section 1.4). Please note that the payer does not have
-						to be the student, it can be any other contact in the system, including an
-						organisation.</para>
+					<para>Next, select the Credit card button from the left hand side to select the chosen payment
+						method; the payment amount; and who the payer will be. Please note that the
+						payer does not have to be the student, it can be any other contact added to the Quick Enrol process, including a company.</para>
 				</listitem>
 				<listitem>
 					<para>Finally, select save from the bottom of the window, a confirmation box will appear,
@@ -238,21 +254,76 @@
 						That's it!</para>
 				</listitem>
 			</orderedlist>
+		</section>
+		<section>
+			<title>Discounting the enrolment fee</title>
+			<itemizedlist>
+				<title>When processing an enrolment through Quick Enrol, you can discount course
+					fees by using:</title>
+				<listitem>
+					<para>Automatic discount – a discount automatically offered to people who meet pre-defined
+						criteria, e.g. seniors, people who hold a certain membership, students
+						re-enrolling within a defined time period or students enrolling in a defined
+						date range</para>
+				</listitem>
+				<listitem>
+					<para>Promotion – a special offer accessed through a one-time code, used as a
+						marketing tool.</para>
+				</listitem>
+				<listitem>
+					<para>Manual discount - a once off discount that isn't part of a standard promotion or
+						concession</para>
+				</listitem>
+			</itemizedlist>
+			<para> More about concessions and promotions can be found in <xref xlink:href="#discounts"/></para>
+			<para> If an automatic discount has been created, the student meets the requirements of the
+				discount and the class they are enrolling in has been set to allow that type of
+				discount, then the discount will automatically be applied when they enrol. </para>
+			<para>If a student is automatically eligible for more than one type of discount, the
+				higher discount will be applied.</para>
+			<para>You can also manually switch to a lower, eligible discount or override the
+				discount amount applied.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/autocomplete.png"
-					 />
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/concessions1.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>An example of the auto complete functionality in onCourse</para>
+					<para>Enrolment with an automatic discount applied for one class</para>
 				</caption>
 			</mediaobject>
 		</section>
 		<section>
-			<title>Additional information on invoices</title>
+			<title>Adding a promotional code </title>
+			<para>Promotional codes can be used by students enrolling over the web and by administration
+				staff via onCourse Quick Enrol. In both instances, the code word must be supplied
+				for the student to gain access to the discount. </para>
+			<para> When processing an enrolment, enter the code in the 'Enter voucher or
+				promotion...' field, and press the + button next to the field in Quick Enrol. This
+				will then discount the eligible classes as appropriate. </para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Prom_code.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>The Quick Enrol promotional code field with the code "Green" entered,
+						before adding it to the enrolment</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Prom_code2.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>After clicking +, the name of the discount 'From tree to towel rack' has
+						been applied to all eligible enrolments</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Adding information to invoices</title>
 			<para>To review the tax invoice, you must click on the ITEMS button on the left hand side of the
-				page. There are also a number of additional features that you can do in this
-				section.</para>
+				page. There are also a number of additional functions that you can do in this
+				section of Quick Enrol</para>
 			<para>
 				<orderedlist>
 					<listitem>
@@ -261,7 +332,7 @@
 							ITEMS (TAX INVOICE) text.</para>
 					</listitem>
 					<listitem>
-						<para>If you wish to create a reference for the invoice, this can be
+						<para>If you wish to create a reference for the invoice, such as a purchase order, this can be
 							recorded in the 'Customer reference' field.</para>
 					</listitem>
 					<listitem>
@@ -269,43 +340,30 @@
 							date in the calender in the 'Due date' field.</para>
 					</listitem>
 					<listitem>
-						<para>To add any addtional charges you can do this by entering what they
-							will be in the 'Addtional charge...' field; then enter what fee this
-							will incur; select what account; chose whether or not GST is added; then
-							click on the "Add' button to include this in the invoice.</para>
+						<para>Any enrolments or products you have already added to this Quick Enrol
+							will be itemised automatically on the invoice, with any discount or tax
+							applied.</para>
 					</listitem>
 					<listitem>
-						<para>Any additional notes can be added in the 'Public notes' field at the bottom of the
-							page.</para>
+						<para>To add any additional charges you can do this by entering what they will be in the
+							'Additional charge...' field; then enter what fee this will incur;
+							select what account; chose whether or not GST is added; then click on
+							the "Add' button to include this in the invoice.</para>
+					</listitem>
+					<listitem>
+						<para>Any additional notes can be added in the 'Public notes' field at the bottom of the page.
+							Text in the public notes field will print on the invoice.</para>
 					</listitem>
 				</orderedlist>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/Tax_invoice_image.png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Tax_invoice_image.png"/>
 					</imageobject>
 					<caption>
 						<para>An example of the tax invoice window in onCourse</para>
 					</caption>
 				</mediaobject>
 			</para>
-		</section>
-		<section>
-			<title>How to review a contacts invoices</title>
-			<para>By clicking on the the "PAYMENTS' button you and review what invoice/s are connected the
-				chosen contact. If the contact still owes money additional invoices will appear in
-				the list on the right hand side of the window. You can select or unselect any of the
-				invoices the contact want to debit from, at this time, by clicking on the related
-				check box. By default any invoices that have a due date in the future won't be supressed.<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/Reviewing_invoice_image.png"/>
-					</imageobject>
-					<caption>
-						<para>An example of the window you see when you wish to review a contacts
-							invoice/s</para>
-					</caption>
-				</mediaobject></para>
 		</section>
 		<section>
 			<title>Adding a 3rd party payer</title>
@@ -317,21 +375,35 @@
 						<para>Add the student to the enrolment as per the usual process. </para>
 					</listitem>
 					<listitem>
-						<para>Next, add the payer to the enrolment, by adding them also as a contact in the same way
-							as the student. You do not need to enrol them in any classes, however,
-							if they are a friend or family member they may be both enrolling and
-							paying. </para>
-					</listitem>
-					<listitem>
-						<para>You can create a relationship between contacts at this point, e.g. contact 2 is the
-							employer of contact 1, or you can use existing relationships to easily
-							find and add contacts by clicking on the drop down arrow next to the
-							Enter contact... field.</para>
+						<para>If the third party is already related to the student you have added, you can find them
+							quickly by clicking on the down arrow next to the 'Enter contact...'
+							field and selecting them.</para>
 						<para>
 							<mediaobject>
 								<imageobject>
-									<imagedata scalefit="1" width="100%" contentdepth="100%"
-										fileref="images/3rd_party_payer.png" />
+									<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/QE_related_contact.png"/>
+								</imageobject>
+								<caption>
+									<para>There are two contacts already added to this Quick Enrol. From the related contacts list I can select any other contacts already related to either of these contacts.</para>
+								</caption>
+							</mediaobject>
+						</para>
+					</listitem>
+					<listitem>
+						<para>If the contact is not currently related to the student, to add the payer to the
+							enrolment, add them as a contact in the same way as you added the
+							student to Quick Enrol. You do not need to enrol them in any classes,
+							however, if they are a friend or family member they may be both
+							enrolling and paying. </para>
+					</listitem>
+					<listitem>
+						<para>You can create a relationship between contacts at this point, e.g. contact 1 (Jenny
+							Smith) is the staff member of contact 2 (Computer Trainers of Hobart) by
+							scrolling to the bottom of the student's general tab.</para>
+						<para>
+							<mediaobject>
+								<imageobject>
+									<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/3rd_party_payer.png"/>
 								</imageobject>
 								<caption>
 									<para>The relationship option, click "select" to choose a type of relationship
@@ -357,63 +429,163 @@
 			</para>
 		</section>
 		<section>
+			<title>Enrolling multiple students in multiple classes</title>
+			<para>Quick enrol can be used to enrol many students in many classes, provided they are all being paid for by a single payer.</para>
+			<para>In this example, two students from the same company are each enrolling in two classes. Both students are attending one class together, and then they are each attending another, different class.</para>
+			<orderedlist>
+				<listitem><para>Add the students and their company to Quick Enrol</para></listitem>
+				<listitem><para>Select the first class that the students are both attending. You will note by default both students are ticked as attending this class.</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/QE_multiple_class.png"/>
+						</imageobject>
+						<caption>
+							<para>Both students are selected to attend this class</para>
+						</caption>
+					</mediaobject></listitem>
+			</orderedlist>
+			<orderedlist>
+				<listitem><para>Select the second class one of the students is going to attend. Unselect the student who is
+						not attending. Note that on the summary panels on the left, it shows that
+						Jenny Smith is attending two classes, while Kieran Smith is only attending
+						one, and in the Items list summary, two students are attending Accounting
+						with MYOB and only one is attending Computers Beginners.</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/QE_second_class.png"/>
+						</imageobject>
+						<caption>
+							<para>Only Jenny Smith is selected to attend this class.</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+				<listitem><para>Repeat this process, selecting the second choice of class for the other student.</para></listitem>
+				<listitem><para>Click on the ITEMS button to show the invoice summary, and change the payer from the first student to the company. The invoice summary shows four lines, with two enrolments for each student.</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/QE_invoice_summary.png"/>
+						</imageobject>
+						<caption>
+							<para>The invoice that will be generated for the company, based on this Quick Enrol process.</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+				<listitem><para>Click on the 'credit card' default payment selection, and complete the payment process as requested by the company e.g. no payment for an invoice, or take a payment now</para> </listitem>
+				<listitem><para>Save and complete the enrolment. The tax invoice will be sent to the company, and two enrolment confirmations will be sent to each of the students. </para></listitem>
+			</orderedlist>
+		</section>
+		<section>
 			<title>Enrolling a student in credit or debt</title>
-			<para>To enrol a student in credit or debt basically means that the student you are about to
-				enrol owes your organisation money through unpaid or partially paid fees, or your
-				organisation owes this student money through the student leaving a course early and thus
-				being able to retrieve some funds. To achieve one of these you would need to make sure the
-				following:</para>
+			<para>To enrol a student in credit or debt basically means that the student (when the student is
+				the payer) you are about to enrol owes your organisation money through unpaid or
+				partially paid fees, or your organisation owes this student money via an onCourse
+				credit note, perhaps because the student cancelled an enrolment in a prior class. To
+				achieve one of these you would need to make sure the following:</para>
 			<orderedlist>
 				<listitem>
 					<para>The student must have been previously enrolled in a class.</para>
 				</listitem>
 				<listitem>
-					<para>The student must have accrued either credit or debit depending on their actions
-						during enrolment.</para>
+					<para>The student must have accrued either credit or debit depending on their previous
+						engagements with your organisation.</para>
 				</listitem>
 				<listitem>
-					<para>Once trying to enrol the student, you will notice the amount either in "Previous owing"
-						or "Balance outstanding". If the student has credit to their name, then the
-						balance outstanding will be less then that of the amount the class actually
-						costs.</para>
+					<para>Once trying to enrol the student, you will notice the amount either in
+						"Previous owing" or "Balance outstanding". </para>
+				</listitem>
+				<listitem>
+					<para>If the student has credit to their name, then the balance outstanding will
+						be less than cost of the enrolment. The student may use all or some of their
+						credit during this enrolment. If the student has insufficient credit
+						available to cover the cost of this enrolment, they can pay the balance
+						outstanding as per a standard enrolment.</para>
+				</listitem>
+				<listitem>
+					<para>If the student has a debt, and your financial preferences are to pay the
+						enrolment in full, then the default payment amount will be the total they
+						owe. As per the previous section 'How to review a contact's invoices', you
+						can choose which, if any, of the outstanding invoices you wish to pay
+						now.</para>
+				</listitem>
+				<listitem>
+					<para>Keep in mind the outstanding balance in any Quick Enrol will be the
+						balance of the payer's account. For many enrolments, the payer and student
+						are the same person. However, if the payer is another person or company,
+						their credit can be used to pay for another student's enrolment. </para>
 				</listitem>
 			</orderedlist>
 		</section>
 	</section>
 	<section>
-		<title>Payment</title>
+		<title>Quick Enrol payment options</title>
 		<para>By default the first contact is nominated as the payer. If you wish to switch this to
 			another contact, click on the payment button on the left and change the name of the
 			payer in the field provided. You can also change who the payer is by clicking on the
-			ITEMS button on the left side of the page (as mentioned in Section 1.3.2). As always,
-			you can also choose the payment option from here.</para>
+			ITEMS button on the left side of the page.</para>
+		<para>If a third party, such as an employer or agency are paying the fee, and if the payer has any amount outstanding, that information
+			will be added to the total fee. You can choose to pay the full amount owing, zero, or a
+			portion of the amount owing. </para>
+		<para>If a voucher is being used to pay for an enrolment, you need to add the voucher before choosing how to pay any balance outstanding by an alternate method.</para>
+		<para>If your financial preferences are set to pay in full,  but you are taking a partial payment
+			now, you can edit the amount the contact wants to pay at this time by clicking on the
+			pen icon, changing to edit mode, and change the amount in the field.</para> <para>If you click the
+			pen icon a second time, the payment amount will default back to the full amount payable.
+			In the image below, you can see payment amount is in default full payment amount, as the
+			value is slightly greyed out. When you are in edit mode, the text is in black and you can type into this field.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/QE_payment_options.png" />
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/QE_payment_options.png"/>
 			</imageobject>
 			<caption>
 				<para>Payment options available via Quick Enrol</para>
 			</caption>
 		</mediaobject>
-		<para>If a third party, such as an employer or agency are paying the fee, add them as a contact
-			to the enrolment window as per the instructions above and set them as a payer. Select your
-			payment method and payment amount. If the payer has any amount outstanding, that information
-			will be added to the total fee. You can choose to pay the full amount owing, zero, or a
-			portion of the amount owing. </para>
-		<para>If the students are using a voucher or promotional code in their enrolment, enter it in
-			Enter voucher or promotion... field. This discount will automatically be applied to all
-			the eligible enrolments in this Quick Enrol window. </para>
-		<para>If you select credit card, the details will be validated as you enter the information. The
-			enrolment save process will not complete until the bank validates the card
-			number.</para>
-		<para>You can also edit the amount the contact wants to pay at this time by clicking on the
-			pen icon and changing the amount in the field.</para>
+		<para>By default, the payment type will be set to credit card. You can change this to
+			another payment type of your choice (or no payment, if the student is not paying right
+			now). Anything you record as a payment at this point should only be a payment you have
+			received right now - this is not the place to record the way the student is intending to
+			pay at some point in the future.</para>
+		<para>If you do not have a merchant account linked to your onCourse installation, selecting
+			credit card will presume you have processed the credit card elsewhere and already
+			verified it was successful e.g. through your own EFTPOS terminal or other payment
+			gateway service.</para>
+		<para>If you do have a merchant account linked to onCourse and you select credit card, a browser
+			window will open and the details will be validated as you enter the information. The
+			enrolment save process will not complete until the bank validates the card number (see
+			below for more details on how this works).</para>
+		<section>
+			<title>How to review a contacts invoices before processing a payment</title>
+			<para>By clicking on the "PAYMENTS' button you can review any other unpaid invoice(s) that are connected
+				the Quick Enrol invoice payer. The invoice being created as part of this Quick Enrol process is labelled 'This Invoice'. You can
+				select or unselect any of the invoices the contact wants to make a payment against
+				at this time, by clicking on the related check box. By default any invoices that
+				have a due date in the future will be suppressed.<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Reviewing_invoice_image.png"/>
+					</imageobject>
+					<caption>
+						<para>An example of the window you see when you wish to review a contacts
+							invoice(s)</para>
+					</caption>
+				</mediaobject></para>
+		</section>
+		<section>
+			<title>Using a voucher for payment</title>
+			<para>If the student or payer has a Gift Voucher or a Package Voucher they wish to redeem for
+				this enrolment, then you need to record these details first.</para>
+			<para>Enter the voucher code in the 'Enter voucher or
+				promotion...' field. The balance available on the voucher will automatically be applied
+				to any of the eligible enrolments in this Quick Enrol window. </para>
+			<para>You can then proceed to take payment for any outstanding balance via an alternate method such as cash or credit card.</para>
+		</section>
 		<section>
 			<title>Recording a cash payment</title>
 			<para>To record a cash payment simply select 'cash' from the payment type drop down menu, once
 				you have confirmed the payment amount is correct, just click save to complete the
 				enrolment.</para>
+			<para>Any cash payments you make will be linked to your user location for your banking
+				process. These cash payments will be need to be reconciled when you run 'Deposit
+				banking' from your location. </para>
 		</section>
 		<section>
 			<title>Recording a cheque payment</title>
@@ -431,12 +603,13 @@
 				<listitem>
 					<para>Once you have confirmed the payment amount matches the cheque amount, just click save to
 						complete the enrolment</para>
+					<para>Like cash, cheque payments are linked to your user location for
+						banking.</para>
 				</listitem>
 			</orderedlist>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/QE_cheque_payments.png" />
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/QE_cheque_payments.png"/>
 				</imageobject>
 				<caption>
 					<para>Cheque payment required fields within Quick Enrol</para>
@@ -459,14 +632,14 @@
 				</listitem>
 			</orderedlist>
 		</section>
+	</section>
 		<section>
-			<title>Processing a credit card payment using Quick Enrol</title>
-			<para>onCourse now has a new user interface for processing credit card payments via the
-				onCourse client.</para>
+			<title>Processing a credit card payment in Quick Enrol</title>
+			<para>onCourse processes credit card payments via a secure web browser and verifies the credit
+				card details in real time with the bank.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/QE_credit_card_payment_window.png" />
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/QE_credit_card_payment_window.png"/>
 				</imageobject>
 				<caption>
 					<para>Secure online payment window to process credit card payments</para>
@@ -507,8 +680,7 @@
 			</orderedlist>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/Successful_CC_Payment_Message.png" />
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Successful_CC_Payment_Message.png"/>
 				</imageobject>
 				<caption>
 					<para>Secure payment browser window updates once transaction is successful</para>
@@ -516,11 +688,10 @@
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/QE_Successful_CC_Payment_Message.png" />
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/QE_Successful_CC_Payment_Message.png"/>
 				</imageobject>
 				<caption>
-					<para>Quick Enrol window updates with the folloing message once the payment has been
+					<para>Quick Enrol window updates with the following message once the payment has been
 						approved</para>
 				</caption>
 			</mediaobject>
@@ -532,13 +703,8 @@
 					to time out before re-attempting the process. Timing out of a failed transaction
 					ordinarily takes approximately 20 minutes.</para>
 			</note>
-			
-		</section>
 		<section>
 			<title>Managing cancelled and failed credit card transactions</title>
-			<para>As the credit card transaction is now managed within a separate and secure browser window,
-				the process by which onCourse manages cancelled and unsuccessful transactions has
-				also been updated</para>
 			<para>This section outlines how you manage the cancellation process and how onCourse
 				reconciles those cancelled transactions</para>
 			<section>
@@ -573,8 +739,7 @@
 				</tip>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/Cancelled_CC_Payment_Message.png" />
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Cancelled_CC_Payment_Message.png"/>
 					</imageobject>
 					<caption>
 						<para>Secure payment browser window updates once transaction has been cancelled</para>
@@ -582,8 +747,7 @@
 				</mediaobject>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/QE_Cancelled_CC_Payment_Message.png" />
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/QE_Cancelled_CC_Payment_Message.png"/>
 					</imageobject>
 					<caption>
 						<para>Quick Enrol window displays this message to notify the user of a cancellation and that
@@ -608,8 +772,7 @@
 						debtor will be kept, owing you money for later payment</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/Payment_Window_Abandon_Keep_Invoice.png" />
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Payment_Window_Abandon_Keep_Invoice.png"/>
 						</imageobject>
 						<caption>
 							<para>Option 1: Abandon the Transaction - Keep the Invoice</para>
@@ -622,8 +785,7 @@
 						the invoice.</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/Payment_Window_Abandon_Reverse_Invoice.png" />
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Payment_Window_Abandon_Reverse_Invoice.png"/>
 						</imageobject>
 						<caption>
 							<para>Option 2: Abandon the Transaction - Reverse the Invoice</para>
@@ -637,8 +799,7 @@
 						different card number to complete the transaction. </para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/Payment_Window_Try_Another_Card.png" />
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Payment_Window_Try_Another_Card.png"/>
 						</imageobject>
 						<caption>
 							<para>Option 3: Try another card</para>
@@ -647,12 +808,138 @@
 				</section>
 			</section>
 		</section>
+		</section>
 		<section>
-			<title>What do you do if you have recorded a payment (income) without any payment actually
+			<title>Processing payments outside of Quick Enrol</title>
+		<para>If an invoice is unpaid at the time of enrolment, or partially paid, at a later date
+			you will need to collect the rest of the money owed to you. </para>
+		<para>Until the balance of the invoice is paid, the payer will be recorded in the system as
+			a debtor, and you can find them quickly in the invoice window.</para>
+		<para>When a payment is made, you need to go to the Payment In window to record this, and
+			reduce the balance of the debtors account.</para>
+			<section>
+				<title>Processing a Payment In</title>
+				<example>
+					<title>How to process a payment in</title>
+					<para>Payments In can be accessed from the splash screen or from the <emphasis role="bold">Financial</emphasis> menu tab the top of your screen. To process a Payment In, follow
+						these steps (assuming student has debt with you):</para>
+					<orderedlist>
+						<listitem>
+							<para>Go the Payment In page either through the onCourse home screen Accounts > Payment In,
+							or by selecting "Financial" from the top menu, then "Payment In"</para>
+						</listitem>
+						<listitem>
+							<para>From here click on the + (Add) symbol in the top right hand side of the
+								window.</para>
+						</listitem>
+						<listitem>
+							<para>Type in the payer name in the "Payment from" field, remembering the field has
+							autocomplete functionality. Only debtors who have a balance outstanding
+							will be located in this field.</para>
+						</listitem>
+					<listitem>
+						<para>If the debtor has more than one invoice with a balance outstanding, by
+							default the payment will apply to the oldest invoice(s). The invoice(s)
+							this payment is to apply to are ticked in the list. You can change the
+							choice of invoice(s) as required.</para>
+					</listitem>
+						<listitem>
+							<para>Select payment method and make sure all other details are in order before clicking the
+							"save" button. You may take a full or partial payment towards their
+							balance outstanding.</para>
+						</listitem>
+						<listitem>
+							<para>After you complete this a email will be sent to the payer with the payment details
+								and the payer record will appear in the list view of "Payment In".</para>
+						</listitem>
+					</orderedlist>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Payment_In.png" format="png"/>
+						</imageobject>
+						<caption>
+							<para>A payment in for a debtor with multiple invoices with balances outstanding</para>
+						</caption>
+					</mediaobject>
+				</example>
+			</section>
+	</section>
+	<section>
+		<title>Tax invoices and enrolment confirmations</title>
+		<para>At the end of the Quick Enrol process you can send email and/or printed tax invoices
+			and enrolment confirmations.</para>
+		<para>If the student(s) have provided email addresses, this option will be selected by default,
+			and printing not selected. Select for each student if you would like this information
+			emailed and/or mailed. </para>
+		<para>The enrolment confirmation goes to each student who has enrolled in a class. The tax
+			invoice only goes to the payer. For example, if two friends were attending a class
+			together, paid for by one of them as a gift to the other, only the payer would receive
+			information about the fees charged. The person receiving the enrolment as a gift would
+			simply receive an enrolment confirmation with no information regarding the cost. </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/QE_send_notifications.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Selecting an enrolment confirmation to send again by email</para>
+			</caption>
+		</mediaobject>
+		<section>
+			<title>Resending invoices or enrolment confirmations</title>
+		<para>Tax invoices and enrolment confirmations can also be re-emailed or re-printed after the
+			enrolment process has been completed.</para>
+			<para>To re-print an invoice, go to the invoice window and located the invoice in the list.
+				Select File > Print > and choose 'Invoice' to reprint the report. Follow the same
+				process in the enrolment window, selecting the report 'Enrolment confirmation' to
+				reprint it.</para>
+		<para>To resend an enrolment confirmation by email, open up the 'Enrolment' window and locate the enrolment
+				in the list. From the cogwheel, select the option 'Resend enrolment
+				confirmation'.</para>
+			<para>Follow the same process in the invoice window to resend an invoice by
+				email.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/resend_email_conf.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Selecting an enrolment confirmation to send again by email</para>
+				</caption>
+			</mediaobject>
+		</section>
+	</section>
+	<section>
+		<title>Quick Enrol FAQ</title>
+		<para>If you have a question about Quick Enrol that is not answered by this chapter, please feel
+			free to post a question in our forum or lodge an onCourse support request.</para>
+		<section>
+			<title>How do I manage an overpayment made by a student? </title>
+			<para>onCourse does not allow overpayments of invoices. This is a deliberate design function
+				to ensure data entry errors are not made. If a student presents a cheque made out for the
+				wrong amount, so you can bank and process the cheque you can do the following:</para>
+			<orderedlist>
+				<listitem>
+					<para>Create the enrolment as usual in Quick Enrol</para>
+				</listitem>
+				<listitem>
+					<para>Add an 'other charge' to the enrolment, with a line item title like
+						'overpayment'</para>
+				</listitem>
+				<listitem>
+					<para>Process the payment in Quick Enrol with the total balance of the cheque that has
+						been presented.</para>
+				</listitem>
+				<listitem>
+					<para> Go to Invoices and create a manual credit note for the person who made an
+						overpayment. This credit can then be used towards other enrolments or refunded. </para>
+				</listitem>
+			</orderedlist>
+		</section>
+		<section>
+			<title>What do I do if I have recorded a payment (money) without any payment actually
 				being made?</title>
-			<para>If for example a student has not actually given any details or handed over cash to you,
-				but someone from admin has recorded this in onCourse as payed, you will need to follow these
-				steps to resolve it:</para>
+			<para>If for example a student has not actually given any details or handed over cash to you, but
+				someone from admin has recorded this in onCourse as paid, you will need to follow
+				these steps to resolve it:</para>
 			<orderedlist>
 				<listitem>
 					<para>Create a credit note for the student for the amount incorrectly recorded as paid
@@ -675,304 +962,37 @@
 				method. </para>
 		</section>
 		<section>
-			<title>How do I charge a cancellation fee after I have created the credit note for the full
-				amount paid? </title>
-			<para>The credit note and outstanding balance on an invoice will cancel each other out. If you
-				try typing the payers name into quick enrol, you should find that there will be a total
-				balance of zero, also, on the printed Debtors report, there will be a balance of zero, so
-				this will not affect any future enrolments you make.</para>
-			<para>An alternative option to creating an 'other charge' in quick enrol, is to click on the +
-				button in the top hand corner of the invoice list view to create a manual invoice (or in
-				this case, a credit note), but either way this produces the same result. </para>
-		</section>
-		<section>
 			<title>How do I change part of an enrolment fee to a business, and part to a student? </title>
 			<para>The best way to charge part of an enrolment fee to someone and another part to someone
-				else would be to follow these steps, we will use an example a student who has paid half of
+				else would be to follow these steps. We will use an example of a $100 enrolment where a student has paid half of
 				an enrolment and the other half has been paid for by their job network agency:</para>
-			<itemizedlist>
+			<orderedlist>
 				<listitem>
-					<para>Create a credit note for the student for 50% of the class fee. This will now drop
-						their balance outstanding down to 50% (or $0 if they have already paid their 50%)</para>
+					<para>Create a credit note for the student for $50 (half of the class fee). This will now drop
+						their balance outstanding down to $50 (or $0 if they have already paid their half)</para>
 				</listitem>
 				<listitem>
-					<para>Create a manual invoice for the job network agency using the method described
-						above.</para>
+					<para>Create a manual invoice for the job network agency in the invoice window for the
+						remaining $50.</para>
 				</listitem>
 				<listitem>
 					<para>Process the payment in for Job network invoice when they pay it. </para>
 				</listitem>
-			</itemizedlist>
-			<para>For an invoice, you can not record some of the payment coming from a person other than
-				the payer (in this case the student). In the future you will also need to do this manually,
-				so two invoices are issued, each for half the value of the enrolment fee. You might do this
-				by giving the student a 50% discount on enrolment (and then issuing a manual invoice to the
-				job network) or by doing the method outlined above and creating the credit note for the
-				student post enrolment. </para>
-		</section>
-	</section>
-	<section>
-		<title>Tax invoices and enrolment confirmations</title>
-		<para>If the student(s) have provided email addresses, you can choose to send this information
-			now. Otherwise, it can be printed at a later date. Select for each student if you would like
-			this information emailed and/or mailed. </para>
-		<para>The enrolment confirmation goes to each student who has enrolled in a class. The tax
-			invoice only goes to the payer. For example, if two friends were attending a class together,
-			paid for by one of them as a gift to the other, only the payer would receive information about
-			the fees charged. The person receiving the enrolment as a gift would simply receive an
-			enrolment confirmation with no information regarding the cost. </para>
-		<para>Press save to process, and save the enrolment. The completed enrolment will be visible as
-			‘Active' in the Enrolment window. If the save button is greyed out, it means you have not
-			entered all the required information. Look for the yellow Attention signs and pink fields to
-			know where the error is coming from, also you can hover over the yellow attention signs for a
-			brief explanation as to what may be causing the error.</para>
-		<section>
-		<title>Concessions</title>
-		<itemizedlist>
-			<title>When processing an enrolment through Quick Enrol, you can discount course fees by
-				using:</title>
-			<listitem>
-				<para>Concession – a standard discount automatically offered to a group of people, e.g.
-					seniors, on a range of courses.</para>
-			</listitem>
-			<listitem>
-				<para>Promotion – a special offer accessed through a one-time code, used as a marketing
-					tool.</para>
-			</listitem>
-			<listitem>
-				<para>Manual discount or surcharge – can be used to provide bulk discounts or to pay for
-					additional services, such as phone enrolment booking fee. </para>
-			</listitem>
-		</itemizedlist>
-		<para> More about concessions and promotions can be found in <xref xlink:href="#discounts"
-			 /></para>
-		<para> If a concession type has been set, and a student meets the requirements of the
-			concession, such as holding a particular type of card, living in a certain area,or being a
-			certain age, and the class they are enrolling in has been set to accept that concession type
-			as a discount, then the discount will automatically be applied when they enrol. </para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/concessions1.png"
-					format="png" />
-			</imageobject>
-			<caption>
-				<para>Enrolment with a concession applied for one class</para>
-			</caption>
-		</mediaobject>
+			</orderedlist>
+			<para>For an invoice, you can not record some of the payment coming from a person other than the
+				payer (in this case the student). The reason you would use this method is so that if
+				the student's enrolment is cancelled for some reason, they will only be entitled to
+				a $50 refund, rather than the full $100. </para>
 		</section>
 		<section>
-			<title>Promotional codes </title>
-			<para>Promotional codes can be used by students enrolling over the web and by administration
-				staff through onCourse Quick Enrol. In both instances, the code word must be supplied for
-				the student to gain access to the discount. </para>
-			<para> When processing an enrolment, enter the code in the field Promotional code in Quick
-				Enrol. This will then discount the eligible classes as appropriate. </para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Prom_code.png"
-						format="png" />
-				</imageobject>
-				<caption>
-					<para>The Quick Enrol promotional code field (located to the right of the screen) </para>
-				</caption>
-			</mediaobject>
-		</section>
-	</section>
-	<section>
-		<title>3rd Party Payments</title>
-		<para>3rd Party Payments Enrolments can be paid for by the person enrolling, by other students,
-			by the student's parent or spouse, by their employer or another agency, or anyone else you can
-			think of. </para>
-		<para> If someone other than the student enrolling is paying for the enrolment, it is called a
-			third party payment. </para>
-		<para> Any person paying for an enrolment on behalf of another person need to have a contact
-			record set up within your onCourse database. This is because the invoice is linked to, and
-			sent to, the payer. </para>
-		<para> You can set up the payer contact record prior to enrolling the student, or at the time of
-			enrolment, the same way you would <uri>set up any other contact </uri>within onCourse. </para>
-		<example>
-			<title>How to enrol a student with a 3rd party payer</title>
-			<para>In the example below, the student's employer is paying for the enrolment.</para>
-			<orderedlist>
-				<listitem>
-					<para>Both the student, Peter Jones, and the payer, NSW Department of Commerce are added
-						to the enrolment. </para>
-				</listitem>
-				<listitem>
-					<para>Mark is enrolled in the class, MYOB (V16) Accounting Essentials.</para>
-				</listitem>
-				<listitem>
-					<para>NSW Department of Commerce is selected as the payer.</para>
-				</listitem>
-				<listitem>
-					<para>No payment is made at this time. An invoice will the full balance outstanding is
-						emailed to NSW Department of Commerce. Peter is emailed his enrolment confirmation.
-					</para>
-				</listitem>
-			</orderedlist>
-		</example>
-		<example>
-			<title>How to add a company as a contact </title>
-			<orderedlist>
-				<listitem>
-					<para>Go to onCourse Customer Service tab > choose 'Contact' button > hit the + button in
-						the top right-hand corner </para>
-				</listitem>
-				<listitem>
-					<para>Hit the 'Company' button in the top right-hand corner > complete the contact details
-						for the company that you will be invoicing > then click 'Save' </para>
-				</listitem>
-			</orderedlist>
-		</example>
-		<example>
-			<title>How to enrol a student and Invoice a Company for the enrolment</title>
-			<orderedlist>
-				<listitem>
-					<para>Go to onCourse Customer Service tab > choose 'Quick Enrol' button</para>
-				</listitem>
-				<listitem>
-					<para>Enter the Student Name in the 'Name' field (when you hit tab, all the previously
-						entered info should auto-populate) </para>
-				</listitem>
-				<listitem>
-					<para>Click 'Add' in the top left-hand corner > highlight the 'Enter Contact' field that
-						appears in the left-hand frame </para>
-				</listitem>
-				<listitem>
-					<para>Then click the 'Company' button that appears in the top right-hand corner > in the
-						'Name' field type the name of the company you wish to invoice </para>
-				</listitem>
-				<listitem>
-					<para>Highlight the 'Enter Enrolment' option in the left-hand frame of the Quick Enrol
-						process > then type the Course Name or Course Code </para>
-				</listitem>
-				<listitem>
-					<para>Highlight the 'Payment: None' option in the left-hand frame of the Quick Enrol
-						process > then click on the drop-down menu in the 'Payer' field and select the company
-						you wish to invoice </para>
-				</listitem>
-				<listitem>
-					<para>Make the payment amount $0.00 (this will automatically generate an Invoice to the
-						Payer) > then click 'Save' </para>
-				</listitem>
-				<listitem>
-					<para>You will be prompted to Print and Email an Invoice and Enrolment Confirmation,
-						choose Print for the Invoice > then choose 'Save PDF' if you want to email the Invoice
-						to the company or, choose 'Print' if you want to post the invoice to the company </para>
-				</listitem>
-			</orderedlist>
-		</example>
-		<example>
-			<title>How to refund a company for payment marked as received, but should have been invoiced </title>
-			<orderedlist>
-				<listitem>
-					<para>Go to onCourse Accounts tab > choose 'Payment Out' button > hit the + button in the
-						top right-hand corner </para>
-				</listitem>
-				<listitem>
-					<para>Type the company name in the 'Payment to' field > the amount paid should be for the
-						amount that was marked as received > add a Private note e.g. billing correction > then
-						click 'Save' </para>
-				</listitem>
-			</orderedlist>
-		</example>
-		<example>
-			<title>How to manage an overpayment by a student </title>
-			<para>onCourse does not allow overpayments of invoices. This is a deliberate design function
-				to ensure data entry errors are not made. If a student presents a cheque made out for the
-				wrong amount, so you can bank and process the cheque you can do the following:</para>
-			<orderedlist>
-				<listitem>
-					<para>Create the enrolment as usual in Quick Enrol</para>
-				</listitem>
-				<listitem>
-					<para>Add an 'other charge' to the enrolment, with a line item title like
-						'overpayment'</para>
-				</listitem>
-				<listitem>
-					<para>Process the payment in Quick Enrol with the total balance of the cheque that has
-						been presented.</para>
-				</listitem>
-				<listitem>
-					<para> Go to Invoices and create a manual credit note for the person who made an
-						overpayment. This credit can then be used towards other enrolments or refunded. </para>
-				</listitem>
-			</orderedlist>
-		</example>
-	</section>
-	<section>
-		<title>Payments In</title>
-		<para>Payment In, is defined as receiving money into your company, a type of income. In regards
-			to onCourse, it is a tool used to take money owing from a student. Payment Out, as you may
-			expect means the opposite, to give money to someone that is owed money.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Payment_In.png"
-					format="png" />
-			</imageobject>
-			<caption>
-				<para>Creating a payment in</para>
-			</caption>
-		</mediaobject>
-		<section>
-			<title>Processing a Payment In</title>
-			<example>
-				<title>How to process a payment in</title>
-				<para>Payments In can be accessed from the splash screen or from the <emphasis role="bold"
-						>Financial</emphasis> menu tab the top of your screen. To process a Payment In, follow
-					these steps (assuming student has debt with you):</para>
-				<orderedlist>
-					<listitem>
-						<para>Go the Payment In page either through the onCourse home screen Accounts>>Payment
-							In, or by selecting "Financial" from the top menu, then "Payment In"</para>
-					</listitem>
-					<listitem>
-						<para>From here click on the + (Add) symbol in the top right hand side of the
-							window.</para>
-					</listitem>
-					<listitem>
-						<para>Type in the payer name in the "Payment from" feld, remembering the field has
-							autocomplete functionality. </para>
-					</listitem>
-					<listitem>
-						<para>Select payment method and make sure all other details are in order before clicking
-							the "save" button.</para>
-					</listitem>
-					<listitem>
-						<para>After you complete this a email will be sent to the payer with the payment details
-							and the payer record will appear in the list view of "Payment In".</para>
-					</listitem>
-				</orderedlist>
-			</example>
-			<example>
-				<title>Example of a Payment In</title>
-				<para>A student owes $169.40. Payment of $80 is made in this payment, $89.40 still owing.
-					Paying an amount outstanding through Quick Enrol. </para>
-			</example>
-		</section>
-		<section>
-			<title>Students who already owe you money</title>
-			<para>As soon as a student with a balance outstanding is selected as part of the<uri>normal
-					enrolment process</uri> , the amount owing will be displayed in fee summary under
-				"Previous owing" for this payer. Any new enrolments you process at the time will add to
-				their total amount owing. If the student has credit with your college, their credit will be
-				automatically deducted from the total owing. </para>
-			<para>You can choose, when you process the enrolment, to pay the full amount owing, or just a
-				portion of it. </para>
-			<example>
-				<title>Example of paying off a previous and current enrolment together </title>
-				<para>The student enrolling in a class costing $143, owes $169.40 from a previous enrolment.
-					They pay the full balance during the Quick Enrol process. </para>
-			</example>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/quick_enroll.png"
-						format="png" />
-				</imageobject>
-				<caption>
-					<para>Student enrolling who has fees outstanding</para>
-				</caption>
-			</mediaobject>
+			<title>How do I provide an student with a discount after they have already enrolled?</title>
+			<para>Invoices in onCourse are immutable, that is, you can't change them after they have already been issued.</para>
+			<para>You can choose to either cancel the original enrolment and process it again
+				correctly, with the discount or you can create a manual credit note for the student</para>
+			<para>If the student has already paid the full amount, they will end up with credit that can be
+				refunded or used towards another enrolment. If the student hasn't paid against the
+				original invoice, they will now have a lower balance due, because of their credit
+				note.</para>
 		</section>
 	</section>
 </chapter>

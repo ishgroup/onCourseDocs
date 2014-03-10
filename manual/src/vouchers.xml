@@ -65,7 +65,7 @@
     </variablelist>
   </section>
     <section>
-        <title>Issuing a Voucher</title>
+        <title>Creating a voucher type</title>
         <para>For most cases when a user wants to buy a voucher, they will nominate the price they
             wish to purchase the voucher for, and that the price will also be the redemption value
             of the voucher. (Type 1) This type of voucher product will be created by default for all
@@ -78,46 +78,12 @@
             free (sold with 100% discount). Either way, an email is sent to the payer with the
             details of that voucher (not the student since it may be a gift, if the student and the
             payer are different people).</para>
-    </section>
-    <section>
-        <title>Redeeming a Voucher</title>
-        <itemizedlist>
-            <listitem>
-                <para>A student can click on the link in the voucher email (the URL contains the
-                    voucher code) www.collegeurl.com.au/enrol?voucher=[voucherproduct.code]</para>
-            </listitem>
-            <listitem>
-                <para>If the voucher is linked to the student, then it will be visible in their
-                    portal</para>
-            </listitem>
-            <listitem>
-                <para>A student can type in the voucher code in the payment window (as part of the
-                    redesigned enrolment page). </para>
-            </listitem>
-        </itemizedlist>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/vouchers/voucher_email.png"/>
-            </imageobject>
-            <caption>
-                <para>Confirmation message after purchasing a voucher online</para>
-            </caption>
-        </mediaobject>
-    </section>
     <section>
                <title>Navigating around the Voucher Type window</title>
       
                 <para>To open the voucher type window you can either use the splash screen and click
             on the Voucher type option in the Marketing tab or the onCourse menu File → Preferences
             → Voucher type. </para>
-        <note>
-            <para>If a voucher passes the expiry date and the status is set to 'Expired', they are
-                greyed out in the voucher list and can't be redeemed and edited. Even if the expiry
-                dat is changed to the future in the database, the voucher will still remain
-                expired.</para>
-        </note>
-        <para/>
                     <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -127,46 +93,57 @@
                         <para>View of the voucher type window</para>
                     </caption>
                                    </mediaobject>
+        <note>
+            <para>If a voucher passes the expiry date, the status is set to 'Expired' and the
+                    balance of the voucher purchase price is transferred from the voucher liability
+                    account to the default income account. Expired vouchers are greyed out in the
+                    voucher list and can't be redeemed and edited. Even if the expiry date is
+                    changed to the future in the database, the voucher will still remain
+                    expired.</para>
+        </note>
                  <para>To create a new voucher type simply click on the + icon in the top
                      right hand side of the window and enter the information required. </para>
                     <section>
-                        <title>General</title>
+                        <title>Voucher general tab</title>
                         <para> There are a number of fields in the general tab, they are:<itemizedlist>
-                    <listitem>
-                        <para>SKU - this refers to a stock-keeping unit, a unique identifier for
-                            each distinct product and service that can be purchased. You can create
-                            whatever product code you want for any voucher.</para>
-                    </listitem>
-                    <listitem>
-                        <para>Name - allows you to name the voucher.</para>
-                    </listitem>
-                    <listitem>
-                        <para>Liability Account - allows you to choose the liability account you
-                            want to be used.</para>
-                    </listitem>
-                    <listitem>
-                        <para>Expiry date - this allows you to create a expiry date for the voucher
-                            from the date of purchase e.g. 365 days.</para>
-                    </listitem>
-                    <listitem>
-                        <para>Options for redeement - you can select whether you want the voucher to
-                            be able to be redeemed for an enrolment/s, for the purchased price or
-                            for different price.</para>
-                    </listitem>
-                </itemizedlist><mediaobject>
-                    <imageobject>
-                        <imagedata scalefit="1" width="100%" contentdepth="100%"
-                            fileref="images/vouchers/qual_voucher.png"/>
-                    </imageobject>
-                    <caption>
-                        <para>View of the general tab in a new voucher type record</para>
-                    </caption>
-                </mediaobject> If you want the voucher to be able to be redeemed for a enrolment you
-                can leave the drop down box as "enrolment in" as this is set as the default. You
-                will need to choose how many classes you want it to apply to in the box to the
-                right. From here click on the + icon to choose what course/s the voucher can be
-                redeemed against, then finally enter the voucher price at the bottom left hand side
-                of the window.</para>
+                        <listitem>
+                            <para>SKU - this refers to a stock-keeping unit, a unique identifier for
+                                each distinct product and service that can be purchased. You can
+                                create whatever product code you want for any voucher.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Name - allows you to name the voucher.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Liability Account - allows you to choose the liability account you
+                                want the purchase price of the voucher to be deposited into until it
+                                is redeemed or expires</para>
+                        </listitem>
+                        <listitem>
+                            <para>Expiry date - this allows you to create a expiry date for the
+                                voucher from the date of purchase e.g. 365 days.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Options for redemption - you can select whether you want the
+                                voucher to be able to be redeemed for an enrolment/s, for the
+                                purchased price or for different price.</para>
+                        </listitem>
+                    </itemizedlist><mediaobject>
+                        <imageobject>
+                            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                fileref="images/vouchers/qual_voucher.png"/>
+                        </imageobject>
+                        <caption>
+                            <para>View of the general tab in a new voucher type record</para>
+                        </caption>
+                    </mediaobject> If you want the voucher to be able to be redeemed for a enrolment
+                    you can leave the drop down box as "enrolment in" as this is set as the default.
+                    You will need to choose how many enrolments you want it to apply to in the box
+                    to the right. A voucher may allow for multiple enrolments in one course, an
+                    enrolment in choice of courses, or a mix of the two.</para>
+                <para> From here click on the + icon to choose what course/s the voucher can be
+                    redeemed against, then finally enter the voucher purchase price at the bottom
+                    left hand side of the window.</para>
             <para>
                 <mediaobject>
                     <imageobject>
@@ -174,16 +151,16 @@
                             fileref="images/vouchers/Voucher_Type_General_Enrolment_In.png"/>
                     </imageobject>
                     <caption>
-                        <para>View of the general tab if the option for redeement is left with the
-                            default option "enrolment in"</para>
+                        <para>View of the general tab if the option for redemption is left with the
+                                default option "enrolment in"</para>
                     </caption>
                 </mediaobject>
             </para>
                 <para>
                     <itemizedlist>
-                        <para>When clicking on the + button you open up a new window thats gives you
-                        three options to choose what course/s the voucher can be redeemed against,
-                        they are:</para>
+                        <para>When clicking on the + button you open up a new window that gives you
+                            three options to choose what course/s the voucher can be redeemed
+                            against, they are:</para>
                         <listitem>
                             <para>Course - allows you to choose a specific course/s that the voucher
                             can be redeemed against.</para>
@@ -196,9 +173,10 @@
                             <para>All enabled courses - allows you to use this voucher for any
                             course available.</para>
                             <note>
-                                <para>If you want to apply a voucher to more than one specifc course
-                                then you can add each course one by one using the first option
-                                "Course" making sure you push OK after each course added.</para>
+                                <para>If you want to apply a voucher to more than one specific
+                                    course then you can add each course one by one using the first
+                                    option "Course" making sure you select OK after each course
+                                    added.</para>
                             </note>
                         </listitem>
                     </itemizedlist>
@@ -212,54 +190,54 @@
                         </caption>
                     </mediaobject>
                 </para>
-            <para> If you want it to be redeemed for the cost it was purchase for then choose
-                "puchase price" from the drop down menu. <mediaobject>
-                    <imageobject>
-                        <imagedata scalefit="1" width="100%" contentdepth="100%"
-                            fileref="images/vouchers/Voucher_Type_General_Purchase_Price.png"/>
-                    </imageobject>
-                    <caption>
-                        <para>View of the general tab if the option "purchase price" is selected
-                            from the drop down box</para>
-                    </caption>
-                </mediaobject>
-            </para>
+            <para>A standard 'Gift voucher' type of voucher is redeemed for it's purchase price. You
+                    can choose this option from the drop down menu. <mediaobject>
+                        <imageobject>
+                            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                fileref="images/vouchers/Voucher_Type_General_Purchase_Price.png"/>
+                        </imageobject>
+                        <caption>
+                            <para>View of the general tab if the option "purchase price" is selected
+                                from the drop down box</para>
+                        </caption>
+                    </mediaobject>
+                </para>
             <para>If you want it to be redeemed for a different price than the one purchased for
-                then select "price" from the drop down menu and choose the amount it will be
-                redeemed for. <mediaobject>
-                    <imageobject>
-                        <imagedata scalefit="1" width="100%" contentdepth="100%"
-                            fileref="images/vouchers/Voucher_Type_General_Price.png"/>
-                    </imageobject>
-                    <caption>
-                        <para>View of the general tab if the option "price" is selected from the
-                            drop down box</para>
-                    </caption>
-                </mediaobject>
-            </para>
+                    then select "price" from the drop down menu and choose the amount it will be
+                    redeemed for. This would usually be more than the purchase price, not less.<mediaobject>
+                        <imageobject>
+                            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                fileref="images/vouchers/Voucher_Type_General_Price.png"/>
+                        </imageobject>
+                        <caption>
+                            <para>View of the general tab if the option "price" is selected from the
+                                drop down box</para>
+                        </caption>
+                    </mediaobject>
+                </para>
     </section>
          <section>
-                <title>Web</title>
+                <title>Voucher web tab</title>
              
-                <para>This tab allows you to choose if this voucher is available to be purchased, by
-                what means, and if you wish to include any information on your website about it.<itemizedlist>
-                    <para>There are two checkboxes in this tab, they are:</para>
-                    <listitem>
-                        <para>Can be purchased online - allows people to to buy this voucher on your
-                            website.</para>
-                    </listitem>
-                    <listitem>
-                        <para>Is on sale - means this is now avaiable to be purchased.</para>
-                    </listitem>
-                </itemizedlist>
-                <note>
-                    <para>If only the "Is on sale" checkbox is selected then the voucher can only be
-                        puchased via the phone or over the counter.</para>
-                </note>
-            </para>
-                <para>You can also add a more indepth description that will be displayed on the
-                website (as long as both checkboxes are selected) in the Web desciption
-                field.</para>
+                <para>This tab allows you to choose if this voucher is available to be purchased
+                    online and if you wish to include any marketing copy on your website.<itemizedlist>
+                        <para>There are two check boxes in this tab:</para>
+                        <listitem>
+                            <para>Can be purchased online - when checked it allows people to buy
+                                this voucher on your website. If unchecked, the voucher can only be
+                                purchased via the office.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Is on sale - means the voucher is available to be purchased. If
+                                you are creating a once off voucher for a corporate customer, you
+                                may wish to uncheck the on sale option so it is disabled and can not
+                                be purchased again through the office or website.</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+                <para>You can also add a more in depth description that will be displayed on the
+                    website (as long as both check boxes are selected) in the Web description
+                    field.</para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -272,23 +250,66 @@
             
         </section>
     </section>
+    </section>
     <section>
-        <title>Navigating around the Voucher window </title>
-        <para>To open the voucher window you can go to either use the splash screen and click on the
-            Voucher option in the Marketing tab or the onCourse menu Resources → Voucher. </para>
-               <itemizedlist>
-            <para>There are a number of options that can be done in this window, they are:</para>
+        <title>Purchasing a voucher</title>
+            <para>content goes here, financial implications, special invoice items.</para>
+        <section>
+            <title>Purchasing a voucher on the web</title>
+            <para>content needed</para>
+        </section>
+    </section>
+        <section>
+            <title>Redeeming a voucher</title>
+            <para>This is pre-implementation copy, needs updating. Information about how to redeem a
+            voucher via office based enrolments goes here, voucher as a payment method. Financial
+            implications of vouchers.</para>
+            <itemizedlist>
+                <listitem>
+                    <para>A student can click on the link in the voucher email (the URL contains the
+                        voucher code) www.collegeurl.com.au/enrol?voucher=[voucherproduct.code]</para>
+                </listitem>
+                <listitem>
+                    <para>A student can type in the voucher code in the payment window during an online
+                        or office based enrolment</para>
+                </listitem>
+            </itemizedlist>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/vouchers/voucher_email.png"/>
+                </imageobject>
+                <caption>
+                    <para>Confirmation message after purchasing a voucher online</para>
+                </caption>
+            </mediaobject>
+    <section>
+        <title>Redeeming a voucher on the web</title>
+        <para>Info needed</para>
+    </section>
+        </section>
+    <section>
+        <title>Navigating the Voucher list window </title>
+        <para>This window displays the list of purchased vouchers. To open the voucher window you
+            can go to either use the splash screen and click on the Voucher option in the Marketing
+            tab or select from the onCourse menu Resources → Voucher. </para>
+        <itemizedlist>
+            <para>In this window you can:</para>
+            <listitem>
+                <para>Check the status of a sold, redeemed or partially redeemed voucher</para>
+            </listitem>
             <listitem>
                 <para>Resend a voucher code by email - this can be found in the cog wheel and can be
                     done for any number of records at a time.</para>
             </listitem>
             <listitem>
-                <para>Cancelling a voucher - this can only be done one at a time, more information
-                    can be found in the Cancelling a Voucher section below.</para>
+                <para>Cancel a voucher - this can only be done one voucher at a time. More
+                    information can be found in the Cancelling a Voucher section below.</para>
             </listitem>
-                   <listitem>
-                       <para>+ buttton - this takes you to the quick enrol window.</para>
-                   </listitem>
+            <listitem>
+                <para>Create/purchase a voucher from the + button. This opens the Quick Enrol
+                    window.</para>
+            </listitem>
         </itemizedlist>
         <mediaobject>
             <imageobject>
@@ -305,12 +326,17 @@
             <para>This window contains two main tabs, they are:</para>
             <listitem>
                 <para>General - this tab allows you to choose who the invoice gets sent through to
-                    if redeemed and allows to change the expiry date. All other field can only be
-                    viewed not edited.</para>
+                    if redeemed and allows to change the expiry date (prior to the voucher
+                    expiring). You would usually only
+                    enter data in the 'send invoice on redemption' field if you wanted the invoice to be sent to someone other
+                    than the student on redemption, i.e. the employer who purchased the
+                    voucher. If you leave this field blank, the invoice will go the payer of the enrolment who redeems the voucher.</para>
             </listitem>
             <listitem>
-                <para>Redemption - this tab shows all the redemptions made for the specific voucher
-                    selected.</para>
+                <para>Redemption - this tab shows all invoices where the voucher was used as a
+                    payment method during enrolment. Double clicking on an item in this list will
+                    open the related invoice, where you can see the specific voucher redemption
+                    information in the payment panel.</para>
             </listitem>
         </itemizedlist>
         <mediaobject>
@@ -325,30 +351,34 @@
         <section>
             <title>Cancelling a Voucher</title>
             
-            <para>To cancel a voucher you have to highlight one record, click on the cog wheel, then
-                seclect "Cancel voucher"<itemizedlist>
-                    <para>There are two checkboxes in this tab, they are:</para>
-                    <listitem>
-                        <para>Create credit note to reverse the voucher fee - this is checked by
-                            default, however if you wish to not create a credit note then uncheck
-                            this box and hit Proceed.</para>
-                    </listitem>
-                    <listitem>
-                        <para>Retain administrative fee - select this box as well if you want to
-                            deduct an admin fee from the credit note. From here you can then choose
-                            the amount deducted, whether it includes GST and the account it links
-                            to.</para>
-                    </listitem>
-                </itemizedlist></para>
+            <para>To cancel a voucher purchase, highlight the selected record, click on the cog
+                wheel, then select "Cancel voucher". This process is similar to cancelling an
+                enrolment, in that you have the option to provide a credit note during the
+                cancellation process, or retain the fee paid.</para>
+            <para>A cancelled voucher can not be redeemed.<itemizedlist>
+                <para>The options available are:</para>
+                <listitem>
+                    <para>Create credit note to reverse the voucher fee - this is checked by
+                        default, however if you wish to not create a credit note then uncheck
+                        this box and select Proceed. Unchecking this option retains all the fee
+                        paid for the voucher for your business.</para>
+                </listitem>
+                <listitem>
+                    <para>Retain administrative fee - select this box as well if you want to
+                        deduct an admin fee from the credit note. From here you can then choose
+                        the amount deducted, whether it includes GST and the account the
+                        retained fee is attributed to.</para>
+                </listitem>
+            </itemizedlist></para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
                         fileref="images/vouchers/Cancelling_a_voucher.png"/>
                 </imageobject>
                 <caption>
-                    <para>View of tthe window when cancelling a voucher</para>
+                    <para>View of the window when cancelling a voucher</para>
                 </caption>
             </mediaobject>
-          </section>
-    </section>  
+        </section>
+    </section>
 </chapter>

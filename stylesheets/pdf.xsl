@@ -104,6 +104,10 @@
         <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
         <xsl:attribute name="text-align">left</xsl:attribute>
         <xsl:attribute name="space-before.minimum">2.0em</xsl:attribute>
+        <xsl:attribute name="space-before.optimum">2.0em</xsl:attribute>
+        <xsl:attribute name="space-before.maximum">2.0em</xsl:attribute>
+        <xsl:attribute name="space-after.minimum">0em</xsl:attribute>
+        <xsl:attribute name="space-after.optimum">0em</xsl:attribute>
         <xsl:attribute name="space-after.maximum">0em</xsl:attribute>
     </xsl:attribute-set>
 
@@ -121,6 +125,8 @@
     </xsl:attribute-set>
 
     <xsl:attribute-set name="list.item.spacing">
+        <xsl:attribute name="space-before.minimum">0.2em</xsl:attribute>
+        <xsl:attribute name="space-before.optimum">0.2em</xsl:attribute>
         <xsl:attribute name="space-before.maximum">0.2em</xsl:attribute>
     </xsl:attribute-set>
 

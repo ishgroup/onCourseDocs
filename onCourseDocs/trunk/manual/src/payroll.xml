@@ -12,6 +12,72 @@
 		<para>onCourse allows you to map standard pay rates to Tutor types. These are used by default,
 			but can be overridden per class as needed. Some standard Tutor type names are included by
 			default, but these can be changed or deleted as needed.</para>
+		<section>
+			<title>Types of pay rates available in onCourse</title>
+			<para>The rate type of a tutor pay is it's multiplier than answers the questions 'how many times
+				will the tutor be paid this amount' and 'when will it be payable'? All of the
+				multipliers are relative to other information about the class that has been defined
+				elsewhere, such as the timetable and number of enrolments. As the multiplier value
+				changes, the amount payable to the tutor changes automatically.</para>
+			<orderedlist>
+				<listitem>
+					<para><emphasis role="bold">Fixed</emphasis></para>
+					<para>A fixed pay rate is a flat amount of pay that is payable to the tutor on the first day of
+						the class. A fixed amount may be used to record an allowance that is
+						provided in addition to an hourly or session based pay, or in the case of a
+						short class where the tutor is paid a fixed amount. The fixed type of pay
+						has no relation to the tutors teaching schedule in the class timetable, or
+						number of students enrolled. A tutor who is eligible for a fixed pay type
+						does not need to be assigned to any of the class sessions, but does need to
+						be added to the class tutor tab. There is no multiplier for this pay rate -
+						it is a once off payment.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Per session</emphasis></para>
+					<para>A per session rate of pay is attached to sessions in the class timetable where the tutor
+						is assigned. A per session rate of pay is payable regardless of the duration
+						or payable time set for the session. A per session pay rate can not be paid
+						in addition to a per timetabled hour pay rate for the same tutor involved in
+						teaching a class. If more sessions are added to the timetable, the amount
+						payable for the tutor will increase.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Per enrolment</emphasis></para>
+					<para>A per enrolment rate of pay pays the tutor an amount multiplied by the number of active
+						enrolments in the class at the time the payroll is run. A per enrolment rate
+						of pay can be paid in addition to a per session, or per timetabled hour rate
+						and may be used for additional allowances, such as an assessment marking
+						allowance. Like fixed types, per enrolment types are payable on the start
+						date of the class, and can be paid to tutors not attached to deliver any of
+						the class sessions e.g. an assessor.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Per timetabled hour</emphasis></para>
+					<para>This is the most common type of pay rate used, and is based on the tutors attendance at a
+						session i.e. the tutor is assigned to the session, and the session duration
+						is 3 hours therefore the tutor is paid for their rate per timetabled hour x
+						3 hours. There is also an additional 'Payable Time' field for each session
+						that can override the session duration for payroll purposes e.g. to pay to
+						an additional hour to allow for opening and closing a venue, or to pay less
+						time than the session duration, to account for unpaid breaks. As the
+						timetable is changed, the amount payable to the tutor will automatically
+						increase or decrease. Fixed payroll wage types and per enrolment types can
+						be paid in addition to a per timetabled hour rate to a single tutor in a
+						class.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Per student contact hour</emphasis></para>
+					<para>This is a less frequently used type. It is a rate that is paid per student (active
+						enrolment) per hour of delivery. A rate set for this type is multiplied by
+						both the number of active enrolments at the time the payroll is run x the
+						number of timetabled hours for each session. It is more commonly used for
+						the provision of government funding than it is for payroll. Per student
+						contact hour paylines are calculated as a single wage line due on the start
+						of the class and can be used in combination with other pay types. The
+						'Payable time' field in the timetable also sets the hours multiplier for
+						this rate.</para>
+				</listitem>
+			</orderedlist>
 		<example>
 			<title>How to create Tutor pay rates</title>
 			<orderedlist>
@@ -49,7 +115,7 @@
 				</listitem>
 				<listitem>
 					<para>In the <guilabel>rate</guilabel> field, define the dollar amount per your selected type
-						the Tutor is to be paid e.g. $55 per hour. </para>
+							the Tutor is to be paid e.g. $55 per timetabled hour. </para>
 				</listitem>
 				<listitem>
 					<para>On-costs allows you to take into account any additional expenses related to employing
@@ -85,6 +151,7 @@
 				calculations, but the actual payslip calculations will be correct as to the timing of each
 				session and the pay rate that applied as each session was delivered.</para>
 		</caution>
+	</section>
 	</section>
 	<section xml:id="payroll-classBudget">
 		<title>Class budget with Tutor pay</title>
@@ -134,7 +201,9 @@
 					<para>If you have added a coordinator or other assisting staff member to the Tutor list of the
 						class you can choose to remove them from publicity (printing in the brochure
 						and showing on your onCourse website) by unchecking the option 'Show this
-						Tutor in class information'</para>
+						tutor in class information'. You can also choose to uncheck the option 'add
+						selected tutor to all class sessions' if the tutor being added is not
+						expected to attend the class sessions.</para>
 				</listitem>
 				<listitem>
 					<para>If you need to edit the Tutor wage once you have set it, you will need to go to the
@@ -155,24 +224,22 @@
 				</listitem>
 				<listitem>
 					<para>If you did not have a wage added when the Tutor was added to the class, e.g. for a
-						historical class, you can add the wage on the budget tab. Go to <guibutton>+</guibutton>
-						<guibutton>Wage </guibutton> and select the Tutor from the list.</para>
+						historical class, you can add the wage on the budget tab. Go to <guibutton>+
+							Add budget item...</guibutton> select from the list <guibutton>Wage
+						</guibutton> and select the Tutor from the list.</para>
 				</listitem>
 				<listitem>
 					<para>You can also add Tutors to the class directly from the timetable, during the session
-						set up of edit process. If you add Tutors here, you will need to manually add the Tutor
-						pay rate from the budget tab.</para>
+						creation or edit process. If you add Tutors here, you can adjust the
+						payline's in the budget tab in the same way.</para>
 				</listitem>
 			</orderedlist>
 		</example>
-		<para>You don't need to do all the above if you already have the Tutor added to the timetable in
-			your class. Instead you can go directly to the Budget tab and add a new budget line, filling
-			out the relevant Tutor pay details as you go.</para>
-		<para>You can also add additional lines to the tutor payroll for other pay types. You are
-			limited to one line per type (per timetabled hour, per session, per enrolment ect) for
-			each tutor. This allows you to add the standard tutors pay rate, and perhaps and
-			assessment allowance per enrolment or a set up/pack up allowance per session. To add the
-			additional pay rate type:</para>
+		<para>You can also add additional lines to the tutor payroll for other pay types. You are limited
+			to one line per type (per timetabled hour, fixed, per enrolment ect) for each tutor.
+			This allows you to add the standard tutors pay rate, and perhaps and assessment
+			allowance per enrolment or a set up/pack up allowance per session. To add the additional
+			pay rate type:</para>
 		<orderedlist>
 		<listitem>
 				<para>In the class record, go to the budget tab and select the add budget
@@ -190,10 +257,23 @@
 					type to any existing pay lines</para>
 			</listitem>
 		</orderedlist>
+	</section>
+	<section>
+		<title>Unavailability bookings</title>
+		<para>All bookable resources in onCourse, such as sites, rooms and tutors can be given
+			unavailability rules. After you have created these rules they will be highlighted in the
+			timetable with a warning if you try to book the resources in a way that conflicts with
+			their unavailability. Double bookings receive the same warning i.e. when you try to
+			assign a tutor to two classes whose sessions overlap. onCourse does not prevent you from
+			making double bookings as their may be legitimate reasons for you to do this, it just
+			brings them to your attention.</para>
 		<example>
-			<title>How to record a Tutor as being Unavailable for a Given Class</title>
-			<para>Sometimes Tutors cannot make it to their classes, whatever the reason, you can flag that
-				Tutor as not available in the following way:</para>
+			<title>How to record a Tutor as being unavailable</title>
+			<para>Many colleges employee tutors on a part time or casual basis who also have commitments
+				elsewhere that effect their availability to teach. Tutors may also take periods of
+				leave which you may want to record in against their record so they aren't assigned
+				to teach any sessions during that period. Whatever the reason, you can flag a Tutor
+				as not available in the following way:</para>
 			<orderedlist>
 				<listitem>
 					<para>In onCourse, go to "Tutor"</para>
@@ -205,13 +285,17 @@
 					<para>From here click on the "timetable" tab</para>
 				</listitem>
 				<listitem>
-					<para> Click on the "list" option and in the bottom square, there is the "availability
-						rules" section (see screenshot)</para>
+					<para> Click on the "list" option and in the bottom panel, there is the "availability rules"
+						section (see screen shot)</para>
 				</listitem>
 				<listitem>
-					<para>Click on the + sign on the top right hand side of the "availability rules" section
-						and you can edit the busy period as well as the option to select "all day" which, as the
-						name suggests, will block the whole day for that Tutor.</para>
+					<para>Click on the + sign on the top right hand side of the "availability rules" section and
+						you can add the busy period as well as the option to select "all day" which,
+						as the name suggests, will block the whole day for that Tutor.</para>
+				</listitem>
+				<listitem>
+					<para>Where needed, this can be a reoccurring booking, such as a tutor who is
+						never available on Wednesdays.</para>
 				</listitem>
 			</orderedlist>
 			<mediaobject>
@@ -251,11 +335,15 @@
 				</listitem>
 				<listitem>
 					<para>To set partial attendance, you need to enter in the sheet how many minutes of the
-						scheduled session minutes the person was in attendance for. Approving this Tutor pay
-						variation means the person will be paid for the full session. Leaving it unapproved
-						means they will be paid only for their time in attendance. <inlinemediaobject>
+						scheduled session minutes the person was in attendance for. You can enter
+						more or less minutes than the session duration. Note that the session
+						payable time from the timetable does not appear on this screen, only the
+						duration. Approving this Tutor pay variation means the person will be paid
+						for the payable time you have set as their override. Leaving it unapproved
+						means they will not be paid for this session at all, unless you choose to
+						check the option during the payroll export 'unapproved attendance' <inlinemediaobject>
 							<imageobject>
-								<imagedata fileref="images/payroll_partial_attendance.png" />
+								<imagedata fileref="images/payroll_partial_attendance.png"/>
 							</imageobject>
 						</inlinemediaobject></para>
 				</listitem>
@@ -266,64 +354,87 @@
 		<title>Generating Tutor pay</title>
 		<para>onCourse generates Tutor pay records in bulk, for a given point in time, based on the
 			attendance records for Tutor. While generating Tutor pay records the admin user is given
-			choices as to whether unmarked or unapproved attendance should be included.<example>
+			choices as to whether unmarked or unapproved attendance should be included.</para>
+		<para>Tutor pay is run for sessions up to your defined date, and will pick up all the unpaid
+			sessions since last time the payroll was run and the date you nominate.</para>
+		<para>It is best practice to select all classes when running a tutor pay so that the payroll
+			run will pick up any new payable items that may have been added to a class and remain unpaid.<example>
 				<title>Generating, editing and finalising Tutor pay</title>
 				<orderedlist>
 					<listitem>
-						<para>Before Tutor pay can be created you'll need a fully setup class, with timetable,
-							Tutors and wages.</para>
+						<para>Before Tutor pay can be created you'll need a fully setup class, with
+							timetable, Tutors and wages.</para>
 					</listitem>
 					<listitem>
 						<para>Open list of classes</para>
 					</listitem>
 					<listitem>
-						<para>Highlight classes for which Tutor pay is to be generated</para>
+						<para>Highlight classes for which Tutor pay is to be generated. </para>
 					</listitem>
 					<listitem>
-						<para>Select the "Generate Tutor pay for xx classes " menu item under the cogwheel icon<inlinemediaobject>
+						<para>Select the "Generate Tutor pay for xx classes " menu item under the
+							cogwheel icon<inlinemediaobject>
 								<imageobject>
-									<imagedata fileref="images/generateTutorPayStep1.png" />
+									<imagedata fileref="images/generateTutorPayStep1.png"/>
 								</imageobject>
 							</inlinemediaobject></para>
 					</listitem>
 					<listitem>
-						<para>Select whether unmarked or unapproved attendance is to be taken under consideration when
-							generating Tutor pay. This only applies to per session or per timetabled
-							hour pay. Other types of pay (such as fixed rate) does not rely on
-							attendance marking or approval at all. In those instances where a fixed
-							rate is to be paid, a  pay run can be generated anytime after the Class
-							has commenced. <inlinemediaobject>
+						<para>Enter the date you want the payroll run to include sessions prior to.
+							If you want the pay run to include sessions run on 1/3/2014, chose the
+							day after e.g. 2/3/14</para>
+					</listitem>
+					<listitem>
+						<para>Select whether unmarked or unapproved attendance is to be taken under
+							consideration when generating Tutor pay. This only applies to per
+							session or per timetabled hour pay. Other types of pay (such as fixed
+							rate) does not rely on attendance marking or approval at all. In those
+							instances where a fixed rate is to be paid, a pay run can be generated
+							anytime after the Class has commenced. <inlinemediaobject>
 								<imageobject>
 									<imagedata fileref="images/generateTutorPayStep2.png"/>
 								</imageobject>
 							</inlinemediaobject></para>
 					</listitem>
 					<listitem>
-						<para>Press save and wait until a new list view, showing all newly created Tutor pay
-							records is displayed.</para>
+						<para>Press save and wait until a new list view, showing all newly created
+							Tutor pay records is displayed. They will have a creation date of
+							'today' and will be marked with a status of 'new'.</para>
 					</listitem>
 					<listitem>
-						<para>Once Tutor pay records have been created they can be edited. Each Tutor pay record
-							has a list of items grouped by class and based on the relevant
-							attendance/wages/sessions for that class.</para>
+						<para>If a payslip for a tutor has been created in error, while it has a
+						status of 'new' it can be deleted using the garbage icon in the top
+						right hand corner of the payslips window.</para>
 					</listitem>
 					<listitem>
-						<para>Additional Tutor pay items can be added, they will be listed in at the bottom of
-							the list.<inlinemediaobject>
+						<para>Once Tutor pay records have been created they can be edited. Each
+							Tutor pay record has a list of items grouped by class and based on the
+							relevant attendance/wages/sessions for that class. Payslips can only be
+							edited with they have a status of 'new'. Once you finalise or export
+							them they become locked.</para>
+					</listitem>
+					<listitem>
+						<para>Unchecking an item in the list will remove it from being paid in this
+							payroll cycle. The next time you run a payroll it will be add to the
+							tutors payslip again. </para>
+					</listitem>
+					<listitem>
+						<para>Additional custom or manual Tutor pay items can be added to the payslip.<inlinemediaobject>
 								<imageobject>
-									<imagedata fileref="images/editTutorPay.png" />
+									<imagedata fileref="images/editTutorPay.png"/>
 								</imageobject>
 							</inlinemediaobject></para>
 					</listitem>
 					<listitem>
-						<para>Tutor pay can be modified until its finalised, which happens once the record has
-							been exported using <guimenu>File</guimenu> > <guimenuitem>Import/Export</guimenuitem>
-							> <guimenuitem>Tutor pay </guimenuitem>.</para>
+						<para>Tutor pay can be modified until its finalised, which happens once the
+							record has been exported using <guimenu>File</guimenu> >
+								<guimenuitem>Import/Export</guimenuitem> > <guimenuitem>Tutor pay
+							</guimenuitem>.</para>
 					</listitem>
 					<listitem>
-						<para>Another way to finalise a Tutor pay record select it and choose "Finalise Tutor
-							pay" from cogwheel menu. The finalised Tutor pay records display status
-							"Paid/Exported"</para>
+						<para>Another way to finalise a Tutor pay record select it and choose
+							"Finalise Tutor pay" from cogwheel menu. The finalised Tutor pay records
+							display status "Paid/Exported"</para>
 					</listitem>
 				</orderedlist>
 			</example></para>
@@ -331,5 +442,134 @@
 			<para>Tutor pay can have following statuses: New, Completed, Approved and Paid/Exported. Only
 				a status of "Paid / Exported" prevents the editing of the record. </para>
 		</caution>
+	</section>
+	<section>
+		<title>Payroll Questions and Answers</title>
+		<qandaset>
+			<qandaentry>
+				<question><para>Can I have multiple tutors teaching, and being paid for the same session?</para></question>
+				<answer><para>Yes, you can assign many tutors to a session. Each tutor is attached to the class with their
+						own payroll type and rate, and this is the rate that will apply to them as
+						they teach the session. Each tutor attached to the session will be paid
+						their rate multiplied by the session's payable time, in the case of per
+						timetabled hour payrates.</para>
+					<para>If the tutors attached to the session have different payable times due to
+						them i.e. only one of the tutors is paid an extra hour for opening and
+						closing the venue, then use the tutor attendance function to vary the
+						payable time for each appropriate session for that tutor only.</para></answer>
+			</qandaentry>
+			<qandaentry>
+				<question><para>I have a five hour class, with one tutor teaching for the full five hours, and other teaching only for two of those hours. How do I record their different payable times?</para></question>
+				<answer><para>There are a few options available here, depending on how you wish to present the class
+						timetable to the tutors and students attending. One option is to break the
+						single five hour session into a three hour and two hour session, and assign
+						the five hour tutor to both, and the two hour tutor to their session only.
+						The class budget will then show the correct expenses also. The benefit of
+						this approach is that both tutors will see the times they are expected to be
+						teaching in their timetable. Your onCourse website will slightly alter the
+						display of the class details block when you have broken a day into multiple
+						sessions so it is clear to potential students what the delivery structure
+						looks like and what the class start and end times are.</para>
+					<para>A second option would be to keep the single five hour session and have
+						both tutors assigned. The two hour attending tutor, instead of having a per
+						timetabled hour rate could have a per session rate, that you worked out to
+						be the per timetabled hour rate x 2. This will give you the correct class
+						budget payroll expenses, but the two hour tutor will see in their timetable
+						that they are 'teaching' a five hour session. </para>
+					<para>A third option would be to keep both tutors assigned as above, but use the
+						attendance marking function for the two hour attending tutor to mark them as
+						'partially attended' and their payable time to be 120 minutes only. This
+						option will generate the correct payroll for the tutor, but the budget will
+						show that you expect to pay them for five hours of attendance, not two, so
+						will be overestimating the class costs. The tutor timetable will also show
+						that the two hour tutor is 'teaching' a five hour session.</para></answer>
+			</qandaentry>
+			<qandaentry>
+				<question><para>A tutor called in sick and was replaced by a casual. How can I reflect this so they are not paid for that class session?</para></question>
+				<answer><para>You can either untick the tutor from the session who didn't attend or mark their attendance
+						record with a red cross. Either option will prevent a per timetabled hour or
+						per session payroll type being generated for them for that particular
+						session.</para>
+					<para>You can then add the casual who filled in for them to the class and just
+						assign them to that session and ensure the appropriate wage line is added to
+						the budget for them (it's best to untick the option 'add selected tutor to
+						all class sessions' when you just want to add a casual replacement tutor to
+						a single session)</para></answer>
+			</qandaentry>
+			<qandaentry>
+				<question><para>Our award requires the tutors to be paid for a minimum of two hours per session, but the
+						session is only one and a half hours long. How can I pay them
+						correctly?</para></question>
+				<answer><para>The payable time field in the session is the first option for overriding the payable time, so
+						you could increase this from the default session time of 1 hr 30 mins to the
+						two hours you want the tutor to be paid. This would then show in the budget
+						the correct costs for the tutors wage.</para>
+					<para>Alternatively, you could override the tutor payrate from the normal per
+						timetabled hour option to a per session option where you manually worked out
+						the 2 hour rate. This would also keep the budget accurate.</para>
+					<para>The other option would be to use the partial attendance option, and increase their
+						payable time from 90 mins to 120 mins, so the correct pay was generated, but
+						it wouldn't affect the budget projection, which would keep their estimated
+						pay amount being multiplied by 1hr 30 mins per session. This is a better
+						choice if you had two tutors assigned to the session and only one of the
+						tutors was affected by this award condition.</para></answer>
+			</qandaentry>
+			<qandaentry>
+				<question><para>Our award requires tutors to be paid an additional 20% of their normal hourly rate when they
+						work 4 hours or less. How can I calculate this?</para></question>
+				<answer><para>There are a few ways you could approach this change of rate.</para>
+					<para>One option would be two have two different roles which each had two
+						different per timetabled hour rates e.g. Tutor Part Time, $40 per timetabled
+						hour and Tutor Casual with a rate of $48 per timetabled hour. You would then
+						choose the appropriate role and rate when you assign the tutor to the class,
+						knowing it's daily session duration and if they are being paid at the Part
+						Time or Casual rate.</para>
+					<para>The second option is to use a single rate, but for the sessions with a 4
+						hour or less duration, to add 20% more time than the session duration to the
+						session payable time. 20% of an hour of payable time is 12 minutes, so if
+						they are working for 3 hrs, you could pay them the Part Time rate for 3 hrs
+						and 36 min payable time to get 3 hours of payable time at the Casual
+						rate.</para>
+					<para>Keeping in mind that a tutor in onCourse can has a role and rate which
+						applies to all of their sessions for that class, using an increase in the
+						payable hours is a good option if the session duration, and appropriate
+						payrate, varies during the class. For example if the first 9 sessions of the
+						class are 6 hours long, so the tutor is paid at the Part Time rate, but the
+						last session is an exam and only 3 hours long, so the tutor should is paid
+						at the higher per hour Casual rate for this session only. This is where
+						changing the payable time to 3 hrs and 36 mins would be most
+						appropriate.</para>
+					<para>A final option, if trying to calculate the difference in payable time to
+						arrive at the new rate is too complicated, is to add a second wage line to
+						the budget for that tutor for a fixed rate of the extra amount they should
+						be paid. In this example, for the final 3 hour exam session, the tutor would
+						be paid an additional $32 on top of their normal hourly rate. Remember that
+						if you choose this option, the fixed amount will show up in the payroll run
+						for the first class session, as all fixed rate types are payable on class
+						commencement. You can use the untick option for that line in the payslip to
+						remove it on every payslip generated until the pay run when you want it to
+						be paid, but this requires a little more manual intervention. </para></answer>
+			</qandaentry>
+			<qandaentry>
+				<question><para>Out tutors are paid a fixed daily rate when they work between 6 and 8 hours. How can I set this up?</para></question>
+				<answer><para>onCourse does not have a concept of a daily rate. A per session rate may be an appropriate way
+						to express this provided your class timetable has only one session per
+						day.</para>
+					<para>If single day in the class timetable is often broken into multiple
+						sessions, expressing the daily rate as a per timetabled hour rate would be
+						more appropriate. For example, if the daily rate was $300, you may choose to
+						express this as a per timetabled hour rate of $50 per hour, and you would
+						then ensure all classes with a daily duration between 6 and 8 hours have the
+						payable time per day set to 6 hours.</para>
+					<para>If your teaching day started at 9am, finished at 4pm and the day was
+						broken into 3 x 2 hour sessions with gaps between them for breaks, the
+						default payable time would be the same as the session time, so you wouldn't
+						need to alter anything and the daily rate would be calculated
+						correctly.</para>
+					<para>If your teaching day started at 9am and finished at 5pm with a single
+						session having an 8 hr duration, you could adjust the payable time to 6 hrs
+						so the daily rate would calculate correctly.</para></answer>			
+			</qandaentry>
+		</qandaset>
 	</section>
 </chapter>

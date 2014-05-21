@@ -2,6 +2,121 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
     version="5.0" xml:id="skillsOnCourse">
     <title>General Setup</title>
-    <para></para>
+    <section>
+        <title>Introduction</title>
+    <para>skillsOnCourse is a web site for tutors and students which allows them to interact with your
+        college and with each other. Every student and tutor is automatically given a login when
+        their record is created in onCourse or when they enrol online. </para>
+    <para>skillsOnCourse gives tutors the information they need without having to contact you
+        regularly. "Is my class full?", "Will my class go ahead?", "Can I get a class roll".
+        These are all things that your teaching staff will ask you every day; now you have a 24
+        hour assistance to help tutors get the answers they need.</para>
+    <para>Students will also enjoy the skillsOnCourse portal. They can quickly and easily get the
+        information they need about their classes and timetable.</para>
+        </section>
+         <section>
+        <title>Creating accounts and logging in</title>
+        <para>All students when they are created in onCourse, will automatically have a skillsOnCourse
+            account set up for them. The first time a student enrols in your college, they will be sent an
+            email which allows them to log into skillsOnCourse and set their password. Tutors are also
+            given an account when their record is created in onCourse.</para>
+        <para>The skillsOnCourse login screen will prompt the student or tutor to enter their details.
+            Like the onCourse enrolment process, a student is identified by name and email address
+            to avoid forcing students and tutors to remember another user id.</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="80%" contentdepth="80%"
+                    fileref="images/Tutor Portal Log In Screen.png" format="png" />
+            </imageobject>
+            <caption>
+                <para>skillsOnCourse web login page </para>
+            </caption>
+        </mediaobject>
+        <para>It is also possible to log into skills onCourse as a Company rather than an individual. To
+            do so simply tick the <guilabel>As company</guilabel>box, then enter the email address
+            and password for your Company.</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="80%" contentdepth="80%"
+                    fileref="images/Tutor Portal Log In Screen Company.png" format="png"/>
+            </imageobject>
+        </mediaobject>
+        <section>
+            <title>Recovering and Resetting Passwords</title>
+            <para>The main login screen for the skillsOnCourse portal includes a 'forgot password' link. The
+                user will need to provide a name and valid email address in order to initiate the process.
+                If the student or tutor does not have an email address in onCourse then they must contact
+                the college so that you can manually update their record. It is important that you implement
+                an appropriate set of policies around how to authenticate users over the phone when they
+                request that their email address be changed or added, since that email address will give
+                them access to the full profile and history of the user. </para>
+            <para>If the user clicks on the forgot password link and enters the other details, an email will
+                be sent to them with a link to enable them create a new password. This link will be valid
+                for 24 hours only, after that time the link within the email will not work. Once the student
+                has reset their password, they can continue using skillsOnCourse.</para>
+            <para><programlisting>Dear {name},
+
+To reset your SkillsOnCourse password, simply click the link below. That will take you to a web page
+where you can create a new password. Please note that the link will expire 24 hours after
+this email was sent.
+				
+  {recoveryLink}
+
+If you weren't trying to reset your password, don't worry - your account is still secure and no
+one has been given access to it. Most likely, someone just mistyped their email address
+while trying to reset their own password.</programlisting></para>
+        </section>
+        <section>
+            <title>Updating Your Details</title>
+            <para>Once logged in, users are able to update their contact details via the <guimenu>My
+                Profile</guimenu> menu. This screen also enables them to update their password
+                and their responses to the RTO AVETMISS, USI and VET FEE Help student questions,
+                under the various tabs available in their profile.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="50%" contentdepth="50%"
+                        fileref="images/Tutor Portal My Profile View.png" format="png" />
+                </imageobject>
+                <caption>
+                    <para>My profile page of skillsOnCourse</para>
+                </caption>
+            </mediaobject>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="50%" contentdepth="50%"
+                        fileref="images/Tutor Portal My Profile Update Password.png" format="png" />
+                </imageobject>
+                <caption>
+                    <para>Reset your skillsonCourse Password</para>
+                </caption>
+            </mediaobject>
+        </section>
+        <section>
+            <title>Updating AVETMISS Details</title>
+            <para>If a student is undertaking an RTO Course, they can provide / update the required
+                AVETMISS information via the profile page.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="50%" contentdepth="50%"
+                        fileref="images/Tutor Portal My Profile Census Info.png" format="png" />
+                </imageobject>
+                <caption>
+                    <para>Student AVETMISS Information</para>
+                </caption>
+            </mediaobject>
+        </section>
+    </section>
+    <section>
+        <title>Navigating skillsOnCourse</title>
+        <para>Students and Tutors are able to navigate their way around skillsOnCourse via the top of page
+            menu options. By clicking on the 'skillsOnCourse' logo in the top left hand corner of
+            the page, they can return to the home page of the site. Because the site is built using
+            modern html techniques, the user can safely use the back button on their browser or
+            bookmark any page they like. When they return to a bookmarked page they will be asked to
+            log in and will then be redirected to the page they bookmarked.</para>
+        <para>If a student or tutor is updating their profile, they must save their changes before
+            navigating away from that page. If they leave the page without saving the changes, those
+            changes are lost.</para>
+    </section>
 </chapter>
 

@@ -20,14 +20,14 @@
 	<section>
 		<title>How to edit your website</title>
 		<para>To work on your onCourse website you will be given WebDAV access to the draft site. If your
-			website is http://ish.com.au/ then you can log into WebDAV by using the URL
-			http://ish.com.au/cms/webdav. Via WebDAV you will be able to edit <link
-				xlink:href="#static">'static'</link> files such as images, stylesheets, javascript
-			and more, as well as dynamic resources which include the templates for generating all
-			the pages on your site. You will also have access to the content in the blocks and pages
-			on your site.</para>
+			websites address is http://www.acme.com.au then you can log into WebDAV by using the URL
+			http://www.acme.com.au/cms/webdav (including /cms/webdav at the end of the URL). Via
+			WebDAV you will be able to edit <link xlink:href="#static">'static'</link> files such as
+			images, stylesheets, javascript and more, as well as dynamic resources which include the
+			templates for generating all the pages on your site. You will also have the ability to
+			edit the content in the blocks and pages stored on your site.</para>
 		<section xml:id="staging">
-			<title>Staging site</title>
+			<title>Draft site</title>
 			<para>If your college name is Acme, you will be given a website at http://acme.staging.oncourse.net.au. Any changes you make
 				via ftp will be visible only at this site, so you can make design changes and experiment in any way you choose without
 				disturbing your live website.</para>
@@ -113,6 +113,12 @@
 					</listitem>
 				</varlistentry>
 				<varlistentry>
+					<term>/cms/webdav</term>
+					<listitem>
+						<para>All pages under this path are reserved for webdav.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
 					<term>/asset</term>
 					<listitem>
 						<para>All pages under this path are reserved for the asset delivery system.</para>
@@ -182,17 +188,19 @@
 		</section>
 		<section>
 			<title>The layout</title>
-			<para>The final piece of this structure is the layout. This is where you as a designer will weave your magic. The layout is
-				represented by a folder in the resources/layouts folder you access by ftp. You can place templates inside that folder
-				where each template overrides a certain piece of html on the page. In this way you have full control over the entire
-				layout and design of the site, right down to every line of html sent to the browser.</para>
+			<para>The final piece of this structure is the layout. This is where you as a designer will weave
+				your magic. The layout is represented by a folder in the resources/layouts folder
+				you access in WebDAV. You can place templates inside that folder where each template
+				overrides a certain piece of html on the page. In this way you have full control
+				over the entire layout and design of the site, right down to every line of html sent
+				to the browser.</para>
 			<para>There is always a layout called 'default' which is used by the system for the special pages outlined above. You can
 				create as many layouts you like and link them to themes you create in the CMS.</para>
 		</section>
 	</section>
 	<section>
 		<title>WebDAV layout</title>
-		<para>When you login with ftp you will see several folders: <itemizedlist>
+		<para>When you login into WebDAV you will see several folders: <itemizedlist>
 				<listitem>
 					<para>pages</para>
 				</listitem>
@@ -232,12 +240,14 @@
 						</listitem>
 					</itemizedlist>
 				</listitem>
-			</itemizedlist>The <emphasis role="bold">s</emphasis> folder contains static files which are not parsed by the application
-			server. These include css, fonts, images and javascript. Keeping things organised within the folders as provided will make
-			everything easier, but you are free to create whatever additional folders you need to here. The <emphasis role="bold"
-				>resources</emphasis> folder contains configuration files inside <emphasis role="bold">conf</emphasis> and template
-			overrides inside the <emphasis role="bold">layouts</emphasis> folder. One layout is provided for you called <emphasis
-				role="bold">default</emphasis>. It starts off empty, since it inherits all the templates from a set of global defaults.
-			See <xref xlink:href="#templates" /></para>
+			</itemizedlist>The <emphasis role="bold">s</emphasis> folder contains static files which
+			are not parsed by the application server. These include css, fonts, images and
+			javascript. Keeping things organised within the folders as provided will make everything
+			easier, but you are free to create whatever additional folders you need to here. The
+				<emphasis role="bold">resources</emphasis> folder contains configuration files
+			inside <emphasis role="bold">conf</emphasis> and template overrides inside the <emphasis
+				role="bold">layouts</emphasis> folder. One layout is provided for you called
+				<emphasis role="bold">default</emphasis>. It starts off empty, since it inherits all
+			the templates from a set of global defaults. See <xref xlink:href="#templates"/></para>
 	</section>
 </chapter>

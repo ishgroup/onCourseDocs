@@ -12,16 +12,20 @@
 			focus on changing just the stylesheets to get the look you are after. A lot can be done with little effort in this way. If
 			you want to make changes to the structure of the site itself, read onto the <link xlink:href="#templates">templates
 				chapter</link> for an understanding on how to change the html which makes up the site.</para>
-		<para>If you are not a web designer and reading this manual, you may find many of the concepts quite challenging. Don't worry:
-			you can still edit content using the online CMS without understanding anything here. Your designer, or ish, will be able to
-			work on the page design and create something into which you can drop your content.</para>
+		<para>If you are not a web designer and reading this manual, you may find many of the concepts
+			quite challenging. Don't worry: you can still edit content using the online CMS without
+			understanding anything here. Your designer, or ish, will be able to work on the page
+			design and create something into which you can drop your content.</para>
 	</section>
 	<section>
-		<title>Staging server</title>
-		<para>To work on your onCourse website you will be given ftp access to a staging server. Via ftp you will be able to edit
-			<link xlink:href="#static">'static'</link> files such as images, stylesheets, javascript and more, as well as dynamic resources which include the templates
-			for generating all the pages on your site.</para>
-		<para>You will have both a <emphasis>staging</emphasis> and a <emphasis>live</emphasis> website.</para>
+		<title>How to edit your website</title>
+		<para>To work on your onCourse website you will be given WebDAV access to the draft site. If your
+			website is http://ish.com.au/ then you can log into WebDAV by using the URL
+			http://ish.com.au/cms/webdav. Via WebDAV you will be able to edit <link
+				xlink:href="#static">'static'</link> files such as images, stylesheets, javascript
+			and more, as well as dynamic resources which include the templates for generating all
+			the pages on your site. You will also have access to the content in the blocks and pages
+			on your site.</para>
 		<section xml:id="staging">
 			<title>Staging site</title>
 			<para>If your college name is Acme, you will be given a website at http://acme.staging.oncourse.net.au. Any changes you make
@@ -43,10 +47,11 @@
 		</section>
 		<section xml:id="deploying">
 			<title>Deploying your changes</title>
-			<para>When your changes are uploaded and tested on staging, you can deploy those changes to the live site easily. Using your
-				ftp account, just touch (make any minor change) to the file /s/deploy.txt. Within about 30 seconds, and your changes will
-				be pushed to the live website, but you might need to wait a bit longer for various caches to expire before all your
-				changes are visible.</para>
+			<para>When your changes are uploaded and tested on staging, you can deploy those changes to the
+				live site easily. Using your WebDAV account, just touch (make any minor change) to
+				the file /s/deploy.txt. Within about 30 seconds, and your changes will be pushed to
+				the live website, but you might need to wait a bit longer for various caches to
+				expire before all your changes are visible.</para>
 		</section>
 	</section>
 	<section xml:id="specialPages">

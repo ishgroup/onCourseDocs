@@ -3,11 +3,13 @@
 	<title>An overview</title>
 	<section>
 		<title>Customising onCourse Web</title>
-		<para>onCourse Web is designed to be extremely flexible, allowing you to create almost any design or concept you choose for
-			your site. When you engage your graphic designer to work on your brand and website, you will want to make your onCourse
-			website reflect your organisation at every level. That means not only skinning the site to reflect your colour and logo, but
-			changing the very heart of how it works and looks. onCourse has been built with this in mind and we don't force you in any
-			particular direction.</para>
+		<para>onCourse Web is designed to be extremely flexible, allowing you to create almost any design
+			or concept you choose for your site. When you engage your graphic designer to work on
+			your brand and website, you will want to make your onCourse website reflect your
+			organisation at every level. That means not only skinning the site to reflect your
+			colour and logo, but thinking about navigation, search and the overall user experience.
+			onCourse has been built with this in mind and we don't force you in any particular
+			direction.</para>
 		<para>If you are after quick simple results, skip straight to the stylesheet <link xlink:href="#css">css chapter</link> and
 			focus on changing just the stylesheets to get the look you are after. A lot can be done with little effort in this way. If
 			you want to make changes to the structure of the site itself, read onto the <link xlink:href="#templates">templates
@@ -18,44 +20,39 @@
 			design and create something into which you can drop your content.</para>
 	</section>
 	<section>
-		<title>How to edit your website</title>
-		<para>To work on your onCourse website you will be given WebDAV access to the draft site. If your
-			websites address is http://www.acme.com.au then you can log into WebDAV by using the URL
-			https://www.acme.com.au/cms/webdav (including a 's' at the end of http and adding
-			/cms/webdav to the end of the URL). Via WebDAV you will be able to edit <link
-				xlink:href="#static">'static'</link> files such as images, stylesheets, javascript
-			and more, as well as dynamic resources which include the templates for generating all
-			the pages on your site. You will also have the ability to edit the content in the blocks
-			and pages stored on your site.</para>
-		<section xml:id="staging">
-			<title>Draft site</title>
-			<para>If your websites URL is http://www.acme.com.au, you will be able to access the draft site
-				(CMS) using your login via http://www.acme.com.au/cms/login. Any changes you make
-				via the CMS will be visible only at this site, so you can make content changes and
-				experiment in any way you choose without disturbing your live website.</para>
-			<para>The draft site will also contain all the content from WebDAV so you have the ability to see
-				exactly how the live site will look before deciding to publishing it. </para>
-		</section>
-		<section xml:id="live">
-			<title>Live site</title>
-			<para>Your live site will contain one or more production domains (eg. http://www.acme.com.au).
-				You will also have one special domain which uses an SSL certificate for processing
-				payments. The production servers are load balanced across multiple physical servers
-				for reliability and performance.</para>
-		</section>
-		<section xml:id="deploying">
-			<title>Publishing your changes</title>
-			<para>Once you have finished with your changes to the draft site and are ready to publish them to
-				the live site you can do this within the CMS. The publish button can be found in the
-				Website section of the Site Settings tab. Any changes made within either WebDAV or
-				the CMS will be deployed to the live site within 10 minutes of clicking the publish
-				button. </para>
-		</section>
+		<title>Draft site</title>
+		<para>All onCourse websites have both  draft site and a live website. The draft site will be
+			visible to you only when you are logged into the CMS. If your site is
+			http://www.acme.edu.au, then you can log into the CMS at https://www.acme.edu.au/cms/.
+			Any changes you make in the CMS at this time are only visible to you and any other users
+			logged into the CMS. You can make content changes and experiment in any way you choose
+			without disturbing your live website.</para>
+		<para>In addition, you will be able to change css, html templates and other resources on the
+			draft site using the WebDAV. This allows you to make design changes, review your work
+			and perform all the testing you need before publishing those changes to the
+			world.</para>
+		<para>Once you have finished with your changes to the draft site and are ready to publish them to
+			the live site you can do this within the CMS. The "publish" button can be found in the
+			Website section of the Site Settings tab within the CMS. Any changes made within either
+			WebDAV or the CMS will be deployed to the live site when you press the publish button.
+			You will need to wait at least 10 minutes before the content is visible in production
+			due to caching in the production cluster of servers. Some users may need to wait even
+			longer if they have a local proxy server, which keeps a copy of the old site until it
+			expires from its cache.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" format="jpg" fileref="images/Publishing_your_site.png" />
+			</imageobject>
+			<caption>
+				<para>How to publish your site</para>
+			</caption>
+		</mediaobject>
 	</section>
 	<section xml:id="specialPages">
 		<title>Special pages</title>
-		<para>Some URLs in your site are reserved for special pages. These pages are delivered by the onCourse software itself. To
-			customise them, consult the templates chapter for details of how these pages are created. These pages include:<variablelist>
+		<para>Some URLs in your site are reserved for special pages. These pages are delivered by the
+			onCourse software itself. To customise them, consult the templates chapter for details
+			of how these pages are created. You cannot edit them within the CMS. These pages include:<variablelist>
 				<varlistentry>
 					<term>/courses</term>
 					<listitem>
@@ -65,7 +62,8 @@
 				<varlistentry>
 					<term>/courses/arts</term>
 					<listitem>
-						<para>A list of all courses tagged with the tag "arts" from the "subject" tag group.</para>
+						<para>A list of all courses tagged with the tag "arts" from the "subject"
+							tag group.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -101,7 +99,8 @@
 				<varlistentry>
 					<term>/enrol</term>
 					<listitem>
-						<para>All pages under this path are reserved for the enrolment processing pages.</para>
+						<para>All pages under this path are reserved for the enrolment processing
+							pages.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -119,13 +118,8 @@
 				<varlistentry>
 					<term>/asset</term>
 					<listitem>
-						<para>All pages under this path are reserved for the asset delivery system.</para>
-					</listitem>
-				</varlistentry>
-				<varlistentry>
-					<term>/asset/binarydata?id=123456</term>
-					<listitem>
-						<para>An attachment from onCourse referenced by an internal id. This might be an image, pdf or other file.</para>
+						<para>All pages under this path are reserved for the asset delivery
+							system.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist></para>
@@ -154,11 +148,12 @@
 		</section>
 		<section>
 			<title>The website</title>
-			<para>Each onCourse database can drive one or many websites. Each website will have one or more domains which are used to
-				access them. So Acme Training might have the general leisure learning site at http://acme.edu.au and the corporate
-				training at http://www.acme-corporate.com.au and also http://www.acme-corporate.com. The leisure and corporate sites can
-				have completely different content (pages), different graphic design (layouts) and even display different sets of
-				courses.</para>
+			<para>Each onCourse database can drive one or many websites. Each website will have one or more
+				domains which are used to access them. So Acme Training might have the general
+				leisure learning site at http://www.acme.edu.au and the corporate training at
+				http://corporate.acme.edu.au and also http://www.acme-corporate.com. The leisure and
+				corporate sites can have completely different content (pages), different graphic
+				design (layouts) and even display different sets of courses.</para>
 		</section>
 		<section>
 			<title>The pages</title>
@@ -187,18 +182,30 @@
 		<section>
 			<title>The layout</title>
 			<para>The final piece of this structure is the layout. This is where you as a designer will weave
-				your magic. The layout is represented by a folder in the resources/layouts folder
-				you access in WebDAV. You can place templates inside that folder where each template
-				overrides a certain piece of html on the page. In this way you have full control
-				over the entire layout and design of the site, right down to every line of html sent
-				to the browser.</para>
+				your magic. The layout is represented by a folder in the layouts folder you access
+				in WebDAV. You can place templates inside that folder where each template overrides
+				a certain piece of html on the page. In this way you have full control over the
+				entire layout and design of the site, right down to every line of html sent to the
+				browser.</para>
 			<para>There is always a layout called 'default' which is used by the system for the special pages outlined above. You can
 				create as many layouts you like and link them to themes you create in the CMS.</para>
 		</section>
 	</section>
 	<section>
 		<title>WebDAV layout</title>
-		<para>When you login into WebDAV you will see several folders: <itemizedlist>
+		<para>Log into WebDAV using a standards compliant application. We recommend <link
+				xlink:href="http://cyberduck.io">Cyberduck</link> which is free for use on Windows
+			and Mac. Configure a connection in Cyberduck with the URL
+			https://www.acme.edu.au/cms/webdav/</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" format="jpg" fileref="images/cyberduck_configuration.png" />
+			</imageobject>
+			<caption>
+				<para>Cyberduck Configuration</para>
+			</caption>
+		</mediaobject>
+		<para>When you login into WebDAV you will see folders like this: <itemizedlist>
 				<listitem>
 					<para>pages</para>
 				</listitem>
@@ -209,15 +216,7 @@
 					<para>templates</para>
 					<itemizedlist>
 						<listitem>
-							<para>conf</para>
-						</listitem>
-						<listitem>
-							<para>layouts</para>
-							<itemizedlist>
-								<listitem>
-									<para>default</para>
-								</listitem>
-							</itemizedlist>
+							<para>default</para>
 						</listitem>
 					</itemizedlist>
 				</listitem>
@@ -237,15 +236,24 @@
 							<para>js</para>
 						</listitem>
 					</itemizedlist>
-				</listitem>
-			</itemizedlist>The <emphasis role="bold">s</emphasis> folder  contains static files
-			which are not parsed by the application server. These include css, fonts, images and
+									</listitem>
+			</itemizedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" format="jpg" fileref="images/WebDAV_folders.png" />
+				</imageobject>
+				<caption>
+					<para>WebDAV folders</para>
+				</caption>
+			</mediaobject>
+			The <emphasis role="bold">s</emphasis> folder contains static files which
+			are not parsed by the application server. These include css, fonts, images and
 			javascript. Keeping things organised within the folders as provided will make everything
-			easier, but you are free to create whatever additional folders you need to here. The
-				<emphasis role="bold">resources</emphasis> folder contains configuration files
-			inside <emphasis role="bold">conf</emphasis> and template overrides inside the <emphasis
-				role="bold">layouts</emphasis> folder. One layout is provided for you called
-				<emphasis role="bold">default</emphasis>. It starts off empty, since it inherits all
-			the templates from a set of global defaults. See <xref xlink:href="#templates"/></para>
+			easier, but you are free to create whatever additional folders you need to here.
+			Template overrides live inside the <emphasis role="bold">templates</emphasis> folder.
+			One layout is provided for you called <emphasis role="bold">default</emphasis>which you
+			cannot delete.</para>
+		<para>You can edit pages and blocks directly from within WebDAV. The result is the same as
+			if you had edited those same items from within the CMS.</para>
 	</section>
 </chapter>

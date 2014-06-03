@@ -21,32 +21,35 @@
 		<title>How to edit your website</title>
 		<para>To work on your onCourse website you will be given WebDAV access to the draft site. If your
 			websites address is http://www.acme.com.au then you can log into WebDAV by using the URL
-			http://www.acme.com.au/cms/webdav (including /cms/webdav at the end of the URL). Via
-			WebDAV you will be able to edit <link xlink:href="#static">'static'</link> files such as
-			images, stylesheets, javascript and more, as well as dynamic resources which include the
-			templates for generating all the pages on your site. You will also have the ability to
-			edit the content in the blocks and pages stored on your site.</para>
+			https://www.acme.com.au/cms/webdav (including a 's' at the end of http and adding
+			/cms/webdav to the end of the URL). Via WebDAV you will be able to edit <link
+				xlink:href="#static">'static'</link> files such as images, stylesheets, javascript
+			and more, as well as dynamic resources which include the templates for generating all
+			the pages on your site. You will also have the ability to edit the content in the blocks
+			and pages stored on your site.</para>
 		<section xml:id="staging">
 			<title>Draft site</title>
 			<para>If your websites URL is http://www.acme.com.au, you will be able to access the draft site
 				(CMS) using your login via http://www.acme.com.au/cms/login. Any changes you make
 				via the CMS will be visible only at this site, so you can make content changes and
 				experiment in any way you choose without disturbing your live website.</para>
-			<para/>
+			<para>The draft site will also contain all the content from WebDAV so you have the ability to see
+				exactly how the live site will look before publishing it.</para>
 		</section>
 		<section xml:id="live">
 			<title>Live site</title>
-			<para>You will also be given a website http://acme.live.oncourse.net.au and one or more production domains (eg.
-				http://www.acme.com.au). You will also have one special domain which uses an SSL certificate for processing payments. The
-				production servers are load balanced across multiple physical servers for reliability and performance.</para>
+			<para>Your live site will contain one or more production domains (eg. http://www.acme.com.au).
+				You will also have one special domain which uses an SSL certificate for processing
+				payments. The production servers are load balanced across multiple physical servers
+				for reliability and performance.</para>
 		</section>
 		<section xml:id="deploying">
-			<title>Deploying your changes</title>
-			<para>When your changes are uploaded and tested on staging, you can deploy those changes to the
-				live site easily. Using your WebDAV account, just touch (make any minor change) to
-				the file /s/deploy.txt. Within about 30 seconds, and your changes will be pushed to
-				the live website, but you might need to wait a bit longer for various caches to
-				expire before all your changes are visible.</para>
+			<title>Publishing your changes</title>
+			<para>Once you have finished with your changes to the draft site and are ready to publish them to
+				the live site you can do this within the CMS. The publish button can be found in the
+				Website section of the Site Settings tab. Any changes made within either WebDAV or
+				the CMS will be pushed to the live site within 10 minutes of clicking the publish
+				button.</para>
 		</section>
 	</section>
 	<section xml:id="specialPages">

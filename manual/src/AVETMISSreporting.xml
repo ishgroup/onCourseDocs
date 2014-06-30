@@ -18,9 +18,10 @@
 			exports AVETMISS data compliant with the current 6.1 VET Provider specifications, and
 			also complies with the 6.0 standard for state based reporting agencies that have chosen
 			not to update to 6.1.</para>
-		<para>From January 2014, the AVETMISS 7 standard, including the new USI (Unique Student
-			Identifier) field will be the mandatory standard. This will be available in all versions
-			of onCourse from mid 2013.</para>
+		<para>From January 2014, the AVETMISS 7 standard, including the USI (Unique Student Identifier)
+			became the mandatory standard. AVETMISS 7 exporting is available in all versions of
+			onCourse from 4.1, along with the previous 6.1 version, still in use by some state
+			reporting bodies.</para>
 		<para>The AVETMISS data you are required to submit are made up of a series of files with
 			names like NAT00120. These files must be supplied as plain text in a fixed width format.
 			These files are not very easy to create or read by a human as if one character is in the
@@ -51,22 +52,25 @@
 			<link xlink:href="http://www.training.qld.gov.au/training-organisations/detconnect/index.html">Queensland</link>
 		</para>
 		<para>
-			<link xlink:href="http://www.skills.vic.gov.au/corporate/providers/data-collection">Victoria</link>
+			<link xlink:href="http://www.education.vic.gov.au/training/providers/rto/Pages/datacollection.aspx">Victoria</link>
 		</para>
 		<para>
-			<link xlink:href="http://www.trainingwa.wa.gov.au/trainingwa/detcms/navigation/working-in-training/training-providers/">Western Australia</link>
+			<link xlink:href="http://www.dtwd.wa.gov.au/dtwcorporateinfo/wavetenrolementdatastandard/Pages/default.aspx">Western Australia</link>
 		</para>
 		<para>
-			<link xlink:href="http://www.training.sa.gov.au/InformationforNewClients/AVETMISSReporting/tabid/222/Default.aspx">South Australia</link>
+			<link xlink:href="http://www.skills.sa.gov.au/for-training-providers/skills-for-all-training-providers/skills-for-all-training-provider-contract">South Australia</link>
 		</para>
 		<para>
-			<link xlink:href="http://www.skills.tas.gov.au/providers/rtos/status/avetmiss/avetmiss">Tasmania</link>
+			<link xlink:href="http://www.skills.tas.gov.au/providers/rtos">Tasmania</link>
 		</para>
 		<para>
-			<link xlink:href="http://www.det.act.gov.au/vetadmin">Australia Capital Territory</link>
+			<link xlink:href="http://www.det.act.gov.au/training/vet_admin">Australia Capital Territory</link>
 		</para>
 		<para>
-			<link xlink:href="http://www.det.nt.gov.au">Northern Territory</link>
+			<link xlink:href="http://www.education.nt.gov.au/rto">Northern Territory</link>
+		</para>
+		<para>
+			<link xlink:href="http://www.ncver.edu.au/wps/portal/vetdataportal/ncversupport/supportsubsupport/NCVER-Standard-Support">National Competency Completion Online System (CCOS)</link>
 		</para>
 		<section>
 			<title>Training Organisation (NAT00010) file</title>
@@ -347,6 +351,41 @@
 					information on creating Certificates in onCourse</link>
 			</para>
 		</section>
+	</section>
+	<section>
+		<title>Competency Completion Online System (CCOS)</title>
+		<para>The files required to submit via the CCOS are a little like a cut down version of AVETMISS,
+			showing summary data of your training organisation's enrolment and completion
+			rates.</para>
+		<para>Some users are required to submit these directly, while other RTOs have this data extracted
+			from their AVETMISS lodgement data automatically and do not need to submit any
+			additional data.</para>
+		<para>If you do need to submit this data each year, the three text files can be exported from
+			onCourse to upload into the CCOS system as per the import data file format requirements
+			outlined in the <link
+				xlink:href="http://rto.ncver.edu.au/documents/Competency_Completion_Online_System_Guide.pdf"
+				>Competency Completion Online System Guide PDF</link></para>
+		<para>You can find this export option in the AVETMISS 6.1 export menu, under the AVETMISS
+			flavour 'AQTF Competency Completions'.</para>
+		<para>As per other AVETMISS exports, select the data range required and the location where
+			you want the export files saved.</para>
+		<para>A folder will be created in your chosen location with the files illustrated below. You can
+			open these files in a plain text editor, like notepad, if you wish to check and confirm
+			the content prior to uploading them.</para>
+		<para>The two main files show the enrolments and completions in complete qualifications, and
+			the enrolments and completions in single units of competency. Students who enrol in a
+			full qualification will also be counted as an enrolment in each unit of competency that
+			makes up their qualification.</para>
+		<para>Only students who have enrolled in courses marked as 'satisfies requirements for
+			complete qualification' are counted as qualification enrolments.  </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/CCOS_files.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Competency Completion files and example data</para>
+			</caption>
+		</mediaobject>
 	</section>
 	<section xml:id="AVETMISSExports">
 		<title>AVETMISS Exports</title>

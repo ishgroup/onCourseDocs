@@ -3,14 +3,18 @@
     version="5.0" xml:id="what_the_student_sees">
     <title>What the student sees</title>
     <para>onCourse has a password free purchasing process meaning that students don't have to
-        remember obsure student identification details from their last enrolment. Where a student
-        has enrolled previously they can move immediately to the payment process, automatically
-        matched to their previous record.</para>
+        remember obscure student identification details from their last enrolment, like a student
+        number or a password they may have created some time ago. </para>
+    <para>Where a student has enrolled previously they are identified by their contact details and
+        can move immediately to the payment process. No information they have previously provided is
+        exposed during this process.</para>
     <section>
         <title>Student Details</title>
         <para>After a student has selected which class/es they want to enrol in and clicked on the
-            button 'PROCEED TO CHECKOUT' they will see the same page below. All the student need to
-            enter here is their first name, last name and email address.</para>
+            button 'PROCEED TO CHECKOUT' they will see the page below. All the student needs to
+            enter here is their first name, last name and email address.  Based on an exact
+            databased match of these three fields, this determines if they are a new student or a
+            returning student.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -23,9 +27,14 @@
         <section>
             <title>Previously Enrolled Students</title>
             <para>If the student enrolling in the class/es has already enrolled in a previous class,
-                (therefore their details are already stored in your database) then after they have
-                entered their first name, last name and email address and clicked on the OK button
-                then it will jump them straight to the summary page.</para>
+                been added to a waitlist or had some other interaction with you (therefore their
+                details are already stored in your database), after they have entered their first
+                name, last name, and email address and clicked on the OK button it will take them
+                straight to the summary page.</para>
+            <para>If, since their last contact with your you have made some additional fields
+                mandatory for online enrolment, and they didn't previously supply this data, an
+                interim page will be shown requesting these additional details be provided.</para>
+            <para>At no time are previously supplied details shown to the student.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -38,13 +47,28 @@
         </section>
         <section>
             <title>New Students</title>
-            <para>If this is the first time the student is enrolling then after they have entered
-                their first name, last name and email address it will take them to an additional
-                page where more details need to be captured. All the details on this page can be
-                made mandatory or optional within the CMS setting. As you can see below the only
-                question that is mandatory is their postcode which is marked with a '*' symbol.
-                There is also a marketing question, along with a dropdown for the student to choose
-                whether they have any concessions.</para>
+            <para>If this is the first time the contact is interacting with your college, after they
+                have entered their first name, last name and email address it will take them to the
+                next details page where more information can be added. All the fields on this page
+                can be shown or hidden, or made mandatory or optional within the CMS settings. As
+                you can see below the only question that is mandatory is their postcode which is
+                marked with a '*' symbol.</para>
+            <para>From August 2014, you can now include custom fields you've added to onCourse
+                contact records into the online enrolment process. By default these will be hidden,
+                but in the CMS you can choose to expose them. The 'Special needs' field is also
+                available to show or hide, allowing you to collect additional text about the any
+                dietary or medical considerations that make impact on training.</para>
+            <para>If you have set a minimum age for enrolment in the CMS, the date of birth will be
+                mandatory. If you have classes that have an age range requirement set, you should
+                also choose to make the Date of Birth mandatory during online enrolment to enforce
+                these rules.</para>
+            <para>In the onCourse CMS, you can choose to show or hide the AVETMISS questions.  These
+                questions can not be made mandatory as they are required to be optional responses
+                from students undertaking vocational training.</para>
+            <para>If in onCourse, you allow concession details to be added online, there will also
+                be a dropdown for the student to select from the list whether they have any
+                concessions you accept, and if you require concession card details or an expiry
+                date, these fields will also show as mandatory.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="60%" contentdepth="60%"
@@ -56,13 +80,19 @@
             </mediaobject>
         </section>
         <section>
-            <title>Adding a Friend</title>
+            <title>Enrolling an additional student</title>
             <para>Once a student has entered all their details they will be directed to a summary
                 page. In this page they have the option of adding another contact/student to this
                 order. The button can be found below the class/es that are being enrolled in and
-                above the field where they can add a promotional code, gift certificate or voucher.
-                If they click on it then it will take them back to the 'YOUR DETAILS' page allowing
-                them to enter the addtional students details.</para>
+                above the field where they can add a promotional code.</para>
+            <para>If they click on it then it will take them back to the 'YOUR DETAILS' page
+                allowing them to enter the additional students' details.</para>
+            <para>To add another person, they need to know their first name, last name and email
+                address, plus complete the responses for any fields you have deemed
+                mandatory.</para>
+            <para>By default, second and subsequent students added to the online enrolment process
+                will also have the enrolment option selected for the same class(es) as the first
+                student. These can be unchecked where required.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -82,8 +112,8 @@
         <para>* Class/es enrolling in</para>
         <para>* Price before and after discount of each class along with a total at the bottom right
             of the page</para>
-        <para>* A option to add another student (please see the section above called 'Adding a
-            Friend' for more information)</para>
+        <para>* A option to add another student (please see the section above called 'Enrolling an
+            additional student' for more information)</para>
         <para>* A field to enter promotional codes, gift certificates or vouchers (more information
             on this can be found in the Payment Options chapter of the manual)</para>
         <para>Once the student has read the summary of information and is happy with the details
@@ -101,16 +131,20 @@
     </section>
     <section>
         <title>Adding a Parent or Guardian</title>
-        <para>Within the CMS, if you have choosen whether a student below a certain age needs to
-            supply their Guardian or Parents details then they will see a similiar screen as shown
-            below. In the example below, student Alicia Badgery, is trying to enrol in 'Course
-            22435' however since she is below a certain age the following message appears at the
-            bottom of the page 'We require the details of a parent of guardian for billing and
-            emergency conatct.' They will also not have an option to proceed to the payment screen,
-            however instead the button changes to say 'Add parent or guardian'. They will also
-            notice that there is a new step at the top of the page called 'PARENT'. Once they have
-            clicked on the 'Add parent or guardian' button then they will be directed to the same
-            initial 'YOUR DETAILS' page where the parent or guardian can enter their details.</para>
+        <para>Within the CMS settings, if you choose to allow enrolments from people under the age
+            of 18, emergency contact details will be requested during enrolment. In the example
+            below, student Alicia Badgery, is trying to enrol in 'Course 22435' however since she is
+            under 18 years of age the following message appears at the bottom of the page 'We
+            require the details of a parent of guardian for billing and emergency contact.' </para>
+        <para>If the student has enrolled before, and already has a parent/guardian contact related
+            to them in onCourse, then this information won't be requested and they can proceed to
+            payment.</para>
+        <para>Until these details are supplied, there is no option to proceed to the payment screen.
+            Instead the button changes to say 'Add parent or guardian' and there is a new step at
+            the top of the page called 'PARENT'. Clicking the button directs to the same initial
+            'YOUR DETAILS' page where the parent or guardian contact details can be supplied. As per
+            adding all other contacts, if their details are already in onCourse, then only a first
+            name,  last name and email address are needed to identify them.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -123,9 +157,8 @@
         </mediaobject>
         <para>Once the guardian or parents details have been captured the 'PARENT' step will be
             removed from the top of the page. There will also be a message informing the student
-            that since they are below a certain age (in this case 18) the parent or guardian that
-            has been entered has been set as the payer. They can now proceed to payment page as
-            normal.</para>
+            that since they are below 18 the parent or guardian that has been entered has been set
+            as the payer. They can now proceed to payment page as normal.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -139,17 +172,29 @@
     </section>
     <section>
         <title>Payment</title>
+        <para>At the point of payment, the payer (person who will receive the invoice) can be
+            selected. In the example of an enrolment with multiple students, the first contact added
+            will be set as the payer by default. In the drop down list, you can select another
+            payer.</para>
+        <para>If the student is under 18, their parent/guardian will be set as the payer by default.
+            This can be changed back to the student if required.</para>
+        <para>For an enrolment to be successful, the payment section must be successfully completed.
+            Credit card details are validated in real time and if the student abandons the
+            transaction because they can not supply these details, you will see their enrolment in
+            onCourse as 'failed', which you may choose to follow up. </para>
         <para>Once the student is on the 'PAYMENT' page there are two main ways to pay for their
             class/es, these are:</para>
         <orderedlist>
         <listitem>
-            <para>Pay using a credit or debit card</para>
+            <para>Pay using a credit or debit card (default)</para>
         </listitem>
         <listitem>
-            <para>Click on the 'CorporatePass' option then they can enter their CorporatePass code
-                    in the field to complete the transaction without the need for a payment at this
-                    time (more information on this can be found in the Payment Options chapter of
-                    the web manual). </para>
+            <para>Click on the 'CorporatePass' option. They can enter their CorporatePass code in
+                    the field to complete the transaction without the need for a payment at this
+                    time. This process works via pre-approval and it can't just be chosen by any
+                    visitor to the website (more information on this can be found in the Payment
+                    Options chapter of the web manual). </para>
+                <para> </para>
         </listitem>
             </orderedlist>
         <mediaobject>
@@ -166,11 +211,17 @@
         <title>Confirmation</title>
         <para>After the student has clicked on the 'Confirmed purchase' button at the bottom of the
             PAYMENT page, then they will be directed to a confirmation page with a message informing
-            them that their online enrolment was either successful or rejected. If successful, at
-            the bottom of the page there will be a continue button that if pressed will take them to
-            a previously created post enrolment page that you would have created within the CMS. If
-            you have not created a post enrolment page then they will just get re-directed to the
-            courses page.</para>
+            them that their online enrolment was either successful or rejected.</para>
+        <para>If the student is paying by credit card, this is the point where their card details
+            are verified with the bank as being correct and having sufficient funds
+            available.</para>
+        <para>At this point, onCourse also verifies there is still a place available in the class.
+            If between the student commencing and completing the online enrolment process, the last
+            place has been booked by another student, the enrolment process will fail at this point.
+            Their credit card will not be billed.</para>
+        <para>If the enrolment and payment was successful, at the bottom of the page there will be a
+            continue button. If you've created a post enrolment page within the CMS, they will be
+            redirected there, if not they will be re-directed to the courses page.</para>
         <para>If the students enrolment goes through successfully and their credit card is accepted
             they will see a page similar to the screen shot shown below.</para>
         <mediaobject>
@@ -182,7 +233,10 @@
                 <para>What the student sees if their credit card has been accepted</para>
             </caption>
         </mediaobject>
-        <para>If the students credit card is not accepted they will see a page similar to the screen shot shown below. </para>
+        <para>If the credit card is not accepted the student will see a page similar to the screen
+            shot shown below explaining what they may need to check or correct. At this point the
+            student can try again or abandon their enrolment.</para>
+        <para>Abandoned enrolments are shown as 'failed' enrolments in onCourse.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -192,5 +246,11 @@
                 <para>What the student sees if their credit card has been rejected</para>
             </caption>
         </mediaobject>
+        <para>After a successful online enrolment process, the payer of the invoice will be emailed
+            a tax invoice, and each of the successfully enrolled students will be emailed an
+            enrolment confirmation. If the student is enrolling and paying for themselves, then they
+            will receive both emails.</para>
+        <para>These automatic emails are sent based on your customisable invoice and enrolment
+            confirmation email templates in onCourse.</para>
     </section>
 </chapter>

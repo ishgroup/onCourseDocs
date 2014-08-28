@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
     version="5.0" xml:id="configurations">
-    <title>Configurations</title>
+    <title>CMS Site Settings &amp; Configurations</title>
     <para>There are several areas that you can edit to change how the enrolment process works. </para>
     <section>
-        <title>Mandatory/Optional</title>
+        <title>Contact Entry - Mandatory/Optional fields</title>
         <para>You have the ability to choose whether an enrolment question is made mandatory,
             optional or hidden within the CMS by going to Site Setting -> Contact Entry. The first
             three questions 'First name', 'Last name' and 'Email' are set to Required as default and
-            can't be changed. The other questions will have a drop down next to them so you can
-            choose whether that question is made mandatory, optional or hiddens for the enrolment
-            process, waiting list and mailing list. The three options in the drop down list are
-            'Show', 'Hide' and 'Required'.</para>
+            can't be changed. </para>
+        <para>The other questions will have a drop down next to them so you can choose whether that
+            question is made mandatory, optional or hidden for the enrolment process, waiting list
+            and mailing list. The three options in the drop down list are 'Show', 'Hide' and
+            'Required'.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="40%" contentdepth="40%"
@@ -22,7 +23,6 @@
                     during the online enrolment process</para>
             </caption>
         </mediaobject>
-    </section>
     <section>
         <title>Custom Fields</title>
         <para>Any custom fields created within the contact record of onCourse will be added to the
@@ -43,7 +43,10 @@
         <title>Minimum Age</title>
         <para>There is also an option to only allow students enrolling online to be above a certain
             age. The age is set to 0 as default and can be changed at the bottom of the Contact
-            Entry page within the CMS.</para>
+            Entry page within the CMS. Any age set in this field will only apply to classes where
+            you have not specified a maximum or minimum age. For example, your global (CMS)
+            preference may be 18, however you may also have some children's classes where you have
+            set an age range of 5 to 12 years..</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -55,9 +58,9 @@
             </caption>
         </mediaobject>
         <para>You also have an option to choose whether the student needs to provide additional
-            details of their parent or guardian if they are below a certain age. There are two areas
-            to edit here which are whether you want this feature to be used at all, and at what age
-            will this feature come into use.</para>
+            details of their parent or guardian if they are below a certain age. The check box
+            determines if the feature to be used at all, and the age field to specify when this
+            feature will be activated.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -69,13 +72,35 @@
             </caption>
         </mediaobject>
     </section>
+    </section>
+        <section>
+    <title>
+        skillsOnCourse Settings
+    </title>
+    <para> On this tab you can select some configuration settings for your skillsOnCourse student,
+            tutor and company portals. </para>
+          </section>
     <section>
-        <title>Post Enrolment Questions</title>
-        <para>You have the option of setting up a page where the student gets re-directed to after
-            they have finished with the online enrolment process. To set which page you want them to
-            be directed to, within the CMS, click on Site Settings -> Payment and make sure the
-            checkbox is selected and the URL is entered in the field next to the text 'After payment
-            successful redirect user to URL'</para>
+        <title>
+            Website Settings
+        </title>
+        <para> Things you can do here:
+        </para>
+    </section>
+    
+    <section>
+        <title>Payment &amp; Post Enrolment Questions</title>
+        <para>In the website tab, you have the option of setting up a page where the student gets
+            re-directed to after they have finished with the online enrolment process.</para>
+        <para>Some users choose to create a page with additional form questions at this point,
+            others may redirect to another internal page showing some marketing copy for deals to
+            share with friends and colleagues.</para>
+        <para>To set which page you want them to be directed to, within the CMS, click on Site
+            Settings -> Payment and make sure the checkbox is selected and the URL is entered in the
+            field next to the text 'After payment successful redirect user to URL'</para>
+        <para>You also need to specify the page in the CMS which contains your enrolment/refund
+            policy. This is the page students must click to agree they accept your conditions during
+            the online enrolment process.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="80%" contentdepth="80%"

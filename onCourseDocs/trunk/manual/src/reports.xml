@@ -1958,19 +1958,22 @@
 		<section>
 			<title>Using the data model</title>
 			<para>When using iReport, you don't access the data directly. Instead you use the data model
-				provided by the onCourse engine: this wraps up the database in a way that means you don't
-				need to write SQL and you don't need to worry about which database you are using the
-				backend. Derby, MySQL and MS-SQL will all work in exactly the same way. Accessing the data
-				model is easy to do. First, <link xlink:href="http://cayenne.apache.org/download.html">download a tool</link> called "Cayenne Modeler": just grab the most recent stable build
-				from that download page for your platform. You don't need to worry about the Cayenne
-				libraries themselves, just run the modeler application. Next, you need a copy of the model
-				itself for your version of onCourse. You can get this most easily by downloading the Linux
-				onCourse Server installation (regardless of platform you are running, just grab that
-				version). Then unzip and untar the onCourseServer.tar.gz file. Inside will be another file
-				with a .jar extension. That is just another zip, so go ahead and unzip it (you may find it
+				provided by the onCourse engine: this wraps up the database in a way that means you
+				don't need to write SQL and you don't need to worry about which database you are
+				using the backend. Derby, MySQL and MS-SQL will all work in exactly the same way.
+				Accessing the data model is easy to do. First, <link
+					xlink:href="http://cayenne.apache.org/download.html">download a tool</link>
+				called "Cayenne Modeler": just grab the most recent development release from that
+				download page for your platform. You don't need to worry about installing the
+				Cayenne libraries themselves, just run the modeler application. </para>
+			<para>Next, you need a copy of the model itself for your version of onCourse. You can
+				get this most easily by downloading the Linux onCourse Server installation
+				(regardless of platform you are running, just grab that version). Then unzip and
+				untar the onCourseServer.tar.gz file. Inside will be another file with a .jar
+				extension. That is just another zip, so go ahead and unzip it (you may find it
 				easier to rename .jar into .zip to fool your zip tool that it really is a zip file).
-				Finally, amongst thousands of files which will be unzipped, use the Cayenne Modeler you
-				installed earlier to open a file "cayenne/AngelMap.map.xml".</para>
+				Finally, amongst thousands of files which will be unzipped, use the Cayenne Modeler
+				you installed earlier to open a file "cayenne/cayenne-Angel.xml".</para>
 			<para>What you now have open is the data model of onCourse itself. This ObjEntities
 				represented by the icon which looks like "C" are the objects, attributes and relationships
 				which the reports can access. As you look through some of the bundled reports that will

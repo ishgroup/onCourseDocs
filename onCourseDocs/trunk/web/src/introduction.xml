@@ -14,7 +14,7 @@
 			are filled, the web site shows prospective students that places are limited.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata fileref="images/updating1.jpg" width="100%" />
+				<imagedata fileref="images/updating1.jpg" width="100%"/>
 			</imageobject>
 			<caption>
 				<para> Connectivity between your website and the onCourse client software</para>
@@ -78,7 +78,7 @@
 		</orderedlist>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/visibleOnline.png" />
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/visibleOnline.png"/>
 			</imageobject>
 			<caption>
 				<para>Selecting this option will display the course online</para>
@@ -89,7 +89,7 @@
 			have assigned. Check the onCourse manual for more on tagging.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/WelcomePageSubjectTag.png" />
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/WelcomePageSubjectTag.png"/>
 			</imageobject>
 			<caption>
 				<para> Example of a welcome page and Subject tags at the bottom</para>
@@ -100,8 +100,7 @@
 			<para>The field ‘web description' is where you should enter all the information about the course description, what people should
 				bring, pre-requisites, outcomes and anything else you can think of. As this is the course, this information needs to pertain to all
 				the classes of this course. If you have class specific information you should put this in the class web description.</para>
-			<para>The description fields are rich text fields, so you can use bullets, headings and numbered lists. See <xref
-					xlink:href="#richText" /> for more on this. You can also include images and attachments in your pages.</para>
+			<para>The description fields are rich text fields, so you can use bullets, headings and numbered lists. See <xref xlink:href="#richText"/> for more on this. You can also include images and attachments in your pages.</para>
 		</section>
 		<section>
 			<title>Displaying Classes</title>
@@ -197,19 +196,115 @@
 						<para>All pages under this path are reserved for the cms.</para>
 					</listitem>
 				</varlistentry>
-				<varlistentry>
-					<term>/asset</term>
-					<listitem>
-						<para>All pages under this path are reserved for the asset delivery system.</para>
-					</listitem>
-				</varlistentry>
-				<varlistentry>
-					<term>/asset/binarydata?id=123456</term>
-					<listitem>
-						<para>An attachment from onCourse referenced by an internal id. This might be an image, pdf or other file.</para>
-					</listitem>
-				</varlistentry>
 			</variablelist></para>
+	</section>
+	<section>
+			<title>Advanced Search options</title>
+		<para>onCourse includes a Solr search engine indexed to your website. This allows users to use the
+			built in simple or advanced search tools on your webpages to find the courses they are
+			looking for, or for you to craft URLs which include certain search results.</para>
+		<para>You can also choose to include only courses tagged with a set tag group in your search
+			engine index, which is commonly done when a college has multiple websites for different
+			training departments. i.e. the workplace learning site only ever searches on and shows
+			results tagged with professional development, while the community site indexes all
+			courses.</para>
+		<para>The usual sort order for course results in a list view page prioritises courses with classes
+			starting next. When a search parameter is added into a page, the sort order is shifted
+			to bring results with a greater relevancy to the top of the page, and then to sort by
+			classes starting next. </para>
+		<para>When adding a 'near=' search, it will automatically hide results outside of 100km radius the
+			search suburbs' GPO. This can be useful if you deliver in a variety of physically
+			seperated locations. For example, a website visitor who searches for courses in Sydney
+			is unlikely to be interested in results in Melbourne, but may be interested in results
+			in Chatswood. In this case the Melbourne class results would be suppressed from the list
+			but shown to the user if they click the button 'Show other classes'</para>
+		<para>Classes that are full or classes that are cancelled are suppressed from results list
+			pages in the same way.</para>
+		<para>Searches created by website users are always run against all your courses e.g.
+			www.myurl.com/courses?s=whatever</para>
+		<para>If you want to craft some specific searches to put behind image banners, promotional
+			ads or other links, you can build your search within a tag group URL to make the results
+			more specific. For example, if you want a promo for day time cooking classes your search
+			might be www.myurl.com/courses/cooking?time=day which will find all the courses tagged
+			with the subject tag group named cooking that have classes running during the day
+			time.</para>
+		<para>The onCourse search options available are:</para>
+		<variablelist>
+			<varlistentry>
+				<term>/courses?s=keyword</term>
+				<listitem>
+					<para>This is standard keyword search, which includes stemming i.e. words that start with this
+						word. The search results prioritise courses where this word appears in the
+						course name, over courses where the word appears in the course
+						description.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>/courses?near=suburb+postcode</term>
+				<listitem>
+					<para>Adding the postcode essential to determine which suburb and some suburbs exist in multiple states.</para></listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>/courses?price=200</term>
+				<listitem>
+					<para>This searches for classes with an enrolment fee less than the specified dollar
+						value</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>/courses?time=day OR time=evening</term>
+				<listitem>
+					<para>Searching for a day class means the first session commences before 5pm, evening means the
+						session starts after 5pm</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>/courses?day=weekday OR day=weekend</term>
+				<listitem>
+					<para>A weekday course means the first session is held Mon to Fri, where weekend class starts
+						on a Saturday or Sunday.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>/courses?after=20141201</term>
+				<listitem>
+					<para>This will show class that start after the date 1/12/2014. The date in the search is in format yyyymmdd.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>/courses?before=20150101</term>
+				<listitem>
+					<para>This will show classes that start before 1/1/2015. The date in the search is in format
+						yyyymmdd. This can be used in combination with the after search option to
+						create a date range. </para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>/courses/tagname?tag=delivery/School+holidays</term>
+				<listitem>
+					<para>This search allows you search for courses that are tagged with multiple tags. You must
+						use the full secondary tag path, unless the tag comes from the special
+						reserved tag group 'subjects'. This means the course is tagged with both the
+						landing page tag (usually the tag group from within the subjects tag) and
+						the search term tag.</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+		<para>Multiple search teams can be concatenated to created complex search strings such as
+			www.myurl.com/courses/cooking?s=thai&amp;near=Chatswood+2057&amp;price=500&amp;time=day&amp;tag=level/beginner
+			which is searching inside the subject tag group cooking for courses also tagged with the
+			level tag group beginner that contain the keyword Thai, held near Chatswood NSW in the
+			day time and costing under $500.</para>
+		<note>
+			<para>A note on the space character inside a URL: If you have a tag name that contains a
+				space, and you are manually crafting a URL that includes that tag, you need to replace
+				the space character with "+" e.g. tag name "cooking for kids" in a URL becomes
+				"cooking+for+kids". This is done automatically for pages generated by onCourse, it is
+				only in hand crafted URLs you need to remember to add the space delimiter. Old school
+				style space character replacement with "%20" works also, but makes the URL harder for a
+				human to read.</para>
+		</note>
+
 	</section>
 	<section>
 		<title>Search Engine Optimisation</title>
@@ -233,8 +328,7 @@
 		</section>
 		<section>
 			<title>Webmaster Tools</title>
-			<para>This free tool is something you can set up yourself. Just go to <link xlink:href="https://www.google.com/webmasters/tools"
-					>www.google.com/webmasters/tools</link> and click "add a site". You'll be given several choices for how to verify your site;
+			<para>This free tool is something you can set up yourself. Just go to <link xlink:href="https://www.google.com/webmasters/tools">www.google.com/webmasters/tools</link> and click "add a site". You'll be given several choices for how to verify your site;
 				choose "HTML file upload" option. Take the file and upload it to your onCourse site in the top of the /s folder. Don't forget to
 				then publish your site changes into production. </para>
 			<para>You may decide to engage the services of an SEO company, and they may want to add your site to their own Webmaster tools. There

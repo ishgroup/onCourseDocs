@@ -231,39 +231,49 @@
 		<para>The onCourse search options available are:</para>
 		<variablelist>
 			<varlistentry>
-				<term>/courses?s=keyword</term>
+				<term>/courses?s=cook</term>
 				<listitem>
-					<para>This is standard keyword search, which includes stemming i.e. words that start with this
-						word. The search results prioritise courses where this word appears in the
-						course name, over courses where the word appears in the course
-						description.</para>
+					<para>This is standard keyword search, which includes stemming so the term cook will find cook,
+						cooks, cooking, cookery ect. The search results prioritise courses where the
+						search term appears in the course name, over courses where it appears in the
+						course description.</para>
 				</listitem>
 			</varlistentry>
 			<varlistentry>
-				<term>/courses?near=suburb+postcode</term>
+				<term>/courses?near=Chatswood+2057</term>
 				<listitem>
-					<para>Adding the postcode essential to determine which suburb and some suburbs exist in multiple states.</para></listitem>
+					<para>Search on both the Suburb+postcode. While the search may work without the postcode,
+						adding the postcode is essential to determine location if the suburb exists
+						in multiple states.</para></listitem>
 			</varlistentry>
 			<varlistentry>
 				<term>/courses?price=200</term>
 				<listitem>
 					<para>This searches for classes with an enrolment fee less than the specified dollar
-						value</para>
+						value.</para>
 				</listitem>
 			</varlistentry>
 			<varlistentry>
-				<term>/courses?time=day OR time=evening</term>
+				<term>/courses?time=day</term>
 				<listitem>
-					<para>Searching for a day class means the first session commences before 5pm, evening means the
-						session starts after 5pm</para>
+					<para>Searching for a day class means the first session commences before 5pm.</para>
 				</listitem>
 			</varlistentry>
 			<varlistentry>
-				<term>/courses?day=weekday OR day=weekend</term>
+				<term>/courses?time=evening</term>
 				<listitem>
-					<para>A weekday course means the first session is held Mon to Fri, where weekend class starts
-						on a Saturday or Sunday.</para>
+					<para>Searching evening means the session starts after 5pm</para>
 				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>/courses?day=weekday</term>
+				<listitem>
+					<para>A weekday course means the first session is held Monday to Friday.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>/courses?day=weekend</term>
+				<listitem><para>A weekend search means the class starts on a Saturday or Sunday.</para></listitem>
 			</varlistentry>
 			<varlistentry>
 				<term>/courses?after=20141201</term>
@@ -280,13 +290,12 @@
 				</listitem>
 			</varlistentry>
 			<varlistentry>
-				<term>/courses/tagname?tag=delivery/School+holidays</term>
+				<term>/courses/cooking?tag=delivery/School+holidays</term>
 				<listitem>
 					<para>This search allows you search for courses that are tagged with multiple tags. You must
-						use the full secondary tag path, unless the tag comes from the special
-						reserved tag group 'subjects'. This means the course is tagged with both the
-						landing page tag (usually the tag group from within the subjects tag) and
-						the search term tag.</para>
+						use the full secondary tag path. This means the course is tagged with both
+						the landing page tag (usually the tag group from within the subjects tag)
+						and the search term tag.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>

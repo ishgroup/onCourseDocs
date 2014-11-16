@@ -149,11 +149,16 @@
 			<title>Contact relation types</title>
 			<para>You can define how you relate contacts to each other via contact relation types. Some types
 				are already defined by default, but you can edit or delete them as needed.</para>
+			<para>A special, non-editable relationship for 'Parent or Guardian' and 'Child' is used
+				to collect the emergency contact details for minors enrolling via the web. </para>
 			<para>A relationship has two sides i.e. parent and child. Some times both sides will
 				have the same name e.g. partner and partner. Relationships can be used to link
 				contacts together for payment and enrolment purposes e.g. when an employer pays for
 				their staff member, and also for marketing e.g. to define the HR Managers at
 				companies you deliver training to, so you can promote up coming courses.</para>
+			<para>For each type of relationship you define you have the option of allowing the first
+				type of contact to access the training record of the secondary type of contact via
+				the SkillsOnCourse portal. </para>
 			<para>To add or edit relationships, go to File > Preferences > Contact Relationship
 				Types and create a new record.</para>
 			<mediaobject>
@@ -215,36 +220,19 @@
 				</mediaobject>
 			</section>
 		<section>
-			<title>Email Templates</title>
-			<para>These templates are the emails that are sent automatically on enrolment and payment. We
-				highly recommend you customise the fixed text in these templates to meet your own
+			<title>Email Templates and Scripts</title>
+			<para>These templates are the emails that are sent automatically based on scripted events like on
+				enrolment, or as part of daily reports.</para>
+			<para>By default, only emails and scripts relating to Enrolment confirmations, tax
+				invoices and voucher purchases are active in all new onCourse installations. You can
+				active and de-activate other scripts are required.</para>
+			<para>We recommend you customise the fixed text in these templates to meet your own
 				terms and conditions for payment, refunds and transfers.</para>
-			<para>The email templates include tags, or fields from the database which you can add or
-				remove. If you edit the text in the tag name &lt;between these symbols> you will
-				prevent the template from working correctly.</para>
-			<para>These templates also require you to complete some contact details, for example the
-				AVETMISS details, to generate your college email, phone and fax numbers.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/EmailTemplates.png"
-						format="png" />
-				</imageobject>
-				<caption>
-					<para>Email Templates</para>
-				</caption>
-			</mediaobject>
-			<para>If you wish to edit the code in the template then only change the plain text. Do not edit
-				any of the information in the angle brackets &lt;example> as this will break the
-				template.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/voucher_email_template.png"
-						format="png" />
-				</imageobject>
-				<caption>
-					<para>Voucher Email Template</para>
-				</caption>
-			</mediaobject>
+			<para>Both plain text and HTML templates are included and can be edited. You can also add your
+				own templates and scripts to onCourse. </para>
+			<para>These templates also require you to complete some contact details, for example the AVETMISS
+				details, to generate your college email, phone and web address.</para>
+			<para>More information is available in the <link xlink:href="#emailTemplates">Templates and scripts chapter</link> </para>
 		</section>
 		<section>
 			<title>Tutor Roles</title>
@@ -378,36 +366,38 @@
 		<section>
 			<title>Access</title>
 			<para>To access the "Users" menu, in onCourse go to File > Preferences > Access.</para>
-			<para>Here you can create roles for users, e.g; "Administration Manager." This window is a
-				very useful and powerful tool that allows you to assign differing roles depending on your
-				preferences. An example would be the organisations accountant getting access to the
-				"Account" side of onCourse rather than a user who would not know much about accounting. Once
-				you click on the + button on the top right hand side of the window, you will be able to edit
-				the following: </para>
+			<para>Here you can create roles for users, such as "Administration Manager." Some default access
+				roles have been created in onCourse however you should edit these and create roles
+				applicable to your own organisation.</para>
+			<para>Each onCourse user should be assigned to a user role that defines their access
+				levels, by default all new users created will have full admin access to all aspects
+				of onCourse.</para>
+			<para>You can edit an existing access role by double clicking on it, or create new
+				access roles using the + button in the top right hand corner of the window.</para>
 			<itemizedlist>
-				<title>Before we delve into the specifics of the Access menu, it's important to know what
-					each option means, note that if an option like "create" is greyed out, it usually means
-					that it doesn't apply to that particular area of onCourse.:</title>
+				<title>Before we delve into the specifics of the Access menu, it's important to know what each
+					option means. If an option like "create" is greyed out, it means that part of
+					onCourse can't be restricted.</title>
 				<listitem>
-					<para>View - When this is selected, the user will be able to view what the box falls
-						under, e.g; User John can view contacts because the "view" checkbox is checked under
-						"contacts".</para>
+					<para>View - a view permission only allows the contact to see data already created, but does
+						not allow existing records to be edited or new records to be created.</para>
 				</listitem>
 				<listitem>
-					<para>Edit - The user can edit whatever is checked, e.g; User John can edit contact
-						details because the "edit" checkbox under "contact" is checked.</para>
+					<para>Edit - Allows both edit and view rights.</para>
 				</listitem>
 				<listitem>
-					<para>Create - The user can create whatever is checked, e.g; User John can create a
-						contact because the "create" checkbox under "contact" is checked</para>
+					<para>Create - Allows the creation of new records, edit and view rights.</para>
 				</listitem>
 				<listitem>
-					<para>Delete - The user can delete whatever is checked, e.g; User John can delete a
-						contact because the "delete" checkbox under "contact" is checked</para>
+					<para>Delete - Allows record deletion where permitted by onCourse validation. Linked and locked
+						records can not be deleted just because a user has delete rights.</para>
 				</listitem>
 				<listitem>
-					<para>Print - The user can print whatever is checked, e.g; User John can print a report
-						because the "print" checkbox under "report" is checked</para>
+					<para>Print - Allows printing of reports associated with this record type</para>
+				</listitem>
+				<listitem>
+					<para>Allow - some process have one level of access only - allow. If this option
+						is not ticked, it means the ability to run the process is denied.</para>
 				</listitem>
 			</itemizedlist>
 			<itemizedlist>
@@ -419,10 +409,13 @@
 					<para>People and companies</para>
 					<itemizedlist>
 						<listitem>
-							<para>Contact</para>
+							<para>Contact &lt;- this refers to all onCourse students, tutors and companies. Full create
+								rights are recommended for any user who needs to process enrolments
+								as new contacts are often created at this time.</para>
 						</listitem>
 						<listitem>
-							<para>Users</para>
+							<para>Users &lt;- this refers to the administrative staff who use onCourse and need a log in
+								created.</para>
 						</listitem>
 					</itemizedlist>
 				</listitem>
@@ -430,25 +423,29 @@
 					<para>Course Management</para>
 					<itemizedlist>
 						<listitem>
-							<para>Course</para>
+							<para>Course &lt;- permission to work with any course type, including traineeships,
+								Vocational and non-vocational courses</para>
 						</listitem>
 						<listitem>
-							<para>VET course details</para>
+							<para>VET course details &lt;- this only relates to adding or removing unit of competency
+								details from a course</para>
 						</listitem>
 						<listitem>
-							<para>Class</para>
+							<para>Class &lt;- permission to work with any class type</para>
 						</listitem>
 						<listitem>
-							<para>Enrolment outcomes</para>
+							<para>Enrolment outcomes &lt;- only edit rights are editable. This allows the user to set
+								outcome results or change the outcomes linked to a student's
+								record</para>
 						</listitem>
 						<listitem>
-							<para>Budget</para>
+							<para>Budget &lt;- viewing the class budget can be disabled</para>
 						</listitem>
 						<listitem>
-							<para>Session</para>
+							<para>Session &lt;- this permission relates to sessions as they belong to classes</para>
 						</listitem>
 						<listitem>
-							<para>Waiting list</para>
+							<para>Waiting list &lt;- permission to work with all wait list records</para>
 						</listitem>
 					</itemizedlist>
 				</listitem>
@@ -456,10 +453,27 @@
 					<para>VET Management</para>
 					<itemizedlist>
 						<listitem>
-							<para>Qualification reference data</para>
+							<para>Qualification reference data &lt;- the only permission available here is edit, allowing
+								you to add your choice of nominal hours. All reference data is
+								centrally managed by ish.</para>
 						</listitem>
 						<listitem>
-							<para>Certificate</para>
+							<para>Certificate &lt;- this relates to VET Statements of Attainment and
+								Qualifications only. All contacts with class print permissions can
+								create non-vocational certificates of attendance.</para>
+						</listitem>
+						<listitem>
+							<para>Print certificate without verified USI &lt;- This allows VET
+								certificates to be printed when the student has a USI on record that
+								has not yet been verified. A warning to the user will still be
+								shown. This only applies to certificates created after
+								1/1/2015</para>
+						</listitem>
+						<listitem>
+							<para>Print certificate without USI &lt;- This allows VET certificates
+								to be printed when the student has no USI on record. A warning to
+								the user will still be shown. This only applies to certificates
+								created after 1/1/2015</para>
 						</listitem>
 					</itemizedlist>
 				</listitem>
@@ -467,10 +481,10 @@
 					<para>Resources</para>
 					<itemizedlist>
 						<listitem>
-							<para>Site</para>
+							<para>Site &lt;- view can not be disabled</para>
 						</listitem>
 						<listitem>
-							<para>Room</para>
+							<para>Room &lt;- view can not be disabled</para>
 						</listitem>
 					</itemizedlist>
 				</listitem>
@@ -478,49 +492,66 @@
 					<para>Financial</para>
 					<itemizedlist>
 						<listitem>
-							<para>Enrolment</para>
+							<para>Enrolment &lt;- Create permission needed for an onCourse user to use Quick Enrol</para>
 						</listitem>
 						<listitem>
-							<para>Custom enrolment discount</para>
+							<para>Custom enrolment discount &lt;- Allow permission gives the ability for any manual
+								discount to be added to any enrolment processed through Quick
+								Enrol.</para>
 						</listitem>
 						<listitem>
-							<para>Discount</para>
+							<para>Discount &lt;- This permission relates to the creation of discount strategies.
+								Discounts will auto apply to any applicable enrolment regardless of
+								permission here.</para>
 						</listitem>
 						<listitem>
-							<para>Tutor roles</para>
+							<para>Tutor roles &lt;- These roles determine pay rates for teaching staff</para>
 						</listitem>
 						<listitem>
-							<para>Tutor pay</para>
+							<para>Tutor pay &lt;- This permission relates to the creation and editing of payslips</para>
 						</listitem>
 						<listitem>
-							<para>invoice</para>
+							<para>Invoice &lt;- This permission relates to the creation of manual invoices (invoices not
+								created as part of the Quick Enrol process)</para>
 						</listitem>
 						<listitem>
-							<para>Credit note</para>
+							<para>Credit note &lt;- Allow the creation of manual credit notes. This permission is not
+								needed for the creation of automatic credit notes during enrolment
+								or class cancellation.</para>
 						</listitem>
 						<listitem>
-							<para>Payment In</para>
+							<para>Payment In &lt;- Permission relates only to manual payment in records, not those
+								created during Quick Enrol.</para>
 						</listitem>
 						<listitem>
-							<para>Payment Out</para>
+							<para>Payment Out &lt;- This permission is about creating refunds, usually processed in real
+								time back to payer's credit cards</para>
 						</listitem>
 						<listitem>
-							<para>Purchase</para>
+							<para>Purchase </para>
 						</listitem>
 						<listitem>
-							<para>Account</para>
+							<para>Account &lt;- Account settings for onCourse chart of accounts</para>
 						</listitem>
 						<listitem>
-							<para>Transaction</para>
+							<para>Transaction &lt;- general ledger transaction records created during all financial
+								transactions. These can only be viewed, never edited or manually
+								created.</para>
 						</listitem>
 						<listitem>
-							<para>Financial preferences</para>
+							<para>Financial preferences &lt;- The onCourse preferences that set the default accounts for
+								various transaction types</para>
 						</listitem>
 						<listitem>
-							<para>Banking</para>
+							<para>Banking &lt;- Allow permission to run the bank process</para>
 						</listitem>
 						<listitem>
-							<para>Reconcilliation</para>
+							<para>Reconciliation &lt;- Allow permission to reconcile payments</para>
+						</listitem>
+						<listitem>
+							<para>Corporate pass &lt;- Permissions relating to the creation or
+								editing or CorporatePass. This permission is not required to process
+								a website enrolment that uses a CorporatePass for payment.</para>
 						</listitem>
 					</itemizedlist>
 				</listitem>
@@ -528,34 +559,39 @@
 					<para>Special actions</para>
 					<itemizedlist>
 						<listitem>
-							<para>Class duplication/rollover</para>
+							<para>Class duplication/rollover &lt;- Allow duplication of one or more classes from existing
+								class(es)</para>
 						</listitem>
 						<listitem>
-							<para>Class cancellation</para>
+							<para>Class cancellation &lt;- Cancellation process that prevents further enrolments and
+								creates credit notes for existing enrolments</para>
 						</listitem>
 						<listitem>
-							<para>Exporting to inDesign</para>
+							<para>Exporting to inDesign &lt;- Export of class information for brochure production</para>
 						</listitem>
 						<listitem>
-							<para>Creating certificate from class</para>
+							<para>Creating certificate from class &lt;- Bulk certificate creation process for VET and
+								non-VET enrolments</para>
 						</listitem>
 						<listitem>
-							<para>Contact merging</para>
+							<para>Contact merging &lt;- Merge duplicate student records</para>
 						</listitem>
 						<listitem>
-							<para>Enrolment cancellation</para>
+							<para>Enrolment cancellation &lt;- Cancel individual enrolments and create a credit
+								note</para>
 						</listitem>
 						<listitem>
-							<para>Export AVETMISS</para>
+							<para>Export AVETMISS &lt;- Export training data for government reporting</para>
 						</listitem>
 						<listitem>
-							<para>Data import</para>
+							<para>Data import &lt;- import data into onCourse</para>
 						</listitem>
 						<listitem>
-							<para>Export DET AVETMISS</para>
+							<para>Export DET AVETMISS &lt;- Export training data for NSW funding programs</para>
 						</listitem>
 						<listitem>
-							<para>Override tutor payrate</para>
+							<para>Override tutor payrate &lt; - Allow a local override at the class level to any manually
+								set payrate</para>
 						</listitem>
 					</itemizedlist>
 				</listitem>
@@ -563,16 +599,19 @@
 					<para>Messaging</para>
 					<itemizedlist>
 						<listitem>
-							<para>Email up to 50 contacts</para>
+							<para>Email up to 50 contacts &lt;- Allow permission useful for admin staff who may need to
+								notify a class of students about changes</para>
 						</listitem>
 						<listitem>
-							<para>Email over 50 contacts</para>
+							<para>Email over 50 contacts &lt;- Allow permission most appropriate to marketing
+								staff</para>
 						</listitem>
 						<listitem>
-							<para>SMS up to 50 contacts</para>
+							<para>SMS up to 50 contacts &lt;- Allow permission useful for admin staff who may need to
+								notify a class of students about changes</para>
 						</listitem>
 						<listitem>
-							<para>SMS over 50 contacts</para>
+							<para>SMS over 50 contacts &lt;- Allow permission most appropriate to marketing staff</para>
 						</listitem>
 					</itemizedlist>
 				</listitem>
@@ -580,13 +619,16 @@
 					<para>Web and content management</para>
 					<itemizedlist>
 						<listitem>
-							<para>Attachment</para>
+							<para>Documents &lt;- Permissions relating to documents used on the public website, inside
+								onCourse and available via the portal</para>
 						</listitem>
 						<listitem>
-							<para>Tag</para>
+							<para>Tag &lt;- Permission relating to all tag groups, including those that drive the website
+								navigation. This permission is not required to add tags to records,
+								only to edit tag groups.</para>
 						</listitem>
 						<listitem>
-							<para>Web page</para>
+							<para>Web page </para>
 						</listitem>
 					</itemizedlist>
 				</listitem>
@@ -597,10 +639,16 @@
 							<para>Report</para>
 						</listitem>
 						<listitem>
-							<para>General preferences</para>
+							<para>General preferences &lt;- Relates to onCourse application preferences that affects all
+								users</para>
 						</listitem>
 						<listitem>
-							<para>Change administration centre</para>
+							<para>Change administration centre </para>
+						</listitem>
+						<listitem>
+							<para>Concession type &lt;- Permission to modify available concessions.
+								This permission is not needed to add concession types to contact
+								records.</para>
 						</listitem>
 					</itemizedlist>
 				</listitem>
@@ -611,7 +659,7 @@
 						fileref="images/access_window.png" format="png" />
 				</imageobject>
 				<caption>
-					<para>The "role" window</para>
+					<para>Setting access rights for an administration manager role</para>
 				</caption>
 			</mediaobject>
 		</section>
@@ -807,5 +855,28 @@
 		<para>In a 64bit operating system you can install more than 4Gb of RAM in the server memory. OS
 			X users will be running 64bit by default. We recommend installing 64bit operating systems for
 			all servers.</para>
+	</section>
+	<section>
+		<title>Help, Support and Log files</title>
+		<para>The onCourse server application and the onCourse client application both create daily log
+			files. The onCourse server log levels are set by the onCourse database manager inside
+			the config file. The onCourse client logging can be set from inside the onCourse
+			application.</para>
+		<para>In the Help menu, select the option 'Set log level' and choose from DEBUG, INFO or
+			WARN (default). </para>
+		<para>If you need to access your client log files you can find them in the OS User home
+			directory, or use the tool inside the onCourse Help menu to open the folder directly
+			'Show onCourse client logs..'. Historical log files will be zipped and include the date
+			they were logging within the file name. The current log file being written will be
+			called onCourse.log.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/set_log_level.png" format="png" />
+			</imageobject>
+			<caption>
+				<para>The onCourse client Help menu</para>
+			</caption>
+		</mediaobject>
 	</section>
 </chapter>

@@ -3,62 +3,76 @@
 	version="5.0" xml:id="emailTemplates">
 	<title>Email Templates</title>
 	<section>
-		<title>It's easy to construct emails with onCourse.</title>
+			<title>Email Templates</title>
+			<para>The best way to define a message template is that it is a predefined and pre-constructed
+			message that are sent out manually or automatically when on an event has occurred. An
+			event that sends a message is defined by a <link xlink:href="#script">script</link>.  An
+			example would be that a student has just enrolled into a class via the website or
+			through the office, so the send_enrolment script will email the 'Enrolment Confirmation'
+			template to the enrolling student. The fields like
+			${enrolment.student.contact.firstName} in the template will insert the relevant data
+			from onCourse into the message.</para>
+			<para>onCourse makes it easy to access and update your templated messages by keeping them in the
+			one place. You can use the templates as they are or you can personalise them to your
+			specific needs and requirements. You can also create additional templates, and where
+			necessary, accompanying scripts, specific to your business requirements.</para>
+		<para>onCourse default templates include both a plain text and HTML version of the template. If
+			make changes to the template wording you should change both versions of the template for
+			consistency. The receiver's mail client preferences will determine if they receive the
+			plain or HTML version of the message.</para>
+			<para>To access templates in onCourse go to File > Preferences > Email templates.</para>
 		<section>
-			<title> Learning about email templates</title>
-			<para>The best way to define a message template is that it is a predefined and preconstructed
-				message that is sent out depending on what event has occured. An example would be that a
-				student has just enrolled into a class on your website, after this is successful, the
-				"Enrolment Confirmation" template will be sent to them, the tags &lt;student.name> in the
-				template itself will look through the onCourse database and determine the details like the
-				students name etc</para>
-			<para>Message templates are mostly messages that students with email addresses receive after
-				enrolling online or through your office. onCourse makes it easy to access and update your
-				template information by keeping them in the one place. You can use the templates as they are
-				or you can personalise them to your specific needs and requirements.</para>
-			<para>To get to the template, in onCourse go to File > Preferences > Email templates.</para>
+			<title>Editing an existing message template</title>
 			<orderedlist>
-				<title>So how do you edit a message template?</title>
 				<listitem>
-					<para> In the email template list view, you will see a default list of templates, this
-						includes:</para>
+					<para> In the email template list view, you will see a default list of templates
+						including:</para>
 					<orderedlist>
+						<listitem>
+							<para>Enrolment application accepted</para>
+						</listitem>
+						<listitem>
+							<para>Enrolment application rejected</para>
+						</listitem>
 						<listitem>
 							<para>Enrolment confirmation</para>
 						</listitem>
 						<listitem>
-							<para>Payment failed</para>
+							<para>Payment receipt</para>
 						</listitem>
 						<listitem>
-							<para>Payment succeeded</para>
+							<para>Refund advice</para>
 						</listitem>
 						<listitem>
-							<para>SMS Tutor reminder</para>
+							<para>Student notice of class commencement</para>
 						</listitem>
 						<listitem>
 							<para>Tax invoice</para>
 						</listitem>
+						<listitem>
+							<para>Tutor notice of class commencement</para>
+						</listitem>
+						<listitem>
+							<para>USI reminder email</para>
+						</listitem>
+						<listitem>
+							<para>Voucher email</para>
+						</listitem>
 					</orderedlist>
 				</listitem>
 				<listitem>
-					<para>Check the default text of each template. In some instances you will want to make
-						changes, in others you can leave them as is. Where onCourse draws on information from
-						the data base into the message you will see a message tag in brackets &lt;like this>.
-						You should not remove tags in messages unless you are sure you don't want that
-						information going to the student.</para>
+					<para>Double click on a message from list to open it in edit view. The top half of the window
+						is the plain text version of the message, the lower half the HTML
+						version.</para>
 				</listitem>
 				<listitem>
-					<para> Formatting and editing these templates is very easy. Simply click in the window and
-						you're ready to go, deleting or adding any extra information you need. You can change
-						the current layout by typing directly in the main body of text or you can use the
-						onCourse tags to insert additional information from the database directly into the text.
-					</para>
+					<para>You can add and remove text from this message. Any text that appears inside a field
+						reference ${like.this} is drawing data from the onCourse database. Modify
+						these fields with care.</para>
 				</listitem>
 				<listitem>
-					<para>To add additional tags, click in the body of the letter where you would like the
-						extra information to be placed then go to the available tags drop down menu on the right
-						of the screen. Select and click which tag you would like to use and the information is
-						entered into the body of the letter. </para>
+					<para>Make your change to both the plain text and HTML version of the message then save and
+						close.</para>
 				</listitem>
 			</orderedlist>
 			<mediaobject>
@@ -70,12 +84,116 @@
 					<para>The "Enrolment Confirmation" template window</para>
 				</caption>
 			</mediaobject>
-			<tip>
-				<para> Please note to check the text of the templates before using them. While most of the
-					text can be used as is, some letters like the enrolment confirmation template needs an
-					emergency contact number inserted into the main body of text to replace the current text
-					of xxxxxxxx. </para>
-			</tip>
+		</section>
+		<section>
+			<title>Creating new templates</title>
+			<para>New templates can be created at your convenience. Click on the + in the top right hand
+				corner of the template window to create a new template.</para>
+			<para>The templates are written in a programming language called Groovy which is a Java based
+				language that can run inside the onCourse application. An overview of the language
+				can be found at <link xlink:href="http://groovy.codehaus.org"
+					>http://groovy.codehaus.org</link>. </para>
+			<para>If your organisation has the appropriate IT skills in house, you can create your
+				own custom templates or you can request an ish developer create them for you. The
+				development of custom templates is quoted on request.</para>
+			<para>To understand the entities, objects and attributes available to use in building a template,
+				we recommend you download Cayenne Modeler and read the section about <link
+					xlink:href="#dataModel">using the onCourse data model</link>. </para>
+			<section>
+				<title>Examples of Groovy in the templates</title>
+				<para>Both onCourse email templates and scripts are written in Groovy. onCourse templates are
+					created using the <link xlink:href="http://groovy.codehaus.org/Groovy+Templates"
+						>GStringTemplateEngine</link>, storing the template files within the
+					onCourse database.</para>
+				<para>The key to creating a successful template is to ensure you begin with the most appropriate
+					onCourse entity for the task. This will make the process of locating and joining
+					other data from the database straightforward.</para>
+				<para>If your template is to send information to a student in relation to a
+					particular enrolment, then the enrolment entity would be the correct starting
+					point, rather than the student or the contact.</para>
+			<para>The entity name you select as the starting point of the template determines the path you
+					use to join to attributes of other onCourse entities. For example if you were
+					starting with the entity enrolment and wanted to insert the student's first
+					name, you would join the enrolment to the student, then the contact as
+					below:</para>
+			<programlisting language="groovy">${enrolment.student.contact.firstName}</programlisting>
+			<para>However if you wanted to show the same information from a template linked to the invoice
+					entity you would join via the enrolment, as the invoice is linked directly to
+					the payer contact, who might be a different person to the student. This example
+					would give me the first name of the student enrolled in the class linked to an
+					invoiceLine on an invoice.</para>
+			<programlisting>${invoice.invoiceLine.enrolment.student.contact.firstName}</programlisting>
+				<para>Where this join would give you the name of the invoice payer contact.</para>
+				<programlisting>${invoice.contact.firstName}</programlisting>
+			<para>For some fields you may wish to add formatting, such as showing a date in a particular
+					style. The first example shows a short date format and the second shows a date
+					time and long date format. This page outlines all the <link xlink:href="https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html">Java Simple Date formats</link>
+					available.</para>
+			<programlisting language="groovy">${invoice.createdOn.format("d/M/yy")}
+${enrolment.courseClass.startDateTime.format("h:mm a EEEE d MMMM yyyy zzzz")}</programlisting>
+			<para>The results you wish to display may be the result of a calculation of field values. This
+					example subtracts one field from another.</para>
+			<programlisting language="groovy">Total Paid ${invoice.totalIncTax.subtract(invoice.amountOwing)}</programlisting>
+				<para>Inside a template you may wish to include some content that is displayed based on the
+					property of an attribute from the joined object. A simple example of this is
+					only displaying a label and value if the value is not null in the database, like
+					the optional customer reference field.</para>
+				<programlisting language="groovy">&lt;% if (invoice.customerReference) { %>
+Your reference: ${invoice.customerReference}
+&lt;% } %></programlisting>
+				<para>A more complex example is this condition which switches the content of the
+					enrolment confirmation based on whether the class is self paced or has
+					sessions.</para>
+				<programlisting language="groovy">&lt;% if (enrolment.courseClass.startDateTime == null) { %>
+Start: On enrolment
+Expected duration: ${enrolment.courseClass.expectedHours ?: ""not specified""} hours
+&lt;% } else { %>
+Start: ${enrolment.courseClass.startDateTime.format(""h:mm a EEEE d MMMM yyyy zzzz"")}
+End: ${enrolment.courseClass.endDateTime.format(""h:mm a EEEE d MMMM yyyy zzzz"")}
+&lt;% } %>                </programlisting>
+			<para>You can also create a loop inside a template to iterate through a list of joined entities.
+					To list the invoice lines joined to an invoice you would start with the entity
+					invoice and for each invoice line display the Title, PriceTotalIncTax and
+					Description. More examples of collections can be found on <link
+						xlink:href="http://groovy.codehaus.org/Collections">the Groovy website.</link>
+				</para>
+			<programlisting language="groovy"> &lt;% invoice.invoiceLines.each { %>
+${it.title}    ${it.priceTotalIncTax}
+${it.description}
+&lt;% } %></programlisting>
+			</section>
+		</section>
+		<section>
+			<title>Sending a manual message using a template</title>
+			<para>While many emails may be sent automatically based on their associated <link
+					xlink:href="#script">scripts</link>, template emails may also be sent manually,
+				or new templated created just to send manual messages. This allows you to resend
+				important information like a Tax Invoice that may have been misplaced by the student
+				or filtered as junk mail. The send option will use the contacts current email
+				address, so this tool can also be used to resend messages that bounced due to an
+				incorrectly entered email.</para>
+			<para>Template emails can be sent using the appropriate cogwheel option 'send custom email'. The
+				custom emails available are those linked to the same entity. For example, in the
+				Enrolment Confirmation screenshot above you can see it is linked to the entity
+				called Enrolment. This makes the template available in the enrolment window cogwheel
+				list. </para>
+			<para>You can select one or more contacts from the list of records before selecting the
+				cogwheel tool to send the message.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/send_custom_email.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Email templates available to send from the enrolment window</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Default templates</title>
+			<para>The default text from all onCourse templates is included below for your reference. This
+				text can be copied back into onCourse should you wish to revert to the onCourse
+				default template for any message.</para>
 		</section>
 	</section>
 </chapter>

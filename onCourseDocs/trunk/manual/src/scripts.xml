@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.0" xml:id="scripts">
+    <title>onCourse scripts and custom workflow</title>
+    <para>The onCourse Scripting function also allows your student management system to become a
+        completely customisable tool with your business workflow engine built right into our core
+        product. You can create and update onCourse records on an event, send messages to key
+        contacts when a record is created or changed, or automating the publishing, exporting or
+        printing of data how and when you require it.</para>
+    <para>Scripting allows you to write directly to the database, in essence, calling your own
+        program code that can automate almost any business practice you can imagine. Unlike an
+        external automation tool which can't update the onCourse database, as it bypasses all the
+        onCourse product data validation, scripts are code within the database, and any database
+        changes they attempt are subject to the same validation as data input manually.</para>
+    <para>Scripts often
+        work hand in hand with <link xlink:href="#emailTemplates">onCourse templates</link>, sending
+        automated messages to various onCourse contacts. Scripts are written in a programming language called Groovy which is a Java based
+        language that can run inside the onCourse application. An overview of the language
+        can be found at <link xlink:href="http://groovy.codehaus.org"
+            >http://groovy.codehaus.org</link>. </para>
+    <section>
+        <title>What can you do with scripts?</title>
+        <para>Some simple ideas that could be implemented with an onCourse script:</para>
+            <orderedlist>
+                <listitem><para>Run a daily transaction export at 2am for the prior 24 hours and email it to your Accounts Manager</para></listitem>
+            <listitem><para> Automatically send an email to a student on their birthday containing a $10 gift voucher</para></listitem>
+                <listitem><para> Notify tutors their class is confirmed running when the class minimum enrolment number has been reached </para></listitem>
+                <listitem><para> Notify coordinators one week before a class is due to commence if the class is under the minimum</para></listitem>
+                <listitem><para> Automatically notify all students on a course waiting list when you publish a new instance of class to the web</para></listitem>
+                <listitem><para> Send a monthly notification to debtors or creditors of their onCourse balance outstanding</para></listitem>
+                <listitem><para> Send your Enrolment Manager a daily email of students who failed to complete the online enrolment process so they can manually follow them up</para></listitem>
+                <listitem><para> Send the CEO weekly summary of enrolments, income and trending programs</para></listitem>
+                <listitem><para> Schedule a series of daily reports to print rooms labels, class rolls and sign in sheets every business day morning, and for all weekend classes on a Friday morning</para></listitem>
+                <listitem><para> Print and send reports to site coordinators for all sessions running at their venue the following week</para></listitem>
+                <listitem><para> Email students at the conclusion of their course suggesting other courses they might be interested in, with a time limited discount offer</para></listitem>
+                <listitem><para> Email VET students' employers three months after the conclusion of their course requesting they complete the Employer Satisfaction Survey</para></listitem>
+            </orderedlist>
+    </section>
+    <section>
+        <title>Editing and creating scripts</title>
+        <para>All onCourse license options can choose to enable or disable scripts provided by ish. All paid license plans can commission changes to existing scripts or request new custom scripts from ish. Customers with Enterprise level licensing can modify and add to their own scripts to onCourse themselves.  </para>
+    </section>
+    <section>
+        <title>onCourse default scripts</title>
+        <para>These scripts have been added for all users of onCourse, but are switched off by default. You can enable them in your database.</para>
+        <orderedlist>
+        <listitem><para> Send a reminder email to students one day before their class commences</para></listitem>
+        <listitem><para> Send a reminder email to tutors two days before their class commences</para></listitem>
+        <listitem><para> Send a reminder email to VET students every 7 days for the next month if they haven't supplied their USI after enrolment</para></listitem>
+        <listitem><para> Send a receipt on the processing of a successful payment in for a payment taken not during the enrolment process</para></listitem>
+        <listitem><para> Send refund advice on creation of a successful payment out e.g. credit card refund</para></listitem>
+        <listitem><para> Send an email to a student to notify them their application has been accepted, what their custom enrolment fee is and how they can enrol</para></listitem>
+        <listitem><para> Send an email to a student whose application has been rejected</para></listitem>
+        </orderedlist>
+    </section> 
+</chapter>

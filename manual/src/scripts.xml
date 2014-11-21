@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="scripts">
 	<title>onCourse scripts and custom workflow</title>
-	<para>onCourse has a powerful scripting engine which can be used to implement your own specific
-		workflow rules into onCourse. You can use scripts to send automated emails or SMS, change
-		records inside the system, integrate with third party tools such as analytics or mailing
-		lists, export data to finance systems or your LMS, and much, much more. </para>
-	<para>Scripts allow your student management system to become a completely customisable tool with
-		your business workflow engine built right into onCourse. You can create and update onCourse
-		records on an event, send messages to key contacts when a record is created or changed, or
-		automating the publishing, exporting or printing of data how and when you require it.</para>
+	<para>onCourse has a powerful scripting engine which can be used to implement your own specific workflow rules into onCourse. You can use
+		script to send automated emails or SMS, change records inside the system, integrate with third party tools such as analytics or mailing
+		lists, export data to finance systems or your LMS. And much much more. Scripts allow your student management system to become a
+		completely customisable tool with your business workflow engine built right into onCourse. You can create and update onCourse records on
+		an event, send messages to key contacts when a record is created or changed, or automating the publishing, exporting or printing of data
+		how and when you require it.</para>
 	<para>Scripting allows you to write directly to the database, calling your own program code that can automate almost any business practice
 		you can imagine. Any database changes they attempt are subject to similar validation as data input manually.</para>
 	<para>Scripts often work hand in hand with <link xlink:href="#emailTemplates">onCourse templates</link>, sending automated messages to
@@ -181,7 +179,7 @@
 				<varlistentry>
 					<term>Day of week</term>
 					<listitem>
-						<para> Allowed values: 1-7 or SUN-SAT</para>
+						<para> Allowed values: 1-7 or MON-SUN</para>
 						<para>Special characters: ? L #</para>
 					</listitem>
 				</varlistentry>
@@ -233,8 +231,17 @@
 				</varlistentry>
 			</variablelist>
 			<para>The legal characters and the names of months and days of the week are not case sensitive. MON is the same as mon.</para>
-			<para>
-				<table frame="void">
+			<para> Examples 0 0 12 * * ? Fire at 12pm (noon) every day 0 15 10 ? * * Fire at 10:15am every day 0 15 10 * * ? Fire at 10:15am every
+				day 0 15 10 * * ? * Fire at 10:15am every day 0 15 10 * * ? 2005 Fire at 10:15am every day during the year 2005 0 * 14 * * ? Fire
+				every minute starting at 2pm and ending at 2:59pm, every day 0 0/5 14 * * ? Fire every 5 minutes starting at 2pm and ending at
+				2:55pm, every day 0 0/5 14,18 * * ? Fire every 5 minutes starting at 2pm and ending at 2:55pm, AND fire every 5 minutes starting at
+				6pm and ending at 6:55pm, every day 0 0-5 14 * * ? Fire every minute starting at 2pm and ending at 2:05pm, every day 0 10,44 14 ? 3
+				WED Fire at 2:10pm and at 2:44pm every Wednesday in the month of March. 0 15 10 ? * MON-FRI Fire at 10:15am every Monday, Tuesday,
+				Wednesday, Thursday and Friday 0 15 10 15 * ? Fire at 10:15am on the 15th day of every month 0 15 10 L * ? Fire at 10:15am on the
+				last day of every month 0 15 10 ? * 6L Fire at 10:15am on the last Friday of every month 0 15 10 ? * 6L Fire at 10:15am on the last
+				Friday of every month 0 15 10 ? * 6L 2002-2005 Fire at 10:15am on every last friday of every month during the years 2002, 2003, 2004
+				and 2005 0 15 10 ? * 6#3 Fire at 10:15am on the third Friday of every month 0 0 12 1/5 * ? Fire at 12pm (noon) every 5 days every
+				month, starting on the first day of the month. 0 11 11 11 11 ? Fire every November 11th at 11:11am. <table frame="void">
 					<caption>Examples</caption>
 					<tbody>
 						<tr>
@@ -259,33 +266,28 @@
 						</tr>
 						<tr>
 							<td>0 * 14 * * ? </td>
-							<td>Fire every minute starting at 2pm and ending at 2:59pm, every
-								day</td>
+							<td>Fire every minute starting at 2pm and ending at 2:59pm, every day</td>
 						</tr>
 						<tr>
 							<td>0 0/5 14 * * ? </td>
-							<td>Fire every 5 minutes starting at 2pm and ending at 2:55pm, every
-								day</td>
+							<td>Fire every 5 minutes starting at 2pm and ending at 2:55pm, every day</td>
 						</tr>
 						<tr>
 							<td>0 0/5 14,18 * * ? </td>
-							<td>Fire every 5 minutes starting at 2pm and ending at 2:55pm, AND fire
-								every 5 minutes starting at 6pm and ending at 6:55pm, every day</td>
+							<td>Fire every 5 minutes starting at 2pm and ending at 2:55pm, AND fire every 5 minutes starting at 6pm and ending at 6:55pm,
+								every day</td>
 						</tr>
 						<tr>
 							<td>0 0-5 14 * * ? </td>
-							<td>Fire every minute starting at 2pm and ending at 2:05pm, every
-								day</td>
+							<td>Fire every minute starting at 2pm and ending at 2:05pm, every day</td>
 						</tr>
 						<tr>
 							<td>0 10,44 14 ? 3 WED </td>
-							<td>Fire at 2:10pm and at 2:44pm every Wednesday in the month of
-								March.</td>
+							<td>Fire at 2:10pm and at 2:44pm every Wednesday in the month of March.</td>
 						</tr>
 						<tr>
 							<td>0 15 10 ? * MON-FRI </td>
-							<td>Fire at 10:15am every Monday, Tuesday, Wednesday, Thursday and
-								Friday</td>
+							<td>Fire at 10:15am every Monday, Tuesday, Wednesday, Thursday and Friday</td>
 						</tr>
 						<tr>
 							<td>0 15 10 15 * ? </td>
@@ -305,8 +307,7 @@
 						</tr>
 						<tr>
 							<td>0 15 10 ? * 6L 2002-2005 </td>
-							<td>Fire at 10:15am on every last friday of every month during the years
-								2002, 2003, 2004 and 2005</td>
+							<td>Fire at 10:15am on every last friday of every month during the years 2002, 2003, 2004 and 2005</td>
 						</tr>
 						<tr>
 							<td>0 15 10 ? * 6#3 </td>
@@ -314,16 +315,14 @@
 						</tr>
 						<tr>
 							<td>0 0 12 1/5 * ? </td>
-							<td>Fire at 12pm (noon) every 5 days every month, starting on the first
-								day of the month.</td>
+							<td>Fire at 12pm (noon) every 5 days every month, starting on the first day of the month.</td>
 						</tr>
 						<tr>
 							<td>0 11 11 11 11 ? </td>
 							<td>Fire every November 11th at 11:11am.</td>
 						</tr>
 					</tbody>
-				</table>
-			</para>
+				</table></para>
 		</section>
 		<section>
 			<title>Record change events</title>
@@ -390,8 +389,7 @@
 		<para>We better now set the invoice to sent so that we don't send this email again. For example, this script might be triggered because we edit the invoice to change the due date. In that case, the script will be triggered.</para>
 		<para><programlisting language="groovy">args.context.commitChanges()</programlisting></para>
 		<para>This last step is very important. All the changes we made (including the email we created) exist only in memory and not saved to the database until this step. Unless we save it, no email will go out and no other user will see our changes. When we commit, all the validation will run. For example, onCourse will prevent you from sending an email which has no 'to' contact and so the commit will fail. onCourse will also synchronise any objects with your onCourse website. This allows you to programmatically modify website content directly from these scripts.</para>
-		<para>For full details of the groovy language consult the official documentation here <link xlink:href="http://groovy.codehaus.org"
-			>http://groovy.codehaus.org</link> Groovy has very nice
+		<para>For full details of the groovy language consult the official documentation here http://groovy.codehaus.org/ Groovy has very nice
 			support for iterating through collections (such as a big list of database objects), regular expression matching and much more. Plus
 			you get to use all the Java libraries already included inside of onCourseServer plus the full Java JRE.</para>
 	</section>

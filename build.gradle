@@ -19,8 +19,6 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import org.apache.tools.ant.filters.*
 
-import com.xlson.groovycsv.CsvParser
-
 buildscript {
 	repositories {
 		maven {
@@ -126,7 +124,7 @@ subprojects {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.12'
+    gradleVersion = '2.2.1'
 }
 
 public class Docbook extends DefaultTask {

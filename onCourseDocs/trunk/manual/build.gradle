@@ -1,0 +1,21 @@
+import com.xlson.groovycsv.CsvParser
+
+task extractSchema() {
+	def srcFile = file("${rootDir}/manual/schema/script.csv")
+	inputs.file srcFile
+
+	def script_dir = file("${buildDir}/scripts")
+	script_dir.mkdirs()
+	outputs.dir script_dir
+
+	// parse the CSV
+	def scripts = CsvParser.parseCsv( srcFile.text )
+    
+    // write files to disk
+    for (s in scripts) {
+        def scriptFile = new File("${script_dir}/${s.name}")
+        scriptFile.text = s.script
+    }
+}
+
+processResources.dependsOn extractSchema

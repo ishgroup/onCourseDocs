@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="scripts">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
+	version="5.0" xml:id="scripts">
 	<title>onCourse scripts and custom workflow</title>
 	<para>onCourse has a powerful scripting engine which can be used to implement your own specific workflow rules into onCourse. You can use
 		script to send automated emails or SMS, change records inside the system, integrate with third party tools such as analytics or mailing
@@ -313,7 +314,8 @@
 							<td>Fire every November 11th at 11:11am.</td>
 						</tr>
 					</tbody>
-				</table></para>
+				</table>
+			</para>
 		</section>
 		<section>
 			<title>Record change events</title>
@@ -346,7 +348,9 @@
 }</programlisting>
 		</para>
 		<para>Every script should begin with this line:</para>
-		<para><programlisting language="groovy">def run(args) {</programlisting></para>
+		<para>
+			<programlisting language="groovy">def run(args) {</programlisting>
+		</para>
 		<para>In that variable "args" you will get access to important objects to help you write your script. The most important two are:</para>
 		<variablelist>
 			<title />
@@ -364,24 +368,179 @@
 				</listitem>
 			</varlistentry>
 		</variablelist>
-		<para><programlisting language="groovy">def i = args.entity</programlisting></para>
-		<para>For convenience we've assigned this object to a variable with a nicer name. This just makes the rest of our script easier to read.</para>
-		<para><programlisting language="groovy">if (i.confirmationStatus == ConfirmationStatus.NOT_SENT) {</programlisting></para>
-		<para>So our invoice has an attribute confirmationStatus. We can find these attributes documented in the onCourse javadocs. In this case we just want to check to see that we still need to send this email. We don't want to send it if the invoice was part of a failed payment and reversal, or if the user already received it.</para>
-		<para><programlisting language="groovy">def m = Email.create("Tax Invoice")</programlisting></para>
+		<para>
+			<programlisting language="groovy">def i = args.entity</programlisting>
+		</para>
+		<para>For convenience we've assigned this object to a variable with a nicer name. This just makes the rest of our script easier to
+			read.</para>
+		<para>
+			<programlisting language="groovy">if (i.confirmationStatus == ConfirmationStatus.NOT_SENT) {</programlisting>
+		</para>
+		<para>So our invoice has an attribute confirmationStatus. We can find these attributes documented in the onCourse javadocs. In this case
+			we just want to check to see that we still need to send this email. We don't want to send it if the invoice was part of a failed
+			payment and reversal, or if the user already received it.</para>
+		<para>
+			<programlisting language="groovy">def m = Email.create("Tax Invoice")</programlisting>
+		</para>
 		<para>So let's make a new email and call it "m".</para>
-		<para><programlisting language="groovy">m.bind(invoice: i)</programlisting></para>
+		<para>
+			<programlisting language="groovy">m.bind(invoice: i)</programlisting>
+		</para>
 		<para>That email template has a property called "invoice" and we'll bind our invoice object to that property.</para>
-		<para><programlisting language="groovy">m.to(i.contact)</programlisting></para>
+		<para>
+			<programlisting language="groovy">m.to(i.contact)</programlisting>
+		</para>
 		<para>The invoice has a property called 'contact' and we'll make sure the message will be sent to that person.</para>
-		<para><programlisting language="groovy">m.send()</programlisting></para>
+		<para>
+			<programlisting language="groovy">m.send()</programlisting>
+		</para>
 		<para>And we are done. This will finish all the work of creating the message.</para>
-		<para><programlisting language="groovy">i.setConfirmationStatus(ConfirmationStatus.SENT)</programlisting></para>
-		<para>We better now set the invoice to sent so that we don't send this email again. For example, this script might be triggered because we edit the invoice to change the due date. In that case, the script will be triggered.</para>
-		<para><programlisting language="groovy">args.context.commitChanges()</programlisting></para>
-		<para>This last step is very important. All the changes we made (including the email we created) exist only in memory and not saved to the database until this step. Unless we save it, no email will go out and no other user will see our changes. When we commit, all the validation will run. For example, onCourse will prevent you from sending an email which has no 'to' contact and so the commit will fail. onCourse will also synchronise any objects with your onCourse website. This allows you to programmatically modify website content directly from these scripts.</para>
+		<para>
+			<programlisting language="groovy">i.setConfirmationStatus(ConfirmationStatus.SENT)</programlisting>
+		</para>
+		<para>We better now set the invoice to sent so that we don't send this email again. For example, this script might be triggered because
+			we edit the invoice to change the due date. In that case, the script will be triggered.</para>
+		<para>
+			<programlisting language="groovy">args.context.commitChanges()</programlisting>
+		</para>
+		<para>This last step is very important. All the changes we made (including the email we created) exist only in memory and not saved to
+			the database until this step. Unless we save it, no email will go out and no other user will see our changes. When we commit, all the
+			validation will run. For example, onCourse will prevent you from sending an email which has no 'to' contact and so the commit will
+			fail. onCourse will also synchronise any objects with your onCourse website. This allows you to programmatically modify website
+			content directly from these scripts.</para>
 		<para>For full details of the groovy language consult the official documentation here http://groovy.codehaus.org/ Groovy has very nice
 			support for iterating through collections (such as a big list of database objects), regular expression matching and much more. Plus
 			you get to use all the Java libraries already included inside of onCourseServer plus the full Java JRE.</para>
+	</section>
+	<section>
+		<title>Default scripts</title>
+		<para>The following scripts come with a new installation of onCourse. Use these for learning from or to restore back to the
+			defaults.</para>
+		<section>
+			<title>Send application decision</title>
+			<variablelist>
+				<varlistentry>
+					<term>Entity</term>
+					<listitem>
+						<para>Application</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>
+				<programlisting linenumbering="numbered" language="groovy"><xi:include href="scripts/send application decision" parse="text" /></programlisting>
+			</para>
+		</section>
+		<section>
+			<title>Send enrolment</title>
+			<variablelist>
+				<varlistentry>
+					<term>Entity</term>
+					<listitem>
+						<para>Enrolment</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>
+				<programlisting linenumbering="numbered" language="groovy"><xi:include href="scripts/send enrolment" parse="text" /></programlisting>
+			</para>
+		</section>
+		<section>
+			<title>Send invoice</title>
+			<variablelist>
+				<varlistentry>
+					<term>Entity</term>
+					<listitem>
+						<para>Invoice</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>
+				<programlisting linenumbering="numbered" language="groovy"><xi:include href="scripts/send invoice" parse="text" /></programlisting>
+			</para>
+		</section>
+		<section>
+			<title>Send payment receipt</title>
+			<variablelist>
+				<varlistentry>
+					<term>Entity</term>
+					<listitem>
+						<para>Payment In</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>
+				<programlisting linenumbering="numbered" language="groovy"><xi:include href="scripts/send payment receipt" parse="text" /></programlisting>
+			</para>
+		</section>
+		<section>
+			<title>Send refund advice</title>
+			<variablelist>
+				<varlistentry>
+					<term>Entity</term>
+					<listitem>
+						<para>Payment Out</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>
+				<programlisting linenumbering="numbered" language="groovy"><xi:include href="scripts/send refund advice" parse="text" /></programlisting>
+			</para>
+		</section>
+		<section>
+			<title>Send student class commencement notice</title>
+			<variablelist>
+				<varlistentry>
+					<term>Cron</term>
+					<listitem>
+						<para>0 0 9 * * ?</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>
+				<programlisting linenumbering="numbered" language="groovy"><xi:include href="scripts/send student class commencement notice" parse="text" /></programlisting>
+			</para>
+		</section>
+		<section>
+			<title>Send tutor class commencement notice</title>
+			<variablelist>
+				<varlistentry>
+					<term>Cron</term>
+					<listitem>
+						<para>0 0 9 * * ?</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>
+				<programlisting linenumbering="numbered" language="groovy"><xi:include href="scripts/send tutor class commencement notice" parse="text" /></programlisting>
+			</para>
+		</section>
+		<section>
+			<title>Send usi reminder</title>
+			<variablelist>
+				<varlistentry>
+					<term>Entity</term>
+					<listitem>
+						<para>0 0 9 ? * MON</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>
+				<programlisting linenumbering="numbered" language="groovy"><xi:include href="scripts/send usi reminder" parse="text" /></programlisting>
+			</para>
+		</section>
+		<section>
+			<title>Send voucher</title>
+			<variablelist>
+				<varlistentry>
+					<term>Entity</term>
+					<listitem>
+						<para>Voucher</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>
+				<programlisting linenumbering="numbered" language="groovy"><xi:include href="scripts/send voucher" parse="text" /></programlisting>
+			</para>
+		</section>
 	</section>
 </chapter>

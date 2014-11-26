@@ -1,5 +1,5 @@
 <?xml version='1.0'?> 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xslthl="http://xslthl.sf.net"
                 version='1.0'>
 
   <xsl:import href="../build/xslt/docbook/html/chunk.xsl"/>
@@ -30,6 +30,12 @@
       </xsl:attribute>
     </meta>
     <xsl:comment>[if lt IE 9]&gt;&lt;script src="js/html5shiv.js"&gt;&lt;/script>&lt;![endif]</xsl:comment>
+  </xsl:template>
+
+  <xsl:template match="xslthl:string" mode="xslthl">
+    <strong class="hl-string">
+        <xsl:apply-templates mode="xslthl"/>
+    </strong>
   </xsl:template>
 
 </xsl:stylesheet>

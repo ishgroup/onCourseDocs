@@ -1,6 +1,6 @@
 import com.xlson.groovycsv.CsvParser
 
-task extractSchema() {
+task extractScripts() {
 	def srcFile = file("${rootDir}/manual/schema/script.csv")
 	inputs.file srcFile
 
@@ -18,4 +18,23 @@ task extractSchema() {
     }
 }
 
-processResources.dependsOn extractSchema
+task extractTemplates() {
+	def srcFile = file("${rootDir}/manual/schema/emailtemplate.csv")
+	inputs.file srcFile
+
+	def script_dir = file("${buildDir}/templates")
+	script_dir.mkdirs()
+	outputs.dir script_dir
+
+	// parse the CSV
+	def scripts = CsvParser.parseCsv( srcFile.text )
+    
+    // write files to disk
+    for (s in scripts) {
+        def scriptFile = new File("${script_dir}/${s.name}")
+        scriptFile.text = s.bodyPlain
+    }
+}
+
+processResources.dependsOn extractScripts
+processResources.dependsOn extractTemplates

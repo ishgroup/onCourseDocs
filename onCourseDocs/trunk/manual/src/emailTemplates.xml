@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
 	version="5.0" xml:id="emailTemplates">
 	<title>Email Templates</title>
 	<section>
-			<title>Email Templates</title>
-			<para>The best way to define a message template is that it is a predefined and pre-constructed
-			message that are sent out manually or automatically when on an event has occurred. An
-			event that sends a message is defined by a <link xlink:href="#script">script</link>.  An
-			example would be that a student has just enrolled into a class via the website or
-			through the office, so the send_enrolment script will email the 'Enrolment Confirmation'
-			template to the enrolling student. The fields like
-			${enrolment.student.contact.firstName} in the template will insert the relevant data
-			from onCourse into the message.</para>
-			<para>onCourse makes it easy to access and update your templated messages by keeping them in the
-			one place. You can use the templates as they are or you can personalise them to your
-			specific needs and requirements. You can also create additional templates, and where
+		<title>Email Templates</title>
+		<para>The best way to define a message template is that it is a predefined and pre-constructed message that are sent out manually or
+			automatically when on an event has occurred. An event that sends a message is defined by a <link xlink:href="#script">script</link>.
+			An example would be that a student has just enrolled into a class via the website or through the office, so the send_enrolment script
+			will email the 'Enrolment Confirmation' template to the enrolling student. The fields like ${enrolment.student.contact.firstName} in
+			the template will insert the relevant data from onCourse into the message.</para>
+		<para>onCourse makes it easy to access and update your templated messages by keeping them in the one place. You can use the templates as
+			they are or you can personalise them to your specific needs and requirements. You can also create additional templates, and where
 			necessary, accompanying scripts, specific to your business requirements.</para>
-		<para>onCourse default templates include both a plain text and HTML version of the template. If
-			make changes to the template wording you should change both versions of the template for
-			consistency. The receiver's mail client preferences will determine if they receive the
+		<para>onCourse default templates include both a plain text and HTML version of the template. If make changes to the template wording you
+			should change both versions of the template for consistency. The receiver's mail client preferences will determine if they receive the
 			plain or HTML version of the message.</para>
-			<para>To access templates in onCourse go to File > Preferences > Email templates.</para>
+		<para>To access templates in onCourse go to File > Preferences > Email templates.</para>
 		<section>
 			<title>Editing an existing message template</title>
 			<orderedlist>
 				<listitem>
-					<para> In the email template list view, you will see a default list of templates
-						including:</para>
+					<para> In the email template list view, you will see a default list of templates including:</para>
 					<orderedlist>
 						<listitem>
 							<para>Enrolment application accepted</para>
@@ -61,24 +55,20 @@
 					</orderedlist>
 				</listitem>
 				<listitem>
-					<para>Double click on a message from list to open it in edit view. The top half of the window
-						is the plain text version of the message, the lower half the HTML
-						version.</para>
+					<para>Double click on a message from list to open it in edit view. The top half of the window is the plain text version of the
+						message, the lower half the HTML version.</para>
 				</listitem>
 				<listitem>
-					<para>You can add and remove text from this message. Any text that appears inside a field
-						reference ${like.this} is drawing data from the onCourse database. Modify
-						these fields with care.</para>
+					<para>You can add and remove text from this message. Any text that appears inside a field reference ${like.this} is drawing data
+						from the onCourse database. Modify these fields with care.</para>
 				</listitem>
 				<listitem>
-					<para>Make your change to both the plain text and HTML version of the message then save and
-						close.</para>
+					<para>Make your change to both the plain text and HTML version of the message then save and close.</para>
 				</listitem>
 			</orderedlist>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/email_template.png" format="png" />
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/email_template.png" format="png" />
 				</imageobject>
 				<caption>
 					<para>The "Enrolment Confirmation" template window</para>
@@ -87,77 +77,63 @@
 		</section>
 		<section>
 			<title>Creating new templates</title>
-			<para>New templates can be created at your convenience. Click on the + in the top right hand
-				corner of the template window to create a new template.</para>
-			<para>The templates are written in a programming language called Groovy which is a Java based
-				language that can run inside the onCourse application. An overview of the language
-				can be found at <link xlink:href="http://groovy.codehaus.org"
+			<para>New templates can be created at your convenience. Click on the + in the top right hand corner of the template window to create a
+				new template.</para>
+			<para>The templates are written in a programming language called Groovy which is a Java based language that can run inside the
+				onCourse application. An overview of the language can be found at <link xlink:href="http://groovy.codehaus.org"
 					>http://groovy.codehaus.org</link>. </para>
-			<para>If your organisation has the appropriate IT skills in house, you can create your
-				own custom templates or you can request an ish developer create them for you. The
-				development of custom templates is quoted on request.</para>
-			<para>To understand the entities, objects and attributes available to use in building a template,
-				we recommend you download Cayenne Modeler and read the section about <link
-					xlink:href="#dataModel">using the onCourse data model</link>. </para>
+			<para>If your organisation has the appropriate IT skills in house, you can create your own custom templates or you can request an ish
+				developer create them for you. The development of custom templates is quoted on request.</para>
+			<para>To understand the entities, objects and attributes available to use in building a template, we recommend you download Cayenne
+				Modeler and read the section about <link xlink:href="#dataModel">using the onCourse data model</link>. </para>
 			<section>
 				<title>Examples of Groovy in the templates</title>
-				<para>Both onCourse email templates and scripts are written in Groovy. onCourse templates are
-					created using the <link xlink:href="http://groovy.codehaus.org/Groovy+Templates"
-						>GStringTemplateEngine</link>, storing the template files within the
+				<para>Both onCourse email templates and scripts are written in Groovy. onCourse templates are created using the <link
+						xlink:href="http://groovy.codehaus.org/Groovy+Templates">GStringTemplateEngine</link>, storing the template files within the
 					onCourse database.</para>
-				<para>The key to creating a successful template is to ensure you begin with the most appropriate
-					onCourse entity for the task. This will make the process of locating and joining
-					other data from the database straightforward.</para>
-				<para>If your template is to send information to a student in relation to a
-					particular enrolment, then the enrolment entity would be the correct starting
-					point, rather than the student or the contact.</para>
-			<para>The entity name you select as the starting point of the template determines the path you
-					use to join to attributes of other onCourse entities. For example if you were
-					starting with the entity enrolment and wanted to insert the student's first
-					name, you would join the enrolment to the student, then the contact as
-					below:</para>
-			<programlisting language="groovy">${enrolment.student.contact.firstName}</programlisting>
-			<para>However if you wanted to show the same information from a template linked to the invoice
-					entity you would join via the enrolment, as the invoice is linked directly to
-					the payer contact, who might be a different person to the student. This example
-					would give me the first name of the student enrolled in the class linked to an
-					invoiceLine on an invoice.</para>
-			<programlisting>${invoice.invoiceLine.enrolment.student.contact.firstName}</programlisting>
+				<para>The key to creating a successful template is to ensure you begin with the most appropriate onCourse entity for the task. This
+					will make the process of locating and joining other data from the database straightforward.</para>
+				<para>If your template is to send information to a student in relation to a particular enrolment, then the enrolment entity would be
+					the correct starting point, rather than the student or the contact.</para>
+				<para>The entity name you select as the starting point of the template determines the path you use to join to attributes of other
+					onCourse entities. For example if you were starting with the entity enrolment and wanted to insert the student's first name, you
+					would join the enrolment to the student, then the contact as below:</para>
+				<programlisting language="groovy-template">${enrolment.student.contact.firstName}</programlisting>
+				<para>However if you wanted to show the same information from a template linked to the invoice entity you would join via the
+					enrolment, as the invoice is linked directly to the payer contact, who might be a different person to the student. This example
+					would give me the first name of the student enrolled in the class linked to an invoiceLine on an invoice.</para>
+				<programlisting>${invoice.invoiceLine.enrolment.student.contact.firstName}</programlisting>
 				<para>Where this join would give you the name of the invoice payer contact.</para>
 				<programlisting>${invoice.contact.firstName}</programlisting>
-			<para>For some fields you may wish to add formatting, such as showing a date in a particular
-					style. The first example shows a short date format and the second shows a date
-					time and long date format. This page outlines all the <link xlink:href="https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html">Java Simple Date formats</link>
+				<para>For some fields you may wish to add formatting, such as showing a date in a particular style. The first example shows a short
+					date format and the second shows a date time and long date format. This page outlines all the <link
+						xlink:href="https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html">Java Simple Date formats</link>
 					available.</para>
-			<programlisting language="groovy">${invoice.createdOn.format("d/M/yy")}
+				<programlisting language="groovy-template">${invoice.createdOn.format("d/M/yy")}
 ${enrolment.courseClass.startDateTime.format("h:mm a EEEE d MMMM yyyy zzzz")}</programlisting>
-			<para>The results you wish to display may be the result of a calculation of field values. This
-					example subtracts one field from another.</para>
-			<programlisting language="groovy">Total Paid ${invoice.totalIncTax.subtract(invoice.amountOwing)}</programlisting>
-				<para>Inside a template you may wish to include some content that is displayed based on the
-					property of an attribute from the joined object. A simple example of this is
-					only displaying a label and value if the value is not null in the database, like
-					the optional customer reference field.</para>
-				<programlisting language="groovy">&lt;% if (invoice.customerReference) { %>
+				<para>The results you wish to display may be the result of a calculation of field values. This example subtracts one field from
+					another.</para>
+				<programlisting language="groovy-template">Total Paid ${invoice.totalIncTax.subtract(invoice.amountOwing)}</programlisting>
+				<para>Inside a template you may wish to include some content that is displayed based on the property of an attribute from the joined
+					object. A simple example of this is only displaying a label and value if the value is not null in the database, like the optional
+					customer reference field.</para>
+				<programlisting language="groovy-template">&lt;% if (invoice.customerReference) { %>
 Your reference: ${invoice.customerReference}
 &lt;% } %></programlisting>
-				<para>A more complex example is this condition which switches the content of the
-					enrolment confirmation based on whether the class is self paced or has
-					sessions.</para>
-				<programlisting language="groovy">&lt;% if (enrolment.courseClass.startDateTime == null) { %>
+				<para>A more complex example is this condition which switches the content of the enrolment confirmation based on whether the class
+					is self paced or has sessions.</para>
+				<programlisting language="groovy-template">&lt;% if (enrolment.courseClass.startDateTime == null) { %>
 Start: On enrolment
-Expected duration: ${enrolment.courseClass.expectedHours ?: ""not specified""} hours
+Expected duration: ${enrolment.courseClass.expectedHours ?: "not specified"} hours
 &lt;% } else { %>
-Start: ${enrolment.courseClass.startDateTime.format(""h:mm a EEEE d MMMM yyyy zzzz"")}
-End: ${enrolment.courseClass.endDateTime.format(""h:mm a EEEE d MMMM yyyy zzzz"")}
+Start: ${enrolment.courseClass.startDateTime.format("h:mm a EEEE d MMMM yyyy zzzz")}
+End: ${enrolment.courseClass.endDateTime.format("h:mm a EEEE d MMMM yyyy zzzz")}
 &lt;% } %>                </programlisting>
-			<para>You can also create a loop inside a template to iterate through a list of joined entities.
-					To list the invoice lines joined to an invoice you would start with the entity
-					invoice and for each invoice line display the Title, PriceTotalIncTax and
-					Description. More examples of collections can be found on <link
-						xlink:href="http://groovy.codehaus.org/Collections">the Groovy website.</link>
+				<para>You can also create a loop inside a template to iterate through a list of joined entities. To list the invoice lines joined to
+					an invoice you would start with the entity invoice and for each invoice line display the Title, PriceTotalIncTax and Description.
+					More examples of collections can be found on <link xlink:href="http://groovy.codehaus.org/Collections">the Groovy website.</link>
 				</para>
-			<programlisting language="groovy"> &lt;% invoice.invoiceLines.each { %>
+				<programlisting language="groovy-template"> &lt;% invoice.invoiceLines.each { %>
 ${it.title}    ${it.priceTotalIncTax}
 ${it.description}
 &lt;% } %></programlisting>
@@ -165,24 +141,17 @@ ${it.description}
 		</section>
 		<section>
 			<title>Sending a manual message using a template</title>
-			<para>While many emails may be sent automatically based on their associated <link
-					xlink:href="#script">scripts</link>, template emails may also be sent manually,
-				or new templated created just to send manual messages. This allows you to resend
-				important information like a Tax Invoice that may have been misplaced by the student
-				or filtered as junk mail. The send option will use the contacts current email
-				address, so this tool can also be used to resend messages that bounced due to an
-				incorrectly entered email.</para>
-			<para>Template emails can be sent using the appropriate cogwheel option 'send custom email'. The
-				custom emails available are those linked to the same entity. For example, in the
-				Enrolment Confirmation screenshot above you can see it is linked to the entity
-				called Enrolment. This makes the template available in the enrolment window cogwheel
-				list. </para>
-			<para>You can select one or more contacts from the list of records before selecting the
-				cogwheel tool to send the message.</para>
+			<para>While many emails may be sent automatically based on their associated <link xlink:href="#script">scripts</link>, template emails
+				may also be sent manually, or new templated created just to send manual messages. This allows you to resend important information
+				like a Tax Invoice that may have been misplaced by the student or filtered as junk mail. The send option will use the contacts
+				current email address, so this tool can also be used to resend messages that bounced due to an incorrectly entered email.</para>
+			<para>Template emails can be sent using the appropriate cogwheel option 'send custom email'. The custom emails available are those
+				linked to the same entity. For example, in the Enrolment Confirmation screenshot above you can see it is linked to the entity called
+				Enrolment. This makes the template available in the enrolment window cogwheel list. </para>
+			<para>You can select one or more contacts from the list of records before selecting the cogwheel tool to send the message.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/send_custom_email.png" format="png" />
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/send_custom_email.png" format="png" />
 				</imageobject>
 				<caption>
 					<para>Email templates available to send from the enrolment window</para>
@@ -191,9 +160,176 @@ ${it.description}
 		</section>
 		<section>
 			<title>Default templates</title>
-			<para>The default text from all onCourse templates is included below for your reference. This
-				text can be copied back into onCourse should you wish to revert to the onCourse
-				default template for any message.</para>
+			<para>The default plain text from all onCourse templates is included below for your reference. This text can be copied back into
+				onCourse should you wish to revert to the onCourse default template for any message.</para>
+			<section>
+				<title>Enrolment application accepted</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>Enrolment</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Enrolment application accepted" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
+				<title>Enrolment application rejected</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>Enrolment</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Enrolment application rejected" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
+				<title>Enrolment Confirmation</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>Enrolment</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Enrolment Confirmation" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
+				<title>Payment Receipt</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>PaymentIn</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Payment Receipt" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
+				<title>Refund advice</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>PaymentOut</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Refund advice" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
+				<title>Student notice of class commencement</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>Enrolment</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Student notice of class commencement" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
+				<title>Tax invoice</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>Invoice</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Tax invoice" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
+				<title>Tutor notice of class commencement</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>Enrolment</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Tutor notice of class commencement" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
+				<title>USI reminder email</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>Enrolment</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/USI reminder email" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
+				<title>Voucher Email</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>Voucher</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Voucher Email" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
+				<title>Header</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>None</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Header" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
+				<title>Footer</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>None</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Footer" parse="text" /></programlisting>
+				</para>
+			</section>
 		</section>
 	</section>
 </chapter>

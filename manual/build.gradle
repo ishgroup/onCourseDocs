@@ -33,6 +33,9 @@ task extractTemplates() {
     for (s in scripts) {
         def scriptFile = new File("${script_dir}/${s.name}")
         scriptFile.text = s.bodyPlain
+
+        scriptFile = new File("${script_dir}/${s.name}.html")
+        scriptFile.text = s.bodyHtml
     }
 }
 

@@ -438,17 +438,31 @@
 			mind that enrolment information is attached to the student and all financial information (such
 			as invoices / payments / credit notes) are attached to the debtor within the system. Therefore
 			there is no direct data relationship between the student and the debtor.</para>
-		<para>There are 4 methods you can use to extract / examine financial information within
+		<para>There are multiple methods you can use to extract / examine financial information within
 			onCourse;</para>
+		<section>
+			<title>Locating data using related records</title>
+			<para>In all onCourse windows, you can track through the relationships between the data using the
+				'Find related' function in the cogwheel in the top right hand corner. For example,
+				if you wanted to find all the invoices related to the payments in taken on a given
+				day, you can select all the payment in records for the day, go to the cogwheel,
+				selected 'Find related...' and select invoices. This will open all the related
+				invoices in a new window.</para>
+			<para>In the new Invoices window, you can run additional queries and or print reports.
+				This window has opened in a special state that only ever shows the maximum set of
+				results as being the list the generated from your original find related search, so
+				all your searches, filters and reports will only relate to this subset of data until
+				you close the Invoice list window.</para>
+		</section>
 		<section>
 			<title>Printed Financial Reports</title>
 			<para>onCourse comes with a number of different Financial Reports and each of these are
 				looking at one particular aspect or area of the database such as Invoices. You may also wish
 				to analyze the financial information that is being generated and you can do this by
 				comparing information from one report to the next. </para>
-			<para>Here are a few simple examples of data comparison that will enable you to verify the
-				accuracy of the financial information; Account Summary = Invoice Total Payment In = Banking
-				Report Payment In = Cheque Account Balance</para>
+			<para>For example, a data comparison that will enable you to verify the accuracy of the financial
+				information is that the Cheque account balance = Payment in - Payment out for the
+				same time period.</para>
 			<para>New Custom Reports can be developed upon request, just bear in mind the rules of how the
 				data is structured within onCourse when considering what kind of information you want to
 				have appear on the Report.</para>

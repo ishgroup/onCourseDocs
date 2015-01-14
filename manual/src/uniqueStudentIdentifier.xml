@@ -3,40 +3,122 @@
     <title>Unique Student Identifier (USI)</title>
     <section>
         <title>What is the USI?</title>
-        <para>Complying with the January 1 2015 USI requirements is important for our RTO customers,
-            and there are a number of tools we have added to streamline this process for you. More
-            information about what you need to do to be compliant is available on our forum.</para>
-        <para>The new enrolment confirmation email template contains a conditional string for VET
-            students that explains what a USI is and why they need to tell you theirs. This email
-            directs them to a special onCourse portal page (no log in required) requesting they
-            supply their USI or go through the process to create one. </para>
-        <para>onCourse is now integrated with the USI Web services, so once you have received a
-            student’s USI the web services verification process will run and mark the USI as either
-            ‘verified’ or ‘not verified’. For students completing the self service portal, they will
-            be prompted to update their name or date of birth in onCourse if this doesn’t match
-            their official USI data e.g. Bob may need to update his name to Robert, as per his
-            drivers license record. </para>
-        <para>Every Monday morning, all recently enrolled VET students who have not supplied you
-            with their USI will be sent an automatic reminder email on how to complete this process
-            and why it is important they do so. There is a customisable email template and script
-            that runs this process which you can edit to meet your preferred business requirements.
-            A student who gives up or can not validate their USI will be flagged in onCourse for you
-            to follow up. </para>
-        <para>Alternatively, you may need to undertake the creation and validation process on behalf
-            of the student. On the student record AVETMISS tab you will see the USI field now has an
-            additional option next to it that says ‘create a USI’. Once you enter a 10 character
-            USI, the verification process will run automatically in the background. If the USI
-            verifies, then there is nothing more for you to do. If the verification returns an
-            error, you can edit the non-matching data (first name, last name or date of birth) and
-            try again. </para>
-        <para>Additional validation has been added to assist your USI compliance. A student in
-            onCourse who has a verified USI can’t have their first name, last name or date of birth
-            changed without the USI agency having the updated change also. </para>
-        <para>As you are not allowed to issue certifications to students without a USI, the onCourse
-            certificate print process now includes an additional validation check. If your
-            certificate record was created after 1/1/2015, it will not print unless the student has
-            a verified USI in onCourse. Certificates created prior to 2015 will continue to be
-            printable without a USI. Additional access control levels have been added to allow you
-            to override this print control for selected users.</para>
+        <para>On 1 January 2015 the Australian Commonwealth government introduced a Unique Student
+            Identifier which will be issued to every student undertaking vocational training.
+            Eventually this USI will be issued to every child starting primary school and every
+            student at university. The USI is similar to existing identity systems already in place
+            in Australia: medicare number, tax file number, driver's license, etc. but it is not
+            printed on an identity card and it is illegal for RTOs to print them on identity cards
+            or certificates.</para>
+        <para>The USI can only be issued by the USI agency in response to a request from a student
+            who comes with certain idenfication papers. Medicare cards, driver's licenses, birth
+            certificates and passports are probably the most common forms of identification which
+            can be used.</para>
+    </section>
+    <section>
+        <title>Requirements and limitations</title>
+        <para>The USI legislation puts certain limitations on how the USI can be used and how it
+            must be reported.<itemizedlist>
+                <listitem>
+                    <para>The USI cannot be printed on certificates. None of the default
+                        certificates in onCourse include the USI.</para>
+                </listitem>
+                <listitem>
+                    <para>The USI must be verified by the RTO. onCourse has a special feature to
+                        automate this process.</para>
+                </listitem>
+                <listitem>
+                    <para>You may not issue a certificate to a student until you have their USI and
+                        have verified it. onCourse will allow you to create Certificate records but
+                        not print them until the USI is verified. You can override this behaviour
+                        with the appropriate administrator rights, but you must then ensure you have
+                        implemented another verification process in your RTO.</para>
+                </listitem>
+                <listitem>
+                    <para>The USI is a new field in all AVETMISS 7 flavours.</para>
+                </listitem>
+            </itemizedlist></para>
+    </section>
+    <section>
+        <title>Capturing the USI</title>
+        <para>The USI need not be captured at the time of enrolment, but typically you'll want to
+            have it entered and verified before the class is completed in order to not delay issuing
+            of certificates.</para>
+        <section>
+            <title>Manual entry</title>
+            <para>When you create a new student or update an existing one, you can type the USI
+                directly into the field available on the "VET" tab. This can also be done directly
+                within the Quick Enrol process. The USI will be checked for validity (it is the
+                correct length and matches a checksum) and then verified against the USI
+                agency.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invalid_USI.png"/>
+                </imageobject>
+                <caption>
+                    <para>....</para>
+                </caption>
+            </mediaobject>
+        </section>
+        <section>
+            <title>Student self-service</title>
+            <para>If you don't capture the USI from the student manually, onCourse will send the
+                student an email to request the details. This is done in the enrolment confirmation
+                email and again every Monday at 9am until the class is complete or the USI is
+                entered. You can modify these templates or alter the script which sends these weekly
+                emails. Note that students are only sent this email if they are enrolled in a VET
+                flagged class, to avoid bothering your students engaging in non-VET training.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/USI_email.png"/>
+                </imageobject>
+                <caption>
+                    <para>An example of a confirmation email with USI information</para>
+                </caption>
+            </mediaobject>
+            <para>Once the student gets the email requesting their USI, they will be able to click
+                on a link which takes them directly to a page within the skillsOnCourse portal. They
+                will not require a password and the link will be valid for 3 days from the email
+                being sent. The URL is cryptographically signed so that they will not work after the
+                expiry date and they will not be transferrable between students. </para>
+            <para>The skillsOnCourse portal page will explain the USI to the student and give them a
+                convenience link to create or recover a USI if they don't have one or have forgotten
+                it. This has been optimised so that it can be used on mobile and tablet devices. The
+                student will be able to enter the USI and onCourse will handle the verification
+                process automatically.</para>
+            <para>The student will be asked to complete three steps: first their date of birth and
+                USI, then the standard AVETMISS questions which can be skipped and finally some
+                additional information such as a driver's license to validate the USI. If the USI
+                agency reports back that the student's name is wrong (for example, they changed
+                their name after getting married) then onCourse will give them the opportunity to
+                fix this.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/USI_portal_step1.png"/>
+                </imageobject>
+                <caption>
+                    <para>What you see when you have entered the wrong USI in the portal</para>
+                </caption>
+            </mediaobject>
+        </section>
+    </section>
+    <section>
+        <title>Verifying the USI</title>
+        <para>If you entered the USI manually, or the student entered it online, the USI will
+            automatically be verified against the USI agencies system. In order for this process to
+            work we will require a special authorisation key called an auskey from you and linked to
+            your RTO. Please contact your onCourse account manager to assist you with this process.
+            Unfortunately this system will not work for onCourse community edition users who don't
+            have a support agreement with ish. In that case, you can still capture the USI within
+            onCourse but you will not be able to take advantage of the online student self-service
+            process or the automatic verification process.</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/verification_failed.png"/>
+            </imageobject>
+            <caption>
+                <para>....</para>
+            </caption>
+        </mediaobject>
     </section>
 </chapter>

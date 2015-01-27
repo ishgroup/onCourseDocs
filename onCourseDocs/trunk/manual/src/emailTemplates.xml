@@ -26,10 +26,19 @@
 							<para>Enrolment application accepted</para>
 						</listitem>
 						<listitem>
+							<para>Enrolment application received</para>
+						</listitem>
+						<listitem>
 							<para>Enrolment application rejected</para>
 						</listitem>
 						<listitem>
 							<para>Enrolment confirmation</para>
+						</listitem>
+						<listitem>
+							<para>Header</para>
+						</listitem>
+						<listitem>
+							<para>Footer</para>
 						</listitem>
 						<listitem>
 							<para>Payment receipt</para>
@@ -74,6 +83,20 @@
 					<para>The "Enrolment Confirmation" template window</para>
 				</caption>
 			</mediaobject>
+		</section>
+		<section>
+			<title>Email headers and footers</title>
+			<para>The default template list includes a header and footer template, which contains both a
+				plain text and HTML layout.</para>
+			<para>These templates are used inside every other email template.</para>
+			<para>If you look at the template text you'll see that most of the data used to create
+				these templates is drawn from the AVETMISS preferences tab settings. Even if you
+				don't report AVETMISS you should complete these fields so the data used in your
+				templates is correct.</para>
+			<para>The HTML version of the header and footer can insert your businesses logo and use
+				your style guide colour scheme with some minor adjustments. If you do not have a web
+				designer available you can contact ish to request custom changes to these, and other
+				templates.</para>
 		</section>
 		<section>
 			<title>Creating new templates</title>
@@ -168,7 +191,7 @@ ${it.description}
 					<varlistentry>
 						<term>Binding</term>
 						<listitem>
-							<para>Enrolment</para>
+							<para>Application</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -177,12 +200,26 @@ ${it.description}
 				</para>
 			</section>
 			<section>
+				<title>Enrolment application received</title>
+				<variablelist>
+					<varlistentry>
+						<term>Binding</term>
+						<listitem>
+							<para>Application</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				<para>
+					<programlisting linenumbering="numbered" language="groovy-template"><xi:include href="templates/Enrolment application received" parse="text" /></programlisting>
+				</para>
+			</section>
+			<section>
 				<title>Enrolment application rejected</title>
 				<variablelist>
 					<varlistentry>
 						<term>Binding</term>
 						<listitem>
-							<para>Enrolment</para>
+							<para>Application</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>

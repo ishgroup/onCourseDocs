@@ -366,4 +366,50 @@
             </caption>
         </mediaobject>
     </section>
+    <section>
+        <title>USI FAQ</title>
+        <qandaset>
+            <qandaentry>
+                <question><para>Why are all my USIs failing to verify with the error message saying the USI agency can't be contacted?</para></question>
+                <answer><para>For all the customers that <link
+                    xlink:href="https://forum.ish.com.au/discussion/276/preparing-your-rto-for-the-usi-implementation-in-2015#latest"
+                    >followed the instructions we provided on our forum</link> about creating an AUSKey, sending it to us to upload to your server and completing the USI Agency Access request form, it seems the last step went pear shaped for some and the AUSKey wasn't linked to your RTO Id, making the whole automatic verification process fail.</para>
+                    
+      <para>Complete the <link
+                        xlink:href="https://forms.business.gov.au/smartforms/servlet/SmartForm.html?formCode=USI-SysAccess"
+                        >System Access Request Form</link> again and wait for an approval email before trying to verify USIs.</para></answer>
+            </qandaentry>
+            <qandaentry>
+                <question><para>How do I make the USI validation process run in onCourse?</para></question>
+                <answer><para>When onCourse detects you have entered a USI in the USI field on the Student VET tab, it will check that you have an RTO ID entered in your general preferences, and a First Name, Last Name and Date of Birth entered in the student record. If all these fields are complete, the USI Validation process will run automatically in the background.</para><para>If it fails, and you need to change some of the data to make it try again, make the change, click out of the field (use tab on your keyboard, or click into any other field) and the process will run again. If you don't need to change any data, just click in the USI field and click out and it will try again. You can do this as many times as you like - the validation check is quite fast, less than 3 seconds in most instances, and there is no limit to the number of times you can try to validate a USI.</para></answer>
+            </qandaentry>
+            <qandaentry>
+                <question><para>How can I test that my onCourse USI portal access is working as required?</para></question>
+                <answer><para>Go and <link
+                   xlink:href="http://usi.gov.au/create-your-USI/Pages/default.aspx"
+                    >create yourself a USI.</link> Then you can use your own details to create a new student contact and test the USI verification. Try without a date of birth or misspelled name to see the error responses you'll get in onCourse. You can discard the contact instead of saving it onCourse after sufficiently testing the verification process.</para></answer>
+            </qandaentry>
+            <qandaentry>
+                <question><para>What should I do when the student has created their USI in a name different to the name they enrolled with?</para></question>
+                <answer><para>Commonly, students will enrol with the name they prefer to use e.g. Bob rather than Robert, but their USI will be issued in their legal name. When you try to verify the USI they supply against their name, an error will be returned telling you that the first name (or last name, or date of birth) doesn't match the USI you supplied. In that case, you can change the data in onCourse and the verification process will automatically run again.
+                </para><para>If the student uses the USI portal to supply you with their USI, then they can correct their name spelling themselves. You might need to call the student to get their correct name spelling if you are collecting and verifying USIs via an office based process.</para>
+                    <para>Of course, we have also had instances of students whose name is spelt incorrectly on their ID and therefore the name linked to their USI has the wrong spelling, or students who have enrolled using a married name, when the ID they used to create their USI was in their maiden name. You'd need to enter their name into onCourse as an exact match as their USI name to make it validate, but you probably don't want to do this as then their certificate will be issued in the wrong name too. For the time being, leave it as an invalid USI.</para>
+                    <para>In these instances you need to get the student to log into their own <link
+                            xlink:href="https://portal.usi.gov.au/student">USI Agency Portal</link>
+                        and make the change there, and advise you once this has been done. Then you
+                        can try the validation process again, and it should pass with the right
+                        spelling.</para></answer>
+            </qandaentry>
+            <qandaentry>
+                <question><para> How can I find out which students USIs have failed to pass validation in onCourse?</para></question>
+                <answer><para>In the contact advanced search options, you can search for USI status = not verified. You can then work through the list of returned to results to check the error messages, contact the students and make the appropriate changes. As you change the data, the verification process will run again.</para></answer>
+            </qandaentry>
+            <qandaentry>
+                <question><para>How can I find out which students need USIs but don't have one recorded in onCourse?</para></question>
+                <answer><para>Using the class window, locate all your VET classes that are running during 2015 and highlight them all. Use the cog wheel to find 'Enrolled students' related to the highlighted classes.</para>
+                    <para>In this new window of students, use the advanced find to search for USI status = not set. Once you have this list of students, you can then manually follow them up with phone calls or find their enrolments to send them the USI reminder email.</para>
+                    <para>To send the reminder email, select all the students and use the cogwheel to find related enrolments. When the enrolment window opens, check the filter options 'current active' and 'completed active' to remove any cancelled or failed enrolments from the list. Then highlight all the enrolments and from the cog wheel choose the option 'send emails from template' and select the template called 'USI reminder email'.</para></answer>
+            </qandaentry>
+        </qandaset>
+    </section>
 </chapter>

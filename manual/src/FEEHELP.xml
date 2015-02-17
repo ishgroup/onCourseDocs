@@ -3,16 +3,84 @@
     version="5.0" xml:id="FEEHELP">
     <title>FEE-HELP</title>
     <section>
-        <title>FEE-HELP</title>
-                <para>There are a couple of extra fields in the VET tab of a contact record that need to be
-            answered if the student is applying for VET FEE-HELP. You will need to mark the checkbox
-            called 'VET FEE-HELP eligible' for them to appear, these are:</para>
+        <title>What is VET FEE-HELP?</title>
+        <para>In the onCourse context, VET FEE-HELP is a database export and reporting standard for
+            students enrolled in courses for which they can apply for a government study
+            loan.</para>
+        <para>More information about the current reporting standard can be found on the <link xlink:href="http://heimshelp.education.gov.au">Heims Help website</link></para>
+        <para>VET FEE-HELP loans are available to assist eligible students studying Diploma level
+            and above VET Qualifications to pay their tuition fees. Part, or all, of an eligible
+            student’s tuition fees can be deferred into VET FEE‑HELP loan. Some Government funded course fees can also be deferred under the VET FEE-HELP
+            scheme.</para>
+        <para>An RTO needs to be pre-approved to offer VET FEE HELP on some or all of their courses.
+            If you are an approved RTO, onCourse FEE HELP functions will enable you to meet your
+            reporting and record keeping obligations.</para>
+        </section>
+    <section>
+        <title>Creating a VET FEE-HELP Class</title>
+        <para>Creating the VET FEE-HELP course may involve creating a single course, for a full
+            qualification, with all appropriate units of competency attached, if your course is
+            delivered as a single program with one census date.</para>
+        <para>Where your VET FEE-HELP course contains multiple subjects, each with one or more unit,
+            and with varying census dates, you'll need to create the appropriate number of onCourse
+            courses, and at least one VET FEE-HELP approved class for each course.</para>
+        <para>When creating a VET FEE-HELP eligible class, you'll need to ensure the enrolment fee
+            you set is the approved fee for the full course (if there is only one class) or adds up
+            to the full fee if your enrolment is spread amongst multiple subjects and
+            classes.</para>
+        <para>The data you set in the course and the class records is combined with student and
+            enrolment data to create the VET Student Enrolment (VEN), VET Enrolment Revisions (VER),
+            VET Load Liability (VLL), VET Unit of Study Completions (VCU), VET Course Completions
+            (VCC) and VET Commonwealth Assisted Students - HELP Due (VDU) export files.</para>
+        <para>On the class VET tab, you will need to begin by checking the option 'This is a VET
+            FEE-HELP eligible class'. This will show the additional class fields.</para>
         <itemizedlist>
             <listitem>
-                <para>Citizenship status</para>
+                <para>Type of attendance - select from Full time or Part Time</para>
             </listitem>
             <listitem>
-                <para>Tax file number</para>
+                <para>Equivalent full-time student load - this must be expressed as a whole number
+                    where 1 = a full time student load, 05 is 50% of a full time load and 0125 is
+                    equal to 1/8th of a full time student load.</para>
+            </listitem>
+            <listitem>
+                <para>Census date - This is the last date students can withdraw before incurring the
+                    course VET FEE-HELP date. This must match your pre-approved census dates for the
+                    course or subject.</para>
+            </listitem>
+            <listitem>
+                <para>Reporting period - This is the year and semester period in the format YYYYp. A
+                    valid entry in this field would be 20151 or 20152</para>
+            </listitem>
+
+        </itemizedlist>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="80%" contentdepth="80%"
+                    fileref="images/vet_fee_help_class.png"/>
+            </imageobject>
+            <caption>
+                <para>VET FEE-HELP fields in a Class record</para>
+            </caption>
+        </mediaobject>
+    </section>
+        <section>
+        <title>Setting the Student's VET FEE-HELP eligibility</title>
+        <para>For all students enrolled in a class where VET FEE-HELP loans are available, every
+            participant must have additional data in their student VET tab record completed, even if
+            they are not applying for a loan.</para>
+        <para>You will need to create and record a CHESSN for each student, and complete the
+            student's contact details and AVETMISS questions responses as usual.</para>
+                <para>There are some additional fields in the VET tab of a contact record that need
+            to be completed if the student is applying for VET FEE-HELP. You will need to mark the
+            checkbox called 'VET FEE-HELP eligible' for them to appear, these are:</para>
+        <itemizedlist>
+            <listitem>
+                <para>Citizenship status - select an option from the drop down box</para>
+            </listitem>
+            <listitem>
+                <para>Tax file number - record the number provided by the student which they have
+                    obtained from the ATO</para>
             </listitem>
         </itemizedlist>
         <mediaobject>
@@ -24,63 +92,56 @@
                 <para>VET FEE-HELP fields in a Contact record</para>
             </caption>
         </mediaobject>
-        <para>There are also a couple of extra fields in the VET tab of a class record that need to be
-            answered if the class is eligible for VET FEE-HELP. You will need to mark the checkbox
-            called 'This is a VET FEE-HELP eligible class' for them to appear, these are:</para>
+    </section>
+    <section>
+        <title>Student VET FEE-HELP Loan requests</title>
+        <para>Every enrolment record has a VET FEE-HELP tab that is used to record the VET FEE-HELP
+            loan request, or report that the student doesn't wish to apply for a loan. </para>
+        <para>The fee charged field will show the enrolment fee the student was charged. This data
+            is tied to the invoices generated is not editable in their enrolment record.</para>
+        <para>In the FEE HELP requested field, you can indicate that the student doesn't wish to
+            apply for a loan by leaving the default value as $0.00 or enter an amount up to the full
+            class fee.</para>
+        <para>The loan fee will be calculated based on the value you have set in the Fee Subsidy
+            drop down box. Non-state government subsidised courses will incur a 20% loan fee that
+            you'll see added to the Total Loan amount. Subsidised courses incur no loan fee.</para>
+        <para>Beyond this required data, you can optionally complete the fields in the section
+            headed 'Credit and RPL'. Leave the fields blank that do not apply this student's
+            enrolment.</para>
         <itemizedlist>
             <listitem>
-                <para>Type of attendance</para>
+                <para>Credit offered value - This field contains EFTSL value of the credit/RPL
+                    offered at the reporting date towards the total requirements of the course and
+                    can contain values from 0001 to 9999.</para>
             </listitem>
             <listitem>
-                <para>Census date</para>
+                <para>Credit used value - This field should report the sum total value of all
+                    credit/RPL used by a student toward their current course, at the reporting date.
+                    The value reported in this element must be less than or equal to the value
+                    reported in the 'Credit offered value' and can contain values from 0001 to
+                    9999.</para>
             </listitem>
             <listitem>
-                <para>Reporting period</para>
+                <para>RPL Indicator - select from the drop down list</para>
             </listitem>
             <listitem>
-                <para>Equivalent full-time student load</para>
-            </listitem>
-        </itemizedlist>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="80%" contentdepth="80%"
-                    fileref="images/vet_fee_help_class.png"/>
-            </imageobject>
-            <caption>
-                <para>VET FEE-HELP fields in a Class record</para>
-            </caption>
-        </mediaobject>
-        <para>Every enrolment record will have a VET FEE-HELP tab that is used when the
-            corresponding enrolment has has FEE-HELP from the government. There are a number of
-            fields that need to be filled in, with other just being read only. The fields that can
-            be edited are:</para>
-        <itemizedlist>
-            <listitem>
-                <para>Fee Subsidy</para>
+                <para>Credit Field of Education ID - A code that records details of the field of
+                    education of the VET study for which credit/RPL was offered. Valid codes are in
+                    the range 0100 - 1299​ and can be found on the <link xlink:href="http://heimshelp.education.gov.au/sites/heimshelp/resources/pages/appendices">Heims Help website</link></para>
             </listitem>
             <listitem>
-                <para>Credit offered value</para>
+                <para>Credit offered provider code - A code indicating the Higher Education Provider
+                    where the studies for which the credit/RPL was offered were undertaken. Valid
+                    codes are in the range of 1000 to 6000 and can be found on the <link xlink:href="http://heimshelp.education.gov.au/sites/heimshelp/resources/pages/appendices">Heims Help website</link> </para>
             </listitem>
             <listitem>
-                <para>Credit used value</para>
+                <para>Credit type - select from the drop down list</para>
             </listitem>
             <listitem>
-                <para>RPL Indicator</para>
+                <para>Credit provider type - select from the drop down list</para>
             </listitem>
             <listitem>
-                <para>Credit Field of Education ID</para>
-            </listitem>
-            <listitem>
-                <para>Credit offered provider code</para>
-            </listitem>
-            <listitem>
-                <para>Credit type</para>
-            </listitem>
-            <listitem>
-                <para>Credit provider type</para>
-            </listitem>
-            <listitem>
-                <para>Credit level</para>
+                <para>Credit level - select from the drop down list</para>
             </listitem>
         </itemizedlist>
         <mediaobject>
@@ -91,10 +152,16 @@
             <caption>
                 <para>VET FEE-HELP tab in a Enrolment record</para>
             </caption>
-        </mediaobject>   
-        <para>To peform a VET FEE HELP export you need to open the class list window. Once you have
-            this open, highlight one or more classes, click on the cogwheel and choose the option
-            VET FEE HELP export.</para>
+        </mediaobject>
+    </section>
+<section>
+    <title>Exporting VET FEE-HELP data</title>
+        <para>To perform a VET FEE HELP export open the class list window. Once you have this open,
+            highlight one or more classes, click on the cogwheel and choose the option VET FEE HELP
+            export.</para>
+        <para>This will create a number of text files in your computer's user directory. These files
+            are designed to be uploaded into HEPCAT, and are not supposed to be human readable in
+            this format.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -103,11 +170,32 @@
             <caption>
                 <para>Performing a VET FEE-HELP export</para>
             </caption>
-        </mediaobject>   
-        <para>After you run the VET FEE-HELP export, you can open the reporting tool 'HEPCAT' and
-            upload the data to get lodged. </para>
-        <para>This tool will allow you to validate the data obtained in the VET FEE-HELP
-            export.</para>
+        </mediaobject>
+        <para>The file names have a default structure you will need to edit prior to HEPCAT import.
+            The year code after the file acronym will be the current year by default e.g.
+            0000VCC2015.100001 may need to be changed to  0000VCC2014.100001 if you are reporting
+            data for a previous calendar year. </para>
+        <para>The final part of the name code after the full stop is the reporting period (first
+            character) and submission number (numeric; 00001 to 99999). All exports will have the
+            value 100001 in this part of the name, you may need to adjust before import.</para>
+    <para>More information on file naming conventions is available in the <link xlink:href="http://heimshelp.education.gov.au/sites/heimshelp/resources/toolkits/pages/reporting-with-hepcat">Reporting with HEPCAT toolkit</link> </para>
+    <mediaobject>
+        <imageobject>
+            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                fileref="images/vet_fee_help_export_files.png"/>
+        </imageobject>
+        <caption>
+            <para>Default export file names that need to be modified</para>
+        </caption>
+    </mediaobject>
+        <para>You will need HEPCAT installed on your computer to upload the files.</para>
+        <para>HEPCAT will validate the data you have exported from onCourse. You can return to
+            onCourse to correct any validation errors and export the data again, or fix the errors
+            directly inside the HEPCAT software.</para>
+        <para>Once your data has been validated, you will be able to export it from HEPCAT to the
+            Higher Education Information Management System (<link
+                xlink:href="http://heimshelp.education.gov.au/sites/heimshelp/resources/glossary/pages/glossaryterm?title=Higher%20Education%20Information%20Management%20System%20%28HEIMS%29"
+                >HEIMS</link>) and receive your student enrolment fee payments.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"

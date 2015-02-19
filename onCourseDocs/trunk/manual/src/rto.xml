@@ -478,7 +478,7 @@
 			</section>
 		</section>
 	</section>
-	<section>
+	<section xml:id="rto-Certificates">
 		<title>VET Qualifications and other Certificates</title>
 		<para>onCourse includes the AQF recommended templates for full Qualification Certificates,
 			Statements of Attainment and transcripts. Certificates can only be generated from units
@@ -515,17 +515,17 @@
 				Once created, the certificate record can be edited and amended or even deleted prior
 				to printing, but after the record is printed it becomes locked in the database to
 				ensure an accurate record of your issued certificates are retained.</para>
-			<para>After printing a certificate, if you determine the certificate was printed in error, you
-				can chose to revoke the certificate using the cogwheel option. This maintains the
-				certificate reference in the database, with a note as to why you have revoked it. A
-				revoked certificate can not be printed, but other valid certificates can be
-				reprinted at any time. The last date you printed the certificate is automatically
-				recorded in the certificate record.</para>
+			<para>After printing a certificate, if you determine the certificate was printed in
+				error, you can chose to revoke the certificate using the cogwheel option. This
+				maintains the certificate reference in the database, with a note as to why you have
+				revoked it. A revoked certificate can not be printed, but other valid certificates
+				can be reprinted at any time. The last date you printed the certificate is
+				automatically recorded in the certificate record.</para>
 			<para>Certificate records in onCourse can either be full Qualifications, Statements of
 				Attainment working towards a Qualification, Statements of Attainment with no
 				qualification reference, or a Statement of Attainment for a skill set.</para>
-			<para>When a certificate record is created, there is a radio button option to select if the
-				Certificate is a Qualification or Statement of Attainment. Based on this
+			<para>When a certificate record is created, there is a radio button option to select if
+				the Certificate is a Qualification or Statement of Attainment. Based on this
 				information, plus the data or lack of data in the Qualification name/national code
 				fields and the Public (printed) notes field, onCourse automatically selects the
 				correct layout of the certificate template to print.</para>
@@ -557,59 +557,61 @@
 			<title>Examples of default Certificate layouts</title>
 			<section>
 				<title>Standard Qualification</title>
-			<para>To create a qualification for a student you need to ensure the following:</para>
-			<orderedlist>
-				<listitem>
-					<para>If you are creating the Certificate directly from the class or the
-						enrolment, that the course has the option 'satisfies requirements for the
-						complete qualification' checked to create a qualification by default. If
-						this option has not been checked at the course level, you will create a
-						Statement of Attainment record. You can manually change this to a
-						Qualification in the certificate record before printing.</para>
-				</listitem>
-				<listitem>
-					<para>You need to manually confirm that the qualification record you are
-						creating meets the training package requirements, by adding sufficient and
-						valid units of competency from the student's record which they have
-						completed successfully.</para>
-				</listitem>
-				<listitem>
-					<para>When you print a Qualification you will also print a transcript which
-						shows the outcomes status of each unit you have selected. Unsuccessful
-						outcomes you have added to the certificate record will also print on the
-						transcript. It is your choice to add these to the certificate record or not,
-						depending on your organisation's policies.</para>
-				</listitem>
-			</orderedlist>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/qualcert.png" format="png" />
-				</imageobject>
-				<caption>
-					<para>Standard Qualification Certificate layout</para>
-				</caption>
-			</mediaobject>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/transcript.png" format="png" />
-				</imageobject>
-				<caption>
-					<para>Standard Transcript layout</para>
-				</caption>
-			</mediaobject>
-			</section>
-			<section>
-				<title>Qualification for a Traineeship/Apprenticeship</title>
-				<para>As per the instructions above for creating a standard Qualification, you can modify a
-					qualification certificate record to show the text 'achieved through Australian
-					Apprenticeship arrangements' by entering this text in the public (printed) notes
-					field in the certificate record.</para>
+				<para>To create a qualification for a student you need to ensure the
+					following:</para>
+				<orderedlist>
+					<listitem>
+						<para>If you are creating the Certificate directly from the class or the
+							enrolment, that the course has the option 'satisfies requirements for
+							the complete qualification' checked to create a qualification by
+							default. If this option has not been checked at the course level, you
+							will create a Statement of Attainment record. You can manually change
+							this to a Qualification in the certificate record before
+							printing.</para>
+					</listitem>
+					<listitem>
+						<para>You need to manually confirm that the qualification record you are
+							creating meets the training package requirements, by adding sufficient
+							and valid units of competency from the student's record which they have
+							completed successfully.</para>
+					</listitem>
+					<listitem>
+						<para>When you print a Qualification you will also print a transcript which
+							shows the outcomes status of each unit you have selected. Unsuccessful
+							outcomes you have added to the certificate record will also print on the
+							transcript. It is your choice to add these to the certificate record or
+							not, depending on your organisation's policies.</para>
+					</listitem>
+				</orderedlist>
 				<mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/qualapprentice.png" format="png" />
+							fileref="images/qualcert.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Standard Qualification Certificate layout</para>
+					</caption>
+				</mediaobject>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/transcript.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Standard Transcript layout</para>
+					</caption>
+				</mediaobject>
+			</section>
+			<section>
+				<title>Qualification for a Traineeship/Apprenticeship</title>
+				<para>As per the instructions above for creating a standard Qualification, you can
+					modify a qualification certificate record to show the text 'achieved through
+					Australian Apprenticeship arrangements' by entering this text in the public
+					(printed) notes field in the certificate record.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/qualapprentice.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>A qualification achieved via an apprenticeship arrangement</para>
@@ -618,54 +620,59 @@
 			</section>
 			<section>
 				<title>Statement of Attainment with qualification reference</title>
-			<para>To create a Statement of Attainment that references a qualification to need to ensure the following:</para>
-		<orderedlist>
-			<listitem>
-					<para>If you are creating the Certificate directly from the class or the
-						enrolment, the course has a qualification defined, and 'satisfies
-						requirements for the complete qualification' is not checked you will create
-						a Statement of Attainment record. If it is checked, and you automatically
-						create a Qualification for a student who is only eligible for a Statement of
-						Attainment because they have not meet all the course requirements, you can
-						change it from a Qualification to a Statement prior to printing. If you have
-						not defined the reference qualification in the course level, you can define
-						this in the certificate records before printing.</para>
-				</listitem>
-				<listitem>
-					<para>Any unsuccessful outcome you add to the certificate record will not print
-						on the certificate face, but will print on the accompanying
-						transcript.</para>
-				</listitem>
-		</orderedlist>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/soawithqual.png" format="png" />
-				</imageobject>
-				<caption>
-					<para>Standard Statement of Attainment layout</para>
-				</caption>
-			</mediaobject>
+				<para>To create a Statement of Attainment that references a qualification to need to
+					ensure the following:</para>
+				<orderedlist>
+					<listitem>
+						<para>If you are creating the Certificate directly from the class or the
+							enrolment, the course has a qualification defined, and 'satisfies
+							requirements for the complete qualification' is not checked you will
+							create a Statement of Attainment record. If it is checked, and you
+							automatically create a Qualification for a student who is only eligible
+							for a Statement of Attainment because they have not meet all the course
+							requirements, you can change it from a Qualification to a Statement
+							prior to printing. If you have not defined the reference qualification
+							in the course level, you can define this in the certificate records
+							before printing.</para>
+					</listitem>
+					<listitem>
+						<para>Any unsuccessful outcome you add to the certificate record will not
+							print on the certificate face, but will print on the accompanying
+							transcript.</para>
+					</listitem>
+				</orderedlist>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/soawithqual.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Standard Statement of Attainment layout</para>
+					</caption>
+				</mediaobject>
 			</section>
 			<section>
 				<title>Statement of Attainment without qualification reference</title>
-				<para>If you wish to create a Statement of Attainment that doesn't include a reference to a
-					qualification, you need to ensure that National Code field is left blank in the
-					certificate record. Otherwise the instructions are the same as above.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/soanoqual.png" format="png" />
-				</imageobject>
-				<caption>
-					<para>Statement of Attainment layout without a reference to a qualification</para>
-				</caption>
-			</mediaobject>
-		</section>
-		<section>
-			<title>Skills Set Statement of Attainment Certificate</title>
-			<para>A skill set is a relatively new concept of a fixed grouping of units of competency to meet
-					an industry need, that is less than completing a whole qualification.</para>
+				<para>If you wish to create a Statement of Attainment that doesn't include a
+					reference to a qualification, you need to ensure that National Code field is
+					left blank in the certificate record. Otherwise the instructions are the same as
+					above.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/soanoqual.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Statement of Attainment layout without a reference to a
+							qualification</para>
+					</caption>
+				</mediaobject>
+			</section>
+			<section>
+				<title>Skills Set Statement of Attainment Certificate</title>
+				<para>A skill set is a relatively new concept of a fixed grouping of units of
+					competency to meet an industry need, that is less than completing a whole
+					qualification.</para>
 				<para>When you issue a skill set certificate, you should indicate the name of the
 					skill set and the training package the units of competency are from.</para>
 				<para>You can do this by adding wording like "the Assessor Skill Set. These units
@@ -681,16 +688,16 @@
 					your Public (printed) notes. If you have completed the qualification information
 					in the certificate record, you will get the standard Statement of Attainment
 					layout, instead of this Skill Set Certificate layout.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/soaskillset.png" format="png" />
-				</imageobject>
-				<caption>
-					<para>Statement of Attainment layout for a Skill Set Certificate</para>
-				</caption>
-			</mediaobject>
-		</section>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/soaskillset.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Statement of Attainment layout for a Skill Set Certificate</para>
+					</caption>
+				</mediaobject>
+			</section>
 		</section>
 		<section>
 			<title>Customising the layout of your VET Certificate template</title>
@@ -703,20 +710,22 @@
 				Preferences > General and the AVETMISS tab and change the wording in the Full
 				Signatory name field at the bottom of the window. This will change the signatory for
 				both Qualifications and Statements of Attainment.</para>
-			<para>If you wish to make other changes to the fixed wording, the font sizes or styles or embed
-				any other images into the certificate templates, then you will need to modify the
-				report files outside of onCourse. You can do this yourself or you can request a
-				quote from ish to do this for you if you are on any of our support plans. There is
-				more information about how you can customise reports yourself in <xref
+			<para>If you wish to make other changes to the fixed wording, the font sizes or styles
+				or embed any other images into the certificate templates, then you will need to
+				modify the report files outside of onCourse. You can do this yourself or you can
+				request a quote from ish to do this for you if you are on any of our support plans.
+				There is more information about how you can customise reports yourself in <xref
 					xlink:href="#reports"/> of the documentation.</para>
 		</section>
 		<section>
 			<title> Creating Certificates for a class group </title>
-			<para>This option is only recommended if most of the students have successfully completed the course, otherwise many of the certificates you create will need to be manually edited or deleted.</para>
+			<para>This option is only recommended if most of the students have successfully
+				completed the course, otherwise many of the certificates you create will need to be
+				manually edited or deleted.</para>
 			<orderedlist>
 				<listitem>
-					<para> Open the class window and select the class(es) you wish to create certificates for.
-					</para>
+					<para> Open the class window and select the class(es) you wish to create
+						certificates for. </para>
 				</listitem>
 				<listitem>
 					<para> Select the cog wheel option 'Create certificates'. This will
@@ -737,10 +746,10 @@
 						window, the enrolment records or via the student's contact record.</para>
 				</listitem>
 				<listitem>
-					<para>From the certificate window and print the certificates as needed to PDF or directly to
-						the printer. Once they are printed they can no longer be modified. Printing
-						to PDF is considered the same as printing to a printer, and also locks the
-						record from being modified.</para>
+					<para>From the certificate window and print the certificates as needed to PDF or
+						directly to the printer. Once they are printed they can no longer be
+						modified. Printing to PDF is considered the same as printing to a printer,
+						and also locks the record from being modified.</para>
 				</listitem>
 			</orderedlist>
 		</section>
@@ -770,26 +779,29 @@
 						certificates. </para>
 				</listitem>
 				<listitem>
-					<para> Type the student name into the first field. This field is clairvoyant. They student
-						must be in the database and the name entered correctly to proceed. The students suburb
-						and date of birth will be displayed when their record is found. </para>
+					<para> Type the student name into the first field. This field is clairvoyant.
+						They student must be in the database and the name entered correctly to
+						proceed. The students suburb and date of birth will be displayed when their
+						record is found. </para>
 				</listitem>
 				<listitem>
-					<para> Enter the National Code for the Qualification or Accredited Course you wish to use
-						for the certificate. This is not limited to qualifications the student has attempted at
-						your college, as many units are valid towards a number of qualifications. </para>
+					<para> Enter the National Code for the Qualification or Accredited Course you
+						wish to use for the certificate. This is not limited to qualifications the
+						student has attempted at your college, as many units are valid towards a
+						number of qualifications. </para>
 				</listitem>
 				<listitem>
-					<para> If you wish to issue a full qualification, tick the box 'Satisfies requirement for
-						complete qualification'. If you do not tick this box, you will be creating a Statement
-						of Attainment. </para>
+					<para> If you wish to issue a full qualification, tick the box 'Satisfies
+						requirement for complete qualification'. If you do not tick this box, you
+						will be creating a Statement of Attainment. </para>
 				</listitem>
 				<listitem>
-					<para> Select the plus sign to begin adding modules/units from the students record to the
-						certificate. You can add as many as you need – and you must ensure that you only add
-						units that meet the qualification packaging rules of the qualification you selected
-						above. Modules/units selected can be added to this certificate only once, however they
-						can be used again to create other certificates in the future. </para>
+					<para> Select the plus sign to begin adding modules/units from the students
+						record to the certificate. You can add as many as you need – and you must
+						ensure that you only add units that meet the qualification packaging rules
+						of the qualification you selected above. Modules/units selected can be added
+						to this certificate only once, however they can be used again to create
+						other certificates in the future. </para>
 				</listitem>
 				<listitem>
 					<para> When the information is correct, select save. </para>
@@ -810,8 +822,8 @@
 				AQF Certification Guidelines regarding the issuing of non-VET certifications.</para>
 			<orderedlist>
 				<listitem>
-					<para> Open the class window and select the class(es) you wish to create certificates for.
-					</para>
+					<para> Open the class window and select the class(es) you wish to create
+						certificates for. </para>
 				</listitem>
 				<listitem>
 					<para> Select the cog wheel option 'Create certificates'. </para>
@@ -829,30 +841,32 @@
 						enrolment and selecting File > Print > Certificate of Attendance</para>
 				</listitem>
 				<listitem>
-					<para> You can re-create these certificates at any time – there are no records created in
-						the certificate window as they are not VET certifications. </para>
+					<para> You can re-create these certificates at any time – there are no records
+						created in the certificate window as they are not VET certifications.
+					</para>
 				</listitem>
 			</orderedlist>
 		</section>
 		<section>
 			<title>Creating a Certificate of Attendance for a VET class student</title>
-			<para>On occasion, a student may attend a VET course but choose not to be assessed. If they have
-				met your attendance requirements, you may choose to issue them a Certificate of
-				Attendance.</para>
+			<para>On occasion, a student may attend a VET course but choose not to be assessed. If
+				they have met your attendance requirements, you may choose to issue them a
+				Certificate of Attendance.</para>
 			<para>You can do this by going to the enrolment window, highlighting the student's
 				enrolment and selecting File > Print > Certificate of Attendance</para>
 			<para>Please note that if you have named the course the official title of the
 				Qualification or Unit of Competency (e.g. Certificate IV in Frontline Management)
 				their Certificate of Attendance will include that wording.</para>
-			<para>No certificate record is created in the certificate table for the printing of a Certificate
-				of Attendance. This is just a printed report.</para>
+			<para>No certificate record is created in the certificate table for the printing of a
+				Certificate of Attendance. This is just a printed report.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/VETcertattend.png" format="png" />
+						fileref="images/VETcertattend.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>Certificate of Attendance printed for a VET student who chose not to be assessed</para>
+					<para>Certificate of Attendance printed for a VET student who chose not to be
+						assessed</para>
 				</caption>
 			</mediaobject>
 		</section>
@@ -909,52 +923,53 @@
 				paid.</para>
 		</section>
 	</section>
-	<section>
+	<section xml:id="rto-Traineeships">
 		<title>Traineeships and Custom Training</title>
 		<para>onCourse has the ability for courses and classes to be created under the traineeship
-			model, where one student is often completing a work-based course of study, managed via their
-			employer, with regular onsite visits for assessment.</para>
+			model, where one student is often completing a work-based course of study, managed via
+			their employer, with regular onsite visits for assessment.</para>
 		<para>The custom class function available through Quick Enrol allows users to create these
 			programs for students.</para>
 		<para>First you need to ensure you have created a course containing the expected units of
-			competency for the traineeship. See <xref xlink:href="#coursesVET" /> This could be just the
-			core units, or the core units and the expected electives. The actual electives chosen by each
-			trainee can either be added or changed later.</para>
-		<para>Once the course has been created, you can then create a private booking in quick enrol.
-			See <xref xlink:href="#privateBookings" /> You can set the assessor during this process, as
-			well as schedule the first assessment/training session, or wait until later to determine this
-			information.</para>
+			competency for the traineeship. See <xref xlink:href="#coursesVET"/> This could be just
+			the core units, or the core units and the expected electives. The actual electives
+			chosen by each trainee can either be added or changed later.</para>
+		<para>Once the course has been created, you can then create a private booking in quick
+			enrol. See <xref xlink:href="#privateBookings"/> You can set the assessor during this
+			process, as well as schedule the first assessment/training session, or wait until later
+			to determine this information.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="90%" contentdepth="90%"
-					fileref="images/creating_traineeship.png" format="png" />
+					fileref="images/creating_traineeship.png" format="png"/>
 			</imageobject>
 			<caption>
 				<para>Creating a new traineeship in Quick Enrol</para>
 			</caption>
 		</mediaobject>
-		<para>It is important that you collect the employer information for the trainee enrolled in the
-			traineeship. If the employer will be paying the fee, you need to make sure this is reflected
-			during the quick enrol process so the invoice is issued to the employer instead of the
-			trainee. Use the contact relationship function to link the student to the employer. See <xref
-				xlink:href="#contactsRelationships" />
+		<para>It is important that you collect the employer information for the trainee enrolled in
+			the traineeship. If the employer will be paying the fee, you need to make sure this is
+			reflected during the quick enrol process so the invoice is issued to the employer
+			instead of the trainee. Use the contact relationship function to link the student to the
+			employer. See <xref xlink:href="#contactsRelationships"/>
 		</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="90%" contentdepth="90%"
-					fileref="images/traineeship_employer_payer.png" format="png" />
+					fileref="images/traineeship_employer_payer.png" format="png"/>
 			</imageobject>
 			<caption>
 				<para>Assigning the employer as the payer of the traineeship fees</para>
 			</caption>
 		</mediaobject>
-		<para>Once the student is linked to the employer, and assessor has been set from your RTO and
-			you have specified the start and end dates for the traineeship, you will be able to print a
-			Traineeship Training Plan. This is a useful document to provide to the trainee and their
-			employer to confirm the details of the units they have chosen for their traineeship.</para>
+		<para>Once the student is linked to the employer, and assessor has been set from your RTO
+			and you have specified the start and end dates for the traineeship, you will be able to
+			print a Traineeship Training Plan. This is a useful document to provide to the trainee
+			and their employer to confirm the details of the units they have chosen for their
+			traineeship.</para>
 		<para>If you have created a single trainee enrolment in the class, you can also provide the
 			AVETMISS reporting for the traineeship for this single trainee as required. By using the
-			AVETMISS data export by class function. See <xref xlink:href="#AVETMISSExports" />
+			AVETMISS data export by class function. See <xref xlink:href="#AVETMISSExports"/>
 		</para>
 	</section>
 </chapter>

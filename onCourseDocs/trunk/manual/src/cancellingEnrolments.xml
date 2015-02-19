@@ -199,16 +199,16 @@
 			</caption>
 		</mediaobject>
 	</section>
-	<section>
+	<section xml:id="cancellingEnrolments-PaymentOut">
 		<title>Refunding a student via Payment Out</title>
-		<para>If you wish to give a contact back their money, you need to create a payment out record. You
-			can return cash to the payer, write a cheque, or if they have paid by a credit card
-			through onCourse (not via an EFTPOS terminal) you can automatically reverse the payment
-			back to their card. Manual credit card reversals can also be done through an EFTPOS
-			terminal, but you will need to contact the payer to get their card details first. </para>
+		<para>If you wish to give a contact back their money, you need to create a payment out
+			record. You can return cash to the payer, write a cheque, or if they have paid by a
+			credit card through onCourse (not via an EFTPOS terminal) you can automatically reverse
+			the payment back to their card. Manual credit card reversals can also be done through an
+			EFTPOS terminal, but you will need to contact the payer to get their card details first. </para>
 		<tip>
-			<para>If you refund a fee via an EFTPOS terminal, you will still need to record a payment out
-				entry within onCourse, simply select payment type 'EFT'.</para>
+			<para>If you refund a fee via an EFTPOS terminal, you will still need to record a
+				payment out entry within onCourse, simply select payment type 'EFT'.</para>
 		</tip>
 		<example>
 			<title>How to refund a student</title>
@@ -220,60 +220,64 @@
 					<para>Enter the name of the contact who has the credit note</para>
 				</listitem>
 				<listitem>
-					<para> You will see the total balance of their credit notes available to be refunded. Some
-						contacts may have multiple credit notes. You can refund all or a part of their total
-						balance. You can not refund more than the total balance.</para>
+					<para> You will see the total balance of their credit notes available to be
+						refunded. Some contacts may have multiple credit notes. You can refund all
+						or a part of their total balance. You can not refund more than the total
+						balance.</para>
 				</listitem>
 				<listitem>
-					<para>Chose the method with which you wish to refund the contact. If you choose credit card,
-						any available transaction will be available from the list to reverse. The
-						list of available transactions is ordered  by date with the most recent
-						transaction at the top of the list. As shown in the example below. </para>
+					<para>Chose the method with which you wish to refund the contact. If you choose
+						credit card, any available transaction will be available from the list to
+						reverse. The list of available transactions is ordered by date with the most
+						recent transaction at the top of the list. As shown in the example below.
+					</para>
 				</listitem>
 				<listitem>
-					<para>Save the payment out record. The contacts credit note balance will be reduced by the
-						amount you have just refunded.</para>
+					<para>Save the payment out record. The contacts credit note balance will be
+						reduced by the amount you have just refunded.</para>
 				</listitem>
 			</orderedlist>
 		</example>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/payment_out_via_credit_card.png" format="png" />
+					fileref="images/payment_out_via_credit_card.png" format="png"/>
 			</imageobject>
 			<caption>
-				<para>Selecting the credit card transaction to be refunded from the drop down list</para>
+				<para>Selecting the credit card transaction to be refunded from the drop down
+					list</para>
 			</caption>
 		</mediaobject>
 		<section>
 			<title>A few notes on onCourse credit card reversals</title>
 			<para>onCourse does not store credit card numbers. What it does store is a transaction
-				reference number supplied by the bank. This transaction reference number allows you to
-				reverse up to the original amount paid during the transaction. This means you can refund the
-				payer with complete confidence that the payment is being returned to the original credit
-				card that paid for the enrolment.</para>
+				reference number supplied by the bank. This transaction reference number allows you
+				to reverse up to the original amount paid during the transaction. This means you can
+				refund the payer with complete confidence that the payment is being returned to the
+				original credit card that paid for the enrolment.</para>
 			<para>There are some limitations that you need to be aware of however:</para>
-			<para>1. Credit card transactions are only available to reverse up to three months after the
-				initial date of purchase. An attempted refund to a transaction older than this will
-				fail.</para>
-			<para>2. Each transaction can only be reversed ONCE. This means that if a single transaction
-				paid for multiple enrolments, say 3 x $100 enrolments with one transaction of $300, and one
-				enrolment is cancelled and refunded to the value of $100, the remaining $200 can not be
-				refunded from the same transaction. If you want to refund the remaining $200 you will need
-				to contact the person for their card number and process it manually though an EFTPOS
-				terminal. This is a limitation imposed by the banks, not onCourse.</para>
-			<para>3. You can only refund UP TO the original amount of the transaction. You can not refund
-				the student more than they paid per transaction. For example, if two $100 enrolments we paid
-				for in separate credit card transactions by the same contact and both cancelled and eligible
-				for a refund, you would need to process two payments out of $100 each, once against each
-				transaction.</para>
-			<para>4. If the credit card you are attempting to refund has been cancelled by it's owner, or
-				expired, the attempt to refund it will fail. You will need to contact the student and
-				arrange an alternate refund method.</para>
+			<para>1. Credit card transactions are only available to reverse up to three months after
+				the initial date of purchase. An attempted refund to a transaction older than this
+				will fail.</para>
+			<para>2. Each transaction can only be reversed ONCE. This means that if a single
+				transaction paid for multiple enrolments, say 3 x $100 enrolments with one
+				transaction of $300, and one enrolment is cancelled and refunded to the value of
+				$100, the remaining $200 can not be refunded from the same transaction. If you want
+				to refund the remaining $200 you will need to contact the person for their card
+				number and process it manually though an EFTPOS terminal. This is a limitation
+				imposed by the banks, not onCourse.</para>
+			<para>3. You can only refund UP TO the original amount of the transaction. You can not
+				refund the student more than they paid per transaction. For example, if two $100
+				enrolments we paid for in separate credit card transactions by the same contact and
+				both cancelled and eligible for a refund, you would need to process two payments out
+				of $100 each, once against each transaction.</para>
+			<para>4. If the credit card you are attempting to refund has been cancelled by it's
+				owner, or expired, the attempt to refund it will fail. You will need to contact the
+				student and arrange an alternate refund method.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/accounts_paymentout.png" format="png" />
+						fileref="images/accounts_paymentout.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Creating a payment out record for a refund processed</para>

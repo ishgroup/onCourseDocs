@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="invoice">
+	<title>Invoices and Payment Plans</title>
+	<section xml:id="invoice-general">
+		<title>Invoices</title>
+		<para>Every time you create a purchase through Quick Enrol, an invoice (or several invoices) will
+			be automatically created for you. You can see the details of that invoice within Quick
+			Enrol and add additional custom lines (such as a surcharge for phone payments).</para>
+		<para>These invoices are then visible within the Invoice lists view. Like all other lists
+			you can sort, search, export and print from this view. Invoices may not be deleted and
+			all of the financial information within an invoice may not be edited once created.
+			Although this may seem like an inconvenience, immutable invoices are extremely important
+			to ensure a robust audit trail and to guarantee the integrity of the general ledger
+			transactions.</para>
+		<para>If you need to modify an invoice you should instead create a credit note. The cog
+			wheel in the invoice list view contains a convenient option to reverse an invoice by
+			creating a credit note. You can customise the credit note before saving if you wish to
+			offer only a partial reversal. Remember if you are cancelling an enrolment or a class
+			there are easier ways to do that from the class and enrolment list views.</para>
+		<para>A credit note is an invoice with a negative total and is shown alongside invoices in
+			the same list view. The owing amounts on an invoice and a credit note are not
+			automatically zeroed against each other, however you can cancel them out by creating a
+			zero dollar payment in.</para>
+		<section xml:id="invoice-create">
+			<title>Creating an invoice</title>
+			<para>While you will usually create an invoice through using Quick Enrol, it is sometimes useful
+				to create an invoice without an associated product or enrolment. You can easily do
+				that by opening the list of invoices and pressing the plus icon at the top
+				right.</para>
+			<para>Remember to associate each invoice line with the correct income account code. Once
+				you save the invoice you will not be able to change this code. </para>
+		</section>
+		<section xml:id="invoice-linking">
+			<title>Link invoice lines to classes</title>
+			<para>When creating invoice lines you may link each line to a class. This adds the total of that invoice line to the class budget and
+				can be very useful when invoicing a company for an entire classroom delivery without recording individual enrolments. </para>
+		</section>
+	</section>
+	<section xml:id="invoice-paymentPlan">
+		<title>Payment plans</title>
+		<para>By default invoices have a due date 28 days into the future. Sometimes you will want to allow students to pay for training over a
+			longer period of time. Using payment plans you can set the amount of the up front deposit and a series of dates for payment of the
+			remainder in instalments. </para>
+		<section xml:id="invoice-dueDate">
+			<title>Invoice due dates</title>
+			<para>An existing or new invoice can be converted to a payment plan by adding payment due dates. It is important that the total of the
+				payment plan amounts equals the invoice total; you will not be able to save the invoice unless they match. </para>
+		</section>
+		<section xml:id="invoice-payPlanTemplate">
+			<title>Class payment plan template</title>
+			<para>Attaching a payment plan to an invoice by hand can be time-consuming. If you wish to offer
+				a deferred payment scheme to all students in a particular class you can set up a
+				payment plan templates from the class edit view you where you normally set the class
+				fee. The payment plan template can include an amount on enrolment (deposit) and as
+				many other amounts on dates relative to the start of the class. If you subsequently
+				adjust the class timetable and change the class start date then the payment plan
+				template will automatically be adjusted.</para>
+			<para>When you duplicate classes the payment plan template will also be adjusted with
+				the new timetable.</para>
+			<para>If you have an onCourse website only the deposit amount will normally be charged
+				at enrolment; however if the next payment dates have already passed those amount
+				will also be charged. So, let's take an example class with a $1000 deposit and $500
+				due 7 days before the start of class. A student enrolling 10 days before the class
+				starts will be charged $1000 and a student enrolling 5 days before class starts will
+				be charged $1500. </para>
+		</section>
+		<section xml:id="invoice-QE">
+			<title>Quick Enrol</title>
+			<para>During Quick Enrol every involvement with a different payment plan will be added to a
+				separate invoice. In this way a single Quick Enrol process may generate two or more
+				invoices. If several enrolments have an identical payment plan, then they will end
+				up on the same invoice.</para>
+			<para>By default Quick Enrol will attempt to take a payment from the student for all
+				amounts already due or overdue. </para>
+		</section>
+		<section xml:id="invoice-script">
+			<title>Automating payment plans with scripts</title>
+			<para>If you have payment plan templates to create for very many classes you may wish to instead
+				use a script to automate the process. A simple script might identify all classes
+				with a fee over $1000 and then limit the amount due on enrolment to $1000 with the
+				remainder payable at the date the class starts.</para>
+			<para>More sophisticated payment plan scripts can create different plans depending on
+				the duration of the class, the amount of the fee, whether the class is VET or not
+				and any other criteria.</para>
+		</section>
+	</section>
+</chapter>

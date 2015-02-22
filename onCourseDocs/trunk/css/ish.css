@@ -239,28 +239,34 @@ div.navfooter > table > tbody > tr > td[align=right] {
 
 /* TOC - Chapters */
 
-.chapter .toc {
+.chapter > .toc {
 	float: left;
 	position: relative;
 	left: -210px;
 	font-size: 0.9em;
-  padding: 0;
-  font-size: 0.85em;
-  width: 165px;
-  margin-right: -100%;
+    padding: 0;
+    font-size: 0.85em;
+    width: 165px;
+    margin-right: -100%;
 }
 
-.chapter .toc dt {
+.chapter > .toc a {
+	color: #c8706b;
+	font-family: "Cabin Sketch",cursive;
+	font-size: 1.3em;
+}
+
+.chapter > .toc dt {
   padding-top: 10px;
   line-height: 1.4em;
 }
 
 /* Don't show TOC heading */
-.chapter div.toc > p {
+.chapter > .toc > p {
 	display: none;
 }
 
-.chapter div.toc a {
+.chapter > .toc a {
 	text-decoration: none;
   padding: 0;
 }

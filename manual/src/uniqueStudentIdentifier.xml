@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="usi">
     <title>Unique Student Identifier (USI)</title>
-    <section>
+    <section xml:id="usi-whatIs">
         <title>What is the USI?</title>
         <para>On 1 January 2015 the Australian Commonwealth government introduced a Unique Student
             Identifier which will be issued to every student undertaking vocational training. Once a
             student has been issued a USI, they will supply this number to any RTO where they
-            undertake training, be they short one day courses like First Aid,  year long full
+            undertake training, be they short one day courses like First Aid, year long full
             Qualification programs or anything in between. The training they undertake will be
             reported back to government through mandatory AVETMISS reporting and a combined training
             transcript created for the student showing all training attempts and completions
@@ -24,7 +24,7 @@
             of identification which can be used. Students without any official identification papers
             can be issued a USI though a manual request process.</para>
     </section>
-    <section>
+    <section xml:id="usi-Requirements">
         <title>Requirements and limitations</title>
         <para>The USI legislation puts certain limitations on how the USI can be used and how it
             must be reported.<itemizedlist>
@@ -53,12 +53,12 @@
                 </listitem>
             </itemizedlist></para>
     </section>
-        <section>
-            <title>The onCourse USI process</title>
-            <para>Our primary goal is to make obtaining and verifying USIs the responsibility of the
+        <section xml:id="usi-onCourseProcess">
+        <title>The onCourse USI process</title>
+        <para>Our primary goal is to make obtaining and verifying USIs the responsibility of the
             enrolling student to minimise the data entry and management effort required by your
             office staff. </para>
-            <para>If a student enters their USI online, or you enter it manually in onCourse the USI
+        <para>If a student enters their USI online, or you enter it manually in onCourse the USI
             will automatically be verified against the USI Agency system. In order for this process
             to work we will require a special authorisation key called an AUSkey that has been
             linked to your RTO. </para>
@@ -67,63 +67,69 @@
             report it for AVETMISS but you will not be able to take advantage of the online student
             self-service process or the automatic verification process. Community users can verify
             their student's USIs manually using the USI Agency RTO portal.</para>
-            <section>
-                <title>How onCourse automates the USI process</title>
-        <para>We know that many organisations who use onCourse deliver a mix of accredited (VET) and
-            non-accredited training, and that the USI requirements will not apply to their
-            non-accredited students. We also know that some 75% of students who have ever enrolled
-            via onCourse either have enrolled online or have provided an email address during the
-            enrolment process, so can receive emails from us and access websites to complete web
-            forms. </para>
-        <para>First of all, when a student enrols in a course which is identified as a VET course,
-            their enrolment confirmation will include some additional text explaining what a USI is
-            and why they need to tell you theirs. This email directs them to a special onCourse
-            portal page (no log in required) requesting they supply their USI or go through the
-            process to create one. </para>
-        <para>Most students will be going through the process of creating a new USI. Once they
-            complete this part of the process, we will then take that new USI and verify it against
-            their first name, last name and date of birth as supplied on enrolment. If the USI
-            doesn’t validate (possibly because the student used a dummy date of birth on enrolment,
-            or a shortened version of their first name) then they will be prompted to update the
-            incorrect data in onCourse to match their USI, so we can pass the USI validation
-            process. </para>
-        <para>Every Monday morning, all recently enrolled VET students who have not supplied you
-            with their USI will be sent an automatic reminder email on how to complete this process
-            and why it is important they do so. There is a customisable  and  that
-            runs this process which you can edit to meet your preferred business requirements. A
-            student who doesn't complete this process or can not validate their USI will be flagged
-            in onCourse for you to follow up. </para>
+        <section>
+            <title>How onCourse automates the USI process</title>
+            <para>We know that many organisations who use onCourse deliver a mix of accredited (VET)
+                and non-accredited training, and that the USI requirements will not apply to their
+                non-accredited students. We also know that some 75% of students who have ever
+                enrolled via onCourse either have enrolled online or have provided an email address
+                during the enrolment process, so can receive emails from us and access websites to
+                complete web forms. </para>
+            <para>First of all, when a student enrols in a course which is identified as a VET
+                course, their enrolment confirmation will include some additional text explaining
+                what a USI is and why they need to tell you theirs. This email directs them to a
+                special onCourse portal page (no log in required) requesting they supply their USI
+                or go through the process to create one. </para>
+            <para>Most students will be going through the process of creating a new USI. Once they
+                complete this part of the process, we will then take that new USI and verify it
+                against their first name, last name and date of birth as supplied on enrolment. If
+                the USI doesn’t validate (possibly because the student used a dummy date of birth on
+                enrolment, or a shortened version of their first name) then they will be prompted to
+                update the incorrect data in onCourse to match their USI, so we can pass the USI
+                validation process. </para>
+            <para>Every Monday morning, all recently enrolled VET students who have not supplied you
+                with their USI will be sent an automatic reminder email on how to complete this
+                process and why it is important they do so. There is a customisable and that runs
+                this process which you can edit to meet your preferred business requirements. A
+                student who doesn't complete this process or can not validate their USI will be
+                flagged in onCourse for you to follow up. </para>
         </section>
-            <section>
-                <title> What you need to do enable the USI validation service in onCourse </title>
-                <orderedlist>
-                    <listitem><para>Obtain an AUSKey from the <link xlink:href="https://abr.gov.au/AUSkey/">Australian Business
-                        Registry</link>, If your organisation lodges tax electronically to the
-                        ATO you may already have an AUSKey. </para></listitem>
-                    <listitem><para>Create a device AUSKey and send it to ish to upload to your onCourse server. Step by step
-                        instructions are available at <link
+        <section>
+            <title> What you need to do enable the USI validation service in onCourse </title>
+            <orderedlist>
+                <listitem>
+                    <para>Obtain an AUSKey from the <link xlink:href="https://abr.gov.au/AUSkey/"
+                            >Australian Business Registry</link>, If your organisation lodges tax
+                        electronically to the ATO you may already have an AUSKey. </para>
+                </listitem>
+                <listitem>
+                    <para>Create a device AUSKey and send it to ish to upload to your onCourse
+                        server. Step by step instructions are available at <link
                             xlink:href="https://ish.com.au/oncourse/auskey"/>
-                    </para></listitem>
-                    <listitem>
-                        <para>Register your AUSKey with the USI Agency using <link
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Register your AUSKey with the USI Agency using <link
                             xlink:href="https://forms.business.gov.au/smartforms/servlet/SmartForm.html?formCode=USI-SysAccess"
                             >this form</link>. If you don't get an email confirmation, follow it up
-                            with the USI Agency directly. Only once your AUSKey is registered can you
-                            use the built in validation tools in onCourse.</para>
-                    </listitem>
-                    <listitem>
-                        <para>Customise the onCourse enrolment <link xlink:href="#emailTemplates"
+                        with the USI Agency directly. Only once your AUSKey is registered can you
+                        use the built in validation tools in onCourse.</para>
+                </listitem>
+                <listitem>
+                    <para>Customise the onCourse enrolment <link xlink:href="#emailTemplates"
                             >template</link> and USI reminder template and <link
-                                xlink:href="#scripts">script</link> so the wording and frequency of the
-                            reminders is suitable for your business.</para>
-                    </listitem>
-                    <listitem><para>Obtain a USI for yourself and test that it validates in onCourse.</para></listitem>
-                </orderedlist>
-                <para>Please contact your onCourse account manager if you need any assistance with
-                    this process.</para>
-            </section>
+                            xlink:href="#scripts">script</link> so the wording and frequency of the
+                        reminders is suitable for your business.</para>
+                </listitem>
+                <listitem>
+                    <para>Obtain a USI for yourself and test that it validates in onCourse.</para>
+                </listitem>
+            </orderedlist>
+            <para>Please contact your onCourse account manager if you need any assistance with this
+                process.</para>
         </section>
-    <section>
+    </section>
+    <section xml:id="usi-selfService">
         <title>Student self-service</title>
         <para>On enrolment through the office or the web, onCourse will send an email enrolment
             confirmation to the student. If the course is VET flagged, the confirmation template
@@ -141,7 +147,8 @@
             attached.</para>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/USI_email.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/USI_email.png"/>
             </imageobject>
             <caption>
                 <para>An example of a confirmation email with USI information</para>
@@ -149,7 +156,8 @@
         </mediaobject>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/usi_followup_email.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/usi_followup_email.png"/>
             </imageobject>
             <caption>
                 <para>An example of a USI reminder email.</para>
@@ -174,7 +182,8 @@
             opportunity to fix this.</para>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/USI_mobile_start.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/USI_mobile_start.png"/>
             </imageobject>
             <caption>
                 <para>Step 1: This is the screen the students will arrive at. The date of birth
@@ -183,31 +192,38 @@
         </mediaobject>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/USI_mobile_verifying.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/USI_mobile_verifying.png"/>
             </imageobject>
             <caption>
-                <para>Step 1 in progress: While the USI is being verified they will see this window.</para>
+                <para>Step 1 in progress: While the USI is being verified they will see this
+                    window.</para>
             </caption>
         </mediaobject>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/USI_student_name_mismatch.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/USI_student_name_mismatch.png"/>
             </imageobject>
             <caption>
-                <para>Step 1 failed: The student's name doesn't match the USI Registry data. They have the opportunity to correct the data in onCourse.</para>
+                <para>Step 1 failed: The student's name doesn't match the USI Registry data. They
+                    have the opportunity to correct the data in onCourse.</para>
             </caption>
         </mediaobject>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/USI_mobile_success.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/USI_mobile_success.png"/>
             </imageobject>
             <caption>
-                <para>Step 1 complete: The student's USI has been successfully verified. Now they move on to step 2.</para>
+                <para>Step 1 complete: The student's USI has been successfully verified. Now they
+                    move on to step 2.</para>
             </caption>
         </mediaobject>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/USI_portal_step2.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/USI_portal_step2.png"/>
             </imageobject>
             <caption>
                 <para>Step 2: The student completes the AVETMISS questions.</para>
@@ -215,23 +231,28 @@
         </mediaobject>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/usi_complete_blank_fields.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/usi_complete_blank_fields.png"/>
             </imageobject>
             <caption>
-                <para>Step 3: The student completes an missing personal data. No previously provided data is shown, only empty fields marked as mandatory in your website CMS.</para>
+                <para>Step 3: The student completes an missing personal data. No previously provided
+                    data is shown, only empty fields marked as mandatory in your website CMS.</para>
             </caption>
         </mediaobject>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/usi_mobile_update_details.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/usi_mobile_update_details.png"/>
             </imageobject>
             <caption>
-                <para>Step 3: If the student has already supplied all the necessary contact data, they are shown this information about how to update their details.</para>
+                <para>Step 3: If the student has already supplied all the necessary contact data,
+                    they are shown this information about how to update their details.</para>
             </caption>
         </mediaobject>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/usi_mobile_complete.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/usi_mobile_complete.png"/>
             </imageobject>
             <caption>
                 <para>USI portal complete: If the student has completed the USI data and clicks on
@@ -240,7 +261,7 @@
             </caption>
         </mediaobject>
     </section>
-    <section>
+    <section xml:id="usi-Capturing">
         <title>Capturing the USI in onCourse</title>
         <para>The USI does not need to be captured at the time of enrolment, but typically you'll
             want to have it entered and verified before the class is completed in order to not delay
@@ -252,7 +273,8 @@
                 VET tab.</para>
             <mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/create_a_USI.png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/usi/create_a_USI.png"/>
                 </imageobject>
                 <caption>
                     <para> When there is no USI supplied, you can click on the link to open a web
@@ -279,7 +301,8 @@
                 the USI agency.</para>
             <mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/invalid_USI.png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/usi/invalid_USI.png"/>
                 </imageobject>
                 <caption>
                     <para>What you will see if the USI has not been entered correctly. This USI is
@@ -288,8 +311,10 @@
                 </caption>
             </mediaobject>
             <para>If you have an onCourse support contact, have supplied us with your AUSKey and
-                <link xlink:href="https://forms.business.gov.au/smartforms/servlet/SmartForm.html?formCode=USI-SysAccess">registered your AUSKey</link> with the USI Registry System the USI validation system in
-                onCourse will be enabled.</para>
+                    <link
+                    xlink:href="https://forms.business.gov.au/smartforms/servlet/SmartForm.html?formCode=USI-SysAccess"
+                    >registered your AUSKey</link> with the USI Registry System the USI validation
+                system in onCourse will be enabled.</para>
             <para>Once a complete USI is entered in the student record, the background validation
                 process with the USI Registry System will run automatically. The validation process
                 is checking that the student's first name, last name, date of birth and USI match
@@ -299,7 +324,8 @@
                 locked.</para>
             <mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/verified_USI.png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/usi/verified_USI.png"/>
                 </imageobject>
                 <caption>
                     <para>This USI has passed verification and the record has been locked.</para>
@@ -313,7 +339,8 @@
                 one of the first name, last name, date of birth or USI field's data.</para>
             <mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/USI_verification_failed.png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/usi/USI_verification_failed.png"/>
                 </imageobject>
                 <caption>
                     <para>This USI has failed verification. The data can be corrected and the
@@ -322,9 +349,10 @@
             </mediaobject>
         </section>
     </section>
-    <section>
+    <section xml:id="usi-certificatePrinting">
         <title>Certificate printing and the USI</title>
-        <para>The USI legislation requires that RTOs only issue formal certification to students who have supplied a USI which has passed verification.</para>
+        <para>The USI legislation requires that RTOs only issue formal certification to students who
+            have supplied a USI which has passed verification.</para>
         <para>From 1/1/2015 all certificate record print attempts will check the student USI status.
             A warning will show for any certificate print or reprint where the student doesn't have
             a USI. A certificate created after 1/1/2015 will not print without a verified
@@ -334,10 +362,12 @@
             without verified USIs. </para>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/USI_cert_print_fail.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/USI_cert_print_fail.png"/>
             </imageobject>
             <caption>
-                <para>This certificate can't be printed as the user does not have permission to print without a USI.</para>
+                <para>This certificate can't be printed as the user does not have permission to
+                    print without a USI.</para>
             </caption>
         </mediaobject>
         <para>All admin users will see the warnings if a student doesn't have a USI or verified USI,
@@ -345,12 +375,13 @@
             choose.</para>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/USI_cert_print_warn.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/USI_cert_print_warn.png"/>
             </imageobject>
             <caption>
                 <para>This is a warning only. You can still proceed by selecting print.</para>
             </caption>
-        </mediaobject> 
+        </mediaobject>
         <para>All access roles have two optional levels of access - print certificate without
             verified USI (this means they student has supplied a USI that meets the checksum
             requirements, but for whatever reason it hasn't passed verification with the USI
@@ -359,56 +390,135 @@
             verified USIs.</para>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/USI_certificate_print_permissions.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/usi/USI_certificate_print_permissions.png"/>
             </imageobject>
             <caption>
-                <para>This access role does not have permission to print certificates without a verified USI.</para>
+                <para>This access role does not have permission to print certificates without a
+                    verified USI.</para>
             </caption>
         </mediaobject>
     </section>
-    <section>
+    <section xml:id="usi-FAQs">
         <title>USI FAQ</title>
         <qandaset>
             <qandaentry>
-                <question><para>Why are all my USIs failing to verify with the error message saying the USI agency can't be contacted?</para></question>
-                <answer><para>For all the customers that <link
-                    xlink:href="https://forum.ish.com.au/discussion/276/preparing-your-rto-for-the-usi-implementation-in-2015#latest"
-                    >followed the instructions we provided on our forum</link> about creating an AUSKey, sending it to us to upload to your server and completing the USI Agency Access request form, it seems the last step went pear shaped for some and the AUSKey wasn't linked to your RTO Id, making the whole automatic verification process fail.</para>
-                    
-      <para>Complete the <link
-                        xlink:href="https://forms.business.gov.au/smartforms/servlet/SmartForm.html?formCode=USI-SysAccess"
-                        >System Access Request Form</link> again and wait for an approval email before trying to verify USIs.</para></answer>
+                <question>
+                    <para>Why are all my USIs failing to verify with the error message saying the
+                        USI agency can't be contacted?</para>
+                </question>
+                <answer>
+                    <para>For all the customers that <link
+                            xlink:href="https://forum.ish.com.au/discussion/276/preparing-your-rto-for-the-usi-implementation-in-2015#latest"
+                            >followed the instructions we provided on our forum</link> about
+                        creating an AUSKey, sending it to us to upload to your server and completing
+                        the USI Agency Access request form, it seems the last step went pear shaped
+                        for some and the AUSKey wasn't linked to your RTO Id, making the whole
+                        automatic verification process fail.</para>
+                    <para>Complete the <link
+                            xlink:href="https://forms.business.gov.au/smartforms/servlet/SmartForm.html?formCode=USI-SysAccess"
+                            >System Access Request Form</link> again and wait for an approval email
+                        before trying to verify USIs.</para>
+                </answer>
             </qandaentry>
             <qandaentry>
-                <question><para>How do I make the USI validation process run in onCourse?</para></question>
-                <answer><para>When onCourse detects you have entered a USI in the USI field on the Student VET tab, it will check that you have an RTO ID entered in your general preferences, and a First Name, Last Name and Date of Birth entered in the student record. If all these fields are complete, the USI Validation process will run automatically in the background.</para><para>If it fails, and you need to change some of the data to make it try again, make the change, click out of the field (use tab on your keyboard, or click into any other field) and the process will run again. If you don't need to change any data, just click in the USI field and click out and it will try again. You can do this as many times as you like - the validation check is quite fast, less than 3 seconds in most instances, and there is no limit to the number of times you can try to validate a USI.</para></answer>
+                <question>
+                    <para>How do I make the USI validation process run in onCourse?</para>
+                </question>
+                <answer>
+                    <para>When onCourse detects you have entered a USI in the USI field on the
+                        Student VET tab, it will check that you have an RTO ID entered in your
+                        general preferences, and a First Name, Last Name and Date of Birth entered
+                        in the student record. If all these fields are complete, the USI Validation
+                        process will run automatically in the background.</para>
+                    <para>If it fails, and you need to change some of the data to make it try again,
+                        make the change, click out of the field (use tab on your keyboard, or click
+                        into any other field) and the process will run again. If you don't need to
+                        change any data, just click in the USI field and click out and it will try
+                        again. You can do this as many times as you like - the validation check is
+                        quite fast, less than 3 seconds in most instances, and there is no limit to
+                        the number of times you can try to validate a USI.</para>
+                </answer>
             </qandaentry>
             <qandaentry>
-                <question><para>How can I test that my onCourse USI portal access is working as required?</para></question>
-                <answer><para>Go and <link
-                   xlink:href="http://usi.gov.au/create-your-USI/Pages/default.aspx"
-                    >create yourself a USI.</link> Then you can use your own details to create a new student contact and test the USI verification. Try without a date of birth or misspelled name to see the error responses you'll get in onCourse. You can discard the contact instead of saving it onCourse after sufficiently testing the verification process.</para></answer>
+                <question>
+                    <para>How can I test that my onCourse USI portal access is working as
+                        required?</para>
+                </question>
+                <answer>
+                    <para>Go and <link
+                            xlink:href="http://usi.gov.au/create-your-USI/Pages/default.aspx">create
+                            yourself a USI.</link> Then you can use your own details to create a new
+                        student contact and test the USI verification. Try without a date of birth
+                        or misspelled name to see the error responses you'll get in onCourse. You
+                        can discard the contact instead of saving it onCourse after sufficiently
+                        testing the verification process.</para>
+                </answer>
             </qandaentry>
             <qandaentry>
-                <question><para>What should I do when the student has created their USI in a name different to the name they enrolled with?</para></question>
-                <answer><para>Commonly, students will enrol with the name they prefer to use e.g. Bob rather than Robert, but their USI will be issued in their legal name. When you try to verify the USI they supply against their name, an error will be returned telling you that the first name (or last name, or date of birth) doesn't match the USI you supplied. In that case, you can change the data in onCourse and the verification process will automatically run again.
-                </para><para>If the student uses the USI portal to supply you with their USI, then they can correct their name spelling themselves. You might need to call the student to get their correct name spelling if you are collecting and verifying USIs via an office based process.</para>
-                    <para>Of course, we have also had instances of students whose name is spelt incorrectly on their ID and therefore the name linked to their USI has the wrong spelling, or students who have enrolled using a married name, when the ID they used to create their USI was in their maiden name. You'd need to enter their name into onCourse as an exact match as their USI name to make it validate, but you probably don't want to do this as then their certificate will be issued in the wrong name too. For the time being, leave it as an invalid USI.</para>
+                <question>
+                    <para>What should I do when the student has created their USI in a name
+                        different to the name they enrolled with?</para>
+                </question>
+                <answer>
+                    <para>Commonly, students will enrol with the name they prefer to use e.g. Bob
+                        rather than Robert, but their USI will be issued in their legal name. When
+                        you try to verify the USI they supply against their name, an error will be
+                        returned telling you that the first name (or last name, or date of birth)
+                        doesn't match the USI you supplied. In that case, you can change the data in
+                        onCourse and the verification process will automatically run again. </para>
+                    <para>If the student uses the USI portal to supply you with their USI, then they
+                        can correct their name spelling themselves. You might need to call the
+                        student to get their correct name spelling if you are collecting and
+                        verifying USIs via an office based process.</para>
+                    <para>Of course, we have also had instances of students whose name is spelt
+                        incorrectly on their ID and therefore the name linked to their USI has the
+                        wrong spelling, or students who have enrolled using a married name, when the
+                        ID they used to create their USI was in their maiden name. You'd need to
+                        enter their name into onCourse as an exact match as their USI name to make
+                        it validate, but you probably don't want to do this as then their
+                        certificate will be issued in the wrong name too. For the time being, leave
+                        it as an invalid USI.</para>
                     <para>In these instances you need to get the student to log into their own <link
                             xlink:href="https://portal.usi.gov.au/student">USI Agency Portal</link>
                         and make the change there, and advise you once this has been done. Then you
                         can try the validation process again, and it should pass with the right
-                        spelling.</para></answer>
+                        spelling.</para>
+                </answer>
             </qandaentry>
             <qandaentry>
-                <question><para> How can I find out which students USIs have failed to pass validation in onCourse?</para></question>
-                <answer><para>In the contact advanced search options, you can search for USI status = not verified. You can then work through the list of returned to results to check the error messages, contact the students and make the appropriate changes. As you change the data, the verification process will run again.</para></answer>
+                <question>
+                    <para> How can I find out which students USIs have failed to pass validation in
+                        onCourse?</para>
+                </question>
+                <answer>
+                    <para>In the contact advanced search options, you can search for USI status =
+                        not verified. You can then work through the list of returned to results to
+                        check the error messages, contact the students and make the appropriate
+                        changes. As you change the data, the verification process will run
+                        again.</para>
+                </answer>
             </qandaentry>
             <qandaentry>
-                <question><para>How can I find out which students need USIs but don't have one recorded in onCourse?</para></question>
-                <answer><para>Using the class window, locate all your VET classes that are running during 2015 and highlight them all. Use the cog wheel to find 'Enrolled students' related to the highlighted classes.</para>
-                    <para>In this new window of students, use the advanced find to search for USI status = not set. Once you have this list of students, you can then manually follow them up with phone calls or find their enrolments to send them the USI reminder email.</para>
-                    <para>To send the reminder email, select all the students and use the cogwheel to find related enrolments. When the enrolment window opens, check the filter options 'current active' and 'completed active' to remove any cancelled or failed enrolments from the list. Then highlight all the enrolments and from the cog wheel choose the option 'send emails from template' and select the template called 'USI reminder email'.</para></answer>
+                <question>
+                    <para>How can I find out which students need USIs but don't have one recorded in
+                        onCourse?</para>
+                </question>
+                <answer>
+                    <para>Using the class window, locate all your VET classes that are running
+                        during 2015 and highlight them all. Use the cog wheel to find 'Enrolled
+                        students' related to the highlighted classes.</para>
+                    <para>In this new window of students, use the advanced find to search for USI
+                        status = not set. Once you have this list of students, you can then manually
+                        follow them up with phone calls or find their enrolments to send them the
+                        USI reminder email.</para>
+                    <para>To send the reminder email, select all the students and use the cogwheel
+                        to find related enrolments. When the enrolment window opens, check the
+                        filter options 'current active' and 'completed active' to remove any
+                        cancelled or failed enrolments from the list. Then highlight all the
+                        enrolments and from the cog wheel choose the option 'send emails from
+                        template' and select the template called 'USI reminder email'.</para>
+                </answer>
             </qandaentry>
         </qandaset>
     </section>

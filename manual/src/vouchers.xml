@@ -39,32 +39,32 @@
             </listitem>
         </orderedlist>
     </example>
-    <section>
-    <title>onCourse Terms and Definitions</title>
-    <variablelist>
-        <varlistentry>
-            <term>Voucher Type</term>
-            <listitem>
-                <para>A voucher is a product which can be sold and later redeemed for other
-                    purchases or enrolments. Vouchers can be redeemed for a monetary value or
-                    for a fixed number of enrolments in a set range of courses. The voucher type
-                    describes how much the voucher costs to purchase, how long it is valid for
-                    and what it can be redeemed for.</para>
-            </listitem>
-        </varlistentry>
-        <varlistentry>
-            <term>Voucher</term>
-            <listitem>
-                <para>Vouchers are the list of purchased voucher type products. Vouchers can be
+    <section xml:id="vouchers-Definitions">
+        <title>onCourse Terms and Definitions</title>
+        <variablelist>
+            <varlistentry>
+                <term>Voucher Type</term>
+                <listitem>
+                    <para>A voucher is a product which can be sold and later redeemed for other
+                        purchases or enrolments. Vouchers can be redeemed for a monetary value or
+                        for a fixed number of enrolments in a set range of courses. The voucher type
+                        describes how much the voucher costs to purchase, how long it is valid for
+                        and what it can be redeemed for.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Voucher</term>
+                <listitem>
+                    <para>Vouchers are the list of purchased voucher type products. Vouchers can be
                         purchased and redeemed through Quick Enrol. This list shows who purchased
                         the voucher, who it is redeemable by and what the remaining value of the
                         voucher includes. Every voucher has a unique code that must be quoted for
                         redemption.</para>
-            </listitem>
-        </varlistentry>
-    </variablelist>
-  </section>
-    <section>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </section>
+    <section xml:id="vouchers-Creating">
         <title>Creating a voucher type</title>
         <para>For most cases when a user wants to buy a voucher, they will nominate the price they
             wish to purchase the voucher for, and that the price will also be the redemption value
@@ -78,31 +78,30 @@
             free (sold with 100% discount). Either way, an email is sent to the payer with the
             details of that voucher (not the student since it may be a gift, if the student and the
             payer are different people).</para>
-    <section>
-               <title>Navigating around the Voucher Type window</title>
-      
-                <para>To open the voucher type window you can either use the splash screen and click
-            on the Voucher type option in the Marketing tab or the onCourse menu File → Preferences
-            → Voucher type. </para>
-                    <mediaobject>
-                    <imageobject>
-                        <imagedata scalefit="1" width="100%" contentdepth="100%"
-                            fileref="images/vouchers/voucher_list.png"/>
-                    </imageobject>
-                    <caption>
-                        <para>View of the voucher type window</para>
-                    </caption>
-                                   </mediaobject>
-        <note>
-            <para>If a voucher passes the expiry date, the status is set to 'Expired' and the
+        <section>
+            <title>Navigating around the Voucher Type window</title>
+            <para>To open the voucher type window you can either use the splash screen and click on
+                the Voucher type option in the Marketing tab or the onCourse menu File → Preferences
+                → Voucher type. </para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/vouchers/voucher_list.png"/>
+                </imageobject>
+                <caption>
+                    <para>View of the voucher type window</para>
+                </caption>
+            </mediaobject>
+            <note>
+                <para>If a voucher passes the expiry date, the status is set to 'Expired' and the
                     balance of the voucher purchase price is transferred from the Voucher Liability
                     account to the Vouchers Expired income account. Expired vouchers are greyed out
                     in the voucher list and can't be redeemed and edited. Their expiry date can not
                     be changed.</para>
-        </note>
-                 <para>To create a new voucher type simply click on the + icon in the top
-                     right hand side of the window and enter the information required. </para>
-                    <section xml:id="voucherType-General">
+            </note>
+            <para>To create a new voucher type simply click on the + icon in the top right hand side
+                of the window and enter the information required. </para>
+            <section xml:id="voucherType-General">
                 <title>Voucher general tab</title>
                 <para> There are a number of fields in the general tab, they are:<itemizedlist>
                         <listitem>
@@ -215,7 +214,7 @@
                     </mediaobject>
                 </para>
             </section>
-         <section xml:id="voucherType-Web">
+            <section xml:id="voucherType-Web">
                 <title>Voucher web tab</title>
                 <para>This tab allows you to choose if this voucher is available to be purchased
                     online and if you wish to include any marketing copy on your website.<itemizedlist>
@@ -246,16 +245,16 @@
                     </caption>
                 </mediaobject>
             </section>
+        </section>
     </section>
-    </section>
-    <section>
+    <section xml:id="vouchers-Purchasing">
         <title>Purchasing a voucher</title>
-            <para>Purchasing a voucher in onCourse is done through Quick Enrol window. You can
-            search for a voucher by either start typing in the Vouchers name or SKU in the 'Enter
-            course or item' field on the left side of the page. Alternatively you can click in the
-            'Enter course or item' field, then click on the 'Show all' button next to the word
-            'VOUCHERS' on the right side of the page. Once you have found the voucher you want click
-            the 'Select' button next to it.</para>
+        <para>Purchasing a voucher in onCourse is done through Quick Enrol window. You can search
+            for a voucher by either start typing in the Vouchers name or SKU in the 'Enter course or
+            item' field on the left side of the page. Alternatively you can click in the 'Enter
+            course or item' field, then click on the 'Show all' button next to the word 'VOUCHERS'
+            on the right side of the page. Once you have found the voucher you want click the
+            'Select' button next to it.</para>
         <note>
             <para>When a voucher is purchased it always gets sent to the payer just like the invoice
                 does.</para>
@@ -268,7 +267,7 @@
             <caption>
                 <para>How to find a voucher you want to purchase through Quick Enrol</para>
             </caption>
-                   </mediaobject>
+        </mediaobject>
         <para>Once you have found the voucher you want to add you have a few editable areas in the
             'VOUCHER PURCHASE' page<itemizedlist>
                 <listitem>

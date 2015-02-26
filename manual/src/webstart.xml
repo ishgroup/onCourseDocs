@@ -2,34 +2,36 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
     version="5.0" xml:id="webstart">
     <title>onCourse Cloud</title>
-    <section>
+    <section xml:id="webstart-Cloud">
         <title>What is onCourse cloud?</title>
-        <para>onCourse cloud is a hosted version of onCourse which
-            ish manage and maintain on your behalf. It is the same software and the same user
-            interface as the locally installed application.</para>
+        <para>onCourse cloud is a hosted version of onCourse which ish manage and maintain on your
+            behalf. It is the same software and the same user interface as the locally installed
+            application.</para>
         <para>The benefits of a cloud hosted solution include:</para>
         <itemizedlist>
             <listitem>
                 <para><emphasis role="bold">Hosting of your onCourse server in a Tier 3 data centre
-                    located in Australia.</emphasis> ish directly manages the hardware and software, with the
-                    data centre providing redundant links to the internet. All networking equipment is full redundant and the database clustered across primary and slave machines. If your primary office
-                    loses power or internet, remote access to your onCourse server is still
-                    available from other sites.</para>
+                        located in Australia.</emphasis> ish directly manages the hardware and
+                    software, with the data centre providing redundant links to the internet. All
+                    networking equipment is full redundant and the database clustered across primary
+                    and slave machines. If your primary office loses power or internet, remote
+                    access to your onCourse server is still available from other sites.</para>
             </listitem>
             <listitem>
                 <para><emphasis role="bold">Management of your onCourse server</emphasis>. ish
                     supply and manage the physical infrastructure that hosts your server, provide
-                    offsite backups and manage the upgrade process for you when new
-                    versions are released. You do not need to engage your IT support company for any
-                    onCourse related issues or assistance as you may with a locally managed
-                    version.</para>
+                    offsite backups and manage the upgrade process for you when new versions are
+                    released. You do not need to engage your IT support company for any onCourse
+                    related issues or assistance as you may with a locally managed version.</para>
             </listitem>
             <listitem>
-                <para><emphasis role="bold">Simplified user application access.</emphasis>
-                    No software to install or maintain - you launch onCourse by going to a URL created
-                    just for you. The software looks and behaves the same as the locally
-                    installed version; although you launch the application from inside a browser, you aren't restricted to the simplified user interface of a web application. The full onCourse user
-                    experience is available complete with multiple windows, printing and more.</para>
+                <para><emphasis role="bold">Simplified user application access.</emphasis> No
+                    software to install or maintain - you launch onCourse by going to a URL created
+                    just for you. The software looks and behaves the same as the locally installed
+                    version; although you launch the application from inside a browser, you aren't
+                    restricted to the simplified user interface of a web application. The full
+                    onCourse user experience is available complete with multiple windows, printing
+                    and more.</para>
             </listitem>
             <listitem>
                 <para><emphasis role="bold">No need to update and install new client software when
@@ -40,16 +42,17 @@
                 <para><emphasis role="bold">Staff access to onCourse from anywhere with internet
                         access.</emphasis> Home, remote training venues, other offices - there is no
                     need for you to set up and manage VPNs or software installation on multiple
-                    machines. Access is to onCourse is secure from any venue and encrypted with                  SSL at the same level of encryption as banking systems.</para>
+                    machines. Access is to onCourse is secure from any venue and encrypted with SSL
+                    at the same level of encryption as banking systems.</para>
             </listitem>
             <listitem>
                 <para><emphasis role="bold">A unique database instance for your training
                         organisation.</emphasis> Every onCourse cloud customer has their own mySQL
                     instance of the onCourse server application running. This means we can upgrade
-                    your software when you are ready, and your data is not locked into
-                    our solution - your database can be handed over to you for self management at
-                    any time should you choose to leave the ish Cloud for a locally managed onCourse
-                    option, or if you just want to get at your database. </para>
+                    your software when you are ready, and your data is not locked into our solution
+                    - your database can be handed over to you for self management at any time should
+                    you choose to leave the ish Cloud for a locally managed onCourse option, or if
+                    you just want to get at your database. </para>
             </listitem>
         </itemizedlist>
         <section>
@@ -70,88 +73,90 @@
                 access it.</para>
         </section>
         <section>
-            <title>
-                Running the onCourse client via Java Web Start
-            </title>
+            <title> Running the onCourse client via Java Web Start </title>
             <para>If you are running the onCourse cloud demo, or trying to reach your training
                 organisation's onCourse cloud instance, you will do this via Java Web Start.</para>
             <example>
                 <title>How to access the onCourse Cloud</title>
-<orderedlist>
-    <listitem><para>Open a web browser and go to the URL provided by ish. It will look like
+                <orderedlist>
+                    <listitem>
+                        <para>Open a web browser and go to the URL provided by ish. It will look
+                            like
                             https://www.ish.com.au/oncourse/cloud/your_training_organisation</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/URL_browser.png" />
-            </imageobject>
-            <caption>
-                <para>This is the URL for the onCourse demo. Demo will be replaced by your training
-                                    organisation name </para>
-            </caption>
-        </mediaobject>
-    </listitem>
-    <listitem>
-        <para>Nothing will load in the browser window, but a pop up will appear asking you to Open
-                            with Java Web Start (default) or Save the file. Select Open with Java
-                            Web Start. You may choose to tick the 'do this automatically' option to
-                            skip this step next time.</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/open_webstart.png" />
-            </imageobject>
-            <caption>
-                <para>This window will open when you go to the URL</para>
-            </caption>
-        </mediaobject>
-    </listitem>
-    <listitem>
-        <para>The first time you run onCourse, or after an upgrade to the onCourse server has taken
-                            place, a new window may display notifying you that the application is
-                            being downloaded. This may take a few minutes.</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/download_webstart.png" />
-            </imageobject>
-            <caption>
-                <para>The onCourse application is downloading for the first time. Be patient!</para>
-            </caption>
-        </mediaobject>
-    </listitem>
-    <listitem>
-        <para>Once the download is complete, or if no download is required, onCourse will load to
-                            the login window. Enter your login name and password as supplied by ish
-                            and select login.</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/demo_login_screen.png" />
-            </imageobject>
-            <caption>
-                <para>In the onCourse demo, the login name and password is already filled in. For
-                                    your own cloud hosted instance, use the login name and password
-                                    provided to you from ish.</para>
-            </caption>
-        </mediaobject>
-    </listitem>
-    <listitem>
-        <para>After you successfully login, onCourse will load to the normal splash screen. Proceed
-                            to use onCourse as normal, or if this is your first time in the
-                            software, explore the user and interface and press all the buttons to
-                            see what they do!</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/demo_splash.png" />
-            </imageobject>
-            <caption>
-                <para>If you make it to this screen you have logged in successfully. Well done!</para>
-            </caption>
-        </mediaobject>
-    </listitem>
-</orderedlist>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                    fileref="images/URL_browser.png"/>
+                            </imageobject>
+                            <caption>
+                                <para>This is the URL for the onCourse demo. Demo will be replaced
+                                    by your training organisation name </para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                    <listitem>
+                        <para>Nothing will load in the browser window, but a pop up will appear
+                            asking you to Open with Java Web Start (default) or Save the file.
+                            Select Open with Java Web Start. You may choose to tick the 'do this
+                            automatically' option to skip this step next time.</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                    fileref="images/open_webstart.png"/>
+                            </imageobject>
+                            <caption>
+                                <para>This window will open when you go to the URL</para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                    <listitem>
+                        <para>The first time you run onCourse, or after an upgrade to the onCourse
+                            server has taken place, a new window may display notifying you that the
+                            application is being downloaded. This may take a few minutes.</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                    fileref="images/download_webstart.png"/>
+                            </imageobject>
+                            <caption>
+                                <para>The onCourse application is downloading for the first time. Be
+                                    patient!</para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                    <listitem>
+                        <para>Once the download is complete, or if no download is required, onCourse
+                            will load to the login window. Enter your login name and password as
+                            supplied by ish and select login.</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                    fileref="images/demo_login_screen.png"/>
+                            </imageobject>
+                            <caption>
+                                <para>In the onCourse demo, the login name and password is already
+                                    filled in. For your own cloud hosted instance, use the login
+                                    name and password provided to you from ish.</para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                    <listitem>
+                        <para>After you successfully login, onCourse will load to the normal splash
+                            screen. Proceed to use onCourse as normal, or if this is your first time
+                            in the software, explore the user and interface and press all the
+                            buttons to see what they do!</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                    fileref="images/demo_splash.png"/>
+                            </imageobject>
+                            <caption>
+                                <para>If you make it to this screen you have logged in successfully.
+                                    Well done!</para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                </orderedlist>
             </example>
         </section>
         <section>
@@ -159,7 +164,7 @@
             <para>
                 <emphasis role="bold">Q: In the first window, I don't have the option available open
                     with 'Java Web Start'</emphasis></para>
-            <para><emphasis role="bold">A:</emphasis>  Your computer may not have Java installed, or
+            <para><emphasis role="bold">A:</emphasis> Your computer may not have Java installed, or
                 the latest version of Java. The onCourse URL should prompt you to download the
                 latest version of Java, which you can do at any time from <link
                     xlink:href="http://www.java.com/en/">http://www.java.com/en/</link></para>
@@ -170,9 +175,15 @@
                 shouldn't see this warning again. If you don't 'trust' the certificate, you won't be
                 able to proceed with accessing the onCourse application.</para>
             <para><emphasis role="bold">Q: Isn't Java a security risk?</emphasis></para>
-            <para><emphasis role="bold">A: </emphasis>No. Java has been around a very long time and is used
-            at large and small companies by billions of people every day. It powers more websites than just about
-            any other technology. However it has been used in the past for things called applets in your browser and this technology has had flaws which allowed malicious websites to do nasty things. onCourse is different: running the webstart version is exactly the same as running an application on your desktop directly and opens no new security holes. When you see advice about turning off Java in your browser that is related to these applets and not to the way onCourse runs or any other Java applications run.</para>
+            <para><emphasis role="bold">A: </emphasis>No. Java has been around a very long time and
+                is used at large and small companies by billions of people every day. It powers more
+                websites than just about any other technology. However it has been used in the past
+                for things called applets in your browser and this technology has had flaws which
+                allowed malicious websites to do nasty things. onCourse is different: running the
+                webstart version is exactly the same as running an application on your desktop
+                directly and opens no new security holes. When you see advice about turning off Java
+                in your browser that is related to these applets and not to the way onCourse runs or
+                any other Java applications run.</para>
             <para><emphasis role="bold">Q: When I try to log in, the window shakes and gives me an
                     Authentication Error.</emphasis></para>
             <para><emphasis role="bold">A:</emphasis> This means your login name or password is
@@ -182,8 +193,8 @@
                     server could not be contacted".</emphasis></para>
             <para><emphasis role="bold">A: </emphasis>If it is your first time accessing onCourse,
                 this may mean that your local network settings are blocking the traffic between the
-                onCourse client and server. Check with your IT staff that outbound traffic over port 6003
-                is enabled.</para>
+                onCourse client and server. Check with your IT staff that outbound traffic over port
+                6003 is enabled.</para>
             <para>For users who have logged in successfully before, but are now seeing this error,
                 this may mean the hosted cloud server is down for maintenance (you will have
                 received notification) or that your local internet is down. Please <link

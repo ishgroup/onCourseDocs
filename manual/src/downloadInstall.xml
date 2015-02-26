@@ -15,7 +15,7 @@
 		<para>You should normally only run <emphasis>one</emphasis> onCourse Server on your network to
 			avoid problems that arise from having multiple databases.</para>
 	</tip>
-	<section xml:id="downloadinstall-requirements">
+	<section xml:id="downloadinstall-Requirements">
 		<title>System and hardware requirements</title>
 		<para>One of the following operating systems is required to run onCourse Client.</para>
 		<itemizedlist>
@@ -65,7 +65,7 @@
 			must change the server configuration to allow it to take advantage of your extra RAM. See
 				<xref xlink:href="#serverconfigurationfile" /></para>
 	</section>
-	<section>
+	<section xml:id="downloadinstall-Network">
 		<title>Network requirements</title>
 		<para>onCourse Client makes a network connection to onCourse Server, by default on port 8181
 			(unencrypted) or 8182 (encrypted). One or both of these ports must be open on any
@@ -85,13 +85,13 @@
 			that within the preferences window to point to your preferred SMTP mail server.</para>
 
 	</section>
-	<section>
+	<section xml:id="downloadinstall-Cloud">
 		<title>Cloud</title>
 		<para>onCourse has been optimised for the cloud and ish offer different hosting packages to run,
 			maintain, upgrade and backup the server. You can do the same within your own data centre
 			or with a virtual hosting environment such as AWS or Rackspace.</para>
 	</section>
-	<section>
+	<section xml:id="downloadinstall-Virtualisation">
 		<title>Virtualisation</title>
 		<para>onCourse will run perfectly fine in a virtualised environment such as VMWare. Ensure that
 			you have sufficient RAM and CPU allocated to onCourse and consult your VMWare expert for
@@ -101,7 +101,7 @@
 			if you use Terminal Services to manage your client deployment and can give you better
 			performance if your client workstations are at the other end of a slow network link.</para>
 	</section>
-	<section>
+	<section xml:id="downloadinstall-Database">
 		<title>Database considerations</title>
 		<para>onCourse Server can be used with its built-in database, or for larger installations with
 			an external database. You can choose between the following databases:</para>
@@ -133,7 +133,7 @@
 				server).</para>
 		</caution>
 	</section>
-	<section xml:id="downloadinstall-installation">
+	<section xml:id="downloadinstall-Installation">
 		<title>Installation</title>
 		<para>Download the server version for your operating system from the website: <link
 				xlink:href="http://www.ish.com.au/onCourse/download">www.ish.com.au/oncourse/download
@@ -495,7 +495,7 @@ pkg_add onCourseServer.tgz
 			</section>
 		</section>
 	</section>
-	<section>
+	<section xml:id="downloadinstall-Upgrading">
 		<title>Upgrading onCourse</title>
 		<para>How to install a new version of onCourse</para>
 		<section>
@@ -600,7 +600,7 @@ pkg_add onCourseServer.tgz
 				installation of a new onCourse software version using their current datafile.</para>
 		</section>
 	</section>
-	<section>
+	<section xml:id="downloadinstall-Troubleshooting">
 		<title>Troubleshooting connection problems</title>
 		<para>When you run into problems with connecting a client to the server, the login window will
 			often display some messages in red text to inform you of difficulties. Here some common causes

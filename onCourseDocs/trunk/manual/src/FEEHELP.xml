@@ -2,21 +2,22 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
     version="5.0" xml:id="FEEHELP">
     <title>FEE-HELP</title>
-    <section>
+    <section xml:id="FEEHELP-whatIs">
         <title>What is VET FEE-HELP?</title>
         <para>In the onCourse context, VET FEE-HELP is a database export and reporting standard for
             students enrolled in courses for which they can apply for a government study
             loan.</para>
-        <para>More information about the current reporting standard can be found on the <link xlink:href="http://heimshelp.education.gov.au">Heims Help website</link></para>
+        <para>More information about the current reporting standard can be found on the <link
+                xlink:href="http://heimshelp.education.gov.au">Heims Help website</link></para>
         <para>VET FEE-HELP loans are available to assist eligible students studying Diploma level
             and above VET Qualifications to pay their tuition fees. Part, or all, of an eligible
-            student’s tuition fees can be deferred into VET FEE‑HELP loan. Some Government funded course fees can also be deferred under the VET FEE-HELP
-            scheme.</para>
+            student’s tuition fees can be deferred into VET FEE‑HELP loan. Some Government funded
+            course fees can also be deferred under the VET FEE-HELP scheme.</para>
         <para>An RTO needs to be pre-approved to offer VET FEE HELP on some or all of their courses.
             If you are an approved RTO, onCourse FEE HELP functions will enable you to meet your
             reporting and record keeping obligations.</para>
-        </section>
-    <section>
+    </section>
+    <section xml:id="FEEHELP-Creating">
         <title>Creating a VET FEE-HELP Class</title>
         <para>Creating the VET FEE-HELP course may involve creating a single course, for a full
             qualification, with all appropriate units of competency attached, if your course is
@@ -52,7 +53,6 @@
                 <para>Reporting period - This is the year and semester period in the format YYYYp. A
                     valid entry in this field would be 20151 or 20152</para>
             </listitem>
-
         </itemizedlist>
         <mediaobject>
             <imageobject>
@@ -64,15 +64,15 @@
             </caption>
         </mediaobject>
     </section>
-        <section>
+        <section xml:id="FEEHELP-studentEligibility">
         <title>Setting the Student's VET FEE-HELP eligibility</title>
         <para>For all students enrolled in a class where VET FEE-HELP loans are available, every
             participant must have additional data in their student VET tab record completed, even if
             they are not applying for a loan.</para>
         <para>You will need to create and record a CHESSN for each student, and complete the
             student's contact details and AVETMISS questions responses as usual.</para>
-                <para>There are some additional fields in the VET tab of a contact record that need
-            to be completed if the student is applying for VET FEE-HELP. You will need to mark the
+        <para>There are some additional fields in the VET tab of a contact record that need to be
+            completed if the student is applying for VET FEE-HELP. You will need to mark the
             checkbox called 'VET FEE-HELP eligible' for them to appear, these are:</para>
         <itemizedlist>
             <listitem>
@@ -93,7 +93,7 @@
             </caption>
         </mediaobject>
     </section>
-    <section>
+    <section xml:id="FEEHELP-loanRequets">
         <title>Student VET FEE-HELP Loan requests</title>
         <para>Every enrolment record has a VET FEE-HELP tab that is used to record the VET FEE-HELP
             loan request, or report that the student doesn't wish to apply for a loan. </para>
@@ -127,12 +127,17 @@
             <listitem>
                 <para>Credit Field of Education ID - A code that records details of the field of
                     education of the VET study for which credit/RPL was offered. Valid codes are in
-                    the range 0100 - 1299​ and can be found on the <link xlink:href="http://heimshelp.education.gov.au/sites/heimshelp/resources/pages/appendices">Heims Help website</link></para>
+                    the range 0100 - 1299​ and can be found on the <link
+                        xlink:href="http://heimshelp.education.gov.au/sites/heimshelp/resources/pages/appendices"
+                        >Heims Help website</link></para>
             </listitem>
             <listitem>
                 <para>Credit offered provider code - A code indicating the Higher Education Provider
                     where the studies for which the credit/RPL was offered were undertaken. Valid
-                    codes are in the range of 1000 to 6000 and can be found on the <link xlink:href="http://heimshelp.education.gov.au/sites/heimshelp/resources/pages/appendices">Heims Help website</link> </para>
+                    codes are in the range of 1000 to 6000 and can be found on the <link
+                        xlink:href="http://heimshelp.education.gov.au/sites/heimshelp/resources/pages/appendices"
+                        >Heims Help website</link>
+                </para>
             </listitem>
             <listitem>
                 <para>Credit type - select from the drop down list</para>
@@ -154,8 +159,8 @@
             </caption>
         </mediaobject>
     </section>
-<section>
-    <title>Exporting VET FEE-HELP data</title>
+<section xml:id="FEEHELP-Exporting">
+        <title>Exporting VET FEE-HELP data</title>
         <para>To perform a VET FEE HELP export open the class list window. Once you have this open,
             highlight one or more classes, click on the cogwheel and choose the option VET FEE HELP
             export.</para>
@@ -173,21 +178,24 @@
         </mediaobject>
         <para>The file names have a default structure you will need to edit prior to HEPCAT import.
             The year code after the file acronym will be the current year by default e.g.
-            0000VCC2015.100001 may need to be changed to  0000VCC2014.100001 if you are reporting
+            0000VCC2015.100001 may need to be changed to 0000VCC2014.100001 if you are reporting
             data for a previous calendar year. </para>
         <para>The final part of the name code after the full stop is the reporting period (first
             character) and submission number (numeric; 00001 to 99999). All exports will have the
             value 100001 in this part of the name, you may need to adjust before import.</para>
-    <para>More information on file naming conventions is available in the <link xlink:href="http://heimshelp.education.gov.au/sites/heimshelp/resources/toolkits/pages/reporting-with-hepcat">Reporting with HEPCAT toolkit</link> </para>
-    <mediaobject>
-        <imageobject>
-            <imagedata scalefit="1" width="100%" contentdepth="100%"
-                fileref="images/vet_fee_help_export_files.png"/>
-        </imageobject>
-        <caption>
-            <para>Default export file names that need to be modified</para>
-        </caption>
-    </mediaobject>
+        <para>More information on file naming conventions is available in the <link
+                xlink:href="http://heimshelp.education.gov.au/sites/heimshelp/resources/toolkits/pages/reporting-with-hepcat"
+                >Reporting with HEPCAT toolkit</link>
+        </para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/vet_fee_help_export_files.png"/>
+            </imageobject>
+            <caption>
+                <para>Default export file names that need to be modified</para>
+            </caption>
+        </mediaobject>
         <para>You will need HEPCAT installed on your computer to upload the files.</para>
         <para>HEPCAT will validate the data you have exported from onCourse. You can return to
             onCourse to correct any validation errors and export the data again, or fix the errors
@@ -198,12 +206,12 @@
                 >HEIMS</link>) and receive your student enrolment fee payments.</para>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/hepcat.png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/hepcat.png"
+                />
             </imageobject>
             <caption>
                 <para>Where the export files get lodged and validated</para>
             </caption>
-        </mediaobject>   
+        </mediaobject>
     </section>
 </chapter>

@@ -2,7 +2,6 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
     version="5.0" xml:id="users">
     <title>Users and Authenication</title>
-<para>...</para>
     <section xml:id="users-Users">
         <title>Users</title>
         <para>Go to File -> Preferences and select Users Add the names, user names and passwords
@@ -53,6 +52,18 @@
                 <para>The "new user" window</para>
             </caption>
         </mediaobject>
+        <para>A user can change their own password by going File -> Preferences -> and click on the
+            option 'Change my password'. Once they do this a window will pop up asking them to enter
+            what they would like their new password to be.</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/Change_password.png" format="png"/>
+            </imageobject>
+            <caption>
+                <para>Change my password window</para>
+            </caption>
+        </mediaobject>
         <tip>
             <para>If your College has more than one Administration Centre, it is possible to
                 switch between these centres whilst a user is logged in by selecting the
@@ -71,18 +82,28 @@
     </section>
     <section xml:id="users-TOTP">
         <title>Two Factor Authentication</title>
-        <para>.......</para>
+        <para>Two factor authentication is an added layer of security for users accessing onCourse
+            cloud instances, in particular, but also useful for locally hosted onCourse servers with
+            VPN access enabled. When logging into onCourse there will be a third field called Token
+            that needs to be filled in with a 6 digit code if the user has two factor authentication
+            enabled. If not, then this field can be left blank. If you try to log in with the wrong
+            Token, when you have this feature enabled, then you will get an error message saying
+            'Authentication failed'.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/Change_password.png" format="png"/>
+                    fileref="images/Two_factor_authentication.png" format="png"/>
             </imageobject>
             <caption>
-                <para>Change my password window</para>
+                <para>Login window</para>
             </caption>
         </mediaobject>
-        <para>For a user who is trying to enable their own two factor authentication they would need
-            to go File -> Prefe</para>
+        <para>For a user who is trying to enable their own two factor authentication, whilst logged
+            into onCoure they would need to go File -> Preferences -> then select the option 'Enable
+            two factor authentication'. Once they have done this a new window will appear providing
+            instructions on what to do. Once you have followed these instructions by downloading the
+            app and scanning to the barcode you would then need to enter the 6 digit code that
+            appears on your screen.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -92,7 +113,12 @@
                 <para>Window you see when trying to enable your own two factor authentication</para>
             </caption>
         </mediaobject>
-                <para>...</para>
+                <para>If the users two factor authentication is already enabled and they wish to
+            disbale it they would following the same route and go File -> Preferences -> and
+            clicking on the option 'Disable two factor authenication'.</para>
+        <para>Once they have done this a window will appearing confirming that they definitely want
+            to disable this feature and explaining what happens if they do. To confirm they would
+            need to click on the 'Disable' button.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -103,7 +129,10 @@
                     authentication</para>
             </caption>
         </mediaobject>
-        <para>.......</para>
+        <para>An admin user does have the power to change a users password or disable a users two
+            factor authentication, if they have e.g. forgotten their mobile phone. They can do this
+            by going File -> Preferences -> Users -> double click on the user you want to change,
+            then click on the button 'Reset authentication'.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -113,7 +142,12 @@
                 <para>User edit view window</para>
             </caption>
         </mediaobject>
-        <para>.......</para>
+        <para>Once you click on the button 'Reset authentication' and the user has their two factor
+            authentication disabled then the sheet that appears, as shown below, will only allow the
+            admin user to reset their password.</para>
+        <note>
+            <para>Only the user can enabled their own two factor authentication.</para>
+        </note>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -125,7 +159,9 @@
                     disabled</para>
             </caption>
         </mediaobject>
-        <para>.......</para>
+        <para>If the user has their two factor authentication enabled then the sheet that appears,
+            as shown below. This will allow the admin user to both reset their password and to
+            disable their two factor authentication.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -136,7 +172,9 @@
                     user edit view if the selected user has two factor authentication enabled</para>
             </caption>
         </mediaobject>
-        <para>.......</para>
+        <para>An admin user can see a list of all users that have this feature enabled in the users
+            list view by whether the checkbox is ticketed in the Two factor authentication column,
+            next to their name.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="80%" contentdepth="80%"

@@ -706,6 +706,8 @@
 					Collection Guidelines – 2015 v 2015.1</para>
 				<para>At the end of the NAT00010 file, the additional data 'onCourse' is exported
 					with our email address, 'info@ish.com.au'</para>
+				<para>The RTO ID is prefixed with leading zeros in the NAT0010, as required in
+					Victoria only</para>
 				<para>The addresses of your training venues in the NAT00020 are broken into building
 					name, flat details, street number and street name fields, like student addresses
 					in the NAT00080/85</para>
@@ -714,6 +716,9 @@
 				<para>There are two additional fields in the student VET tab for Vic 'Client Industry
 					of Employment' and 'Client Occupation Identifier'. The values set here will
 					export in the NAT0080.</para>
+				<para>The Prior Education Achievement Recognition Identifier in the NAT00100 always
+					exports as A for Australian. There is no corresponding database field for this
+					value.</para>
 				<para>In the NAT00120, onCourse automatically exports the Course Commenced Date from
 					the start date of the class the student is enrolled in</para>
 				<para>In the NAT00120, onCourse will only export the ANZIC code only when VET
@@ -723,6 +728,16 @@
 				<para>In the NAT00120 the tuition fee field will be calculated as a per hour value,
 					based on the fee charge during enrolment divided by the total nominal hours of
 					the course</para>
+				<para>In the NAT00120 the enrolment date is inserted based on the date the enrolment
+					was processed into onCourse</para>
+				<para>In the NAT00120 an enrolment identifier is added, using the record ID of the
+					outcome. This value is not visible or editable in the onCourse user interface.
+					This means once you have reported a student via AVETMISS you should not cancel
+					and re-enrol them as their unique ID will change.</para>
+				<para>In the NAT00120 the 'Client Fees - other' is always exported as $0. There is
+					no corresponding field for this value in onCourse.</para>
+				<para>In the NAT00120 the Delivering Training RTO ABN is always exported as the RTO
+					ABN from the general preferences. </para>
 				<para>The NAT00130 will automatically create a record for a student enrolled in a
 					qualification, but not yet complete or issued with a Year Program Completed
 					value of @@@@ and Qualification issued flag of N</para>

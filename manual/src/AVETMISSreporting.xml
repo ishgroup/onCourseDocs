@@ -46,38 +46,43 @@
 			can be found here: </para>
 		<para>
 			<link
+				xlink:href="http://www.training.nsw.gov.au/smartandskilled/index.html"
+				>New South Wales Smart and Skilled (2015 onwards)</link>
+		</para>
+		<para>
+			<link
 				xlink:href="https://www.training.nsw.gov.au/training_providers/training_market/doing_business/index.html"
-				>New South Wales</link>
+				>New South Wales Approved Providers List (APL) for 2014 and prior data</link>
 		</para>
 		<para>
 			<link
 				xlink:href="http://www.training.qld.gov.au/training-organisations/detconnect/index.html"
-				>Queensland</link>
+				>Queensland DETConnect</link>
 		</para>
 		<para>
 			<link
 				xlink:href="http://www.education.vic.gov.au/training/providers/rto/Pages/datacollection.aspx"
-				>Victoria</link>
+				>Skills Victoria</link>
 		</para>
 		<para>
 			<link
 				xlink:href="http://www.dtwd.wa.gov.au/dtwcorporateinfo/wavetenrolementdatastandard/Pages/default.aspx"
-				>Western Australia</link>
+				>Western Australia Department of Training and Workforce Development (DTWD)</link>
 		</para>
 		<para>
 			<link
 				xlink:href="http://www.skills.sa.gov.au/for-training-providers/skills-for-all-training-providers/skills-for-all-training-provider-contract"
-				>South Australia</link>
+				>South Australia Skills for All</link>
 		</para>
 		<para>
-			<link xlink:href="http://www.skills.tas.gov.au/providers/rtos">Tasmania</link>
+			<link xlink:href="http://www.skills.tas.gov.au/providers/rtos">Skills Tasmania</link>
 		</para>
 		<para>
 			<link xlink:href="http://www.det.act.gov.au/training/vet_admin">Australia Capital
-				Territory</link>
+				Territory AVETARS</link>
 		</para>
 		<para>
-			<link xlink:href="http://www.education.nt.gov.au/rto">Northern Territory</link>
+			<link xlink:href="http://www.education.nt.gov.au/rto">Northern Territory DET</link>
 		</para>
 		<para>
 			<link
@@ -170,48 +175,64 @@
 				we'll cover it here:</para>
 			<section>
 				<title>Training Organisation Delivery Location Identifier</title>
-				<para>This is a reference back to the site you have set up.</para>
+				<para>This is a numerical reference back to the site you have set up. You can cross reference
+					this with the sites reported in the NAT00020 file. If your onCourse classes are
+					not linked to a site, or linked to a virtual site, your default admin site
+					details will be reported.</para>
 			</section>
 			<section>
 				<title>Client Identifier</title>
-				<para>This is a reference back to the student you have set up.</para>
+				<para>This is the onCourse student number that was automatically assigned when the student
+					record was first created. This number can change over time when you merge
+					students. You can cross reference the students in the NAT00080 and NAT00085
+					files. </para>
 			</section>
 			<section>
 				<title>Module/Unit of Competency Identifier</title>
-				<para>If you set the unit in the course, and have enrolled your student in a class,
-					an outcome record will be created for each unit. But if you have a student who
-					chooses a different elective or you need to add or remove units for an
-					individual student, open the enrolment window, find the enrolment you want to
-					modify and on the outcome tab, make the appropriate changes.</para>
+				<para>For VET courses, this is the National Code of the associated unit of
+					competency. For non-VET courses this is a unique ISH reference number. You can
+					see a student's unit and additional outcome data in their student record or in
+					their enrolment records. This information is cross referenced with the NAT00060
+					file.</para>
 			</section>
 			<section>
 				<title>Qualification/Course Identifier</title>
-				<para>This is a reference back to the course you have set up. This field is only
-					populated if you marked the course as a 'full qualification' in onCourse.
-				</para>
+				<para>This is the National Code of the courses related Qualification. This field is only
+					populated if you marked the course as a 'is sufficient for a full qualification'
+					in onCourse, unless you are exporting in QLD or NSW where it will always be
+					exported if you have linked the course to a Qualification. This information is
+					cross referenced with the NAT00030 file.</para>
 			</section>
 			<section>
 				<title>Enrolment Activity Start Date and Enrolment Activity End Date</title>
-				<para>This is set in the class you have enrolled the student in. When you set up a
-					class in onCourse, set a start date and time and end date and time on the
-					General tab. If you need to modify the start or end date for an individual
-					student, you can do it through the enrolment (as described above) or through the
-					class window by looking on the Outcome tab and changing the date in the field
-					for the student/unit combination of your choice. </para>
+				<para>This is set in the class you have enrolled the student in. When you set up a class in
+					onCourse, create a class schedule with at least two sessions representing the
+					start and end date on the timetable tab. If you need to modify the start or end
+					date for an individual student, you can do it through their contact record or
+					through the class window by looking on the Outcome tab and changing the date in
+					the field for the student/unit combination of your choice. If you change the
+					class start and end dates, it will update the outcome start and end dates for
+					all students enrolled in the class, except those where you have already manually
+					edited the date.</para>
 			</section>
 			<section>
 				<title>Delivery Mode Identifier</title>
-				<para>This is set in the Class on the VET tab. You can also make changes for
+				<para>You preferred default setting can be set on the general preferences Class Defaults tab.
+					This can be changed for each Class on the VET tab. You can also make changes for
 					individual students on the Outcome list or through their individual
 					enrolment.</para>
 			</section>
 			<section>
 				<title>Outcome Identifier - National</title>
-				<para>You can set the outcome identifier (we call it status) on the Outcomes tab in
-					the Class window. If you select all the records in the list and right click on
-					them, you can set them all to 'Successful (20)' and then go back and change the
-					others that should be other statuses (like RPL or Not Yet Competent) one by one.
-					Or you can set them all one by one, whichever you prefer.</para>
+				<para>You can set the outcome identifier (we call it status) on the Outcomes tab in the Class
+					window. If you select all the records in the list and right click on them, you
+					can set them all to 'Successful (20)' and then go back and change the others
+					that should be other statuses (like RPL or Not Yet Competent) one by one. Or you
+					can set them all one by one, whichever you prefer. You can also set the outcome
+					status in the student contact record or the enrolment record.</para>
+				<para>If you set an outcome an RPL, RCC or Credit Transfer status, the Delivery Mode
+					Identifier will always export as 90 - NA regardless of what is set in the
+					outcome value.</para>
 			</section>
 			<section>
 				<title>Scheduled Hours</title>
@@ -222,12 +243,13 @@
 			</section>
 			<section>
 				<title>Funding Source - National</title>
-				<para>You can set this in the class window on the VET tab, but change it for each
-					outcome in the class Outcomes tab or for each student in their Enrolment record
-					on the General tab. Double click the outcome to see this field.</para>
+				<para>You preferred default setting can be set on the general preferences Class Defaults tab.
+					This can be changed for each Class on the VET tab. You can also change it for
+					each outcome in the class Outcomes tab or for each student in their Enrolment
+					record on the General tab. Double click the outcome to see this field.</para>
 			</section>
 			<section>
-				<title>Commencing Course Identifier</title>
+				<title>Commencing Program Identifier</title>
 				<para>If the student was enrolled in a class linked to a course marked as a full
 					qualification, then we output the value 3 - Commencing enrolment in a
 					qualification or course. If the enrolment was not linked to a course marked as a
@@ -235,40 +257,47 @@
 					only enrolment.</para>
 			</section>
 			<section>
-				<title>Training Contract Identifier - New Apprenticeships and Client Identifier -
-					New Apprenticeships</title>
+				<title>Training Contract Identifier</title>
+				<para>This information can be entered on the General tab on the student
+					Enrolment.</para>
+			</section>
+			<section>
+				<title>Client Identifier - apprenticeships</title>
 				<para>This information can be entered on the General tab on the student
 					Enrolment.</para>
 			</section>
 			<section>
 				<title>Study Reason Identifier</title>
-				<para>You can provide an answer to this question during the enrolment process, or
-					after enrolment by going to the General tab on the student Enrolment.</para>
+				<para>You can provide an answer to this question during the enrolment process, or after
+					enrolment by going to the General tab on the student Enrolment. This question is
+					also presented to the student in the post enrolment USI portal.</para>
 			</section>
 			<section>
 				<title>VET in Schools Flag</title>
-				<para>This is always reported as N (for no)</para>
+				<para>This information can be entered on the General tab on the student
+					Enrolment.</para>
 			</section>
 			<section>
 				<title>Outcome Identifier - Training Organisation</title>
-				<para>This field is always exported as blank.</para>
+				<para>This information can be entered on the General tab on the student Enrolment.</para>
 			</section>
 			<section>
 				<title>Funding Source - State Training Authority</title>
-				<para>You can enter this information in the Class VET tab or in the individual
-					student's outcome record on the Class Outcomes Tab or the Enrolment Outcomes
-					tab. Double click the outcome to see this field.</para>
+				<para>You can enter this information in the Class VET tab, the general tab in Enrolment or in
+					the individual outcome record on the Class Outcomes Tab or the Enrolment
+					Outcomes tab. Double click the outcome to see this field.</para>
 			</section>
 			<section>
 				<title>Client Tuition Fee</title>
-				<para>This is the fee you charged the student at the time of enrolment, divided by
-					the total nominal hours in the course, multiplied by the nominal hours of each
-					unit to set a proportional student fee for each unit. To charge a fee, set a
-					class fee in the Class General tab. VET courses are usually GST exempt. During
-					the enrolment process, you can charge the student the full fee or give them a
-					manual discount if they meet fee exemption criteria. The fee they pay here is
-					what is reported. Create a full cash payment for each student. Don't worry about
-					the invoices that are automatically created here - they have nothing to do with
+				<para>This is the fee you charged the student at the time of enrolment, divided by the total
+					nominal hours in the course, multiplied by the nominal hours of each unit to set
+					a proportional student fee for each unit. To charge a fee, set a class fee in
+					the Class General tab. VET courses are usually GST exempt. During the enrolment
+					process, you can charge the student the full fee or give them a manual discount
+					if they meet fee exemption criteria. The fee they pay here is what is reported.
+					If you don't usually use onCourse for invoicing and payment records, create a
+					full cash payment for each student on enrolment. Don't worry about the invoices
+					that are automatically created here - they have nothing to do with
 					AVETMISS.</para>
 			</section>
 			<section>
@@ -276,16 +305,25 @@
 				<para>This is set in the student's Enrolment record on the General Tab.</para>
 			</section>
 			<section>
-				<title>Purchasing Contract Identifier and Purchasing Contract Schedule
-					Identifier</title>
-				<para>These are set in the class on the VET tab</para>
+				<title>Purchasing Contract Identifier</title>
+				<para>This can be set in the class on the VET tab or in the student's enrolment General
+					tab.</para>
 			</section>
 			<section>
-				<title>Hours Attended</title>
+				<title>Purchasing Contract Schedule
+					Identifier</title>
+				<para>This is set in the class on the VET tab</para>
+			</section>
+			<section>
+				<title>Hours attended</title>
 				<para>This is only used when a student withdraws from a unit without completing it.
 					If you need to set the hours attended you can find the field in the Outcome
 					record on either the Class Outcomes Tab or the Enrolment Outcomes Tab. Double
 					click the outcome to see this field.</para>
+			</section>
+			<section>
+				<title>Associated course identifier</title>
+				<para>This is set in the student's Enrolment record on the General Tab.</para>
 			</section>
 		</section>
 		<section>
@@ -647,7 +685,30 @@
 					record length, we recommend using the TAS export option.</para>
 			</section>
 			<section>
-				<title>NSW DET</title>
+				<title>NSW Smart and Skilled (for 2015 data)</title>
+				<para>This export option is for reporting Smart &amp; Skilled funded training in NSW and meets
+					the requirements of the Smart and Skilled eReporting Technical Specifications
+					and Business Validations October 2014 specifications.</para>
+				<para>The 'Outcome identifier - Training Organisation' field has been added to the
+					Enrolment general tab to record the possible Training not completed (TNC) or
+					Training Deferred (D) value for the enrolment.</para>
+				<para>The field Purchasing Contract Identifier, which previously existed at the
+					class level has also been added to the enrolment general tab, with the NSW
+					specific label of Commitment ID. All outcomes in an enrolment will be reported
+					with the same Commitment ID.</para>
+				<para>The field Funding Source - State Training Authority field which was previously
+					available at the class and outcome level has also been added to the enrolment
+					general tab.</para>
+				<para>At the point in time the Smart &amp; Skilled export is run, any outcomes
+					selected with a start date in the future will export with a two blank spaces in
+					the place of the outcome identifier - national, regardless of what has been set
+					in the database.</para>
+				<para>An email address for all Smart &amp; Skilled students is mandatory. If the
+					student does not have an email address, or has chosen not to provide one,
+					onCourse will export notprovided@example.com.</para>
+			</section>
+			<section>
+				<title>NSW DET - APL (for 2014 data or earlier)</title>
 				<para>This export option is for reporting to the NSW Training Market and meets the
 					requirements of the ePayments Factsheet 4.3 - March 2014 Data Specifications.
 					This means you will export blank spaces for the outcome where the outcome has

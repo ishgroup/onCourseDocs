@@ -16,7 +16,7 @@
 			avoid problems that arise from having multiple databases.</para>
 	</tip>
 	<section xml:id="downloadinstall-Requirements">
-		<title>System and hardware requirements</title>
+		<title>System requirements</title>
 		<para>One of the following operating systems is required to run onCourse Client.</para>
 		<itemizedlist>
 			<listitem>
@@ -573,23 +573,45 @@ pkg_add onCourseServer.tgz
 				previous versions of the onCourse software installation files from ish at any time.</para>
 		</section>
 		<section>
-			<title>I have been running the onCourse sample file, now I want to start my own new datafile.
-				How can I do this?</title>
-			<para>1. On the machine running the onCourse server, ensure the server software is shut down. </para>
-			<para>2. Find the location of the onCourse.iocdata (most likely in C/Program Files/onCourse on
-				a Windows machine) </para>
-			<para>3. Rename the onCourse.iocadata file something like onCourse.iocdata.olddata. Changing
-				the file extension means the server software won't recognise or open the file when it next
-				starts up. </para>
-			<para>4. Run the onCourse server. Because you hid the old datafile it will ask you if you want
-				to start a new, sample or existing datafile. Choose new and save the datafile in the same
-				location as before. This will create a new onCourse.iocdata file </para>
-			<para>5. Once the server has completed the start up process, connect an onCourse client. Allow
-				about 5 minutes for the TGA data to download. You can check it has completed by
-				looking in the 'Unit of Competency' window. It will say 0 shown of 52000 odd records
-				in the window header bar when it has completed. </para>
-			<para>6. You are now ready to start the process again of setting up your sites, courses,
-				classes, students and enrolments </para>
+			<title>Starting a new data file</title>
+			<para>I have been running the onCourse sample file, now I want to start my own new datafile. How
+				can I do this?</para>
+			<orderedlist>
+				<listitem>
+					<para>On the machine running the onCourse server, ensure the server software is shut down. </para>
+				</listitem>
+				<listitem>
+					<para>Find the location of the onCourse.iocdata (most likely in C/Program Files/onCourse on a
+						Windows machine) </para>
+				</listitem>
+				<listitem>
+					<para>Rename the onCourse.iocadata file something like
+							onCourse.iocdata.olddata. Changing the file extension means the server
+							software won't recognise or open the file when it next starts up.
+						
+					</para>
+				</listitem>
+				<listitem>
+					<para>Run the onCourse server. Because you hid the old datafile it will
+							ask you if you want to start a new, sample or existing datafile. Choose
+							new and save the datafile in the same location as before. This will
+							create a new onCourse.iocdata file 
+					</para>
+				</listitem>
+				<listitem>
+					<para>Once the server has completed the start up process, connect an
+							onCourse client. Allow about 5 minutes for the TGA data to download. You
+							can check it has completed by looking in the 'Unit of Competency'
+							window. It will say 0 shown of 52000 odd records in the window header
+							bar when it has completed. 
+					</para>
+				</listitem>
+			</orderedlist>
+			<para>
+				You are now ready to start the process again of setting up your
+							sites, courses, classes, students and enrolments.
+
+			</para>
 		</section>
 		<section>
 			<title>Running multiple versions of the onCourse Server</title>

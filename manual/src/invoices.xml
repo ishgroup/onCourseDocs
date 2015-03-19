@@ -6,21 +6,27 @@
 		<para>Every time you create a purchase through Quick Enrol, an invoice (or several invoices) will
 			be automatically created for you. You can see the details of that invoice within Quick
 			Enrol and add additional custom lines (such as a surcharge for phone payments).</para>
+		<para>Invoice lines automatically created by Quick Enrol may include purchases of
+			enrolments, products, vouchers or memberships. Each item purchased will create an
+			invoice line. Payment against an invoice may be taken at the time of creation or at a
+			later date. Be default, all invoices created will have a due date of today, but you can
+			manually enter a different due date at the time or creation, or by editing the invoice
+			after creation. You can also add a customer reference to an invoice, where
+			required.</para>
 		<para>These invoices are then visible within the Invoice lists view. Like all other lists
 			you can sort, search, export and print from this view. Invoices may not be deleted and
 			all of the financial information within an invoice may not be edited once created.
 			Although this may seem like an inconvenience, immutable invoices are extremely important
 			to ensure a robust audit trail and to guarantee the integrity of the general ledger
 			transactions.</para>
-		<para>If you need to modify an invoice you should instead create a credit note. The cog
-			wheel in the invoice list view contains a convenient option to reverse an invoice by
-			creating a credit note. You can customise the credit note before saving if you wish to
-			offer only a partial reversal. Remember if you are cancelling an enrolment or a class
-			there are easier ways to do that from the class and enrolment list views.</para>
-		<para>A credit note is an invoice with a negative total and is shown alongside invoices in
-			the same list view. The owing amounts on an invoice and a credit note are not
-			automatically zeroed against each other, however you can cancel them out by creating a
-			zero dollar payment in.</para>
+		<para>If you need to modify an invoice you should instead create a credit note. A credit note is
+			an invoice where the invoice lines have negative dollar values. Remember if you are
+			cancelling an enrolment or a class there are easier ways to do that from the class and
+			enrolment list views.</para>
+		<para>A credit note is an invoice with a negative total and is shown alongside invoices in the
+			same list view. The owing amounts on an invoice and a credit note are not automatically
+			zeroed against each other, however you can cancel them out by using the cog wheel option
+			'contra invoice'.</para>
 		<section xml:id="invoice-create">
 			<title>Creating an invoice</title>
 			<para>While you will usually create an invoice through using Quick Enrol, it is sometimes useful
@@ -41,8 +47,12 @@
 		</section>
 		<section xml:id="invoice-linking">
 			<title>Link invoice lines to classes</title>
-			<para>When creating invoice lines you may link each line to a class. This adds the total of that invoice line to the class budget and
-				can be very useful when invoicing a company for an entire classroom delivery without recording individual enrolments. </para>
+			<para>When creating invoice lines you may optionally link each line to a class. This will treat
+				the income with the same general ledger pre-paid fees and income deferral plan as
+				invoices created by enrolling in the class. This also adds the total of that invoice
+				line to the class budget and can be very useful when invoicing a company for an
+				entire classroom delivery without recording individual enrolments or need to include
+				additional income such as funding in a classes budget. </para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -56,8 +66,9 @@
 	</section>
 	<section xml:id="invoice-paymentPlan">
 		<title>Payment plans</title>
-		<para>By default invoices have a due date 28 days into the future. Sometimes you will want to allow students to pay for training over a
-			longer period of time. Using payment plans you can set the amount of the up front deposit and a series of dates for payment of the
+		<para>By default invoices have a due of the day they are created. Sometimes you will want to allow
+			students to pay for training over a longer period of time. Using payment plans you can
+			set the amount of the up front deposit and a series of dates for payment of the
 			remainder in instalments. </para>
 		<section xml:id="invoice-dueDate">
 			<title>Invoice due dates</title>

@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
     version="5.0" xml:id="users">
-    <title>Users and Authenication</title>
+    <title>Users and Authentication</title>
     <section xml:id="users-Users">
         <title>Users</title>
-        <para>Go to File -> Preferences and select Users Add the names, user names and passwords
-            for each onCourse user. There are no limits to the number of users in onCourse.
-            Users can be deactivated if they leave your organisation.</para>
+        <para>Go to File -> Preferences and select Users Add the names, user names and passwords for
+            each onCourse user. There are no limits to the number of users in onCourse. Users should
+            be deactivated if they leave your organisation.</para>
+        <para>Every person in the organisation who uses onCourse should have their own user account.
+            We do not recommend users 'share' a login as various user layout preferences are saved
+            against each user account. Important records created in onCourse like invoices, payments
+            and enrolments are linked to the user who created them. If you need to follow up any
+            discrepancies, this is made much easier when your staff each have their own login and
+            their user name is something easy to identify the person by, like their first
+            name.</para>
         <itemizedlist>
             <listitem>
-                <para>Login - What you use along with the password to login into onCourse e.g:
-                    Login : John</para>
+                <para>Login - What you use along with the password to login into onCourse, usually
+                    something simple to remember like 'John'.</para>
             </listitem>
             <listitem>
                 <para>Password</para>
@@ -22,12 +29,15 @@
                 <para>Last Name</para>
             </listitem>
             <listitem>
-                <para>Default administration centre - The Default administration centre refers
-                    to the physical site where your staff are working. From the drop down menu
-                    select that site. </para>
+                <para>Default administration centre - The Default administration centre refers to
+                    the physical site where your staff are working. Select the site from the drop
+                    down menu. This is important if you take physical cash, cheque or eftpos
+                    payments at these venues and you need the site banking process to correctly
+                    tally the location balances.</para>
             </listitem>
             <listitem>
-                <para>Email</para>
+                <para>Email - the users primary email address (this email address will be used for
+                    the CMS login process)</para>
             </listitem>
             <listitem>
                 <para>Active - selecting this allows the user to login to onCourse. If active is
@@ -35,12 +45,18 @@
                     the onCourse login screen.</para>
             </listitem>
             <listitem>
-                <para>Admin - Checking this will allow the user to be an admin, they will have
-                    many access rights and can assign roles and rights to other users.</para>
+                <para>Admin - Checking this will allow the user to be an admin, they will have full
+                    access rights and can assign roles and rights to other users.</para>
             </listitem>
             <listitem>
-                <para>Last logged on - not editable, just tells you when that user last logged
-                    on.</para>
+                <para>Last logged in - not editable, just tells you when that user last logged into
+                    onCourse</para>
+            </listitem>
+            <listitem>
+                <para>Can edit CMS - this is a special permission that allows this user to login to
+                    your website via the CMS URL and make changes to the website pages directly. You
+                    do not need this permission to edit website content like courses, classes and
+                    products via onCourse.</para>
             </listitem>
         </itemizedlist>
         <mediaobject>
@@ -52,9 +68,14 @@
                 <para>The "new user" window</para>
             </caption>
         </mediaobject>
+        <section>
+            <title>Changing user settings and passwords</title>
+            <para>For an onCourse user who has edit rights to the user accounts, the password for
+                any other user account can be reset by clicking 'reset password' in the user record.
+                This is useful when users forget their passwords and are unable to login.</para>
         <para>A user can change their own password by going File -> Preferences -> and click on the
-            option 'Change my password'. Once they do this a window will pop up asking them to enter
-            what they would like their new password to be.</para>
+                option 'Change my password' at any time. Once they do this a window will pop up
+                asking them to enter what they would like their new password to be.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -80,15 +101,26 @@
             </caption>
         </mediaobject>
     </section>
+    </section>
     <section xml:id="users-TOTP">
-        <title>Two Factor Authentication</title>
+        <title>onCourse Login with Two Factor Authentication</title>
         <para>Two factor authentication is an added layer of security for users accessing onCourse
             cloud instances, in particular, but also useful for locally hosted onCourse servers with
-            VPN access enabled. When logging into onCourse there will be a third field called Token
-            that needs to be filled in with a 6 digit code if the user has two factor authentication
-            enabled. If not, then this field can be left blank. If you try to log in with the wrong
-            Token, when you have this feature enabled, then you will get an error message saying
-            'Authentication failed'.</para>
+            VPN access enabled. </para>
+        <para>Two factor authentication means that there are two 'secrets' a user needs to know to
+            successfully log in to your onCourse application. One secret is the password set for the
+            user account. The second 'secret' is a code that requires a device such as a smart phone
+            with an application such as <link
+                xlink:href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator"
+                >Google Authenticator</link> installed, with an account linked to
+            the onCourse user account. This service generates a unique code every 30 seconds. To
+            login successfully you will need both the user password and a current token.</para>
+        <para>When two factor authentication is enabled, during login there is a third field called
+            Token that needs to be filled in with the 6 digit code provided by your TOTP
+            application. If it is not enabled, then the Token field can be left blank and you can
+            login with a login name and password only. </para>
+        <para>When two factor authentication is enabled, if you try to log in with the wrong Token
+            or Password, then you will get an error message saying 'Authentication failed'.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -98,12 +130,41 @@
                 <para>Login window</para>
             </caption>
         </mediaobject>
-        <para>For a user who is trying to enable their own two factor authentication, whilst logged
-            into onCoure they would need to go File -> Preferences -> then select the option 'Enable
-            two factor authentication'. Once they have done this a new window will appear providing
-            instructions on what to do. Once you have followed these instructions by downloading the
-            app and scanning to the barcode you would then need to enter the 6 digit code that
-            appears on your screen.</para>
+        <section>
+            <title>Enabling two factor authentication</title>
+            <para>Each onCourse user needs to enable two factor authentication after they have
+                logged into onCourse via the standard login process.</para>
+            <para>Have your mobile phone handy while you do this as you will need to install the
+                TOTP software as the first part of the process. Search for 'Google Authenticator' in
+                your phone's app store and install it. </para>
+            <para>When you first run the Authenticator app and click 'Begin setup' you may also be
+                asked to install a QR code reader if you don't already have one. You do not have to
+                do this, as you can choose to manually add an account by selecting 'Enter provided
+                key', however there is less chance of data entry error if you scan the code.</para>
+            <para>The account name you create in Google Authenticator can be anything you like, such
+                as "My onCourse login". It does not have to match your onCourse user name.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/googleAuthenticatorApp.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>Install Google Authenticator on your smart phone</para>
+                </caption>
+            </mediaobject>
+            <para>To enable two factor authentication, login to onCourse and go to File ->
+                Preferences -> then select the option 'Enable two factor authentication'. A new
+                window will appear in onCourse providing instructions on what to do next. </para>
+            <para>On this window you will find a list of five scratch codes to allow you a once off
+                emergency login to onCourse if you don't have your phone and the Google
+                Authenticator app available. These codes are unique for each onCourse user and
+                expire once they are used. We suggest you write these down and store them in a
+                secure place.</para>
+            <para>Once you have followed these instructions by downloading the app and scanning the
+                QR code or typing the Key into Google Authenticator on your phone, enter the 6 digit
+                code that appears on your phone screen into the onCourse window. You can not save or
+                enable two factor authentication without successfully configuring your phone and
+                generating a valid key.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -113,12 +174,16 @@
                 <para>Window you see when trying to enable your own two factor authentication</para>
             </caption>
         </mediaobject>
-                <para>If the users two factor authentication is already enabled and they wish to
-            disbale it they would following the same route and go File -> Preferences -> and
-            clicking on the option 'Disable two factor authenication'.</para>
-        <para>Once they have done this a window will appearing confirming that they definitely want
-            to disable this feature and explaining what happens if they do. To confirm they would
-            need to click on the 'Disable' button.</para>
+        </section>
+        <section>
+            <title>Disabling or resetting two factor authentication</title>
+            <para>If a user has two factor authentication enabled and they wish to disable it, they
+                can go to File -> Preferences -> and click on the option 'Disable two factor
+                authentication'.</para>
+        <para>A window will appear confirming that you definitely want to disable this feature and
+                explaining how to re-enable it. To confirm, click on the 'Disable' button.</para>
+            <para>You should follow this process if you have bought a new smart phone and need to
+                set up Google Authenticator again.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -129,10 +194,10 @@
                     authentication</para>
             </caption>
         </mediaobject>
-        <para>An admin user does have the power to change a users password or disable a users two
-            factor authentication, if they have e.g. forgotten their mobile phone. They can do this
-            by going File -> Preferences -> Users -> double click on the user you want to change,
-            then click on the button 'Reset authentication'.</para>
+        <para>An admin user has the power to change a users password or disable a users two factor
+                authentication, for example, if they have forgotten their mobile phone.  You can do
+                this by going to File -> Preferences -> Users -> double click on the user you want
+                to change, then click on the button 'Reset authentication'.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -146,7 +211,7 @@
             authentication disabled then the sheet that appears, as shown below, will only allow the
             admin user to reset their password.</para>
         <note>
-            <para>Only the user can enabled their own two factor authentication.</para>
+            <para>Only the user can enable their own two factor authentication.</para>
         </note>
         <mediaobject>
             <imageobject>
@@ -173,8 +238,8 @@
             </caption>
         </mediaobject>
         <para>An admin user can see a list of all users that have this feature enabled in the users
-            list view by whether the checkbox is ticketed in the Two factor authentication column,
-            next to their name.</para>
+                list view by whether the checkbox is ticked in the Two factor authentication column,
+                next to their name.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -184,5 +249,6 @@
                 <para>Users list view</para>
             </caption>
         </mediaobject>
+        </section>
     </section>
 </chapter>

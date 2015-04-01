@@ -251,4 +251,41 @@
         </mediaobject>
         </section>
     </section>
+    <section>
+        <title>Emergency access</title>
+        <para>Should you lock yourself out of your onCourse Server because you have lost or
+            forgotten the last admin login, there is a way to recreate or reset the 'admin' user
+            password.</para>
+        <para>You need to do the following:</para>
+        <orderedlist>
+            <listitem>
+                <para>Add "admin_password_reset=true" to the onCourse.cfg file on the server. </para>
+            </listitem>
+            <listitem>
+                <para>Restart the onCourse Server </para>
+            </listitem>
+            <listitem>
+                <para>Watch for the following lines in the log file and write down the password (it
+                    will be randomly generated every time)</para>
+                           <para>
+                    &lt;code&gt;*******************************************************************************************************************
+                    ********** Administrator password reset command found in onCourse.cfg </para>
+                <para>********** Account with name "admin" now has password "hggd74" </para>
+                <para>********** onCourse Server will now shut down. Remove the line starting
+                    "admin_password_reset" before restarting
+                    ********************************************************************************************************************&lt;/code&gt; </para>
+            </listitem>
+                      <listitem>
+                <para>Remove "admin_password_reset=true" from onCourse.cfg </para>
+            </listitem>
+            <listitem>
+                <para>Start up onCourse Server one more time </para>
+            </listitem>
+            <listitem>
+                <para>Log in with the user "admin" and the password as given above. TOTP will be
+                    disabled and this user will be made into an admin level account if they were not
+                    already.</para>
+            </listitem>
+        </orderedlist>
+    </section>
 </chapter>

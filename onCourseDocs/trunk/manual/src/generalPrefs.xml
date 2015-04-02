@@ -164,8 +164,11 @@
 			on your contacts list. In order to do this you first need to configure the email settings. </para>
 		<orderedlist>
 			<listitem>
-				<para>Outgoing emails: Enter the host name or IP (internet provider) address of the mail
-					server in <guilabel>Outgoing Mail Server Address SMTP</guilabel></para>
+				<para>It is important to configure an outbound mail server in order for email from onCourse to
+					be delivered. This includes enrolment confirmations, invoices and other outbound
+					messages.  Enter the host name or IP address of the mail server in
+						<guilabel>Outgoing Mail Server Address SMTP</guilabel>. Optionally you can
+					add authentication settings if your mail server requires it.</para>
 			</listitem>
 			<listitem>
 				<para>In the <guilabel>Email from address</guilabel> enter the address from which you want
@@ -176,10 +179,6 @@
 					undeliverable mail and bounces will go to (if you don't use VERP). You will need a valid
 					email account that will be accepted by that mail server. You should contact your mail
 					administrator to verify that these details are correct. </para>
-			</listitem>
-			<listitem>
-				<para>The <guilabel>SMTP username</guilabel> and <guilabel>SMTP password</guilabel> fields allow
-					you to add mail server configurations</para>
 			</listitem>
 				<listitem>
 				<para>Underneath is the <guilabel>emails queued</guilabel> notification. This field will

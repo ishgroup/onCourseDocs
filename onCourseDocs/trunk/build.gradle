@@ -40,7 +40,7 @@ buildscript {
 				'apache-xerces:resolver:2.9.1',
 				fopDeps,
 				'net.sf.xslthl:xslthl:2.1.0',
-                'com.github.ben-manes:gradle-versions-plugin:0.5-beta-1',
+                'com.github.ben-manes:gradle-versions-plugin:0.8',
                 'com.xlson.groovycsv:groovycsv:1.0'
 	}
 
@@ -48,7 +48,7 @@ buildscript {
 
 allprojects {
     apply plugin: 'base'
-    apply plugin: 'versions' // adds the task 'dependencyUpdates'
+    apply plugin: 'com.github.ben-manes.versions' // adds the task 'dependencyUpdates'
     
     version = project.hasProperty('docVersion') ? project.docVersion : 'unspecified'
 
@@ -124,7 +124,7 @@ subprojects {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.2.1'
+    gradleVersion = '2.3'
 }
 
 public class Docbook extends DefaultTask {

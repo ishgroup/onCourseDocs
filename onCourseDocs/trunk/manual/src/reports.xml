@@ -3,62 +3,50 @@
 	<title>Reporting</title>
 	<subtitle>Reports. Numbers. Charts. It's important to be able to see your data to make business
 		decisions, and even more importantly, seeing it in a way that makes sense to you.</subtitle>
-	<section xml:id="reports-Existing">
+		<para>onCourse takes advantage of a powerful reporting tool called JasperReports. This open source
+			library costs you nothing to use and can be extended to add new features. We've extended it to
+			understand onCourse data, tied it into a PDF generation system and allowed to you add your own
+			reports right into onCourse for all users to easily run.</para>
+	<section xml:id="reports-existing">
 		<title>Existing reports</title>
-		<para>In onCourse, we have used a powerful, flexible reporting engine called JasperReports
-			to create our reports. We and our customers can create report templates are used to
-			generate print quality output PDF, CSV and XML that fits their needs.</para>
-		<para>There exist a number of tools that can be used to create custom reports which are
-			outlined in the later sections of this document. Our tool of choice is called iReport,
-			but it's still possible to create reports such as OpenOffice or MS Office but these
-			solutions will not be able to generate reports that can be imported as a report within
-			onCourse itself.</para>
-		<para>You'll find that a number of reports have already been included in onCourse. For the
-			most part these will provide information about one thing, ie. from the Students window,
-			you'll be able to print a list of students, or student details. Similarly from the
-			Courses window, you can reports relating to courses.</para>
-		<para>However, sometimes onCourse users want to find out more information than is included
-			in current reports. We also have a mechanism to create custom reports, and import theses
-			reports that into onCourse, allowing new reports to be printed when required.
-			Alternatively, you can contract ish to develop custom reports to meet your
-			specifications.</para>
+			<para>onCourse comes prepackaged with a large range of reports. You can use them as is, or copy
+				and modify any of them to suit your needs. You can also create brand new reports from 
+				scratch.</para>
 		<section>
 			<title>Printing Reports in onCourse</title>
-			<para>The first thing to be aware of when attempting to print a report is that you must
-				be in the right onCourse list view to print a report. For example, Class roll is a
-				report available from the class list. You can not print this report from inside the
-				class record, or from the general window. You must open the class window
-				first.</para>
+			<para>The first thing to be aware of when attempting to print a report is that you must be in
+				the right onCourse list view to print a report. For example, Class roll is a report
+				available from the class list. You can not print this report from inside the class record,
+				or from the general window. You must open the class window first.</para>
 			<para>From each list window, you can select File > Print to see the list of available
 				reports.</para>
-			<para>All reports are printed to a PDF file which you can save to your computer, email,
-				or print to a printer on your network. Your computer will need to have a PDF reader
-				installed to create and view the report. Windows operating systems prior to Windows
-				8 need to have this manually installed as one is not included as part of the
-				operating system. OSX includes an embedded PDF reader called Preview. </para>
+			<para>All reports are printed to a PDF file which you can save to your computer, email, or print
+				to a printer on your network. Your computer will need to have a PDF reader installed
+				to create and view the report. Windows operating systems prior to Windows 8 need to
+				have this manually installed as one is not included as part of the operating system.
+				OSX includes an embedded PDF reader called Preview. </para>
 			<para> For exports to excel, XML or other formats, see the chapter <link
 					xlink:href="#importExport">Importing and Exporting.</link>
 			</para>
-			<para>Before you print a report, you will usually need to run a query on the data first.
-				For example, if you wish to print the class rolls for all the classes starting this
-				week, you will need to do an advanced query for classes starting from today, to the
-				last day of the week. For more information on queries, see the chapter Getting
-				Started.</para>
-			<para>The print dialogue box provides an alphabetized list of all reports available via
-				the given window, simply select the relevant report and a summary description is
-				provided of the highlighted report. This description will also clarify as to whether
-				the report prints in Portrait or Landscape format.</para>
+			<para>Before you print a report, you will usually need to run a query on the data first. For
+				example, if you wish to print the class rolls for all the classes starting this week, you
+				will need to do an advanced query for classes starting from today, to the last day of the
+				week. For more information on queries, see the chapter Getting Started.</para>
+			<para>The print dialogue box provides an alphabetized list of all reports available via the given
+				window, simply select the relevant report and a summary description is provided of
+				the highlighted report. This description will also clarify as to whether the report
+				prints in Portrait or Landscape format.</para>
 			<para>In the print dialogue, you will be asked if you want to print all, selected or
-				highlighted records. A record count will be given for each option. Selecting 'all'
-				will print the report for all records in the database. Choosing 'selected' will
-				print the results from the query you have run. Choosing highlighted will print the
-				report for the one or more records you have selected in the list. </para>
+				highlighted records. A record count will be given for each option. Selecting 'all' will
+				print the report for all records in the database. Choosing 'selected' will print the results
+				from the query you have run. Choosing highlighted will print the report for the one or more
+				records you have selected in the list. </para>
 			<section>
 				<title>Managing Print Backgrounds </title>
-				<para>onCourse printed reports can be set up with a defined background or overlay
-					allowing the user to utilise different backgrounds or headers dependent upon the
-					particular report. These backgrounds can be set up as a PDF document that is
-					then imported into onCourse via the report window. </para>
+				<para>onCourse printed reports can be set up with a defined background or overlay allowing the
+					user to utilise different backgrounds or headers dependent upon the particular
+					report. These backgrounds can be set up as a PDF document that is then imported
+					into onCourse via the report window. </para>
 				<para>Generally, a college will have a standard 'letterhead' style background,
 					available in both portrait and landscape modes that can be used as the print
 					background to common reports like invoices, enrolment confirmations and class
@@ -76,39 +64,35 @@
 					software or report writing skills.</para>
 				<section>
 					<title>Setting Up the Report Print Backgrounds</title>
-					<para>The following instructions outline how you can set up your report print
-						backgrounds which will be overlayed with the report content:</para>
-					<orderedlist>
-						<listitem>
-							<para>Create a new Microsoft Word or iWork Pages document and ensure
-								that the page set up is set to Portrait.</para>
-						</listitem>
-						<listitem>
-							<para>Open up the Header for the new document and place the required
-								logo and contact details you wish the report to display.</para>
-							<tip>
-								<para>Ensure that the elements that you place within the header do
-									not exceed the dimensions of the report header space. </para>
-							</tip>
-						</listitem>
-						<listitem>
-							<para>Once you have completed the set up of the page header, save the
-								document as a PDF so that it is ready to be imported into onCourse
-								as a background. Make sure that you clearly label within the name of
-								the PDF whether the document is Portrait or Landscape format.
-							</para>
-						</listitem>
-						<listitem>
-							<para>Reset the original Word or Pages document to display in Landscape
-								format, then realign the elements within Header to ensure it fits
-								within the dimensions of the Header.</para>
-						</listitem>
-						<listitem>
-							<para>Repeat step 3 making sure that you clearly label within the name
-								of the PDF whether the document is Portrait or Landscape
-								format</para>
-						</listitem>
-					</orderedlist>
+				<para>The following instructions outline how you can set up your report print backgrounds which
+						will be overlayed with the report content:</para>
+			<orderedlist>
+				<listitem>
+					<para>Create a new Microsoft Word or iWork Pages document and ensure that the page set up is set to Portrait.</para>					
+				</listitem>
+				<listitem>
+					<para>Open up the Header for the new document and place the required logo and contact details you wish the report to display.</para>
+				<tip>
+					<para>Ensure that the elements that you place within the header do not exceed the dimensions of
+									the report header space. </para>
+				</tip>
+				</listitem>
+				<listitem>
+					<para>Once you have completed the set up of the page header, save the document as a PDF so that
+								it is ready to be imported into onCourse as a background. Make sure
+								that you clearly label within the name of the PDF whether the
+								document is Portrait or Landscape format. </para>
+				</listitem>
+				<listitem>
+					<para>Reset the original Word or Pages document to display in Landscape format, then realign
+								the elements within Header to ensure it fits within the dimensions
+								of the Header.</para>
+				</listitem>
+				<listitem>
+					<para>Repeat step 3 making sure that you clearly label within the name of the PDF whether the
+							document is Portrait or Landscape format</para>
+				</listitem>
+			</orderedlist>
 				</section>
 				<section>
 					<title>Certificate Backgrounds</title>
@@ -118,154 +102,134 @@
 						designed, which you order from the printers, you can choose to embed this
 						background in the report. You should request a A4 PDF of your backgrounds
 						from your designers first.</para>
-					<para>If you do not have a professionally designed background, you can easily
-						create your own using a simple word processing tool. Keep in mind the <link
+					<para>If you do not have a professionally designed background, you can easily create your own
+						using a simple word processing tool.  Keep in mind the <link
 							xlink:href="http://www.asqa.gov.au/qualifications/issuing-qualifications.html"
 							> ASQA guidelines for issuing certificates</link> and the appropriate
 						use of the formal logos, when designing your backgrounds.</para>
 					<para>You will also need a second page PDF background for the transcript
 						report.</para>
-					<para>If you create and upload a two page PDF, comprised of your Certificate
-						design followed by your letterhead or transcript design, for example, these
-						pages will be used correctly when printing the combined report from
-						onCourse.</para>
-					<para>When creating a background for a Qualification or Statement of Attainment
-						report, onCourse will apply the first page of your PDF background to the
-						first page of your report (the Certificate page), then apply the second page
-						of your PDF background to each subsequent page of the Certificate report
-						(the Transcript pages). </para>
-					<para>If you are printing Certificates in bulk, onCourse will recognise when the
-						student record has changed to the next student and therefore apply the first
-						page of the PDF background again as this is a new Certificate. </para>
+					<para>If you create and upload a two page PDF, comprised of your Certificate design followed by
+						your letterhead or transcript design, for example, these pages will be used
+						correctly when printing the combined report from onCourse.</para>
+					<para>When creating a background for a Qualification or Statement of Attainment report,
+						onCourse will apply the first page of your PDF background to the first page
+						of your report (the Certificate page), then apply the second page of your
+						PDF background to each subsequent page of the Certificate report (the
+						Transcript pages).  </para>
+				<para>If you are printing Certificates in bulk, onCourse will recognise when the student record
+						has changed to the next student and therefore apply the first page of the
+						PDF background again as this is a new Certificate. </para>
 				</section>
 				<section>
 					<title>Selecting a Background when Running the Report</title>
-					<para>Once you have created the print backgrounds for your reports, you can now
-						import those PDF backgrounds into onCourse and attach them to the specific
-						report. You only need to import each report background once. </para>
+					<para>Once you have created the print backgrounds for your reports, you can now import those
+						PDF backgrounds into onCourse and attach them to the specific report. You
+						only need to import each report background once. </para>
 					<para>Selecting the relevant background is managed via the print dialogue box of
 						onCourse. The following instructions outline how you can apply the relevant
 						backgrounds to your reports:</para>
 					<orderedlist>
 						<listitem>
-							<para>The first option within the drop down menu of available
-								backgrounds is 'no background'. If you select this option it simply
-								means that the header of the report will be blank (no logos or text
-								will appear).</para>
+							<para>The first option within the drop down menu of available backgrounds is 'no background'.
+								If you select this option it simply means that the header of the
+								report will be blank (no logos or text will appear).</para>
 						</listitem>
 						<listitem>
-							<para>The drop down menu will also display any other backgrounds that
-								you have previously imported into onCourse. As per the following
-								example, this is where the naming convention of the backgrounds
-								becomes very important, particularly with respect to whether the
-								background is in Portrait or Landscape format. If you select a
-								Landscape template for a report which is printed in Portrait format,
-								the report will not work. </para>
+							<para>The drop down menu will also display any other backgrounds that you have previously
+								imported into onCourse. As per the following example, this is where
+								the naming convention of the backgrounds becomes very important,
+								particularly with respect to whether the background is in Portrait
+								or Landscape format. If you select a Landscape template for a report
+								which is printed in Portrait format, the report will not work. </para>
 							<mediaobject>
 								<imageobject>
-									<imagedata contentdepth="100%"
-										fileref="images/PrintBackgroundOptions.png" format="png"
-										scalefit="1" width="100%"/>
+									<imagedata contentdepth="100%" fileref="images/PrintBackgroundOptions.png" format="png" scalefit="1" width="100%"/>
 								</imageobject>
 								<caption>
-									<para>Select the relevant print background from the drop down
-										menu</para>
+									<para>Select the relevant print background from the drop down menu</para>
 								</caption>
 							</mediaobject>
 						</listitem>
 						<listitem>
-							<para>If you wish to import a new background PDF document, select
-								'import from disk' from the drop down menu, this will bring up a
-								dialogue box to allow you to select the background you wish to use
-								for this report. Note also that the newly imported print background
-								will be auto selected as the background for the Report you are
-								currently running by default. </para>
+							<para>If you wish to import a new background PDF document, select 'import from disk' from the
+								drop down menu, this will bring up a dialogue box to allow you to
+								select the background you wish to use for this report. Note also
+								that the newly imported print background will be auto selected as
+								the background for the Report you are currently running by default. </para>
 						</listitem>
 						<listitem>
-							<para>Once you have either selected an existing background or imported a
-								new one from disk, you simply run the report, which will generate a
-								PDF output of the report with the specified background.</para>
+							<para>Once you have either selected an existing background or imported a new one from disk, you simply run the report, which will generate a PDF output of the report with the specified background.</para>
 						</listitem>
 					</orderedlist>
 					<tip>
-						<para>The chosen report will display the last background used as the default
-							when printing that report. But you can simply select an alternate
-							background from the drop down menu or import a new background if you so
-							chose. </para>
-					</tip>
+						<para>The chosen report will display the last background used as the default when printing
+							that report. But you can simply select an alternate background from
+							the drop down menu or import a new background if you so chose.  </para></tip>
 				</section>
 				<section>
 					<title>Managing Print Backgrounds</title>
-					<para>Once you have uploaded the PDF documents that become the print backgrounds
-						for your reports, you can then manage these backgrounds via the Report
-						window of onCourse.</para>
+					<para>Once you have uploaded the PDF documents that become the print backgrounds for your
+						reports, you can then manage these backgrounds via the Report window of
+						onCourse.</para>
 					<para>To access these backgrounds go to <guimenuitem> File - Preferences -
 							Reports</guimenuitem>, highlight the report you wish to edit the
 						background or backgrounds for then select 'Manage print backgrounds' via the
 						cogwheel icon of the Report window.</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata contentdepth="100%"
-								fileref="images/ManagePrintBackgroundsViaCogwheel.png" format="png"
-								scalefit="1" width="100%"/>
+							<imagedata contentdepth="100%" fileref="images/ManagePrintBackgroundsViaCogwheel.png" format="png" scalefit="1" width="100%"/>
 						</imageobject>
 						<caption>
 							<para>Manage backgrounds via Report window</para>
 						</caption>
 					</mediaobject>
-					<para>A new dialogue box will appear, which allows you to either rename a
-						background by double clicking on the entry, or to delete a background that
-						is no longer being utilised. </para>
-					<mediaobject>
-						<imageobject>
-							<imagedata contentdepth="100%"
-								fileref="images/ManagePrintBackgroundsDialogueBox.png" format="png"
-								scalefit="1" width="100%"/>
-						</imageobject>
-						<caption>
-							<para>Editing Backgrounds</para>
-						</caption>
-					</mediaobject>
+					<para>A new dialogue box will appear, which allows you to either rename a background by double
+						clicking on the entry, or to delete a background that is no longer being
+						utilised. </para>
+				<mediaobject>
+					<imageobject>
+						<imagedata contentdepth="100%" fileref="images/ManagePrintBackgroundsDialogueBox.png" format="png" scalefit="1" width="100%"/>
+					</imageobject>
+					<caption>
+						<para>Editing Backgrounds</para>
+					</caption>
+				</mediaobject>
 					<tip>
-						<para>You can only import new backgrounds via the Print dialogue box when
-							printing a given report. This process cannot be done via the Report
-							window of onCourse.</para>
+						<para>You can only import new backgrounds via the Print dialogue box when printing a given
+							report. This process cannot be done via the Report window of
+							onCourse.</para>
 					</tip>
 				</section>
 				<section>
 					<title>Managing Backgrounds for Custom Reports</title>
-					<para>The ability to apply a print background to your Custom Reports provides
-						users with a much greater level of flexibility particularly in reference to
-						generating Certificates. </para>
-					<para>One example of this is that if your College has more than one entity such
-						as a separate Business Training College, by setting up different print
-						backgrounds for each of your entities, including logos and branding, you can
-						manage the generation of certificates for both entities with ease. Whereas
-						previously the images were embedded within the Custom Report itself, these
-						images are now part of the print background. </para>
-					<para>You can also apply new backgrounds to your Custom Reports without the need
-						to contact ish to request changes to your Custom Report, you can simply
-						manage this by updating the print background that is used for the relevant
-						custom report.</para>
-					<para>Further to this, you can update the signatory name for your Certificate
-						reports via the AVETMISS tab / General Preferences settings of onCourse.
-						Remember that this field will appear as one line on your Certificate report,
-						so you would add the name and title of the nominated signatory name in the
-						one line. Go to <guimenuitem> File - Preferences - General
-							Preferences</guimenuitem>and click on the AVETMISS tab, the 'Full
-						certificate signatory name' field you need to edit is under 'Optional' on
-						this tab. Whatever content you add to this field, will appear automatically
-						within your Certificate Reports, unless your custom report has this
-						information hard coded into it.</para>
+					<para>The ability to apply a print background to your Custom Reports provides users with a much greater level of flexibility particularly in reference to generating Certificates. </para>
+					<para>One example of this is that if your College has more than one entity such as a separate
+						Business Training College, by setting up different print backgrounds for
+						each of your entities, including logos and branding, you can manage the
+						generation of certificates for both entities with ease. Whereas previously
+						the images were embedded within the Custom Report itself, these images are
+						now part of the print background. </para>
+					<para>You can also apply new backgrounds to your Custom Reports without the need to contact ish
+						to request changes to your Custom Report, you can simply manage this by
+						updating the print background that is used for the relevant custom
+						report.</para>
+					<para>Further to this, you can update the signatory name for your Certificate reports via the
+						AVETMISS tab / General Preferences settings of onCourse. Remember that this
+						field will appear as one line on your Certificate report, so you would add
+						the name and title of the nominated signatory name in the one line. Go to
+							<guimenuitem> File - Preferences - General Preferences</guimenuitem>and
+						click on the AVETMISS tab, the 'Full certificate signatory name' field you
+						need to edit is under 'Optional' on this tab. Whatever content you add to
+						this field, will appear automatically within your Certificate Reports,
+						unless your custom report has this information hard coded into it.</para>
 					<para>If you require a different layout for the signatory fields i.e. two names,
 						name and title on separate lines or embedded digital signature, we recommend
 						you put all this data in the background and remove the signatory details
 						from the onCourse report template.</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata contentdepth="100%"
-								fileref="images/EditSignatoryNameViaAVETMISSTab.png" format="png"
-								scalefit="1" width="100%"/>
+							<imagedata contentdepth="100%" fileref="images/EditSignatoryNameViaAVETMISSTab.png" format="png" scalefit="1" width="100%"/>
 						</imageobject>
 						<caption>
 							<para>Updating signatory name via General Preferences</para>
@@ -448,8 +412,8 @@
 					Attainment</link> Report that generates a Statement of Attainment for partially
 				completed qualifications.</para>
 			<para><link linkend="reports-QualificationPageOne">Certificate Qualification</link> Report that
-				generates a Qualification Certificate for students that have completed all
-				requirements for a given Qualification.</para>
+				generates a Qualification Certificate for students that have completed all requirements for
+				a given Qualification.</para>
 			<para><link linkend="reports-TrainingPackages">Training Packages</link>A list of all
 				Training Packages available within onCourse.</para>
 			<para><link linkend="reports-TraineeshipTrainingPlan">Traineeship Training Plan</link> Provides
@@ -464,17 +428,17 @@
 				and reportable hours for each class.</para>
 		</section>
 	</section>
-	<section xml:id="reports-Printed">
+	<section>
 		<title>Printed Reports in onCourse</title>
 		<para>onCourse includes a range of printed reports as part of the standard software. These
-			examples list the reports available and their purpose. Additional reports can be quoted
-			and built on request if you do not have the in-house IT skills to build or modify your
-			own reports.</para>
+			examples list the reports available and their purpose. Additional reports can be quoted and
+			built on request if you do not have the in-house IT skills to build or modify your own
+			reports.</para>
 		<section xml:id="reports-BudgetDetails">
 			<title>Budget Details</title>
 			<subtitle>onCourse Budget Details Report</subtitle>
-			<para>Use: To obtain a detailed print out of the budgeted and actual income and expense
-				lines, one page per class. </para>
+			<para>Use: To obtain a detailed print out of the budgeted and actual income and expense lines,
+				one page per class. </para>
 			<para>Report Location: From the <guimenuitem>Class</guimenuitem> menu, select
 					<guimenuitem>Print</guimenuitem> and choose <guimenuitem>Budget
 					Details</guimenuitem>. You can print all available records, listed records
@@ -482,8 +446,7 @@
 				appropriate background for this report then run the report. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/BudgetDetailsByClass.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/BudgetDetailsByClass.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Budget Details</para>
@@ -501,12 +464,10 @@
 				for each subject only, or show each class.Remember to select the appropriate
 				background for this report then run the report.</para>
 			<para>In the example below, the classes are listed with the actual figures displayed. As
-				detail has not been entered for the budget fields, the budget amounts are all listed
-				as $0. </para>
+				detail has not been entered for the budget fields, the budget amounts are all listed as $0. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/BudgetDetailsBySubject.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/BudgetDetailsBySubject.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> Budgets Details By Subject </para>
@@ -516,19 +477,18 @@
 		<section xml:id="reports-BudgetSummaryBySubject">
 			<title>Budget Summary by Subject </title>
 			<subtitle> onCourse Budget Summary by Subject </subtitle>
-			<para>Use: Enables Colleges to monitor budget against actuals at the summary level,
-				includes details by subject on the number of enrolments, income generated, expenses
-				and the resulting variances.</para>
-			<para>Report Location: From the <guimenuitem>Class</guimenuitem> window, select the
-				specific classes you wish to run the budget analysis for. Select
+			<para>Use: Enables Colleges to monitor budget against actuals at the summary level, includes
+				details by subject on the number of enrolments, income generated, expenses and the resulting
+				variances.</para>
+			<para>Report Location: From the <guimenuitem>Class</guimenuitem> window, select the specific
+				classes you wish to run the budget analysis for. Select
 					<guimenuitem>File</guimenuitem>
 				<guimenu>Print</guimenu>and then choose <guimenuitem>Budget Summary by
 					Subject</guimenuitem> from the drop down menu of reports. Remember to select the
 				appropriate background for this report then run the report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/BudgetSummaryBySubject.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/BudgetSummaryBySubject.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> Budget Summary by Subject</para>
@@ -538,20 +498,17 @@
 		<section xml:id="reports-ClassInvoiceRecord">
 			<title>Class Invoice Record </title>
 			<subtitle>onCourse summary by Class of all payments and fees owing </subtitle>
-			<para>Use: Invaluable as a method of cross referencing incoming payments for a given
-				Class. the report lists the names of all enrolling students, Invoice No, fee
-				charged, fee paid and any outstanding balances. As well as the name and contact
-				number of the payee</para>
-			<para>Report Location: From the <guimenuitem>Class</guimenuitem> window, select the
-				specific classes you wish to print the details for. Select
-					<guimenuitem>File</guimenuitem>
+			<para>Use: Invaluable as a method of cross referencing incoming payments for a given Class.
+				the report lists the names of all enrolling students, Invoice No, fee charged, fee paid and
+				any outstanding balances. As well as the name and contact number of the payee</para>
+			<para>Report Location: From the <guimenuitem>Class</guimenuitem> window, select the specific
+				classes you wish to print the details for. Select <guimenuitem>File</guimenuitem>
 				<guimenu>Print</guimenu>and then choose <guimenuitem>Class Invoice Record
 					Report</guimenuitem> from the drop down menu of reports.Remember to select the
 				appropriate background for this report then run the report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/ClassInvoiceRecord.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassInvoiceRecord.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> Class Invoice Record</para>
@@ -561,10 +518,10 @@
 		<section xml:id="reports-Banking">
 			<title> onCourse Banking Report </title>
 			<subtitle>onCourse Banking Report</subtitle>
-			<para>Use: To obtain a report of all cheque, cash and credit card payments processed
-				since the last bank, to assign the money to the appropriate general ledger income
-				accounts, and to generate a printed report, where necessary to provide to your bank
-				with the cash and cheque deposits. </para>
+			<para>Use: To obtain a report of all cheque, cash and credit card payments processed since the
+				last bank, to assign the money to the appropriate general ledger income accounts, and to
+				generate a printed report, where necessary to provide to your bank with the cash and cheque
+				deposits. </para>
 			<para>Report Location: From the <guimenuitem>Financial</guimenuitem> Menu, select
 					<guimenuitem>Deposit Banking</guimenuitem>. In the window that opens, you can
 				see a summary of the cheques, cash and credit card payments collected since the last
@@ -575,8 +532,7 @@
 				the report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/BankingReport.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/BankingReport.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> Banking Report </para>
@@ -586,8 +542,7 @@
 		<section xml:id="reports-Payslip">
 			<title> Payslip Report </title>
 			<subtitle>onCourse Payslip Report</subtitle>
-			<para>Use: This allows you to print the payslips for error checking prior to exporting
-				them to your payroll system </para>
+			<para>Use: This allows you to print the payslips for error checking prior to exporting them to your payroll system </para>
 			<para>Report Location: From the <guimenuitem>Financial</guimenuitem> Menu, select
 					<guimenuitem>Tutor Pay</guimenuitem>. In the window that opens, you can see the
 				full list of Payslips. Select <guimenuitem>File</guimenuitem>
@@ -607,17 +562,16 @@
 			<title>Class Tutor List Report </title>
 			<subtitle>onCourse Class Tutor List report</subtitle>
 			<para>Use: To obtain an overview of classes scheduled for each tutor. This report also
-				provides the total hours the tutor is scheduled to teach for each class, which can
-				be used for payroll purposes. </para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, find the classes you
-				wish to include in the report, such as a particular date range. Select
+				provides the total hours the tutor is scheduled to teach for each class, which can be used
+				for payroll purposes. </para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, find the classes you wish to
+				include in the report, such as a particular date range. Select
 					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose
 				Report <guimenuitem>Class Tutor List</guimenuitem>. Remember to select the
 				appropriate background for this report then run the report. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/ClassTutorListReport.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassTutorListReport.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> Class Tutor List Report </para>
@@ -627,19 +581,18 @@
 		<section xml:id="reports-ClassTutorPaySchedule">
 			<title>Class Tutor Pay Schedule Report</title>
 			<subtitle>onCourse Class Tutor Pay Schedule report</subtitle>
-			<para>Use: This report provides the detail of the expected payslip lines that will be
-				generated for all tutors attached to a class with wages in the budget, allowing you
-				to confirm that the correct details have been entered at the class level prior to
-				generating the tutor pay. </para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, find the classes you
-				wish to include in the report, such as a particular date range. Select
+			<para>Use: This report provides the detail of the expected payslip lines that will be generated
+				for all tutors attached to a class with wages in the budget, allowing you to confirm
+				that the correct details have been entered at the class level prior to generating
+				the tutor pay. </para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, find the classes you wish to
+				include in the report, such as a particular date range. Select
 					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose
 				Report <guimenuitem>Class Tutor Pay Schedule</guimenuitem>. Remember to select the
 				appropriate background for this report then run the report. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="50%" contentdepth="50%"
-						fileref="images/reports/class_tutor_pay_schedule.png" format="png"/>
+					<imagedata scalefit="1" width="50%" contentdepth="50%" fileref="images/reports/class_tutor_pay_schedule.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> Class Tutor Pay Schedule Report </para>
@@ -649,16 +602,13 @@
 		<section xml:id="reports-DebtorsandCreditors">
 			<title>Debtors and Creditors Report</title>
 			<subtitle>onCourse Debtors and Creditors Report</subtitle>
-			<para>Use: To obtain an aged debtors and creditors report for all unbalanced
-				invoices</para>
+			<para>Use: To obtain an aged debtors and creditors report for all unbalanced invoices</para>
 			<para>Report Location: From the <guimenu>Invoice</guimenu> window, select
 					<guimenuitem>Print</guimenuitem> and Choose <guimenuitem>Debtors and Creditors
-					Report</guimenuitem>. Remember to select the appropriate background for this
-				report then run the report.</para>
+						Report</guimenuitem>. Remember to select the appropriate background for this report then run the report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/DebtorsAndCreditors.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/DebtorsAndCreditors.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> A Debtors And Creditors Report </para>
@@ -669,46 +619,42 @@
 			<title>Prepaid Fees Liability Report</title>
 			<subtitle>Report showing the breakdown of the outstanding liability held on each
 				enrolment</subtitle>
-			<para>Use: This Report identifies how much of the fees held against the Pre Paid Fees
-				Liability Account are yet to be transferred to the defined Income Account. This
-				report is grouped by Class and sorted by Date</para>
-			<para>Report Location: From the <guimenu>Enrolment</guimenu>window, hilight the
-				enrolments you wish to run the report against. Select
+			<para>Use: This Report identifies how much of the fees held against the Pre Paid Fees Liability
+				Account are yet to be transferred to the defined Income Account. This report is
+				grouped by Class and sorted by Date</para>
+			<para>Report Location: From the <guimenu>Enrolment</guimenu>window, hilight the enrolments you
+				wish to run the report against. Select
 					<guimenu>File</guimenu><guimenu>Print</guimenu>and select the Enrolment
 				Liability Report from the drop down list. Remember to select the appropriate
-				background for this report then run the report.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/PrepaidFeesLiability.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Excerpt of Enrolment Liability Report</para>
-				</caption>
-			</mediaobject>
+				background for this report then run the report.</para>		
+<mediaobject>
+	<imageobject>
+		<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/PrepaidFeesLiability.png" format="png"/>
+	</imageobject>
+	<caption>
+		<para>Excerpt of Enrolment Liability Report</para>
+	</caption>
+</mediaobject>
 		</section>
 		<section xml:id="reports-Invoice">
 			<title>Invoice Report</title>
 			<subtitle>onCourse Invoice Report</subtitle>
 			<para>Use: To supply hard copy Tax Invoices to students and other debtors.</para>
-			<para>Report Location: From the <guimenu>Invoice</guimenu> window, find the invoices you
-				wish to include in the report, such as a particular date range. Select
-					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose
-				Report <guimenuitem>Invoice</guimenuitem>. Remember to select the appropriate
-				background for this report then run the report.</para>
-			<para>Report Notes: When a student is enrolled, and provides an email address, a tax
-				invoice will be emailed to the payer, along with an <uri>enrolment
-					confirmation</uri>, sent to the student enrolled. Often this will be the same
-				person. </para>
-			<para>Other invoices, not relating to enrolments, can be manually created and printed
-				via the invoices window. </para>
+			<para>Report Location: From the <guimenu>Invoice</guimenu> window, find the invoices you wish
+				to include in the report, such as a particular date range. Select
+					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose Report
+				<guimenuitem>Invoice</guimenuitem>. Remember to select the appropriate background for this report then run the report.</para>
+			<para>Report Notes: When a student is enrolled, and provides an email address, a tax invoice
+				will be emailed to the payer, along with an <uri>enrolment confirmation</uri>, sent to the
+				student enrolled. Often this will be the same person. </para>
+			<para>Other invoices, not relating to enrolments, can be manually created and printed via the
+				invoices window. </para>
 			<para>As seen below a voucher does not include GST because it's not a good or service,
 				however when it gets redeemed then GST will be applied to the service or good that
 				is purchased.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/Invoice.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/Invoice.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> A Tax Invoice Report </para>
@@ -720,60 +666,51 @@
 			<subtitle>List of Corporate Passes</subtitle>
 			<para>Use: List of all current CorporatePass records.This report prints in Portrait
 				format.</para>
-			<para>Report Location: From the <guimenu>CorporatePass</guimenu> window, find the
-				Corporate Pass records you wish to include in the report. Select
-					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and choose
-				report <guimenuitem>Corporate Pass List </guimenuitem>from the list of available
-				reports. Remember to select the appropriate background for this report then run the
-				report.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/CorporatePassList.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Corporate Pass List Report</para>
-				</caption>
-			</mediaobject>
+			<para>Report Location: From the <guimenu>CorporatePass</guimenu> window, find the Corporate Pass
+				records you wish to include in the report. Select <guimenuitem>File</guimenuitem>,
+					<guimenuitem>Print</guimenuitem> and choose report <guimenuitem>Corporate Pass
+					List </guimenuitem>from the list of available reports. Remember to select the
+				appropriate background for this report then run the report.</para>
+<mediaobject>
+	<imageobject>
+		<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/CorporatePassList.png" format="png"/>
+	</imageobject>
+	<caption><para>Corporate Pass List Report</para></caption>
+</mediaobject>			
 		</section>
 		<section xml:id="reports-CorporatePassDetails">
-			<title>Corporate Pass Detailed Report</title>
-			<subtitle>Detailed information on Corporate Pass Usage</subtitle>
-			<para>Use: Provides detailed breakdown of usage of Corporate Pass records, including
-				invoices generated against each Corporate Pass.</para>
-			<para>Report Location: From the <guimenu>Corporate Pass</guimenu> window, find the
-				Corporate Pass records you wish to include in the report. Select
-					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and choose
-				report <guimenuitem>Corporate Pass </guimenuitem>from the list of available reports.
-				Remember to select the appropriate background for this report then run the
-				report.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/CorporatePass.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Corporate Pass Detailed Report</para>
-				</caption>
-			</mediaobject>
-		</section>
+	<title>Corporate Pass Detailed Report</title>
+	<subtitle>Detailed information on Corporate Pass Usage</subtitle>
+	<para>Use: Provides detailed breakdown of usage of Corporate Pass records, including invoices generated against each Corporate Pass.</para>
+	<para>Report Location: From the <guimenu>Corporate Pass</guimenu> window, find the Corporate Pass
+		records you wish to include in the report. Select <guimenuitem>File</guimenuitem>,
+		<guimenuitem>Print</guimenuitem> and choose report <guimenuitem>Corporate Pass
+			</guimenuitem>from the list of available reports. Remember to select the appropriate
+		background for this report then run the report.</para>
+<mediaobject>
+	<imageobject>
+		<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/CorporatePass.png" format="png"/>
+	</imageobject>
+	<caption>
+		<para>Corporate Pass Detailed Report</para>
+	</caption>
+</mediaobject>		
+</section>
 		<section xml:id="reports-PaymentIn">
 			<title>Payment-in Report</title>
 			<subtitle>onCourse PaymentIn Report</subtitle>
 			<para>Use: To obtain an overview of payments processed, declined or rejected, processed
 				through either your office or over the website.</para>
-			<para>Report Location: From the <guimenu>Payment In</guimenu> window, find the payments
-				you wish to include in the report, such as a particular date range. Select
-					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose
-				Report <guimenuitem>Payment In</guimenuitem>. Remember to select the appropriate
-				background for this report then run the report.</para>
-			<para>Report Notes: All payments made, or attempted, as part of the enrolment process
-				will created a Payment In record. You can also manually create payments in from this
-				window, against any outstanding invoice.</para>
+			<para>Report Location: From the <guimenu>Payment In</guimenu> window, find the payments you
+				wish to include in the report, such as a particular date range. Select
+					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose Report
+				<guimenuitem>Payment In</guimenuitem>. Remember to select the appropriate background for this report then run the report.</para>
+			<para>Report Notes: All payments made, or attempted, as part of the enrolment process will
+				created a Payment In record. You can also manually create payments in from this window,
+				against any outstanding invoice.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/PaymentIn.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/PaymentIn.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> A 'Payment In' Report </para>
@@ -783,10 +720,10 @@
 		<section xml:id="reports-TransactionDetail">
 			<title>Transaction Detail</title>
 			<subtitle>onCourse Transaction Detail</subtitle>
-			<para>Use: To provide a detailed report displaying transactions made to and from each
-				general ledger account over a specified period of time.</para>
-			<para>Report Location: To access this report you must first be in the "Accounts" section
-				of onCourse, you can access this through a number of ways. From the splash screen or
+			<para>Use: To provide a detailed report displaying transactions made to and from each general
+				ledger account over a specified period of time.</para>
+			<para>Report Location: To access this report you must first be in the "Accounts" section of
+				onCourse, you can access this through a number of ways. From the splash screen or
 				from the top menu Financial > Accounts. Once in "Accounts" click on "Account",
 				there's a subtle difference. Once in "Account" (under "Accounts") you may select
 				(from the top menu) File > Print then select Transaction Detail from the list of
@@ -795,8 +732,7 @@
 				records that have occurred over time.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/TransactionDetail.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TransactionDetail.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> A Transaction Detail Report </para>
@@ -806,26 +742,24 @@
 		<section xml:id="reports-TransactionSummary">
 			<title>Transaction Summary</title>
 			<subtitle>onCourse Transaction Summary</subtitle>
-			<para>Use: To provide a more general overview of transactions made over a specified
-				period of time. The date selector field for the print engine is a date time field so
-				you can clearly see the start and end of the data you wish to collect. By default,
-				the start and end date will be 12am. To print all data for the range 1/1/2014 –
-				31/12/2014 enter the date range 1/1/2014 12.00am to 1/2/2014 12.00am. This report
-				will provide you with for example; Student Enrolments overall rather than each
-				individual student</para>
-			<para>Report Location: To access this report you must first be in the "Accounts" tab of
-				onCourse, you can access this through a number of ways. You can print this report in
-				both the Transaction the Account windows which can be access from the splash screen,
-				or from the top menu by Financial > Transactions or Financial > Accounts. Once in
-				either "Transaction" or "Account" (under "Accounts") you may select (from the top
-				menu) File > Print then select Transaction Summary from the list of available
-				reports. Remember to select the appropriate background for this report then run the
-				report. Be sure to adjust the date and time to suit your requirements. Remembering
-				you can highlight multiple records in these windows. </para>
+			<para>Use: To provide a more general overview of transactions made over a specified period of
+				time. The date selector field for the print engine is a date time field so you can clearly 
+				see the start and end of the data you wish to collect. By default, the start and end date 
+				will be 12am. To print all data for the range 1/1/2014 – 31/12/2014 enter the date range 
+				1/1/2014 12.00am to 1/2/2014 12.00am. This report will provide you with for example; Student 
+				Enrolments overall rather than each individual student</para>
+			<para>Report Location: To access this report you must first be in the "Accounts" tab of onCourse,
+				you can access this through a number of ways. You can print this report in both the
+				Transaction the Account windows which can be access from the splash screen, or from
+				the top menu by Financial > Transactions or Financial > Accounts.  Once in either
+				"Transaction" or "Account" (under "Accounts") you may select (from the top menu)
+				File > Print then select Transaction Summary from the list of available reports.
+				Remember to select the appropriate background for this report then run the report.
+				Be sure to adjust the date and time to suit your requirements. Remembering you can
+				highlight multiple records in these windows. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/TransactionSummary.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TransactionSummary.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> A Transaction Summary Report </para>
@@ -836,16 +770,15 @@
 			<title>Reconciliation Report</title>
 			<subtitle>onCourse Reconciliation Report</subtitle>
 			<para>Use: To reconcile payments in and out with banking deposits.</para>
-			<para>Report Location: From the <guimenu>Financial</guimenu> menu, Select
-					<guimenuitem>Reconcile Statement</guimenuitem>. Check the payments you wish to
-				reconcile, and select <guimenuitem>Print</guimenuitem>. A summary of the reconciled
-				and unreconciled payments are displayed in this window. Remember to select the
-				appropriate background for this report then run the report.</para>
+			<para>Report Location: From the <guimenu>Financial</guimenu> menu, Select <guimenuitem>Reconcile
+					Statement</guimenuitem>. Check the payments you wish to reconcile, and select
+					<guimenuitem>Print</guimenuitem>. A summary of the reconciled and unreconciled
+				payments are displayed in this window. Remember to select the appropriate background
+				for this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/ReconciliationReport.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ReconciliationReport.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Reconciliation Report </para>
@@ -856,8 +789,8 @@
 		<section xml:id="reports-Statement">
 			<title>Statement Report</title>
 			<subtitle>onCourse Statement report</subtitle>
-			<para>Use: To print a list of all transactions (both debits and credits) for a
-				particular contact</para>
+			<para>Use: To print a list of all transactions (both debits and credits) for a particular
+				contact</para>
 			<para>Report Location: From the <guimenu>Contact</guimenu> menu, Select
 					<guimenuitem>Print</guimenuitem> and Choose
 				<guimenuitem>Statement</guimenuitem>. You can select to print the entire transaction
@@ -866,8 +799,7 @@
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/Statement.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/Statement.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> A Statement Report </para>
@@ -878,18 +810,17 @@
 		<section xml:id="reports-CertificateAttendance">
 			<title>Certificate Attendance</title>
 			<subtitle>onCourse Certificate Attendance Report</subtitle>
-			<para>Use: Report is generated at the conclusion of any non VET short courses to verify
-				that the student attended all of the required number of classes.</para>
-			<para>Report Location: From the <guimenu>Enrolment</guimenu> window, select the specific
-				students you wish to print the certificates for. Select <guimenu>File</guimenu>
+			<para>Use: Report is generated at the conclusion of any non VET short courses to verify that the
+				student attended all of the required number of classes.</para>
+			<para>Report Location: From the <guimenu>Enrolment</guimenu> window, select the specific students
+				you wish to print the certificates for. Select <guimenu>File</guimenu>
 				<guimenuitem>Print</guimenuitem> and then choose <guimenuitem>Certificate Attendance
 					Report</guimenuitem> from the drop down menu of reports. Remember to select the
 				appropriate background for this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/Certificate-Attendance.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/Certificate-Attendance.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Certificate Attendance </para>
@@ -899,18 +830,16 @@
 		</section>
 		<section xml:id="reports-StudentTranscript">
 			<title>Student Academic Transcript Report</title>
-			<para>Use: To provide students with the information retained in onCourse regarding each
-				of their enrolments and current status of their outcomes</para>
-			<para>Report Location: From the <guimenu>Student</guimenu> window, select the specific
-				students you wish to print the transcripts for. Select <guimenu>File</guimenu>
+			<para>Use: To provide students with the information retained in onCourse regarding each of their enrolments and current status of their outcomes</para>
+			<para>Report Location: From the <guimenu>Student</guimenu> window, select the specific students
+				you wish to print the transcripts for. Select <guimenu>File</guimenu>
 				<guimenuitem>Print</guimenuitem> and then choose <guimenuitem>Student
 					Transcript</guimenuitem> from the drop down menu of reports. Remember to select
 				the appropriate background for this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/AcademicTranscript.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/AcademicTranscript.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Student Academic Transcript </para>
@@ -921,25 +850,23 @@
 		<section xml:id="reports-ClassBySubject">
 			<title>Class by Subject Report</title>
 			<subtitle>onCourse Class by Subject Report</subtitle>
-			<para>Use: To obtain an overview of all classes status within a given time period, such
-				as a term. Classes are grouped by their Category/Sub Category tag. Useful for
-				holistic planning processes and work flow activities such as confirming course go
-				ahead or managing cancellations. </para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, find the classes you
-				wish to include in the report, such as a particular date range. Select
-					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose
-				report <guimenuitem>Class by Subject</guimenuitem>. Remember to select the
-				appropriate background for this report then run the report.</para>
-			<para>Report Notes: M/F column: If a student's gender is not set within their details,
-				they will not counted for either M or F; thus M + F does not necesarily equal to the
-				total number of enrolments. Target column: This is the number of enrolments to reach
-				the target for this class, ie: -3 means 3 more enrolments are required to meet the
-				target, 3 would means that there are 3 enrolments more than the target.</para>
+			<para>Use: To obtain an overview of all classes status within a given time period, such as a
+				term. Classes are grouped by their Category/Sub Category tag. Useful for holistic planning
+				processes and work flow activities such as confirming course go ahead or managing
+				cancellations. </para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, find the classes you wish to
+				include in the report, such as a particular date range. Select
+					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose report
+				<guimenuitem>Class by Subject</guimenuitem>. Remember to select the appropriate background for this report then run the report.</para>
+			<para>Report Notes: M/F column: If a student's gender is not set within their details, they
+				will not counted for either M or F; thus M + F does not necesarily equal to the total number
+				of enrolments. Target column: This is the number of enrolments to reach the target for this
+				class, ie: -3 means 3 more enrolments are required to meet the target, 3 would means that
+				there are 3 enrolments more than the target.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/ClassBySubject.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassBySubject.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> A Class by Subject Report </para>
@@ -950,24 +877,22 @@
 		<section xml:id="reports-FundingHours">
 			<title>Funding Hours Report</title>
 			<subtitle>Keeping Track of Funded Delivery</subtitle>
-			<para>Use: To keep track of delivery of funded program Student Contact Hours over a
-				particular time period. This report shows a summary of each qualification and the
-				hours delivered against each of the national funding types.</para>
-			<para>Report Location:From the <guimenu>Class</guimenu> window, find the classes you
-				wish to include in the report, such as the current years English classes. Select
-					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and choose
-				report <guimenuitem>Class Funding</guimenuitem>. Remember to select the appropriate
-				background for this report then run the report.</para>
-			<para>Report Notes: This report may be of particular interest to colleges who deliver
-				programs with a range of funding sources and who are required to report the delivery
-				of these hours. By regularly running this report, the year to date delivery can be
-				checked and be used to assist with program planning. More information about how
-				student contact hours are calculated is available <uri>here</uri></para>
+			<para>Use: To keep track of delivery of funded program Student Contact Hours over a particular
+				time period. This report shows a summary of each qualification and the hours delivered
+				against each of the national funding types.</para>
+			<para>Report Location:From the <guimenu>Class</guimenu> window, find the classes you wish to
+				include in the report, such as the current years English classes. Select
+					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and choose report
+				<guimenuitem>Class Funding</guimenuitem>. Remember to select the appropriate background for this report then run the report.</para>
+			<para>Report Notes: This report may be of particular interest to colleges who deliver programs
+				with a range of funding sources and who are required to report the delivery of these hours.
+				By regularly running this report, the year to date delivery can be checked and be used to
+				assist with program planning. More information about how student contact hours are
+				calculated is available <uri>here</uri></para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/ClassFunding.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassFunding.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Class Funding Report </para>
@@ -978,18 +903,17 @@
 		<section xml:id="reports-ClassHours">
 			<title>Class Hours Report</title>
 			<subtitle>Tracking of class hours</subtitle>
-			<para>Use: A summary of the classroom, nominal and reportable hours for each class, for
-				use in the administration of VET / AVETMISS courses.</para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, select the classes you
-				wish to track hours for. Select <guimenu>File</guimenu>
+			<para>Use: A summary of the classroom, nominal and reportable hours for each class, for use in
+				the administration of VET / AVETMISS courses.</para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, select the classes you wish to
+				track hours for. Select <guimenu>File</guimenu>
 				<guimenu>Print</guimenu> and then choose <guimenu>Class Hours</guimenu> from the
 				drop down menu of reports. Remember to select the appropriate background for this
 				report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/ClassHours.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassHours.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Class Hours Report</para>
@@ -1000,8 +924,8 @@
 		<section xml:id="reports-Sales">
 			<title>Sales Report</title>
 			<subtitle>Keeping track of Sales Figures</subtitle>
-			<para>Use: This report provides a comparative analysis of sales figures (shown as number
-				of enrolments and monetary value) from one College site to the next.</para>
+			<para>Use: This report provides a comparative analysis of sales figures (shown as number of
+				enrolments and monetary value) from one College site to the next.</para>
 			<para>Report Location: From the <guimenu>Enrolment</guimenu> window, select the specific
 				enrolments and classes you wish to run the analysis for. Select
 					<guimenu>File</guimenu>
@@ -1010,8 +934,7 @@
 				report then run the report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/SalesReport.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/SalesReport.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Sales Report</para>
@@ -1021,9 +944,9 @@
 		<section xml:id="reports-SalesByCourseLocation">
 			<title>Sales by Course Location</title>
 			<subtitle>Keeping track of Sales Figures</subtitle>
-			<para>Use: Provides a summary list of the number of enrolments and monetary value of
-				sales for each site, with further detail regarding number of enrolments and monetary
-				value listed by Course.</para>
+			<para>Use: Provides a summary list of the number of enrolments and monetary value of sales for
+				each site, with further detail regarding number of enrolments and monetary value listed by
+				Course.</para>
 			<para>Report Location: From the <guimenu>Enrolment</guimenu> window, select the specific
 				enrolments and classes you wish to run the analysis for. Select
 					<guimenu>File</guimenu>
@@ -1032,8 +955,7 @@
 				appropriate background for this report then run the report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/SalesByCourseLocation.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/SalesByCourseLocation.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Sales by Course Location Report</para>
@@ -1043,20 +965,19 @@
 		<section xml:id="reports-CancelledClasses">
 			<title>Cancelled Classes Count Report</title>
 			<subtitle>Analyse the enrolments and income lost from cancelled programs</subtitle>
-			<para>Use: Provides a summary list of the number of enrolments and monetary value of
-				those enrolments for classes which have been cancelled and the students transferred,
+			<para>Use: Provides a summary list of the number of enrolments and monetary value of those
+				enrolments for classes which have been cancelled and the students transferred,
 				refunded or credited. This report can be useful for deciding if that type of class
 				should be offered in the future, based on it's level of previous student enrolment. </para>
-			<para>Report Location: From the <guimenu>Classes</guimenu> window, select the specific
-				classes you wish to run the analysis for. This report only prints data from classes
-				which have a cancelled status. Select <guimenu>File</guimenu>
+			<para>Report Location: From the <guimenu>Classes</guimenu> window, select the specific classes
+				you wish to run the analysis for. This report only prints data from classes which
+				have a cancelled status. Select <guimenu>File</guimenu>
 				<guimenu>Print</guimenu> and then choose <guimenu>Cancelled Classes Count</guimenu>
 				from the drop down menu of reports. Remember to select the appropriate background
 				for this report then run the report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/CancelledClassesCount.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/CancelledClassesCount.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Cancelled Classes Count Report</para>
@@ -1066,43 +987,39 @@
 		<section xml:id="reports-DiscountsByClass">
 			<title>Discounts by Class</title>
 			<subtitle>List of all Discounts for a given Class</subtitle>
-			<para>Use: Report generates a list of all discounts that apply to a given Class. As well
-				as a summary of the number of enrolments and the discounts taken up.</para>
-			<para>Report Location: From the <guimenu>Classes</guimenu>window, hilight the specific
-				Classes you wish to run the report for. Select <guimenu>File</guimenu>
+			<para>Use: Report generates a list of all discounts that apply to a given Class. As well as a summary of the number of enrolments and the discounts taken up.</para>
+			<para>Report Location: From the <guimenu>Classes</guimenu>window, hilight the specific Classes
+				you wish to run the report for. Select <guimenu>File</guimenu>
 				<guimenu>Print</guimenu>and then choose the <guimenu>Discounts By
 				Class</guimenu>from the drop down menu of reports. Remember to select the
 				appropriate background for this report then run the report.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/DiscountsByClass.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Discounts by Class Report</para>
-				</caption>
-			</mediaobject>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/DiscountsByClass.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Discounts by Class Report</para>
+			</caption>
+		</mediaobject>
 		</section>
 		<section xml:id="reports-Classes">
 			<title>Classes Report</title>
 			<subtitle>onCourse Classes Report</subtitle>
-			<para>Use: To obtain an overview of all classes status within a given time period, such
-				as a term. Useful for holistic planning processes and work flow activities such as
-				confirming course go ahead or managing cancellations. Classes are reported in the
-				list order you have sorted the window data e.g. class name alphabetical order, start
-				date order or code order.</para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, find the courses you
-				wish to include in the report, such as a particular date range. Select
-					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and choose
-				report <guimenuitem>Classes</guimenuitem>. Remember to select the appropriate
-				background for this report then run the report.</para>
-			<para>Report Notes: The information available in this report is also available grouped
-				by subjects in the <uri>Classes by Subject Report</uri>.</para>
+			<para>Use: To obtain an overview of all classes status within a given time period, such as a
+				term. Useful for holistic planning processes and work flow activities such as confirming
+				course go ahead or managing cancellations. Classes are reported in the list order you have
+				sorted the window data e.g. class name alphabetical order, start date order or code
+				order.</para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, find the courses you wish to
+				include in the report, such as a particular date range. Select
+					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and choose report
+				<guimenuitem>Classes</guimenuitem>. Remember to select the appropriate background for this report then run the report.</para>
+			<para>Report Notes: The information available in this report is also available grouped by
+				subjects in the <uri>Classes by Subject Report</uri>.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/Classes.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/Classes.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Classes Report </para>
@@ -1114,16 +1031,14 @@
 			<title>Courses Report</title>
 			<subtitle>onCourse Courses Report</subtitle>
 			<para>Use: To create a print out of the list of courses</para>
-			<para>Report Location: From the <guimenu>Course</guimenu> window, find the courses you
-				wish to include in the report, such as all courses tagged as 'business'. Select
-					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and choose
-				report <guimenuitem>Courses</guimenuitem>. Remember to select the appropriate
-				background for this report then run the report.</para>
+			<para>Report Location: From the <guimenu>Course</guimenu> window, find the courses you wish to
+				include in the report, such as all courses tagged as 'business'. Select
+					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and choose report
+				<guimenuitem>Courses</guimenuitem>. Remember to select the appropriate background for this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/Courses.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/Courses.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Courses Report </para>
@@ -1134,20 +1049,18 @@
 		<section xml:id="reports-AllClassDetails">
 			<title>All Class Details</title>
 			<subtitle>onCourse Class Details Report</subtitle>
-			<para>Use: Detailed report of all information for a given class, including delivery
-				mode, minimum and maximum places, enrolment numbers, fees and discounts, session
-				details, course description, tutor information and directions for getting to the
-				campus.</para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific
-				classes you wish to print the details for. Select <guimenuitem>File</guimenuitem>
+			<para>Use: Detailed report of all information for a given class, including delivery mode,
+				minimum and maximum places, enrolment numbers, fees and discounts, session details, course
+				description, tutor information and directions for getting to the campus.</para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific classes you
+				wish to print the details for. Select <guimenuitem>File</guimenuitem>
 				<guimenuitem>Print</guimenuitem> and then choose <guimenuitem>All Class
 					Details</guimenuitem> from the drop down menu. Remember to select the
 				appropriate background for this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/AllClassDetails.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/AllClassDetails.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> All Class Details </para>
@@ -1159,18 +1072,16 @@
 			<title>Student Special Needs</title>
 			<subtitle>Reference for students requiring assistance. </subtitle>
 			<para>Use: Used as a reference for any special needs such as wheelchair access, dietary
-				requirements and provides an indicator as to whether the student and or tutor has
-				been contacted to confirm or follow up this information.</para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific
-				classes you wish to print the details for. Select <guimenu>File</guimenu>
-				<guimenu>Print</guimenu> and then choose <guimenu>Student Special Needs
-					Report</guimenu> from the drop down menu of reports. Remember to select the
-				appropriate background for this report then run the report. </para>
+				requirements and provides an indicator as to whether the student and or tutor has been
+				contacted to confirm or follow up this information.</para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific classes
+				you wish to print the details for. Select <guimenu>File</guimenu>
+				<guimenu>Print</guimenu> and then choose <guimenu>Student Special Needs Report</guimenu>
+				from the drop down menu of reports. Remember to select the appropriate background for this report then run the report. </para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/StudentSpecialNeeds.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/StudentSpecialNeeds.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Student Special Needs </para>
@@ -1181,20 +1092,18 @@
 		<section xml:id="reports-ClassBySite">
 			<title>Class By Site</title>
 			<subtitle>onCourse Class information site by site</subtitle>
-			<para>Use: This report provides a list of all current and future classes assigned to a
-				given site. Information includes, course and class name and code, start and end
-				date, fee charged, enrolments (against target) and statistics on Male Female
-				breakdown.</para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific
-				classes you wish to print the details for. Select <guimenuitem>File</guimenuitem>
+			<para>Use: This report provides a list of all current and future classes assigned to a given
+				site. Information includes, course and class name and code, start and end date, fee charged,
+				enrolments (against target) and statistics on Male Female breakdown.</para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific classes you
+				wish to print the details for. Select <guimenuitem>File</guimenuitem>
 				<guimenuitem>Print</guimenuitem> and then choose <guimenuitem>Class By
 					Site</guimenuitem> from the drop down menu. Remember to select the appropriate
 				background for this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/ClassBySite.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassBySite.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Class By Site Report </para>
@@ -1206,16 +1115,15 @@
 			<title>Rooms List</title>
 			<subtitle>onCourse Room information by site. </subtitle>
 			<para>Use: List of all rooms and their related sites and seating capacity.</para>
-			<para>Report Location: From the <guimenu>Rooms</guimenu> window, select the specific
-				rooms you wish to print the details for. Select <guimenu>File</guimenu>
+			<para>Report Location: From the <guimenu>Rooms</guimenu> window, select the specific rooms you
+				wish to print the details for. Select <guimenu>File</guimenu>
 				<guimenu>Print</guimenu> and then choose <guimenu>Rooms List</guimenu> from the drop
 				down menu of reports. Remember to select the appropriate background for this report
 				then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/RoomsList.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/RoomsList.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Rooms List </para>
@@ -1226,18 +1134,16 @@
 		<section xml:id="reports-RoomTimetable">
 			<title>Room Timetable Report</title>
 			<subtitle>onCourse Room Timetable Report</subtitle>
-			<para>Use: The purpose of the report is to allow users to print the details of all
-				sessions that are scheduled for a particular room, for a particular date range. </para>
-			<para>Report Location: From the "room" window, highlight the room in question and go to
-				File > Print choose "Room timetable" from the drop down menu in the top right hand
-				side. Remember to select the appropriate background for this report then run the
-				report. In the example below, there are some classes with and without tutors, to
-				give you an idea of how it will come out for you.</para>
+			<para>Use: The purpose of the report is to allow users to print the details of all sessions
+				that are scheduled for a particular room, for a particular date range. </para>
+			<para>Report Location: From the "room" window, highlight the room in question and go to File >
+				Print choose "Room timetable" from the drop down menu in the top right hand side. Remember to select the appropriate background for this report then run the report. In the
+				example below, there are some classes with and without tutors, to give you an idea of how it
+				will come out for you.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/RoomTimetableReport.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/RoomTimetableReport.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Room Timetable Report </para>
@@ -1271,16 +1177,15 @@
 			<title>Site List</title>
 			<subtitle>List of onCourse sites</subtitle>
 			<para>Use: List of all sites and their addresses</para>
-			<para>Report Location: From the <guimenu>Site</guimenu> window, select the specific
-				records you wish to print the details for. Select <guimenu>File</guimenu>
+			<para>Report Location: From the <guimenu>Site</guimenu> window, select the specific records you
+				wish to print the details for. Select <guimenu>File</guimenu>
 				<guimenu>Print</guimenu> and then choose <guimenu>Site List</guimenu> from the drop
 				down menu of reports. Remember to select the appropriate background for this report
 				then run the report. </para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/SiteList.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/SiteList.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Site List Report </para>
@@ -1291,18 +1196,16 @@
 		<section xml:id="reports-SiteDetails">
 			<title>Site Details</title>
 			<subtitle>Details of onCourse sites</subtitle>
-			<para>Use: Detail of all each site, venue information, rooms and each room capacity for
-				the site</para>
-			<para>Report Location: From the <guimenu>Site</guimenu> window, select the specific
-				records you wish to print the details for. Select <guimenu>File</guimenu>
-				<guimenu>Print</guimenu> and then choose <guimenu>Site Details</guimenu> from the
-				drop down menu of reports. Remember to select the appropriate background for this
-				report then run the report. </para>
+			<para>Use: Detail of all each site, venue information, rooms and each room capacity for the
+				site</para>
+			<para>Report Location: From the <guimenu>Site</guimenu> window, select the specific records
+				you wish to print the details for. Select <guimenu>File</guimenu>
+				<guimenu>Print</guimenu> and then choose <guimenu>Site Details</guimenu> from the drop down
+				menu of reports. Remember to select the appropriate background for this report then run the report. </para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/SiteDetails.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/SiteDetails.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Site Details Report </para>
@@ -1314,16 +1217,14 @@
 			<title>Tutor Details Report</title>
 			<subtitle>on Course Tutor Details Report</subtitle>
 			<para>Use: The contact details and scheduled sessions for a Tutor</para>
-			<para>Report Location: From the <guimenu>Tutor</guimenu> window select the Tutor(s) you
-				wish to view the details for. Select <guimenu>File</guimenu>,
-					<guimenu>Print</guimenu> and choose the Report entitled <guimenu>Tutor
-					Details</guimenu>. Remember to select the appropriate background for this report
-				then run the report. </para>
+			<para>Report Location: From the <guimenu>Tutor</guimenu> window select the Tutor(s) you wish
+				to view the details for. Select <guimenu>File</guimenu>, <guimenu>Print</guimenu> and choose
+				the Report entitled <guimenu>Tutor Details</guimenu>. Remember to select the appropriate background for this report then run the report.
+			</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/TutorDetails.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TutorDetails.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Tutor Details Report </para>
@@ -1335,16 +1236,13 @@
 			<title>Tutors List Report</title>
 			<subtitle>onCourse Tutors List Report</subtitle>
 			<para>Use: A list of tutor names and addresses</para>
-			<para>Report Location: From the <guimenu>Tutor</guimenu> window select the Tutors you
-				wish to view the details for. Select <guimenu>File</guimenu>,
-					<guimenu>Print</guimenu> and choose the Report entitled
-					<guimenu>Tutors</guimenu>. Remember to select the appropriate background for
-				this report then run the report.</para>
+			<para>Report Location: From the <guimenu>Tutor</guimenu> window select the Tutors you wish to
+				view the details for. Select <guimenu>File</guimenu>, <guimenu>Print</guimenu> and choose
+				the Report entitled <guimenu>Tutors</guimenu>. Remember to select the appropriate background for this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/TutorsList.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TutorsList.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Tutors </para>
@@ -1396,18 +1294,17 @@
 		<section xml:id="reports-ClassSign">
 			<title>Class Sign</title>
 			<subtitle>Label for Training Room for given class</subtitle>
-			<para>Use: Report that can be printed off and used as a sign or label on door of
-				Training Room</para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window select the specified
-				classes you wish to print details for. Select <guimenu>File</guimenu>
+			<para>Use: Report that can be printed off and used as a sign or label on door of Training
+				Room</para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window select the specified classes you
+				wish to print details for. Select <guimenu>File</guimenu>
 				<guimenu>Print</guimenu> and then choose <guimenu>Class Sign Report </guimenu>from
 				the drop down menu. Remember to select the appropriate background for this report
 				then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/ClassSignForDoor.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassSignForDoor.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Class Sign </para>
@@ -1418,10 +1315,10 @@
 		<section xml:id="reports-MailingList">
 			<title>Mailing List Export</title>
 			<subtitle>onCourse Mailing List Export Report</subtitle>
-			<para>Use: Contact details (first name, last name, email) of all people on a given
-				mailing list. </para>
-			<para>Report Location: From the <guimenu>Class</guimenu> or <guimenu>Contact</guimenu>
-				window, select the contacts you wish to run the report against. Select
+			<para>Use: Contact details (first name, last name, email) of all people on a given mailing
+				list. </para>
+			<para>Report Location: From the <guimenu>Class</guimenu> or <guimenu>Contact</guimenu> window,
+				select the contacts you wish to run the report against. Select
 					<guimenu>File</guimenu>, <guimenu>Print</guimenu>and choose the <guimenu>Mailing
 					List Export</guimenu>Report. Remember to select the appropriate background for
 				this report then run the report.</para>
@@ -1429,8 +1326,7 @@
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/MailingListExport.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/MailingListExport.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Mailing List Report </para>
@@ -1441,19 +1337,17 @@
 		<section xml:id="reports-WaitList">
 			<title>Wait List Report</title>
 			<subtitle>onCourse Wait List Report</subtitle>
-			<para>Use: List of all current wait list entries, including name of course, name of
-				student, client, and site where course is held. </para>
+			<para>Use: List of all current wait list entries, including name of course, name of student,
+				client, and site where course is held. </para>
 			<para>Report Location: From the <guimenu>Wait List</guimenu> window, select the specific
 				entries you wish to print the details for. Select <guimenu>File</guimenu>,
-					<guimenu>Print</guimenu> and then choose <guimenu>Wait List Report</guimenu>from
-				the drop down menu of reports. Remember to select the appropriate background for
-				this report then run the report. </para>
+					<guimenu>Print</guimenu> and then choose <guimenu>Wait List Report</guimenu>from the drop
+				down menu of reports. Remember to select the appropriate background for this report then run the report. </para>
 			<para> </para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/WaitingList.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/WaitingList.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Wait List Report </para>
@@ -1467,15 +1361,13 @@
 			<para>Use: To confirm uptake and cost of discounts across a selection of classes</para>
 			<para>Report Location: From the <guimenu>Classes</guimenu> window, select the specific
 				classes you wish to include in the report. Select <guimenu>File</guimenu>,
-					<guimenu>Print</guimenu> and then choose <guimenu>Total Discounts</guimenu>from
-				the drop down menu of reports. Remember to select the appropriate background for
-				this report then run the report. </para>
+				<guimenu>Print</guimenu> and then choose <guimenu>Total Discounts</guimenu>from the drop
+				down menu of reports. Remember to select the appropriate background for this report then run the report. </para>
 			<para> </para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/TotalDiscounts.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TotalDiscounts.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Total Discount Report </para>
@@ -1486,19 +1378,17 @@
 		<section xml:id="reports-ClassDetails">
 			<title>Class Details Report</title>
 			<subtitle>onCourse Class Details Report</subtitle>
-			<para>Use:To obtain full list of one or more classes scheduled sessions. This is a list
-				view of the timetabled sessions. Useful information to provide to venue
-				coordinators, tutors and students. </para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, find the classes you
-				wish to include in the report, such as all current classes at a particular venue.
-				Select <guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose
-				Report <guimenuitem>Class Details</guimenuitem>. Remember to select the appropriate
-				background for this report then run the report.</para>
+			<para>Use:To obtain full list of one or more classes scheduled sessions. This is a list view
+				of the timetabled sessions. Useful information to provide to venue coordinators, tutors and
+				students. </para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, find the classes you wish to
+				include in the report, such as all current classes at a particular venue. Select
+					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose Report
+				<guimenuitem>Class Details</guimenuitem>. Remember to select the appropriate background for this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/ClassDetails.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassDetails.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Class Details Report </para>
@@ -1509,19 +1399,17 @@
 		<section xml:id="reports-CourseDetails">
 			<title>Course Details Report</title>
 			<subtitle>onCourse Course Details Report</subtitle>
-			<para>Use: To create a print out of the full course information including scheduled
-				classes. Can be used to create print copies of all the web information to mail to
-				students without web access. </para>
-			<para>Report Location: From the <guimenu>Course</guimenu> window, find the course(s) you
-				wish to include in the report, such as all courses tagged as 'sport and fitness'.
-				Select <guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose
-				Report <guimenuitem>Course Details</guimenuitem>. Remember to select the appropriate
-				background for this report then run the report.</para>
+			<para>Use: To create a print out of the full course information including scheduled classes.
+				Can be used to create print copies of all the web information to mail to students without
+				web access. </para>
+			<para>Report Location: From the <guimenu>Course</guimenu> window, find the course(s) you wish
+				to include in the report, such as all courses tagged as 'sport and fitness'. Select
+					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose Report
+				<guimenuitem>Course Details</guimenuitem>. Remember to select the appropriate background for this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/CourseDetails.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/CourseDetails.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Course Details Report</para>
@@ -1532,21 +1420,17 @@
 		<section xml:id="reports-EnrolmentConfirmation">
 			<title>Enrolment Confirmation Report</title>
 			<subtitle>onCourse Enrolment Confirmation report</subtitle>
-			<para>Use: To provide students with details of their class once they have
-				enrolled.</para>
-			<para>Report Location: From the <guimenu>Enrolment</guimenu> window, select the
-				enrolments you wish to print enrolment confirmations for, Choose
-					<guimenuitem>Print</guimenuitem> and Select the Report <guimenuitem>Enrolment
-					Confirmation</guimenuitem>. Remember to select the appropriate background for
-				this report then run the report.</para>
-			<para>Report Notes: During the enrolment process, if the student provides an email
-				address, an email confirmation of enrolment can be selected. It is not necessary to
-				provide hard copy enrolment confirmations for these students.</para>
+			<para>Use: To provide students with details of their class once they have enrolled.</para>
+			<para>Report Location: From the <guimenu>Enrolment</guimenu> window, select the enrolments you
+				wish to print enrolment confirmations for, Choose <guimenuitem>Print</guimenuitem> and
+				Select the Report <guimenuitem>Enrolment Confirmation</guimenuitem>. Remember to select the appropriate background for this report then run the report.</para>
+			<para>Report Notes: During the enrolment process, if the student provides an email address, an
+				email confirmation of enrolment can be selected. It is not necessary to provide hard copy
+				enrolment confirmations for these students.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/EnrolmentConfirmation.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/EnrolmentConfirmation.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Enrolment Confirmation Report </para>
@@ -1557,18 +1441,16 @@
 		<section xml:id="reports-ClassInformation">
 			<title> Class Information Report</title>
 			<subtitle>Class Information for enrolling students</subtitle>
-			<para>Use: Class information that can be provided for the enrolling student including
-				course details, information about the Tutor, directions on where to go and the
-				individual session details.</para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific
-				classes you wish to print the details for. Select <guimenu>File</guimenu>
-				<guimenu>Print</guimenu> and then choose <guimenu>Class Information</guimenu> from
-				the drop down menu of reports. Remember to select the appropriate background for
-				this report then run the report.</para>
+			<para>Use: Class information that can be provided for the enrolling student including course
+				details, information about the Tutor, directions on where to go and the individual session
+				details.</para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific classes
+				you wish to print the details for. Select <guimenu>File</guimenu>
+				<guimenu>Print</guimenu> and then choose <guimenu>Class Information</guimenu> from the drop
+				down menu of reports. Remember to select the appropriate background for this report then run the report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/ClassInformation.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassInformation.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Class Information Report</para>
@@ -1609,20 +1491,19 @@
 		<section xml:id="reports-classRollSingle">
 			<title>Class Roll - Single Session</title>
 			<subtitle>One session class roll</subtitle>
-			<para>Use: To be used for classes where the tutors need to return a student-signed copy
-				of the class roll back to the college administration office after each week or
-				session. Users need to print multiple copies of this roll if they require one for
-				each session of a class.</para>
-			<para>Report location: From the <guimenu>Class</guimenu> window and highlight the
-				records you wish to print a Class Roll for. Go to
+			<para>Use: To be used for classes where the tutors need to return a student-signed copy of the
+				class roll back to the college administration office after each week or session. Users need
+				to print multiple copies of this roll if they require one for each session of a
+				class.</para>
+			<para>Report location: From the <guimenu>Class</guimenu> window and highlight the records you
+				wish to print a Class Roll for. Go to
 					<guimenu>File</guimenu><guimenu>Print</guimenu>and then select <guimenu>Class
 					Roll Single Session</guimenu>from the drop down list of available reports.
 				Remember to select the appropriate background for this report then run the
 				report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/ClassRollSingle.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassRollSingle.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Class Roll - Single Session Report</para>
@@ -1633,15 +1514,14 @@
 			<title>Simple Class Roll</title>
 			<subtitle>Marking sheet for student attendance</subtitle>
 			<para>Use: Session by session grid for marking student attendance</para>
-			<para>Report Location: From the <guimenu>Class</guimenu>window, select the Class you
-				wish to generate an attendance sheet for. Go to
+			<para>Report Location: From the <guimenu>Class</guimenu>window, select the Class you wish to
+				generate an attendance sheet for. Go to
 					<guimenu>File</guimenu><guimenu>Print</guimenu>and then select <guimenu>Simple
 					Class Roll</guimenu>from the drop down menu of available reports. Remember to
 				select the appropriate background for this report then run the report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/SimpleClassRoll.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/SimpleClassRoll.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Example of the Simplified Class Roll Report </para>
@@ -1651,31 +1531,28 @@
 		<section xml:id="reports-classTimetable">
 			<title>Class Timetable Report</title>
 			<subtitle>A timetable with a date range</subtitle>
-			<para>Use: The purpose of this report is to allow the user to select multiple classes
-				(which may contain the same students e.g. those doing a Diploma may undertake 4
-				classes simultaneously) and print a date-range specified timetable of sessions to
-				show the students when and where to turn up to class. Useful for both students
-				attending classes or could also be printed for all classes for a tutor who teaches
-				multiple classes. </para>
-			<para>Report location: To print this report go to the <guimenu>Class</guimenu> window
-				and highlight the class(es) you wish to run the report against. Go to
+			<para>Use: The purpose of this report is to allow the user to select multiple classes (which
+				may contain the same students e.g. those doing a Diploma may undertake 4 classes
+				simultaneously) and print a date-range specified timetable of sessions to show the students
+				when and where to turn up to class. Useful for both students attending classes or could also
+				be printed for all classes for a tutor who teaches multiple classes. </para>
+			<para>Report location: To print this report go to the <guimenu>Class</guimenu> window and
+				highlight the class(es) you wish to run the report against. Go to
 					<guimenu>File</guimenu><guimenu>Print</guimenu> and then select <guimenu>Class
 					Timetable</guimenu> from the drop down list of available reports. Remember to
 				specifi the date range and select the appropriate background for this report then
 				run the report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/class_timetable_report_dates.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/class_timetable_report_dates.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> Options for the Class Timetable Report</para>
 				</caption>
 			</mediaobject>
-			<mediaobject>
+				<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/ClassTimetableReport.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassTimetableReport.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> Class Timetable Report</para>
@@ -1685,19 +1562,16 @@
 		<section xml:id="reports-classTimetableplanning">
 			<title>Class Timetable Planning Report</title>
 			<subtitle>A timetable with a date range</subtitle>
-			<para>Use: This is an alternate version of the class timetable report which includes the
-				session private notes field in the last column. </para>
-			<para>Report location: To print this report go to the <guimenu>Class</guimenu> window
-				and highlight the class(es) you wish to run the report against. Go to
+			<para>Use: This is an alternate version of the class timetable report which includes the session private notes field in the last column. </para>
+			<para>Report location: To print this report go to the <guimenu>Class</guimenu> window and
+				highlight the class(es) you wish to run the report against. Go to
 					<guimenu>File</guimenu><guimenu>Print</guimenu> and then select <guimenu>Class
 					Timetable Report - Planning</guimenu> from the drop down list of available
 				reports. Remember to specifi the date range and select the appropriate background
 				for this report then run the report.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/reports/class_timetable_report_planning_dates.png"
-						format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/class_timetable_report_planning_dates.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> Options for the Class Timetable Report - Planning</para>
@@ -1705,8 +1579,7 @@
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="70%" contentdepth="70%"
-						fileref="images/reports/class_timetable_planning_report.png" format="png"/>
+					<imagedata scalefit="1" width="70%" contentdepth="70%" fileref="images/reports/class_timetable_planning_report.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para> Class Timetable Planning Report</para>
@@ -1716,23 +1589,21 @@
 		<section xml:id="reports-ClassContactSheet">
 			<title>Class Contact Sheet</title>
 			<subtitle>Student Contact Details</subtitle>
-			<para>Use: To create a list of students enrolled and the phone numbers and email
-				addresses for those students. Hard copy lists can be distributed to tutors before
-				classes commence if you wish them to have this information. Tutors can also access
-				this information via their web portal if you organisation has enabled it.</para>
-			<para>Report Location: From the "Class" window, find the classes you wish to include in
-				the report, such as all current class taught by a particular tutor. Select File,
-				Print and Choose Report"'Class Contact List". Remember to select the appropriate
-				background for this report then run the report.</para>
-			<para>Report Notes: Given that tutors may pass rolls around the room for students to
-				initial their attendance, to comply with privacy legislation, there are no student
-				contact details on the class roll. If the tutor requires the student's contact
-				details, a <uri>student contact list</uri> can be printed.</para>
+			<para>Use: To create a list of students enrolled and the phone numbers and email addresses for
+				those students. Hard copy lists can be distributed to tutors before classes commence if you
+				wish them to have this information. Tutors can also access this information via their web
+				portal if you organisation has enabled it.</para>
+			<para>Report Location: From the "Class" window, find the classes you wish to include in the
+				report, such as all current class taught by a particular tutor. Select File, Print and
+				Choose Report"'Class Contact List". Remember to select the appropriate background for this report then run the report.</para>
+			<para>Report Notes: Given that tutors may pass rolls around the room for students to initial
+				their attendance, to comply with privacy legislation, there are no student contact details
+				on the class roll. If the tutor requires the student's contact details, a <uri>student
+					contact list</uri> can be printed.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/ClassContactSheet.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassContactSheet.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Class Contact List Report </para>
@@ -1743,19 +1614,16 @@
 		<section xml:id="reports-StudentContactList">
 			<title>Student Contact List</title>
 			<subtitle>Name, Address, Phone and email</subtitle>
-			<para>Use: To export the contact details provided for students enrolled in a
-				class.</para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, find the classes you
-				wish to include in the report, such as all current class taught by a particular
-				tutor. Select <guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and
-				Choose Report <guimenuitem>Student Contact List</guimenuitem>. Remember to select
-				the appropriate background for this report then run the report.</para>
+			<para>Use: To export the contact details provided for students enrolled in a class.</para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, find the classes you wish to
+				include in the report, such as all current class taught by a particular tutor. Select
+					<guimenuitem>File</guimenuitem>, <guimenuitem>Print</guimenuitem> and Choose Report
+				<guimenuitem>Student Contact List</guimenuitem>. Remember to select the appropriate background for this report then run the report.</para>
 			<para>Report Notes: This report may be used to accompany the Class Roll</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/StudentContactList.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/StudentContactList.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Student Contact List Report </para>
@@ -1768,16 +1636,15 @@
 			<subtitle>Overview of all units undertaken by a given student</subtitle>
 			<para>Use: A useful educational report showing an overview of all units a student has
 				undertaken at the training organisation and their outcomes.</para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, select the classes and
-				students you wish to include in the report. Select <guimenu>File</guimenu>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, select the classes and students
+				you wish to include in the report. Select <guimenu>File</guimenu>
 				<guimenu>Print</guimenu> and choose <guimenu>Student Details</guimenu> from the drop
 				down menu of reports. Remember to select the appropriate background for this report
 				then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/StudentDetails.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/StudentDetails.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Student Details Report</para>
@@ -1788,19 +1655,17 @@
 		<section xml:id="reports-ClassRollContactNumber">
 			<title>Class Roll Contact Number</title>
 			<subtitle>Useful information for tutors</subtitle>
-			<para>Use: Report that provides a list of all students, their contact phone number, can
-				be printed out and used for a roll call. Can also be used to contact students who
-				are not in attendance at their enrolled session or class.</para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific
-				classes you wish to print the details for. Select <guimenuitem>File</guimenuitem>
+			<para>Use: Report that provides a list of all students, their contact phone number, can be
+				printed out and used for a roll call. Can also be used to contact students who are not in
+				attendance at their enrolled session or class.</para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific classes
+				you wish to print the details for. Select <guimenuitem>File</guimenuitem>
 				<guimenuitem>Print</guimenuitem> and and then choose <guimenuitem>Class Roll Contact
-					Number</guimenuitem> from the drop down menu of reports. Remember to select the
-				appropriate background for this report then run the report.</para>
+					Number</guimenuitem> from the drop down menu of reports. Remember to select the appropriate background for this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/ClassRollContactNo.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/ClassRollContactNo.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Student Details Report </para>
@@ -1812,18 +1677,17 @@
 			<title>Assessment Outcome Report</title>
 			<subtitle>Assessment Outcome Report</subtitle>
 			<para>Use: For use by the College Tutor to mark the assessment outcomes for each student
-				studying a VET class. As well as enabling the Tutor to sign and date the entries
-				prior to sending back to College Administrators for entering onto onCourse. </para>
-			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific
-				classes you wish to print the required assessment outcomes for. Select
-					<guimenu>File</guimenu>, <guimenu>Print</guimenu> and choose the
-					<guimenu>Assessment Outcomes</guimenu> Report from the drop down menu. Remember
-				to select the appropriate background for this report then run the report.</para>
+				studying a VET class. As well as enabling the Tutor to sign and date the entries prior to
+				sending back to College Administrators for entering onto onCourse. </para>
+			<para>Report Location: From the <guimenu>Class</guimenu> window, select the specific classes you
+				wish to print the required assessment outcomes for. Select <guimenu>File</guimenu>,
+					<guimenu>Print</guimenu> and choose the <guimenu>Assessment Outcomes</guimenu>
+				Report from the drop down menu. Remember to select the appropriate background for
+				this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/AssessmentOutcome.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/AssessmentOutcome.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Assessment Outcome Report </para>
@@ -1834,8 +1698,8 @@
 		<section xml:id="reports-Qualifications">
 			<title>Qualifications Report</title>
 			<subtitle>onCourse Qualifications Report</subtitle>
-			<para>Use: A list of the all the data downloaded from NTIS which you can use to start
-				building courses. </para>
+			<para>Use: A list of the all the data downloaded from NTIS which you can use to start building
+				courses. </para>
 			<para>Report Location: From the <guimenu>Qualifications</guimenu> window, select the
 				qualifications you wish to run the report against. Select <guimenu>File</guimenu>,
 					<guimenu>Print</guimenu> and choose the <guimenu>Qualifications</guimenu>
@@ -1844,8 +1708,7 @@
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/Qualifications.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/Qualifications.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Qualifications Report </para>
@@ -1856,14 +1719,14 @@
 		<section xml:id="reports-StatementOfAttainmentPageOne">
 			<title>Certificate - Statement of Attainment</title>
 			<subtitle>onCourse Statement of Attainment Certificate</subtitle>
-			<para>Use: onCourse includes AQF recommended templates for full Qualification
-				Certificates, Statements of Attainment and transcripts. Certificates can only be
-				generated from units that are recorded as part of onCourse enrolments. If you wish
-				to include Credit Transfer units, you will need to add these outcomes to the
-				students record before you create the certificate. For detailed information
-				regarding VET Certificates, refer to the RTO Guide Chapter of the User Manual. </para>
-			<para>Report Location: From the <guimenu>Certificate</guimenu> window, select the
-				student(s) you wish to run certificates for. Select <guimenu>File</guimenu>,
+			<para>Use: onCourse includes AQF recommended templates for full Qualification Certificates,
+				Statements of Attainment and transcripts. Certificates can only be generated from units that
+				are recorded as part of onCourse enrolments. If you wish to include Credit Transfer units,
+				you will need to add these outcomes to the students record before you create the
+				certificate. For detailed information regarding VET Certificates, refer to the RTO Guide
+				Chapter of the User Manual. </para>
+			<para>Report Location: From the <guimenu>Certificate</guimenu> window, select the student(s) you
+				wish to run certificates for. Select <guimenu>File</guimenu>,
 					<guimenu>Print</guimenu> and choose the <guimenu>Certificate</guimenu> from the
 				drop down menu of reports. Remember to select the appropriate background for this
 				report then run the report.</para>
@@ -1872,19 +1735,17 @@
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/StatementOfAttainment.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/StatementOfAttainment.png" format="png"/>
 					</imageobject>
 					<caption>
-						<para> Statement of Attainment Page One</para>
+						<para> Statement of Attainment  Page One</para>
 					</caption>
 				</mediaobject>
 			</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/StatementOfAttainmentPageTwo.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/StatementOfAttainmentPageTwo.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Second Page of Statement Showing Academic Transcript</para>
@@ -1895,14 +1756,14 @@
 		<section xml:id="reports-QualificationPageOne">
 			<title>Certificate - Qualification</title>
 			<subtitle>onCourse Qualification Certificate</subtitle>
-			<para>Use: onCourse includes AQF recommended templates for full Qualification
-				Certificates, Statements of Attainment and transcripts. Certificates can only be
-				generated from units that are recorded as part of onCourse enrolments. If you wish
-				to include Credit Transfer units, you will need to add these outcomes to the
-				students record before you create the certificate. For detailed information
-				regarding VET Certificates, refer to the RTO Guide Chapter of the User Manual. </para>
-			<para>Report Location: From the <guimenu>Certificate</guimenu> window, select the
-				student(s) you wish to run certificates for. Select <guimenu>File</guimenu>,
+			<para>Use: onCourse includes AQF recommended templates for full Qualification Certificates,
+				Statements of Attainment and transcripts. Certificates can only be generated from units that
+				are recorded as part of onCourse enrolments. If you wish to include Credit Transfer units,
+				you will need to add these outcomes to the students record before you create the
+				certificate. For detailed information regarding VET Certificates, refer to the RTO Guide
+				Chapter of the User Manual. </para>
+			<para>Report Location: From the <guimenu>Certificate</guimenu> window, select the student(s) you
+				wish to run certificates for. Select <guimenu>File</guimenu>,
 					<guimenu>Print</guimenu> and choose the <guimenu>Certificate</guimenu> from the
 				drop down menu of reports. Remember to select the appropriate background for this
 				report then run the report.</para>
@@ -1911,9 +1772,7 @@
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/CertificateQualificationPageOne.png"
-							format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/CertificateQualificationPageOne.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Qualification Certificate Page One</para>
@@ -1923,9 +1782,7 @@
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/CertificateQualificationPageTwo.png"
-							format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/CertificateQualificationPageTwo.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Qualification Certificate Page Two Showing Academic Transcript</para>
@@ -1937,15 +1794,14 @@
 			<title>Training Packages Report</title>
 			<subtitle>onCourse Training Packages Report</subtitle>
 			<para>Use: A list of all Training Packages available within onCourse. </para>
-			<para>Report Location: This report is accessible via the <guimenu>Courses</guimenu>
-				menu, <guimenu>Training Packages</guimenu>. Remember to select the appropriate
-				background for this report then run the report. </para>
+			<para>Report Location: This report is accessible via the <guimenu>Courses</guimenu> menu,
+				<guimenu>Training Packages</guimenu>. Remember to select the appropriate background for this report then run the report.
+			</para>
 			<para> </para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/TrainingPackages.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TrainingPackages.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Training Packages Report </para>
@@ -1956,20 +1812,18 @@
 		<section xml:id="reports-TraineeshipTrainingPlan">
 			<title>Traineeship Training Plan</title>
 			<subtitle>Outline of requirements for Trainee</subtitle>
-			<para>Use: This report provides summary information on the required units of competency
-				that need to be completed for a given student. As well as provision of signatures
-				and sign off on the Training Plan by the student's employer, the trainee themselves
-				and the Registered Training Provider (RTO)</para>
+			<para>Use: This report provides summary information on the required units of competency that
+				need to be completed for a given student. As well as provision of signatures and sign off on
+				the Training Plan by the student's employer, the trainee themselves and the Registered
+				Training Provider (RTO)</para>
 			<para>Report Location: From the <guimenu>Enrolment</guimenu> window, select the specific
 				students you wish to run the training plan for. Select <guimenu>File</guimenu>
-				<guimenu>Print</guimenu> and then choose <guimenu>Traineeship Training
-					Plan</guimenu> from the drop down menu of reports. Remember to select the
-				appropriate background for this report then run the report.</para>
+				<guimenu>Print</guimenu> and then choose <guimenu>Traineeship Training Plan</guimenu> from
+				the drop down menu of reports. Remember to select the appropriate background for this report then run the report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/TraineeshipTrainingPlan.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TraineeshipTrainingPlan.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Traineeship Training Plan Page One</para>
@@ -1979,9 +1833,7 @@
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/Traineeship Training PlanPageTwo.png"
-							format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/Traineeship Training PlanPageTwo.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Traineeship Training Plan Page Two</para>
@@ -1992,32 +1844,29 @@
 		<section xml:id="reports-TrainingPlan">
 			<title>Training Plan Report</title>
 			<subtitle>ASQA compliant RTO Training and Delivery Plan</subtitle>
-			<para>Use: ASQA compliant report that provides a detailed outline of the units of
-				competency for the given Course/Class, as well as the start and end date for each
-				unit. The report also includes a Delivery Plan which outlines as to when each Unit
-				of Competency are taught within the overall Class schedule </para>
-			<para>Report Location: From the <guimenu>Class</guimenu>window, select the Classes you
-				wish to generate <guimenu>Training Plans</guimenu>for. Go to
+			<para>Use: ASQA compliant report that provides a detailed outline of the units of competency for
+				the given Course/Class, as well as the start and end date for each unit. The report
+				also includes a Delivery Plan which outlines as to when each Unit of Competency are
+				taught within the overall Class schedule </para>
+			<para>Report Location: From the <guimenu>Class</guimenu>window, select the Classes you wish to
+				generate <guimenu>Training Plans</guimenu>for. Go to
 					<guimenu>File</guimenu><guimenu>Print</guimenu>and then select <guimenu>Training
 					Plan</guimenu>from the drop down list of available reports. Remember to select
 				the appropriate background for this report then run the report.</para>
+		<para>
+			<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TrainingPlanPageOne.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Page One of  Training Plan Report - Outline of Units of Competency</para>
+			</caption>
+		</mediaobject>
+		</para>
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/TrainingPlanPageOne.png" format="png"/>
-					</imageobject>
-					<caption>
-						<para>Page One of Training Plan Report - Outline of Units of
-							Competency</para>
-					</caption>
-				</mediaobject>
-			</para>
-			<para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/TrainingPlanPageTwo.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TrainingPlanPageTwo.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Page Two of Training Plan Report - Outline of Delivery Plan</para>
@@ -2028,12 +1877,12 @@
 		<section xml:id="reports-TrialBalance">
 			<title>Trial Balance Report</title>
 			<subtitle>Transaction management report for time periods</subtitle>
-			<para>Use: To report on the opening, closing and movement of the onCourse chart of
-				accounts during the time frame you define. It shows a summary of the credits and
-				debits in each account, which will indicate if there is a error in the ledger should
-				the accounts not balance. Note that onCourse may not include all your business
-				accounts, as you may have selected to set up only some of your accounts from the
-				range available in your primary accounting system. </para>
+			<para>Use: To report on the opening, closing and movement of the onCourse chart of accounts
+				during the time frame you define. It shows a summary of the credits and debits in
+				each account, which will indicate if there is a error in the ledger should the
+				accounts not balance. Note that onCourse may not include all your business accounts,
+				as you may have selected to set up only some of your accounts from the range
+				available in your primary accounting system. </para>
 			<para>Report Location: From the <guimenu>Financial</guimenu>menu, select the option
 					<guimenu>Summary Extract</guimenu>. Then select <guimenu>Trial
 				Balance</guimenu>, and enter the date range you wish to report on. Select the
@@ -2041,8 +1890,7 @@
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/reports/TrialBalance.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TrialBalance.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Sample Trial Balance Report</para>
@@ -2098,77 +1946,24 @@
 		</section>
 		<section>
 			<title>The basics of creating your own custom reports</title>
-			<para>onCourse uses <uri>Jasper</uri>, an open source tool to create reports. You can add your
-				own custom reports to onCourse at any time by creating them with <uri
-					xlink:href="http://jasperforge.org/projects/ireport">iReport</uri>. The current
-				version we use to edit onCourse reports from version 4.1 and above is 5.0.1. You can
-				download 5.0.1 <uri
-					xlink:href="http://community.jaspersoft.com/wiki/ireport-501-release-notes"
-					>here</uri> (If you are editing a report in an earlier version of onCourse you
-				will need to use 4.0.1 which you can download <uri
-					xlink:href="http://jasperforge.org/uploads/publish/ireportwebsite/IR%20Website/nb-4.0.1.html"
-					>here</uri>) </para>
-			<para>You can export existing onCourse reports to modify for your own organisation by going to
+			<para>onCourse uses <uri>JasperReports</uri>, an open source tool to create reports. You can add your own custom reports to onCourse at any time by creating them with <uri
+					xlink:href="https://community.jaspersoft.com/download">JasperSoft Studio</uri>.</para>
+			<para>You can export existing onCourse reports to modify by going to
 				File > Preferences > Reports and selecting the report you wish to edit. With the
 				report highlighted in the list, go to the cog wheel option in the top right hand
 				corner and select 'Save report file on disk'. This saved file will be the jrxml file
-				you need to open in iReport to edit.</para>
-			<para>Jasper report is a specially formatted text file. For ease of use the file can be edited
-				with a visual editor called iReport.  The report file format is XML and this is
-				a snippet from an example report file:</para>
-			<programlisting><![CDATA[
-<?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ClassTutorList" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="782" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20">
-	<property name="name" value="Class tutor list"/>
-	<property name="entity" value="CourseClassTutor"/>
-	<property name="isSubreport" value="false"/>
-	<property name="isVisible" value="true"/>
-	<property name="versionNumber" value="8"/>
-	<property name="keyCode" value="ish.onCourse.classTutorListReport"/>
-	<property name="sortOn" value="tutor.contact.lastName"/>
-	<property name="ireport.scriptlethandling" value="0"/>
-	<property name="ireport.encoding" value="UTF-8"/>
-	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
-	<import value="net.sf.jasperreports.engine.*"/>
-	<import value="java.util.*"/>
-	<import value="net.sf.jasperreports.engine.data.*"/>
-	<style name="Report_Name" isDefault="true" fontName="Arial" fontSize="18" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
-	<parameter name="ReportName" class="java.lang.String" isForPrompting="false"/>
-	<field name="datasource.title" class="net.sf.jasperreports.engine.JRDataSource"/>
-	<field name="subreport.ish.onCourse.titleSubReport" class="net.sf.jasperreports.engine.JasperReport"/>
-	<field name="tutor.contact.lastName" class="java.lang.String"/>
-	<field name="tutor.id" class="java.lang.Long"/>
-	<field name="tutor.contact.firstName" class="java.lang.String"/>
-	<group name="tutorGroup">
-		<groupExpression><![CDATA[$F{tutor.id}]\]></groupExpression>
-		<groupHeader>
-			<band height="30" splitType="Stretch">
-				<textField isBlankWhenNull="true">
-					<reportElement key="textField-13" style="Column_Field" x="1" y="9" width="776" height="14"/>
-					<box>
-						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="0.0" lineColor="#000000"/>
-						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font isBold="true" pdfFontName="Helvetica-Bold"/>
-					</textElement>
-					<textFieldExpression class="java.lang.String"><![CDATA[(($F{tutor.contact.lastName}==null)?"":($F{tutor.contact.lastName} +", "))+
-(($F{tutor.contact.firstName}==null)?"":($F{tutor.contact.firstName}))]\]></textFieldExpression>
-				</textField>
-				...
-			]]></programlisting>
+				you need to open in JasperSoft Studio to edit.</para>
+				<para>Alternatively (and easier) you can access all the current onCourse reports 
+					<uri xlink:href="https://github.com/ari/oncourse-scripts/">in our github repository.</uri>
+					We encourage you to fork that repository and make your modifications public for other
+					users where appropriate.</para>
 			<tip>
-				<para>Simple changes to the XML can be made using a text editor. For more complex changes you
-					will want to use iReport.</para>
+				<para>Simple changes to the XML can be made using a text editor if you know what to look for. For more complex changes you will want to use JasperSoft Studio.</para>
 			</tip>
 		</section>
 		<section>
 			<title>Report Properties</title>
-			<para>onCourse expects to see certain properties added to each report. The properties can be edited in iReport using by choosing from the menu Edit->Custom properties or by just editing the XML by hand. If you look at the example above, you'll see all the common properties visible. At a minimum you need "keycode", "versionNumber" and "entity". Without these, your report will not be accepted by onCourse.</para>
+			<para>onCourse expects to see certain properties added to each report. The properties can be edited in JasperSoft Studio using by choosing from the menu Edit->Custom properties or by just editing the XML by hand. If you look at the example above, you'll see all the common properties visible. At a minimum you need "keycode", "versionNumber" and "entity". Without these, your report will not be accepted by onCourse.</para>
 			<para>A list of the onCourse special parameters:</para>
 			<para>Other parameters which are compulsory are:</para>
 			<itemizedlist>
@@ -2206,100 +2001,55 @@
 				not used, but should be set to prevent future problems. </para>
 		</section>
 		<section>
-			<title>Using iReport</title>
-			<para>This section cannot be summarised in few words, there are many online resources which
-				will help you learn using iReport. A good starting point is <uri xlink:href="http://jasperforge.org/plugins/project/project_home.php?projectname=ireport">http://jasperforge.org/plugins/project/project_home.php?projectname=ireport</uri>
+			<title>Using JasperSoft Studio</title>
+			<para>This tool cannot be summarised in few words and there are many online resources which
+				will help you learn using JasperSoft Studio. A good starting point is <uri xlink:href="http://community.jaspersoft.com/project/jaspersoft-studio/resources">the official documentation.</uri> You are certainly best trying to modify an existing report before creating one from scratch.
 			</para>
-			<para>There is one important thing to mention. onCourse utilises javaBean data source. This
-				has its downsides, the report cannot be tested without importing it to onCourse. The
-				database schema cannot be imported or read from iReport. But this is essential to assure
-				security of the database and the data and prevent unauthorised access. </para>
-			<para>For effective report writing a developer needs onCourse database schema. This document
-				is available free of charge for all onCourse customers with support plan. </para>
+			<para>onCourse utilises a javaBean data source which means that you cannot direct test a report
+			inside JasperSoft Studio. You must first import it into onCourse in order to run it.</para>
+			<para>The key onCourse entities can be found in our <uri xlink:href="http://www.ish.com.au/s/onCourse/doc/latest/manual/api/">API documentation.</uri></para>
 			<para>The basic workflow for a report developer is:</para>
 			<orderedlist>
 				<listitem>
-					<para>Create the report file </para>
+					<para>Export a report file from onCourse</para>
 				</listitem>
 				<listitem>
-					<para>Edit the report using iReport</para>
-				</listitem>
-				<listitem>
-					<para>Compile it using iReport</para>
+					<para>Edit the report using JasperSoft Studio</para>
 				</listitem>
 				<listitem>
 					<para>Import the report to onCourse</para>
 				</listitem>
 				<listitem>
-					<para>Test it </para>
+					<para>Test it</para>
 				</listitem>
 				<listitem>
-					<para>Repeat steps 2-5 until the report works as intended, updating the version number each
-						time.</para>
+					<para>Repeat steps 2-5 until the report works as intended.</para>
 				</listitem>
 			</orderedlist>
-			<para>We discourage starting with iReport from creating brand new reports. It is much easier
-				to start with tweaking the existing reports. (Remember though, that if you edit an existing
-				report or template you need to give it a new keyCode property, otherwise the next time
-				onCourse server is restarted it is going to be lost in the system).</para>
-		</section>
-		<section xml:id="reports-dataModel">
-			<title>Using the data model</title>
-			<para>When using iReport, you don't access the data directly. Instead you use the data model
-				provided by the onCourse engine: this wraps up the database in a way that means you
-				don't need to write SQL and you don't need to worry about which database you are
-				using the backend. Derby, MySQL and MS-SQL will all work in exactly the same way.
-				Accessing the data model is easy to do. First, <link
-					xlink:href="http://cayenne.apache.org/download.html">download a tool</link>
-				called "Cayenne Modeler": just grab the most recent development release from that
-				download page for your platform. You don't need to worry about installing the
-				Cayenne libraries themselves, just run the modeler application. </para>
-			<para>Next, you need a copy of the model itself for your version of onCourse. You can
-				get this most easily by downloading the Linux onCourse Server installation
-				(regardless of platform you are running, just grab that version). Then unzip and
-				untar the onCourseServer.tar.gz file. Inside will be another file with a .jar
-				extension. That is just another zip, so go ahead and unzip it (you may find it
-				easier to rename .jar into .zip to fool your zip tool that it really is a zip file).
-				Finally, amongst thousands of files which will be unzipped, use the Cayenne Modeler
-				you installed earlier to open a file "cayenne/cayenne-Angel.xml".</para>
-			<para>What you now have open is the data model of onCourse itself. This ObjEntities
-				represented by the icon which looks like "C" are the objects, attributes and relationships
-				which the reports can access. As you look through some of the bundled reports that will
-				become clearer.</para>
-		</section>
-		<section>
-			<title>Linking reports - creating custom certificate report example</title>
-			<para>Sometimes a report has to be followed by another report. An example of this is printing
-				certificates which according to the AVETMISS rules requires 3 parts: Qualification
-				or Statement of Attainment, Statement of Attainment subreport followed by
-				Transcript. OnCourse allows that by implementing an extra property key in the report
-				ish.oncourse.reports.following="&lt;list of report keycodes separated by
-				semicolon>". Upon printing of the report application checks for presence of that
-				key, then if the listed reports exist in the database. All the listed reports will
-				be printed one after another, based on the same selection of records.</para>
+			<para>If you edit an existing report you need to give it a new keyCode property of your own,
+				otherwise onCourse might replace that report with our default version. You can name
+				your property anything you like.</para>
 		</section>
 	</section>
-	<section xml:id="reports-importingCustomReports">
+	<section>
 		<title>Importing a custom report</title>
-		<para>Navigate to File > Preferences > Reports. From here you may click the + sign on the
-			top right hand side and select "folder" or "single report". If you have more than one
-			report to import, you can select "folder" is to import all the reports in a folder
-			reports while the "single report" is to import just the one report.</para>
-		<para>You can then be to select your report (.jrxml) from the location where it is saved on
-			your computer. Select “open” button after highlighting the file (or folder) you want to
+		<para>Navigate to File > Preferences > Reports. From here you may click the + sign on the top
+			right hand side and select "folder" or "single report". If you have more than one report to
+			import, you can select "folder" is to import all the reports in a folder reports while the
+			"single report" is to import just the one report.</para>
+		<para>You can then be to select your report (.jrxml) from the location where it is saved on your
+			computer. Select “open” button after highlighting the file (or folder) you want to
 			import.</para>
-		<para>You will then either get a message advising you that the import has been successful,
-			or unsuccessful. If the import was unsuccessful, the most common reason is that the
-			version number was not updated or the keycode was not made unique. onCourse will only
-			recognise the report as a new report if it has a unique keycode, and will only update an
-			exisiting report if the version number is higher than the version already in the
-			product. You can check the values for these entries in the reports window inside
-			onCourse.</para>
+		<para>You will then either get a message advising you that the import has been successful, or
+			unsuccessful. If the import was unsuccessful, the most common reason is that the version
+			number was not updated or the keycode was not made unique. onCourse will only recognise the
+			report as a new report if it has a unique keycode, and will only update an existing report if
+			the version number is higher than the version already in the product. You can check the values
+			for these entries in the reports window inside onCourse.</para>
 		<para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/ImportingFile.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/ImportingFile.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Selecting a custom report file for import into onCourse</para>
@@ -2307,35 +2057,32 @@
 			</mediaobject>
 		</para>
 	</section>
-	<section xml:id="reports-SQLReporting">
+	<section>
 		<title>SQL Reporting with a JDBC connector</title>
 		<section>
 			<title>Using an SQL client with onCourse to write queries</title>
-			<para>There are many reasons why you might want to access data in onCourse through a
-				tool such as DBeaver. You might need to generate a custom report or export the
-				result of a complex query to Excel and it's important to have full access to your
-				data for that reason. </para>
-			<para>Before you begin, you will need to have an SQL tool installed on your
-				machine.</para>
-			<para>DBeaver can be obtained from the <link xlink:href="http://dbeaver.jkiss.org">
-					DBeaver website.</link>
-			</para>
-			<para>Please note that support for SQL tools is not included as part of the standard
-				onCourse support packages. This is self-service option available for people with
-				strong IT skills and experience in working with relational databases to access the
-				data within their onCourse database for their own purposes.</para>
-			<para>If you are not familiar with these tools, we can provide these services for you as
-				a custom quote.</para>
+			<para>There are many reasons why you might want to access data in onCourse through a tool such as
+				DBeaver. You might need to generate a custom report or export the result of a
+				complex query to Excel and it's important to have full access to your data for that
+				reason. </para>
+			<para>Before you begin, you will need to have an SQL tool installed on your machine.</para>
+			<para>DBeaver can be obtained from the <link xlink:href="http://dbeaver.jkiss.org"> DBeaver website.</link> </para>
+			<para>Please note that support for SQL tools is not included as part of the standard onCourse
+				support packages. This is self-service option available for people with strong IT
+				skills and experience in working with relational databases to access the data within
+				their onCourse database for their own purposes.</para>
+			<para>If you are not familiar with these tools, we can provide these services for you as a
+				custom quote.</para>
 		</section>
 		<section>
-			<title>Setting DBeaver with the right JDBC to talk to onCourse</title>
-			<para>When first openong DBeaver you will be asked to select your database type. Select
-				the option 'Derby Server'. You will then be prompted to download the driver from
-				their website. </para>
+		<title>Setting DBeaver with the right JDBC to talk to onCourse</title>
+			<para>When first openong DBeaver you will be asked to select your database type. Select the
+				option 'Derby Server'. You will then be prompted to download the driver from their
+				website. </para>
 			<para>Once the drive has downloaded, in the new connection wizard select the option edit
 				connection settings.</para>
-			<para>You also must specify the sample URL. You need to enter jdbc:derby://&lt;server
-				machine IP address>/&lt;path to the datafile>/onCourse;create=false. Examples:<itemizedlist>
+			<para>You also must specify the sample URL. You need to enter jdbc:derby://&lt;server machine IP
+				address>/&lt;path to the datafile>/onCourse;create=false. Examples:<itemizedlist>
 					<listitem>
 						<para>jdbc:derby://localhost/c:/Program
 							Files/onCourse/onCourse.iocdata/onCourse;create=false - onCourse server
@@ -2353,8 +2100,7 @@
 				path.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/DBeaveralias.png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/DBeaveralias.png"/>
 				</imageobject>
 				<caption>
 					<para>Setting the alias and connection details in DBeaver</para>
@@ -2363,28 +2109,26 @@
 		</section>
 		<section>
 			<title>Creating SQL queries</title>
-			<para>If you are new to SQL a good place to start is <link
-					xlink:href="http://www.w3schools.com/sql/default.asp"> the w3schools SQL
-					tutorial.</link> Once you have some familiarity with the structure of the
-				onCourse database and the basics of SQL commands, you can then create queries
-				requesting the information of your choice from the database.</para>
-			<para>The most important part of constructing a query is understanding how the tables in
-				onCourse join to each other so you can query across tables. You can access this
-				information by following the instructions above about using the data model. You can
-				also browse the tables, columns and data in onCourse through dBeaver by navigating
-				to the onCourse > table. For each table you can browse the columns (field names) and
-				the content (data from the database you have connected to). </para>
+			<para>If you are new to SQL a good place to start is <link xlink:href="http://www.w3schools.com/sql/default.asp"> the w3schools SQL tutorial.</link>
+				Once you have some familiarity with the structure of the onCourse database and the basics of
+				SQL commands, you can then create queries requesting the information of your choice from the
+				database.</para>
+			<para>The most important part of constructing a query is understanding how the tables in onCourse
+				join to each other so you can query across tables. You can access this information
+				by following the instructions above about using the data model. You can also browse
+				the tables, columns and data in onCourse through dBeaver by navigating to the
+				onCourse > table. For each table you can browse the columns (field names) and the
+				content (data from the database you have connected to). </para>
 			<para>Most tables are joined via the ID field to the previous table. For example, in the
-				contact table, you will see the ID column. In the student table you will see the
-				column ID for the student record ID, and also the column CONTACTID which joins the
-				student record to the contact record. If you want to return results about the names
-				of students enrolled in classes you need to join the contact record (where the name
-				of the person is) to the student record (who has enrolled in something) to the
-				enrolment record (the join between the student and the class) and the class record
-				(where the student enrolled) to the course record (where the name of the class
-				is).</para>
-			<para>For example, to return a class list for students with active enrolments in
-				Woodwork WDWK-0010 the query would be:</para>
+				contact table, you will see the ID column. In the student table you will see the column ID
+				for the student record ID, and also the column CONTACTID which joins the student record to
+				the contact record. If you want to return results about the names of students enrolled in
+				classes you need to join the contact record (where the name of the person is) to the student
+				record (who has enrolled in something) to the enrolment record (the join between the student
+				and the class) and the class record (where the student enrolled) to the course record (where
+				the name of the class is).</para>
+			<para>For example, to return a class list for students with active enrolments in Woodwork
+				WDWK-0010 the query would be:</para>
 			<programlisting>
 select c.firstname, c.lastname from enrolment as e
 join student as s on e.studentid = s.id
@@ -2393,15 +2137,14 @@ join courseclass as cc on e.courseclass_id = cc.id
 join course on cc.courseid = course.id
 where e.status = 3 and course.code like 'WDWK' and cc.code like '0001'
 			</programlisting>
-			<para>Adding additional fields to the select list would increase the detail returned,
-				like the student's address, or their class start date. Adding additional options to
-				the where statement would change what parameters you were searching for.</para>
-			<para>You can right click on the list returned to data to export it into excel or
-				another format for your own requirements.</para>
+			<para>Adding additional fields to the select list would increase the detail returned, like the
+				student's address, or their class start date. Adding additional options to the where
+				statement would change what parameters you were searching for.</para>
+			<para>You can right click on the list returned to data to export it into excel or another
+				format for your own requirements.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/sql_export_excel2.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/sql_export_excel2.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Exporting results of an SQL query to excel</para>

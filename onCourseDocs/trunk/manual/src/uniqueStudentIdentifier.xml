@@ -348,6 +348,43 @@
                 </caption>
             </mediaobject>
         </section>
+        <section>
+            <title>Editing a locked student record</title>
+            <para>After successful USI validation, the data that was matched with the USI - the first name, last name, date of birth and USI of the student, becomes locked. </para>
+            <para>On occasion, a student may inform you that they created their USI with the wrong
+                name details and wish to update their records. To do this, they need to contact the
+                USI Agency by logging into their own portal and completing the process to make the
+                change. Once the USI Agency has the details of the change, you can go ahead and
+                update their onCourse records to match.</para>
+            <para>Click on the padlock symbol next to one of the locked fields in their record and a
+                new sheet will open. This will allow you to edit one or more of the fields.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/usi/USI_edit_sheet.png"/>
+                </imageobject>
+                <caption>
+                    <para>The fields have been unlocked for you to edit</para>
+                </caption>
+            </mediaobject>
+            <para>After editing, click on Verify USI and the SOAP call process will run and confirm
+                if the students details with the USI agency match with the change you wish to
+                make.</para>
+            <para>If your change matches, the student record will return to it's locked state
+                showing the new data that has been verified.</para>
+            <para>If the student has not successfully updated their USI Agency record, your attempt
+                to verify will fail and an explanation will be given when you hover over the
+                exclamation icon.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/usi/USI_edit_name.png"/>
+                </imageobject>
+                <caption>
+                    <para>The USI details have attempted to verify with the new data, but have failed on the surname.</para>
+                </caption>
+            </mediaobject>
+        </section>
     </section>
     <section xml:id="usi-certificatePrinting">
         <title>Certificate printing and the USI</title>
@@ -525,8 +562,12 @@
                     <para>What happens when merging contacts with USIs?</para>
                 </question>
                 <answer>
-                    <para>You cannot merge 2 contacts with USIs, if you do a notification will be displayed informing you that you can't do this.</para>
-                    <para>If only one of the contacts has a USI, then their First/Last Name and date of birth can't be changed</para>
+                    <para>You cannot merge two contacts with different verified USIs. If you attempt
+                        a merge, a notification will be displayed informing you that you can't do
+                        this.</para>
+                    <para>If only one of the contacts has a USI, then they can be merged, but their
+                        First/Last Name and date of birth can't be changed during this
+                        process.</para>
                      </answer>
             </qandaentry>
         </qandaset>

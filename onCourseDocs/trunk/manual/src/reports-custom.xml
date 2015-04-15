@@ -124,7 +124,7 @@
 				"versionNumber" and "entity". Without these, your report will not be accepted by
 				onCourse.</para>
 			<para>An example of the parameters found in a report files
-				is:<programlisting>&lt;property name="name" value="Certificate-Attendance"/>
+				is:<programlisting language="xml">&lt;property name="name" value="Certificate-Attendance"/>
 &lt;property name="entity" value="Enrolment"/>
 &lt;property name="isSubreport" value="false"/>
 &lt;property name="isVisible" value="true"/>
@@ -260,7 +260,7 @@
 				the name of the class is).</para>
 			<para>For example, to return a class list for students with active enrolments in Woodwork
 				WDWK-0010 the query would be:</para>
-			<programlisting>
+			<programlisting language="sql">
 select c.firstname, c.lastname from enrolment as e
 join student as s on e.studentid = s.id
 join contact as c on s.contactid = c.id

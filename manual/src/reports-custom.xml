@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="reports-custom">
+	<title>Creating custom reports</title>
+	<subtitle>Get your data out any way you want.</subtitle>
+		<para>onCourse takes advantage of a powerful reporting tool called JasperReports. This open source
+			library costs you nothing to use and can be extended to add new features. We've extended it to
+			understand onCourse data, tied it into a PDF generation system and allowed to you add your own
+			reports right into onCourse for all users to easily run.</para>
+	
+	
+	<section xml:id="reports-customReports">
+		<title>Getting started with custom reports</title>
+		<para>Custom reports can be developed for onCourse by any user, or by ish on request, and then
+			imported into onCourse via your client.</para>
+			<para>onCourse uses <uri>JasperReports</uri>, an open source tool to create reports. You can add
+				your own custom reports to onCourse at any time by creating them with <uri
+					xlink:href="https://community.jaspersoft.com/download">JasperSoft Studio</uri>.
+				This is a free tool you can download and install on your system. It runs on Linux,
+				Windows and OSX.</para>
+			<para>The basic workflow of editing a report is this:</para>
+			<para>
+				<orderedlist>
+					<listitem>
+						<para>Export a report template from onCourse (it is usually easier to start
+							with something close to what you want)</para>
+					</listitem>
+					<listitem>
+						<para>Edit the report using JasperSoft Studio</para>
+					</listitem>
+					<listitem>
+						<para>Import the report to onCourse</para>
+					</listitem>
+					<listitem>
+						<para>Test</para>
+					</listitem>
+					<listitem>
+						<para>Repeat steps 2-5 until the report works as intended.</para>
+					</listitem>
+				</orderedlist>
+			</para>
+			<section>
+				<title>Exporting report templates from onCourse</title>
+				<para>You can export existing onCourse reports to modify by going to File >
+					Preferences > Reports and selecting the report you wish to edit. With the report
+					highlighted in the list, go to the cog wheel option in the top right hand corner
+					and select 'Save report file on disk'. This saved file will be the jrxml file
+					you need to open in JasperSoft Studio to edit.</para>
+				<para>Alternatively (and easier) you can access all the current onCourse reports
+						<uri xlink:href="https://github.com/ari/oncourse-scripts/">in our github
+						repository.</uri> We encourage you to fork that repository and make your
+					modifications public for other users where appropriate.</para>
+			</section>
+			<section>
+				<title>Editing reports in JasperSoft Studio</title>
+			<para><tip>
+					<para>Simple changes to the XML can be made using a text editor if you know what
+						to look for. For more complex changes you will want to use JasperSoft
+						Studio.</para>
+				</tip>JasperSoft Studio cannot be summarised in few words and there are many online
+				resources which will help you learn using it. A good starting point is <uri
+					xlink:href="http://community.jaspersoft.com/project/jaspersoft-studio/resources"
+					>the official documentation.</uri> You are certainly best trying to modify an
+				existing report before creating one from scratch. For now, take an existing report
+				and make a small change to it such as changing the colour of some text. Save the
+				report.</para>
+			</section>
+		<section>
+			<title>Importing a report</title>
+			<para>onCourse utilises a Java Bean data source which means that you cannot directly
+				test a report inside JasperSoft Studio. You must first import it into onCourse in
+				order to run it.</para>
+			<para>Navigate to File > Preferences > Reports. From here you may click the + sign on
+				the top right hand side and select "folder" or "single report". If you have more
+				than one report to import, you can select "folder" is to import all the reports in a
+				folder reports while the "single report" is to import just the one report.</para>
+			<para>You can then be to select your report (.jrxml) from the location where it is saved
+				on your computer. Select “open” button after highlighting the file (or folder) you
+				want to import.</para>
+			<para>You will then either get a message advising you that the import has been
+				successful, or unsuccessful. If the import was unsuccessful, the most common reason
+				is that the version number was not updated or the keycode was not made unique.
+				onCourse will only recognise the report as a new report if it has a unique keycode,
+				and will only update an existing report if the version number is higher than the
+				version already in the product. You can check the values for these entries in the
+				reports window inside onCourse.</para>
+			<para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/ImportingFile.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Selecting a custom report file for import into onCourse</para>
+					</caption>
+				</mediaobject>
+			</para>
+		</section>
+	</section>
+	<section>
+		<title>The structure of a report</title>
+		<para>Reports access objects (records in the database) and attributes from those objects. If you
+			look at an existing report, you'll see references such as
+				<code>$F{contact}.firstName</code>. This is a reference to the contact object which
+			was passed to the report and will draw on the page the first name attribute of that
+			contact.</para>
+		<para>You may also see joins between entities like this
+				<code>$F{waitingList}.contact.firstName</code>. You can traverse across joins
+			between entities in this way.</para>
+		<para>The onCourse entities and all their attributes can be found in our <uri
+				xlink:href="http://www.ish.com.au/s/onCourse/doc/latest/manual/api/">API
+				documentation.</uri></para>
+		<para>Reports are all able to take advantage of the entire Groovy language within all report
+			fields. This can be extremely powerful since you can write any code you want to execute
+			within the report engine. A simple example might be
+				<code>$F{enrolment}.courseClass.expectedHours ?: "not specified"</code> which would
+			print "not specified" if the class has no timetable. More sophisticated code can control
+			the repeating sections on a page, sorting of data and much more.</para>
+		<section>
+			<title>Report Properties</title>
+			<para>onCourse expects to see certain properties added to each report. The properties
+				can be edited in JasperSoft Studio using by choosing from the menu Edit->Custom
+				properties or by just editing the XML by hand. If you look at the example above,
+				you'll see all the common properties visible. At a minimum you need "keycode",
+				"versionNumber" and "entity". Without these, your report will not be accepted by
+				onCourse.</para>
+			<para>An example of the parameters found in a report files
+				is:<programlisting>&lt;property name="name" value="Certificate-Attendance"/>
+&lt;property name="entity" value="Enrolment"/>
+&lt;property name="isSubreport" value="false"/>
+&lt;property name="isVisible" value="true"/>
+&lt;property name="versionNumber" value="8"/>
+&lt;property name="keyCode" value="ish.oncourse.nonVetCertificate"/>
+&lt;property name="ish.oncourse.description" value="Report is generated at the conclusion of any non VET short courses to verify
+            that the student attended all of the required number of classes.This report prints in
+            Portrait format."/></programlisting></para>
+			<variablelist>
+				<varlistentry>
+					<term>name</term>
+					<listitem><para>A name to display in the user interface to users wanting to print a report.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>keyCode</term>
+					<listitem><para>Each report has to be identified in the system, therefore it is given an unique property
+							called 'keyCode'. We strongly recommend that for any reports you
+							customise, you use a different code. This will avoid an update of
+							onCourse software overriding your report with new version from our
+							developers. If you copy an onCourse report, you should definitely change
+							this to your own code.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>versionNumber</term>
+					<listitem><para>A whole number, has to be increased every time a report is changed otherwise your
+							modifications may not be visible.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>entity</term>
+					<listitem><para> Identifies which is the starting point for the report, ie. report with value 'Certificate'
+							will be available in print menu for list of certificates.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>isVisible</term>
+					<listitem><para> - can only take value of 'true' or 'false', indicates whether the report is visible in the
+							print dialog </para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>isSubreport</term>
+					<listitem><para> - some reports are just injected inside others, this allows to specify this fact and hide
+							this report from the user choice</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>ish.oncourse.reports.following</term>
+					<listitem><para>Use this property if you need print many reports as one, just add to this property a report's
+							key (or keys). If you need put more then one key - separate keys with
+							";". Any reports in here will be automatically printed after the initial
+							report. This is particularly useful for certificates.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>ish.oncourse.reports.isObjectOnSeparatePage</term>
+					<listitem><para>If this property is set to true, then each record is printed on a separate page. This is
+							useful for invoices (for example) which should start a new page after
+							every invoice record.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>ish.oncourse.reports.description</term>
+					<listitem><para>A description to show to users in the onCourse user interface. Put some text in here to
+							describe what the report does.</para></listitem>
+				</varlistentry>
+			</variablelist>
+		</section>
+	</section>
+	<section>
+		<title>SQL Reporting with a JDBC connector</title>
+		<section>
+			<title>Using an SQL client with onCourse to write queries</title>
+			<para>Because onCourse uses an SQL database, you can use any tool which reports against a JDBC
+				data source. Before you begin, you will need to have an SQL tool installed on your
+				machine.</para>
+			<para>A free and simple tool DBeaver can be obtained from the <link
+					xlink:href="http://dbeaver.jkiss.org"> DBeaver website.</link>
+			</para>
+			<para>Please note that support for SQL tools is not included as part of the standard onCourse
+				support packages. This is self-service option available for people with strong IT
+				skills and experience in working with relational databases to access the data within
+				their onCourse database for their own purposes. We recommend against using SQL
+				directly since upgrades between versions of onCourse may break your reports. Our
+				Jasper reporting options are more robust between upgrades.</para>
+		</section>
+		<section>
+		<title>Setting DBeaver with the right JDBC to talk to onCourse</title>
+			<para>When first openong DBeaver you will be asked to select your database type. Select the
+				option 'Derby Server'. You will then be prompted to download the driver from their
+				website. </para>
+			<para>Once the drive has downloaded, in the new connection wizard select the option edit
+				connection settings.</para>
+			<para>You also must specify the sample URL. You need to enter jdbc:derby://&lt;server machine IP
+				address>/&lt;path to the datafile>/onCourse;create=false. Examples:<itemizedlist>
+					<listitem>
+						<para>jdbc:derby://localhost/c:/Program
+							Files/onCourse/onCourse.iocdata/onCourse;create=false - onCourse server
+							running on windows, with IP 192.168.0.1, data file is in c:/Program
+							Files/onCourse/ folder.</para>
+					</listitem>
+					<listitem>
+						<para>jdbc:derby://192.168.50.1//Users/administrator/onCourse.iocdata/onCourse;create=false
+							- onCourse server running on osx/freebsd, with IP 192.168.50.1, data
+							file is in /Users/administrator/ folder.</para>
+					</listitem>
+				</itemizedlist></para>
+			<para>The username is 'report' and the password is '948ty'</para>
+			<para>Click on test connection to ensure you have correctly specified the data
+				path.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/DBeaveralias.png"/>
+				</imageobject>
+				<caption>
+					<para>Setting the alias and connection details in DBeaver</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Creating SQL queries</title>
+			<para>If you are new to SQL a good place to start is <link xlink:href="http://www.w3schools.com/sql/default.asp"> the w3schools SQL tutorial.</link>
+				Once you have some familiarity with the structure of the onCourse database and the basics of
+				SQL commands, you can then create queries requesting the information of your choice from the
+				database.</para>
+			<para>The most important part of constructing a query is understanding how the tables in onCourse
+				join to each other so you can query across tables. You can access this information
+				by following the instructions above about using the data model. You can also browse
+				the tables, columns and data in onCourse through dBeaver by navigating to the
+				onCourse > table. For each table you can browse the columns (field names) and the
+				content (data from the database you have connected to). </para>
+			<para>Most tables are joined via the ID field to the previous table. For example, in the
+				contact table, you will see the ID column. In the student table you will see the column ID
+				for the student record ID, and also the column CONTACTID which joins the student record to
+				the contact record. If you want to return results about the names of students enrolled in
+				classes you need to join the contact record (where the name of the person is) to the student
+				record (who has enrolled in something) to the enrolment record (the join between the student
+				and the class) and the class record (where the student enrolled) to the course record (where
+				the name of the class is).</para>
+			<para>For example, to return a class list for students with active enrolments in Woodwork
+				WDWK-0010 the query would be:</para>
+			<programlisting>
+select c.firstname, c.lastname from enrolment as e
+join student as s on e.studentid = s.id
+join contact as c on s.contactid = c.id
+join courseclass as cc on e.courseclass_id = cc.id
+join course on cc.courseid = course.id
+where e.status = 3 and course.code like 'WDWK' and cc.code like '0001'
+			</programlisting>
+			<para>Adding additional fields to the select list would increase the detail returned, like the
+				student's address, or their class start date. Adding additional options to the where
+				statement would change what parameters you were searching for.</para>
+			<para>You can right click on the list returned to data to export it into excel or another
+				format for your own requirements.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/sql_export_excel2.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Exporting results of an SQL query to excel</para>
+				</caption>
+			</mediaobject>
+		</section>
+	</section>
+</chapter>

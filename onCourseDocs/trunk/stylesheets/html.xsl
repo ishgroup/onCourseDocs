@@ -5,8 +5,8 @@
       exclude-result-prefixes="date xslthl"
       version='1.0'>
 
-  <xsl:import href="../build/xslt/docbook/html/chunk.xsl"/>
-  <xsl:import href="../build/xslt/docbook/html/highlight.xsl"/>
+  <xsl:import href="@rootDir@/build/xslt/docbook/html/chunk.xsl"/>
+  <xsl:import href="@rootDir@/build/xslt/docbook/html/highlight.xsl"/>
 
   <xsl:include href="common-customizations.xsl"/>
 
@@ -37,7 +37,7 @@
     </meta>
     <link rel="canonical">
       <xsl:attribute name="href">
-        <xsl:text>https://www.ish.com.au/s/onCourse/doc/latest/manual/</xsl:text>
+        <xsl:text>https://www.ish.com.au/s/onCourse/doc/latest/@projectName@/</xsl:text>
         <xsl:call-template name="href.target.uri">
           <xsl:with-param name="object" select="."/>
         </xsl:call-template>

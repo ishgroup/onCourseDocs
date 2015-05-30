@@ -68,22 +68,33 @@ allprojects {
         from zipTree(configurations.docbookxslt.singleFile)
         into "${buildDir}/xslt"
     }
-
-    task processResources(type: Copy) {
-        into "${buildDir}"
-        from "src"
-        filter(ReplaceTokens,tokens: [
-            version: version, 
-            publishedDate: new SimpleDateFormat("dd MMM yyyy").format(new Date()),
-            copyrightYear : new SimpleDateFormat("yyyy").format(new Date())])
-    }
 }
 
 subprojects {
-    task docbookHtml(type: Docbook, dependsOn: [processResources, parent.tasks['explodeXSL']]) {
+    task processXSLT(type: Copy) {
+        from "${rootDir}/stylesheets"
+        into "${buildDir}/stylesheets"
+        filter(ReplaceTokens,tokens: [
+            projectName: project.name,
+            rootDir: project.rootDir.absolutePath
+        ])
+    }
+
+    task processSrc(type: Copy) {
+        from "src"
+        into "${buildDir}"
+        filter(ReplaceTokens,tokens: [
+            projectName: project.name, 
+            version: version, 
+            publishedDate: new SimpleDateFormat("dd MMM yyyy").format(new Date()),
+            copyrightYear : new SimpleDateFormat("yyyy").format(new Date())
+        ])
+    }
+
+    task docbookHtml(type: Docbook, dependsOn: [processXSLT, processSrc, parent.tasks['explodeXSL']]) {
 		description = 'Generates chunked docbook html output.'
         outputFile = file("${buildDir}/html/index.html")
-		stylesheet = file("${rootDir}/stylesheets/html.xsl")
+		stylesheet = file("${buildDir}/stylesheets/html.xsl")
         sourceDirectory = file( "${buildDir}" )
 
         doLast {
@@ -102,10 +113,10 @@ subprojects {
         }
 	}
 
-    task docbookPdfPrepare(type: Docbook, dependsOn: [processResources, parent.tasks['explodeXSL']]) {
+    task docbookPdfPrepare(type: Docbook, dependsOn: [processSrc, parent.tasks['explodeXSL']]) {
         description = 'Generates PDF fo output.'
         outputFile = file("${buildDir}/pdf/index.fo")
-        stylesheet = file("${rootDir}/stylesheets/pdf.xsl")
+        stylesheet = file("${buildDir}/stylesheets/pdf.xsl")
         sourceDirectory = file( "${buildDir}" )
     }
 
@@ -169,7 +180,7 @@ public class Docbook extends DefaultTask {
         rootFilename = rootFilename.substring(0, rootFilename.lastIndexOf('.'));
         transformer.setParameter("root.filename", rootFilename);
         transformer.setParameter("base.dir", outputFile.getParent() + File.separator);
-        transformer.setParameter('highlight.xslthl.config', 'file://' + project.getRootDir().getAbsolutePath() + '/stylesheets/xslthl-config.xml' );
+        transformer.setParameter('highlight.xslthl.config', 'file://' + project.getBuildDir().getAbsolutePath() + '/stylesheets/xslthl-config.xml' );
 
         transformer.transform(new SAXSource(reader, inputSource), result);
 	}

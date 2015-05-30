@@ -6,8 +6,8 @@
         exclude-result-prefixes="xslthl"
         version="1.0">
 
-    <xsl:import href="../build/xslt/docbook/fo/docbook.xsl"/>
-    <xsl:import href="../build/xslt/docbook/fo/highlight.xsl"/>
+    <xsl:import href="@rootDir@/build/xslt/docbook/fo/docbook.xsl"/>
+    <xsl:import href="@rootDir@/build/xslt/docbook/fo/highlight.xsl"/>
 
     <xsl:include href="common-customizations.xsl"/>
 

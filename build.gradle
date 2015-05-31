@@ -113,7 +113,7 @@ subprojects {
         }
 	}
 
-    task docbookPdfPrepare(type: Docbook, dependsOn: [processSrc, parent.tasks['explodeXSL']]) {
+    task docbookPdfPrepare(type: Docbook, dependsOn: [processXSLT, processSrc, parent.tasks['explodeXSL']]) {
         description = 'Generates PDF fo output.'
         outputFile = file("${buildDir}/pdf/index.fo")
         stylesheet = file("${buildDir}/stylesheets/pdf.xsl")

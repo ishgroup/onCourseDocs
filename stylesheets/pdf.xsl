@@ -12,6 +12,12 @@
     <xsl:include href="common-customizations.xsl"/>
 
     <xsl:param name="paper.type">A4</xsl:param>
+    <xsl:param name="column.count.body" select="2"/>
+    <xsl:param name="column.count.lot" select="2"/>
+    <xsl:param name="column.count.index" select="2"/>
+    <xsl:param name="column.count.front" select="2"/>
+    <xsl:param name="column.count.titlepage" select="2"/>
+    <xsl:param name="page.orientation">landscape</xsl:param>
 
     <!-- don't indent the body text -->
     <xsl:param name="body.start.indent">0pt</xsl:param>

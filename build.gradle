@@ -75,8 +75,8 @@ subprojects {
         from "${rootDir}/stylesheets"
         into "${buildDir}/stylesheets"
         filter(ReplaceTokens,tokens: [
-            projectName: project.name,
-            rootDir: project.rootDir.absolutePath
+            canonicalLink: canonicalLink,
+            rootDir: rootDir.absolutePath
         ])
     }
 

@@ -166,7 +166,7 @@
 			<listitem>
 				<para>It is important to configure an outbound mail server in order for email from onCourse to
 					be delivered. This includes enrolment confirmations, invoices and other outbound
-					messages.  Enter the host name or IP address of the mail server in
+					messages. Enter the host name or IP address of the mail server in
 						<guilabel>Outgoing Mail Server Address SMTP</guilabel>. Optionally you can
 					add authentication settings if your mail server requires it.</para>
 			</listitem>
@@ -181,11 +181,14 @@
 					administrator to verify that these details are correct. </para>
 			</listitem>
 				<listitem>
-				<para>Underneath is the <guilabel>emails queued</guilabel> notification. This field will
-					notify you of how many emails are in the queue waiting to be sent. Say you are sending out
-					a bulk email to prospective students to remind them of the start date of the new term, the
-					number in this feild will tell you how many emails have yet to be sent, ie. how many
-					remain in the queue. You can not enter any data into this field.</para>
+				<para>Underneath is the <guilabel>emails queued</guilabel> notification. This field will notify
+					you of how many emails are in the queue waiting to be sent. Say you are sending
+					out a bulk email to prospective students to remind them of the start date of the
+					new term, the number in this field will tell you how many emails have yet to be
+					sent, ie. how many remain in the queue. Emails that are unable to be sent due to
+					mail configuration errors will stay in the mail queue rather than be marked as
+					failed on the sending attempt. You can not enter any data into this
+					field.</para>
 			</listitem>
 		</orderedlist>
 		<section>

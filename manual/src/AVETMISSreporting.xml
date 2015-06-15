@@ -5,20 +5,20 @@
 		<title>What is AVETMISS?</title>
 		<para>AVETMISS stands for Australian Vocational Education and Training Management
 			Information Statistical Standard.</para>
-		<para>In the AQTF 2010, Condition 6 Certification &amp; Issuing of Qualifications &amp;
-			Statements of Attainment states: "The RTO must have a student records management
-			database in place that has the capacity to provide the registering body with AVETMISS
-			compliant data." and the Standard for NVR Registered Training Organisations 2012 in SNR
-			12: Strategy for certification, issuing and recognition of qualifications and statements
-			of attainment, "SNR 12.4 require the applicant to identify how it will provide returns
-			of its client records of attainment of units of competence and qualifications to the
-			National VET Regulator on a regular basis. "</para>
+		<para>In the ASQA Standards for RTO's 2015 - Standard 7, clause 7.5 states "The RTO provides
+			accurate and current information on its performance and governance consistent with the
+			Data Provision Requirements as updated from time to time." Currently, this means
+			mandatory RTO reporting is in line with the <link
+				xlink:href="http://www.comlaw.gov.au/Series/F2013L00160Data">Data Provision
+				Requirements 2012</link> via both the AVETMISS standard and Quality Indicator data
+			for all vocational training learners (both funded and fee for service), unless it is
+			exempt under the National VET Provider Collection Data Requirements Policy.</para>
 		<para>If you are using onCourse, you're in luck - onCourse is the <link
 				xlink:href="http://www.ish.com.au/node/1538">only free AVETMISS compliant</link>
-			student management database currently available to the Australian RTO market. onCourse
-			exports AVETMISS data compliant with the 6.1 VET Provider specifications and the
-			AVETMISS 7 standard, including the USI requirements in effect as of January 1
-			2015.</para>
+			student management database currently available to the Australian RTO market that
+			exports both to the NCVER National standard and each state's AVETMISS variation for
+			funded training. onCourse exports AVETMISS data compliant with the AVETMISS 7 standard,
+			including the USI requirements which came into effect as of January 1 2015.</para>
 		<para>The AVETMISS data you are required to submit are made up of a series of files with
 			names like NAT00120. These files must be supplied as plain text in a fixed width format.
 			These files are not very easy to create or read by a human as if one character is in the
@@ -94,10 +94,6 @@
 			<para>All the data in this file is collected in the onCourse general preferences window.
 				Go to File > Preferences > General. Select the AVETMISS tab and enter the contact
 				details of your business.</para>
-			<para>In Queensland, you are required to report your QLD Provider ID in place of the
-				National ID. You will need to enter this number in the 'Identifier' field prior to
-				your export. You may wish to change this field back to your National ID after
-				export, as the data from here is also used to generate your Certificates.</para>
 		</section>
 		<section>
 			<title>Training Organisation Delivery Location (NAT00020) File</title>
@@ -108,10 +104,9 @@
 				simple, give each site a room with a generic name like 'default'.</para>
 		</section>
 		<section>
-			<title>Course (NAT00030) File and Module/Unit of Competency (NAT00060) File</title>
-			<para>This information comes from the onCourse Course detail (what we call a 'course' in
-				onCourse is different to what AVETMISS calls a course). When you create a new course
-				in onCourse, go to the VET tab and add the Qualification and Unit(s) that you are
+			<title>Program (NAT00030) File Subjecty (NAT00060) File</title>
+			<para>This information comes from the onCourse Course detail. When you create a new course in
+				onCourse, go to the VET tab and add the Qualification and Unit(s) that you are
 				delivering as part of this program. All the TGA (training.gov.au) data is built in
 				so when you start typing the code, the rest of the unit information will appear to
 				select from the list. You can set up full qualification courses here or short
@@ -388,32 +383,32 @@
 			</section>
 		</section>
 		<section>
-			<title>Qualification Completed (NAT000130) File</title>
-			<para>To record student completion of a qualification in onCourse, you must create a
-				qualification certificate for them.</para>
+			<title>Program Completed (NAT000130) File</title>
+			<para>To record student completion of a qualification or skill set in onCourse, you must create a
+				qualification or skill set certificate for them.</para>
 			<para>onCourse will create AQF compliant certificates for your students, but for the
 				purposes of lodging AVETMISS, you don't need to print or issue them. </para>
-			<para>To create a Certificate record, open the certificate window and click plus. Type
-				the name of the student and the qualification you wish to issue and choose the
-				outcomes from the student's record you wish to add to the certificate. Check the
-				option 'qualification' and save the record.</para>
-			<para>Alternatively, you can do this automatically from the class list or enrolment list
-				records by highlighting the records you want to create certificates for and
-				selecting the cogwheel 'create certificates' function. If the enrolment or class is
-				linked to a course where 'satisfies requirements for a complete qualification' is
-				ticked, then a Qualification will be created, otherwise it will default to a
-				Statement of Attainment. Only Qualification completions are reported in the NAT00130
-				file.</para>
+			<para>To create a Certificate record, open the certificate window and click plus. Type the name
+				of the student and the code of the qualification or skill set you wish to issue and
+				choose the outcomes from the student's record you wish to add to the certificate.
+				Check the option 'qualification or skill set' and save the record.</para>
+			<para>Alternatively, you can do this automatically from the class list or enrolment list records
+				by highlighting the records you want to create certificates for and selecting the
+				cogwheel 'create certificates' function. If the enrolment or class is linked to a
+				course where 'satisfies complete qualification or skill set' is ticked, then a
+				Qualification or skill set certificate will be created, otherwise it will default to
+				a Statement of Attainment. Only Qualification and skill set completions are reported
+				in the NAT00130 file.</para>
 			<para>If you are exporting a NSW DET export, and have set all the outcomes for an
 				enrolment (e.g. they are no longer blank) a NAT000130 file will be automatically
 				created for you, even if you have not delivered a full qualification to the student.
 				This is because NSW DET uses the NAT00130 file for a different purpose than the
 				national standard. </para>
-			<para>If you are exporting to Victoria, the student intent to complete a certificate
-				will be recorded here also. This record is created when a student is enrolled into a
-				class linked to a course where 'satisfies requirements for a complete qualification'
-				is ticked. Until you create the Certificate record on their successful completion,
-				the record will contain an 'N' for not issued.</para>
+			<para>If you are exporting to Victoria, the student intent to complete a certificate will be
+				recorded here also. This record is created when a student is enrolled into a class
+				linked to a course where 'ssatisfies complete qualification or skill set' is ticked.
+				Until you create the Certificate record on their successful completion, the record
+				will contain an 'N' for not issued.</para>
 			<para>
 				<link xlink:href="rto.html">More
 					information on creating Certificates in onCourse</link>
@@ -444,8 +439,8 @@
 			the enrolments and completions in single units of competency. Students who enrol in a
 			full qualification will also be counted as an enrolment in each unit of competency that
 			makes up their qualification.</para>
-		<para>Only students who have enrolled in courses marked as 'satisfies requirements for
-			complete qualification' are counted as qualification enrolments. </para>
+		<para>Only students who have enrolled in courses marked as 'satisfies complete qualification or
+			skill set' are counted as qualification enrolments. </para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -796,8 +791,8 @@
 				<para>In the NAT00120 the tuition fee field will be calculated as a per hour value,
 					based on the fee charge during enrolment divided by the total nominal hours of
 					the course</para>
-				<para>In the NAT00120 the enrolment date is inserted based on the date the enrolment
-					was processed into onCourse</para>
+				<para>In the NAT00120 the enrolment date is inserted based on the date the enrolment was
+					processed into onCourse, or the course start date, which ever is earlier.</para>
 				<para>In the NAT00120 an enrolment identifier is added, using the record ID of the
 					outcome. This value is not visible or editable in the onCourse user interface.
 					This means once you have reported a student via AVETMISS you should not cancel

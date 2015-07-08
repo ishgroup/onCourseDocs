@@ -904,11 +904,27 @@
 				will be all the fields from the table. Some special cross table fields may also be
 				available, like 'tagged with'.</para>
 			<para>Depending on the field type, you will have different options to choose from. For example,
-				text fields will include options like begins with, ends with, is, is not and
-				contains. You can also add wildcard character to your text field searches by using
-				%. For example, if I wanted to exclude all classes with a code starting with CS I
-				could choose, code is not CS%. Note that many text based searches, like course and
-				class code are case sensitive.</para>
+				text fields will include options like begins with, ends with, is, is not, contains,
+				is empty and is not empty. Example cases of when you would need to use the is empty
+				and is not empty in the advanced search are as follows:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Finding students who have/don't have a USI</para>
+				</listitem>
+				<listitem>
+					<para>Finding students who haven't supplied a date of birth</para>
+				</listitem>
+				<listitem>
+					<para>Finding classes which have a purchasing contract identifier</para>
+				</listitem>
+				<listitem>
+					<para>Finding enrolments which have a commitment ID</para>
+				</listitem>
+			</itemizedlist>
+			<para>You can also add wildcard character to your text field searches by using %. For
+				example, if I wanted to exclude all classes with a code starting with CS I could
+				choose, code is not CS%. Note that many text based searches, like course and class
+				code are case sensitive.</para>
 			<para>You can also run an advanced search on Classes by State of Site, simply by selecting <guimenuitem>Site State</guimenuitem>within the advanced search options. </para>
 			<para>Some fields are date fields and you can either type the date in by short date format
 				e.g. 1/1/11 or choose the date from the calendar. Date fields can also be relative, for

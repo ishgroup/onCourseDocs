@@ -13,8 +13,7 @@
 		<para>Custom reports can be developed for onCourse by any user, or by ish on request, and then
 			imported into onCourse via your client.</para>
 			<para>onCourse uses <uri>JasperReports</uri>, an open source tool to create reports. You can add
-				your own custom reports to onCourse at any time by creating them with <uri
-					xlink:href="https://community.jaspersoft.com/download">JasperSoft Studio</uri>.
+				your own custom reports to onCourse at any time by creating them with <uri xlink:href="https://community.jaspersoft.com/download">JasperSoft Studio</uri>.
 				This is a free tool you can download and install on your system. It runs on Linux,
 				Windows and OSX.</para>
 			<para>The basic workflow of editing a report is this:</para>
@@ -57,9 +56,7 @@
 						to look for. For more complex changes you will want to use JasperSoft
 						Studio.</para>
 				</tip>JasperSoft Studio cannot be summarised in few words and there are many online
-				resources which will help you learn using it. A good starting point is <uri
-					xlink:href="http://community.jaspersoft.com/project/jaspersoft-studio/resources"
-					>the official documentation.</uri> You are certainly best trying to modify an
+				resources which will help you learn using it. A good starting point is <uri xlink:href="http://community.jaspersoft.com/project/jaspersoft-studio/resources">the official documentation.</uri> You are certainly best trying to modify an
 				existing report before creating one from scratch. For now, take an existing report
 				and make a small change to it such as changing the colour of some text. Save the
 				report.</para>
@@ -86,8 +83,7 @@
 			<para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/ImportingFile.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/ImportingFile.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Selecting a custom report file for import into onCourse</para>
@@ -106,8 +102,7 @@
 		<para>You may also see joins between entities like this
 				<code>$F{application}.course.name</code>. You can traverse across joins
 			between entities in this way.</para>
-		<para>The onCourse entities and all their attributes can be found in our <uri
-				xlink:href="http://www.ish.com.au/s/onCourse/doc/latest/manual/api/">API
+		<para>The onCourse entities and all their attributes can be found in our <uri xlink:href="http://www.ish.com.au/s/onCourse/doc/latest/manual/api/">API
 				documentation.</uri></para>
 		<para>Reports are all able to take advantage of the entire Groovy language within all report
 			fields. This can be extremely powerful since you can write any code you want to execute
@@ -187,6 +182,24 @@
 				</varlistentry>
 			</variablelist>
 		</section>
+		<section>
+			<title>Data fields</title>
+			<para>Attributes from any onCourse data object can be added as fields to your report. So if the
+				report has an entity of "Room" then you can access its attributes directly like this
+					<code>$F{name}</code>. You can find all the onCourse attributes in our <link
+					xlink:href="https://www.ish.com.au/s/onCourse/doc/latest/api/">API
+					documentation</link>.</para>
+			<para>You can also directly access relations in this way <code>$F{site}.name</code> and use the full
+				power of the Groovy language in these expressions. So for a report rooted in the
+				Enrolment entity you might use <code>${courseClass}.course.modules?.nationalCode</code> This
+				expression will find the course linked to the current class, get a list of modules,
+				take the first one (using a null safe operator so that nothing bad happens if there
+				isn't any modules liked at all), then display the national code.</para>
+			<para>Custom attributes can be accessed in the same way, like this
+					<code>$F{contact}.passportNumber</code> or if the field name contains spaces
+				like this <code>$F{contact}.customFieldValue("how did you hear")</code>.</para>
+			<para> </para>
+		</section>
 	</section>
 	<section>
 		<title>SQL Reporting with a JDBC connector</title>
@@ -195,8 +208,7 @@
 			<para>Because onCourse uses an SQL database, you can use any tool which reports against a JDBC
 				data source. Before you begin, you will need to have an SQL tool installed on your
 				machine.</para>
-			<para>A free and simple tool DBeaver can be obtained from the <link
-					xlink:href="http://dbeaver.jkiss.org"> DBeaver website.</link>
+			<para>A free and simple tool DBeaver can be obtained from the <link xlink:href="http://dbeaver.jkiss.org"> DBeaver website.</link>
 			</para>
 			<para>Please note that support for SQL tools is not included as part of the standard onCourse
 				support packages. This is self-service option available for people with strong IT

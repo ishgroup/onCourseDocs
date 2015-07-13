@@ -1,6 +1,38 @@
+var version;
+var availableVersions = ['6.0', '7.1', '7.6', 'latest'];
+
 $(document).ready(function() {
 	$('.chapter > .toc').prepend("<gcse:search></gcse:search>");
 
+  try {
+    version = window.location.href.match(/doc\/(.*?)\//)[1];
+    
+    if ( $.isNumeric(version) ) {
+      availableVersions.push(version);
+      // and dedupe
+      availableVersions = availableVersions.filter(function(item, pos) {
+        return availableVersions.indexOf(item) == pos;
+      });
+    }
+
+    var versionsHtml = "";
+    availableVersions.sort().forEach(function(v) {
+      versionsHtml = versionsHtml + "<a href='" + window.location.href.replace(/\/doc\/.*?\//,"/doc/" + v + "/") + "' class='btn";
+      if (v == version) { 
+        versionsHtml = versionsHtml + " active";
+      }
+      versionsHtml = versionsHtml + "'>" + v + "</a>";
+    });
+
+    $('.navheader').prepend("<div class='versions'>Documentation version " + versionsHtml + "</div>");
+
+  } catch(e) {}
+
+
+
+
+
+  // need to wait until Google draws the search box
 	window.setTimeout(function() {
   		$('input.gsc-input').attr('placeholder', 'search...');
 	} , 1000);

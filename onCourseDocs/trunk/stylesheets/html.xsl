@@ -2,7 +2,8 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
       xmlns:xslthl="http://xslthl.sf.net"
       xmlns:date="http://exslt.org/dates-and-times"
-      exclude-result-prefixes="date xslthl"
+      xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0"
+      exclude-result-prefixes="date xslthl l"
       version='1.0'>
 
   <xsl:import href="@rootDir@/build/xslt/docbook/html/chunk.xsl"/>
@@ -43,6 +44,9 @@
         </xsl:call-template>
       </xsl:attribute>
     </link>
+    <xsl:copy-of select="document('@rootDir@/js/analytics.js',/)"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"/>
+    <script type="text/javascript" src="js/documentation.js"/>
   </xsl:template>
 
   <xsl:template match="xslthl:string" mode="xslthl">
@@ -50,5 +54,14 @@
         <xsl:apply-templates mode="xslthl"/>
     </strong>
   </xsl:template>
+
+<!-- The following line points the local.l10n.xml to this document
+    This is how we can edit anything in build/xslt/docbook/common/en.xml -->
+  <xsl:param name="local.l10n.xml" select="document('')" />
+  <l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
+    <l:l10n language="en">
+      <l:gentext key="TableofContents" text="Contents"/>
+    </l:l10n>
+  </l:i18n>
 
 </xsl:stylesheet>

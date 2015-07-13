@@ -96,7 +96,7 @@ div.navheader {
 	font-size: 85%;
     border-top: 13px solid #75a994;
     background: #efebd5;
-    padding: 15px 0;
+    padding: 5px;
 }
 .navheader table,
 .navfooter table{
@@ -597,10 +597,6 @@ div.navfooter > table > tbody > tr > td[align="left"] {
 	border: none !important;
 }
 
-.navheader {
-	display: none !important;
-}
-
 /*  GOOGLE SEARCH */
 .gsc-control-cse.gsc-control-cse-en {
 	padding: 0 !important;
@@ -616,7 +612,9 @@ input.gsc-input {
     font-family: 'Roboto', sans-serif !important;
     font-weight: 100;
 }
-
+.gsc-input-box {
+    border-radius: 4px;
+}
 .gsc-search-box-tools .gsc-search-box .gsc-input {
     padding-right: 1px !important;
 }
@@ -624,7 +622,9 @@ input.gsc-input {
     font-size: 16px !important;
 }
 .gsc-search-box .gsc-input > input:focus, .gsc-input-box-focus {
-    box-shadow: none !important;
+    border-color: #66afe9 !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6) !important;
+    outline: 0 none !important;
 }
 .gs-webResult div.gs-visibleUrl, .gs-imageResult div.gs-visibleUrl {
 	display: none !important;
@@ -632,4 +632,23 @@ input.gsc-input {
 .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
     padding-left: 0 !important;
     padding-right: 0 !important;
+}
+
+
+/* Version switching */
+.btn {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 3px;
+    background-color: #EFEBD5;
+    border-color: #ccc;
+    margin: 2px;
+}
+
+.btn.active, .btn:hover {
+	background-color: white;
+}
+
+.versions {
+	float: right;
 }

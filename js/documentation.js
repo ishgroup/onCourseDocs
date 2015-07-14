@@ -4,6 +4,14 @@ var availableVersions = ['6.0', '7.1', '7.6', 'latest'];
 $(document).ready(function() {
 	$('.chapter > .toc').prepend("<gcse:search></gcse:search>");
 
+  $('.toc > dl.toc > dd > dl > dt').click(function(e){
+      $(this).nextUntil('dt').toggle();
+      $(this).toggleClass('expand');
+      return false;
+  });
+
+  $('.toc > dl.toc > dd > dl > dd').hide();
+
   try {
     version = window.location.href.match(/doc\/(.*?)\//)[1];
     

@@ -86,6 +86,33 @@
 		</section>
 	</section>
 	<section>
+		<title>Adding thumbnail images</title>
+		<para>You have the ability to add thumbnail images to all your courses. These will appear on your
+			website on any courses list view page, so that's any URL that contains /courses after
+			your domain name e.g. www.acme.com.au/courses or
+			www.acme.com.au/courses/business/computing.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/thumbnail_image.png" />
+			</imageobject>
+			<caption>
+				<para>Adding thumbnail images to courses</para>
+			</caption>
+		</mediaobject>
+		<para>To enable this feature you will have to add the following code to the CourseItem.tml file
+			&lt;div t:type="ui/image" name="${courseItemModel.course.code}_1" width="pixel width"
+			height="pixel height"&gt;&lt;/div&gt;, just substituting the words pixel width and pixel
+			height for the correct dimensions. So assuming the image you are adding is 200px x 200px
+			then the code will be &lt;div t:type="ui/image" name="${courseItemModel.course.code}_1"
+			width="200" height="200"&gt;&lt;/div&gt;.</para>
+		<note>
+			<para>The CourseItem.tml file can be found in WebDAV by going to templates -> default -> CourseItem.tml. </para>
+		</note>
+		<para>You would then store attached the images you want to the course making sure the pixel width
+			and height is the same as the code in the CourseItem.tml and name them 'coursecode_1'
+			e.g. ActingBeg_1.</para>
+		</section>
+	<section>
 		<title>Rich text</title>
 		<para>Sometimes you want to position images and attachments not just at the end of the
 			course description, but on other pages withint your site. You may want to display an

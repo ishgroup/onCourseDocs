@@ -53,8 +53,8 @@ div.table-contents td, div.table-contents th {
 	padding: 5px;
     
 }
-caption, th, td {
-	font-weight: normal;
+caption, th {
+	font-weight: 400;
 }
 
 h1 {
@@ -350,9 +350,9 @@ div.chapter h3 {
 
 div.chapter h4, div.chapter h5 {
 	font-family: 'Cabin Sketch', cursive;
-	font-size: 1.1em;
-  color: #f89157;
-  margin-top: 20px;
+	font-size: 1.2em;
+	color: #f89157;
+	margin-top: 20px;
 }
 
 .chapter p {
@@ -361,7 +361,7 @@ div.chapter h4, div.chapter h5 {
 
 /* Title */
 div.book h1.title {
-  text-align: right;
+	text-align: right;
 	line-height: 1em;
 }
 
@@ -460,9 +460,9 @@ div.tip {
 
 div.caution, div.tip {
 	float: right;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	line-height: 1.4em;
-	margin: 20px auto !important;
+	margin: 20px 10px !important;
 	padding: 16px 12px 16px 18px;
 	position: relative;
 	width: 220px;
@@ -552,13 +552,14 @@ div.authorgroup div.author {
 /* Images */
 
 img {
-	padding: 10px 0 10px ;
+	margin-bottom: 30px;
+	box-shadow: 3px 3px 8px #aaa;
 }
 
 div.caption {
 	font-size: 0.8em;
 	color: #AAA;
-	margin: -8px 0 20px 0;
+	margin: -10px 0 20px 0;
 	line-height: 1.2em;
 }
 
@@ -670,4 +671,14 @@ input.gsc-input {
 
 .versions {
 	float: right;
+}
+
+
+/*  release notes */
+.revhistory th {
+    display: none;
+}
+
+.property {
+    color: #bbb;
 }

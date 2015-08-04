@@ -86,29 +86,42 @@
 			remainder in instalments. </para>
 		<section xml:id="invoice-dueDate">
 			<title>Invoice due dates</title>
-			<para>An existing or new invoice can be converted to a payment plan by adding payment due dates.
-				It is important that the total of the payment plan amounts equals the invoice total;
-				you will not be able to save the invoice unless they match. The 'Overdue' column in
-				the Invoices list view will show the total unpaid component of the invoice that is
-				due prior to tomorrow.</para>
+			<para>An existing or new invoice can be converted to a payment plan by adding payment due dates. </para>
+			<para>It is important that the total of the payment plan amounts equals the invoice
+				total; you will not be able to save the invoice unless they match. The 'Overdue'
+				column in the Invoices list view will show the total unpaid component of the invoice
+				that is due prior to tomorrow.</para>
+			<para>You can also edit payment plan amounts and due dates at any time, for example if
+				you grant the student an extension to the payment plan.</para>
 		</section>
 		<section xml:id="invoice-payPlanTemplate">
 			<title>Class payment plan template</title>
-			<para>Attaching a payment plan to an invoice by hand can be time-consuming. If you wish to offer
-				a deferred payment scheme to all students in a particular class you can set up a
-				payment plan templates from the class edit view you where you normally set the class
-				fee. The payment plan template can include an amount on enrolment (deposit) and as
-				many other amounts on dates relative to the start of the class. If you subsequently
+			<para>If you wish to offer a deferred payment scheme to all students in a particular class you
+				can set up a payment plan templates from the class edit view you where you normally
+				set the class fee. </para>
+			<para>This can be quite useful if you an RTO who is bound by the Standards that limit
+				your prepayment of fees to $1,500. For example, if you offer a 10-week course that
+				costs $2000, the course costs $200 per week. Therefore, you could collect $1500 at
+				the time of enrolment and the remaining $500 after week seven without needing to
+				have any protection measures in place.</para>
+			<para>You may also like to use payment plans as part of your online marketing strategy,
+				by encouraging students to commit to enrolment early with a small refundable payment
+				(say, $100), with the remainder of the fee becoming due on the class
+				commencement.</para>
+			<para>The payment plan template can include an amount on enrolment (deposit) and as many
+				other amounts on dates relative to the start of the class. If you subsequently
 				adjust the class timetable and change the class start date then the payment plan
-				template will automatically be adjusted.</para>
-			<para>When you duplicate classes the payment plan template will also be adjusted with
-				the new timetable.</para>
-			<para>If you have an onCourse website only the deposit amount will normally be charged
-				at enrolment; however if the next payment dates have already passed those amount
-				will also be charged. So, let's take an example class with a $1000 deposit and $500
-				due 7 days before the start of class. A student enrolling 10 days before the class
-				starts will be charged $1000 and a student enrolling 5 days before class starts will
-				be charged $1500. </para>
+				template will automatically be adjusted. When you duplicate classes the payment plan
+				template will also be adjusted with the new timetable.</para>
+			<para>To create a payment plan for a class where the fee has already been set, you may
+				wish to click the lock icon next to the class fee first. This will ensure the
+				payment plan adds up to the existing class fee, rather than add additional costs to
+				the class fee. The 'on enrolment' fee will auto adjust to the amount
+				remaining.</para>
+			<para>Each payment line you add requires an offset date from the class start. This offset can be
+				positive (days after) or negative (days before). The actual due dates for the
+				payments for this class will be calculated and shown in the payment plan
+				screen.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Class_payment_plan.png"/>
@@ -120,12 +133,18 @@
 		</section>
 		<section xml:id="invoice-QE">
 			<title>Quick Enrol</title>
+			<para>During enrolment info a class with a payment plan, only the deposit amount will
+				normally be charged at enrolment. The payment field will auto adjust to this amount,
+				but you can manually alter it to be more or less as you need.</para>
+			<para>If, at the time of enrolment, the next payment dates have already passed those
+				amounts will also be charged. So, let's take an example class with a $1000 deposit
+				and $500 due 7 days before the start of class. A student enrolling 10 days before
+				the class starts will be charged $1000 and a student enrolling 5 days before class
+				starts will be charged $1500. </para>
 			<para>During Quick Enrol every involvement with a different payment plan will be added to a
 				separate invoice. In this way a single Quick Enrol process may generate two or more
 				invoices. If several enrolments have an identical payment plan, then they will end
 				up on the same invoice.</para>
-			<para>By default Quick Enrol will attempt to take a payment from the student for all
-				amounts already due or overdue. </para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Payment_plan_invoices.png"/>
@@ -135,12 +154,39 @@
 				</caption>
 			</mediaobject>
 		</section>
+		<section>
+			<title>Online enrolments</title>
+			<para>If a payment plan applies to the class, we suggest you make some note of it in the class
+				web tab, so a potential student enrolling via the web can see what amount is payable
+				and when. The full class fee will still display in the class block when a payment
+				plan applies.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/payment_plan_class_block.png"/>
+				</imageobject>
+				<caption>
+					<para>Payment plan detail explained in the class web info</para>
+				</caption>
+			</mediaobject>
+			<para>When the student completes the enrolment process, the 'pay now' component will be
+				reduced to the deposit payable. The invoice the student receives on completion of
+				the enrolment process will itemise the remaining payment components and their due
+				dates.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/payment_plan_pay_now.png"/>
+				</imageobject>
+				<caption>
+					<para>Pay now reduced to the applicable payment plan deposit</para>
+				</caption>
+			</mediaobject>
+		</section>
 		<section xml:id="invoice-script">
 			<title>Automating payment plans with scripts</title>
 			<para>If you have payment plan templates to create for very many classes you may wish to instead
 				use a script to automate the process. A simple script might identify all classes
-				with a fee over $1000 and then limit the amount due on enrolment to $1000 with the
-				remainder payable at the date the class starts.</para>
+				with a fee over $1500 and then limit the amount due on enrolment to $1500 with the
+				remainder payable over the duration of the class.</para>
 			<para>More sophisticated payment plan scripts can create different plans depending on
 				the duration of the class, the amount of the fee, whether the class is VET or not
 				and any other criteria.</para>

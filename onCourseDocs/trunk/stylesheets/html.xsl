@@ -49,19 +49,4 @@
     <script type="text/javascript" src="js/documentation.js"/>
   </xsl:template>
 
-  <xsl:template match="xslthl:string" mode="xslthl">
-    <strong class="hl-string">
-        <xsl:apply-templates mode="xslthl"/>
-    </strong>
-  </xsl:template>
-
-<!-- The following line points the local.l10n.xml to this document
-    This is how we can edit anything in build/xslt/docbook/common/en.xml -->
-  <xsl:param name="local.l10n.xml" select="document('')" />
-  <l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
-    <l:l10n language="en">
-      <l:gentext key="TableofContents" text="Contents"/>
-    </l:l10n>
-  </l:i18n>
-
 </xsl:stylesheet>

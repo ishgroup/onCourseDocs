@@ -6,21 +6,15 @@
       exclude-result-prefixes="date xslthl l"
       version='1.0'>
 
-    <xsl:param name="highlight.source">"1"</xsl:param>
-    <xsl:param name="keep.relative.image.uris" select="1"/>
-    <xsl:param name="toc.section.depth">2</xsl:param>
-    
-    <!-- disable TOC for each part -->
-    <xsl:template name="generate.part.toc"></xsl:template>
-    
-    <xsl:template match="xslthl:string" mode="xslthl">
-    <strong class="hl-string">
-      <xsl:apply-templates mode="xslthl"/>
-    </strong>
-  </xsl:template>
-
-    <!-- The following line points the local.l10n.xml to this document
-    This is how we can edit anything in build/xslt/docbook/common/en.xml -->
+  <xsl:param name="highlight.source">"1"</xsl:param>
+  <xsl:param name="keep.relative.image.uris" select="1"/>
+  <xsl:param name="toc.section.depth">2</xsl:param>
+  
+  <!-- disable TOC for each part -->
+  <xsl:template name="generate.part.toc"></xsl:template>
+  
+  <!-- The following line points the local.l10n.xml to this document
+  This is how we can edit anything in build/xslt/docbook/common/en.xml -->
   <xsl:param name="local.l10n.xml" select="document('')" />
   <l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
     <l:l10n language="en">

@@ -26,6 +26,12 @@
 
   <xsl:param name="use.id.as.filename">1</xsl:param>
 
+  <xsl:template match="xslthl:string" mode="xslthl">
+    <strong class="hl-string">
+      <xsl:apply-templates mode="xslthl"/>
+    </strong>
+  </xsl:template>
+  
   <xsl:template name="user.head.content">
     <xsl:comment>[if lt IE 9]&gt;&lt;script src="js/html5shiv.js"&gt;&lt;/script>&lt;![endif]</xsl:comment>
     <meta name="date">

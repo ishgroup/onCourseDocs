@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
-	version="5.0" xml:id="importExport">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="importExport">
 	<title>Importing and exporting</title>
 	<para>onCourse offers you a large number of ways to get data into and out of the system. One of
 		the key advantages of onCourse is that the data is completely under your control.</para>
 	<section xml:id="importExport-Export">
 		<title>Exporting</title>
 		<section>
+			<title>Copying and pasting</title>
+			<para>It almost seems too easy. Just select any records in any list view. Then choose
+				copy from the edit menu and paste the data into Excel or a text editor.</para>
+		</section>
+		<section>
 			<title>From the list view</title>
-			<para>Each list view in onCourse has the ability to export data in an almost infinite
-				variety of formats. Simply highlight the records you wish to export and choose
-				"Import/Export > Export (tablename)" from under the File menu. A dialog will appear
-				giving you some choices:<itemizedlist>
+			<para>Each list view in onCourse has the ability to export data in an almost infinite variety of
+				formats. Highlight the records you wish to export and choose "Import/Export > Export
+				(tablename)" from under the File menu. A dialog will appear giving you some choices:<itemizedlist>
 					<listitem>
 						<para>Export format: This popup allows you to specify the format of the
 							export data. For most data CSV and XML are the default options, but you
@@ -53,8 +56,7 @@
 				<para>The Class list view gives a number of additional default exports options.</para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/class_export_options.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/class_export_options.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Available exports accessed via Class List</para>
@@ -78,10 +80,7 @@
 										<para>CSV - standard export of Class information</para>
 										<mediaobject>
 											<imageobject>
-												<imagedata scalefit="1" width="100%"
-												contentdepth="100%"
-												fileref="images/class_export_excel_output.png"
-												format="png"/>
+												<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/class_export_excel_output.png" format="png"/>
 											</imageobject>
 											<caption>
 												<para>Excerpt of standard Class export viewed via
@@ -95,10 +94,7 @@
 											projected and actual costs.</para>
 										<mediaobject>
 											<imageobject>
-												<imagedata scalefit="1" width="100%"
-												contentdepth="100%"
-												fileref="images/class_budget_summary_excel_output.png"
-												format="png"/>
+												<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/class_budget_summary_excel_output.png" format="png"/>
 											</imageobject>
 											<caption>
 												<para>Excerpt of Class budget summary export viewed
@@ -113,10 +109,7 @@
 											that are not set.</para>
 										<mediaobject>
 											<imageobject>
-												<imagedata scalefit="1" width="100%"
-												contentdepth="100%"
-												fileref="images/outcomes_export_excel_output.png"
-												format="png"/>
+												<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/outcomes_export_excel_output.png" format="png"/>
 											</imageobject>
 											<caption>
 												<para>Excerpt of student outcomes export viewed via
@@ -143,8 +136,7 @@
 					export the invoice line detail.</para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/invoice_export_options.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invoice_export_options.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Available exports via the Invoice list</para>
@@ -173,8 +165,7 @@
 					within the resulting output file. </para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/invoice_export_excel_excerpt.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invoice_export_excel_excerpt.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Excerpt of invoice export viewed via excel</para>
@@ -182,8 +173,7 @@
 				</mediaobject>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/invoice_line_export_excel_excerpt.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invoice_line_export_excel_excerpt.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Excerpt of invoice line export viewed via excel</para>
@@ -227,8 +217,7 @@
 				export options work, see the <link xlink:href="AVETMISS.html">AVETMISS chapter</link>. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/export_avetmiss.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/export_avetmiss.png" format="png"/>
 				</imageobject>
 			</mediaobject>
 		</section>
@@ -297,15 +286,19 @@
 		</section>
 		<section>
 			<title>Custom export templates</title>
-			<para>You've seen how easy it can be to export course information from onCourse. You can customise the output and
-				create any type of publication you can dream of.</para>
-			<para>onCourse exports using a groovy based scripting language. These scripts run on the server
-				and call the same groovy API that you'll find in the scripting chapter. That means that
-				you can use the full power and expression of the groovy language, and access the entire
-				onCourse schema.</para>
+			<para>You've seen how easy it can be to export course information from onCourse. You can also
+				customise the output and create any type of publication you can dream of. You might
+				export payroll data to an obscure finance system or send data to an external CRM
+				system.</para>
+			<para>onCourse exports are powered by a groovy based scripting language. These scripts run on the
+				server and call the same groovy API that you'll find in the scripting chapter. That
+				means that you can use the full power and expression of the groovy language, and
+				access the entire onCourse schema. In short, you access the data to exports from the
+				variable "records" and just return from the script the formatted text to export.
+				This gives you infinite flexibility.</para>
 			<para>We've built in a CSV toolkit, so exporting to CSV is really simple. And tab delimited output can
 				be treated just like CSV but with tab separators between the fields.</para>
-				<para><programlisting language='groovy'>
+				<para><programlisting language="groovy"><![CDATA[
 csv.delimiter = '\t'
 
 records.each { AccountTransaction t ->
@@ -317,7 +310,7 @@ records.each { AccountTransaction t ->
 			"Credit Amount" : t.amount.compareTo(Money.ZERO) > 1 ? Money.ZERO.toPlainString() : t.amount.toPlainString()
 	]
 }
-</programlisting>
+]]></programlisting>
 </para>
 		</section>
 	</section>
@@ -335,8 +328,7 @@ records.each { AccountTransaction t ->
 					<para>Go to Financial > Summary Extracts and select MYOB Export</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/MYOB_Export_via_Summary_Extract.png" format="png"/>
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_via_Summary_Extract.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Selecting MYOB Export via Summary Extract menu</para>
@@ -347,8 +339,7 @@ records.each { AccountTransaction t ->
 					<para>Set the 'from' and 'to' date range for the next MYOB Export</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/MYOB_Export_set_date_range.png" format="png"/>
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_set_date_range.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Select date range for MYOB Export</para>
@@ -366,8 +357,7 @@ records.each { AccountTransaction t ->
 						that the resulting file will be generated as a text file. </para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/MYOB_Export_data_output.png" format="png"/>
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_data_output.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Extract of MYOB Export viewed via Microsoft Excel</para>
@@ -396,8 +386,7 @@ records.each { AccountTransaction t ->
 						formats</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/MYOB_Export_Window.png" format="png"/>
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_Window.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Selecting MYOB Export from Import/Export dialog box</para>
@@ -409,8 +398,7 @@ records.each { AccountTransaction t ->
 						that the resulting file will be generated as a text file. </para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/MYOB_Export_data_output.png" format="png"/>
+							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/MYOB_Export_data_output.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Extract of MYOB Export viewed via Microsoft Excel</para>
@@ -453,10 +441,8 @@ records.each { AccountTransaction t ->
 			<para> Note that the import process validates every record as it is imported. If
 				validation errors occur (eg. a student birth date in the future) that record will be
 				rejected and logged in an error file called "import.log" </para>
-			<para>We also have the <link
-					xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd">formal XML
-					schema</link> and <link
-					xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd.html">user
+			<para>We also have the <link xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd">formal XML
+					schema</link> and <link xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd.html">user
 					friendly documentation</link> available from our website. </para>
 			<para>Other legacy systems</para>
 			<para>Please contact ish for tools which can help you export data from your legacy

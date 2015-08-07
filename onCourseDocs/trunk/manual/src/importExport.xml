@@ -50,9 +50,7 @@
 				to desktop publishing software.</para>
 			<example>
 				<title>Exporting Class Information</title>
-				<para>Unlike the majority of List views within onCourse, the Class list view gives a
-					number of additional detailed exports options that are available for you to run.
-					In this example we will outline a sample of available exports. </para>
+				<para>The Class list view gives a number of additional default exports options.</para>
 				<mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -299,89 +297,28 @@
 		</section>
 		<section>
 			<title>Custom export templates</title>
-			<para>You've seen how easy it can be to export course information from onCourse. Now
-				we'll go into a little more depth and you will be able to customise the output and
+			<para>You've seen how easy it can be to export course information from onCourse. You can customise the output and
 				create any type of publication you can dream of.</para>
-			<para>If you have a publication you produce repeatedly you might like to automate the process of
-				getting the text into the right format. XSLT is a technology which transforms XML
-				according to a set of rules. Don't be overwhelmed by the acronyms: the process is
-				simple enough. XML is the format of the data created by onCourse - a set of tags
-				identify each element in the data. A &lt;course&gt; or &lt;startDate&gt; is a marker
-				which let's you know what the information represents. There is no styling or design
-				in the XML, it represents pure data with no prettiness. The XML from onCourse has a
-				schema you can <link xlink:href="http://www.ish.com.au/s/schema/4/html/"> see
-					here.</link></para>
-			<para>You can create an XSL file which is a set of instructions on how to style that XML. The
-				output is often more XML, but could be a web page, CSV, RSS feed, PDF file or even a
-				Word document. XSL instructions can be used to create almost any type of document
-				imaginable. Any material which comes from a database can be treated in this way -
-				for example, the printed White Pages telephone directory (where it still exists!) is
-				produced in this manner.</para>
-			<para>XML and XSL can be a little daunting at first, but they offer the promise for huge
-				savings in efforts particularly when preparing longer course guides and
-				documents.</para>
-			<para>Some things you can do with XSL:</para>
-			<itemizedlist>
-				<listitem>
-					<para>Format date and time (eg. "2 Jan 2008")</para>
-				</listitem>
-				<listitem>
-					<para>Reorder elements</para>
-				</listitem>
-				<listitem>
-					<para>Add extra text (eg. "82" becomes "8 sessions of 2 hrs")</para>
-				</listitem>
-				<listitem>
-					<para>Remove elements (the sample XSL removes all the session
-						information)</para>
-				</listitem>
-			</itemizedlist>
-			<para>As an example, here is that the XML looks like directly from onCourse: <mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/XMLbefore.png" format="png"/>
-					</imageobject>
-					<caption>
-						<para> XML from onCourse. </para>
-					</caption>
-				</mediaobject></para>
-			<para>And here is what it looks like after the inDesign transformation: <mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/XMLafter.png" format="png"/>
-					</imageobject>
-					<caption>
-						<para> After XSL transform. </para>
-					</caption>
-				</mediaobject></para>
-		</section>
-		<section>
-			<title>Writing XSL</title>
-			<para>Writing an XSL file from scratch can be tricky if you've never done it before. ish
-				is able to offer services to produce a file for your needs or you may be able to
-				find a local specialist. We recommend Oxygen for any serious editing and testing of
-				XSL files. As a starting point, go to File -> Preferences. Choose the Export
-				templates and double click on one of the templates. This will save the template to
-				disk so that you can view and edit it. You will notice a block of XML at the top of
-				the file which defines some basic parameters:</para>
-			<para>
-				<programlisting>	&lt;ish:onCourse>
-		&lt;ish:name>CSV&lt;/ish:name>
-		&lt;ish:entity>Contact&lt;/ish:entity>
-		&lt;ish:version>6&lt;/ish:version>
-		&lt;ish:keyCode>ish.onCourse.contactCsv&lt;/ish:keyCode>
-	&lt;/ish:onCourse></programlisting>
-			</para>
-			<para>The "name" is the user visible name which appears in the export dialog. The
-				"entity" defines which type of record can be formatted by this XSLT. The "version"
-				is used to track your changes and the "keyCode" is a unique identifier for this
-				export format. If you use an existing keyCode, then when you import your changed
-				file it will replace the one already in onCourse. We recommend you change this to
-				anything else to define your own formats.</para>
-			<para>When you are ready, make sure your template conforms to <link
-					xlink:href="http://www.ish.com.au/s/schema/4/html/"> our schema</link> and
-				import your new template back into onCourse by clicking on the plus icon above the
-				list of export templates.</para>
+			<para>onCourse exports using a groovy based scripting language. These scripts run on the server
+				and call the same groovy API that you'll find in the scripting chapter. That means that
+				you can use the full power and expression of the groovy language, and access the entire
+				onCourse schema.</para>
+			<para>We've built in a CSV toolkit, so exporting to CSV is really simple. And tab delimited output can
+				be treated just like CSV but with tab separators between the fields.</para>
+				<para><programlisting language='groovy'>
+csv.delimiter = '\t'
+
+records.each { AccountTransaction t ->
+	csv << [
+			"Date"          : t.transactionDate?.format("D/M/Y"),
+			"Memo"          : t.transactionDescription,
+			"Account Number": t.account.accountCode,
+			"Debit Amount"  : t.amount.compareTo(Money.ZERO) > 1 ? t.amount.toPlainString() : Money.ZERO.toPlainString(),
+			"Credit Amount" : t.amount.compareTo(Money.ZERO) > 1 ? Money.ZERO.toPlainString() : t.amount.toPlainString()
+	]
+}
+</programlisting>
+</para>
 		</section>
 	</section>
 	<section xml:id="importExport-MYOB">

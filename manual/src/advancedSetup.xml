@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="advancedSetup">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="advancedSetup">
 	<title>Advanced Setup and Configuration</title>
 	<para>This chapter outlines the other setup options beyond the General Preferences set up, and
 		advanced configuration options for access control, users and groups, using external
@@ -17,11 +18,12 @@
 				<para>You can create your own accounts as needed, by selecting the '+' option. </para>
 				<para>Accounts no longer needed can be disabled.</para>
 				<para>A range of reports are available to keep you on top of your financial
-					position.Refer to the chapter on <link xlink:href="reports.html">Reports</link> for
-					more information.</para>
+					position.Refer to the chapter on <link xlink:href="reports.html">Reports</link>
+					for more information.</para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/AccountSetUpWindow.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/AccountSetUpWindow.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Accounts window, use the + symbol to add new Accounts</para>
@@ -30,8 +32,8 @@
 			</section>
 			<section xml:id="advancedSetup-financialPrefs">
 				<title>Financial Preferences</title>
-				<para>Navigate here by clicking on 'File' -> 'Preferences' -> 'Financial' from the top
-					menu.</para>
+				<para>Navigate here by clicking on 'File' -> 'Preferences' -> 'General' from the top
+					menu, then click on the Financial option.</para>
 				<para>Select the currency you wish to use and any local tax (e.g.GST) which may
 					apply.</para>
 				<para>Default accounts have been selected. Make any changes necessary or edit the
@@ -44,11 +46,13 @@
 					well as determining whether the deferred income is transferred from your Pre
 					Paid Fees Liability Account to your Income Account evenly across all Sessions of
 					the Class. Or alternatively you can nominate to transfer all funds across after
-					the completion of the first session of the Class. Refer to the chapter on <link xlink:href="accounting.html">Accounting</link> for more information about
+					the completion of the first session of the Class. Refer to the chapter on <link
+						xlink:href="accounting.html">Accounting</link> for more information about
 					deferred income.</para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/FinancialPreferences.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/FinancialPreferences.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Setting Financial Preferences within the onCourse Client</para>
@@ -56,86 +60,94 @@
 				</mediaobject>
 			</section>
 		</section>
-			<section xml:id="advancedSetup-paymentMethods">
-				<title>Payment Methods</title>
-				<para>You have the ability to add new payment methods that can be used by contacts to pay for
-				their enrolments or products. You can see a full list of the current payment methods
-				that are setup by going to the top menu and selecting Financial -> Payment Methods.
-				Just like most list views you have the ability to perform a search of an advanced
-				search in the top left side of the window.</para>
+		<section xml:id="advancedSetup-paymentMethods">
+			<title>Payment Methods</title>
+			<para>You have the ability to add new payment methods that can be used by contacts to
+				pay for their enrolments or products. You can see a full list of the current payment
+				methods that are setup by going to the top menu and selecting Financial -> Payment
+				Methods. Just like most list views you have the ability to perform a search of an
+				advanced search in the top left side of the window.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/payment_methods_list.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Payment Methods list view</para>
+				</caption>
+			</mediaobject>
+			<section>
+				<title>Creating a New Payment Method</title>
+				<para>You can create a new payment method by clicking on the '+' icon at the top
+					right side of the window. In this window there are several areas you have to
+					define, these are:</para>
+				<itemizedlist>
+					<listitem>
+						<para>Name - this is what you want to call the payment method, as you can
+							see if the example below I am trying to create a new method for using
+							Paypal</para>
+					</listitem>
+					<listitem>
+						<para>Account - you have the ability to define what account these funds get
+							put into. Usually all payment methods are deposited into a single
+							'cheque' account to representing your banking.</para>
+					</listitem>
+					<listitem>
+						<para>Type - There are two types which have special meaning in onCourse -
+							Credit card and Cheque, because additional information is collected at
+							the time of payment in additional fields. All other payment methods
+							should be of type Other.</para>
+					</listitem>
+					<listitem>
+						<para>Active - this is whether you want the payment method to be active and
+							used. You can mark payment types you do not accept e.g. cheque as
+							inactive.</para>
+					</listitem>
+					<listitem>
+						<para>Banked Automatically - whether the money is banked into your chosen
+							account automatically on receipt, such as credit cards and EFTPOS
+							transactions, or needs to be manually banked as a part of a banking
+							process</para>
+					</listitem>
+					<listitem>
+						<para>Reconcilable - this is if this payment method should create records to
+							reconcile</para>
+					</listitem>
+				</itemizedlist>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/payment_methods_list.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/paypal_new.png" format="png"/>
 					</imageobject>
 					<caption>
-						<para>Payment Methods list view</para>
+						<para>Creating Paypal as a new payment method</para>
 					</caption>
 				</mediaobject>
-					<section>
-						<title>Creating a New Payment Method</title>
-						<para>You can create a new payment method by clicking on the '+' icon at the top right side of
-					the window. In this window there are several areas you have to define, these
-					are:</para>
-						<itemizedlist>
-							<listitem>
-								<para>Name - this is what you want to call the payment method, as you can see if the example
-							below I am trying to create a new method for using Paypal</para>
-							</listitem>
-							<listitem>
-								<para>Account - you have the ability to define what account these funds get put into.
-							Usually all payment methods are deposited into a single 'cheque' account
-							to representing your banking.</para>
-							</listitem>
-							<listitem>
-								<para>Type - There are two types which have special meaning in onCourse -  Credit card and
-							Cheque,  because additional information is collected at the time of
-							payment in additional fields. All other payment methods should be of
-							type Other.</para>
-							</listitem>
-					<listitem>
-						<para>Active - this is whether you want the payment method to be active and used. You can mark
-							payment types you do not accept e.g. cheque as inactive.</para>
-					</listitem>
-					<listitem>
-						<para>Banked Automatically - whether the money is banked into your chosen account
-							automatically on receipt, such as credit cards and EFTPOS transactions,
-							or needs to be manually banked as a part of a banking process</para>
-					</listitem>
-					<listitem>
-						<para>Reconcilable - this is if this payment method should create records to reconcile</para>
-					</listitem>
-						</itemizedlist>
-						<mediaobject>
-							<imageobject>
-								<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/paypal_new.png" format="png"/>
-							</imageobject>
-							<caption>
-								<para>Creating Paypal as a new payment method</para>
-							</caption>
-						</mediaobject>
-					</section>
-				<section>
+			</section>
+			<section>
 				<title>Editing Payment Methods</title>
-					<para>You can view or edit the payment methods by double clicking on the record you want to do
-					this to. Every custom made payment method can be edited whenever
+				<para>You can view or edit the payment methods by double clicking on the record you
+					want to do this to. Every custom made payment method can be edited whenever
 					necessary.</para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/EFTPOS_edit.png" format="png"/>
-						</imageobject>
-						<caption>
-						<para>EFTPOS</para>
-						</caption>
-					</mediaobject>
-				<para>Some of the payment methods can't be edited and when you try and do this all the fields
-					will be greyed out, as seen below when you try and edit the payment method
-					'Voucher'. The reason you can't edit them is because they are always in onCourse
-					and can't be changed. You will also see that if you try and edit the payment
-					method 'Credit card' you can't change the 'Type' because this always has to be
-					set as "Credit card'.</para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/voucher_edit.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/EFTPOS_edit.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>EFTPOS</para>
+					</caption>
+				</mediaobject>
+				<para>Some of the payment methods can't be edited and when you try and do this all
+					the fields will be greyed out, as seen below when you try and edit the payment
+					method 'Voucher'. The reason you can't edit them is because they are always in
+					onCourse and can't be changed. You will also see that if you try and edit the
+					payment method 'Credit card' you can't change the 'Type' because this always has
+					to be set as "Credit card'.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/voucher_edit.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para>Voucher</para>
@@ -146,10 +158,12 @@
 		<section>
 			<title>Tags</title>
 			<para>Tags are a way to customise onCourse to group and sort data based on your business
-				rules. They are also integral to website navigation. Refer to the chapter on <link xlink:href="tagging.html">tags</link> for more information.</para>
+				rules. They are also integral to website navigation. Refer to the chapter on <link
+					xlink:href="tagging.html">tags</link> for more information.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/TagGroups.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/TagGroups.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>onCourse Tag Groups</para>
@@ -167,7 +181,8 @@
 				bottom of the 'general' tab in each contacts record.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/NewCustomField.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/NewCustomField.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Create a new custom field </para>
@@ -187,7 +202,8 @@
 						contacts/students; and</para>
 				</listitem>
 				<listitem>
-					<para>Associating the concession type to a discount (see documentation on <link xlink:href="discounts.html">creating discounts)</link></para>
+					<para>Associating the concession type to a discount (see documentation on <link
+							xlink:href="discounts.html">creating discounts)</link></para>
 				</listitem>
 			</itemizedlist>
 			<para>Some concession types may be available for your students to add to their own
@@ -202,7 +218,8 @@
 				field (string type) and will accept letters and numbers.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/create_concession.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/create_concession.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Defining the parameters of a concession type for Seniors</para>
@@ -246,7 +263,8 @@
 				Types and create a new record.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="60%" contentdepth="60%" fileref="images/contact_relationship_list.png" format="png"/>
+					<imagedata scalefit="1" width="60%" contentdepth="60%"
+						fileref="images/contact_relationship_list.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Contact Relation Type list view</para>
@@ -254,7 +272,8 @@
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/contact_relationship_edit.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/contact_relationship_edit.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Contact Relation Type edit view</para>
@@ -270,7 +289,8 @@
 				customise.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/ReportsWindow.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/ReportsWindow.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Reports window of onCourse</para>
@@ -292,7 +312,8 @@
 				customise.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/export_tab.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/export_tab.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>The "Export" window</para>
@@ -322,10 +343,11 @@
 			<para>Tutor roles are related to the payroll function. Defining a variety of tutor roles
 				allows you to define a range of payrates that apply to your teaching staff. More
 				information is available in the <link xlink:href="payroll.html">payroll
-				chapter</link></para>
+					chapter</link></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/TutorRoles.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/TutorRoles.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Defining Tutor Roles</para>
@@ -363,8 +385,8 @@
 	</section>
 	<section xml:id="advancedSetup-accessControl">
 		<title>Access Control (authorisation)</title>
-		<para>Access control in onCourse has the ability to assign different access rights and roles to
-			different users in your organisation. There are two main aspects of Access control,
+		<para>Access control in onCourse has the ability to assign different access rights and roles
+			to different users in your organisation. There are two main aspects of Access control,
 			"Users" and "Access". Access rights restrict what parts of onCourse users can modify,
 			print, view or delete. This is an advanced feature, available for onCourse "Professional
 			and Enterprise" customers. Four pre-defined user roles are available within the system,
@@ -375,13 +397,14 @@
 			above.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/access_control_menu.png" format="png"/>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/access_control_menu.png" format="png"/>
 			</imageobject>
 			<caption>
 				<para>"Users" and "Access" menus</para>
 			</caption>
 		</mediaobject>
-			<section xml:id="advancedSetup-Access">
+		<section xml:id="advancedSetup-Access">
 			<title>Access</title>
 			<para>To access the "Users" menu, in onCourse go to File > Preferences > Access.</para>
 			<para>Here you can create roles for users, such as "Administration Manager." Some
@@ -601,7 +624,8 @@
 								enrolments</para>
 						</listitem>
 						<listitem>
-							<para>Exporting to XML &lt;- Export of class information for brochure production</para>
+							<para>Exporting to XML &lt;- Export of class information for brochure
+								production</para>
 						</listitem>
 						<listitem>
 							<para>Creating certificate from class &lt;- Bulk certificate creation
@@ -675,14 +699,16 @@
 					<para>Products</para>
 					<itemizedlist>
 						<listitem>
-							<para>Product &lt;- This permission relates to the creation and editing of Products</para>
+							<para>Product &lt;- This permission relates to the creation and editing
+								of Products</para>
 						</listitem>
 						<listitem>
-							<para>Memberships &lt;- This permission relates to the creation and editing of
-								Memberships</para>
+							<para>Memberships &lt;- This permission relates to the creation and
+								editing of Memberships</para>
 						</listitem>
 						<listitem>
-							<para>Vouchers &lt;- This permission relates to the creation and editing of Vouchers</para>
+							<para>Vouchers &lt;- This permission relates to the creation and editing
+								of Vouchers</para>
 						</listitem>
 						<listitem>
 							<para>Sales</para>
@@ -699,7 +725,8 @@
 							<para>Email Template &lt;- Permission to modify Email Templates.</para>
 						</listitem>
 						<listitem>
-							<para>Export Template &lt;- Permission to modify Export Templates.</para>
+							<para>Export Template &lt;- Permission to modify Export
+								Templates.</para>
 						</listitem>
 						<listitem>
 							<para>Scripts &lt;- Permission to modify Scripts.</para>
@@ -730,7 +757,8 @@
 			</itemizedlist>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/access_window.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/access_window.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Setting access rights for an administration manager role</para>
@@ -740,53 +768,57 @@
 		<section>
 			<title>Setting up Active Directory (AD) authentication and authorisation.</title>
 			<para>The below example has been completed with Windows Server 2003 R2 SP2 and onCourse
-				1.7.13. onCourse has the ability to use an external LDAP/AD server for authentication and
-				authorisation, what we mean by this is that you do not need to use the onCourse user and
-				group database but you can use your already setup AD database. Firstly on your Windows
-				Server 2003 Machine go to "My Computer" right click and select "Properties" and you will
-				find the following screen.</para>
+				1.7.13. onCourse has the ability to use an external LDAP/AD server for
+				authentication and authorisation, what we mean by this is that you do not need to
+				use the onCourse user and group database but you can use your already setup AD
+				database. Firstly on your Windows Server 2003 Machine go to "My Computer" right
+				click and select "Properties" and you will find the following screen.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Windows_2003_system_properties.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/Windows_2003_system_properties.png" format="png"/>
 				</imageobject>
 			</mediaobject>
 			<para>Please take careful note of the "Full Computer Name" and the "Domain" as with this
 				information you now have the building blocks for our configuration.</para>
 			<para>Now the next thing we need to get the LDAP/AD authentication working is either the
-				Administrator password or, a user account which is a member of the Administrators group.
-				This is because when a query happens on the AD server it is required to login first before
-				it can do any searches on users. If your administrators want to lock it down further they
-				are welcome to do so, we only need read access to all user and group objects in the AD as
-				well as the passwords for all of those users. So now we enter "Active Directory Users and
-				Computers" and create our user: <mediaobject>
+				Administrator password or, a user account which is a member of the Administrators
+				group. This is because when a query happens on the AD server it is required to login
+				first before it can do any searches on users. If your administrators want to lock it
+				down further they are welcome to do so, we only need read access to all user and
+				group objects in the AD as well as the passwords for all of those users. So now we
+				enter "Active Directory Users and Computers" and create our user: <mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Create_a_win_2003_user.png" format="png"/>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/Create_a_win_2003_user.png" format="png"/>
 					</imageobject>
-				</mediaobject> and add it to the administrators group and remember your password!</para>
+				</mediaobject> and add it to the administrators group and remember your
+				password!</para>
 			<para>Now we have everything we need! Complete the setup screen as follows:</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/onCourse_LDAP_AD_screen_setup.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/onCourse_LDAP_AD_screen_setup.png" format="png"/>
 				</imageobject>
 			</mediaobject>
-			<para>Once you have substituted all of the settings as necessary press the "Test Connection"
-				button to ensure that onCourse can bind to the LDAP server. Once that works, you can then go
-				to the "Users" section of this configuration page and place "sAMAccountName" and
-				(objectClass=user) for the search filter. Now test a user in your domain and see if it
-				authenticates. If it works, congratulations you are now authenticating against your AD
-				server!</para>
+			<para>Once you have substituted all of the settings as necessary press the "Test
+				Connection" button to ensure that onCourse can bind to the LDAP server. Once that
+				works, you can then go to the "Users" section of this configuration page and place
+				"sAMAccountName" and (objectClass=user) for the search filter. Now test a user in
+				your domain and see if it authenticates. If it works, congratulations you are now
+				authenticating against your AD server!</para>
 		</section>
 		<section>
 			<title>AD Authorisation</title>
 			<para>Authorisation is the process of giving your users the correct rights when they are
-				logged in, this has a direct relationship with the different roles you can setup or create
-				within onCourse. If you wish to use your AD server to allocate roles to your users, complete
-				the following:</para>
-			<para>At the top of your "Active Directory Users and Computers" create an "Organizational
-				Unit" (OU) and call it "onCourse".</para>
-			<para>In that OU create security groups which reflect the names of the roles in onCourse. Say
-				for example the roles which are build into onCourse (you can find this in "File" -->
-				"Preferences" --> "Access" in onCourse):</para>
+				logged in, this has a direct relationship with the different roles you can setup or
+				create within onCourse. If you wish to use your AD server to allocate roles to your
+				users, complete the following:</para>
+			<para>At the top of your "Active Directory Users and Computers" create an
+				"Organizational Unit" (OU) and call it "onCourse".</para>
+			<para>In that OU create security groups which reflect the names of the roles in
+				onCourse. Say for example the roles which are build into onCourse (you can find this
+				in "File" --> "Preferences" --> "Access" in onCourse):</para>
 			<para>
 				<itemizedlist>
 					<listitem>
@@ -803,15 +835,16 @@
 					</listitem>
 				</itemizedlist>
 			</para>
-			<para>You can add or delete roles here as you wish but a corresponding group must exist in AD
-				for the authorisation/access rights to be allocated.</para>
-			<para>When you have created those groups in AD add the necessary users who belong to each
-				group.</para>
-			<para>We can then turn it on the onCourse preferences under LDAP/Authorisation and Roles and
-				set it up the same as the following picture:</para>
+			<para>You can add or delete roles here as you wish but a corresponding group must exist
+				in AD for the authorisation/access rights to be allocated.</para>
+			<para>When you have created those groups in AD add the necessary users who belong to
+				each group.</para>
+			<para>We can then turn it on the onCourse preferences under LDAP/Authorisation and Roles
+				and set it up the same as the following picture:</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/LDAP_AD_authorisation_settings.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/LDAP_AD_authorisation_settings.png" format="png"/>
 				</imageobject>
 			</mediaobject>
 			<para>That is all for Windows Server AD/LDAP authentication and authorisation! good
@@ -821,10 +854,10 @@
 	<section xml:id="advancedSetup-serverconfigurationfile">
 		<title>Server configuration file</title>
 		<para>Sometimes the onCourse server defaults aren't perfect for your office. Ports may be
-			blocked, another server might already be set up. We've added the ability to specify useful
-			parameters in a configuration file that onCourse Server will check on startup. </para>
-		<para>Create a text file called with the name 'onCourse.cfg' and place in the same folder as the
-			onCourse Server executable, whether that be running on Windows (.exe), OSX (.app) or
+			blocked, another server might already be set up. We've added the ability to specify
+			useful parameters in a configuration file that onCourse Server will check on startup. </para>
+		<para>Create a text file called with the name 'onCourse.cfg' and place in the same folder as
+			the onCourse Server executable, whether that be running on Windows (.exe), OSX (.app) or
 			Unix/Linux (.jar). </para>
 		<para> The directives allowed in this file are:
 			<programlisting>
@@ -858,8 +891,9 @@
 					<simplelist>
 						<member> use 3 slashes after the protocol name 'file' in both cases </member>
 						<member> use /, not \ also under Windows </member>
-						<member> onCourse will replace all white spaces with '%20', If you use windows or there are
-							white spaces in the URI path you must surround the URI with ". </member>
+						<member> onCourse will replace all white spaces with '%20', If you use
+							windows or there are white spaces in the URI path you must surround the
+							URI with ". </member>
 					</simplelist>
 				</para>
 			</note></para>
@@ -894,7 +928,9 @@
 				  db=jdbc:mysql://delish.ish.com.au:3306/onCourse?user=oncourse&amp;password=oncourse
 				</programlisting>
 			It is not necessary to specify a port, if the default port is used. </para>
-		<para> More information about URIs at <link xlink:href="http://blogs.msdn.com/ie/archive/2006/12/06/file-uris-in-windows.aspx">http://blogs.msdn.com/ie/archive/2006/12/06/file-uris-in-windows.aspx</link>
+		<para> More information about URIs at <link
+				xlink:href="http://blogs.msdn.com/ie/archive/2006/12/06/file-uris-in-windows.aspx"
+				>http://blogs.msdn.com/ie/archive/2006/12/06/file-uris-in-windows.aspx</link>
 		</para>
 	</section>
 	<section xml:id="advancedSetup-serverMemory">
@@ -940,7 +976,8 @@
 			called onCourse.log.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/set_log_level.png" format="png"/>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/set_log_level.png" format="png"/>
 			</imageobject>
 			<caption>
 				<para>The onCourse client Help menu</para>

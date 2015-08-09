@@ -47,18 +47,17 @@
     <xsl:param name="variablelist.max.termlength">18</xsl:param>
 
     <!-- Custom font settings - preferred truetype font -->
-    <xsl:param name="title.font.family">CabinSketch,sans-serif</xsl:param>
-    <xsl:param name="body.font.family">Times,serif</xsl:param>
-    <xsl:param name="sans.font.family">Interstate,sans-serif</xsl:param>
-    <xsl:param name="dingbat.font.family">Lucinda Grande,serif</xsl:param>
+    <xsl:param name="title.font.family">CabinSketch</xsl:param>
+    <xsl:param name="body.font.family">Roboto</xsl:param>
+    <xsl:param name="dingbat.font.family">Roboto</xsl:param>
     <xsl:param name="monospace.font.family">monospace</xsl:param>
 
     <!-- Specify the default text alignment. The default text alignment is used for most body text. -->
     <xsl:param name="alignment">left</xsl:param>
 
     <!--  Specifies the default point size for body text. The body font size is specified in two parameters (body.font.master and body.font.size) so that math can be performed on the font size by XSLT. -->
-    <xsl:param name="body.font.master">10</xsl:param>
-    <xsl:param name="body.font.size">10</xsl:param>
+    <xsl:param name="body.font.master">8</xsl:param>
+    <xsl:param name="body.font.size">8</xsl:param>
 
     <xsl:param name="hyphenate">false</xsl:param>
 
@@ -78,7 +77,7 @@
     </xsl:attribute-set>
 
     <!-- The body bottom margin is the distance from the last line of text in the page body to the bottom of the region-after. -->
-    <xsl:param name="body.margin.bottom">20mm</xsl:param>
+    <xsl:param name="body.margin.bottom">8mm</xsl:param>
 
     <!-- The body top margin is the distance from the top of the region-before to the first line of text in the page body. -->
     <xsl:param name="body.margin.top">10mm</xsl:param>
@@ -90,10 +89,10 @@
     <xsl:param name="page.margin.bottom">10mm</xsl:param>
 
     <!-- The inner page margin. The inner page margin is the distance from binding edge of the page to the first column of text. In the left-to-right, top-to-bottom writing direction, this is the left margin of recto pages. The inner and outer margins are usually the same unless the output is double-sided. -->
-    <xsl:param name="page.margin.inner">20mm</xsl:param>
+    <xsl:param name="page.margin.inner">12mm</xsl:param>
 
     <!-- The outer page margin. The outer page margin is the distance from non-binding edge of the page to the last column of text. In the left-to-right, top-to-bottom writing direction, this is the right margin of recto pages. The inner and outer margins are usually the same unless the output is double-sided. -->
-    <xsl:param name="page.margin.outer">20mm</xsl:param>
+    <xsl:param name="page.margin.outer">12mm</xsl:param>
 
     <!-- Make hyperlinks blue and don't display the underlying URL -->
     <xsl:param name="ulink.show" select="0"/>
@@ -121,7 +120,7 @@
         <xsl:attribute name="font-family">
             <xsl:value-of select="$monospace.font.family"></xsl:value-of>
         </xsl:attribute>
-        <xsl:attribute name="font-size">9pt</xsl:attribute>
+        <xsl:attribute name="font-size">7pt</xsl:attribute>
         <xsl:attribute name="color">#666</xsl:attribute>
     </xsl:attribute-set>
 

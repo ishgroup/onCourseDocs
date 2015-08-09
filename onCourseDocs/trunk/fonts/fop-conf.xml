@@ -1,13 +1,36 @@
 <fop version="1.0">
-    <font-base>.</font-base>
-    <strict-configuration>true</strict-configuration>
-    <renderers>
-        <renderer mime="application/pdf">
-            <fonts>
-                <font embed-url="CabinSketch.ttf">
-                    <font-triplet name="CabinSketch" style="normal" weight="normal"/>
-                </font>
-            </fonts>
-        </renderer>
-    </renderers>
+  <font-base>.</font-base>
+  <strict-configuration>true</strict-configuration>
+
+  <fonts>
+    <substitutions>
+      <substitution>
+        <from font-family="Roboto" font-weight="normal"/>
+        <to font-family="Roboto" font-style="light" font-weight="300"/>
+      </substitution>
+      <substitution>
+        <from font-family="CabinSketch" font-style="normal" font-weight="700"/>
+        <to font-family="CabinSketch" font-weight="400"/>
+      </substitution>
+    </substitutions>
+  </fonts>
+
+  <renderers>
+    <renderer mime="application/pdf">
+      <fonts>
+        <font embed-url="CabinSketch.ttf">
+          <font-triplet name="CabinSketch" style="normal" weight="400"/>
+        </font>
+        <font embed-url="Roboto-Regular.ttf">
+          <font-triplet name="Roboto" style="normal" weight="400"/>
+        </font>
+        <font embed-url="Roboto-Light.ttf">
+          <font-triplet name="Roboto" style="light" weight="300"/>
+        </font>
+        <font embed-url="Roboto-Bold.ttf">
+          <font-triplet name="Roboto" style="bold" weight="700"/>
+        </font>
+      </fonts>
+    </renderer>
+  </renderers>
 </fop>

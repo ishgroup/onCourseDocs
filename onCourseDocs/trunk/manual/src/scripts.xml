@@ -27,7 +27,7 @@
 	</mediaobject>
 	<section xml:id="scripts-whatYouCanDo">
 		<title>What can you do with scripts?</title>
-		<para>Some simple ideas that could be implemented with an onCourse script:</para>
+		<para>Some simple ideas that could be implemented with a custom onCourse script:</para>
 		<itemizedlist>
 			<listitem>
 				<para>Run a daily transaction export at 2am for the prior 24 hours and email it to
@@ -110,10 +110,6 @@
 				<para>Update course content on your website with data from some other source</para>
 			</listitem>
 			<listitem>
-				<para>Control which classes are visible on your website and how many days before
-					start they are available for enrolment</para>
-			</listitem>
-			<listitem>
 				<para>Automate of creating Facebook or Twitter comments from "what's hot today" or
 					new courses being published</para>
 			</listitem>
@@ -136,33 +132,74 @@
 	</section>
 	<section xml:id="scripts-onCourseDefaultScripts">
 		<title>onCourse default scripts</title>
-		<para>These scripts have been added for all users of onCourse, but are switched off by
-			default. You can enable them in your database.</para>
+		<para>These scripts are enabled by default in all onCourse databases. Please contact us
+			before you disable them as they have implications for the enrolment and sales processes:</para>
 		<orderedlist>
 			<listitem>
-				<para> Send a reminder email to students one day before their class commences</para>
+				<para>Send enrolment - send the email (template - Enrolment Confirmation) to the enrolling
+					student on successful creation of an enrolment, through the office or the
+					website.</para>
 			</listitem>
 			<listitem>
-				<para> Send a reminder email to tutors two days before their class commences</para>
+				<para>Send invoice - send the email (template - Tax Invoice) to the payer of the
+					enrolment where the invoice balance is not zero.</para>
 			</listitem>
 			<listitem>
-				<para> Send a reminder email to VET students every 7 days for the next month if they
-					haven't supplied their USI after enrolment</para>
+				<para>Send payment receipt - send the email (template - Payment Receipt) to the
+					payer when a payment in is processed outside of the enrolment process</para>
 			</listitem>
 			<listitem>
-				<para> Send a receipt on the processing of a successful payment in for a payment
-					taken not during the enrolment process</para>
+				<para>Send voucher - send the email (template - Voucher Email) containing the
+					voucher redemption code and details to the purchaser of a voucher</para>
+			</listitem>
+		</orderedlist>
+		<para>These scripts have been added for all users of onCourse, but are switched off by default.
+			Before enabling these scripts you should check the wording of the default email
+			templates they call, and adjust them as necessary. </para>
+		<para>You can enable or disable these scripts in your database at any time, and make
+			modifications as desired if your licence level allows:</para>
+		<orderedlist>
+			<listitem>
+				<para>Send student class commencement notice - automatically send a reminder email (template -
+					Student notice of class commencement) to active enrolled students one day before
+					their class commences</para>
 			</listitem>
 			<listitem>
-				<para> Send refund advice on creation of a successful payment out e.g. credit card
-					refund</para>
+				<para>Send tutor class commencement notice - automatically send a reminder email (template -
+					Tutor notice of class commencement) to all class tutors two days before their
+					class commences</para>
 			</listitem>
 			<listitem>
-				<para> Send an email to a student to notify them their application has been
-					accepted, what their custom enrolment fee is and how they can enrol</para>
+				<para>Send USI reminder - automatically send a reminder email (template - USI reminder email) to
+					VET students every 7 days for the next month if they haven't supplied their USI
+					on or shortly after enrolment</para>
 			</listitem>
 			<listitem>
-				<para> Send an email to a student whose application has been rejected</para>
+				<para>Send waiting list reminder - for students who have been added to a waiting list, send them
+					an email (template - Waiting List reminder) every 7 days of the classes
+					currently available for the courses they are on wait lists for</para>
+			</listitem>
+			<listitem>
+				<para>Send refund advice - When a successful payment out is created e.g. credit card refund,
+					send an email (template - Refund advice) to the payee</para>
+			</listitem>
+			<listitem>
+				<para>Send application decision - When an application status is set to offered, send
+					an email (template - Enrolment application accepted) to a student to notify them
+					their application has been accepted, what their custom enrolment fee is and how
+					they can enrol. When an application is set to rejected, send an email (template
+					Enrolment application rejected) to the student to notify them.</para>
+			</listitem>
+			<listitem>
+				<para>Send application received notification - When an application has been created
+					via the web or in the office, send the student an email (template - Enrolment
+					application received) to notify them</para>
+			</listitem>
+			<listitem>
+				<para>Send enrolment notice for tutors - For classes tagged with 'Notify manager',
+					send an email (template - Enrolment notification) to the tutor attached with the
+					role 'course manager' to advise them that a student has enrolled in the
+					class.</para>
 			</listitem>
 		</orderedlist>
 	</section>

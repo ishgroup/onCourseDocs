@@ -1,8 +1,5 @@
 import com.icl.saxon.TransformerFactoryImpl
-import org.apache.fop.apps.FOUserAgent
-import org.apache.fop.apps.Fop
-import org.apache.fop.apps.FopFactory
-import org.apache.fop.apps.MimeConstants
+import org.apache.fop.apps.*
 import org.xml.sax.InputSource
 import org.xml.sax.XMLReader
 
@@ -16,6 +13,7 @@ import javax.xml.transform.sax.SAXSource
 import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.stream.StreamSource
 import java.util.Date;
+import java.net.URI;
 import java.text.SimpleDateFormat;
 import org.apache.tools.ant.filters.*
 
@@ -26,13 +24,15 @@ buildscript {
 		}
 	}
 	dependencies {
-		def fopDeps = ['org.apache.xmlgraphics:fop:1.1@jar',
-				'org.apache.xmlgraphics:xmlgraphics-commons:1.5',
-				'org.apache.xmlgraphics:batik-bridge:1.7@jar',
-				'org.apache.xmlgraphics:batik-css:1.7@jar',
-				'org.apache.xmlgraphics:batik-dom:1.7',
-                'org.apache.xmlgraphics:batik-svggen:1.7',
-                'org.apache.xmlgraphics:batik-svg-dom:1.7@jar',
+		def fopDeps = ['org.apache.xmlgraphics:fop:2.0@jar',
+				'org.apache.xmlgraphics:xmlgraphics-commons:2.0.1',
+				'org.apache.xmlgraphics:batik-bridge:1.8@jar',
+				'org.apache.xmlgraphics:batik-css:1.8@jar',
+				'org.apache.xmlgraphics:batik-dom:1.8',
+                'org.apache.xmlgraphics:batik-transcoder:1.8',
+                'org.apache.xmlgraphics:batik-gvt:1.8',
+                'org.apache.xmlgraphics:batik-svggen:1.8',
+                'org.apache.xmlgraphics:batik-svg-dom:1.8@jar',
                 'org.apache.avalon.framework:avalon-framework-impl:4.3.1']
 
 		classpath 'saxon:saxon:6.5.3',
@@ -40,9 +40,17 @@ buildscript {
 				'apache-xerces:resolver:2.9.1',
 				fopDeps,
 				'net.sf.xslthl:xslthl:2.1.0',
-                'com.github.ben-manes:gradle-versions-plugin:0.9'
+                'com.github.ben-manes:gradle-versions-plugin:0.11.3'
+
+        classpath('xml-apis:xml-apis:1.4.01') {
+            force = true
+        }
 	}
 
+}
+
+task buildScriptDependencies(type: org.gradle.api.tasks.diagnostics.DependencyReportTask) {
+    configurations = project.buildscript.configurations
 }
 
 allprojects {
@@ -196,11 +204,12 @@ public class DocbookPdf extends DefaultTask {
 
     @TaskAction
     public final void transform() {
-        FopFactory fopFactory = FopFactory.newInstance();
-        fopFactory.setBaseURL(project.getProjectDir().getAbsolutePath() + '/src');
-        fopFactory.setUserConfig('file://' + project.getRootDir().getAbsolutePath() + '/fonts/fop-conf.xml');
+        
+        FopFactory fopFactory = new FopConfParser(
+            new File(project.getRootDir().getAbsolutePath() + '/fonts/fop-conf.xml'),
+            new File(project.getProjectDir().getAbsolutePath() + '/src').toURI()
+        ).getFopFactoryBuilder().build();
 
-        fopFactory.setStrictValidation(false);
 		OutputStream out = new BufferedOutputStream(new FileOutputStream(outputFile));
 
 		try {
@@ -210,9 +219,8 @@ public class DocbookPdf extends DefaultTask {
 			Transformer transformer = factory.newTransformer();
             transformer.setParameter('highlight.xslthl.config', 'file://' + project.getRootDir().getAbsolutePath() + '/stylesheets/xslthl-config.xml' );
             FOUserAgent foUserAgent = fopFactory.newFOUserAgent();
-            foUserAgent.setBaseURL(fopFactory.getBaseURL());
-			Source src = new StreamSource(sourceFile);
 
+			Source src = new StreamSource(sourceFile);
 			Result res = new SAXResult(fop.getDefaultHandler());
 
 			transformer.transform(src, res);

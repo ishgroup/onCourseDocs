@@ -1,0 +1,30 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+import java.text.SimpleDateFormat
+
+configurations {
+    apidocs
+}
+
+dependencies {
+    repositories {
+        mavenLocal()
+        maven {
+            url 'http://repo.ish.com.au/content/groups/public'
+        }
+    }
+    apidocs 'ish.oncourse.angel:server:SNAPSHOT:apidocs'
+}
+
+task extractAPIdocbook(type: Copy) {
+    from zipTree(configurations.apidocs.singleFile)
+    into "${buildDir}"
+    filter(ReplaceTokens,tokens: [
+            projectName: project.name,
+            version: version,
+            publishedDate: new SimpleDateFormat("dd MMM yyyy").format(new Date()),
+            copyrightYear : new SimpleDateFormat("yyyy").format(new Date())
+    ])
+}
+
+processSrc.dependsOn(extractAPIdocbook)

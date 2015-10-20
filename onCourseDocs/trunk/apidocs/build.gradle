@@ -17,9 +17,7 @@ dependencies {
             url 'http://repo.ish.com.au/content/groups/ish'
         }
     }
-    apidocs ('ish.oncourse.angel:server:SNAPSHOT:apidocs') {
-        changing = true
-    }
+    apidocs 'ish.oncourse.angel:server:99-SNAPSHOT:apidocs'
 }
 
 task extractAPIdocbook(type: Copy) {

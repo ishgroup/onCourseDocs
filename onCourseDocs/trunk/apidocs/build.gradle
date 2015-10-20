@@ -1,6 +1,7 @@
 import org.apache.tools.ant.filters.ReplaceTokens
 
-import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 configurations {
     apidocs
@@ -27,8 +28,8 @@ task extractAPIdocbook(type: Copy) {
     filter(ReplaceTokens,tokens: [
             projectName: project.name,
             version: version,
-            publishedDate: new SimpleDateFormat("dd MMM yyyy").format(new Date()),
-            copyrightYear : new SimpleDateFormat("yyyy").format(new Date())
+            publishedDate: LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy")),
+            copyrightYear : LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))
     ])
 }
 

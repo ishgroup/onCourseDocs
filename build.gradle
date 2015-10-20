@@ -1,5 +1,7 @@
 import com.icl.saxon.TransformerFactoryImpl
 import org.apache.fop.apps.*
+import org.apache.tools.ant.filters.ReplaceTokens
+import org.apache.xerces.jaxp.SAXParserFactoryImpl
 import org.xml.sax.InputSource
 import org.xml.sax.XMLReader
 
@@ -12,10 +14,8 @@ import javax.xml.transform.sax.SAXResult
 import javax.xml.transform.sax.SAXSource
 import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.stream.StreamSource
-import java.util.Date;
-import java.net.URI;
-import java.text.SimpleDateFormat;
-import org.apache.tools.ant.filters.*
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 buildscript {
 	repositories {
@@ -49,7 +49,7 @@ buildscript {
 
 }
 
-task buildScriptDependencies(type: org.gradle.api.tasks.diagnostics.DependencyReportTask) {
+task buildScriptDependencies(type: DependencyReportTask) {
     configurations = project.buildscript.configurations
 }
 
@@ -92,10 +92,10 @@ subprojects {
         from "src"
         into "${buildDir}"
         filter(ReplaceTokens,tokens: [
-            projectName: project.name, 
-            version: version, 
-            publishedDate: new SimpleDateFormat("dd MMM yyyy").format(new Date()),
-            copyrightYear : new SimpleDateFormat("yyyy").format(new Date())
+                projectName: project.name,
+                version: version,
+                publishedDate: LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy")),
+                copyrightYear : LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))
         ])
     }
 
@@ -150,9 +150,9 @@ public class Docbook extends DefaultTask {
 	File sourceDirectory = new File(project.getProjectDir(), "src");
 
 	@InputFile
-	File stylesheet;
+	File stylesheet
 
-	@OutputFile
+    @OutputFile
 	File outputFile
 
 	@TaskAction
@@ -169,10 +169,10 @@ public class Docbook extends DefaultTask {
 				logging.captureStandardError(LogLevel.INFO)
 		}
 
-		SAXParserFactory factory = new org.apache.xerces.jaxp.SAXParserFactoryImpl();
+		SAXParserFactory factory = new SAXParserFactoryImpl();
 		factory.setXIncludeAware(true);
         XMLReader reader = factory.newSAXParser().getXMLReader();
-        TransformerFactory transformerFactory = new TransformerFactoryImpl();
+        def transformerFactory = new TransformerFactoryImpl();
 
 		File srcFile = new File(sourceDirectory, "index.xml");
         InputSource inputSource = new InputSource(srcFile.getAbsolutePath());
@@ -180,9 +180,9 @@ public class Docbook extends DefaultTask {
         outputFile.getParentFile().mkdirs();
 		Result result = new StreamResult(outputFile.getAbsolutePath());
 
-		URL url = stylesheet.toURL();
+		URL url = stylesheet.toURI().toURL();
 		Source source = new StreamSource(url.openStream(), url.toExternalForm());
-		Transformer transformer = transformerFactory.newTransformer(source);
+		def transformer = transformerFactory.newTransformer(source);
 
         String rootFilename = outputFile.getName();
         rootFilename = rootFilename.substring(0, rootFilename.lastIndexOf('.'));
@@ -218,7 +218,6 @@ public class DocbookPdf extends DefaultTask {
 			TransformerFactory factory = TransformerFactory.newInstance();
 			Transformer transformer = factory.newTransformer();
             transformer.setParameter('highlight.xslthl.config', 'file://' + project.getRootDir().getAbsolutePath() + '/stylesheets/xslthl-config.xml' );
-            FOUserAgent foUserAgent = fopFactory.newFOUserAgent();
 
 			Source src = new StreamSource(sourceFile);
 			Result res = new SAXResult(fop.getDefaultHandler());

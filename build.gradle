@@ -102,7 +102,12 @@ subprojects {
     task docbookHtml(type: Docbook, dependsOn: [processXSLT, processSrc, parent.tasks['explodeXSL']]) {
 		description = 'Generates chunked docbook html output.'
         outputFile = file("${buildDir}/html/index.html")
-		stylesheet = file("${buildDir}/stylesheets/html.xsl")
+        if (project.path == ":apidocs") {
+            stylesheet = file("${buildDir}/stylesheets/api-html.xsl")
+        } else {
+            stylesheet = file("${buildDir}/stylesheets/standard-html.xsl")
+        }
+		
         sourceDirectory = file( "${buildDir}" )
 
         doLast {

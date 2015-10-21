@@ -10,9 +10,7 @@
   <xsl:import href="@rootDir@/build/xslt/docbook/html/highlight.xsl"/>
 
   <xsl:include href="common-customizations.xsl"/>
-
-
-  <xsl:param name="html.stylesheet" select="'css/ish.css'"/>
+    
   <xsl:param name="chunker.output.encoding">UTF-8</xsl:param>
   <xsl:output doctype-system="about:legacy-compat"/>
 

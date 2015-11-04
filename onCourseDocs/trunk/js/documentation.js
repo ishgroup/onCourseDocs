@@ -4,10 +4,12 @@ var availableVersions = ['6.0', '7.1', '8.0', 'latest'];
 $(document).ready(function() {
 	$('.chapter > .toc').prepend("<gcse:search></gcse:search>");
 
-  $('.toc > dl.toc > dd > dl > dt').click(function(e){
-      $(this).nextUntil('dt').toggle();
-      $(this).toggleClass('expand');
+
+  $('.toc > dl.toc > dd > dl > dt').click(function(e) {
+    if (e.offsetX < 15) {  /* only detect clicks on the triangle icon */
+      $(this).toggleClass('expand').next().toggle();
       return false;
+    }
   });
 
   $('.toc > dl.toc > dd > dl > dd').hide();

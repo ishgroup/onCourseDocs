@@ -3,12 +3,16 @@ import org.apache.tools.ant.filters.ReplaceTokens
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-configurations {
-    apidocs
+configurations.create('apidocs')
+configurations.apidocs {
+        resolutionStrategy {
+            cacheChangingModulesFor 0, 'seconds'
+    }
 }
 
 dependencies {
     repositories {
+        mavenLocal()
         maven {
             url 'http://repo.ish.com.au/content/groups/public'
         }

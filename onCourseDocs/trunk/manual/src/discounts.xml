@@ -361,6 +361,26 @@
             </mediaobject>
         </section>
     </section>
+    <section>
+        <title>Negative Discounts</title>
+        <para>Along with being able to create discounts that can help reduce the fee of an enrolment
+            or product. You can also create negative discounts (i.e. a surcharge for companies
+            booking now, paying later) in both discount schemes and manual discounts. This means the
+            increased fee is part of the enrolment invoice line, so the full fee charged will be
+            reversed should the enrolment be cancelled.</para>
+        <para>Creating a negative discount works just the same way as when you create positive
+            discount with the only difference being is you would make the 'Discount value' a
+            negative value.</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/negative_discounts.png"/>
+            </imageobject>
+            <caption>
+                <para>Creating a negative discount called 'Admin Fee'</para>
+            </caption>
+        </mediaobject>
+    </section>
     <section xml:id="discounts-Accessing">
         <title>Accessing discounts during enrolment</title>
         <para>Depending on the discount settings, discounts can be made available to students
@@ -387,6 +407,38 @@
                 <caption>
                     <para>This student is eligible for a youth discount when they enrol in this
                         class</para>
+                </caption>
+            </mediaobject>
+        </section>
+        <section>
+            <title>Accessing negative discounts through Quick Enrol</title>
+            <para>If you have attached a negative discount to a class then the total fee is
+                increased by the amount of the surcharge. In the example below enrolling Jenny Smith
+                in the class Woodwork (WDWK-41) incurs them to have to pay an admin fee. This fee
+                could be charged because you are trying to encourage students to enrol online rather
+                than taking up someones time, in your organisation, to enrol them through Quick
+                Enrol.</para>
+                       <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="80%" contentdepth="80%"
+                        fileref="images/qenegativediscount.png"/>
+                </imageobject>
+                <caption>
+                    <para>This student has a negative discount applied to the class fee</para>
+                </caption>
+            </mediaobject>
+            <para>If a class has two discounts, one negative and one positive, the negative discount
+                always takes precedence over a positive one. This is the case for the class below
+                which has a negative for -$5 and a positive discount for $6.82, and as you can see
+                by default the negative discount gets applied.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="80%" contentdepth="80%"
+                        fileref="images/qenegativediscount1.png"/>
+                </imageobject>
+                <caption>
+                    <para>This class has two discount applied to it with the negative one always
+                        selected by default</para>
                 </caption>
             </mediaobject>
         </section>
@@ -481,7 +533,7 @@
                         fileref="images/negative_discount.png"/>
                 </imageobject>
                 <caption>
-                    <para>A negative discount of $5 has been entered in the enrolment.</para>
+                    <para>A negative discount of $10 has been entered in the enrolment.</para>
                 </caption>
             </mediaobject>
         </section>

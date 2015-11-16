@@ -48,6 +48,110 @@
                     <para>Moodle enrol script</para>
                 </caption>
             </mediaobject>
+            <section>
+                <title>Where to find the preferences in Moodle</title>
+                <para>Below are the steps that are needed to be done to enable the Moodle
+                    integration.</para>
+                <orderedlist>
+                    <listitem>
+                        <para>The Base URL is the site url (e.g. http://localhost:8888/moodle29/)</para>
+                    </listitem>
+                        <listitem>
+                        <para>To create a user go to Site administration -> Users -> Accounts -> Add
+                            a new user</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/Moodle_1._Create_user.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Creating a user</para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                    <listitem>
+                        <para>To assign user to a role go to Site administration -> Users -> Permissions
+                            -> Assign system roles</para>
+                    </listitem>
+                    <listitem>
+                        <para>To add a service go to Site administration -> Plugins -> Web services
+                            -> External services. When you are on thei page click on 'Add' and fill
+                            in the Service Name and Short Name, then click on 'Add service'</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/Moodle_3.1_External_Services_screen.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>External services screen</para>
+                            </caption>
+                        </mediaobject>
+                        <para>When you are on this page click on 'Add' and fill in the Service Name
+                            and Short Name, then click on 'Add service'</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/Moodle_3.2_Create_Service.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Adding the service</para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                    <listitem>
+                        <para>Once the Service is created click on 'Add functions'</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/Moodle_4.1_Functions_screen.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Functions page</para>
+                            </caption>
+                        </mediaobject>
+                        <para>Add following functions: core_user_create_users, core_user_get_users, core_course_get_courses, enrol_manual_enrol_users</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/Moodle_4.2_Add_Functions.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Adding the functions to the service</para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                    <listitem>
+                        <para>The next step is to generate the token, you can do this by going to
+                            Site administration -> Plugins -> Web services -> Manage tokens then
+                            click on 'Add'.</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/Moodle_5.1_Token_screen.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Manage tokens page</para>
+                            </caption>
+                        </mediaobject>
+                        <para>Then select the created user and service, and if needed Enable and Set
+                            'Valid Until' date</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/Moodle_5.2_Create_token.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Create token page</para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                    <listitem>
+                        <para>The last step is to create a course, you can do this by going to Site 
+                            administration -> Courses -> Manage courses and categories, then Create 
+                            new course. The ID should be the same as course code in onCourse.</para>
+                    </listitem>
+                </orderedlist>
+            </section>
     </section>
         <section xml:id="externalintegrations-mailChimp">
         <title>MailChimp</title>
@@ -79,6 +183,24 @@
                     <para>MailChimp scripts</para>
                 </caption>
             </mediaobject>
+            <section>
+                <title>Where to find the preferences in MailChimp</title>
+                <para>You can find the information needed to enable the MailChimp integration by
+                    following the instructions below.</para>
+                <orderedlist>
+                    <listitem>
+                        <para>To find the API key go to
+                            http://kb.mailchimp.com/accounts/management/about-api-keys the click on
+                            Account -> Extras -> API keys -> Create a key</para>
+                    </listitem>
+                    <listitem>
+                        <para>To find the List Id go to
+                            http://kb.mailchimp.com/lists/managing-subscribers/find-your-list-id the
+                            go to the Lists page -> Settings, scroll to find the unique List ID
+                            field</para>
+                    </listitem>
+                </orderedlist>
+            </section>
     </section>
         <section xml:id="externalintegrations-surveyMonkey">
     <title>SurveyMonkey</title>
@@ -111,6 +233,55 @@
                     <para>SurveyMonkey scripts</para>
                 </caption>
             </mediaobject>
+            <section>
+                <title>Where to find the preferences in SurveyMonkey</title>
+                <para>Below is the information that is needed to enable the SurveyGizmo integration
+                    that can be found in SurveyMonkey.</para>
+                <orderedlist>
+                    <listitem>
+                        <para>To find the API key you must have account at
+                            https://developer.surveymonkey.com. From there you go to My Account and
+                            the API key and Secret are found, as shown below.</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/SurveyMonkey_1.1_APIkey.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Where to find the SurveyMonkey API key</para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                    <listitem>
+                        <para>To get the OAuth token go to
+                            https://developer.surveymonkey.com/api_console and enter your API key,
+                            Client ID (developer.surveymonkey.com account name) and secret from step
+                            1. </para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/SurveyMonkey_1.2_OAuth.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Getting your OAuth token</para>
+                            </caption>
+                        </mediaobject>
+                        <para>You'll then be asked to login to your SurveyMonkey account (or authorize linking your OAuth token if your already logged in). After that the OAuth token will be generated in the Access Token field.</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/SurveyMonkey_1.3._Authorize_API.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Authorizing onCourse to use your SurveyMonkey account</para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                    <listitem>
+                        <para>The Survey name is the name of the survey in Survey Monkey.</para>
+                    </listitem>
+                </orderedlist>
+            </section>
     </section>
         <section xml:id="externalintegrations-surveyGizmo">
     <title>SurveyGizmo</title>
@@ -142,6 +313,32 @@
                     <para>SurveyGizmo scripts</para>
                 </caption>
             </mediaobject>
+            <section>
+                <title>Where to find the preferences in SurveyGizmo</title>
+                <para>Below is the information that is needed to enable the SurveyGizmo integration
+                    that can be found in SurveyGizmo.</para>
+                <orderedlist>
+                    <listitem>
+                        <para>The User and Password is the same one you use to log into your account
+                            at SurveyGizmo</para>
+                    </listitem>
+                    <listitem>
+                        <para>The Survey ID is taken from survey address, so in the example below
+                            the Survey ID is 2290616. Please visit <link
+                                xlink:href="http://help.surveygizmo.com/help/article/link/how-to-find-ids"
+                                >here</link> for more information.</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/SurveyGizmo_Survey_ID.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Where to find the SurveyGizmo Survey ID</para>
+                            </caption>
+                        </mediaobject>
+                        </listitem>
+              </orderedlist>
+            </section>
     </section>
     </section>
 </chapter>

@@ -73,9 +73,11 @@
                         <listitem>
                             <para>Discount validity: The discount itself may have a valid from or
                                 expiry date, or require students to enter a special promotional
-                                code. Discounts are offered automatically when the student meets the
-                                discount requirement and may also be offered in conjunction with
-                                other discounts.</para>
+                                code.  Discounts may automatially apply when the invoice contains
+                                multiple enrolments, or when the value of the invoice exceeds a
+                                specified value. Discounts are offered automatically when the
+                                student(s) in the enrolment process meet the discount
+                                requirement.</para>
                         </listitem>
                     </orderedlist>
                 </listitem>
@@ -89,11 +91,13 @@
                         apply:</para>
                     <orderedlist>
                         <listitem>
-                            <para>Discounts based on the student meeting an eligibility criteria.
-                                This means you have defined some restrictions on who is able to
-                                receive this discount when they enrol e.g. students with a senior's
-                                card. If the student meets this criteria, or this criteria is added
-                                during the enrolment process, the discount will apply.</para>
+                            <para>Discounts based on the student or invoice meeting an eligibility
+                                criteria. This means you have defined some restrictions on who is
+                                able to receive this discount when they enrol e.g. students with a
+                                senior's card. If the student meets this criteria, or this criteria
+                                is added during the enrolment process, the discount will apply.
+                                Invoice criteria include the number of enrolments, total invoice
+                                value, or the use of a CorporatePass to create the invoice.</para>
                         </listitem>
                         <listitem>
                             <para>Discounts using a promotional code. These discounts are often part
@@ -130,6 +134,10 @@
             can provide the matching promotional code.</para>
         <para>For these type of discounts you would set a start and end date, where other types of
             discounts continue indefinitely. onCourse gives you the choice. </para>
+        <para>Other types of discounts may be a 'buy one get one free' style of discounts. These
+            types of discount apply when the invoice being created during the enrolment process
+            meets certain criteria, such as containing 3 enrolments from the list of specificed
+            class.</para>
         <para>When considering who can access the discount, you might want to restrict it to all
             students who have enrolled in the past, are over a certain age, live in a particular
             suburb or who have certain type of concession card or membership. You aren't locking it
@@ -156,6 +164,10 @@
             <listitem>
                 <para>all students with a senior's card receive a $20 discount off any of the
                     daytime arts and craft classes</para>
+            </listitem>
+            <listitem>
+                <para>all students purchasing more than $500 worth of enrolments in a single
+                    transaction automatically receive a 5% discount</para>
             </listitem>
         </itemizedlist>
         <para>Generally, concessions apply on a long term basis and are based on your college's fees
@@ -337,6 +349,10 @@
                 will not create duplicate records. During the class roll over process, it will also
                 select the option to apply all existing discounts to the new class record by
                 default.</para>
+            <para>At the bottom of this window are some settings which relate to the multiple
+                purchase style discounts, e.g. puchase two enrolments from the list above to
+                activate this discount, or spend at least $1,000 in one transaction to access this
+                discount.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -349,7 +365,14 @@
         </section>
         <section xml:id="discounts-corporatePasses">
             <title>Linking a Corporate Pass to a discount</title>
-            <para>...</para>
+            <para>A discount strategy may only apply when a CorpatePass is used in the puchasing
+                process. CorporatePasses can only be used during online transactions, so be sure to
+                make sure this discount is available via online enrolment on the general tab.</para>
+            <para>A CorporatePass discount could be used to offer a special enrolment price to the
+                employees of the companies you regularly work with.</para>
+            <para>Alternativly, a negative discount could be used for enrolments processed with some
+                types of CorporatePasses to surcharge online enrolments processed via external
+                agents or vendors.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -934,6 +957,56 @@
                         their first name, last name and email address on record.</para>
                 </listitem>
             </orderedlist>
+        </example>
+        <example>
+            <title>How to create a multi-purchase discount</title>
+            <para>In this example, we will offer a $10 discount to students who enrol in two or more classes for themselves, or with a friend from the list of available classes.</para>
+            <orderedlist>
+                <listitem>
+                    <para>Open the discount window and create a new discount called 'Buy two and
+                        save $10'. In the discount value, set the discount dollar to $5 (if your
+                        classes have GST included in their fee, to acheive a $10 discount over two
+                        enrolments, you can set the discount value as $5.45, and set the rounding to
+                        nearest dollar)</para>
+                </listitem>
+                <listitem>
+                    <para>On the students tab, leave the value as the default 'anyone'. </para>
+                </listitem>
+                <listitem>
+                    <para>On the classes tab, add your classes when the discount applies (in this
+                        case, I can choose all classes tagged with...). In the bottom of the panel,
+                        enter the option 'Require at least [2] enrolments on one invoice from the
+                        classes above. Save and close the record. </para>
+                    <para>Setting this discount at 2 requires at least two enrolments to trigger the
+                        discount. If there are three enrolments eligible in one enrolment process,
+                        then the discount applied will be $15.</para>
+                </listitem>
+                <listitem>
+                    <para>When a Quick Enrol process is created that includes at least two
+                        enrolments from this list, each eligible enrolment added will have the $5
+                        discount applied. If you remove enrolments from the window, and the set of
+                        enrolments are no longer elgible, the discount will be automatically removed
+                        from all enrolments.</para>
+                </listitem>
+            </orderedlist>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/buyTwoEnrolmentsDiscount.png"/>
+                </imageobject>
+                <caption>
+                    <para>Group enrolment discount in Quick Enrol, showing a total $10 discount accross the two enrolments</para>
+                </caption>
+            </mediaobject>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/buyMultipleDiscountWeb.png"/>
+                </imageobject>
+                <caption>
+                    <para>Group enrolment discount on the web, showing a total $20 discount accross the four enrolments, where two students are each attending two classes</para>
+                </caption>
+            </mediaobject>
         </example>
     </section>
     <section xml:id="discounts-Reporting">

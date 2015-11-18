@@ -363,7 +363,12 @@
 		<para>onCourse generates Tutor pay records in bulk, for a given point in time, based on the wages
 			set in the class budget and the class attendance records for Tutors. While generating
 			Tutor pay records the admin user is given choices as to whether unmarked or unapproved
-			attendance should be included.</para>
+			attendance should be included. Tutors can be attached to classes with multiple roles and
+			payrates, allowing you to assign the same contact, for example, as both a tutor with an
+			hourly payrate and an assessor with a per enrolment pay rate. Per session pay rates
+			display the correct pay value in the class budget, depending on the number of sessions
+			the tutor is assigned to, rather than multiplying the rate by the total number of
+			sessions in the class.</para>
 		<para>Tutor pay is run for payslips up to your defined date</para>
 		<example>
 			<title>Generating, editing and finalising Tutor pay</title>
@@ -440,6 +445,31 @@
 			<para>Tutor pay can have following statuses: New, Completed, Approved and Paid/Exported. Only
 				a status of "Paid / Exported" prevents the editing of the record. </para>
 		</caution>
+		<section>
+			<title>How to defer tutors pay to the next payrun</title>
+			<para>Next to every pay line will be a cogwheel option that if clicked on will allow you to defer
+				that pay line item, for the tutor, to the next pay run.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/defer_tutor_pay.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>How to defer a tutors pay to the next payrun</para>
+				</caption>
+			</mediaobject>
+			<para>When you choose to defer a pay line, it will be removed from the pay slip total for the
+				current period, but when the payroll is generated for the following pay period, it
+				will appear again on that payslip. This will continue until the pay line is
+				processed via a pay slip.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/tutor_pay_deferred.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>The payline of $360 has been deferred to the next payrun</para>
+				</caption>
+			</mediaobject>
+		</section>
 		<section>
 			<title>Tagging Payslips</title>
 			<para>Payslips are taggable to assist you in creating your own custom steps for handling payroll processing. For example, you might have tags like:</para>

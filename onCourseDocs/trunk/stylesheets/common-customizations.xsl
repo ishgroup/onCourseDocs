@@ -10,10 +10,14 @@
 
   <xsl:param name="highlight.source">"1"</xsl:param>
   <xsl:param name="keep.relative.image.uris" select="1"/>
-  <xsl:param name="toc.section.depth">2</xsl:param>
   
-  <!-- disable TOC for each part -->
-  <xsl:template name="generate.part.toc"></xsl:template>
+  <!-- enable TOC for book and chapter but not part -->
+  <xsl:param name="generate.toc">
+    book      toc,title,figure,table,example,equation
+    chapter   toc,title
+    part      nop
+    section   nop
+  </xsl:param>
   
   <!-- The following line points the local.l10n.xml to this document
   This is how we can edit anything in build/xslt/docbook/common/en.xml -->

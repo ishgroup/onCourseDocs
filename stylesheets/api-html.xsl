@@ -6,21 +6,37 @@
                 exclude-result-prefixes="date xslthl l"
                 version='1.0'>
 
+    
     <xsl:param name="html.stylesheet">css/ish.css css/api-ish.css</xsl:param>
+    <xsl:param name="toc.section.depth">0</xsl:param>
+    <xsl:param name="toc.max.depth">2</xsl:param>
+    
+    <!-- disable numbering -->
+    <xsl:param name="part.autolabel">0</xsl:param>
+    <xsl:param name="chapter.autolabel">0</xsl:param>
+    <xsl:param name="section.autolabel">0</xsl:param>
+    
     <xsl:include href="common-html.xsl"/>
 
-    <!-- show all sections in TOC, including parents of the current section -->
-    <xsl:template name="section.toc">
+    <!-- The component.toc (really the chapter) should display all its sibliings as well as children -->
+    <xsl:template name="component.toc">
         <xsl:param name="toc-context" select="."/>
         <xsl:param name="toc.title.p" select="true()"/>
-
-        <xsl:for-each
-                select="ancestor::article|ancestor::chapter|ancestor::appendix">
-            <xsl:call-template name="component.toc">
+        <xsl:for-each select="ancestor::book">
+            <xsl:call-template name="division.toc">
                 <xsl:with-param name="toc-context" select="."/>
                 <xsl:with-param name="toc.title.p" select="$toc.title.p"/>
             </xsl:call-template>
         </xsl:for-each>
+    </xsl:template>
+    
+    <!-- don't export sections in the TOC -->
+    <xsl:template match="preface|chapter|appendix|article" mode="toc">
+        <xsl:param name="toc-context" select="."/>
+            <xsl:call-template name="subtoc">
+                <xsl:with-param name="toc-context" select="$toc-context"/>
+                <xsl:with-param name="nodes" select="no-such-node"/>
+            </xsl:call-template>
     </xsl:template>
     
 </xsl:stylesheet>

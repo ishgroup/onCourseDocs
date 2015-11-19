@@ -7,6 +7,8 @@
                 version='1.0'>
 
     <xsl:param name="html.stylesheet">css/ish.css</xsl:param>
+    <xsl:param name="toc.section.depth">2</xsl:param>
+    
     <xsl:include href="common-html.xsl"/>
 
 </xsl:stylesheet>

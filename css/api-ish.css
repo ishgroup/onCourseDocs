@@ -44,3 +44,8 @@ span.remark {
 .chapter > .toc dd dt {
     font-weight: 400;
 }
+
+/* We don't need expandy triangles in the TOC */
+.book .toc > dl > dd > dl > dt::before {
+    display: none !important;
+}

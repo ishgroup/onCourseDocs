@@ -64,9 +64,8 @@ h1 {
   font-family: 'Cabin Sketch', cursive;
 }
 
-.part a,
-.chapter a {
-    color: #A34742;
+span.part a {
+    color: #8A1C16;
 }
 
 .part a:hover,
@@ -84,7 +83,7 @@ blockquote, q {
 
 a {
 	text-decoration: none !important;
-    color: #A34742;
+    color: #8A1C16;
 }
 a:hover{
     color: #FF8A00;
@@ -128,7 +127,7 @@ div.navheader > table > tbody > tr + tr > td[align=right] {
 /* Main area */
 /* Book */
 .book h3{
-    color: #A34742;
+    color: #8A1C16;
 }
 
 .guimenuitem {
@@ -145,11 +144,11 @@ body > .chapter {
 }
 
 .legalnotice a:hover{
-    color: #A34742;
-    border-bottom: 1px dotted #A34742;
+    color: #8A1C16;
+    border-bottom: 1px dotted #8A1C16;
 }
 .list-of-tables dt{
-    color: #A34742;
+    color: #8A1C16;
     padding-left: 30px;
 }
 .list-of-tables p {
@@ -160,7 +159,12 @@ body > .chapter {
 p.copyright{
     clear: right;
 }
-/* Footer */
+/* Footer: for now we are just going to hide the whole thing */
+div.navfooter {
+    display: none;
+}
+
+
 div.navfooter {
 	border-top: 1px solid #B2AEB2;
 	color: #666;
@@ -277,7 +281,7 @@ div.navfooter > table > tbody > tr > td[align=right] {
 }
 
 .chapter > .toc a {
-	color: #A34742;
+	color: #8A1C16;
 }
 
 .chapter > .toc dt {

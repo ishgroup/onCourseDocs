@@ -24,7 +24,7 @@
         <xsl:param name="toc.title.p" select="true()"/>
         <xsl:for-each select="ancestor::book">
             <xsl:call-template name="division.toc">
-                <xsl:with-param name="toc-context" select="."/>
+                <xsl:with-param name="toc-context" select="$toc-context"/>
                 <xsl:with-param name="toc.title.p" select="$toc.title.p"/>
             </xsl:call-template>
         </xsl:for-each>

@@ -41,11 +41,28 @@ span.remark {
     color: black;
 }
 
-.chapter > .toc dd dt {
-    font-weight: 400;
-}
-
 /* We don't need expandy triangles in the TOC */
 .book .toc > dl > dd > dl > dt::before {
     display: none !important;
+}
+
+div.chapter {
+	margin-left: 250px;
+}
+
+.chapter > .toc {
+    left: -260px;
+}
+
+.chapter > .titlepage {
+    left: -260px;
+}
+
+.chapter > .toc dd dt {
+    margin-left: 6px;
+    line-height: 1em;
+}
+
+.toc .part {
+    font-size: 1.2em;
 }

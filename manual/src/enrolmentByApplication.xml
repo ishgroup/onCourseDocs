@@ -213,18 +213,121 @@
     </section>
     <section xml:id="applications-Web">
         <title>Applications on the web</title>
-        <para>Section under development</para>
+        <para>Courses set to 'Enrolment by appplication' need one or more classes enabled to display
+            on the web to allow students to apply.</para>
+        <para>The usual 'Enrol now' button will say 'Apply now' and any information about the class
+            fee will be suppressed.  We suggest you add information to the course or class
+            description about the fees that will be applicab;le if the student's application is
+            successful.</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/apply_now.png" format="png"/>
+            </imageobject>
+            <caption>
+                <para>A course set to 'enrolment by application' showing apply now for the classes
+                    on the web</para>
+            </caption>
+        </mediaobject>
         <section>
             <title>Applying online</title>
-            <para>This feature is currently in development</para>
+            <para>A student can apply online for a course, or courses as well as purchasing other
+                enrolments or products in the shopping cart. As per the usual checkout process, the
+                contact details you have set to request on enrolment must be supplied. </para>
+            <para>There is no payment required if the student is only completing an online
+                application.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/online_application.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>The application (with no fee charged) is clearly identified in the checkout process.</para>
+                </caption>
+            </mediaobject>
+            <para>At the end of the checkout process, the student will be sent an 'enrolment
+                application received' notification, instructing them what to do next. </para>
+            <para>In onCourse File > Preferences > Scripts a default script called 'send application
+                received notification' is disabled by default. If you plan on using online
+                applications, you need to make sure this script is enabled.</para>
+            <para>The email that is sent to the student can be found in File > Preferences > Email
+                templates and is called 'Enrolment application received'. You must customise this
+                template by inserting a location for the next stage of the application process, or
+                replace it with some text to the effect of 'We will be in contact to request
+                additional documentation'.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/enrol_application_received.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>The default enrolment application recevied email in HTML</para>
+                </caption>
+            </mediaobject>
         </section>
         <section>
             <title>Enrolling after application approval</title>
-            <para>This feature is currently in development</para>
+            <para>Once a student's application documents have been received, you have detmined the
+                appropriate fee for the student and set the fee override, and changed the
+                application status to success, a script called 'send application decision' (disabled
+                in onCourse by default, please enable if you wish to use it) will send the email
+                template 'enrolment application accepted'.</para>
+            <para>Within this template, is a special URL containing a unique student id that will
+                open the course page ready for the student to select their class, enrol, and pay
+                their enrolment fee. If the student has been provided a special fee override, that
+                is the price they will see listed for each class on the course page. Otherwise, they
+                will now see the default class fee.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/application_approved_email.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>The default enrolment application approved email in HTML</para>
+                </caption>
+            </mediaobject>
+            <para>The application approval process is for a course. Once a student is approved, they
+                can then enrol in any class from that course, but can only use their application
+                approval to enrol in one class from the course.</para>
+            <para>Alternativly, if the student returns to the public website, locates the course and
+                clicks 'Apply now' after they have an approved application, they will be able to
+                proceed directly to the enrolment and payment process. This only occurs if the
+                student uses the same first name, last name and email address they used for their
+                approved application.</para>
+            <para>If during the enrolment and payment process, they wish to 'add a friend', then the
+                friend will go through the application process. Only students with applications
+                statuses of 'offered' can proceed to online enrolment and payment.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/application_enrolment_with_fee_override.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>The approved student is charged their override fee of $88 on enrolment, rather than the standard class fee</para>
+                </caption>
+            </mediaobject>
         </section>
         <section>
             <title>Application records in the portal</title>
-            <para>This feature is currently in development</para>
+            <para> Students can also see the history of their applications in the skillsOnCourse
+                portal by going to History and selecting the tab Applications. You can send the link
+                to students https://www.skillsoncourse.com.au/portal/history to take them directly
+                to this page after login.</para>
+            <para>The History shows all current applications where the assessment is in progress,
+                offered applications, as well as any rejected or withdrawn applications.</para>
+            <para>Applications with a status of offered can be rejected in the portal by the
+                student, which will change their status in onCourse to 'withdrawn', or the student
+                can proceed to enrol and pay for their application from within the portal. This will
+                redirect them to the normal online enrolment process.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/portal_application_history.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>This student has multiple applications of varying statuses recorded in their application history</para>
+                </caption>
+            </mediaobject>
         </section>
     </section>
 </chapter>

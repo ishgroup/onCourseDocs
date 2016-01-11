@@ -1,0 +1,59 @@
+import org.codehaus.groovy.runtime.DateGroovyMethods
+
+task newRelease << {
+    if (project.hasProperty('docVersion')) {
+        version = project.docVersion
+    }
+    
+    if (!version || !version.isNumber()) {
+        logger.lifecycle("You must call this task like ./gradlew -PdocVersion=8.2")
+    } else {
+        logger.lifecycle("Creating a new release document for version " + version)
+        
+        def subdir = new File(project.projectDir, "/src/" + version)
+        subdir.mkdirs()
+        def imagesDir = new File(subdir, "images")
+        imagesDir.mkdirs()
+
+        def notes = new File(subdir, "release-notes.xml")
+        notes << """
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-${version}">
+  <title>Release ${version}</title>
+  <revhistory>
+    <revision>
+      <revnumber>${version}</revnumber>
+      <date>${DateGroovyMethods.format(new Date(), 'd MMM yyyy')}</date>
+      <revremark></revremark>
+    </revision>
+  </revhistory>
+  <section role="important">
+    <title>Important changes</title>
+    <para></para>
+  </section>
+  <section role="major">
+    <title>Major features</title>
+    <para></para>
+  </section>
+  <section role="scripts">
+    <title>Reports and scripts</title>
+    <para></para>
+  </section>
+  <section role="minor">
+    <title>Minor features</title>
+    <para></para>
+  </section>
+  <section role="web">
+    <title>Web features</title>
+    <para></para>
+  </section>
+  <section role="web-fixes">
+    <title>Web fixes</title>
+    <para></para>
+  </section>
+</chapter>
+"""
+
+
+    }
+}

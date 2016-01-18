@@ -16,8 +16,7 @@ task newRelease << {
         imagesDir.mkdirs()
 
         def notes = new File(subdir, "release-notes.xml")
-        notes << """
-<?xml version="1.0" encoding="UTF-8"?>
+        notes << """<?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-${version}">
   <title>Release ${version}</title>
   <revhistory>
@@ -41,6 +40,10 @@ task newRelease << {
   </section>
   <section role="minor">
     <title>Minor features</title>
+    <para></para>
+  </section>
+  <section role="fixes">
+    <title>Fixes</title>
     <para></para>
   </section>
   <section role="web">

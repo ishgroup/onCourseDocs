@@ -274,7 +274,24 @@
                     <para>Example value settings of a discount for seniors</para>
                 </caption>
             </mediaobject>
-            <para> </para>
+            <section>
+                <title>Discount offset from class start date</title>
+                <para>The value tab also allows you to override the discount value at the class
+                    level, to assign varying class fees sharing the same discount name. This option
+                    may be especially useful for funded programs like Smart &amp; Skilled. For
+                    example, a number of courses and classes can share the discount ‘First
+                    Qualification rate’ but each class can have it’s own discounted price. Double
+                    click on the discount in the class budget tab to edit it.</para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="100%" contentdepth="100%"
+                            fileref="images/override_discount_class_level.png"/>
+                    </imageobject>
+                    <caption>
+                        <para>Defining the discounts restrictions</para>
+                    </caption>
+                </mediaobject>
+            </section>
         </section>
         <section xml:id="discounts-Student">
             <title>Defining the eligible students</title>
@@ -382,6 +399,122 @@
                     <para>Linking a Corporate Pass to a discount</para>
                 </caption>
             </mediaobject>
+        </section>
+    </section>
+        <section>
+            <title>Overriding a discount at the class level</title>
+        <para>Discounts can also be set to be valid as an offset from the class start date. The
+            offset can allow the discount to run prior to the start date, or after the start date.
+            This will allow the creation of both early bird style pricing and discounts for in-term
+            enrolments. To get here you will have to open a class that has a discount linked to it,
+            go to the Budget tab, then double click on the discount line.</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/class_value_override.png"/>
+            </imageobject>
+            <caption>
+                <para>Overriding the discount for the class AWOB-0006</para>
+            </caption>
+        </mediaobject>
+        <section>
+            <title>Example of how to create custom discounts for Smart and Skilled fees</title>
+            <para>Under Smart and Skilled, you may have five or more price points for an enrolling
+                student. The fee they are charged depends on their meeting various eligibility
+                criteria.</para>
+            <para>onCourse provides a range of tools for setting up the various fees using discount
+                strategies, and then ensuring all students are automatically charged the right fee
+                based on their eligibility.</para>
+            <para>In onCourse, we recommend you set the most common fee type as the class fee for
+                all your Smart and Skilled classes. You can then create various types of discounts
+                that either increase or decrease this fee to reflect the other student fee rates
+                that may apply.</para>
+            <para>In this example, we assume most students enrolling at the college are eligible for
+                the 'First Qualification' pricing, so the college will set these fees as the
+                standard class fee for each class in the budget tab. This will be the fee that
+                applies to students enrolling by default, unless another fee type is
+                selected.</para>
+            <para>In this example, the college offers three Smart and Skilled courses with the
+                following prices:</para>
+            <para>Certificate III in Early Childhood Education and Care</para><itemizedlist>
+                <listitem>
+                    <para>Full Fee: $6540</para>
+                </listitem>
+                <listitem>
+                    <para>First Qual: $1590</para>
+                </listitem>
+                <listitem>
+                    <para>Second Qual: $1910</para>
+                </listitem>
+                <listitem>
+                    <para>Traineeship: $1000</para>
+                </listitem>
+                <listitem>
+                    <para>Concession: $240</para>
+                </listitem>
+            </itemizedlist> 
+            <para>Certificate III in Community Services</para>
+            <itemizedlist>
+                <listitem>
+                    <para>Full Fee: $5340</para>
+                </listitem>
+                <listitem>
+                    <para>First Qual: $1440</para>
+                </listitem>
+                <listitem>
+                    <para>Second Qual: $1730</para>
+                </listitem>
+                <listitem>
+                    <para>Traineeship: $1000</para>
+                </listitem>
+                <listitem>
+                    <para>Concession: $240</para>
+                </listitem>
+            </itemizedlist> 
+            <para>Certificate III in Permaculture</para>
+            <itemizedlist>
+                <listitem>
+                    <para>Full Fee: $6080</para>
+                </listitem>
+                <listitem>
+                    <para>First Qual: $870</para>
+                </listitem>
+                <listitem>
+                    <para>Second Qual: $1040</para>
+                </listitem>
+                <listitem>
+                    <para>Concession: $160</para>
+                </listitem>
+            </itemizedlist> 
+            <para>Steps to
+                creating the discounts</para>
+            <para>To begin, create a range of Concession types in your onCourse preferences for each
+                of the other student fee types. Call them something like 'S&amp;S full fee',
+                'S&amp;S 1st qual', 'S&amp;S 2nd qual', 'S&amp;S trainee', 'S&amp;S concession'.
+                These concession types will be added to the student as their eligibility is
+                assessed, and then used to determine their fee type.</para>
+            <para>Think of each fee that isn't the First Qual rate as an offset of that value. The
+                Fee Fee and Second Qual rates require negative discounts (or surcharges) while the
+                Traineeship and Concession fees require discounts. Each type of price will require
+                it's own discount strategy. This will allow you to report, for each class, on how
+                many students enrolled at each price point using the standard discount
+                reports.</para>
+            <para>A discount type called S&amp;S Full Fee could be created that applies to all smart
+                and skilled classes with a discount dollar value of -$3900, and that applies to
+                students with the concession type S&amp;S full fee on their record. This amount will
+                make the Full Fee price for Certificate III in Community Services correct, but the
+                other two classes will need the fee further increased.</para>
+            <para>After saving the discount type, open the Certificate III in Early Childhood
+                Education and Care class, double click on the S&amp;S Full fee discount in the
+                budget tab, and override the -$3900 fee to -$4950 to bring the total to $6540.
+                Similarly, the S&amp;S Full Fee for Certificate III in Permaculture discount would
+                be overriden to -$5210.</para>
+            <para>Repeat these steps for each of the discount types for S&amp;S Second Qual, S&amp;S
+                Traineeships and S&amp;S Concession fees.</para>
+            <para>For the Full Fee to apply during the enrolment process, the student will need to
+                have the concession type 'S&amp;S full fee' attached to their contact record. This
+                will then automatically select the right price for the class they are enrolling
+                into.</para>
         </section>
     </section>
     <section>

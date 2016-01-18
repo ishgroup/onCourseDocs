@@ -18,14 +18,12 @@ task newRelease << {
         def notes = new File(subdir, "release-notes.xml")
         notes << """<?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-${version}">
-  <title>Release ${version}</title>
-  <revhistory>
-    <revision>
-      <revnumber>${version}</revnumber>
-      <date>${DateGroovyMethods.format(new Date(), 'd MMM yyyy')}</date>
-      <revremark></revremark>
-    </revision>
-  </revhistory>
+
+  <info>
+    <title>Release ${version}</title>
+    <date>16 Jan 2016</date>
+  </info>
+
   <section role="important">
     <title>Important changes</title>
     <para></para>

@@ -104,6 +104,8 @@ subprojects {
         outputFile = file("${buildDir}/html/index.html")
         if (project.path == ":apidocs") {
             stylesheet = file("${buildDir}/stylesheets/api-html.xsl")
+        } else if (project.path == ":release-notes") {
+            stylesheet = file("${buildDir}/stylesheets/release-html.xsl")
         } else {
             stylesheet = file("${buildDir}/stylesheets/standard-html.xsl")
         }

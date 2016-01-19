@@ -341,13 +341,13 @@
 								record? </para>
 						</question>
 						<answer>
-							<para> Find an enrolment record for the student and open the outcomes tab. Here you can add
-								additional outcomes as needed. Units completed at another training
-								organisation should be marked as <emphasis> 60 - Credit
-									transfer</emphasis> and their nominal hours are not counted
-								towards your colleges annual delivery. On the 'Notes' tab of the
-								students record, you can also add attachments, and it would be
-								appropriate to scan and attach copies of their original
+							<para>Open the student record and go to the education tab.  In the section called 'prior
+								learning' you can add additional outcomes as needed. Units completed
+								at another training organisation should be marked as <emphasis> 60 -
+									Credit transfer</emphasis> and their nominal hours are not
+								counted towards your colleges annual delivery. On the 'documents'
+								tab of the prior learning record, you can also add attachments, and
+								it would be appropriate to scan and attach copies of their original
 								certification and any other supporting documents they have provided
 								here, for your own records. </para>
 						</answer>
@@ -385,11 +385,81 @@
 				</mediaobject>
 			</section>
 		</section>
+		<section>
+			<title>Importing and adding prior learning</title>
+			<para>If you are migrating to onCourse from another AVETMISS compliant student management system,
+				or have students who have completed training at another RTO, you can add prior
+				learning data to a student's record that can be used to create Certificate records
+				in onCourse and also be exported out as AVETMISS data.</para>
+			<section>
+				<title>Manually adding prior learning records</title>
+				<para>The education tab of a student record is comprised of four sections - enrolments, prior
+					learning, outcomes and certificates. In onCourse, both enrolments and prior
+					learning can be vocational, and linked to one or more units of competency or be
+					non-vet and linked to no formal study units.</para>
+				<para>To add prior learning to a student record, click on the + option to the right
+					of the prior learning panel.</para>
+				<para>Prior learning must have a title - this can be descriptive of the course or
+					training conducted elsewhere. Optionally, the prior learning record can be
+					linked to a Qualifcation or Skills Set on the general tab, contain reference to
+					an external system reference number e.g. the course code or enrolment code from
+					the previous system and optional descriptive notes.</para>
+				<para>On the second tab, outcomes, you can manually add one or more units of
+					competency or accredited modules to the prior learning record. It is important
+					you add start and end dates to the units of competency, and a valid outcome
+					status here if you want to report them for AVETMISS or use the unit to create a
+					certificate. If you are adding units completed at another RTO, you should record
+					the outcome status as 'Credit Transfer'.</para>
+				<para>If you scan any documents, such as a copy of their Certificate, you can add
+					them to the prior learning record also. You will just need to make sure you save
+					the prior learning record first, before adding documents.</para>
+				<para>Once the prior learning record has been saved, the outcomes attached to the
+					prior learning will appear in the outcomes section of the student's education
+					record, combined with any outcomes completed by the student via enrolments into
+					onCourse classes.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/manual_add_prior_learning.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>The general tab of the prior learning sheet in the Education tab of a contact</para>
+					</caption>
+				</mediaobject>
+			</section>
+			<section>
+				<title>Importing prior learning using AVETMISS files</title>
+				<para>If you are migrating to onCourse and wish to bring over your student and outcome data,
+					onCourse can import standard AVETMISS files to create student contact records
+					with prior learning data.</para>
+				<para>We recommend you only use this migration option if you are setting up a new
+					onCourse database. If you are importing data into an active onCourse database,
+					please speak with us first to confirm what import option is the best option to
+					avoid creating duplicate student records. </para>
+				<para>You will need validated NAT00060, NAT00080, NAT00085 and NAT00120 files first.
+					Make sure these files have been validated in the <link
+						xlink:href="https://avs.ncver.edu.au/avs/">NCVER AVS tool</link> and are reporting no
+					errors before importing them into onCourse. </para>
+				<para>To import these files, go to File > Import/Export > Import... and select the option
+					'onCourse AVETMISS outcome import'. The import process will prompt you to open
+					each of the NAT files listed above from a location on your computer.</para>
+				<para>Once you have selected all four files, click on the import button on the
+					bottom of the window.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/import_avetmiss_files.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Selecting AVETMISS files to import into onCourse</para>
+					</caption>
+				</mediaobject>
+			</section>
+		</section>
 	</section>
 	<section xml:id="rto-CSWECourses">
 		<title>CSWE courses, classes and outcomes</title>
-		<para>Making government reporting less of a hassle for student focused literacy
-			program</para>
+		<para>Making government reporting less of a hassle for student focused literacy programs</para>
 		<section>
 			<title>Setting up Certificate in Spoken and Written English (CSWE) courses</title>
 			<para> Some colleges who deliver CSWE courses run open English language programs at different
@@ -1145,7 +1215,7 @@
 				that they are available in the student's skillsonCourse portal. You can do this by following these steps:</para>
 			<orderedlist>
 				<listitem>
-					<para>Follow the intructions above about how to print a certificate. </para>
+					<para>Follow the instructions above about how to print a certificate. </para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="70%" contentdepth="70%"
@@ -1213,12 +1283,12 @@
 			<title>Exporting Certificate data</title>
 			<para>As an RTO, you may be required to provide reports of the certificates you have issued to
 				your VET Regulator. In Western Australia, a defined format for providing this
-				information exisiting in a format called the Client Qualifications Register (CQR). </para>
+				information existing in a format called the Client Qualifications Register (CQR). </para>
 			<para>In other states and territories, there is no set defined format, outside the
 				AVETMISS data reporting of the NAT00130 file.</para>
 			<para>onCourse contains both a CQR layout export CSV option for use in WA and a generic
 				Certificate CSV export option for use in other jurisdictions. Both of these file
-				formats can be opened in Excel, Numbers or other spreasheet or text editing tool of
+				formats can be opened in Excel, Numbers or other spreadsheet or text editing tool of
 				your choice to view or edit.</para>
 			<para>To access these exports, first select the records in the certificate window you
 				wish to export by either running an advanced search or by highlighting the records

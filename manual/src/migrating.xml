@@ -8,7 +8,7 @@
         into onCourse, and only bring across data that serves a valid business purpose, such as
         contact data from the last three years. </para>
     <para>If you are using a commercial system under licence, which you will no longer have access
-        to once you stop paying your licening fees, and your are an RTO, you may be required by
+        to once you stop paying your licensing fees, and your are an RTO, you may be required by
         compliance standard to bring over as much information as possible so you can access 'old'
         training data, for as long as thirty years.</para>
     <para>Of course, garbage in equals garbage out. One of the reasons you may be moving to a new
@@ -20,14 +20,14 @@
         fields, and how the data in each table is related to data in other tables. Even though all
         student management systems roughly store the same sort of information about students,
         enrolments and outcomes that's about where the similarity ends. How they each do it is
-        completly different. onCourse is as open and transparent to the world about our database
+        completely different. onCourse is as open and transparent to the world about our database
         schema as possible, and we publish this information on our public website. This makes it
-        easy to migrate to, and away from, onCourse, without having to pay us for the privlidge.
+        easy to migrate to, and away from, onCourse, without having to pay us for the privilege.
         However, many database system schemas are commercially confident, so exporting and importing
         usable structured data from them may be near on impossible.</para>
     <para>Every student management database is analogous to a human language, so converting your
         data from your current system to onCourse may be a bit like translating some text from
-        English to Mandarin and then back to English. It's unlikly to come out looking quite the
+        English to Mandarin and then back to English. It's unlikely to come out looking quite the
         same way as it did when it went in. However, if your current system is capable of exporting
         contact data in CSV files or enrolment data in AVETMISS files, then we have included some
         basic import options in onCourse.</para>
@@ -38,7 +38,7 @@
         quote for a custom migration. </para>
     <section>
         <title>DIY Migration options</title>
-        <para>Loooking for a low cost do-it-youself version? One of the strengths of onCourse is its
+        <para>Looking for a low cost do-it-youself version? One of the strengths of onCourse is its
             comprehensive access to the data behind every field in the system. Every field in every
             object is accessible through the API, driven by groovy scripts. Out of the box, onCourse
             comes with several useful import scripts. </para>
@@ -46,8 +46,63 @@
            <title>Contact CSV import</title>
            <para>Sometimes you just need a simple way to get contact data from Excel into onCourse.
                 In onCourse, contacts can be students, tutors or companies. Format your Excel
-                spreadsheet with the following columns in this order: </para>
-           <para>Then save your document as CSV and import it from the File -> Import menu. Remember that you will get duplicate contacts if you import the same records again, but you can use the onCourse de-dupe feature (see ...) to resolve this manually.</para>
+                spreadsheet with the following columns (shown here in rows, with a sample data in
+                the format "columnName : example data")</para>
+            <para>The order of the columns isn't important, and you can leave columns blank where
+                there is no data for that contact</para>
+            <para>Every contact should have their own row. In this example, the contact is both a
+                student and a tutor. For a contact that is only a tutor, all the student specific
+                fields can be left blank.</para>
+            <para>title: Mr</para>
+           <para>lastName	:	Student </para>
+           <para>firstName	:	Sample</para>
+            <para>middleName : Bob</para>
+            <para>honorific: BEd (Primary)</para>
+           <para>gender : M</para>
+           <para>birthDate	:	1970-01-31</para>
+           <para>company	:	FALSE</para>
+           <para>isStudent	:	TRUE</para>
+           <para>isTutor	:	TRUE</para>
+           <para>allowEmail	:	TRUE</para>
+           <para>allowPost	:	TRUE</para>
+           <para>allowSms	:	TRUE</para>
+           <para>homePhone	:	02 9555 0000</para>
+           <para> workPhone	:	02 9555 0001</para>
+           <para>mobilePhone	:	0412 211 111</para>
+           <para>street	:	121 Sampler St</para>
+           <para>postcode	:	2299</para>
+           <para>suburb	:	Suburbia</para>
+           <para>state	:	NSW</para>
+           <para>email	:	sample@sample.com</para>
+           <para>fax	:	02 9555 0000</para>
+           <para>notes	:	any student history you want to record</para>
+           <para>message	:	Carries EpiPen</para>
+           <para> studentNumber	:	6706</para>
+           <para>usi	:	2222222222</para>
+           <para>usiStatus	:	Not verified</para>
+           <para>chessn	:	12345678</para>
+           <para>countryOfBirth	:	Bulgaria</para>
+           <para>townOfBirth	:	Bulgar</para>
+           <para>studentIndigenousStatus	:	Neither</para>
+           <para>languageSpokenAtHome	:	Bulgarian</para>
+           <para>studentEnglishProficiency	:	Very Well</para>
+           <para>studentHighestSchoolLevel	:	Year 12</para>
+           <para>studentYearSchoolCompleted	:	1992</para>
+           <para>studentPriorEducation	:	Diploma level</para>
+           <para>studentIsStillAtSchool	:	FALSE</para>
+           <para>studentLabourForceStatus	:	Full-time employee</para>
+           <para>studentDisabilityType	:	none</para>
+           <para>disabilitySupportRequested	:	TRUE</para>
+           <para>studentSpecialNeeds	:	Allergic to peanuts</para>
+           <para>abn	:	74 037 212 123</para>
+           <para>tutorPayrollNo	:	AB1234</para>
+           <para>tutorDateStarted	:	1998-01-25</para>
+           <para>tutorDateFinished	:	</para>
+            <para>tutorResume	:	Any information you want to publish about the tutors experience and credentials</para>
+           <para>Then save your document as CSV and import it from the File -> Import menu. Remember
+                that you will get duplicate contacts if you import the same records again, but you
+                can use the onCourse <link
+                    xlink:href="contacts.html">merge contacts feature</link> to resolve this manually.</para>
        </section>
         <section>
             <title>AVETMISS 80/85</title>
@@ -61,8 +116,32 @@
         </section>
         <section>
             <title>AVETMISS 60, 80, 85 and 120 </title>
-            <para>This import works just the same way as the 80/85 import above, but it also brings in outcomes data. Although the AVETMISS standard calls the 120 file "enrolments" it actually represents what onCourse calls "outcomes". That is, just a relationship between the student and the modules/units of competency. In onCourse we cannot store that in the Enrolment because we'd need classes, courses and much more. The AVETMISS data isn't enough to reconstruct all that. Instead we create records in PriorLearning representing learning that was recorded outside of onCourse. All the important Outcome data is also imported and stored.</para>
-            <para>So you can run an AVETMISS export from your legacy system, submit it to the relevant training authorities, import that data to onCourse and then run another export with exactly the same results.</para>
+            <para>This import works just the same way as the 80/85 import above, but it also brings
+                in outcomes data. Although the AVETMISS standard calls the 120 file "enrolments" it
+                actually represents what onCourse calls "outcomes". That is, just a relationship
+                between the student and the modules/units of competency. In onCourse we cannot store
+                that in the Enrolment because we'd need classes, courses and much more. The AVETMISS
+                data isn't enough to reconstruct all that. Instead we create records in Prior
+                Learning representing learning that was recorded outside of onCourse. All the
+                important Outcome data is also imported and stored.</para>
+            <para>You can run an AVETMISS export from your legacy system, submit it to the relevant
+                training authorities, import that data to onCourse and then run another export with
+                almost the same results. Minor changes may occur where onCourse applies validation
+                rules during the export process to reduce your errors.</para>
+            <para>When you export the AVETMISS data from your legacy system, make sure you export
+                the entire date range you wish to bring across into a single set of files. If your
+                legacy system only allows for the export of a maximum 12 months of data at a time,
+                please contact us first. If you import multiple years in multiple sets of files, it
+                is possible you will create quite a number of duplicate records in onCourse.</para>
+            <para>If you are importing AVETMISS data into to onCourse, it is import that it is
+                validated and as error free as possible. We suggest using the <link
+                    xlink:href="https://avs.ncver.edu.au/avs/">NCVER AVS tool</link> to check your
+                data prior to import.</para>
+            <para>To import the NAT00060, NAT00080, NAT00085 and NAT00120 files, go to File > Import/Export > Import... and select the option
+                'onCourse AVETMISS outcome import'. The import process will prompt you to open
+                each of the NAT files listed above from a location on your computer.</para>
+            <para>Once you have selected all four files, click on the import button on the
+                bottom of the window.</para>
         </section>
     </section>
     <section>

@@ -7,8 +7,15 @@
 		<title>Exporting</title>
 		<section>
 			<title>Copying and pasting</title>
-			<para>It almost seems too easy. Just select any records in any list view. Then choose
-				copy from the edit menu and paste the data into Excel or a text editor.</para>
+			<para>It almost seems too easy - just select any records in any list view then choose copy from
+				the edit menu and paste the data into Excel or a text editor.</para>
+			<para>The data you copy and then paste will come out in the same column layout and sort
+				order as the window you copied it from.</para>
+			<para>If you have opened a very large list of data, please note that it may take some
+				time for this list to load into your onCourse client memory. This is a process that
+				runs in the background of onCourse, and not something immediately visible to you as
+				a user. If you try to copy and paste from a list before the load process has
+				completed, the copy process will not be sucessful. </para>
 		</section>
 		<section>
 			<title>From the list view</title>
@@ -455,44 +462,16 @@ records.each { AccountTransaction t ->
 	</section>
 	<section xml:id="importExport-Import">
 		<title>Importing</title>
-		<para>There are a few options to import data into onCourse, they are:</para>
-		<section>
-			<title>AVETMISS 80/85</title>
-			<orderedlist>
-				<listitem>
-					<para>Export AVETMISS 80 and 85 files from your legacy enrolment system </para>
-				</listitem>
-				<listitem>
-					<para>Run onCourse client and choose "File" -> "Import/Export". Select the two files you
-						exported in step 1. </para>
-				</listitem>
-				<listitem>
-					<para>This process can take a while if you have large numbers of students since
-						each record is validated as it is imported. </para>
-				</listitem>
-			</orderedlist>
-		</section>
-		<section>
-			<title>XML import</title>
-			<para>Using a published XML format you will be able to migrate your data easily to
-				onCourse, so long as you are able to export to this format from your existing
-				system. This will bring across students, sites, rooms, courses, classes, tutors,
-				enrolments and outcomes to onCourse. </para>
-			<para> In order to perform this import, connect onCourse client to the server. After logging in,
-				choose "File" -> "Import/Export" -> "Import XML". Choose your XML data file and let
-				the process run to completion (this will take some time for large datasets). It is
-				usual to begin this process with a clean, empty data file, however that is not
-				necessary. </para>
-			<para> Note that the import process validates every record as it is imported. If
-				validation errors occur (eg. a student birth date in the future) that record will be
-				rejected and logged in an error file called "import.log" </para>
-			<para>We also have the <link xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd">formal XML
-					schema</link> and <link xlink:href="http://www.ish.com.au/s/oncourse-schema/dataImport.xsd.html">user
-					friendly documentation</link> available from our website. </para>
-			<para>Other legacy systems</para>
-			<para>Please contact ish for tools which can help you export data from your legacy
-				databases and import into onCourse. In the past we have created export helpers for
-				systems such as GLEP. </para>
-		</section>
+		<para>Using the onCourse Groovy scripting engine, powerful import process can be created in
+			onCourse for either once off events or a regular data transfer between onCourse and a
+			third party software service.</para>
+		<para>For once off type data imports, you may like to read our chapter on <link
+			xlink:href="migrating.html">Migrating to
+			onCourse.</link></para>
+		<para>For regular data transfers, you may like to read our chapter on <link
+			xlink:href="externalintegrations.html">External
+			Integrations.</link></para>
+		<para>Custom import processes and integration scripts can also be created on request. Please
+			send you request to support@ish.com.au</para>
 	</section>
 </chapter>

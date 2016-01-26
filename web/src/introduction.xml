@@ -371,7 +371,40 @@
 				is only in hand crafted URLs you need to remember to add the space delimiter. "%20"
 				works also, but makes the URL harder for a human to read.</para>
 		</note>
-
+<section>
+	<title>
+		Filtering class results using advanced search
+	</title>
+	<para>Advanced search parametres can also be added to specific course pages, to filter the list of
+				results returned. This can be a useful function when you offer the same course in
+				multiple locations, but users only want to see the classes from a specific
+				location.</para>
+			<para>These search options are appended to a standard course page, with the URL
+				containing the course code. In these examples, I'll use the course code
+				ABC123.</para>
+			<variablelist>
+				<varlistentry>
+					<term>/course/ABC123/?near=Chatswood+2057</term>
+					<listitem>
+						<para>Search on both the Suburb+postcode. While the search may work without the postcode,
+							adding the postcode is essential to determine location if the suburb exists
+							in multiple states.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/course/ABC123/?time=day</term>
+					<listitem>
+						<para>Searching for day classes of a course means the first session commences before
+							5pm.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/course/ABC123/?time=evening</term>
+					<listitem>
+						<para>Searching evening classes of a course means the first session starts after 5pm.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+</section>
 	</section>
 	<section>
 		<title>Search Engine Optimisation</title>

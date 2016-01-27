@@ -1140,5 +1140,33 @@
 				around it in the export process so we that don't stop you doing what you want in the
 				onCourse software.</para>
 		</section>
+		<section>
+			<title>How does prior learning affect AVETMISS reports?</title>
+			<para>Prior learning records only export from AVETMISS exports run from the file >
+				imprt/export >export AVETMISS menu option. They will not export from the cogwheel
+				option in the classes or enrolments window, because they are not associated with
+				either a class or an enrolment, but instead are attached directly to the
+				student.</para>
+			<para>When you create a prior learning record with one or more outcomes attached, and the start
+				and end dates of the prior learning outcomes fall into the 'outcomes after' to
+				-'outcomes before' date range set in the AVETMISS 7 export runner, then the data
+				associated with the prior learning record will export.</para>
+			<para>At a minimum, to create successful AVETMISS files your prior learning outcomes
+				need, in addition to a start date and end date, an outcome status. All other values
+				are optional.</para>
+			<para>If a Delivery Mode is not set, 'classroom based' will export as the default,
+				unless the outcome has an RPL status, in which case the delivery mode ' not
+				applicable' will export.</para>
+			<para>If the Funding Source - national is not set, then the default funding source set
+				in the college preferences will be applied.</para>
+			<para>If the prior learning record was linked to a qualification or skills set, then the
+				Commencing Program Identifer will export as '3 - commencing enrolment', othewise it
+				will export as '8 - module only enrolment'. </para>
+			<para>If the prior learning record was linked to a qualification or skills set, then the
+				Study Reason Identifier will export as '11 - other reasons'.</para>
+			<para>The VET in Schools flag will always export as No.</para>
+			<para>The training location for all prior learning outcomes will be set to your college
+				default administration site address.</para>
+		</section>
 	</section>
 </chapter>

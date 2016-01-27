@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-8.9">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-8.10">
   
   <info>
-    <title>Release 8.9</title>
+    <title>Release 8.10</title>
     <pubdate>22 Jan 2016</pubdate>
   </info>
   
@@ -52,7 +52,14 @@
     <para>
       <itemizedlist><listitem><para>A new field has been added to the financial preferences tab called 'invoice remittance instructions'. Enter your custom instructions for your invoice payments here e.g. bank account details, and it will print on invoices with an outstanding balance to pay <systemitem>#26912</systemitem></para></listitem>
         <listitem><para>onCourse now remembers the user preference for the list view sort column, so when you close a list view and reopen it, it will reopen showing the data listed in the same way <systemitem>#20965</systemitem></para></listitem>
-        <listitem><para>You can now sort list views by multiple columns at once by holding down the shift key and clicking on multiple column headers. The sort order is determined by the order the column headers are clicked upon i.e the first column clicked is the primary sort order, followed by the second column clicked ect. <systemitem>#20965</systemitem></para></listitem></itemizedlist></para>
+        <listitem><para>You can now sort list views by multiple columns at once by holding down the shift key and clicking on multiple column headers. The sort order is determined by the order the column headers are clicked upon i.e the first column clicked is the primary sort order, followed by the second column clicked ect. <systemitem>#20965</systemitem></para></listitem>
+      <listitem><para>For AVETMISS field values that populate from class, to enrolment and then to outcome, the
+            lock/unlock icon is used to show where values have been inherited (field shows a value
+            with a locked padlock) versus where the value has been overridden (field is in editable
+            mode, with an unlocked padlock) <systemitem>#25252</systemitem></para></listitem>
+        <listitem><para>A new field, Confirmation of Enrolment (CoE) has been added to the enrolment edit window for CRICOS enrolments. This field does not report as part of the AVETMISS standard <systemitem>#27121</systemitem></para></listitem>
+      <listitem><para>The Discount edit layout has been refreshed to improve the usability and grouping of related discount options<systemitem>#27300</systemitem></para></listitem>
+      </itemizedlist></para>
   </section>
   <section role="fixes">
     <title>Fixes</title>
@@ -68,9 +75,16 @@
       <listitem><para>Fix to 'find related invoices' from the accounts window to ensure it returns the expected results <systemitem>#26891</systemitem></para></listitem>
       <listitem><para>Remove caching of payslip list view to improve ability to locate newly created records <systemitem>#27067</systemitem></para></listitem>
       <listitem><para>Fix to edit/save behaviour of multi record update options such as setting outcome values or adding/removing tags, so that if the record is not saved then the changes to the associated records are not saved <systemitem>#26837</systemitem></para></listitem>
-      <listitem><para>Add correct pluralisation to sub list headings i.e. add 's' to the name when there is more than one record 
-            <systemitem>#26995</systemitem></para></listitem>
-      <listitem><para>Pre-populate student information into Quick Enrol when the 'add enrolment' option is clicked inside their contact record <systemitem>#27263</systemitem></para></listitem></itemizedlist></para>
+      <listitem><para>Add correct pluralisation to sub list headings i.e. add 's' to the name when there is more than one record <systemitem>#26995</systemitem></para></listitem>
+      <listitem><para>Pre-populate student information into Quick Enrol when the 'add enrolment' option is clicked inside their contact record <systemitem>#27263</systemitem></para></listitem>
+      <listitem><para>Improve load time between onCourse splash screen and login window<systemitem>#26983</systemitem></para></listitem>
+      <listitem><para>mySQL upgrade from AUTO_PK to db generated primary keys for improved use of database transaction functionality<systemitem>#26963</systemitem></para></listitem>
+      <listitem><para>Improved the opening speed of the CorporatePass edit view by removing the embedded list of invoices that have used the CorporatePass. The find related function shows this information as needed<systemitem>#27172</systemitem></para></listitem>
+      <listitem><para>Improved layout for payment plans in the invoice edit view. Payment lines are now arranged in chronological order so it logically follows Invoice and Payment In lines. Removed from view any unnecessary overdue values for initial payment lines <systemitem>#27204</systemitem></para></listitem>  
+    <listitem><para>Fix to the 'Hide discounted price on web' option in the discount window so it can be applied when a discount is eligible via a CorporatePass redemption, and not shown to general visitors on the website<systemitem>#27300</systemitem></para></listitem>
+      <listitem><para>Performance improvements to the send email process when large batches of emails are sent together<systemitem>#27328</systemitem></para></listitem>
+    </itemizedlist>
+    </para>
   </section>
   <section role="web">
     <title>Web features</title>
@@ -92,6 +106,4 @@
       <listitem><para>Fix to rich text rendering in portal to display italic text <systemitem>#27224</systemitem></para></listitem></itemizedlist></para>
   </section>
 </chapter>
-
-
 

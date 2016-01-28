@@ -75,7 +75,7 @@
 			</listitem>
 		</itemizedlist>
 		<para> Quick Enrol is a tool in which you can enrol students into classes. Most of the
-			fields have autocomplete functionality which means when you start typing, onCourse
+			fields have auto complete functionality which means when you start typing, onCourse
 			starts finding students that start with that name, and will display the results on the
 			right hand side of the window.</para>
 		<para>The following will identify the different elements of the Quick Enrol window, and what
@@ -213,7 +213,7 @@
 								fileref="images/autocomplete.png"/>
 						</imageobject>
 						<caption>
-							<para>Use the autocomplete to locate and select the student</para>
+							<para>Use the auto complete to locate and select the student</para>
 						</caption>
 					</mediaobject>
 				</listitem>
@@ -223,7 +223,7 @@
 				</listitem>
 				<listitem>
 					<para>From here input either a course code or course name, again these fields
-						are autocomplete so if you were to type e.g "Comp", courses that begin with
+						are auto complete so if you were to type e.g. "Comp", courses that begin with
 						those letters, e.g. 'Computers for Beginners', 'Computers for Seniors' will
 						be available to select. </para>
 				</listitem>
@@ -232,7 +232,7 @@
 						you in the "Choose a class" list view, highlight the class you want. By
 						default, only current and future classes will be shown.</para>
 					<para>The "Show finished classes" checkbox can be selected to include classes
-						that are now past their end date, e.g "Computers - Beginners ABC-123" is
+						that are now past their end date, e.g. "Computers - Beginners ABC-123" is
 						scheduled to end on 24/11/13, and the date is 25/11/13, selecting "Show
 						finished classes" ensures that "Computers - Beginners ACBC-123" is shown in
 						the class list view and can be selected for enrolment.</para>
@@ -639,7 +639,7 @@
 					</caption>
 				</mediaobject></para>
 			<para>If you are enrolling a student in more than one class, with one being a payment plan then
-				you will end up with two invoices. Every playment plan class will get it's own
+				you will end up with two invoices. Every payment plan class will get it's own
 				invoice so if you enrolling a student into five classes, with two having payment
 				plan and with the other three not, then there will be three invoices created.<mediaobject>
 					<imageobject>
@@ -1018,6 +1018,160 @@
 				<para>Sending an enrolment confirmation and invoice through quick enrol</para>
 			</caption>
 		</mediaobject>
+	</section>
+	<section xml:id="AVETMISSEnrolments">
+		<title>Adding additional AVETMISS and other reporting information to an enrolment</title>
+		<para>Some additional information you need to record for your AVETMISS, traineeship, CRICOS or VET
+			Fee-Help reporting can be added to the enrolment record after it has been created. This
+			information can not be added in Quick Enrol at the time you create the enrolment.</para>
+		<para>To locate an enrolment, go to People > Enrolments and search for the enrolment you
+			have created. Double click on your enrolment to open it in edit mode.</para>
+		<section> 
+			<title>Fields to set at the enrolment level</title>
+		<para>On the enrolment general tab, you can set a value for the following fields. Most of these
+				field only affect AVETMISS reporting.</para>
+		<para><emphasis role="bold">Study Reason</emphasis> reported in the NAT00120 for students
+			enrolling in a qualification or skills set. If you don't set a value here, the default
+			'11 - other reasons' will be exported</para>
+		<para><emphasis role="bold">Fee Exemption Concession Type</emphasis> reported in the
+			NAT00120 as a below the line state reporting option</para>
+		<para><emphasis role="bold">Associate Course Identifier (SA - SACE Student ID) </emphasis>
+			reported in the NAT00120 as a below the line state reporting option</para>
+		<para><emphasis role="bold">Full Time Flag (QLD)</emphasis> reported in the NAT00120 as a below
+			the line state reporting option</para>
+		<para><emphasis role="bold">VET in Schools Enrolment</emphasis> reported in the NAT00120. If you
+			don't tick this option, an N for No will be exported as default</para>
+		<para><emphasis role="bold">Outcome Identifier - Training Organisation</emphasis> reported in the
+			NAT00120 as a below the line state reporting option. If you are reporting a Smart &amp;
+			Skilled enrolment in NSW, this is where you record a student who did not commence their
+			training after being issued a Commitment ID</para>
+		<para><emphasis role="bold">Training Contract: apprenticeships</emphasis> reported in the NAT00120
+			for students undertaking funded training</para>
+		<para><emphasis role="bold">Client Identifier: apprenticeships</emphasis> reported in the NAT00120
+			for students undertaking funded training</para>
+		<para><emphasis role="bold">CRICOS: Confirmation of Enrolment</emphasis> This is not a field
+			reported in AVETMISS, but used for management of CRICOS (overseas) students and
+			reporting to PRISMS</para>
+		<para><emphasis role="bold">Eligibility exemption identifier (Vic)</emphasis> reported in the
+			NAT00120 as a below the line state reporting option</para>
+		<para><emphasis role="bold">VET FEE HELP indicator (Vic)</emphasis> reported in the NAT00120 as a
+			below the line state reporting option</para>
+		<para><emphasis role="bold">Training Plan Developed (NSW)</emphasis> reported in the NAT00120 as a
+			below the line state reporting option</para>
+		</section>
+		<section>
+			<title>Fields that can be overridden at the enrolment level</title>
+		<para>On the enrolment general tab, you can override the values inherited from other places in
+				onCourse. Fields that have inherited a specified value from a parent field will show
+				as locked. If you click on the padlock to unlock them, you can enter a different
+				value in the field. If the field has inherited no value (a null value) from the
+				parent record, and you click in the field to type in a value, it will show the
+				unlock symbol to indicate this value is not inherited.</para>
+			<para>If you lock an unlocked field, it loses its overridden value, and returns to
+				inheriting the value from the parent record, even if that value was null.</para>
+		<para><emphasis role="bold">Funding source - National</emphasis> This is inherited from the
+				college default preferences, or from the class VET tab settings and can be
+				overridden on the general tab for all outcomes attached to the enrolment, or on the
+				outcomes tab for individual outcomes attached to the enrolment. This value is
+				reported in the NAT00120 file.</para>
+		<para><emphasis role="bold">Funding Source - State</emphasis> This is inherited from the class VET
+				tab settings and can be overridden on the general tab for all outcomes attached to
+				the enrolment, or on the outcomes tab for individual outcomes attached to the
+				enrolment. This value is reported in the NAT00120 as a below the line state
+				reporting option.</para>
+		<para><emphasis role="bold">Purchasing Contract Identifier (NSW Commitment ID) </emphasis> This is
+				inherited from the class VET tab settings and can be overridden on the general tab
+				for all outcomes attached to the enrolment, or on the outcomes tab for individual
+				outcomes attached to the enrolment. If you are using this field for reporting into
+				NSW, to record a Smart &amp; Skilled Commitment ID, the enrolment is the place to
+				enter this information. This value is reported in the NAT00120 as a below the line
+				state reporting option.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/add_override_enrolment_fields.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Enrolment general tabs show locked and unlocked fields with inherited and overridden
+						values</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section><title>Fields that can be set at the outcome level</title>
+		<para><emphasis role="bold">Status</emphasis> This is the Outcome Identifier - National that is
+				reported in the NAT00120 file. You can also set values for these en masse from the
+				list view in the enrolment, student or class by highlighting a number of outcomes
+				and right clicking on them, selecting the option 'mark xx VET outcomes as
+				successfully completed'</para>
+			<para><emphasis role="bold">Hours Attended</emphasis> reported in the NAT00120 as a below the
+				line state reporting option, only for outcomes with a status of 'withdrawn'</para>
+			<para><emphasis role="bold">Specific program identifier</emphasis> this is the Specific Funding
+				Identifier reported in the NAT00120</para>
+		</section>
+		<section><title>Fields that can be overridden at the outcome level</title>
+		<para><emphasis role="bold">Module Code/ Module Name</emphasis> While this field doesn't display
+				with a lock/unlock symbol, by default it is showing outcomes linked via the
+				enrolment in the course where the outcomes the student will complete were defined.
+				These outcomes can be changed to any other unit of competency in the database. This
+				value is reported in the NAT00120 and the NAT0060 files.</para>
+			<para><emphasis role="bold">Start Date</emphasis> This information is inherited from the class,
+				and based on either the start date of the sessions for a timetabled class, or the
+				student's enrolment date for a self paced class. This can be overridden in the list
+				view of the edit view. This value is reported in the NAT00120 file.</para>
+			<para><emphasis role="bold">End Date</emphasis> This information is inherited from the class,
+				and based on either the end date of the sessions for a timetabled class, or the
+				student's enrolment date plus the class duration for a self paced class. This can be
+				overridden in the list view of the edit view. This value is reported in the NAT00120
+				file.</para> 
+			<para><emphasis role="bold">Reportable Hours</emphasis> These are the Scheduled hours as reported
+				in the NAT00120. They are inherited from the nominal hours set at the unit of
+				competency level. This value is reported in the NAT00120 file.</para>
+			<para><emphasis role="bold">Delivery Mode</emphasis> This value is inherited from the default
+				college preferences, or the class delivery mode. If no delivery mode is set,
+				onCourse will automatically export 'classroom based (10)' for all enrolments except
+				those with RPL or credit transfer status, where it will export delivery mode 'not
+				applicable (90)'. If the only correct value for exporting is 'not applicable (90)'
+				because of the Status set, then onCourse will always export this value no matter
+				what option you set in this field. This value is reported in the NAT00120
+				file</para>
+			<para><emphasis role="bold">Funding Source - National</emphasis> This is inherited from the
+				college default preferences, from the class VET tab settings, or from the enrolment
+				and can be overridden on a per outcome basis as needed. This value is reported in
+				the NAT00120 file. </para>
+			<para><emphasis role="bold">Purchasing Contract Identifier</emphasis> This is inherited from the
+				class VET tab settings, or the enrolment and can be overridden for individual
+				outcomes attached to the enrolment. If you are using this field for reporting into
+				NSW, to record a Smart &amp; Skilled Commitment ID, the enrolment is the place to
+				enter this information. This value is reported in the NAT00120 as a below the line
+				state reporting option.</para>
+			<para><emphasis role="bold">Funding Source State</emphasis> This is inherited from the class VET
+				tab settings, or the enrolment and can be overridden for individual outcomes
+				attached to the enrolment. This value is reported in the NAT00120 as a below the
+				line state reporting option.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/outcome_locked_unlocked.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Outcome showing locked and unlocked fields with inherited and overridden
+						values</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>VET Fee Help fields in the enrolment</title>
+			<para>Information about setting VET Fee Help field values in the enrolment can be found in <link
+					xlink:href="FEEHELP.html#FEEHELP-loanRequests">Student VET Fee-Help Loan
+					Requests.</link></para>
+		</section>
+		<section>
+			<title>Enrolment Attachments</title>
+			<para>Enrolment records can contain private note records and document attachments on the
+				'Attachments' tab of the record. More information can be found in <link
+					xlink:href="documentManagement.html">documentation management.</link></para>
+		</section>
+			
 	</section>
 	<section xml:id="processingEnrolments-FAQs">
 		<title>Quick Enrol FAQ</title>

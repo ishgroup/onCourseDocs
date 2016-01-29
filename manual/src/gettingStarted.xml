@@ -796,15 +796,15 @@
 			little overwhelming. You need a way to organise and structure your data, this is where filters
 			and queries come into play. </para>
 		<para>The simplest way of organising your data is to sort by column. When you open a list view,
-			you will see columns with different values. An example would be the "tutor" field in
-			"class". This column will list the name of the tutor for the class. To sort a column you
-			simply click onto it to sort by what type of values they are, so if the column contains
-			names, then the column will be organised alphabetically, clicking on it again will sort
-			it reverse alphabetically. See the screenshot below to get an idea of how this
+			you will see columns with different values. An example would be the "Course" field in
+			"class". This column will list the name of the Course for this class. To sort a column
+			you simply click onto it to sort by what type of values they are, so if the column
+			contains names, then the column will be organised alphabetically, clicking on it again
+			will sort it reverse alphabetically. See the screenshot below to get an idea of how this
 			works.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/tutorSorted.png"
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/courseSorted.png"
 					format="png" />
 			</imageobject>
 			<caption>
@@ -813,6 +813,7 @@
 		</mediaobject>
 		<para>You could also expand the size of a column by hovering over the left or right side of the
 			column until a black cross appears, then dragging left or right to expand or shrink.</para>
+		<note><para>Only columns that are static have the ability to be sorted. So since columns such as Enrolments and Vacanies are dynamic we prevented them from being able to be sorted because this would have massively slowed down the speed of onCourse.</para></note>
 		<section>
 			<title>Core Filters</title>
 			<para>Core filters are a way to sort your data on a larger scale, an example of these would be

@@ -1,5 +1,12 @@
 import org.codehaus.groovy.runtime.DateGroovyMethods
 
+task mergeImages(type: Copy) {
+    from fileTree(dir: 'src', include: '**/images/*').files
+    into "${buildDir}/html/images"
+    includeEmptyDirs = false
+}
+docbookHtml.dependsOn mergeImages
+
 task newRelease << {
     if (project.hasProperty('docVersion')) {
         version = project.docVersion

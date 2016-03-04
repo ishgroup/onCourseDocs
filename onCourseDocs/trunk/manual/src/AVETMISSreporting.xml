@@ -18,7 +18,8 @@
 			student management database currently available to the Australian RTO market that
 			exports both to the NCVER National standard and each state's AVETMISS variation for
 			funded training. onCourse exports AVETMISS data compliant with the AVETMISS 7 standard,
-			including the USI requirements which came into effect as of January 1 2015.</para>
+			including the USI requirements which came into effect for most RTOs as of January 1
+			2015.</para>
 		<para>The AVETMISS data you are required to submit are made up of a series of files with
 			names like NAT00120. These files must be supplied as plain text in a fixed width format.
 			These files are not very easy to create or read by a human as if one character is in the
@@ -91,9 +92,10 @@
 		</para>
 		<section>
 			<title>Training Organisation (NAT00010) file</title>
-			<para>All the data in this file is collected in the onCourse general preferences window.
-				Go to File > Preferences > General. Select the AVETMISS tab and enter the contact
-				details of your business.</para>
+			<para>All the data in this file is collected in the onCourse general preferences window. Go to
+				File > Preferences > General. Select the AVETMISS tab and enter the contact details
+				of your business. It is important your RTO Identifer and name match the details
+				recorded on training.gov.au</para>
 		</section>
 		<section>
 			<title>Training Organisation Delivery Location (NAT00020) File</title>
@@ -455,15 +457,34 @@
 		<title>AVETMISS Exports</title>
 		<subtitle>How to get your AVETMISS data out of onCourse to submit to the government funding
 			body of your choice</subtitle>
-		<para>There are two ways to export your data. One is via a date based range and the other is
-			by selecting one or more particular classes you want to export. The date based export
-			will export every outcome in your database (including non-VET outcomes) that have
-			activity during the period you have selected. This type of export is useful for
-			customers who need to report their entire business activity to a monitoring or funding
-			agency. Choosing this type of export will automatically export an outcome of 70 for all
-			outcomes which have end dates outside the reporting range you define. You never need to
-			set an outcome of 70 in onCourse. All non-VET outcomes will also be exported as 81,
-			unless you have manually defined them within onCourse as 82..</para>
+		<para>There are three ways to export your data:</para>
+		<orderedlist>
+			<listitem>
+				<para>Export all the total activity data for your college between a defined date range, using the file > import/export > export AVETMISS 7 option</para>
+			</listitem>
+			<listitem>
+				<para>Export the data related to a class or group of classes, using the cogwheel</para>
+			</listitem>
+			<listitem>
+				<para>Export the data related to an enrolemtn or group of enrolments, using the cogwheel</para>
+			</listitem>
+		</orderedlist>
+		<para>The total activity date based export will export every outcome in your database (including
+			non-VET outcomes unless you choose to exclude them) that have activity during the period
+			you have selected. This type of export is useful for customers who need to report their
+			entire business activity to a monitoring or funding agency. Choosing this type of export
+			will automatically export an outcome of 70 for all outcomes which have end dates outside
+			the reporting year you define. </para>
+		<para>You never need to set an outcome of 70 in onCourse. </para>
+		<para>In the AVETMISS runner, you also have an option, ticked by default, to export '90 not
+			yet available' for all VET outcomes which are not set. This is almost alwasy the correct
+			answer for outcomes being reported within a calendar year, but not still in progress.
+			You can also change this value to 81 as needed.</para>
+		<para>You never need to set an outcome of 90 or 81 in onCourse. Choosing this option won't
+			change the value stored in onCourse, only export the value you need in the AVETMISS
+			files. The onCourse outcome status value will remain 'not set'.</para>
+		<para>All non-VET outcomes will also be exported as 81, unless you have manually defined
+			them within onCourse as 82..</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -477,8 +498,8 @@
 			<title>How to export date range AVETMISS data</title>
 			<orderedlist>
 				<listitem>
-					<para>Go to the file menu, select <guimenuitem>import/export</guimenuitem> and
-						choose <guimenuitem>Export AVETMISS...</guimenuitem></para>
+					<para>Go to the file menu, select <guimenuitem>import/export</guimenuitem> and choose
+						<guimenuitem>Export AVETMISS</guimenuitem> and then <guimenuitem>AVETMISS 7...</guimenuitem></para>
 				</listitem>
 				<listitem>
 					<para>Enter the date range for your AVETMISS data. By default, the dates will be
@@ -505,10 +526,9 @@
 						with 90.</para>
 				</listitem>
 				<listitem>
-					<para> Select the state or reporting agency you are exporting to. AVETMISS
-						standard is only accepted in NT and by NCVER. Every other state has its own
-						variations. The AQTF Competency Completion report is also available to
-						select from this menu.</para>
+					<para> Select the state or reporting agency you are exporting to. AVETMISS standard is only
+						accepted in NT and by NCVER. Every other state has its own
+						variations.</para>
 				</listitem>
 			</orderedlist>
 		</example>
@@ -538,12 +558,12 @@
 					<para>In the cog wheel, select AVETMISS export</para>
 				</listitem>
 				<listitem>
-					<para>Select the State or requirement you are exporting for. You can choose to
-						define a date range for the export at this point, or leave it blank.
-						Choosing a date range will restrict to exporting the outcomes from the class
-						that start or end between the date range. If you leave the dates field
-						blank, all outcomes from the class will be exported. Note: Outcomes from
-						cancelled classes can not be exported.</para>
+					<para>Select the State or requirement you are exporting for. You can choose to define a date
+						range for the export at this point, or leave it blank. Choosing a date range
+						will restrict to exporting the outcomes from the class that start or end
+						between the date range. If you leave the dates field blank, all outcomes
+						from the class will be exported. Note: Outcomes from cancelled classes will
+						not be exported.</para>
 				</listitem>
 				<listitem>
 					<para>Your files will be saved in a folder in the location you have chosen.
@@ -690,12 +710,16 @@
 				<title>NSW Smart and Skilled (for 2015 data)</title>
 				<para>This export option is for reporting Smart &amp; Skilled funded training in NSW and meets
 					the requirements of the 		<link
-						xlink:href="https://www.ish.com.au/sites/ish.com.au/files/JULY2015_e-reporting_tech_specs.pdf"
+						xlink:href="https://www.ish.com.au/sites/ish.com.au/files/NOV2015_e-reporting_tech_specs.pdf"
 						>Smart and Skilled eReporting Technical Specifications
-						and Business Validations Version 1.1 July 2015 specifications.</link></para>
+						and Business Validations Version 1.3 November 2015 specifications.</link></para>
 				<para>The 'Outcome identifier - Training Organisation' field has been added to the
 					Enrolment general tab to record the possible Training not completed (TNC) or
 					Training Deferred (D) value for the enrolment.</para>
+				<para>Once you have reported this enrolment, and had it accepted by State Training
+					Services, you may wish to supress it from future AVETMISS exports. If this is
+					the case, on the general tab of the enrolment select the option 'Do not report
+					for AVETMISS'.</para>
 				<para>The field Purchasing Contract Identifier, which previously existed at the
 					class level has also been added to the enrolment general tab, with the NSW
 					specific label of Commitment ID. All outcomes in an enrolment will be reported
@@ -703,6 +727,14 @@
 				<para>The field Funding Source - State Training Authority field which was previously
 					available at the class and outcome level has also been added to the enrolment
 					general tab.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/smart_and_skilled_fields.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Red text showing where specific Smart and Skilled data is recorded </para>
+					</caption>
+				</mediaobject>
 				<para>At the point in time the Smart &amp; Skilled export is run, any outcomes selected with a
 					start date in the future will export with a two blank spaces in the place of the
 					outcome identifier - national, regardless of what has been set in the database
@@ -812,11 +844,11 @@
 			</section>
 			<section>
 				<title>Queensland</title>
-				<para>In QLD, AVETMISS reporting is against your State RTO ID, rather than your
-					National RTO ID. The National ID must be recorded in onCourse in the AVETMISS
-					'Identifier' field for the USI validation process to work. Your QLD RTO ID
-					should be entered in the the AVETMISS preferences field 'Queensland RTO ID'.
-					This value will export in the NAT00010, NAT00020 and NAT00130.</para>
+				<para>In QLD, AVETMISS reporting is against your State RTO ID, rather than your National RTO ID.
+					The National ID must be recorded in onCourse in the AVETMISS 'Identifier' field
+					for the USI validation process to work. Your QLD RTO ID should be entered in the
+					AVETMISS preferences field 'Queensland RTO ID'. This value will export in the
+					NAT00010, NAT00020 and NAT00130.</para>
 				<para>onCourse will export the Unique Learner Identifier in the NAT00080 where it
 					has been provided</para>
 				<para>In the NAT00120, onCourse will export the delivery mode of 90 in the NAT00120
@@ -978,6 +1010,12 @@
 			<para>Yes. In the class VET tab, select the option 'Do not report for AVETMISS'.</para>
 		</section>
 		<section>
+			<title>How about a single enrolment, can't I stop that also?</title>
+			<para>Yes. In the enrolment general tab, select the option 'Do not report for AVETMISS'. This is
+				something you may need to do if reporting a withdrawn Smart &amp; Skilled student in
+				NSW.</para>
+		</section>
+		<section>
 			<title>How can I get my State Accredited Modules added to onCourse?</title>
 			<para>We add custom modules on request for customers with a commercial support contract.
 				We need to add them manually to onCourse as they are not published by TGA. You can
@@ -1020,20 +1058,35 @@
 					<para>Enter your State Funding Source code in the field highlighted.</para>
 				</caption>
 			</mediaobject>
-			<para>If a student has a different funding code which applies to them, you can just
-				change their outcomes funding codes to make it different to the one set at the class
-				level. If all students in the class have different funding codes, you don't need to
-				set anything at the class level, but can set each outcome separately. Double click
-				on the outcome line in the Class Outcomes tab to set this information. You can also
-				access this list from the individual student's Contact or Enrolment record.</para>
+			<para>If a student has a different funding code which applies to them, you can just change their
+				enrolment funding codes to make it different to the one set at the class level. If
+				all students in the class have different funding codes, you don't need to set
+				anything at the class level, but can set each outcome separately on the enrolment
+				general tab. </para>
+			<para>Where the value populates from a record level above, you will see the value in the
+				lower level record with the lock icon. In this case, it means the enrolment is
+				inheriting the value from the level above, the class. You can click the unlock icon to change the value and break the inherited linked value from the class.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/Outcome_State_Funding.png" format="png"/>
+						fileref="images/state_field_override_enrolment.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>Enter your State Funding Source code in the field highlighted for each
-						outcome.</para>
+					<para>The value of some fields have been inherited from the values set in the class, while the
+						Funding Source - State value has been overridden in the enrolment</para>
+				</caption>
+			</mediaobject>
+			<para>You can also override these values in the outcome, where needed, for example if the student
+				had funding to complete some outcomes but not others, by going to the outcome tab
+				and double clicking on an outcome.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/outcome_state_funding.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>The Funding Source State value for this outcome has been inherited from
+						the value set at the enrolment level</para>
 				</caption>
 			</mediaobject>
 		</section>
@@ -1045,9 +1098,9 @@
 				student chooses a different elective from the one you have set a the course level
 				you can change their outcome so it is linked to a different Unit of
 				Competency.</para>
-			<para>You can do this by going into Class Outcome tab and double clicking on the outcome
-				you wish to change. Type the Module code or Module name into the field and click Ok
-				to link to a new outcome.</para>
+			<para>You can do this by going into Class Outcome tab and double clicking on the outcome you wish
+				to change. Type the Module code or Module name into the field and click OK to link
+				to a new outcome.</para>
 			<para>If you wish to add or delete an outcome from the student's record, you need to do
 				this from the Enrolment Outcome tab. You will see a + and a - button in the top
 				right hand corner. Use these to add or delete outcome records as required. </para>
@@ -1142,11 +1195,10 @@
 		</section>
 		<section>
 			<title>How does prior learning affect AVETMISS reports?</title>
-			<para>Prior learning records only export from AVETMISS exports run from the file >
-				imprt/export >export AVETMISS menu option. They will not export from the cogwheel
-				option in the classes or enrolments window, because they are not associated with
-				either a class or an enrolment, but instead are attached directly to the
-				student.</para>
+			<para>Prior learning records only export from AVETMISS exports run from the file > import/export
+				>export AVETMISS menu option. They will not export from the cogwheel option in the
+				classes or enrolments window, because they are not associated with either a class or
+				an enrolment, but instead are attached directly to the student.</para>
 			<para>When you create a prior learning record with one or more outcomes attached, and the start
 				and end dates of the prior learning outcomes fall into the 'outcomes after' to
 				-'outcomes before' date range set in the AVETMISS 7 export runner, then the data
@@ -1160,8 +1212,8 @@
 			<para>If the Funding Source - national is not set, then the default funding source set
 				in the college preferences will be applied.</para>
 			<para>If the prior learning record was linked to a qualification or skills set, then the
-				Commencing Program Identifer will export as '3 - commencing enrolment', othewise it
-				will export as '8 - module only enrolment'. </para>
+				Commencing Program Identifier will export as '3 - commencing enrolment', otherwise
+				it will export as '8 - module only enrolment'. </para>
 			<para>If the prior learning record was linked to a qualification or skills set, then the
 				Study Reason Identifier will export as '11 - other reasons'.</para>
 			<para>The VET in Schools flag will always export as No.</para>

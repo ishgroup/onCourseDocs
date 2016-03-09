@@ -340,5 +340,38 @@
               </orderedlist>
             </section>
     </section>
+        <section xml:id="externalintegrations-cloudAccess">
+            <title>Cloud Access</title>
+            <para>Cloud Assess is an online service for managing the assessment process. It can be used for VET and non-VET enrolments, and can be used by tutors to help manage classroom based assessments as well as online assessments.</para>
+            <para>When you create an account with Cloud Assess ask for the different user names and
+                keys shown in the image. Then enable the script "***" in order to automatically push
+                enrolments in onCourse into Cloud Assess. This script assumes that you'll create a
+                course in Cloud Assess with the same course code as the course in onCourse. If there
+                is no matching course in Cloud Assess then the script will do nothing. Of course you
+                can modify the script to suit your own specific needs. Remember that the name of the
+                integration here must mach the name given within the script.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/cloudaccess_prefs.png" format="png" />
+                </imageobject>
+                <caption>
+                    <para>Cloud Access integration preferences</para>
+                </caption>
+            </mediaobject>
+            <para>Once these preferences have been defined you will need to enable the Cloud Access
+                script to automate the process. This script can be found by going File ->
+                Preferences -> Scripts, doubling clicking on 'cloudassess course enrolment create'
+                then click on the 'Enabled' check box and save.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/cloudaccess_script.png" format="png" />
+                </imageobject>
+                <caption>
+                    <para>Cloud Access script</para>
+                </caption>
+            </mediaobject>
+        </section>
     </section>
 </chapter>

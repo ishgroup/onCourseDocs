@@ -12,10 +12,11 @@
 	<xsl:param name="highlight.source">"1"</xsl:param>
 	<xsl:param name="keep.relative.image.uris" select="1"/>
 
-	<xsl:param name="toc.max.depth">1</xsl:param>
+	<xsl:param name="toc.max.depth">2</xsl:param>
 	<!-- enable TOC for book and chapter but not part -->
 	<xsl:param name="generate.toc">
 		book      toc,title
+		part      toc,title
 	</xsl:param>
 	<xsl:param name="chapter.autolabel">0</xsl:param>
   
@@ -33,7 +34,7 @@
 	</l:l10n>
 	</l:i18n>
 
-	<xsl:param name="html.stylesheet">css/ish.css</xsl:param>
+	<xsl:param name="html.stylesheet">css/ish.css css/release-ish.css</xsl:param>
 
 	<xsl:param name="chunker.output.encoding">UTF-8</xsl:param>
 	<xsl:output doctype-system="about:legacy-compat"/>

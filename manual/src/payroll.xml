@@ -369,7 +369,7 @@
 			display the correct pay value in the class budget, depending on the number of sessions
 			the tutor is assigned to, rather than multiplying the rate by the total number of
 			sessions in the class.</para>
-		<para>Tutor pay is run for payslips up to your defined date</para>
+		<para>Tutor pay is run for payslips up until, but not inclusive of your defined date</para>
 		<example>
 			<title>Generating, editing and finalising Tutor pay</title>
 			<orderedlist>
@@ -377,23 +377,22 @@
 					<para>Open the Tutor pay window</para>
 				</listitem>
 				<listitem>
-					<para>Highlight payslips for which Tutor pay is to be generated. </para>
-				</listitem>
-				<listitem>
-					<para>Select the "Generate Tutor pay..." menu item under the cogwheel icon<inlinemediaobject>
+					<para>Select the "Generate Tutor pay..." menu item under the cogwheel icon. <inlinemediaobject>
 							<imageobject>
-								<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/generateTutorPayStep1(new).png"/>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/generateTutorPayStep1(new).png"/>
 							</imageobject>
 						</inlinemediaobject></para>
 				</listitem>
 				<listitem>
-					<para>Enter the date you want the payroll run.</para>
+					<para>Enter the date you want the payroll run until (that is, sessions held up to the day prior
+						to the date you select)</para>
 				</listitem>
 				<listitem>
-					<para>Select whether unmarked or unapproved attendance is to be taken under consideration when
-						generating Tutor pay. <inlinemediaobject>
+					<para>Select if unmarked or unapproved attendance is to be included when generating Tutor pay. <inlinemediaobject>
 							<imageobject>
-								<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/generateTutorPayStep2(new).png"/>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/generateTutorPayStep2(new).png"/>
 							</imageobject>
 						</inlinemediaobject></para>
 				</listitem>
@@ -403,9 +402,9 @@
 						be marked with a status of 'new'.</para>
 				</listitem>
 				<listitem>
-					<para>If a payslip for a tutor has been created in error, while it has a status
-						of 'new' it can be deleted using the garbage icon in the top right hand
-						corner of the payslips window.</para>
+					<para>If a payslip for a tutor has been created in error, while it has a status of 'new' it can
+						be deleted using the delete icon in the top right hand corner of the
+						payslips window.</para>
 				</listitem>
 				<listitem>
 					<para>Once Tutor pay records have been created they can be edited. Each Tutor
@@ -415,9 +414,9 @@
 						locked.</para>
 				</listitem>
 				<listitem>
-					<para>Unchecking an item in the list will remove it from being paid in this
-						payroll cycle. The next time you run a payroll it will be add to the tutors
-						payslip again. </para>
+					<para>Selecting from the cogwheel next to a payline the 'defer to next payrun' option will
+						remove it from being paid in this payroll cycle. The next time you run a
+						payroll it will be add to the tutors payslip again. </para>
 				</listitem>
 				<listitem>
 					<para>Additional custom or manual Tutor pay items can be added to the payslip by
@@ -447,8 +446,8 @@
 		</caution>
 		<section>
 			<title>How to defer tutors pay to the next payrun</title>
-			<para>Next to every pay line will be a cogwheel option that if clicked on will allow you to defer
-				that pay line item, for the tutor, to the next pay run.</para>
+			<para>Next to every pay line is a cogwheel option that if clicked on will allow you to defer that
+				pay line item, for the tutor, to the next pay run.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/defer_tutor_pay.png" format="png" />
@@ -459,8 +458,9 @@
 			</mediaobject>
 			<para>When you choose to defer a pay line, it will be removed from the pay slip total for the
 				current period, but when the payroll is generated for the following pay period, it
-				will appear again on that payslip. This will continue until the pay line is
-				processed via a pay slip.</para>
+				will appear again on that period's payslip. Should you continue to defer the
+				payline, it will continue to appear on the next payslip until the pay line is
+				processed.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/tutor_pay_deferred.png" format="png" />

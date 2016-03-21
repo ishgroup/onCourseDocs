@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-8.14">
+
+  <info>
+    <title>Release 8.14</title>
+    <pubdate>30 March 2016</pubdate>
+  </info>
+
+  <section role="important">
+    <title>Important changes</title>
+    <para></para>
+  </section>
+  <section role="major">
+    <title>Major features</title>
+    <para></para>
+  </section>
+  <section role="scripts">
+    <title>Reports and scripts</title>
+    <para>
+      <itemizedlist>
+        <listitem>
+          <para> A new script has been created called 'Send weekly finance summary report' to email
+            the Trial Balance for the previous 7 days to the system admin email address every Monday
+            morning. You may like to alter the email address in the script, so this report sends to
+            to your finance managers email address. This script is disabled by default
+              <systemitem>#27107</systemitem></para>
+        </listitem>
+        <listitem>
+          <para> Added new ReportSpec API functions to allow reports to be printed and emailed via scripts
+            <systemitem>#27405</systemitem></para>
+        </listitem>
+        <listitem>
+          <para> Added new DocumentSpec API functions to allow documents to be created and uploaded into the skillsOnCourse portal via scripts
+            <systemitem>#27696</systemitem></para>
+        </listitem>
+        <listitem>
+          <para> Two new reconcilliation reports have been added to the Banking Deposits window
+            called 'Reconcilliation Summary' and 'Reconcilliation Detail' that group and total
+            payments by type, better assisting bank account reconcillation for daily Credit Card and
+            AMEX transactions <systemitem>#27696</systemitem></para>
+        </listitem>
+      </itemizedlist>
+    </para>
+  </section>
+  <section role="minor">
+    <title>Minor features</title>
+    
+    <para></para>
+  </section>
+  <section role="fixes">
+    <title>Fixes</title>
+    <para><itemizedlist>
+      <listitem>
+        <para> Improved prefetches for creating large message batches, to ensure server is not overloaded
+          <systemitem>#27748</systemitem></para>
+      </listitem>
+      <listitem>
+        <para> Removed lock/unlock icons from outcomes obtained via prior learning, as there are no class dates to inherit this data from
+          <systemitem>#27241</systemitem></para>
+      </listitem>
+      <listitem>
+        <para> AVETMISS improvements for non-VET Prior Learning, to export a default FOE ID of 1299999 where no value is provided
+          <systemitem>#27241</systemitem></para>
+      </listitem>
+    </itemizedlist>
+    </para>
+  </section>
+  <section role="web">
+    <title>Web features</title>
+    <para></para>
+  </section>
+  <section role="web-fixes">
+    <title>Web fixes</title>
+    <para></para>
+  </section>
+</chapter>

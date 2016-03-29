@@ -21,7 +21,7 @@
       <para>For students issued with a certificate, a new email template will be sent with a one
         time password free login link to take them straight to the portal page where they can then
         download and print their certificate.</para>
-      <para>The default wording in the email template encourages the studen to complete the simple
+      <para>The default wording in the email template encourages the student to complete the simple
         satisfaction survey built into the portal, so you can start collecting 5 star ratings for
         the class venue, tutor and content, plus an optional comment.</para>
       <para>As per all new scripts and templates, this is disabled by default, and we encourage you
@@ -35,14 +35,15 @@
         the units that make up their course. </para>
       <para>A new script in onCourse checks daily for any outcome results which have been updated
         during the previous 24 hours, and if all the outcomes attached to the enrolment have be set
-        to have an outcome status, a VET certification will be created.</para>
-      <para>Where the student has successfully achieved all outcomes linked to a course which is set
-        to 'satisfies complete qualification or skill set', then they will be issued a Qualification
-        or Skill Set Certificate on completion. If all outcomes have been marked, and some are
+        to have an outcome status, a VET certification will be created if at least one of those
+        outcomes was successful.</para>
+      <para>Where the student has successfully achieved all outcomes linked to a course which
+        'satisfies complete qualification or skill set', then they will be issued a Qualification or
+        Skill Set Certificate on completion. If all outcomes have been marked, and some are
         unsuccessful, they will be issued a Statement of Attainment instead.</para>
       <para>For students undertaking a short course, who have successfully, or a mix of successfully
-        and unsuccessfuly completed their outcomes, a Statement of Attainment will also be
-        created.</para>
+        and unsuccessfully, completed their outcomes, a Statement of Attainment will also be created
+        for their successful units.</para>
   </section>
     <section>
       <title>onCourse Menu Restructure</title>
@@ -70,7 +71,7 @@
           <para> A new script has been created called 'Send weekly finance summary report' to email
             the Trial Balance for the previous 7 days to the system admin email address every Monday
             morning. You may like to alter the email address in the script, so this report sends to
-            to your finance managers email address. This script is disabled by default
+            your finance managers email address. This script is disabled by default
               <systemitem>#27107</systemitem></para>
         </listitem>
         <listitem>
@@ -82,9 +83,9 @@
             <systemitem>#27696</systemitem></para>
         </listitem>
         <listitem>
-          <para> Two new reconcilliation reports have been added to the Banking Deposits window
-            called 'Reconcilliation Summary' and 'Reconcilliation Detail' that group and total
-            payments by type, better assisting bank account reconcillation for daily Credit Card and
+          <para> Two new reconciliation reports have been added to the Banking Deposits window
+            called 'Reconciliation Summary' and 'Reconciliation Detail' that group and total
+            payments by type, better assisting bank account reconciliation for daily Credit Card and
             AMEX transactions <systemitem>#27696</systemitem></para>
         </listitem>
       </itemizedlist>
@@ -101,6 +102,9 @@
     Added new 'Print' and 'Export' buttons to the list view, to allow quick access to these functions without having to choose a menu option
     <systemitem>#27760</systemitem>
   </para></listitem>
+  <listitem><para> Addition of syntax ${image "imagename"} to allow onCourse images to be embedded in HTML email
+          templates <systemitem>#26862</systemitem>
+        </para></listitem>
   <listitem><para>
     Added 'total' to the list of advanced search options in the invoice window
     <systemitem>#27859</systemitem>
@@ -122,10 +126,10 @@
   </para>
   </listitem>
   <listitem>
-    <para> Export the option 'neither Aboriginal or Torres Straight Islander' for Indigenous
-      status for all students born in a country other than Australia, regardless of their
-      response in the AVETMISS questions, as 'neither' is the only option allowed according to
-      AVETMISs validation rules. <systemitem>#27320</systemitem></para>
+    <para> Export the option 'neither Aboriginal or Torres Straight Islander' for Indigenous status
+          for all students born in a country other than Australia, regardless of their response in
+          the AVETMISS questions, as 'neither' is the only option allowed according to AVETMISS
+          validation rules. <systemitem>#27320</systemitem></para>
   </listitem>
   <listitem>
     <para> Export the 'Not provided' for student AVETMISS address data where the student has
@@ -181,8 +185,24 @@
           <systemitem>#26889</systemitem></para>
       </listitem>
       <listitem>
-        <para> Improvement to the onCourse replication process to reduce the occurance of stuck 'in transaction' status enrolments
-          <systemitem>#28089</systemitem></para>
+        <para> Improvement to the onCourse replication process to reduce the occurrence of stuck 'in
+            transaction' status enrolments <systemitem>#28089</systemitem></para>
+      </listitem>
+      <listitem>
+        <para> Improve display of error messages in Quick Enrol when the payment gateway is closed without completing or cancelling the payment attempt
+          <systemitem>#26888</systemitem></para>
+      </listitem>
+      <listitem>
+        <para> Improve visual display of calendar icon in advanced search so it doesn't overlay the data in the field
+          <systemitem>#27422</systemitem></para>
+      </listitem>
+      <listitem>
+        <para> Fix to prevent sending of Credit Note emails when 'send credit note email' option is unchecked in enrolment cancellation or transfer process
+          <systemitem>#27963</systemitem></para>
+      </listitem>
+      <listitem>
+        <para> Improved loading speed of course lookup process in Quick Enrol
+          <systemitem>#28057</systemitem></para>
       </listitem>
     </itemizedlist>
     </para>

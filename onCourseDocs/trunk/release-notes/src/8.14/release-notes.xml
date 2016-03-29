@@ -32,6 +32,23 @@
       <title>Automated creation of VET Certificates</title>
       <para>Unlike non-VET Certificates of Attendance, formal VET certifications like Statements of Attainment and Qualifications </para>
   </section>
+    <section>
+      <title>onCourse Menu Restructure</title>
+      <para>To improve clarity and ensure all new onCourse features have a home in the menu system,
+        we have restructured the top level menus to better group related items.</para>
+      <para>A new menu option called 'Products' includes all the items you can sell via onCourse,
+        including Courses, Gift Vouchers and Memberships. </para>
+      <para>The menu item 'Training' contains the features related to setting up and scheduling
+        training, including items such as Classes, Sites and Documents.</para>
+      <para>The previous menu 'People' has been split into two menus: The new 'People' menu contains
+        the options to access contacts and their communication history via mailing lists and
+        messages, while the  new 'Activity' menu is where you will find Quick Enrol and all the
+        results of contact engagement with onCourse including Applications, Enrolments, Certificates
+        and Sales.</para>
+      <para>All options related to fees and payments, including CorporatePasses and Discounts can be
+        found under the 'Financial' menu.</para>
+      <para>The File, Edit, Windows and Help menu options are unchanged.</para>
+    </section>
   </section>
   <section role="scripts">
     <title>Reports and scripts</title>
@@ -71,7 +88,48 @@
   <listitem><para>
     Added 'total' to the list of advanced search options in the invoice window
     <systemitem>#27859</systemitem>
-  </para></listitem>
+  </para>
+  </listitem>
+    <listitem><para>
+      Moved Taxes window (formerly in the financial menu) to the General Preferences
+      <systemitem>#27616</systemitem>
+    </para>
+  </listitem>
+  <listitem><para>
+    Quick Enrol now shows all classes for a course sorted by start date order by default, with the next available classes at the top of the list
+    <systemitem>#27429</systemitem>
+  </para>
+  </listitem>
+  <listitem><para>
+    Added a new access right type 'Summary extracts' to Financial section to Allow/not allow user roles to export/print MYOB and trial balance reports
+    <systemitem>#27288</systemitem>
+  </para>
+  </listitem>
+  <listitem>
+    <para> Export the option 'neither Aboriginal or Torres Straight Islander' for Indigenous
+      status for all students born in a country other than Australia, regardless of their
+      response in the AVETMISS questions, as 'neither' is the only option allowed according to
+      AVETMISs validation rules. <systemitem>#27320</systemitem></para>
+  </listitem>
+  <listitem>
+    <para> Export the 'Not provided' for student AVETMISS address data where the student has
+      provided a PO or GPO Box address instead of a street address
+      <systemitem>#27488</systemitem></para>
+  </listitem>
+  <listitem>
+    <para> Add the additional text 'All outcomes ending after 'outcomes before' will
+      automatically export as 'Continuing enrolment (70)' to the AVETMISS 7 export runner for
+      better clarity as to when a 70 will be exported instead of the database value
+      <systemitem>#27620</systemitem></para>
+  </listitem>
+  <listitem>
+    <para>Changed the AVETMISS label 'Identifier' to 'RTO Identifier' and added a link to
+          training.gov to improve clarity for RTOs reporting into QLD who also report their QLD ID
+          via an additional field<systemitem>#27691</systemitem></para>
+  </listitem>
+  <listitem>
+    <para>Export VET Fee Help files to the same nominated location as AVETMISS files by default<systemitem>#27550</systemitem></para>
+  </listitem>
 </itemizedlist>
   </section>
   <section role="fixes">
@@ -96,6 +154,19 @@
       <listitem>
         <para> Improved validation message when attempting to delete discounts to explain discounts already used can only be disabled
           <systemitem>#27346</systemitem></para>
+      </listitem>
+      <listitem>
+        <para> A fix to access control edit permissions where when the account access role was
+            changed, some preferences and permissions didn't update as expected
+              <systemitem>#27717</systemitem></para>
+      </listitem>
+      <listitem>
+        <para> Allow spaces to be added when entering credit card numbers in the onCourse payment gateway
+          <systemitem>#26889</systemitem></para>
+      </listitem>
+      <listitem>
+        <para> Improvement to the onCourse replication process to reduce the occurance of stuck 'in transaction' status enrolments
+          <systemitem>#28089</systemitem></para>
       </listitem>
     </itemizedlist>
     </para>

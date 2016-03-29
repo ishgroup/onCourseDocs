@@ -28,6 +28,10 @@
         to customise the wording of the 'Certificate available' email before activating this script
         at your college.</para>
     </section>
+    <section>
+      <title>Automated creation of VET Certificates</title>
+      <para>Unlike non-VET Certificates of Attendance, formal VET certifications like Statements of Attainment and Qualifications </para>
+  </section>
   </section>
   <section role="scripts">
     <title>Reports and scripts</title>
@@ -59,8 +63,16 @@
   </section>
   <section role="minor">
     <title>Minor features</title>
-    
-    <para></para>
+<itemizedlist>
+  <listitem><para>
+    Extended tags to waiting list, so you can now add your own workflow and grouping criteria to requests
+    <systemitem>#27398</systemitem>
+  </para></listitem>
+  <listitem><para>
+    Added 'total' to the list of advanced search options in the invoice window
+    <systemitem>#27859</systemitem>
+  </para></listitem>
+</itemizedlist>
   </section>
   <section role="fixes">
     <title>Fixes</title>
@@ -77,6 +89,14 @@
         <para> AVETMISS improvements for non-VET Prior Learning, to export a default FOE ID of 1299999 where no value is provided
           <systemitem>#27241</systemitem></para>
       </listitem>
+      <listitem>
+        <para> Do not request to save company records when closing the edit view and no changes have been made
+          <systemitem>#27631</systemitem></para>
+      </listitem>
+      <listitem>
+        <para> Improved validation message when attempting to delete discounts to explain discounts already used can only be disabled
+          <systemitem>#27346</systemitem></para>
+      </listitem>
     </itemizedlist>
     </para>
   </section>
@@ -86,8 +106,7 @@
   <listitem><para> A new set of preferences were added to lock the online mailing list, waiting list and
           enrolment process to only allow existing students to add or enrol themselves. This feature
           is particularly for the use for enterprise RTOs or membership based organisations. To
-          enable these functions on your website, you must contact ish to request the change be
-          applied <systemitem>#27668</systemitem></para></listitem>
+          enable these functions on your website, uncheck the CMS setting options 'Allow create new student' <systemitem>#27668</systemitem></para></listitem>
 </itemizedlist>
   </section>
   <section role="web-fixes">

@@ -30,7 +30,19 @@
     </section>
     <section>
       <title>Automated creation of VET Certificates</title>
-      <para>Unlike non-VET Certificates of Attendance, formal VET certifications like Statements of Attainment and Qualifications </para>
+      <para>Unlike non-VET Certificates of Attendance, formal VET certifications like Statements of
+        Attainment and Qualifications can only be issued when a student achieves outcome results for
+        the units that make up their course. </para>
+      <para>A new script in onCourse checks daily for any outcome results which have been updated
+        during the previous 24 hours, and if all the outcomes attached to the enrolment have be set
+        to have an outcome status, a VET certification will be created.</para>
+      <para>Where the student has successfully achieved all outcomes linked to a course which is set
+        to 'satisfies complete qualification or skill set', then they will be issued a Qualification
+        or Skill Set Certificate on completion. If all outcomes have been marked, and some are
+        unsuccessful, they will be issued a Statement of Attainment instead.</para>
+      <para>For students undertaking a short course, who have successfully, or a mix of successfully
+        and unsuccessfuly completed their outcomes, a Statement of Attainment will also be
+        created.</para>
   </section>
     <section>
       <title>onCourse Menu Restructure</title>
@@ -84,6 +96,10 @@
   <listitem><para>
     Extended tags to waiting list, so you can now add your own workflow and grouping criteria to requests
     <systemitem>#27398</systemitem>
+  </para></listitem>
+  <listitem><para>
+    Added new 'Print' and 'Export' buttons to the list view, to allow quick access to these functions without having to choose a menu option
+    <systemitem>#27760</systemitem>
   </para></listitem>
   <listitem><para>
     Added 'total' to the list of advanced search options in the invoice window

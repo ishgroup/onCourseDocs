@@ -704,7 +704,7 @@
 			</mediaobject>
 		</section>
 		<section>
-			<title> Recording an EFT payment </title>
+			<title> Recording an EFTPOS payment </title>
 			<para>An incoming course payment may have been processed on an EFTPOS terminal external
 				to the onCourse system, even though the payment has been processed, you will still
 				need to record the fact that the payment has been made within onCourse. To do this
@@ -741,14 +741,10 @@
 					Enrol</para>
 			</listitem>
 			<listitem>
-				<para>Once you have selected that payment type, you no longer need to enter the
-					credit card details into the Quick Enrol window, as a separate browser window
+				<para>Click on
+					<guilabel>Save</guilabel> within the Quick Enrol window. Your OS default browser will open a new window
 					will open to enable you to enter the credit card details directly into the
 					secure payment gateway.</para>
-			</listitem>
-			<listitem>
-				<para>To open up this new browser window and process the transaction, click on
-						<guilabel>Save</guilabel> within the Quick Enrol window</para>
 			</listitem>
 			<listitem>
 				<para>Enter the credit card details into the secure payment window and then click
@@ -787,16 +783,18 @@
 			</caption>
 		</mediaobject>
 		<note>
-			<para>In the event that there is an outage with your internet connection whilst a credit
-				card transaction is being processed, for example the separate secure payment browser
-				window is unable to be opened. An error message will appear notifying you that the
-				payment is unable to proceed. You will need to wait for that payment attempt to time
-				out before re-attempting the process. Timing out of a failed transaction ordinarily
-				takes approximately 20 minutes.</para>
+			<para>In the event that there is an outage with your internet connection whilst a credit card
+				transaction is being processed, or you close the browser window without cancelling
+				the payment attempt in the window, the payment will time out in 20 minutes. During
+				this timeout period, the Quick Enrol window will remain locked. An error message
+				will appear notifying you "Payment was expired by timeout. The enrolment and unpaid
+				invoice have been saved." Quick Enrol will then allow you to save and close the
+				enrolment with or without sending the normal notifications to the contacts. You can
+				then reopen Quick Enrol and attempt to process the payment again.</para>
 		</note>
 		<section>
 			<title>Managing cancelled and failed credit card transactions</title>
-			<para>This section outlines how you manage the cancellation process and how onCourse
+			<para>This section outlines how you manage the payment cancellation process and how onCourse
 				reconciles those cancelled transactions</para>
 			<section>
 				<title>How to cancel a credit card transaction</title>
@@ -814,20 +812,26 @@
 							close the browser window</para>
 					</listitem>
 					<listitem>
-						<para>In order to ensure that the invoice is reversed in onCourse, the
-							system will automatically generate a credit note </para>
+						<para>The Quick Enrol window will display the message <emphasis role="bold"
+							>Payment attempt was unsuccessful. The enrolment and unpaid invoice have been saved</emphasis>. Click Ok to proceed</para>
 					</listitem>
 					<listitem>
-						<para>The Quick Enrol window will display the message <emphasis role="bold"
-								>Payment is cancelled. A credit note has been
-							created.</emphasis></para>
+						<para>Quick Enrol will proceed to the confirmation window. You can choose to send or not send
+							the standard invoice and enrolment confirmation. The invoice will show
+							it is unpaid if you choose to send it at this time. The Quick Enrol
+							window will close after you click finish.</para>
+					</listitem>
+					<listitem>
+						<para>To try a new payment type, open Quick Enrol again and type in the payer name. The
+							balance outstanding of their invoice will be visible, and you can
+							proceed to processing a new type of payment.</para>
 					</listitem>
 				</orderedlist>
 				<tip>
-					<para>If you proceed with opening the new browser window to enter the credit
-						card details, then find you need to cancel that transaction, always make
-						sure that you click the <guilabel>Cancel</guilabel> button within the secure
-						payment browser window.</para>
+					<para>If you choose Credit Card as the payment type, which opens a browser window to enter the
+						credit card details, then find you need to cancel that transaction, always
+						make sure that you click the <guilabel>Cancel</guilabel> button within the
+						secure payment browser window.</para>
 					<para>If you close the browser window by clicking on the close button, the QE
 						window will lock and you will not be able to use QE until the transaction is
 						timed out after 20 minutes.</para>
@@ -838,37 +842,29 @@
 							fileref="images/Cancelled_CC_Payment_Message.png"/>
 					</imageobject>
 					<caption>
-						<para>Secure payment browser window updates once transaction has been
+						<para>Secure payment browser window message showing a payment attempt has been
 							cancelled</para>
-					</caption>
-				</mediaobject>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/QE_Cancelled_CC_Payment_Message.png"/>
-					</imageobject>
-					<caption>
-						<para>Quick Enrol window displays this message to notify the user of a
-							cancellation and that it' has issued a credit note.</para>
 					</caption>
 				</mediaobject>
 			</section>
 			<section>
 				<title>How to manage transactions where the payment has failed</title>
-				<para>The following section outlines what happens if the credit card number that has
-					been entered is declined due to an invalid number, or the card has expired or
-					insufficient funds are available.</para>
-				<para>When a credit card payment has failed, the secure payment window will display
-					the message <emphasis role="bold">This payment failed because the card was
-						expired, invalid or does not have sufficient funds</emphasis> You will then
-					be presented with three different options to complete the transaction. These
-					options are clearly displayed within the payment window and you can hover your
-					mouse over these options to view an explanation of each option, before making
-					your selection. </para>
+				<para>When a credit card payment has failed, the secure payment window will display the message
+						<emphasis role="bold">This payment failed because the card was expired,
+						invalid or does not have sufficient funds</emphasis> You will then be
+					presented with two different options to complete the transaction. You can hover
+					your mouse over these options to view an explanation of each option, before
+					making your selection. </para>
 				<section>
 					<title>Option 1: Abandon the Transaction - Keep the Invoice</title>
 					<para>The payment will be marked as failed, but the invoice and enrolments kept.
 						The debtor will be kept, owing you money for later payment</para>
+					<para>When you return to Quick Enrol you will see the message "The credit card
+						payment was declined. The enrolment and unpaid invoice have been
+						saved."</para>
+					<para>You can then proceeed to send the enrolment confirmation and/or the unpaid
+						tax invoice. If you wish to attempt another payment, open Quick enrol again
+						and enter the payers name.</para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -880,33 +876,10 @@
 					</mediaobject>
 				</section>
 				<section>
-					<title>Option 2: Abandon the Transaction - Reverse the Invoice</title>
-					<para>The payment enrolments will be marked as failed and a credit note created
-						to reverse the invoice.</para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/Payment_Window_Abandon_Reverse_Invoice.png"/>
-						</imageobject>
-						<caption>
-							<para>Option 2: Abandon the Transaction - Reverse the Invoice</para>
-						</caption>
-					</mediaobject>
-				</section>
-				<section>
-					<title>Option 3: Try another card</title>
-					<para>If the first card entered is declined, by clicking on <emphasis
-							role="bold">Try another card</emphasis>, the payment window is refreshed
-						and you can then enter a different card number to complete the transaction. </para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/Payment_Window_Try_Another_Card.png"/>
-						</imageobject>
-						<caption>
-							<para>Option 3: Try another card</para>
-						</caption>
-					</mediaobject>
+					<title>Option 2: Try another card</title>
+					<para>If the first card entered is declined, by clicking on <emphasis role="bold">Try another
+							card</emphasis>, the payment window is refreshed and you can then enter
+						different card details to complete the transaction. </para>
 				</section>
 			</section>
 		</section>
@@ -915,10 +888,12 @@
 		<title>Processing payments after the enrolment process</title>
 		<para>If an invoice is unpaid at the time of enrolment, or partially paid, at a later date
 			you will need to collect the rest of the money owed to you. </para>
-		<para>Until the balance of the invoice is paid, the payer will be recorded in the system as
-			a debtor, and you can find them quickly in the invoice window.</para>
-		<para>When a payment is made, you need to go to the Payment In window to record this, and
-			reduce the balance of the debtors account.</para>
+		<para>Until the balance of the invoice is paid, the payer will be recorded in the system as a
+			debtor, and you can find them quickly in the invoice window using the filter 'unpaid
+			invoices'.</para>
+		<para>When a payment is made, you need to record the details of the payment, to reduce the balance
+			of the debtors account. You can do this either  though Quick Enrol, or by following the
+			Payment In instructions below.</para>
 		<section>
 			<title>Processing a Payment In</title>
 			<example>

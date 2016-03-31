@@ -88,6 +88,21 @@
             payments by type, better assisting bank account reconciliation for daily Credit Card and
             AMEX transactions <systemitem>#27696</systemitem></para>
         </listitem>
+        <listitem>
+          <para> The Enrolment Confirmation HTML email template has been updated to ensure the class
+            list displays correctly in MS Outlook 2013. To apply this change, you will need to get
+            the latest copy of the template from <link
+              xlink:href="https://github.com/ari/oncourse-scripts/tree/master/email"
+              >GIT Hub</link> and add in any customisations you may have made to this template
+              <systemitem>#27122</systemitem></para>
+        </listitem>
+        <listitem>
+          <para>The Tax Invoice plain text and HTML templates have been updated to only show unpaid
+            due dates for invoices. To apply these changes, you will need to get the latest copy of
+            the templates from <link
+              xlink:href="https://github.com/ari/oncourse-scripts/tree/master/email">GIT Hub</link>
+            and add in any customisations you may have made to these templates.</para>
+        </listitem>
       </itemizedlist>
     </para>
   </section>
@@ -132,9 +147,8 @@
           validation rules. <systemitem>#27320</systemitem></para>
   </listitem>
   <listitem>
-    <para> Export the 'Not provided' for student AVETMISS address data where the student has
-      provided a PO or GPO Box address instead of a street address
-      <systemitem>#27488</systemitem></para>
+    <para> Export 'Not provided' for student AVETMISS address data where the student has provided a
+          PO or GPO Box address instead of a street address <systemitem>#27488</systemitem></para>
   </listitem>
   <listitem>
     <para> Add the additional text 'All outcomes ending after 'outcomes before' will
@@ -147,11 +161,19 @@
           training.gov to improve clarity for RTOs reporting into QLD who also report their QLD ID
           via an additional field<systemitem>#27691</systemitem></para>
   </listitem>
+      <listitem>
+        <para> AVETMISS improvements for non-VET Prior Learning, to export a default FOE ID of
+          129999 where no value is provided <systemitem>#27241</systemitem></para>
+      </listitem>
   <listitem>
     <para>Export VET Fee Help files to the same nominated location as AVETMISS files by default<systemitem>#27550</systemitem></para>
   </listitem>
   <listitem>
     <para>Addition of the USI to the VET Fee Help VEN export file as per the 2016 reporting requirements<systemitem>#28116</systemitem></para>
+  </listitem>
+  <listitem>
+    <para>Embedded Open Sans Condensed fonts inside onCourse for new print report font
+            options<systemitem>#28070</systemitem></para>
   </listitem>
 </itemizedlist>
   </section>
@@ -167,10 +189,6 @@
           <systemitem>#27241</systemitem></para>
       </listitem>
       <listitem>
-        <para> AVETMISS improvements for non-VET Prior Learning, to export a default FOE ID of 1299999 where no value is provided
-          <systemitem>#27241</systemitem></para>
-      </listitem>
-      <listitem>
         <para> Do not request to save company records when closing the edit view and no changes have been made
           <systemitem>#27631</systemitem></para>
       </listitem>
@@ -180,7 +198,7 @@
       </listitem>
       <listitem>
         <para> A fix to access control edit permissions where when the account access role was
-            changed, some preferences and permissions didn't update as expected
+            changed, and some preferences and permissions didn't update as expected
               <systemitem>#27717</systemitem></para>
       </listitem>
       <listitem>
@@ -192,8 +210,9 @@
             transaction' status enrolments <systemitem>#28089</systemitem></para>
       </listitem>
       <listitem>
-        <para> Improve display of error messages in Quick Enrol when the payment gateway is closed without completing or cancelling the payment attempt
-          <systemitem>#26888</systemitem></para>
+        <para> Improve clarity of user messages in Quick Enrol when the payment gateway is closed
+            without completing or cancelling the payment attempt
+            <systemitem>#26888</systemitem></para>
       </listitem>
       <listitem>
         <para> Improve visual display of calendar icon in advanced search so it doesn't overlay the data in the field

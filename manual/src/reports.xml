@@ -259,8 +259,10 @@
 				is not based on cash positions, but invoices created and is used by most book
 				keepers to provide their accountant with a record of assets, liabilities and
 				income.</para>
-			<para><link linkend="reports-Reconcile">Reconcile</link> For reconciliation with banking
-				deposits</para>
+			<para><link linkend="reports-ReconcileDetail">Reconciliation Detail</link> For reconciliation
+				with payment in/payment outs lines</para>
+			<para><link linkend="reports-ReconcileSummary">Reconciliation Summary</link> For reconciliation
+				with payment in/payment outs</para>
 			<para><link linkend="reports-Statement">Statement</link> Summary of all debits and
 				credits for a contact </para>
 			<para><link linkend="reports-TrialBalance">Trial Balance</link> The opening balance,
@@ -814,20 +816,42 @@
 				</caption>
 			</mediaobject>
 		</section>
-		<section xml:id="reports-Reconcile">
-			<title>Reconciliation Report</title>
-			<subtitle>onCourse Reconciliation Report</subtitle>
-			<para>Use: To reconcile payments in and out with banking deposits.</para>
-			<para>Report Location: From the <guimenu>Financial</guimenu> menu, Select
-					<guimenuitem>Reconcile Statement</guimenuitem>. Check the payments you wish to
-				reconcile, and select <guimenuitem>Print</guimenuitem>. A summary of the reconciled
-				and unreconciled payments are displayed in this window. Remember to select the
-				appropriate background for this report then run the report.</para>
+		<section xml:id="reports-ReconcileDetail">
+			<title>Reconciliation Detail Report</title>
+			<subtitle>onCourse Reconciliation Detail Report</subtitle>
+			<para>Use: To reconcile payment in/payment out lines.</para>
+			<para>Report Location: From the <guimenu>Financial</guimenu> menu, Select <guimenuitem>Payment
+					In</guimenuitem>. Highlight the records you wish to reconcile, and then go
+					<guimenuitem>File</guimenuitem> -> <guimenuitem>Print</guimenuitem>. This report
+				shows the detail for each payment in/payment out line and groups and total payments
+				by type. Remember to select the appropriate background for this report then run the
+				report.</para>
 			<para>
 				<mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" width="80%" contentdepth="80%"
-							fileref="images/reports/ReconciliationReport.png" format="png"/>
+							fileref="images/reports/ReconciliationDetailReport.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para> Reconciliation Report </para>
+					</caption>
+				</mediaobject>
+			</para>
+		</section>
+		<section xml:id="reports-ReconcileSummary">
+			<title>Reconciliation Summary Report</title>
+			<subtitle>onCourse Reconciliation Summary Report</subtitle>
+			<para>Use: To reconcile payment in/payment out</para>
+			<para>Report Location: From the <guimenu>Financial</guimenu> menu, Select <guimenuitem>Payment
+					In</guimenuitem>. Highlight the records you wish to reconcile, and then go
+					<guimenuitem>File</guimenuitem> -> <guimenuitem>Print</guimenuitem>. This report
+				only shows the summary data and groups and total payments by type. Remember to
+				select the appropriate background for this report then run the report.</para>
+			<para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="80%" contentdepth="80%"
+							fileref="images/reports/ReconciliationSummaryReport.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> Reconciliation Report </para>

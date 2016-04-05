@@ -163,6 +163,10 @@ End: ${enrolment.courseClass.endDateTime.format("h:mm a EEEE d MMMM yyyy zzzz")}
 ${it.title}    ${it.priceTotalIncTax}
 ${it.description}
 &lt;% } %></programlisting>
+				<para>To display an image in a email template you can first of all add the image to the onCourse
+					document management system then add the following syntax to the email templates
+					html body:</para>
+				<programlisting language="groovy-template">${image "imagename"}</programlisting>
 			</section>
 		</section>
 		<section>

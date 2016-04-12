@@ -728,9 +728,9 @@
 		<para>onCourse includes the AQF recommended templates for full Qualification Certificates,
 			Statements of Attainment and transcripts. These templates can be modified as needed to
 			meet your own style guides and content preferences. Certificates can only be generated
-			from units that are recorded as part of onCourse enrolments. If you wish to include
-			Credit Transfer units, you will need to add these outcomes to the students record before
-			you create the certificate.</para>
+			from units that are recorded as part of onCourse enrolments or Prior Learning records.
+			If you wish to include prior learning or credit transfer units, you will need to add
+			these outcomes to the student's record before you create the certificate.</para>
 		<para>By generating the certificate record in onCourse you will have created the data required to
 			meet the ASQA Standards for RTOs 2015 - Standard 3. The certificate list is your
 			Certificate Register. A certificate record you create is available in the certificate
@@ -748,7 +748,9 @@
 			Export Certificates to create a CSV file of your certificate register.</para>
 		<para>There are three parts to the process of creating certificates in onCourse.</para>
 		<orderedlist>
-			<listitem> <para>Creating the certificate record - this is either done as part of a bulk process for a group of students, or manually</para></listitem>
+			<listitem> <para>Creating the certificate record - this is either done automatically as part of a scheduled
+					script. manually as part of a bulk process for a group of students, or
+					individually</para></listitem>
 			<listitem><para>Verifying the certificate record - before printing, check that the details are correct.
 					Additional validation will also take place during the print process.</para></listitem>
 			<listitem><para>Printing the certificate record - this 'locks' the certificate record for further editing and
@@ -767,8 +769,85 @@
 		</mediaobject>
 		<section>
 			<title>Step 1 - Creating the certificate record</title>
+			<section>
+				<title>Automating the Certificate creation process</title>
+				<para>There are two pieces of the VET certification process you can automate with default
+					scripts. You can choose to enable one or both of these scripts depending on the
+					business automation aspects you wish to use.</para>
+				<orderedlist>
+					<listitem><para>The creation of the VET Statement of Attainment or Qualification in onCourse using the
+							'automatic creation of VET Certificates' script. This script looks at
+							the units attached to the student's enrolments, and the Qualification
+							properties of the course they have enrolled in. When all units from the
+							enrolment have been assisgned outcomes, the script creates either a
+							Statement of Attainment or Qualification/Skill Set certification for the
+							student in the onCourse Certificate table.</para></listitem>
+					<listitem><para>The issuing of the VET Certificate to the student via upload to the portal using the 'send
+							certificate vet created notification' script. This script determines if
+							the certificate is eligible to be printed based on the student's USI
+							status being verified, and then prints the certificate, attaches it to
+							the enrolment record, uploads it to the portal and sends the student an
+							email notice where they can click and retrieve their certificate without
+							a password (for 7 days) or retrieve by entering a password past 7
+							days.</para></listitem>
+				</orderedlist>
+			</section>
+			<section>
+				<title>Enabling the automatic VET Certificate creation script</title>
+				<para>Like most included scripts, the 'automatic creation of VET Certificates' script is
+					disabled by default. If you wish to automate this script you will need to enable
+					it in the File > Preferences> Scripts menu.</para>
+				<para>The script checks at 4am every day check for outcomes which have been modified in the
+					previous 24 hrs. If any outcomes attached to the enrolment are not yet marked,
+					the enrolment is skipped for certificate creation. When all outcomes have a
+					status, then the certificate creation process is triggered. This means if
+					outcomes are marked over time, the certificate will not be created until the
+					last outcome of the enrolment is marked.</para>
+				<para>It is important to note here that an outcome with an intermidate status like a
+					70 or 90 will trigger the certificate creation process. There are almost no
+					cases where you should enter this value in an onCourse record - allow the
+					AVETMISS export runner to set these values as needed.</para>
+				<para>For students with at least one successful outcome, create the certificate
+					record (Statement of Attainment or Qualification, based on the 'Satisifies
+					complete qualification or skill set' flag at the course level). If the outcome
+					is already joined to a certificate, this script will not not create a new
+					certificate containing that outcome. </para>
+				<para>You can identify these auto-created certificates in onCourse as the issued on
+					date will be 'not set' until they are printed.</para>
+				<qandaset>
+					<qandaentry>
+						<question><para>What will happen if a student has enrolled in full Qualification but only successfully
+								completed some of their units?</para></question>
+						<answer><para>If all the outcomes have been given a value, and some of the outcomes are unsuccessful, then
+								the student will be issued a Statement of Attainment, rather than a
+								Qualification. The successful units will print on the certificate
+								face, and on the accompanying transacript, both the successful and
+								unsucsessful units will be printed.</para></answer>
+					</qandaentry>
+					<qandaentry>
+						<question><para>What happens if a student is enrolled in a class with a single outcome and it is marked as unsuccessful, but then they resubmit and assessment and the outcome becomes successful?</para></question>
+						<answer><para>They will not be issued a certificate in the first instance, because they were unsuccessful, however when the outcome is changed to success, it will trigger the certificate to be created</para></answer>
+					</qandaentry>
+					<qandaentry>
+						<question><para>If a student has three outcomes attached to their enrolment are two are marked as successful and one is not marked, will they get a Statement of Attainment for the two successful outcomes?</para></question>
+						<answer><para>No, the automated certficate creation process won't be triggered until the final outcome is
+								marked. You can choose to make them a Statement of Attainment for
+								the first two units manually, and when the third outcome is marked,
+								they will get a second Statement of Attainment containing only that
+								unit. If you do nothing, they will get a single statement containing
+								all three units when the final outcome status is provided.</para></answer>
+					</qandaentry>
+					<qandaentry>
+						<question><para>If a Statement of Attainment is created automatically for a student who partially succeded in
+								completing a qualification, but I don't want to issue it, what
+								should I do?</para></question>
+						<answer><para>Befrore the Certificate is printed, you can delete it, or if it has been printed, revoke
+								it.</para></answer>
+					</qandaentry>
+				</qandaset>
+			</section>
 		<section>
-			<title>Creating certificates in bulk</title>
+			<title>Manually creating certificates in bulk</title>
 		<para>If you wish to create certificate records for the whole class group, we recommend creating
 			the certificate records from the class cog wheel option. If at the course level, you
 			checked the option 'Satisfies complete qualification or skill set' on the VET tab,
@@ -1308,7 +1387,7 @@
 			</mediaobject>
 		</section>
 <section>
-<title>Non-VET Statements of Attendance</title>
+<title>Non-VET Certificates of Attendance</title>
 	<para>Certificates of Attendance can be created manually and printed to paper for distribution, or
 				automatically created when the class is finished and distributed via PDF upload to
 				the skillsOnCourse portal, with automatic email notifications to students. </para>

@@ -654,6 +654,14 @@
 						not reporting Still at School for clients who are older than 16 and reported
 						as being employed</para>
 				</listitem>
+				<listitem>
+					<para>Export the training location address as your head office if the training
+						is self paced</para>
+				</listitem>
+				<listitem>
+					<para>Automatically parse student's addresses into the building name, unit
+						number, street number and street name components</para>
+				</listitem>
 			</itemizedlist>
 			<itemizedlist>
 				<listitem>
@@ -670,6 +678,10 @@
 					<para>Setting the delivery mode in the NAT00120 automatically to 90 where the
 						outcome is reported as RPL, RCC or credit transfer</para>
 				</listitem>
+				<listitem>
+					<para>Setting the delivery mode in the NAT00120 to 10 - classroom based if it
+						has not been set to another value the outcome</para>
+				</listitem>
 			</itemizedlist>
 			<itemizedlist>
 				<listitem>
@@ -685,7 +697,8 @@
 			</itemizedlist>
 			<itemizedlist>
 				<listitem>
-					<para>Not report a Study Reason Identifier if the course is non-VET</para>
+					<para>Not report a Study Reason Identifier if the course is non-VET or not a full qualification
+						enrolment</para>
 				</listitem>
 			</itemizedlist>
 			<itemizedlist>
@@ -832,8 +845,8 @@
 					Statistical Collection Guidelines - 2015 v 2015.1</para>
 				<para>At the end of the NAT00010 file, the additional data 'onCourse' is exported
 					with our email address, 'info@ish.com.au'</para>
-				<para>The RTO ID is prefixed with leading zeros in the NAT0)010, NAT00020 and
-					NAT0030 as required in Victoria only</para>
+				<para>The RTO ID is prefixed with leading zeros in the NAT0010, NAT00020 and NAT0030 as required
+					in Victoria only</para>
 				<para>The addresses of your training venues in the NAT00020 are broken into building
 					name, flat details, street number and street name fields, like student addresses
 					in the NAT00080/85</para>

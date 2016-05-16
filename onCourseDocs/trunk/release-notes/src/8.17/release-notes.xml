@@ -43,6 +43,10 @@
       <listitem><para>Removed the print and export 'all' option from the user interface for simplification. All records can still be printed or exported by ensuring the list view contains all the records prior to selecting print or export <systemitem>#2772</systemitem></para></listitem>
       <listitem><para>Add the ability to cancel an enrolment from inside the contact and class record using the delete icon<systemitem>#27928</systemitem></para></listitem>
       <listitem><para>Moved the display of the payer name inside Quick Enrol from next to the items list to the payment list for improved clarity as to which contact in the process is the debtor<systemitem>#28088</systemitem></para></listitem>
+      <listitem>
+        <para>Improved linking inside onCourse to the specific sections of the user
+          documentation<systemitem>#28268</systemitem></para>
+      </listitem>
     </itemizedlist>
   </section>
   <section role="fixes">
@@ -68,7 +72,11 @@
   <listitem><para>Scrolling through record edit views in the contact list using the next and previous options will attempt to load the next record on the same tab as the previous record. Where that tab is not available, the next tab is selected <systemitem>#28247</systemitem></para></listitem>
   <listitem><para>Fix to the VET Fee Help 'Fee charged' value, which was displaying $0.00 for some enrolment
           records, rather than the fee charged<systemitem>#28343</systemitem></para></listitem>
-  <listitem><para>Prevent outcome start date from being reset to the class start date when the end date is edited manually<systemitem>#28394</systemitem></para></listitem>
+ <listitem><para>Prevent outcome start date from being reset to the class start date when the end date is edited manually<systemitem>#28394</systemitem></para></listitem>
+<listitem><para>Ensure data entered from inside a sheet opened from within a record edit view prompts the user to save when leaving the record<systemitem>#28137</systemitem></para></listitem>
+<listitem><para>Correctly export AVETMISS NAT00120 Specific Funding Identifer data from outcome record
+            <systemitem>#28196</systemitem></para></listitem>
+  <listitem><para>Improvement to CloudAssess integration to check for student duplicates on enrolment in a cloudAssess class<systemitem>#28397</systemitem></para></listitem>
 </itemizedlist>
   </section>
   <section role="web-fixes">

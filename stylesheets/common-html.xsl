@@ -31,6 +31,7 @@
   </xsl:template>
   
   <xsl:template name="user.head.content">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <xsl:comment>[if lt IE 9]&gt;&lt;script src="js/html5shiv.js"&gt;&lt;/script>&lt;![endif]</xsl:comment>
     <meta name="date">
       <xsl:attribute name="content">

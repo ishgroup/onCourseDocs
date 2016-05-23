@@ -1287,14 +1287,25 @@
 		</section>
 	</section>
 		<section xml:id="rto-attaching">
-			<title>Getting the Certificate to the student</title>
-			<para>After you have read the section above about how to print a certificate, you now have
-				several ways to get that Certificate to the student. You can either send it by
-				email, attached it to drop box or attach Certificate records to an Enrolment so
-				that they are available in the student's skillsonCourse portal. You can do this by following these steps:</para>
+			<title>Sending the Certificate to the student as a PDF</title>
+			<para>If you wish to distribute your VET Certificates electronically, you can either enable the
+				default onCourse script to schedule this print and distribution process
+				automatically, or you can manually print and distribute the PDF.</para>
+			<section>
+				<title>Scripting Certificate Distribution</title>
+				<para>New script info here</para>
+			</section>
+			<section>
+				<title>Manually creating and issuing PDF Certificates</title>
+			<para>Once you have printed a Certificate to PDF, you can either send the PDF as an email
+					attachment (outside of onCourse) or attach the Certificate PDF record to the
+					student's Enrolment  using the onCourse document management system so it is
+					available in the student's skillsonCourse portal, and send them an email with
+					the link. </para>
 			<orderedlist>
 				<listitem>
-					<para>Follow the instructions above about how to print a certificate. </para>
+						<para>Print the Certificate to PDF with the background of your
+							choice.</para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="70%" contentdepth="70%"
@@ -1306,8 +1317,8 @@
 					</mediaobject>
 				</listitem>
 				<listitem>
-					<para>Once you have the Certificate open as a PDF, save the file to a location on your
-						computer.</para>
+					<para>Save the PDF file to a location on your computer, and give it a name that makes sense for
+							later retrival i.e. the students name and qualification</para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="70%" contentdepth="70%"
@@ -1351,12 +1362,18 @@
 								fileref="images/attaching_certificate_enrolment.png" format="png"/>
 						</imageobject>
 					</mediaobject>
+					<para>Once the Certificate is attached to their enrolment record, the student will be able to see
+						the file and and download it in their skillsonCourse portal.</para>
 				</listitem>
+				<listitem><para>Send the student an email adivsing them the certificate is available in the portal. If you
+							create an email template to this, you can use the code
+								<code>${enrolment.student.getPortalLink(certificate)}</code> to send
+							the student a login free link directly to retrieve their Certificate.
+							After 7 days, this login free link expires, however the student can
+							still click the link and login to access their Certificate again at any
+							time.</para></listitem>
 			</orderedlist>
-			<para>Once you have done this the student will be able to see and download this Certificate in
-				their skillsonCourse portal. You can also send them a direct link to the certificate
-				by using https://www.skillsoncourse.com.au/portal/class/5092726 where 5092726 is
-				website id of the class</para>
+			</section>
 		</section>
 		<section>
 			<title>Exporting Certificate data</title>

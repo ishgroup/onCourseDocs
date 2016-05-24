@@ -1245,7 +1245,7 @@
 					above.</para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
+						<imagedata scalefit="1" width="70%" contentdepth="70%"
 							fileref="images/reports/soanoqual.png" format="png"/>
 					</imageobject>
 					<caption>
@@ -1256,27 +1256,43 @@
 			</section>
 			<section>
 				<title>Skills Set Statement of Attainment Certificate</title>
-				<para>A skill set is a relatively new concept of a fixed grouping of units of
-					competency to meet an industry need, that is less than completing a whole
-					qualification.</para>
-				<para>When you issue a skill set certificate, you should indicate the name of the
-					skill set and the training package the units of competency are from.</para>
-				<para>You can do this by adding wording like "the Assessor Skill Set. These units
-					from the TAE10 Training and Education Training Package, when used with relevant
-					vocational competencies, meet industry requirements for assessors." to the
-					certificate record field Public (printed) notes.</para>
-				<para>If you add data to the Public (printed) notes field to indicate a skill set
-					you need to ensure that the qualification or national code fields for this
-					certificate record are not completed.</para>
-				<para>In the Statement of Attainment certificate template, where the phrase "These
-					competencies form part of the" wording was printed, it will instead print
-					""These competencies have been identified as meeting" followed by the text in
-					your Public (printed) notes. If you have completed the qualification information
-					in the certificate record, you will get the standard Statement of Attainment
-					layout, instead of this Skill Set Certificate layout.</para>
+				<para>A skill set is a relatively new concept of a fixed grouping of units of competency to meet
+						an industry need, that are less units than completing a whole qualification.
+						Skill sets are defined by Training Packages and available on
+						training.gov.au, and their names and codes are automatically downloaded into
+						onCourse, along with units of competency and qualifications. You could think
+						of a skill set as a mini qualification. In onCourse, they are treated
+						similarly to a qualification, as in a student has to be competent in all of
+						the skill set outcomes to be issued a complete skill set.</para>
+					<para>Like a qualification, completed skill sets are reported in the AVETMIS
+						NAT00130 file. Normal Statements of Attainment are not reported.</para>
+					<para>If the course has been defined as being a 'complete qualification or skill
+						set', and the student has successfully completed all the units of
+						competency, then oncourse will attempt to create a skill set certificate for
+						the particpant.</para>
+					<para>If you are manually creating a skill set certificate, you need to select
+						the option inside the certificate window 'qualification or skill set' rather
+						than Statement of Attainment, even though a skill set is a type of
+						statement.</para>
+					<para>On training.gov.au, each skill set includes suggested words for the
+						Statement of Attainment. If you wish to add these words to your printed
+						certificate, be sure to copy and paste them into the Certificate public
+						(printed) notes fields.</para>
+					<para>Below is an example of a Skill Set Certificate record, and a printed copy
+						of the certificate using the default onCourse template with no
+						background.</para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
+						<imagedata scalefit="1" width="70%" contentdepth="70%"
+							fileref="images/skillset_certificate_set_up.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Statement of Attainment layout for a Skill Set Certificate</para>
+					</caption>
+				</mediaobject>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="70%" contentdepth="70%"
 							fileref="images/reports/soaskillset.png" format="png"/>
 					</imageobject>
 					<caption>
@@ -1575,10 +1591,10 @@
 						supply their name, email address and password before they can access their
 						certificate.</para>
 			<para>By default, the link in the email template is to
-						${enrolment.student.getPortalLink(enrolment)}, which takes the student to
+				<code>${enrolment.student.getPortalLink(enrolment)}</code>, which takes the student to
 						their class page and presents them with the survey. If you do not wish to
 						use this feature, you can instead replace the link in the template with
-						${enrolment.student.getPortalLink(certificate)} to direct the student
+				<code>${enrolment.student.getPortalLink(certificate)}</code> to direct the student
 						directly to their certificate. You will also want to adjust the wording of
 						the template depending on which link you use. Be sure to make your changes
 						to both the plain text and HTML versions of the email.</para>

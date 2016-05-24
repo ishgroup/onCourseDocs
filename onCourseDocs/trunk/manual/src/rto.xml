@@ -1296,7 +1296,7 @@
 							fileref="images/reports/soaskillset.png" format="png"/>
 					</imageobject>
 					<caption>
-						<para>Statement of Attainment layout for a Skill Set Certificate</para>
+						<para>Statement of Attainment layout for a Skill Set Certificate without a background</para>
 					</caption>
 				</mediaobject>
 			</section>
@@ -1308,8 +1308,63 @@
 				default onCourse script to schedule this print and distribution process
 				automatically, or you can manually print and distribute the PDF.</para>
 			<section>
-				<title>Scripting Certificate Distribution</title>
-				<para>New script info here</para>
+				<title>Scripted Certificate Distribution</title>
+				<para>A default onCourse script called 'send certificate vet created notification' is available
+					to enable so you can automate the printing, upload to the portal and
+					notification to students of their VET certificate avilability.</para>
+				<para>By default, this script runs at 5am each day and prints all unprinted
+					certificates in the database, where the student has a verified USI.</para>
+				<para>Before you enable this script you need to ensure you have created and tested
+					the printing of the certificate reports with the following backgrounds:</para>
+				<orderedlist>
+					<listitem><para><emphasis role="bold">vet_qualification_background.pdf</emphasis> this background is for
+							printing certificates of type full Qualification. It should be a two
+							page background with a certificate face page, followed by a transcript
+							page background</para></listitem>
+					<listitem><para><emphasis role="bold">vet_soa_background.pdf</emphasis> this background is for printing
+						certificates of type Statement of Attainment. It should be a two page background with a certificate face page, followed by a transcript page background</para></listitem>
+					<listitem><para><emphasis role="bold">vet_skillset_background.pdf</emphasis> this background is for printing
+							special Statements of Attainment that are of full Skill Set type. It
+							should be a two page background with a certificate face page, followed
+							by a transcript page background</para></listitem>
+				</orderedlist>
+				<para>This script sends the email template 'certificate available' which you should adjust as
+					needed before enabling the script. Keep in mind this email template is also used
+					by the script to send non-VET certificates, 'send certificate created
+					notification', so if you adjust it, and use both scripts, then the wording needs
+					to make sense for both VET and non-VET courses. Alternativly, you could make a
+					copy of this template, and use two different versions, one for each
+					script.</para>
+				<para>When the script runs, it will send an email, with the default template
+					encouraging the student to complete the course feedback process in the
+					portal.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="70%" contentdepth="70%"
+							fileref="images/vet_cert_email.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Email to notify the student their certificate is available</para>
+					</caption>
+				</mediaobject>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="70%" contentdepth="70%"
+							fileref="images/portal_feedback.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>After clicking on the link in the email the student can provide feedback</para>
+					</caption>
+				</mediaobject>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="70%" contentdepth="70%"
+							fileref="images/vet_soa_email_sample.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Statement of Attainment PDF available in the portal for the student to download or print</para>
+					</caption>
+				</mediaobject>
 			</section>
 			<section>
 				<title>Manually creating and issuing PDF Certificates</title>

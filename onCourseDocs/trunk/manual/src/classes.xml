@@ -671,6 +671,19 @@
 			<para>You can also add notes to attendance records e.g. provided medical certificate.
 				You will also see a calculation of the percentage the class the student has
 				attended, to monitor the student's attendance requirements.</para>
+			<para>Sessions that are marked as attended, partially attended (minutes of attendance)
+				or absent with reason will contribute to the student's positive attendance
+				percentage calculation. Sessions that are marked as partially attended (minutes of
+				non-attendance) and absent without reason will contribute to the student's negative
+				attendance calculation. Sessions not yet marked do not contribute to the overall
+				calculation of attendance, nor do sessions marked in advanced (attendance marking
+				for days after today). </para>
+			<para>When a student's attendance percentage is 80% or higher, a green tick will
+				accompany the calculated result.</para>
+			<para>When a student's attendance percentage is between 70% and 80%, a yellow alert icon
+				will accompany the calculated result.</para>
+			<para>When a student's attendance percentage is less than 70%, a red warning icon will
+				accompany the calculated result.</para>
 			<para>Clicking on each of the individual icons will cycle between attended (green tick);
 				absent without reason (red cross); and back to the unmarked (person icon) options.
 				To enter an absent with reason or partial attendance option, right click on the
@@ -790,16 +803,15 @@
 				is to number or alphabetise the classes. For example if your course is Dancing For
 				Beginners and the course code is DFB, you may wish to create the class code for the
 				first class of this course as "01". This will then allow future classes in this same
-				course to be listed in order ie. 01, 02, 03. When you duplicate the class the final
-				number will automatically increment. </para>
+				course to be listed in order i.e.. 01, 02, 03. When you duplicate the class the
+				final number will automatically increment. </para>
 		</tip>
 		<example>
 			<title>How to create a new class</title>
 			<orderedlist>
 				<listitem>
-					<para>Open the class list window, click on the the <guibutton>+</guibutton>
-						button in the top right hand corner of the screen. A new class screen will
-						open to the general tab. </para>
+					<para>Open the class list window, click on the <guibutton>+</guibutton> button in the top right
+						hand corner of the screen. A new class screen will open to the general tab. </para>
 				</listitem>
 				<listitem>
 					<para>All classes must be linked to a course you have already created. Begin
@@ -825,11 +837,11 @@
 						Change it if needed to another status.</para>
 				</listitem>
 				<listitem>
-					<para>Now go to the tutor tab. This is where you can assign tutors to classes.
-						Click on the <guibutton>+</guibutton> sign on the right hand side of the
-						screen. A drop down sheet will appear. Type the tutor's name in the tutor
-						field, surname first. This is an autcomplete field so once you start typing,
-						a selection of tutor's names you have previously entered will be listed.
+					<para>Now go to the tutor tab. This is where you can assign tutors to classes. Click on the
+							<guibutton>+</guibutton> sign on the right hand side of the screen. A
+						drop down sheet will appear. Type the tutor's name in the tutor field,
+						surname first. This is an autocomplete field so once you start typing, a
+						selection of tutor's names you have previously entered will be listed.
 						Select the tutor you want from the list and complete the appropriate
 						information in the tab.</para>
 				</listitem>
@@ -885,11 +897,11 @@
 						the date selector tool to find the start date of your choice. </para>
 				</listitem>
 				<listitem>
-					<para>Enter a duration for the session in hours and minutes e.g. 8 hrs. If the
-						tutor will not be paid for the full duration for the session (e.g. an upaid
-						lunch break) change the value in the payable time option. Note that changing
-						this value will effect all tutors attached to this session who are paid at
-						an hourly rate.</para>
+					<para>Enter a duration for the session in hours and minutes e.g. 8 hrs. If the tutor will not
+						be paid for the full duration for the session (e.g. an unpaid lunch break)
+						change the value in the payable time option. Note that changing this value
+						will effect all tutors attached to this session who are paid at an hourly
+						rate.</para>
 					<para>Select from the tutor list any tutor(s) you wish to assign to these
 						sessions.</para>
 					<mediaobject>
@@ -991,21 +1003,20 @@
 						required to supply them. </para>
 				</listitem>
 				<listitem>
-					<para>Both your nominal hours and classroom hours will be calculated. Nominal
-						hours are calculated based on the hours you set at the unit of competency
-						level. Classroom hours are based on the timetabled hours for the class. The
-						nominal or classroom hours multipled by the number of students enrolled is
-						used to calculate your student contact hours. Where you have provided them,
-						your reportable hours will default to the nominal hours, or classroom hours
-						if nominal hours haven't been set up. If you wish to report different hours,
+					<para>Both your nominal hours and classroom hours will be calculated. Nominal hours are
+						calculated based on the hours you set at the unit of competency level.
+						Classroom hours are based on the timetabled hours for the class. The nominal
+						or classroom hours multiplied by the number of students enrolled is used to
+						calculate your student contact hours. Where you have provided them, your
+						reportable hours will default to the nominal hours, or classroom hours if
+						nominal hours haven't been set up. If you wish to report different hours,
 						override the data in the reportable hours field with the numbers of your
 						choice.</para>
-					<para>If you are reporting to Queensland or Victoria it is vital you set the
-						nominal hours for each unit of competency you deliver. The nominal hours are
-						used to calculate the student fee per unit by dividing the class fee by the
-						total nominal hours and mulitplying it out again to each unit based on it's
-						hours. If you have zero hours, you will always report $0 student fees for
-						that unit. </para>
+					<para>If you are reporting to Queensland or Victoria it is vital you set the nominal hours for
+						each unit of competency you deliver. The nominal hours are used to calculate
+						the student fee per unit by dividing the class fee by the total nominal
+						hours and multiplying it out again to each unit based on it's hours. If you
+						have zero hours, you will always report $0 student fees for that unit. </para>
 				</listitem>
 				<listitem>
 					<para>There are additional AVETMISS funding fields in the student enrolment
@@ -1049,10 +1060,10 @@
 						<entry>Yes</entry>
 						<entry>Enrolment allowed</entry>
 						<entry>Yes</entry>
-						<entry>Course is included in the search results, but the class is hidden
-							from the list and results views. The class page can be accessed directly
-							via the class URL but there is no option to enrol. Enrolments can be
-							processed via QuickEnrol only.</entry>
+						<entry>Course is included in the search results, but the class is hidden from the list and
+							results views. The class page can be accessed directly via the class URL
+							but there is no option to enrol. Enrolments can be processed via Quick
+							Enrol only.</entry>
 						<entry>Once you have closed online enrolments for the class, the URL in the
 							enrolment confirmation will still return the class details.</entry>
 					</row>
@@ -1119,9 +1130,9 @@
 							has not be removed from the website the class URL will still be
 							available; The enrol now button will be replaced with the word
 							'cancelled' and no enrolments can be taken.</entry>
-						<entry>For students who enrolled prior to the class being cancelled, the URL
-							in their enrolment confirmation will still return a valid webpage,
-							showing the class as cancelled.</entry>
+						<entry>For students who enrolled prior to the class being cancelled, the URL in their
+							enrolment confirmation will still return a valid web page, showing the
+							class as cancelled.</entry>
 					</row>
 				</tbody>
 			</tgroup>

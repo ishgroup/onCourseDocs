@@ -95,8 +95,8 @@
                     Company Name and a Password. Remember that the Company or Contact must already
                     exist as a record within onCourse prior to creating the CorporatePass. </para>
                 <para>You can also specify as to which email address the invoices will be sent to.
-                    An expiry date can also be set for a given CorporatePass, but this is not a
-                    required field. </para>
+                    By default the email address of the contact will be applied. An expiry date can
+                    also be set for a given CorporatePass, but this is not a required field. </para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/CreateNewCorporatePass.png"/>
@@ -107,28 +107,16 @@
                 </mediaobject>
             </listitem>
             <listitem>
-                <para>You can now define as to which class or classes are able to be enrolled in
-                    using this CorporatePass in the following ways:</para>
+                <para>If you want to restrict the corportate pass to certain classes, you can add
+                    limitations. Please note if you want the pass to apply to ALL classes you should
+                    skip this step. </para>
                 <itemizedlist>
-                    <listitem>
-                        <para>Add all of your classes to a CorporatePass, this Pass will be valid
-                            for any current or pending classes.</para>
-                        <mediaobject>
-                            <imageobject>
-                                <imagedata scalefit="1" width="100%" contentdepth="100%" 
-                                    fileref="images/AddAllClassesToCorporatePass.png"/>
-                            </imageobject>
-                            <caption>
-                                <para>Add all classes to the Corporate Pass.</para>
-                            </caption>
-                        </mediaobject>
-                    </listitem>
                     <listitem>
                         <para>Add a single class to a CorporatePass, this Pass will only be valid
                             for the specified class.</para>
                         <mediaobject>
                             <imageobject>
-                                <imagedata scalefit="1" width="100%" contentdepth="100%" 
+                                <imagedata scalefit="1" width="100%" contentdepth="100%"
                                     fileref="images/AddSingleClassToCorporatePass.png"/>
                             </imageobject>
                             <caption>
@@ -140,7 +128,7 @@
                         <para>Add all classes for a given course to a CorporatePass.</para>
                         <mediaobject>
                             <imageobject>
-                                <imagedata scalefit="1" width="100%" contentdepth="100%" 
+                                <imagedata scalefit="1" width="100%" contentdepth="100%"
                                     fileref="images/AddAllClassesForCourseToCorporatePass.png"/>
                             </imageobject>
                             <caption>
@@ -152,7 +140,7 @@
                         <para>Add all classes from a given subject tag.</para>
                         <mediaobject>
                             <imageobject>
-                                <imagedata scalefit="1" width="100%" contentdepth="100%" 
+                                <imagedata scalefit="1" width="100%" contentdepth="100%"
                                     fileref="images/AddAllClassesFromTagToCorporatePass.png"/>
                             </imageobject>
                             <caption>
@@ -167,7 +155,10 @@
             <tip>
                 <para>If you don't specify any classes within your CorporatePass, this will mean
                     that the Pass can be used to enrol in any class that is open for enrolment and
-                    published on your website. </para>
+                    published on your website. If you choose to link your CorporatePass to all
+                    current and pending classes, this means it will only work for classes that
+                    exisit today, not new classes you'll create in the future. This would be a very
+                    uncommon use case.</para>
             </tip>
         </para>
     </section>

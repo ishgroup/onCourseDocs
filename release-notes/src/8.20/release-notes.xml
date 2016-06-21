@@ -2,8 +2,8 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-8.19">
 
   <info>
-    <title>Release 8.19</title>
-    <pubdate>xx Jan 2016</pubdate>
+    <title>Release 8.20</title>
+    <pubdate>xx July 2016</pubdate>
   </info>
 
   <section role="important">
@@ -23,12 +23,12 @@
     <title>Major features</title>
   <section>
     <title>Allow Discounts to change fee charged instead of charge to expenses</title>
-    <para>Previosuly, all discounts processed within onCourse proecessed the value of the discount
-        to the default COS (cost of sale) account as defined by the financial preferences, called
+    <para>Previously, all discounts processed within onCourse processed the value of the discount to
+        the default COS (cost of sale) account as defined by the financial preferences, called
         'discounts given'. For example, if your class fee was $100, with a $20 discount, so the
         student was charged $80, then $100 income would be earnt by the transaction, with $20 of COS
         expense posted. </para>
-      <para>Substansial changes have been made to the way discounts can be created in the system so
+      <para>Substantial changes have been made to the way discounts can be created in the system so
         they can be either be a:</para>
     <orderedlist>
       <listitem><para><emphasis role="bold">Discount linked to your choice of COS Account from those created in the
@@ -52,7 +52,7 @@
         prior to the date the record was created can now be set in onCourse. This will allow finance
         users to move transactions that occur early in a new month to be pushed back into the month
         prior, for invoices, payments in and payments out, and for the same types of transactions to
-        be moved forward in time as needed.</para>
+        be moved forward in time as needed. Journals can also be posted into the past.</para>
       <para>Once a month end's movements are complete, the period should be finalised, to avoid
         further movements during that date range. A new UI has been added to the Financial menu
         options to Finalise Period.</para>
@@ -78,16 +78,26 @@
       <listitem><para>Fix to Statement Report to only include payments with a successful and non-reversed status <systemitem>#28006</systemitem></para></listitem>
       <listitem><para>Addition of new report 'Payment Out', available from the payment out window <systemitem>#28646</systemitem></para></listitem>
       <listitem><para>The contact import and contact export CSV layouts have been aligned <systemitem>#27449</systemitem></para></listitem>
-      <listitem><para>Add a new column to the scripts list view to show the next run date or event, and grey out the scripts that are disabled <systemitem>#28315</systemitem></para></listitem>
+      <listitem><para>A new column has been added to the scripts list view to show the next run date or event, and
+          grey out the scripts that are disabled <systemitem>#28315</systemitem></para></listitem>
       <listitem><para>Change the script edit permissions to allow the script CRON schedule to be adjusted by all users <systemitem>#27997</systemitem></para></listitem>
       <listitem><para>Fix to the calculation of isActive flag to ensure cancelled classes are not included as active for reporting or scripting<systemitem>#28689</systemitem></para></listitem>
-      <listitem><para> <systemitem>#</systemitem></para></listitem>
+      <listitem><para>A new option has been added to the export template cogwheel to 'duplicate export template'.
+          This will assist users when creating their own custom templates, using an onCourse
+          template as the starting point. The key code will be left blank in the duplicate process
+          for you to create your own unique code. <systemitem>#28063</systemitem></para></listitem>
       <listitem><para> <systemitem>#</systemitem></para></listitem>
     </itemizedlist>
   </section>
   <section role="minor">
     <title>Minor features</title>
     <itemizedlist>
+      <listitem><para>Implementation of HTTP/2 communication protocols between onCourse client and server
+          applications. This protocol reduces the number of requests from the client to retrieve
+          server side data, so will improve the speed of information transfer, resulting in faster
+          response times inside the application for some processes. This may noticeably improve the
+          record loading time for users on some types of high latency internet links
+            <systemitem>#27818</systemitem></para></listitem>
       <listitem><para>Default name of the asset account where payments are deposited changed from 'Cheque account'
           to 'Deposited funds', in preparation for new 'undeposited funds' account creation
             <systemitem>#28229</systemitem></para></listitem>
@@ -111,6 +121,15 @@
       <listitem><para>Allow course with modules attached to be unflagged as VET to meet some NSW AVETMISS reporting
         requirements <systemitem>#28515</systemitem></para></listitem>
       <listitem><para>AVETMISS outcome '61 - Superseded subject' added to list of outcome status options available <systemitem>#27959</systemitem></para></listitem>
+    <listitem><para>Store user preferences for all edit view windows, so that after closing, the window will
+          reopen in your preferred layout and size<systemitem>#26877</systemitem></para></listitem>
+      <listitem><para>Improve layout of the enrolment cancellation/transfer administrative fee display to auto
+          select the income account from the class and show the total admin fee charged inclusive of
+            GST<systemitem>#27549</systemitem></para></listitem>
+      <listitem><para>Implementation of OS native file browser for simpler location of files on disk and uploading
+          of documents into onCourse<systemitem>#27914</systemitem></para></listitem>
+      <listitem><para>Improvements to the messaging window to search on message status, find related message contact, and open queued email and SMS records from the general messaging preferences<systemitem>#28585</systemitem></para></listitem>
+      <listitem><para><systemitem></systemitem></para></listitem>
     </itemizedlist>
   </section>
   <section role="fixes">
@@ -128,11 +147,14 @@
       <listitem><para>VET Fee Help - VEN will now only export each contact once to avoid duplicates when enrolling
           in multiple courses <systemitem>#28511</systemitem></para></listitem>
       <listitem><para>VET Fee Help - Update 'unit of study code' to export as standard courseCode-classCode format
-            <systemitem>#</systemitem></para></listitem>
+            <systemitem>#28512</systemitem></para></listitem>
       <listitem><para>Improve onCourse contact merge function when custom fields are present
             <systemitem>#28545</systemitem></para></listitem>
-      <listitem><para><systemitem></systemitem></para></listitem>
-      <listitem><para><systemitem></systemitem></para></listitem>
+      <listitem><para>Prevent the preference window from opening more than one instance at a time for each user<systemitem>#28586</systemitem></para></listitem>
+      <listitem><para>Display contact financial records sorted by date and time inside the contact
+            record<systemitem>#28781</systemitem></para></listitem>
+      <listitem><para>Fix to wait list tagging function to correctly delete related tags when the waiting list entry
+          is deleted<systemitem>#28959</systemitem></para></listitem>
     </itemizedlist>
   </section>
 </chapter>

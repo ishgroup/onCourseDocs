@@ -56,6 +56,7 @@
       <para>Once a month end's movements are complete, the period should be finalised, to avoid
         further movements during that date range. A new UI has been added to the Financial menu
         options to Finalise Period.</para>
+      <para>Reports printed that include transactions in unlocked period include a red warning on the last page ""This report includes unposted transaction periods which are subject to change."</para>
     </section>
     <section>
       <title>Bank reconciliation redesign</title>
@@ -64,6 +65,29 @@
         can be reconciled with a single click, or balanced transaction by transaction.</para>
       <para>In concert with this change, the associated reconciliation reports have also been
         renamed 'Cash movements reports'</para>
+    </section>
+    <section>
+      <title>Default tax setting per income account</title>
+      <para>Each income account now has the option to set a default tax value. This will
+        automatically apply the selected tax option when the income account is chosen during the
+        class set up process, or when a manual invoice is generated. The user can still choose to
+        change the tax to another option available as needed.</para>
+      <para>We recommend all finance managers review the default tax status of each account after
+        the upgrade and ensure the default option for each income account is the more commonly used
+        value e.e. does GST apply to most transactions in this account or not. Changing these values
+        do not change any previous transactions in the system or any exisiting account/tax
+        combinations, but will ensure less user errors in tax selection are made going
+        forward.</para>
+    </section>
+    <section>
+      <title>New duplicate course option</title>
+      <para>This feature is of particular interest to RTO onCourse users, who may need to re-create
+        courses regularly as training packages change or internally unit clustering changes. In the
+        course cogwheel, a 'duplicate course' option will copy all the marketing, related courses,
+        attached documents and attached VET unit information from an exisiting course and
+        automatically add a '1' to the end of the course code. This new course can then have units
+        quickly added, deleted or otherwise adjusted. By default, all duplicated courses are set to
+        be enabled on creation, but will not display on the web until you set that value.</para>
     </section>
   </section>
   <section role="scripts">
@@ -86,6 +110,10 @@
           This will assist users when creating their own custom templates, using an onCourse
           template as the starting point. The key code will be left blank in the duplicate process
           for you to create your own unique code. <systemitem>#28063</systemitem></para></listitem>
+      <listitem><para>Improvement to the 'send certificate vet created notification' script to set the issued on
+          date to the day the certificate was automatically printed and distributed to the student.
+          If you are using this script, you should open the script record and click 'update to
+          latest version'.  <systemitem>#28724</systemitem></para></listitem>
       <listitem><para> <systemitem>#</systemitem></para></listitem>
     </itemizedlist>
   </section>
@@ -155,6 +183,7 @@
             record<systemitem>#28781</systemitem></para></listitem>
       <listitem><para>Fix to wait list tagging function to correctly delete related tags when the waiting list entry
           is deleted<systemitem>#28959</systemitem></para></listitem>
+      <listitem><para>Improvement to EULA checking preference to retain check when the user name is modified<systemitem>#27475</systemitem></para></listitem>
     </itemizedlist>
   </section>
 </chapter>

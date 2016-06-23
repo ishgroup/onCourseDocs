@@ -126,6 +126,11 @@
 				your onCourse website in bulk.</para>
 			<para>Courses which are not shown on the website appear in a lighter grey font in the
 				list view for ease of identification.</para>
+			<para>The course cogwheel also lets you duplicate a course. This copies all the
+				marketing and attached record data from a course into a new course with the same
+				name and a '1' added to the end of the course code. The feature is of particular use
+				when a training package updates and course units need to be adjusted for future
+				enrolments.</para>
 		</section>
 		<section>
 			<title>Creating a new course</title>
@@ -509,6 +514,43 @@
 			in their own enrolment, for example if they change to a different elective. What this means is
 			that you can save yourself a lot of data entry work if you set your course up with all the
 			units to begin with. </para>
+		<example>
+			<title>Creating a VET Course</title>
+			<orderedlist>
+				<listitem>
+					<para>Follow the instructions to create a new course. Open the course record to the
+						<guibutton>VET tab</guibutton>.</para>
+				</listitem>
+				<listitem>
+					<para>Enter the <guilabel>National Code</guilabel>. The fields are clairvoyant, so as you type
+						in them, onCourse will search for and list the qualifications in the built
+						in training.gov.au database. Select the qualification by clicking on it. You
+						can also search for qualification by name in
+						<guilabel>Qualification</guilabel>. Omit the words Certificate in or
+						Diploma of in your search. For example, search for the Certificate IV in
+						Aged Care by typing 'Aged Care'.</para>
+				</listitem>
+				<listitem>
+					<para> The qualification information is broken into different fields so the Certificate IV
+						Training and Assessment would read <guilabel>National code</guilabel> - TAA40104
+						<guilabel>Qualification</guilabel> - Training and Assessment
+						<guilabel>Level</guilabel> - Certificate IV </para>
+				</listitem>
+				<listitem>
+					<para>You can then add modules and the units by clicking the <guibutton>+</guibutton>icon
+						on the right hand side of the screen. This will open a drop down screen.</para>
+				</listitem>
+				<listitem>
+					<para>Enter the <guilabel>National Code</guilabel> or <guilabel>Title</guilabel> These
+						fields are also clairvoyant so make your selection and press ok. You will then be
+						returned to the course screen where you will see the modules and units listed. To add
+						more units simply click on the <guibutton>+</guibutton>sign and repeat the process. To
+						delete any units, click the <guibutton>-</guibutton> sign. When you are done, click
+						<guibutton>save</guibutton>. You can also set the nominal hours for the units as you
+						attach them to the course.</para>
+				</listitem>
+			</orderedlist>
+		</example>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/vet_course_tab.png"/>
@@ -521,80 +563,87 @@
 			<title>Changing units in a course</title>
 			<para>Once a course has a class with an enrolment in it you CAN NOT change the units of
 				competency assigned to the course. This is because onCourse has created an immutable
-				relationship with this data - if you changed it at the course level, every student ever
-				enrolled in a class for this course would have their outcomes changed. You can always retire
-				the old course and create a new course to use in the future. The new course can have the
-				same name but will have to have a different course code. This type of issue can be tricky,
-				so take care when going through the steps. Remember that if an immutable (state cannot be
-				modified after it has been set) relationship in onCourse is formed, it is quite hard to
-				remove or delete any half of the relationship. Immutable relationships are formed so as to
-				restrict or deny any removal of vital database elements, like a course, if a course was
-				allowed to be removed at the click of button, things like classes, students, invoices,
-				payments etc will be adversely affected.</para>
+				relationship with this data - if you changed it at the course level, every student
+				ever enrolled in a class for this course would have their outcomes changed. </para>
+			<para>However - you can always retire the old course and create a new course to use for
+				future enrolment using the 'duplicate course' option in the list view cogwheel. The
+				new course can have the same name but will have to have a different course code. You
+				may choose to change the code of the old course instead, so the new course can use
+				the existing code, which is adventagous for your SEO. Make sure to set the status of
+				the old course to 'course disabled' and when you are ready, the status of the new
+				course to 'enabled and visible online'. </para>
+			<para>You may also want to duplicate one of the classes from the old course and assign it to the
+				new course to use the same timetables and teaching schedules. </para>
 		</caution>
 		<example>
-			<title>How to "remove" a unit of competency from a class</title>
-			<para>You cannot actually remove a Unit of competency from a course (see the caution above), you
-				can only cancel the old course and then create a new course with/without the unit of
-				competency you want included/removed. This is because changing the units of
-				competency changes the very nature of the course. It isn't the same course as before
-				and students enrolling in the new version of your course should be aware that they
-				are enrolling into something quite different from the old course</para>
+			<title>How to "add" a unit of competency to a course</title>
+			<para>You cannot actually add a Unit of competency to a course if it already has enrolments (see
+				the caution above), you can only cancel the old course and then create a new course
+				with the additional unit of competency you want included. This is because changing
+				the units of competency changes the very nature of the course, but the history of
+				the old course and it's previous students need to be retained. </para>
+			<para>If needed, you can also add units directly to student enrolments. This will not
+				change the course units for new students enrolling, but can be used to correct or
+				update the records of existing students.</para>
+			<para>If the unit change is substansial, you may want to consider creating a new class
+				against the new course, and transferring all the students from the class linked to
+				the old course to the class linked to the new course. This will remove all the old
+				units from their record (provided outcomes have not yet been set), and with their
+				new enrolment, add all the new units to their record.</para>
 			<orderedlist>
-				<title>What to do to achieve this:</title>
+				<title>How to duplicate a course:</title>
 				<listitem>
-					<para>First go to "Course", from here double click on the course record e.g; Computers -
-						Beginners"</para>
+					<para>First go to "Course" list view and single click to select the old version of the
+						course</para>
 				</listitem>
 				<listitem>
-					<para>Once opened, disable the course by selecting "course disabled" from the "status"
-						drop down menu in the "general tab" (see screenshot below)</para>
+					<para>From the cogwheel, select the option 'duplicate course'. This will make
+						another course with the same name and all the same content, with a course
+						code with a 1 on the end.</para>
 				</listitem>
 				<listitem>
-					<para>After the course is disabled, create a new course (see above for more on how to
-						create a new course)</para>
-				</listitem>
-				<listitem><para>After the new course is created (with a slightly different name from the old course),
-					you must give the course a different course code.</para></listitem>
-			</orderedlist>
-		</example>
-		<example>
-			<title>Creating a VET Course</title>
-			<orderedlist>
-				<listitem>
-					<para>Follow the instructions to create a new course. Open the course record to the
-							<guibutton>VET tab</guibutton>.</para>
+					<para>Courses can have the same name, but every course has to have a unique
+						code. Because the course code is what forms your URL on the website, it is
+						better for SEO purposes to change the code of the old course to something
+						different before you disable it e.g. BCDCERTV could become oldBCDCERTV. Then
+						you can change the code of the new version of the course from BCDCERTV1 back
+						to BCDCERTV.</para>
 				</listitem>
 				<listitem>
-					<para>Enter the <guilabel>National Code</guilabel>. The fields are clairvoyant, so as you type
-						in them, onCourse will search for and list the qualifications in the built
-						in training.gov.au database. Select the qualification by clicking on it. You
-						can also search for qualification by name in
-							<guilabel>Qualification</guilabel>. Omit the words Certificate in or
-						Diploma of in your search. For example, search for the Certificate IV in
-						Aged Care by typing 'Aged Care'.</para>
+					<para>Open the old version of the course and set the staus to 'course
+						disabled'.</para>
 				</listitem>
 				<listitem>
-					<para> The qualification information is broken into different fields so the Certificate IV
-						Training and Assessment would read <guilabel>National code</guilabel> - TAA40104
-							<guilabel>Qualification</guilabel> - Training and Assessment
-							<guilabel>Level</guilabel> - Certificate IV </para>
+					<para>Open the new version of the course and make the required changes to the listed units of
+						comptency by adding or deleting from the current list on the VET tab.</para>
 				</listitem>
 				<listitem>
-					<para>You can then add modules and the units by clicking the <guibutton>+</guibutton>icon
-						on the right hand side of the screen. This will open a drop down screen.</para>
-				</listitem>
-				<listitem>
-					<para>Enter the <guilabel>National Code</guilabel> or <guilabel>Title</guilabel> These
-						fields are also clairvoyant so make your selection and press ok. You will then be
-						returned to the course screen where you will see the modules and units listed. To add
-						more units simply click on the <guibutton>+</guibutton>sign and repeat the process. To
-						delete any units, click the <guibutton>-</guibutton> sign. When you are done, click
-							<guibutton>save</guibutton>. You can also set the nominal hours for the units as you
-						attach them to the course.</para>
+					<para>When you are ready to save and close the new course, set the course status
+						to 'enabled and visible online' </para>
 				</listitem>
 			</orderedlist>
+			<orderedlist>
+				<title>How to duplicate a class from an old course to a new course:</title>
+				<listitem><para>Open the class list view and locate a recent class from the old course. Following from the
+						example before, this might be class oldBCDCERTV-90.</para></listitem>
+				<listitem>
+					<para>Using the class cog wheel option, duplicate this class, making any changes
+						to the dates as appropriate. This new class will have the code
+						oldBCDCERTV-91 and be linked to the old course.</para>
+				</listitem>
+				<listitem>
+					<para>Double click on the new class to open it. In the course code field in the
+						top right handcorner, change the code from the old course to the new course
+						e.g. BCDCERTV. This has now linked the class to the new course. Save and
+						close.</para>
+					<para>NOTE: You can only change the course a class is linked to before any
+						enrolments are processed into the class. If a class has enrolments, even if
+						those enrolments are cancelled, you can not change the course code it is
+						linked to.</para>
+				</listitem>
+			</orderedlist>
 		</example>
+		
 		<section>
 			<title>Courses which are complete qualifications or skill sets</title>
 			<para>When a course has the flag 'Satisfies complete qualification or skill set' checked on the
@@ -613,10 +662,10 @@
 		</section>
 		<section>
 			<title>Partial qualifications</title>
-			<para>Remember that in onCourse a course is about the product you are selling to your
-				students. Sometimes you may break a program of study e.g. full qualification into lots of
-				short courses for students to buy, complete and over time, work towards the final outcome of
-				a qualification.</para>
+			<para>Remember that in onCourse a course is about the product you are selling to your students.
+				Sometimes you may break a program of study e.g. full qualification into lots of
+				short courses for students to buy, complete and over time, to work towards the final
+				outcome of a qualification.</para>
 			<para>In onCourse, courses don't have to be linked to a qualification or a unit of competency.
 				They can just be a non-accredited course.</para>
 			<para>If students are working towards a unit of competency that they will complete in another

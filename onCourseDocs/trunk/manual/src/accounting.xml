@@ -555,6 +555,68 @@
 		<para>There are multiple methods you can use to extract / examine financial information
 			within onCourse;</para>
 		<section>
+			<title>Automated reporting from scripts</title>
+			<para>An automated weekly or monthly Trial Balance report from onCourse is available by enabling
+				the script 'send weekly finance summary report'.</para>
+			<para>By default, this script is set up to run every Monday morning. It prints to PDF and emails
+				the Trial Balance report for the previous 7 days to the default system administrator
+				email address. You can make the following changes in the script to meet your
+				requirements:</para>
+			<para><emphasis role="bold">Change the email address receiving the report</emphasis> The
+				default system administrator email address is the one you have set in General
+				Preferences > Messaging. If this is not the email address you want to use, change
+				the reference in the script that says</para>
+			
+			<para><programlisting language="groovy">smtp {
+			from preference.email.from
+			to preference.email.admin</programlisting></para>
+						<para>to say:</para>
+			<para><programlisting language="groovy">smtp {
+			from preference.email.from
+			to "accounts@mycollege.com.au"</programlisting></para>
+			<para>Where "accounts@mycollege.com.au" is the email address of the person who should receive the
+				report, being sure to include the speech marks. </para>
+			<para><emphasis role="bold">Change from weekly to monthly automated reports</emphasis>
+				To make this change you need to make some changes to the code in the script, and
+				also the the CRON. The CRON is the scheduler that defines how often the script runs.
+				By default the CRON is 3am every Monday morning:</para>
+			<para><programlisting language="groovy">0 0 3 ? * MON</programlisting></para>
+			<para>Change it to 3am the 1st of every month:</para>
+			<para><programlisting language="groovy">0 0 3 1 1/1 ? *</programlisting></para>
+			<para>And then inside the body of the script, you need to change which actions are commented out.
+				Lines of code which are comments and not run by the software begin with //. Change
+				the script from:</para>
+			<para><programlisting language="groovy">    //If you want to change date period use one of the sections below:
+
+    //set period in number of days (e.g. for the last 7 days)
+    def endDate = Calendar.getInstance().getTime()
+    endDate.set(hourOfDay: 0, minute: 0, second: 0)
+    def startDate = endDate - 7
+
+    
+//    set period in calendar months (e.g. for the last month)
+    
+//    def endDate = Calendar.getInstance().getTime()
+//    endDate.set(dayOfMonth: 1,hourOfDay: 0, minute: 0, second: 0)
+//    println endDate
+//    def startDate = DateUtils.addMonths(endDate, -1)</programlisting></para>
+			<para>To:</para>
+			<para><programlisting language="groovy">    //If you want to change date period use one of the sections below:
+
+    //set period in number of days (e.g. for the last 7 days)
+    //def endDate = Calendar.getInstance().getTime()
+    //endDate.set(hourOfDay: 0, minute: 0, second: 0)
+    //def startDate = endDate - 7
+
+    
+//    set period in calendar months (e.g. for the last month)
+    
+   def endDate = Calendar.getInstance().getTime()
+   endDate.set(dayOfMonth: 1,hourOfDay: 0, minute: 0, second: 0)
+    println endDate
+    def startDate = DateUtils.addMonths(endDate, -1) </programlisting></para>
+		</section>
+		<section>
 			<title>Locating data using related records</title>
 			<para>In all onCourse windows, you can track through the relationships between the data
 				using the 'Find related' function in the cogwheel in the top right hand corner. For

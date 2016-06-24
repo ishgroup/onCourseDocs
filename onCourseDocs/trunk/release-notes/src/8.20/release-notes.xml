@@ -14,9 +14,7 @@
     <para>Take a moment to read through this screen to understand what has changed since the last
       time you logged in. When you are done here, just close the window. Once you've closed the
       window, you won't see this alert again until the next upgrade is deployed.</para>
-    <para>Release notes are also published on our website, so you can always visit <link
-        xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/"
-        >http://www.ish.com.au/s/onCourse/doc/release-notes/</link> to refer to this release again,
+    <para>Release notes are also published on our website, so you can always visit <link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/">http://www.ish.com.au/s/onCourse/doc/release-notes/</link> to refer to this release again,
       or any previous release notes.</para>
   </section>
   <section role="major">
@@ -59,6 +57,16 @@
       <para>Reports printed that include transactions in unlocked period include a red warning on the last page ""This report includes unposted transaction periods which are subject to change."</para>
     </section>
     <section>
+      <title>New account - Undeposited funds</title>
+      <para>A new default asset account has been created called 'undeposited funds'. This accounts
+        holds the balance of all unbanked payment in and payment out transactions. When the payment
+        is banked, it is transferred to the 'deposited funds' asset account. Payment methods that
+        are marked as bank automatically will always be deposited directly into the 'deposited
+        funds' accounts. Only payment methods that are banked manually are first created in the
+        'undeposited funds' account. Payments that have their banking date removed are deducted from
+        the 'deposited funds' account and returned to the 'undeposited funds' account.</para>
+    </section>
+    <section>
       <title>Bank reconciliation redesign</title>
       <para>The Bank Reconciliation process inside onCourse has been redesigned to work from within
         the Banking Deposit list, rather than in a separate window. Whole banking deposit records
@@ -93,10 +101,20 @@
   <section role="scripts">
     <title>Reports and scripts</title>
     <itemizedlist>
+      <listitem><para>A new version of the debtors report has been added to the contact window that can be run to a
+          specified date range, so you can determine your debtors as of a particular date in time
+            <systemitem>#9508</systemitem></para></listitem>
       <listitem><para>A new report has been added to the contact window to calculate monthly student attendance averages, of particular use to CRICOS providers  <systemitem>#27095</systemitem></para></listitem>
       <listitem><para>A new script has been added to send an email notification to your default admin email address when a product purchase is made on the web. The script is called 'send product purchased email' and is disabled by default <systemitem>#25716</systemitem></para></listitem>
       <listitem><para>A new export has been added to the classes window called 'CourseClass Sessions CSV export' to export class session data to excel <systemitem>#28680</systemitem></para></listitem>     
       <listitem><para>A new export has been added to the transaction window called 'Account Transaction Segmentation CSV export' to show the Discount, GST or Liability joins back to the invoiceLine income account <systemitem>#28683</systemitem></para></listitem>
+      <listitem><para>The default certificate report that prints Statements of Attainments has had the second page
+          Transcript report removed. Now, if the Statement of Attainment contains more units than
+          will fit on a single page, the certificate will break into multiple pages, with the
+          correct formatting for each page. The certificate number will be appended with /1, /2 ect
+          as additional pages are created. If you use the default Certificate template and print
+          with a two page background, you should change the background to a single page and re-test
+          the print process. <systemitem>#28313</systemitem></para></listitem>
       <listitem><para>Reconciliation print reports renamed 'Cash Movements Detail Report' and 'Cash Movements
           Summary Report' <systemitem>#28264</systemitem></para></listitem>
       <listitem><para>Fix to Statement Report to only include payments with a successful and non-reversed status <systemitem>#28006</systemitem></para></listitem>
@@ -117,7 +135,11 @@
       <listitem><para>Improvement to the 'send weekly finance summary report' script with the addition of a send
           monthly option. If you are using this script and want to enable the monthly option, first
           open the script record and click 'update to the latest version'. Then, comment out the
-          weekly time range, and uncomment the monthly time range<systemitem>#</systemitem></para></listitem>
+          weekly time range, and uncomment the monthly time
+          range<systemitem>#27107</systemitem></para></listitem>
+      <listitem><para>Additional CRON times have been added to a drop down list, so rather than having to write a
+          custom schedule for each script, you can select a pre-written
+            option<systemitem>#28500</systemitem></para></listitem>
     </itemizedlist>
   </section>
   <section role="minor">
@@ -160,7 +182,7 @@
       <listitem><para>Implementation of OS native file browser for simpler location of files on disk and uploading
           of documents into onCourse<systemitem>#27914</systemitem></para></listitem>
       <listitem><para>Improvements to the messaging window to search on message status, find related message contact, and open queued email and SMS records from the general messaging preferences<systemitem>#28585</systemitem></para></listitem>
-      <listitem><para><systemitem></systemitem></para></listitem>
+      <listitem><para><systemitem/></para></listitem>
     </itemizedlist>
   </section>
   <section role="fixes">

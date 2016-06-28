@@ -3,7 +3,7 @@
 
   <info>
     <title>Release 8.20</title>
-    <pubdate>xx July 2016</pubdate>
+    <pubdate>4 July 2016</pubdate>
   </info>
 
   <section role="important">
@@ -16,6 +16,14 @@
       window, you won't see this alert again until the next upgrade is deployed.</para>
     <para>Release notes are also published on our website, so you can always visit <link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/">http://www.ish.com.au/s/onCourse/doc/release-notes/</link> to refer to this release again,
       or any previous release notes.</para>
+  <section>
+    <title>DateTime format changes for custom reports</title>
+    <para>All onCourse system reports and exports have been updated, however if you have created
+        your own custom reports or exports, you may encounter some exceptions when running them
+        where we have upgraded some dateTime fields to localDate. Changing date formats from
+        "yyyy-MM-dd'T'HH:mm:ssXXX" to "yyyy-MM-dd" should resolve your problems. Refer to the
+        onCourse API documentation or contact us for assistance as needed.</para>
+  </section>
   </section>
   <section role="major">
     <title>Major features</title>
@@ -91,11 +99,13 @@
       <title>New duplicate course option</title>
       <para>This feature is of particular interest to RTO onCourse users, who may need to re-create
         courses regularly as training packages change or internally unit clustering changes. In the
-        course cogwheel, a 'duplicate course' option will copy all the marketing, related courses,
-        attached documents and attached VET unit information from an exisiting course and
-        automatically add a '1' to the end of the course code. This new course can then have units
-        quickly added, deleted or otherwise adjusted. By default, all duplicated courses are set to
-        be enabled on creation, but will not display on the web until you set that value.</para>
+        course cogwheel, a 'duplicate course' option will copy all the marketing and attached VET
+        unit information from an exisiting course and automatically add a '1' to the end of the
+        course code. This new course can then have units quickly added, deleted or otherwise
+        adjusted. By default, all duplicated courses are set to be enabled on creation, but will not
+        display on the web until you set that value. NOTE: attached documents and related
+        courses/products do not duplicate with the course. This additional function will be added as
+        part of the next onCourse release.</para>
     </section>
   </section>
   <section role="scripts">
@@ -183,7 +193,8 @@
       <listitem><para>Implementation of OS native file browser for simpler location of files on disk and uploading
           of documents into onCourse<systemitem>#27914</systemitem></para></listitem>
       <listitem><para>Improvements to the messaging window to search on message status, find related message contact, and open queued email and SMS records from the general messaging preferences<systemitem>#28585</systemitem></para></listitem>
-      <listitem><para><systemitem/></para></listitem>
+      <listitem><para>Improvement to discount in class override UI, to show the new class fee inclusive/exclusive of tax, depending on the class tax settings<systemitem>#27252</systemitem></para></listitem>
+      <listitem><para>An upgrade to convert some dateTime fields to date only has been implemented. In a number of places in onCourse, where date and time fields were used, but only date fields make sense, particularly in relation to finance and reporting, you'll notice there is now no requirement to add 12.00 am to the report runners.<systemitem>#28231</systemitem></para></listitem>
     </itemizedlist>
   </section>
   <section role="fixes">

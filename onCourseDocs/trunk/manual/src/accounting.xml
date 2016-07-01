@@ -13,9 +13,8 @@
 			for a simple enrolment of one person into one class. The student and the debtor could be
 			two different people, or in fact a debtor could pay for the enrolment of multiple
 			students on one invoice.</para>
-		<para>In the following example of a basic enrolment, there are 2 students Peter and Amy, and
-			the invoice is issued to the the debtor Geoff (1). Geoff then pays the full amount
-			(2).</para>
+		<para>In the following example of a basic enrolment, there are 2 students Peter and Amy, and the
+			invoice is issued to the debtor Geoff (1). Geoff then pays the full amount (2).</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Student_and_Debtor_Simple_Enrolment.png" format="png"/>
@@ -502,13 +501,21 @@
 		</section>
 	</section>
 	<section xml:id="accounting-accountCodes">
-		<title>Assigning Account Codes within onCourse</title>
-		<para>The standard onCourse set up comes with a number of generic Account Codes that can be
-			assigned to a given Class within onCourse. An organisation also has the ability to add
-			to that Account Code list and customise that list to your organisations' requirements.
-			There are no limits to the number of Account Codes that can be set up.</para>
-		<para>You can add to the standard list of Account Codes via the Financial menu of
-			onCourse</para>
+		<title>Creating additional income accounts</title>
+		<para>onCourse set up comes with a number of general ledger accounts preconfigured. These
+			accounts are used by onCourse during stardard system transactions and can be renamed or
+			recoded as needed. In the general preferences, financial, the default system accounts
+			are nominated and can be changed as needed.</para>
+		<para>You can also add additional accounts to match your general ledger requirements of your
+			primary accounting software. Only accounts onCourse will post to need to be
+			added.</para>
+		<para>Each class in onCourse is assigned to an income account. Some organisations have a
+			single income account, while others have multiple income accounts. For each income
+			account, you can select it's default tax setting. This tax setting can be overriden at
+			the class level when the account is selected, or when creating a manual invoice line
+			joined to this income acount.</para>
+		<para>You can add to the standard list of accounts, or edit exisiting accounts, via the Financial
+			menu of onCourse</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Account_Code_Menu.png" format="png"/>
@@ -517,21 +524,20 @@
 				<para>Select Account from onCourse Financial menu</para>
 			</caption>
 		</mediaobject>
-		<para>Within the Account Code window, you can then add a new Account Code to the System,
-			that new code will then be available to be added to any given Class that you create.
-			When adding the code, you will need to stipulate what type of account code it will be,
-			either asset, liability, equity, income, COS or expense.</para>
+		<para>Within the accounts list view, use the + on the top right hand corver to add a new account.
+			When adding the new account code, you will need to stipulate what type of account it
+			will be, either asset, liability, equity, income, COS or expense.</para>
+		<para>If the account is type income, you will have the choice of setting a default tax. </para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Create_New_Account_Code.png" format="png"/>
+				<imagedata scalefit="1" width="70%" contentdepth="70%" fileref="images/Create_New_Account_Code.png" format="png"/>
 			</imageobject>
 			<caption>
-				<para>Create a new account code</para>
+				<para>Create a new income account and select the default tax</para>
 			</caption>
 		</mediaobject>
-		<para>Once you have set up all your Account Codes, you can then assign those codes to a
-			given Class via the budget tab of the individual Class, the following example shows how
-			to select the relevant income account code for the Class.</para>
+		<para>Once you have set up all your income accounts, you can then assign those accounts to
+			individual classes via the budget tab class. </para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Assign_Account_Code_to_Class.png" format="png"/>
@@ -540,10 +546,6 @@
 				<para>Select the required income account code for the given Class</para>
 			</caption>
 		</mediaobject>
-		<para>Remember also that the relevant expense account for Payroll will be brought across
-			from the Tutor roles and how they have been set up. For example, the role of Helper
-			could be assigned to the expense code of 6000 and the role of Lecturer could be assigned
-			the expense code of 6400. </para>
 	</section>
 	<section xml:id="accounting-financialInformation">
 		<title>Accessing Financial Information from onCourse</title>
@@ -576,10 +578,10 @@
 			to "accounts@mycollege.com.au"</programlisting></para>
 			<para>Where "accounts@mycollege.com.au" is the email address of the person who should receive the
 				report, being sure to include the speech marks. </para>
-			<para><emphasis role="bold">Change from weekly to monthly automated reports</emphasis>
-				To make this change you need to make some changes to the code in the script, and
-				also the the CRON. The CRON is the scheduler that defines how often the script runs.
-				By default the CRON is 3am every Monday morning:</para>
+			<para><emphasis role="bold">Change from weekly to monthly automated reports</emphasis> To make
+				this change you need to make some changes to the code in the script, and also the
+				CRON. The CRON is the scheduler that defines how often the script runs. By default
+				the CRON is 3am every Monday morning:</para>
 			<para><programlisting language="groovy">0 0 3 ? * MON</programlisting></para>
 			<para>Change it to 3am the 1st of every month:</para>
 			<para><programlisting language="groovy">0 0 3 1 1/1 ? *</programlisting></para>
@@ -675,8 +677,7 @@
 				database server. Whether the server runs on Apache Derby or MySQL or MS SQL all of
 				these relational databases allow you to query the database directly.</para>
 			<para>This allows you write and edit your own custom reports on demand. Instructions are
-				available <link
-					xlink:href="http://www.ish.com.au/s/onCourse/doc/2.0/manual/reports.html"> in
+				available <link xlink:href="http://www.ish.com.au/s/onCourse/doc/2.0/manual/reports.html"> in
 					the reports documentation </link> for downloading and installing a free SQL tool
 				for writing your own reports. A high level of familiarity with SQL is required to
 				use this function - it is not part of the standard onCourse product support, but an
@@ -686,9 +687,9 @@
 			<para>From an accountancy perspective, what type of relational database you use is not
 				important, the thing you want to be clear about is knowing exactly what data you
 				need to see and how you want to see it. </para>
-			<para>As an example, if your company wants to run a monthly query against the database
-				which tells you all payments received, for which enrolments within a give timeframe,
-				you would follow these 4 basic steps.</para>
+			<para>As an example, if your company wants to run a monthly query against the database which
+				tells you all payments received, for which enrolments within a give time frame, you
+				would follow these 4 basic steps.</para>
 			<simplelist>
 				<member>(1) Define the data you wish to include in your query. It could be the
 					invoice number, invoice date, course code and enrolled student first name and
@@ -708,28 +709,46 @@
 	</section>
 	<section xml:id="accounting-Deposit">
 		<title>Banking and Reconciliation</title>
-		<para>As funds are received for course payments, onCourse, via the Accounts tab of the
-			onCourse client, allows you to bank these funds in your nominated account. You also have
-			the ability to run a Reconciliation Statement, to verify that the payments into onCourse
-			match your banking report. </para>
+		<para>In the onCourse preferences, multiple payment types can be created, in addition to the
+			system payment types already defined by onCourse.</para>
+		<para>For each payment type, you can define if the payment type is banked automatically or
+			manually, and if the payment type is reconcilable, and which asset account the payment
+			is deposited into prior to banking, and moved to after banking.</para>
+		<para>By default, an asset account named 'undeposited funds' is where all manually banked payments
+			are deposited on creation. The asset account 'deposited funds' is where all
+			automatically banked payments are deposited on creation, and where all manually banked
+			payments are moved to when they are banked.</para>
+		<para>Automatically and manually banked payments are grouped where possible into daily totals.
+			These banking deposits can then be reconciled as a group, or where needed, transaction
+			by transaction.</para>
 		<section>
 			<title>Banking</title>
-			<para>As onCourse is integrated with a credit card payment gateway, the system will
-				automatically settle bank funds received via the credit card gateway. This
-				settlement process is automatically done between approximately 7pm and 9pm each
-				evening and will be settled into your nominated account the following business day.
-				If a payment is processed after the nightly settlement cut off time, the payment
-				will not appear in your nominated account until the day after. </para>
-			<para>If you have an EFTPOS terminal that you use in conjunction with, or instead of the
-				onCourse credit card gateway, ensure you select EFTPOS, rather than EFT or credit
-				card, as the payment in type. EFTPOS transactions will be marked as banked on
-				creation.</para>
-			<para>For all other payments received via Cheque, Electronic Funds Transfer, Money Order
-				or Cash, will need to be banked by your accounts department. The 'Deposit Banking'
-				function within the onCourse client allows you to track the date of settlement,
-				method of payment, payment amount and staff member who performs this function. It
-				also ensures that you do not 'double count' any funds to your nominated bank
-				account.</para>
+			<para>As onCourse is integrated with a credit card payment gateway, the system will automatically
+				settle payments in and payments out received via the credit card gateway, whether
+				these payments are processed through your office or via website enrolments. This
+				settlement process is automatically done between 7pm and 9pm each evening and will
+				be deposited into your nominated merchant account the following business day as a
+				single sum. If a payment is processed into onCourse after the nightly settlement cut
+				off time, the payment will not be banked or appear in your nominated account until
+				the day after. The grouping of the deposited credit card bankings in onCourse will
+				match the batching of the deposits processed by your bank.</para>
+			<para>If you accept AMEX credit cards, these payment types will be grouped and deposited in a
+				separate banking deposit in onCourse. This is because the AMEX settlement process
+				works differently to Mastercard &amp; Visa, and does not always settle on a daily
+				basis. Instead it is dependent on the value of the transactions you have
+				processed.</para>
+			<para>If you have an EFTPOS terminal that you use in conjunction with, or instead of the onCourse
+				credit card gateway, ensure you select EFTPOS, rather than EFT or credit card, as
+				the payment in type, even if you have processed a credit card through the terminal.
+				EFTPOS transactions will be marked as banked on creation, and like your onCourse
+				credit card gateway, will be settled automatically into your bank account
+				overnight.</para>
+			<para>For payments received via Cheque, Electronic Funds Transfer (EFT), Money Order or Cash, a
+				manual banking process will group and deposit these transactions. The 'Deposit
+				Banking' function within the onCourse client allows you to track the date of
+				settlement, method of payment, payment amount and staff member who performs this
+				function. It also ensures that you do not 'double count' any funds to your nominated
+				bank account.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/onCourse_Deposit_Banking_Window.png" format="png"/>
@@ -738,70 +757,166 @@
 					<para>Deposit Banking Window within Accounts tab of onCourse Client</para>
 				</caption>
 			</mediaobject>
-			<para>You can see a list of payment in and out transactions grouped together by their banking
-				date, including those banked automatically such as credit card and EFTPOS by
-				clicking on the 'Banking' option in the Financial top menu category. In this list
-				view you will be able to see the following information:</para>
+			<example>
+				<title>How to manually deposit banking</title>
+				<para>Manual banking is done a site by site basis. As in, each physical site where manual
+					payment types are collected should run it's own banking process. You can see the
+					site you are logged in to as user in the onCourse dashboard. If you wish to
+					process the banking for an alternate site, you need to change your location on
+					the dashboard first. Usually, an administration manager at each site would be
+					responsible for running the bank process at their site.</para>
+				<para>You should collect all your payments received and confirm you have the same
+					cash balance and cheques indicated in the bank deposit window as you complete
+					this process.</para>
+				<orderedlist>
+					<listitem><para>From the Financial menu, select Banking Deposits and click the plus button, or from the
+							accounts tab choose the option 'Deposit banking'</para></listitem>
+					<listitem>
+						<para>If you only have one 'Deposited funds' asset account, then you will not need to make a
+							choice of bank account. However, if you have multiple accounts, you will
+							need to bank to each bank account as a separate process.</para>
+					</listitem>
+					<listitem>
+						<para>This will open a window showing all the payments that have been receipted for that bank
+							account at the site you are logged in at, that are not yet banked, since
+							the last time the banking process was run</para>
+					</listitem>
+					<listitem>
+						<para>By default all payments are selected, however you can choose to untick
+							some payments if you do not wish to bank them at this time.</para>
+					</listitem>
+					<listitem>
+						<para>By default, the banking deposit date will be today. You can change
+							this to a date of your choice, in the future or in the past.</para>
+					</listitem>
+					<listitem>
+						<para>By default, a printed report will be created as you choose to bank
+							these amounts. This printed report can be taken to the bank with the
+							cash and cheques needing to be deposited.</para>
+					</listitem>
+				</orderedlist>
+			</example>
+			<section>
+				<title>Viewing and adjusting banking records</title>
+
+			<para>You can see a list of your banking history, including transactions banked automatically, by
+					clicking on the 'Banking deposits' option in the Financial menu. In this list
+					view you will be able to see the following information:</para>
 			<itemizedlist>
 				<listitem>
-					<para>The date that each amount of money is banked - The settlement date will either be set
-						manually by you, if you have manually banked the money e.g. cash or cheques.
-						Alternatively if they are online transactions the settlement date will be
-						automatically set as the date the funds where received in you bank.</para>
+					<para>The date that each amount of money is banked - The date will have been set by a user as
+							they manually banked the money e.g. cash or cheques. Alternatively if
+							the deposit is automatically banked, the settlement date will be
+							automatically set as the date the funds should be received into your
+							bank account.</para>
 				</listitem>
 				<listitem>
-					<para>The type or the method of how these funds got banked - There are two options here, the
-						first being 'MANUAL' which is if you physically have to go to the bank to
-						deposit cash or cheques received. The second being 'GATEWAY' which is to do
-						with all online transactions. You can edit the settlement date of all
-						manually banked fund by double clicking on any of those records and changing
-						the date. However, you can't edit the settlement date of any record marked
-						as 'GATEWAY' because this information is being pulled directly from your
-						bank. Payment out transactions are displayed as negative numbers so they get
-						subtracted from the total.</para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/changing_settlement_date_manual.png" format="png"/>
-						</imageobject>
-						<caption>
-							<para>Changing the settlement date for manual banked funds</para>
-						</caption>
-					</mediaobject>
-				</listitem>
-				<listitem>
-					<para>The total monetary value of the funds being banked.</para>
-				</listitem>
+						<para>The type or the method of how these funds got banked - The method could be MANUAL
+							(banked via a manual process), AUTO_MCVISA (Visa and Mastercard credit
+							cards banked automatically by the onCourse credit card gateway),
+							AUTO_AMEX (American Express credit cards banked by the onCourse credit
+							card gateway) or AUTO_OTHER (non-credit card payments banked
+							automatically). Prior to the 8.20 upgrade, Amex, Mastercard and Visa
+							were banked together in a grouping type called GATEWAY.</para>
+					</listitem>
+					<listitem>
+						<para>The site and user - This information is only displayed when the
+							banking is type MANUAL. The site is the office location where the
+							banking process was run, and the user is the staff member who ran the
+							process.</para>
+					</listitem>
+					<listitem>
+						<para>Reconciled - this check box shows as ticked if the whole banking deposit record has been
+							reconciled.</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="80%" contentdepth="80%" fileref="images/banking_list_view.png" format="png"/>
+							</imageobject>
+							<caption>
+								<para>Banking Deposits list view</para>
+							</caption>
+						</mediaobject>
+						<para>You can double click on a banking deposit record from this list view to adjust deposit
+							dates or unbank transactions as required. You can alter the deposit date
+							of the entire deposit grouping, or for individual transactions. Altering
+							the deposit date for an individual transaction will move it from this
+							deposit group to the deposit group of the new date. If there isn't a
+							deposit group for that date, a new group will be created.</para>
+						<para>Should you wish to reprint the banking report, usually created during
+							a manual banking deposit process, you can do this from the window by
+							selecting one or more banking deposit records and choosing 'banking
+							report' from the print menu option.</para>
+						<para>You can also 'unbank' a transaction, by highlighting the payment in the banking list and
+							clicking on the delete icon in the top right hand corner of the window.
+							This will change journal the transaction from the 'deposited funds'
+							asset account to the 'undeposited funds' asset account. The payment can
+							be banked again using the manual banking deposit process as needed, or
+							if it was processed in error, reversed.</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/changing_settlement_date_manual.png" format="png"/>
+							</imageobject>
+							<caption>
+								<para>Changing the settlement date for a banking deposit record</para>
+							</caption>
+						</mediaobject>
+						<para>To change the deposit date of a payment in or payment out record, double click on an
+							individual payment in record and change it's date banked. It is common
+							in the case of EFT payments for the date banked to be changed to the
+							date the payment appeared in the bank account - often a date prior to
+							the payment in being created, and banked, in onCourse.</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="70%" contentdepth="70%" fileref="images/edit_deposited_payment.png" format="png"/>
+							</imageobject>
+							<caption>
+								<para>Changing the settlement date for a single payment record within a bank deposit</para>
+							</caption>
+						</mediaobject>
+						
+						
+
+					</listitem>
 			</itemizedlist>
-					<note><para>You can get to the 'Banking Deposits' window from the 'Financial' top menu.</para></note>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="80%" contentdepth="80%" fileref="images/banking_list_view.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Banking list view</para>
-				</caption>
-			</mediaobject>
-			<para>Cheque payments would of course be subject to your own banks' timelines on the
-				processing of cheques, with the funds not appearing in your account until several
-				days after being banked. For Cash Payments and Electronic Funds Transfers, these
-				settlement times are more immediate, please check with your bank for exact timelines
-				for processing funds. </para>
+		</section>
 		</section>
 		<section>
 			<title>Reconciliation</title>
-			<para>The reconcile statement function within onCourse client accounts tab allows you to
-				verify that onCourse payments match your bank statements. The Reconciliation Report
-				that is generated can be run on a weekly or monthly basis, dependent upon your own
-				internal financial procedures. The reconciliation report function will provide a
-				line by line itemization of all funds that have been reconciled, listed by the
-				relevant income account. </para>
+			<para>Reconciliation is a process you may optionally undertake within onCourse to
+				confirm your banking deposits match the amounts listed on your bank
+				statement.</para>
+			<para>Reconciliation can be done on a whole of deposit basis, which is preferable for grouped
+				automatically deposited payments, like onCourse gateway credit card payments, or a
+				payment by payment basis, which is preferable for payment types like cheque
+				deposits, or EFT.</para>
+			<para>In the Financial menu, select the option 'Banking deposits'. This lists all the
+				grouped banking deposits recorded. You can double click on one of these entries and
+				reconcile the whole deposit by ticking 'reconcile this banking deposit', or tick
+				individual payment records as reconciled within the transaction. When all the
+				payments have been ticked, the whole banking deposit will be ticked as reconciled
+				automatically.</para>
+			<para>If you prefer to reconcile from a printed report, you can also select a range of banking
+				deposit records e.g. the complete calendar month, matching your bank account
+				statement, and from the print menu, select the option 'cash movements detail
+				report'. The PDF this creates can also be ticked off onscreen (although this will
+				not update the reconciled value in onCourse) if you prefer not to print the report
+				to hard copy.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/onCourse_Reconciliation_Statement_Window.png" format="png"/>
+					<imagedata scalefit="1" width="70%" contentdepth="70%" 
+						fileref="images/onCourse_Reconciliation_Statement_Window.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>Reconciliation Statement Window within Accounts tab of onCourse
-						Client</para>
+					<para>Reconciling a banking deposit</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="70%" contentdepth="70%" 
+						fileref="images/cash_movements_reconciliation.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Reconciling a series of bank deposits from the PDF cash movements details report</para>
 				</caption>
 			</mediaobject>
 		</section>
@@ -832,9 +947,9 @@
 		<para>We are asked for this a lot by colleges who migrate to onCourse. Often it is because that's
 			how they did things in their old accounting system or on bits of paper. Usually the
 			conversation starts like this:</para>
-		<para><quote>I get how onCourse works, and it looks great, but I really want to to report the
-				class name, code and income account alongside every payment. Surely onCourse can
-				tell me what every payment was for!</quote></para>
+		<para><quote>I get how onCourse works, and it looks great, but I really want to report the class
+				name, code and income account alongside every payment. Surely onCourse can tell me
+				what every payment was for!</quote></para>
 		<para>In a <emphasis role="bold">Cash Accounting</emphasis> system, this is slightly easier. You
 			only assign income to your general ledger once you receipt payment. And at that point
 			you decide where to post that income in your P&amp;L, breaking it up by account code as

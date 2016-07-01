@@ -27,6 +27,14 @@
   </section>
   <section role="major">
     <title>Major features</title>
+    <section>
+      <title>Improved record loading speed over high latency internet links</title>
+      <para>The performance of communication between onCourse Client and Server has been
+        dramatically improved. Opening and saving windows is improved throughout the whole
+        application, but most noticeably if you are connecting over the internet (such as our cloud
+        hosted solution). Improvements range from 20-30% in some cases to reducing the delay by a
+        factor of 10 in other cases.</para>
+    </section>
   <section>
     <title>Allow Discounts to change fee charged instead of charge to expenses</title>
     <para>Previously, all discounts processed within onCourse processed the value of the discount to
@@ -156,12 +164,6 @@
   <section role="minor">
     <title>Minor features</title>
     <itemizedlist>
-      <listitem><para>Implementation of HTTP/2 communication protocols between onCourse client and server
-          applications. This protocol reduces the number of requests from the client to retrieve
-          server side data, so will improve the speed of information transfer, resulting in faster
-          response times inside the application for some processes. This may noticeably improve the
-          record loading time for users on some types of high latency internet links
-            <systemitem>#27818</systemitem></para></listitem>
       <listitem><para>Default name of the asset account where payments are deposited changed from 'Cheque account'
           to 'Deposited funds', in preparation for new 'undeposited funds' account creation
             <systemitem>#28229</systemitem></para></listitem>

@@ -585,14 +585,16 @@
 				these are:</para>
 			<itemizedlist>
 				<listitem>
-					<para>Name - this is what you want to call the payment method, as you can
-						see if the example below I am trying to create a new method for using
-						Paypal</para>
+					<para>Name - this is what you want to call the payment method</para>
 				</listitem>
 				<listitem>
-					<para>Account - you have the ability to define what account these funds get put into. Usually
-						all payment methods are deposited into a single bank account, known as the
-						deposited funds account.</para>
+					<para>Undeposited Funds Account - this is the account that any unbanked payments
+						of this method are deposited into</para>
+				</listitem>
+				<listitem>
+					<para>Account - you can select which bank account the funds are deposited to on
+						banking. By default, all payment methods are deposited into a single bank
+						account, known as the deposited funds account.</para>
 				</listitem>
 				<listitem>
 					<para>Type - There are two types which have special meaning in onCourse -
@@ -625,10 +627,11 @@
 					<para>The "Payment types" Preferences</para>
 				</caption>
 			</mediaobject>
-			<para>Some of the payment methods can't be edited and when you try and do this all the fields 
-				will be greyed out, as seen below when you try and edit the payment method 'Voucher'. The 
-				reason you can't edit them is because they are always in onCourse and can't be changed. You 
-				will also see that if you try and edit the payment method 'Credit card' you can't change the 
+			<para>Some of the payment methods can't be edited and when you try and do this all the fields
+				will be greyed out, as seen below when you try and edit the payment method
+				'Voucher'. The reason you can't edit them is because they are internal payment
+				methods with special meaning in onCourse and can't be changed. You will also see
+				that if you try and edit the payment method 'Credit card' you can't change the
 				'Type' because this always has to be set as "Credit card'.</para>
 			<mediaobject>
 				<imageobject>

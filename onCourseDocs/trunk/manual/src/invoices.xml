@@ -13,12 +13,12 @@
 			manually enter a different due date at the time or creation, or by editing the invoice
 			after creation. You can also add a customer reference to an invoice, where
 			required.</para>
-		<para>These invoices are then visible within the Invoice lists view. Like all other lists
-			you can sort, search, export and print from this view. Invoices may not be deleted and
-			all of the financial information within an invoice may not be edited once created.
-			Although this may seem like an inconvenience, immutable invoices are extremely important
-			to ensure a robust audit trail and to guarantee the integrity of the general ledger
-			transactions.</para>
+		<para>These invoices are then visible within the Invoice lists view. Like all other lists you can
+			sort, search, export and print from this view. Invoices may not be deleted and all of
+			the financial information within an invoice may not be edited once created - only the
+			invoice due date can be changed. Although this may seem like an inconvenience, immutable
+			invoices are extremely important to ensure a robust audit trail and to guarantee the
+			integrity of the general ledger transactions.</para>
 		<para>If you need to modify an invoice you should instead create a credit note. A credit note is
 			an invoice where the invoice lines have negative dollar values. Remember if you are
 			cancelling an enrolment or a class there are easier ways to do that from the class and
@@ -44,11 +44,18 @@
 			</caption>
 		</mediaobject>
 		<section xml:id="invoice-create">
-			<title>Creating an invoice</title>
+			<title>Creating a manual invoice</title>
 			<para>While you will usually create an invoice through using Quick Enrol, it is sometimes useful
 				to create an invoice without an associated product or enrolment. You can easily do
 				that by opening the list of invoices and pressing the plus icon at the top
 				right.</para>
+			<para>Invoices created manually can have an invoice date in the past or the future,
+				although the default setting is today. Invoices created with a date in the past will
+				can be created prior to the financial period finalised date. They can only be
+				created for unlocked periods. If you create a invoice in the past (or future) the
+				general ledger transaction lines will be created for that date. You can not pay an
+				invoice though that has a creation date in the future, as it doesn't yet exist with
+				an outstanding balance. </para>
 			<para>Remember to associate each invoice line with the correct income account code. Once
 				you save the invoice you will not be able to change this code. </para>
 			<mediaobject>

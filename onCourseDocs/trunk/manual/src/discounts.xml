@@ -73,7 +73,7 @@
                         <listitem>
                             <para>Discount validity: The discount itself may have a valid from or
                                 expiry date, or require students to enter a special promotional
-                                code.  Discounts may automatially apply when the invoice contains
+                                code. Discounts may automatically apply when the invoice contains
                                 multiple enrolments, or when the value of the invoice exceeds a
                                 specified value. Discounts are offered automatically when the
                                 student(s) in the enrolment process meet the discount
@@ -136,7 +136,7 @@
             discounts continue indefinitely. onCourse gives you the choice. </para>
         <para>Other types of discounts may be a 'buy one get one free' style of discounts. These
             types of discount apply when the invoice being created during the enrolment process
-            meets certain criteria, such as containing 3 enrolments from the list of specificed
+            meets certain criteria, such as containing 3 enrolments from the list of specified
             class.</para>
         <para>When considering who can access the discount, you might want to restrict it to all
             students who have enrolled in the past, are over a certain age, live in a particular
@@ -202,7 +202,7 @@
                 <para>targeted printed material</para>
             </listitem>
             <listitem>
-                <para>an email mailout to existing or potential students</para>
+                <para>an email mail out to existing or potential students</para>
             </listitem>
             <listitem>
                 <para>SMS</para>
@@ -240,31 +240,76 @@
             <para>The name of the discount will appear on the website, on invoices and in finance
                 reports so it is important to choose a name that clearly identifies the
                 discount.</para>
-            <para>A discount which is available via online enrolment means students enrolling using
-                your onCourse website have access to this discount. If it is un-ticked, only
-                students who are enrolled via the office, in Quick Enrol have access to the
-                discount. You may have chosen to stop a concession card type being added online, but
-                can make the discount still available online for existing students with the
-                concession type on record.</para>
-            <para>A discount percent allows you to define a percentage amount that will be taken off
-                the class enrolment fee. A discount dollar lets you fix a dollar amount that will be
-                taken off the class enrolment fee (note, the classes attached to the discount may
-                have a variety of fees, so a discount dollar will be better for some classes than
-                others). Override fee lets you set a new fee for all the classes linked to the
-                discount.</para>
-            <para>At this point, you can also select if the discount will have any minimum or
-                maximum caps or rounding applied to the nearest dollar, 50 cents or 10 cents. </para>
-            <para>Setting a valid to or from date is optional. Many types of discounts don't require
-                a date until you decide to retire the discount by editing it to set a date in the
-                past. </para>
-            <para>The default forecast take-up can be set here, or set individually in the classes
-                you have linked the discount to. This is a prediction that will assist you in your
-                income budgeting, based on the percentage of students you expect to utilise this
-                discount for each class, and therefore the potential cost of providing this discount
-                to your business.</para>
-            <para>The public description field contains any additional information you wish to
-                provide to potential students about who and how this discount can be accessed and is
-                displayed on the website.</para>
+            <section>
+                <title>Value</title>
+                <para>A discount percent allows you to define a percentage amount that will be taken off
+                    the class enrolment fee. A discount dollar lets you fix a dollar amount that will be
+                    taken off the class enrolment fee (note, the classes attached to the discount may
+                    have a variety of fees, so a discount dollar will be better for some classes than
+                    others). Override fee lets you set a new fee for all the classes linked to the
+                    discount.</para>
+                <para>At this point, you can also select if the discount will have any minimum or
+                    maximum caps or rounding applied to the nearest dollar, 50 cents or 10 cents. </para>
+                <para>The discount value set here can optionally be overridden at the class level,
+                    to assign varying class fees sharing the same discount name. This option may be
+                    especially useful for funded programs like Smart &amp; Skilled. For example, a
+                    number of courses and classes can share the discount ‘First Qualification rate’
+                    but each class can have it’s own discounted price. Double click on the discount
+                    in the class budget tab to edit the value for that class.</para>
+                </section>
+            <section>
+                <title>Finance</title>
+                <para>Discounts can be set to post to a COS (Cost of Sale) account, or not. If a
+                    discount posts to a COS account, this means the full class fee is earnt to
+                    income, and a corresponding expense is charged for the discount value. This type
+                    of discount is best used for discounts that are promotional in nature, and need
+                    to be tracked as a business expense. The COS account can be selected from the
+                    drop down list. One default COS account exists in onCourse called 'Discounts
+                    Given' but you can create additional COS accounts in the Account settings if you
+                    wish to segment your COS options further.</para>
+                <para>Discounts which are not linked to a COS account reduce the income value posted
+                    to the general ledger. This is the preferred method for recording discount types
+                    which are about recognising different fee structures that may exist for
+                    different types of students, like overseas CRICOS students vs onshore students,
+                    and government funded students.</para>
+                <para>The default forecast take-up can be set here, or set individually in the classes
+                    you have linked the discount to. This is a prediction that will assist you in your
+                    income budgeting, based on the percentage of students you expect to utilise this
+                    discount for each class, and therefore the potential cost of providing this discount
+                    to your business.</para>
+            </section>
+            <section>
+                <title>Restrictions</title>
+                <para>A discount which is available via online enrolment means students enrolling using
+                    your onCourse website have access to this discount. If it is un-ticked, only
+                    students who are enrolled via the office, in Quick Enrol have access to the
+                    discount. You may have chosen to stop a concession card type being added online, but
+                    can make the discount still available online for existing students with the
+                    concession type on record.</para>
+                <para>A discount which requires a promotional code needs the code defined here. This
+                    promotional code has to be entered along with any other restrictions you may
+                    have set for the discount to be accessed, be the enrolment online or via the
+                    office.</para>
+                
+                <para>Setting a valid to or from date is optional. Many types of discounts don't
+                    require a date until you decide to retire the discount by editing it to set a
+                    date in the past. You can also set days here that are relative to the starting
+                    date of the class, allowing you to create a range of early bird discounts that
+                    automatically cut in and out based on how far out from commencement the class
+                    is.</para>
+            </section>
+            <section>
+                <title>Description</title>
+                <para>From the checkbox option 'Hide discounted price on web' you can choose if this
+                    discount displays in your online marketing, or just comes as a 'surprise' during
+                    the check out process. How a discount displays on the web is based on if it is
+                    available to all students, in which case the normal fee is crossed out and the
+                    new fee displayed, or to a subset of students, in which case the fee is
+                    displayed in brackets next to the primary fee. Restricting a discount to a
+                    subset of students is done on the next tab 'Students'.</para>
+                <para>The public description field contains any additional information you wish to
+                    provide to potential students about who and how this discount can be accessed and is
+                    displayed on the website.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -274,36 +319,29 @@
                     <para>Example value settings of a discount for seniors</para>
                 </caption>
             </mediaobject>
+            </section>
             <section>
                 <title>Discount offset from class start date</title>
-                <para>The value tab also allows you to override the discount value at the class
-                    level, to assign varying class fees sharing the same discount name. This option
-                    may be especially useful for funded programs like Smart &amp; Skilled. For
-                    example, a number of courses and classes can share the discount ‘First
-                    Qualification rate’ but each class can have it’s own discounted price. Double
-                    click on the discount in the class budget tab to edit it.</para>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata scalefit="1" width="100%" contentdepth="100%"
-                            fileref="images/override_discount_class_level.png"/>
-                    </imageobject>
-                    <caption>
-                        <para>Defining the discounts restrictions</para>
-                    </caption>
-                </mediaobject>
-                <para>Below are a couple of examples where this might be used</para>
+                <para>When you are creating discount schemes, the flexibility of start date offsets
+                    can allow you create a range of standard price options. </para>
                 <section>
                     <title>Early Bird Pricing</title>
+                    <para>Creating this price scheme requires three discounts to be created for the
+                        same group of classes, each with their own price restriction settings. As
+                        one price scheme cuts out, the new price scheme automatically cuts
+                        in.</para>
                     <para><itemizedlist>
                         <listitem>
-                            <para>Enrol 1 month or greater prior to the start date and receive 10% off</para>
+                            <para>Enrol 30 days or greater prior to the start date and receive 10%
+                                    off</para>
                         </listitem>
                         <listitem>
-                            <para>Enrol between 1 month and 2 weeks prior to the start date and receive 5% off
-                            </para>
+                            <para>Enrol between 29 days and 14 days prior to the start date and
+                                    receive 5% off </para>
                         </listitem>
                         <listitem>
-                            <para>Enrol 2 weeks prior to the start date, or after the start date and pay the full fee</para>
+                            <para>Enrol 13 day prior to the start date, or after the start date and
+                                    pay the full fee</para>
                         </listitem>
                     </itemizedlist></para>
                 </section>
@@ -381,21 +419,28 @@
                 which Classes are to be assigned to the discount:</para>
             <itemizedlist>
                 <listitem>
-                    <para>All current and pending classes</para>
+                    <para>All current and pending classes ← this selects all the classes currently
+                        in onCourse. If you create a new class however (not using the class
+                        duplication process, which allows you to bring over the discounts) it will
+                        not be added to the discount.</para>
                 </listitem>
                 <listitem>
-                    <para>Classes from a course</para>
+                    <para>Classes from a course ← this selects all the current classes from the
+                        course. If you create a new class however (not using the class duplication
+                        process, which allows you to bring over the discounts) it will not be added
+                        to the discount.</para>
                 </listitem>
                 <listitem>
-                    <para>A class</para>
+                    <para>A class ← select a single class only</para>
                 </listitem>
                 <listitem>
-                    <para>Classes tagged with</para>
+                    <para>Classes tagged with ← selects the classes currently tagged with your
+                        selection. This will not add future classes you tag with this option.</para>
                 </listitem>
             </itemizedlist>
             <tip>
                 <para>Dependent on which option you select, onCourse will tell you how many Classes
-                    are to be added to the discount.</para>
+                    are to be added to the discount. </para>
             </tip>
             <para>Once you have added classes, you can also use the garbage icon to delete classes
                 from the list. The delete option works on one class at a time.</para>
@@ -404,9 +449,10 @@
                 select the option to apply all existing discounts to the new class record by
                 default.</para>
             <para>At the bottom of this window are some settings which relate to the multiple
-                purchase style discounts, e.g. puchase two enrolments from the list above to
+                purchase style discounts, e.g. purchase two enrolments from the list above to
                 activate this discount, or spend at least $1,000 in one transaction to access this
-                discount.</para>
+                discount. If you add multi purchase discount options, the discount will apply to
+                each of the eligible classes in the list.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -419,14 +465,18 @@
         </section>
         <section xml:id="discounts-corporatePasses">
             <title>Linking a Corporate Pass to a discount</title>
-            <para>A discount strategy may only apply when a CorpatePass is used in the puchasing
-                process. CorporatePasses can only be used during online transactions, so be sure to
-                make sure this discount is available via online enrolment on the general tab.</para>
+            <para>A discount strategy may only apply when a CorporatePass is used in the purchasing
+                process. CorporatePasses can only be used during online transactions, so make sure
+                this discount is available via online enrolment on the general tab.</para>
             <para>A CorporatePass discount could be used to offer a special enrolment price to the
                 employees of the companies you regularly work with.</para>
-            <para>Alternativly, a negative discount could be used for enrolments processed with some
-                types of CorporatePasses to surcharge online enrolments processed via external
+            <para>Alternatively, a negative discount could be used for enrolments processed with
+                some types of CorporatePasses to surcharge online enrolments processed via external
                 agents or vendors.</para>
+            <para>During the online enrolment process, a surcharge style discount will always apply,
+                even if there is a discount also available to the user. For example, if you
+                surcharge corporatePass users 5%, but offer a 10% discount to people using the code
+                TENFREE, the corporatePass holder surcharge will override the discount.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -440,25 +490,45 @@
     </section>
         <section>
             <title>Overriding a discount at the class level</title>
-        <para>Discounts can also be set to be valid as an offset from the class start date. The
-            offset can allow the discount to run prior to the start date, or after the start date.
-            This will allow the creation of both early bird style pricing and discounts for in-term
-            enrolments. To get here you will have to open a class that has a discount linked to it,
-            go to the Budget tab, then double click on the discount line.</para>
+        <para>A discount scheme may allow for a 15% discount across a range of classes. If, for one
+            of these classes, you want the discount to be 20% instead, you can override the discount
+            at the class level. Open a class that has the discount linked to it, go to the Budget
+            tab, then double click on the discount line.</para>
+        <para>When you first view the override screen, you will see the discount scheme converted
+            from a percentage (if it was one), to a dollar value. In this example, you can see the
+            15% discount has been calculated to be a $37.50 discount on this class.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/discount_class_overide_before.png"/>
+                </imageobject>
+                <caption>
+                    <para>The percentage discounted calculated to a dollar value for this class</para>
+                </caption>
+            </mediaobject>
+        <para>To override the discount, click on the unlock icon next to the dollar value and enter
+            a new value. When a discount has the lock icon next to it, you can see it is locked to
+            the discount scheme. When it has been manually overridden, this icon changes to be
+            unlocked.</para>
+        <para>You can see in the example below when the discount is manually overridden to $40.00,
+            the GST calculation also changes. This is because the GST value must be charged on the
+            class fee, and as the discount changes, the class fee changes. </para>
+        <para>On occasion, to meet the rules of your discount scheme e.g. round to the nearest whole
+            dollar, a rounding figure may also be calculated to bring your total to the value you
+            desire. </para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
                     fileref="images/class_value_override.png"/>
             </imageobject>
             <caption>
-                <para>Overriding the discount for the class AWOB-0006</para>
+                <para>Overriding the early bird discount for a single class</para>
             </caption>
         </mediaobject>
         <section>
             <title>Example of how to create custom discounts for Smart and Skilled fees</title>
-            <para>Under Smart and Skilled, you may have five or more price points for an enrolling
-                student. The fee they are charged depends on their meeting various eligibility
-                criteria.</para>
+            <para>Under Smart and Skilled, you may have five or more price points available. The fee
+                a student is charged depends on them meeting various eligibility criteria.</para>
             <para>onCourse provides a range of tools for setting up the various fees using discount
                 strategies, and then ensuring all students are automatically charged the right fee
                 based on their eligibility.</para>
@@ -530,8 +600,13 @@
                 'S&amp;S 1st qual', 'S&amp;S 2nd qual', 'S&amp;S trainee', 'S&amp;S concession'.
                 These concession types will be added to the student as their eligibility is
                 assessed, and then used to determine their fee type.</para>
+            <para>Because these discounts are really an indication of a class fee pricing scheme,
+                rather than a promotional style discount, it is advised from a financial perspective
+                to create each of these discount types as NOT being posted to a discount COS, so the
+                income value of the class will instead be reduced (or increased) as
+                necessary.</para>
             <para>Think of each fee that isn't the First Qual rate as an offset of that value. The
-                Fee Fee and Second Qual rates require negative discounts (or surcharges) while the
+                Full Fee and Second Qual rates require negative discounts (or surcharges) while the
                 Traineeship and Concession fees require discounts. Each type of price will require
                 it's own discount strategy. This will allow you to report, for each class, on how
                 many students enrolled at each price point using the standard discount
@@ -545,7 +620,7 @@
                 Education and Care class, double click on the S&amp;S Full fee discount in the
                 budget tab, and override the -$3900 fee to -$4950 to bring the total to $6540.
                 Similarly, the S&amp;S Full Fee for Certificate III in Permaculture discount would
-                be overriden to -$5210.</para>
+                be overridden to -$5210.</para>
             <para>Repeat these steps for each of the discount types for S&amp;S Second Qual, S&amp;S
                 Traineeships and S&amp;S Concession fees.</para>
             <para>For the Full Fee to apply during the enrolment process, the student will need to
@@ -564,6 +639,9 @@
         <para>Creating a negative discount works just the same way as when you create positive
             discount with the only difference being is you would make the 'Discount value' a
             negative value.</para>
+        <para>Discounts with a negative value always supersede discounts of a positive value, so if
+            a student is simultaneously eligible for a discount and a surcharge on enrolment, only
+            the surcharge will be applied.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -585,21 +663,29 @@
                 will be applied by default on enrolment. If the student is eligible for multiple
                 discount types, the discount that provides the lowest cost to the student will be
                 applied.</para>
-            <para>During the enrolment process, discounts that require a promotional code can be
-                entered on the payment screen. Again, any eligible classes will have their fee
-                reduced.</para>
-            <para>Before saving and confirming the enrolment, you can check the discounts that have
-                been applied by hovering over the notification icon next to the class fee.</para>
-            <para>You can also manually adjust a discount as necessary by replacing the discount
-                amount in the enrolment window.</para>
+            <para>The reverse is true for negative discounts - if a student is eligible for multiple
+                surcharges, then the highest cost to the student will be applied.</para>
+            <para>During the enrolment process, discounts that require a promotional code can have
+                the code entered on the payment screen. Again, any eligible classes will have their
+                fee reduced.</para>
+            <para>You can also manually adjust the class fee as necessary by unlocking the price and
+                overriding it to a price of your choice. When you choose to override the price, the
+                discount selection will change to 'no discount' and your price will become
+                adjustable. This means that for reporting purposes, you have created a manual
+                discount that will reduce the class income, rather than a discount linked to a
+                scheme that may or may not have posted the expense to a COS account.</para>
+            <para>You can also override the class fee for any student without a discount to apply a
+                new fee altogether. Again, this new fee will not charge anything to a COS account,
+                just change the income earnt by the class. Any manual changes will auto adjust the
+                tax payable based on the new class fee.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="80%" contentdepth="80%"
                         fileref="images/qediscount.png"/>
                 </imageobject>
                 <caption>
-                    <para>This student is eligible for a youth discount when they enrol in this
-                        class</para>
+                    <para>This student is eligible for an automatic Early Bird discount when they
+                        enrol in the class.</para>
                 </caption>
             </mediaobject>
         </section>
@@ -607,10 +693,10 @@
             <title>Accessing negative discounts through Quick Enrol</title>
             <para>If you have attached a negative discount to a class then the total fee is
                 increased by the amount of the surcharge. In the example below enrolling Jenny Smith
-                in the class Woodwork (WDWK-41) incurs them to have to pay an admin fee. This fee
+                in the class Woodwork (WDWK-41) incurs a surcharge to pay an admin fee. This fee
                 could be charged because you are trying to encourage students to enrol online rather
-                than taking up someones time, in your organisation, to enrol them through Quick
-                Enrol.</para>
+                than taking up a staff members time on the phone to manually enrol them through
+                Quick Enrol.</para>
                        <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -648,15 +734,15 @@
                         fileref="images/qe_promo.png"/>
                 </imageobject>
                 <caption>
-                    <para>You can enter a promotional code in the the field 'Enter voucher or
-                        promotion code...'.</para>
+                    <para>You can enter a promotional code in the field 'Enter voucher or promotion
+                        code...'.</para>
                 </caption>
             </mediaobject>
         </section>
         <section>
             <title>Membership discounts during Quick Enrol</title>
             <para>If a student holds a valid membership, is related to a contact with a membership
-                where discounts apply or purchases a membership during the enrolment process, the
+                where discounts apply, or purchases a membership during the enrolment process, the
                 best applicable discount will automatically apply.</para>
             <para>For example, if you have created a discount policy for members and friends to
                 access two different class prices - members with a 30% discount and friends of
@@ -675,8 +761,7 @@
                         fileref="images/club_membership_QE.png"/>
                 </imageobject>
                 <caption>
-                    <para>You can enter a promotional code in the the field 'Enter course or
-                        item...'. </para>
+                    <para>You can enter a promotional code in the field 'Enter course or item...'. </para>
                 </caption>
             </mediaobject>
             <para>If a student already has a membership purchased, you can see the details of that
@@ -696,18 +781,20 @@
         <section>
             <title>Manual discounts in Quick Enrol</title>
             <para>If you need to provide an 'on the fly' discount to an enrolment fee during the
-                enrolment process, there is the ability to enter a manual discount in the discount
-                window on the enrolment tab. This discount will be visible in the class budget,
-                recorded in the class income and linked to the enrolment, so if the enrolment is
-                cancelled and the payer credited, the credit will be less the amount of the discount
-                provided.</para>
+                enrolment process, then you can adjust the class price on the enrolment. This
+                discount will be visible in the class budget, recorded in the class income and
+                linked to the enrolment, so if the enrolment is cancelled and the payer credited,
+                the credit will only be for the amount charged.</para>
+            <para>Tax amounts will automatically recalculate based on class fee adjustments made
+                during Quick Enrol.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="80%" contentdepth="80%"
                         fileref="images/manual_discount.png"/>
                 </imageobject>
                 <caption>
-                    <para>A manual discount of $50 has been entered in the enrolment.</para>
+                    <para>The pre tax class fee of $250 has been overridden to $200, and the tax
+                        recalculated</para>
                 </caption>
             </mediaobject>
             <para>We do not recommend using the 'Other charge' option to provide a discount. An
@@ -715,18 +802,22 @@
                 credited if the enrolment is cancelled and credited. The 'other charge' option is
                 designed to add, on the fly additional line items to the invoice like a phone
                 booking charge.</para>
-            <para>You also have the ability to apply negative discount to an enrolment. This could
-                be used if you want to charge a student a small booking fee for you to enrol them
-                through the office, rather than for them to enrol themselves online. This means the
-                increased fee is part of the enrolment invoice line, so the full fee charged will be
-                reversed should the enrolment be cancelled.</para>
+            <para>You also have the ability to apply negative discount to an enrolment by increasing
+                the class fee. This could be used if you want to charge a student a small booking
+                fee for you to enrol them through the office, rather than for them to enrol
+                themselves online. This means the increased fee is part of the enrolment invoice
+                line, so the full fee charged will be reversed should the enrolment be
+                cancelled.</para>
+            <para>Unlock the class fee and type in the new, increased fee. The tax amount will
+                automatically recalculate based on the new fee.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="80%" contentdepth="80%"
                         fileref="images/negative_discount.png"/>
                 </imageobject>
                 <caption>
-                    <para>A negative discount of $10 has been entered in the enrolment.</para>
+                    <para>The class fee has been increased by $5 from the original fee of $250, and
+                        the tax recalculated </para>
                 </caption>
             </mediaobject>
         </section>
@@ -841,8 +932,8 @@
                 this means, is that across all the classes this discount applies to, you expect,
                 say, 5% of all students to use this discount on enrolment.</para>
             <para>You can further refine this forecast on a class by class basis in the class
-                budget. Double click on the discount line in the budget and setting a new forecast
-                of your choice.</para>
+                budget. Double click on the discount line in the budget, unlock the default forecast
+                and set a new forecast of your choice.</para>
             <para>Based on your enrolment maximum, projected and actual, all three columns will
                 update, with the actual column showing you also the percentage of student's enrolled
                 using the discount.</para>
@@ -867,11 +958,16 @@
         </section>
         <section>
             <title>Accounts and discounts</title>
+            <para>There are two ways discounts can be set up to behave in your chart of accounts.
+                The default value is for all discounts to post as an expense to your chosen COS
+                (Cost of Sale) account. </para>
+            <para>Alternatively, this option can be unchecked within the discount set up, and the
+                discount can simply reduce the income value.</para>
             <para>In the onCourse chart of accounts, a default account called 'Discounts Given' is
-                used to record all the discount costs. </para>
-            <para>When a student enrols, the diagram below demonstrates how the income and discounts
-                are posted against the chart of accounts, for an example $300 enrolment with a $100
-                discount.</para>
+                used to record all the COS discounts. You can add additional COS accounts as needed. </para>
+            <para>When a student enrols, the diagram below demonstrates how the income and COS
+                discounts are posted against the chart of accounts, for an example $300 enrolment
+                with a $100 discount.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -920,7 +1016,7 @@
             <para>However, if you have a GST inclusive class costing $300 which has a $100 discount,
                 the student will end up paying a GST inclusive fee of $190. The student has been
                 given an effective discount of $110, instead of $100. Why do students paying GST now
-                get a 'better' discount? Beacuse they are now liable to pay less GST.</para>
+                get a 'better' discount? Because they are now liable to pay less GST.</para>
             <para>In a class fee of $300 incl GST, $272.73 is the fee income. The remaining $27.27
                 is not your income - it is GST you are collecting on behalf of the government and
                 holding only until the time you reimburse it to them. In onCourse, GST is always
@@ -1135,7 +1231,7 @@
                 <listitem>
                     <para>Open the discount window and create a new discount called 'Buy two and
                         save $10'. In the discount value, set the discount dollar to $5 (if your
-                        classes have GST included in their fee, to acheive a $10 discount over two
+                        classes have GST included in their fee, to achieve a $10 discount over two
                         enrolments, you can set the discount value as $5.45, and set the rounding to
                         nearest dollar)</para>
                 </listitem>
@@ -1155,8 +1251,8 @@
                     <para>When a Quick Enrol process is created that includes at least two
                         enrolments from this list, each eligible enrolment added will have the $5
                         discount applied. If you remove enrolments from the window, and the set of
-                        enrolments are no longer elgible, the discount will be automatically removed
-                        from all enrolments.</para>
+                        enrolments are no longer eligible, the discount will be automatically
+                        removed from all enrolments.</para>
                 </listitem>
             </orderedlist>
             <mediaobject>
@@ -1165,7 +1261,8 @@
                         fileref="images/buyTwoEnrolmentsDiscount.png"/>
                 </imageobject>
                 <caption>
-                    <para>Group enrolment discount in Quick Enrol, showing a total $10 discount accross the two enrolments</para>
+                    <para>Group enrolment discount in Quick Enrol, showing a total $10 discount
+                        across the two enrolments</para>
                 </caption>
             </mediaobject>
             <mediaobject>
@@ -1174,7 +1271,9 @@
                         fileref="images/buyMultipleDiscountWeb.png"/>
                 </imageobject>
                 <caption>
-                    <para>Group enrolment discount on the web, showing a total $20 discount accross the four enrolments, where two students are each attending two classes</para>
+                    <para>Group enrolment discount on the web, showing a total $20 discount across
+                        the four enrolments, where two students are each attending two
+                        classes</para>
                 </caption>
             </mediaobject>
         </example>
@@ -1201,11 +1300,11 @@
             for just one, a group of, or all accounts.</para>
         <para>In the example below, a date range query has been run and a Transaction Detail report
             printed for just the Discounts Given account. This report shows the movements both in
-            and out of the account in the timeframe. </para>
+            and out of the account in the time frame. </para>
         <para>In this account, the debits are the discounts given and the credits occur when an
-            enrolment is cancelled and refunded which had had a discount. The balance of this
-            account sits on the debit side of the ledger. Each detail line is linked to the invoice
-            number and invoice payer which can be followed up in onCourse as needed.</para>
+            enrolment is cancelled and refunded which had a discount. The balance of this account
+            sits on the debit side of the ledger. Each detail line is linked to the invoice number
+            and invoice payer which can be followed up in onCourse as needed.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"

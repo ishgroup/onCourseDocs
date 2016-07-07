@@ -50,9 +50,8 @@
 				want to delete all the outcomes. At other times, often when the training is funded,
 				you want the enrolment cancelled to make another position available in the class,
 				but have the outcomes retained for reporting purposes.</para>
-			<para>When you cancel an enrolment, by defult the checkbox option retains any outcomes
-				that have had a status set, and deletes any outcomes with a status of 'not
-				set'.</para>
+			<para>When you cancel an enrolment, by default the checkbox option retains any outcomes that have
+				had a status set, and deletes any outcomes with a status of 'not set'.</para>
 			<para>If, at this point, no outcomes have had their status set (for example, the student
 				was enrolled into the wrong class) then all outcomes will be deleted. However, if
 				this was a funded enrolment and you wanted to retain all the outcomes to later mark
@@ -330,7 +329,7 @@
 						<answer>
 							<para> You can report them as <emphasis>53 - Recognition of current competency
 									granted</emphasis> and should change their outcomes delivery
-								type to <emphasis> N/A(eg. RPL, credit transfer)</emphasis>
+								type to <emphasis> N/A(e.g.. RPL, credit transfer)</emphasis>
 							</para>
 						</answer>
 					</qandaentry>
@@ -399,11 +398,11 @@
 					non-vet and linked to no formal study units.</para>
 				<para>To add prior learning to a student record, click on the + option to the right
 					of the prior learning panel.</para>
-				<para>Prior learning must have a title - this can be descriptive of the course or
-					training conducted elsewhere. Optionally, the prior learning record can be
-					linked to a Qualifcation or Skills Set on the general tab, contain reference to
-					an external system reference number e.g. the course code or enrolment code from
-					the previous system and optional descriptive notes.</para>
+				<para>Prior learning must have a title - this can be descriptive of the course or training
+					conducted elsewhere. Optionally, the prior learning record can be linked to a
+					Qualification or Skills Set on the general tab, contain reference to an external
+					system reference number e.g. the course code or enrolment code from the previous
+					system and optional descriptive notes.</para>
 				<para>On the second tab, outcomes, you can manually add one or more units of
 					competency or accredited modules to the prior learning record. It is important
 					you add start and end dates to the units of competency, and a valid outcome
@@ -779,7 +778,7 @@
 							'automatic creation of VET Certificates' script. This script looks at
 							the units attached to the student's enrolments, and the Qualification
 							properties of the course they have enrolled in. When all units from the
-							enrolment have been assisgned outcomes, the script creates either a
+							enrolment have been assigned outcomes, the script creates either a
 							Statement of Attainment or Qualification/Skill Set certification for the
 							student in the onCourse Certificate table.</para></listitem>
 					<listitem><para>The issuing of the VET Certificate to the student via upload to the portal using the 'send
@@ -803,15 +802,15 @@
 					status, then the certificate creation process is triggered. This means if
 					outcomes are marked over time, the certificate will not be created until the
 					last outcome of the enrolment is marked.</para>
-				<para>It is important to note here that an outcome with an intermidate status like a
-					70 or 90 will trigger the certificate creation process. There are almost no
-					cases where you should enter this value in an onCourse record - allow the
-					AVETMISS export runner to set these values as needed.</para>
-				<para>For students with at least one successful outcome, create the certificate
-					record (Statement of Attainment or Qualification, based on the 'Satisifies
-					complete qualification or skill set' flag at the course level). If the outcome
-					is already joined to a certificate, this script will not not create a new
-					certificate containing that outcome. </para>
+				<para>It is important to note here that an outcome with an indeterminate status like a 70 or 90
+					will trigger the certificate creation process. There are almost no cases where
+					you should enter this value in an onCourse record - allow the AVETMISS export
+					runner to set these values as needed.</para>
+				<para>For students with at least one successful outcome, create the certificate record
+					(Statement of Attainment or Qualification, based on the 'Satisfies complete
+					qualification or skill set' flag at the course level). If the outcome is already
+					joined to a certificate, this script will not create a new certificate
+					containing that outcome. </para>
 				<para>You can identify these auto-created certificates in onCourse as the issued on
 					date will be 'not set' until they are printed.</para>
 				<qandaset>
@@ -821,8 +820,8 @@
 						<answer><para>If all the outcomes have been given a value, and some of the outcomes are unsuccessful, then
 								the student will be issued a Statement of Attainment, rather than a
 								Qualification. The successful units will print on the certificate
-								face, and on the accompanying transacript, both the successful and
-								unsucsessful units will be printed.</para></answer>
+								face, and on the accompanying transcript, both the successful and
+								unsuccessful units will be printed.</para></answer>
 					</qandaentry>
 					<qandaentry>
 						<question><para>What happens if a student is enrolled in a class with a single outcome and it is marked as unsuccessful, but then they resubmit and assessment and the outcome becomes successful?</para></question>
@@ -830,7 +829,7 @@
 					</qandaentry>
 					<qandaentry>
 						<question><para>If a student has three outcomes attached to their enrolment are two are marked as successful and one is not marked, will they get a Statement of Attainment for the two successful outcomes?</para></question>
-						<answer><para>No, the automated certficate creation process won't be triggered until the final outcome is
+						<answer><para>No, the automated certificate creation process won't be triggered until the final outcome is
 								marked. You can choose to make them a Statement of Attainment for
 								the first two units manually, and when the third outcome is marked,
 								they will get a second Statement of Attainment containing only that
@@ -838,10 +837,10 @@
 								all three units when the final outcome status is provided.</para></answer>
 					</qandaentry>
 					<qandaentry>
-						<question><para>If a Statement of Attainment is created automatically for a student who partially succeded in
+						<question><para>If a Statement of Attainment is created automatically for a student who partially succeed in
 								completing a qualification, but I don't want to issue it, what
 								should I do?</para></question>
-						<answer><para>Befrore the Certificate is printed, you can delete it, or if it has been printed, revoke
+						<answer><para>Before the Certificate is printed, you can delete it, or if it has been printed, revoke
 								it.</para></answer>
 					</qandaentry>
 				</qandaset>
@@ -1080,8 +1079,8 @@
 					onCourse to use during printing.</para>
 			<section>
 				<title>Certificate Backgrounds</title>
-				<para>The standard Qualification and Statement of Attainment reports include a
-					second report, the transcript, as the second page.</para>
+				<para>The standard Qualification report includes a second report, the transcript, as the second
+						page while a Statement of Attainment is only a single page report.</para>
 				<para>If you already have a certificate background you have had professionally
 					designed, which you order from the printers, you can choose to embed this
 					background in the report. You should request a A4 PDF of your backgrounds
@@ -1093,18 +1092,29 @@
 					use of the formal logos, when designing your backgrounds.</para>
 				<para>You will also need a second page PDF background for the transcript
 					report.</para>
-				<para>If you create and upload a two page PDF, comprised of your Certificate
-					design followed by your letterhead or transcript design, for example, these
-					pages will be used correctly when printing the combined report from
-					onCourse.</para>
-				<para>When creating a background for a Qualification or Statement of Attainment
-					report, onCourse will apply the first page of your PDF background to the
-					first page of your report (the Certificate page), then apply the second page
-					of your PDF background to each subsequent page of the Certificate report
-					(the Transcript pages). </para>
-				<para>If you are printing Certificates in bulk, onCourse will recognise when the
-					student record has changed to the next student and therefore apply the first
-					page of the PDF background again as this is a new Certificate. </para>
+				<para>If you create and upload a two page PDF, comprised of your Qualification background design
+						followed by your letterhead or transcript design, for example, these pages
+						will be used correctly when printing the combined report from onCourse. If
+						the transcript is more than one page long, the second page of the template
+						will be used for the subsequent pages printed.</para>
+				
+				<para>If you are printing Qualifications in bulk, onCourse will recognise when the student
+						record has changed to the next student and therefore apply the first page of
+						the PDF background again as this is a new Qualification. </para>
+				<para>When creating a background for a Statement of Attainment report, only a single page
+						background is required. On occasion, Statements of Attainment may contain
+						reference to more units that can fit during printing on a single page. In
+						this instance, the report will be split into multiple certificate pages.
+						Each certificate number will be appended with a page number on printing e.g.
+						certificate 472 may display as 472/1 and 472/2 if multiple pages are
+						created.</para>
+					<para>If you are manually printing a range of Statements of Attainment and
+						Qualifications to the printer at a time, and you have different backgrounds
+						for these reports, you need to print them in two groups - once group the
+						Qualifications with their background chosen, the next group the Statement of
+						Attainments with their background chosen. If you use the onCourse automated
+						script to run the print and issue process, the correct background will be
+						selected automatically.</para>
 				<para>There is more information about how you can create and update report backgrounds in the <link xlink:href="reports-printing">reports chapter</link>
 						of the documentation.</para>
 			</section>
@@ -1266,10 +1276,10 @@
 						the skill set outcomes to be issued a complete skill set.</para>
 					<para>Like a qualification, completed skill sets are reported in the AVETMIS
 						NAT00130 file. Normal Statements of Attainment are not reported.</para>
-					<para>If the course has been defined as being a 'complete qualification or skill
-						set', and the student has successfully completed all the units of
-						competency, then oncourse will attempt to create a skill set certificate for
-						the particpant.</para>
+					<para>If the course has been defined as being a 'complete qualification or skill set', and the
+						student has successfully completed all the units of competency, then
+						onCourse will attempt to create a skill set certificate for the
+						participant.</para>
 					<para>If you are manually creating a skill set certificate, you need to select
 						the option inside the certificate window 'qualification or skill set' rather
 						than Statement of Attainment, even though a skill set is a type of
@@ -1311,7 +1321,7 @@
 				<title>Scripted Certificate Distribution</title>
 				<para>A default onCourse script called 'send certificate vet created notification' is available
 					to enable so you can automate the printing, upload to the portal and
-					notification to students of their VET certificate avilability.</para>
+					notification to students of their VET certificate availability.</para>
 				<para>By default, this script runs at 5am each day and prints all unprinted
 					certificates in the database, where the student has a verified USI.</para>
 				<para>Before you enable this script you need to ensure you have created and tested
@@ -1332,7 +1342,7 @@
 					needed before enabling the script. Keep in mind this email template is also used
 					by the script to send non-VET certificates, 'send certificate created
 					notification', so if you adjust it, and use both scripts, then the wording needs
-					to make sense for both VET and non-VET courses. Alternativly, you could make a
+					to make sense for both VET and non-VET courses. Alternatively, you could make a
 					copy of this template, and use two different versions, one for each
 					script.</para>
 				<para>When the script runs, it will send an email, with the default template
@@ -1389,7 +1399,7 @@
 				</listitem>
 				<listitem>
 					<para>Save the PDF file to a location on your computer, and give it a name that makes sense for
-							later retrival i.e. the students name and qualification</para>
+							later retrieval i.e. the students name and qualification</para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="70%" contentdepth="70%"
@@ -1433,10 +1443,10 @@
 								fileref="images/attaching_certificate_enrolment.png" format="png"/>
 						</imageobject>
 					</mediaobject>
-					<para>Once the Certificate is attached to their enrolment record, the student will be able to see
-						the file and and download it in their skillsonCourse portal.</para>
+					<para>Once the Certificate is attached to their enrolment record, the student will be able to
+							see the file and download it in their skillsonCourse portal.</para>
 				</listitem>
-				<listitem><para>Send the student an email adivsing them the certificate is available in the portal. If you
+				<listitem><para>Send the student an email advising them the certificate is available in the portal. If you
 							create an email template to this, you can use the code
 								<code>${enrolment.student.getPortalLink(certificate)}</code> to send
 							the student a login free link directly to retrieve their Certificate.
@@ -1594,11 +1604,11 @@
 						keycode, and/or a background report with a different name, you can change
 						the references inside the script to point to different files.</para>
 					<para>If you do not want to edit the script, and use the standard 'Certificate-Attendance'
-						report as is, you will need to make sure you have uploaded a backgound with
+						report as is, you will need to make sure you have uploaded a background with
 						the exact name 'certificate_attendance_backgound.pdf'. Note that the file
-						name is all in lower case and uses underscores, not hypens, to seperate each
-						word. Create, edit and save the background document on your local computer,
-						and then upload it to onCourse for testing.</para>
+						name is all in lower case and uses underscores, not hyphens, to separate
+						each word. Create, edit and save the background document on your local
+						computer, and then upload it to onCourse for testing.</para>
 					<para>You can do this by opening the enrolment window, highlighting an enrolment and choosing
 						File > Print > Certificate-Attendance. In the print dialogue background drop
 						down, select Import from disk... and import your background. You will then
@@ -1611,7 +1621,8 @@
 						fileref="images/print_certificate_attendance_with_background.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>Selecting and printing a Certificate of Attendnance with the specified background for this script</para>
+					<para>Selecting and printing a Certificate of Attendance with the specified background for this
+								script</para>
 				</caption>
 			</mediaobject>
 			<para>Print and test your report layout, and if it is successful it will look something like this:</para>
@@ -1625,20 +1636,20 @@
 				</caption>
 			</mediaobject>
 			<para>If you need to adjust your background document layout after testing, return to the original
-						file on your computer and make the necessary changes. Esnure the file is
+						file on your computer and make the necessary changes. Ensure the file is
 						saved with the same name on your computer.</para>
 					<para>Before you try testing the background in onCourse again, delete the first
 						copy of the background by going to File > Preferences > Reports and click on
 						the cogwheel option 'Manage print backgrounds'. Locate the background called
 						'certificate_attendance_backgound', single click on it and delete it. </para>
-					<para>Repeat the earlier process of printing, uploading and testing the
-						background layout and alignment with the embedded report elements until you
-						are satisifed with the result.</para>
+					<para>Repeat the earlier process of printing, uploading and testing the background layout and
+						alignment with the embedded report elements until you are satisfied with the
+						result.</para>
 		</section>
 		<section>
 			<title>Customise your email template</title>
 			<para>The onCourse email template 'certificate available' contains a time based link to allow the
-						receipient to access their class via the skillsOnCourse portal, complete the
+						recipient to access their class via the skillsOnCourse portal, complete the
 						satisfaction survey, and download their certificate as a PDF all without
 						logging in.</para>
 					<para>The link is valid from 7 days after the email is sent. If the user clicks

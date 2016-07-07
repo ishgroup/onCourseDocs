@@ -27,9 +27,12 @@
 				<listitem>
 					<para>Click on the cogwheel option in the top right hand corner and choose "Cancel 1
 						enrolment". This will bring up a dialog with a checkbox offering to also
-						refund the paid enrolment fee. If you keep this ticked, you will create a
+						credit the enrolment fee charged. If you keep this ticked, you will create a
 						create note as part of this process. If you uncheck it, you will retain all
-						the student's fees as part of your business income.</para>
+						the student's fees as part of your business income. 99% of the time you want
+						to create a credit note. If the student's enrolment is unpaid, the credit
+						note will pay their unpaid invoice, rather than leaving it as an unpaid debt
+						on your books.</para>
 				</listitem>
 				<listitem>
 					<para>In the cancellation window, choose if you want to send the student a
@@ -79,6 +82,9 @@
 				outcomes, both set and not set, will be retained. To avoid AVETMISS errors, you will
 				need to make sure that any unset outcomes that are retained are given a valid
 				outcomes status, such as 60 - Withdrawn after processing the cancellation. </para>
+			<para>Retained outcomes attached to cancelled enrolments are reported like all other
+				outcomes. If you want to suppress them from all reporting, set the enrolment to 'Do
+				not report for AVETMISS' on the enrolment general tab.</para>
 		</section>
 		<section>
 			<title>Changing a cancellation fee</title>
@@ -280,7 +286,7 @@
 		<title>Payment reversals within the payment in window</title>
 		<para>If you processed a payment in record in error, i.e. recorded an EFTPOS payment that failed
 			to process through your EFTPOS terminal, and want to reverse the payment to set the
-			invoice back to upaid, you can do this in the Payments In window via the following
+			invoice back to unpaid, you can do this in the Payments In window via the following
 			steps:</para>
 		<orderedlist>
 			<listitem>
@@ -428,11 +434,11 @@
 		<para>Before you cancel the class, you may wish to print a record of the enrolled students,
 			via a report like a class roll or student contact list so you can annotate their
 			preference of refund, credit note or transfer.</para>
-		<para>There is an optional script you can enable to automatically notify all students
-			enrolled in the class that their class is no longer running as scheduled. If this script
-			is enabled, it will contact the students at the end of this process and there is no
-			option to prevent the message from sending on a class by class basis. See below for more
-			infomration regarding enabling and disabling the script.</para>
+		<para>There is an optional script you can enable to automatically notify all students enrolled in
+			the class that their class is no longer running as scheduled. If this script is enabled,
+			it will contact the students at the end of this process and there is no option to
+			prevent the message from sending on a class by class basis. See below for more
+			information regarding enabling and disabling the script.</para>
 		<para>To cancel the class, select the class in the classes window and from the cogwheel option at
 			the top right, select "cancel class". There are four choices to make in this
 			window:</para>
@@ -474,11 +480,11 @@
 			classes'. Cancelled classes that were visible on the web will have their 'enrol now'
 			button changed immediately to 'cancelled', and will not allow any more enrolments either
 			through the web or via Quick Enrol. </para>
-		<para>It can be beneficial to leave cancelled classes displaying on the web, particularly if
-			you have published the class details elsewhere in a brochure. You may also choose to
+		<para>It can be beneficial to leave cancelled classes displaying on the web, particularly if you
+			have published the class details elsewhere in a brochure. You may also choose to
 			manually unpublish the class by single clicking on it and choosing the from the cogwheel
 			'Remove class from website'.</para>
-		<para>A cancelled class can not be 'uncancelled'. However, should you need to reinstate the
+		<para>A cancelled class can not be 'un-cancelled'. However, should you need to reinstate the
 			class, highlight your cancelled class and from the cogwheel option choose 'Duplicate 1
 			class' moving the class forward by zero days (essentially making another copy of the
 			class with a new class code, but all the other details the same). This will not re-enrol

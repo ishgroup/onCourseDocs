@@ -92,10 +92,10 @@
 		</para>
 		<section>
 			<title>Training Organisation (NAT00010) file</title>
-			<para>All the data in this file is collected in the onCourse general preferences window.
-				Go to File > Preferences > General. Select the AVETMISS tab and enter the contact
-				details of your business. It is important your RTO Identifer and name match the
-				details recorded on training.gov.au</para>
+			<para>All the data in this file is collected in the onCourse general preferences window. Go to
+				File > Preferences > General. Select the AVETMISS tab and enter the contact details
+				of your business. It is important your RTO Identifier and name match the details
+				recorded on training.gov.au</para>
 		</section>
 		<section>
 			<title>Training Organisation Delivery Location (NAT00020) File</title>
@@ -106,7 +106,7 @@
 				simple, give each site a room with a generic name like 'default'.</para>
 		</section>
 		<section>
-			<title>Program (NAT00030) File Subjecty (NAT00060) File</title>
+			<title>Program (NAT00030) File Subject (NAT00060) File</title>
 			<para>This information comes from the onCourse Course detail. When you create a new
 				course in onCourse, go to the VET tab and add the Qualification and Unit(s) that you
 				are delivering as part of this program. All the TGA (training.gov.au) data is built
@@ -419,11 +419,11 @@
 				created for you, even if you have not delivered a full qualification to the student.
 				This is because NSW DET uses the NAT00130 file for a different purpose than the
 				national standard. </para>
-			<para>If you are exporting to Victoria, the student intent to complete a certificate
-				will be recorded here also. This record is created when a student is enrolled into a
-				class linked to a course where 'ssatisfies complete qualification or skill set' is
-				ticked. Until you create the Certificate record on their successful completion, the
-				record will contain an 'N' for not issued.</para>
+			<para>If you are exporting to Victoria, the student intent to complete a certificate will be
+				recorded here also. This record is created when a student is enrolled into a class
+				linked to a course where 'satisfies complete qualification or skill set' is ticked.
+				Until you create the Certificate record on their successful completion, the record
+				will contain an 'N' for not issued.</para>
 			<para>
 				<link xlink:href="rto.html">More information on creating Certificates in
 					onCourse</link>
@@ -481,8 +481,7 @@
 					cogwheel</para>
 			</listitem>
 			<listitem>
-				<para>Export the data related to an enrolemtn or group of enrolments, using the
-					cogwheel</para>
+				<para>Export the data related to an enrolment or group of enrolments, using the cogwheel</para>
 			</listitem>
 		</orderedlist>
 		<para>The total activity date based export will export every outcome in your database
@@ -492,8 +491,8 @@
 			type of export will automatically export an outcome of 70 for all outcomes which have
 			end dates outside the reporting year you define. </para>
 		<para>You never need to set an outcome of 70 in onCourse. </para>
-		<para>In the AVETMISS runner, you also have an option, ticked by default, to export '90 not
-			yet available' for all VET outcomes which are not set. This is almost alwasy the correct
+		<para>In the AVETMISS runner, you also have an option, ticked by default, to export '90 not yet
+			available' for all VET outcomes which are not set. This is almost always the correct
 			answer for outcomes being reported within a calendar year, but not still in progress.
 			You can also change this value to 81 as needed.</para>
 		<para>You never need to set an outcome of 90 or 81 in onCourse. Choosing this option won't
@@ -575,12 +574,13 @@
 					<para>In the cog wheel, select AVETMISS export</para>
 				</listitem>
 				<listitem>
-					<para>Select the State or requirement you are exporting for. You can choose to
-						define a date range for the export at this point, or leave it blank.
-						Choosing a date range will restrict to exporting the outcomes from the class
-						that start or end between the date range. If you leave the dates field
-						blank, all outcomes from the class will be exported. Note: Outcomes from
-						cancelled classes will not be exported.</para>
+					<para>Select the State or requirement you are exporting for. You can choose to define a date
+						range for the export at this point, or leave it blank. Choosing a date range
+						will restrict to exporting the outcomes from the class that start or end
+						between the date range. If you leave the dates field blank, all outcomes
+						from the class will be exported. Note: Outcomes from cancelled classes or
+						enrolments will be exported, if their outcomes were retained during the
+						cancellation process.</para>
 				</listitem>
 				<listitem>
 					<para>Your files will be saved in a folder in the location you have chosen.
@@ -595,9 +595,9 @@
 			<orderedlist>
 				<listitem>
 					<para>Open the enrolment window and run the query or filter to return the enrolments you wish
-						to export. You can search on items like contains 'NSW Comitment ID', to find
-						all Smart &amp; Skilled enrolments, or Funding source - state begins with CS
-						to find all CSD/CSR coded enrolments for the CSO program.</para>
+						to export. You can search on items like contains 'NSW Commitment ID', to
+						find all Smart &amp; Skilled enrolments, or Funding source - state begins
+						with CS to find all CSD/CSR coded enrolments for the CSO program.</para>
 				</listitem>
 				<listitem>
 					<para>Highlight from this list the enrolments you want to export</para>
@@ -606,12 +606,13 @@
 					<para>In the cog wheel, select AVETMISS export</para>
 				</listitem>
 				<listitem>
-					<para>Select the State or requirement you are exporting for. You can choose to
-						define a date range for the export at this point, or leave it blank.
-						Choosing a date range will restrict to exporting the outcomes from the
-						enrolments that start or end between the date range. If you leave the dates
-						field blank, all outcomes from the enrolments will be exported. Note:
-						Outcomes from cancelled or credited enrolments can not be exported.</para>
+					<para>Select the State or requirement you are exporting for. You can choose to define a date
+						range for the export at this point, or leave it blank. Choosing a date range
+						will restrict to exporting the outcomes from the enrolments that start or
+						end between the date range. If you leave the dates field blank, all outcomes
+						from the enrolments will be exported. Note: Outcomes from cancelled classes
+						or enrolments will be exported, if their outcomes were retained during the
+						cancellation process. </para>
 				</listitem>
 				<listitem>
 					<para>Your files will be saved in a folder in the location you have chosen.
@@ -647,7 +648,7 @@
 					<para>Export the option 'neither Aboriginal or Torres Straight Islander' for Indigenous status
 						for all students born in a country other than Australia (or Australian
 						Territory), regardless of their response in the AVETMISS questions, as
-						'neither' is the only option allowed according to AVETMISs validation rules. </para>
+						'neither' is the only option allowed according to AVETMISS validation rules. </para>
 				</listitem>
 			</itemizedlist>
 			<itemizedlist>
@@ -724,8 +725,8 @@
 					<para>Always export at school flag as N if employment status is full time</para>
 				</listitem>
 				<listitem>
-					<para>Supress the export of outcomes with status 66 - Did not start unless
-						reporting to NSW State Training Services, or South Australia </para>
+					<para>Suppress the export of outcomes with status 66 - Did not start unless reporting to NSW
+						State Training Services, or South Australia </para>
 				</listitem>
 			</itemizedlist>
 			<section>
@@ -755,10 +756,10 @@
 				<para>The 'Outcome identifier - Training Organisation' field has been added to the
 					Enrolment general tab to record the possible Training not completed (TNC) or
 					Training Deferred (D) value for the enrolment.</para>
-				<para>Once you have reported this enrolment, and had it accepted by State Training
-					Services, you may wish to supress it from future AVETMISS exports. If this is
-					the case, on the general tab of the enrolment select the option 'Do not report
-					for AVETMISS'.</para>
+				<para>Once you have reported this enrolment, and had it accepted by State Training Services, you
+					may wish to suppress it from future AVETMISS exports. If this is the case, on
+					the general tab of the enrolment select the option 'Do not report for
+					AVETMISS'.</para>
 				<para>The field Purchasing Contract Identifier, which previously existed at the
 					class level has also been added to the enrolment general tab, with the NSW
 					specific label of Commitment ID. All outcomes in an enrolment will be reported

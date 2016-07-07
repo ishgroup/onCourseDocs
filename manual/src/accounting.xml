@@ -135,19 +135,28 @@
 				</caption>
 			</mediaobject>
 			<section>
-				<title>Transactions created when a discount is applied</title>
-				<para>Discounts in onCourse are charged to a Cost of Sale (COS) account called
-					Discounts Given. The transactions processed to this account, and balance of this
-					account allow you to keep an accurate track of the cost to the business of the
-					discounts given during the sales process.</para>
-				<para> Discounts given do not reduce the income recorded in the income account(s) of
-					your college. To determine the income earned, you can deduct the balance of the
-					COS accounts(s) from the income account(s)</para>
-				<para>This works in conjunctions with the standard enrolment transaction posting
-					process, and the deferred income posting for income.</para>
-				<para>For example, for a $300 (GST free) enrolment fee, with a $100 discount applied
-					at time of enrolment, the student owes and pays the balance of $200 in full
-					during enrolment. </para>
+				<title>Transactions created when a COS discount is applied</title>
+				<para>For each discount created, you can choose to either charge the discount to a Cost of Sale
+					(COS) account so you can track the discount as a business expense, or to allow
+					the discount to reduce the income received. Manual discounts given at the point
+					of sale, by overriding the class fee in Quick Enrol, are always posted as
+					reduced income, and will not post to the COS account(s)</para>
+				<para>Generally, discounts like promotional codes are better set up as COS discounts, while
+					variable course fees for differently funded students are better set up as
+					discounts which reduce income. Discounts which aren't linked to a COS post the
+					reduced income as per the standard liability > income processes.</para>
+				<para>By default, Discounts linked to a COS account are charged to an account called Discounts
+					Given. You can also create additional COS accounts as needed for different
+					departments or promotional types. The transactions processed to this account,
+					and balance of this account allow you to keep an accurate track of the cost to
+					the business of the discounts given during the sales process. To determine the
+					income earned, you can deduct the balance of the COS accounts(s) from the
+					appropriate income account(s).</para>
+				<para>Discounts work in conjunctions with the standard enrolment transaction posting process,
+					and the deferred income posting for income.</para>
+				<para>For example, for a $300 (GST free) enrolment fee, with a $100 COS discount applied at time
+					of enrolment, the student owes and pays the balance of $200 in full during
+					enrolment. </para>
 				<simplelist>
 					<member>(1) $200 is recorded as pre-paid fees liability. This is the income for
 						the full enrolment, excluding the discounted amount</member>
@@ -245,11 +254,11 @@
 				</caption>
 			</mediaobject>
 			<section>
-				<title>Transactions created when a discount is applied</title>
-				<para>For example, for a $300 (GST free) enrolment fee, with a $100 discount applied
-					at time of enrolment, the student owes and pays the balance of $200 in full
-					during enrolment. When this enrolment is cancelled and the student is refunded,
-					the following transactions are processed:</para>
+				<title>Transactions created when a COS discount is reversed</title>
+				<para>For example, for a $300 (GST free) enrolment fee, with a $100 COS discount applied at time
+					of enrolment, the student owes and pays the balance of $200 in full during
+					enrolment. When this enrolment is cancelled and the student is refunded, the
+					following transactions are processed:</para>
 				<simplelist>
 					<member>(1) $200 is reversed from the income account. This is the income for the
 						full enrolment, excluding the discounted amount</member>
@@ -925,8 +934,9 @@
 			<para>On occasion, you may find income in onCourse has been posted to the wrong account, due to the error in a class set up.</para>
 			<para>This can be resolved by journalling amounts from one account to another.</para>
 			<para>To do this, go to the menu Financial > Create GL journal entry.</para>
-			<para>This will open a simple window where you can choose what account you want to
-				journal money from, to and the value.</para>
+			<para>This will open a simple window where you can choose what account you want to journal money
+				from, to and the value. You can also choose to process the journal into the past,
+				provided the period hasn't been locked.</para>
 			<para>Journals processed in onCourse will be visible in the transactions window by
 				selecting the core filter 'other' i.e. they are transactions in the database that
 				were not created by either invoices or payments.</para>

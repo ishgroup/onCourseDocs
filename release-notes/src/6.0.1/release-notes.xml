@@ -25,16 +25,16 @@
     <section>
       <title>Prepaid fees</title>
       <para>When you create an invoice in onCourse, the general ledger is not immediately credited
-        with the income from training delivery. Instead, a liability is created called “prepaid
-        fees”. onCourse then journals that liability to income as the class delivery takes place.
-        Some onCourse users don’t use our general ledger or worry about pre-paid fees. In that, case
+        with the income from training delivery. Instead, a liability is created called "prepaid
+        fees". onCourse then journals that liability to income as the class delivery takes place.
+        Some onCourse users don't use our general ledger or worry about pre-paid fees. In that, case
         this issue will not affect you.</para>
       <para>A defect was discovered that has existed since onCourse 4.0. The issue is triggered when
         a student had only partially paid for one invoice, then enrolled in another class, creating
         a another invoice. The remaining fee liability component from the first unpaid invoice (or
         invoices) was reset to be the full balance of the original income, resulting in a potential
         over allocation of income from the liability account for that invoice. On upgrade to 6.0.1,
-        the over allocated invoice’s income will be debited against the appropriate income account
+        the over allocated invoice's income will be debited against the appropriate income account
         and credited to the fee liability account to bring all account balance back to the correct
         position. You will see these paired transaction lines posted on the date the upgrade takes
         place.</para>

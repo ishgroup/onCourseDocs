@@ -16,7 +16,7 @@
     </section>
     <section>
       <title>Mailing lists</title>
-      <para>We’ve optimised the sending of mailing lists, and you should also receive some visual
+      <para>We've optimised the sending of mailing lists, and you should also receive some visual
         progression so that you know that things are happening as messages to large lists are being
         sent. Mailing lists have been given greater prominence within the interface to make them
         easier to use and search on. The web site allows students and potential students to
@@ -70,8 +70,8 @@
             the log in from data in the LDAP data source.</para>
         </listitem>
         <listitem>
-          <para>Prevented phantom changes to the invoice, causing the “there are un-commited
-            changes” dialog to show up</para>
+          <para>Prevented phantom changes to the invoice, causing the "there are un-commited
+            changes" dialog to show up</para>
         </listitem>
         <listitem>
           <para>Clean up the preference view layout.</para>
@@ -84,7 +84,7 @@
             painting grief. now it is positioned in the centre.</para>
         </listitem>
         <listitem>
-          <para>Fixed a bug where “Send Email” is truncated at the top of the messaging
+          <para>Fixed a bug where "Send Email" is truncated at the top of the messaging
             window</para>
         </listitem>
         <listitem>
@@ -93,7 +93,7 @@
         </listitem>
         <listitem>
           <para>Corrected behaviour on record cancelling (or pressing prev/next button) where it was
-            possible to save record without proper permissions using “Keep Changes”</para>
+            possible to save record without proper permissions using "Keep Changes"</para>
         </listitem>
         <listitem>
           <para>Debtors and creditors report improved: added student id column, phone fields made
@@ -110,7 +110,7 @@
             which is more intuitive.</para>
         </listitem>
         <listitem>
-          <para>UserListController shouldn’t subclass TaggableListController as SystemUser is not
+          <para>UserListController shouldn't subclass TaggableListController as SystemUser is not
             Taggable.</para>
         </listitem>
         <listitem>
@@ -140,14 +140,14 @@
             </listitem>
             <listitem>
               <para>validation calls are reduced by having objects register themselves for
-                validation (and thus if already validated for the ValdationResult not doing so
+                validation (and thus if already validated for the ValidationResult not doing so
                 again).</para>
             </listitem>
           </itemizedlist>
         </listitem>
         <listitem>
           <para>Because this code is called so often (7500 times just to press tab in QE), the
-            logger debugs are taking all of 500ms combined. We don’t really need them in production
+            logger debugs are taking all of 500ms combined. We don't really need them in production
             code since the logs they create are a bit overwhelming.</para>
         </listitem>
         <listitem>
@@ -180,7 +180,7 @@
             two threads (one closing frame one refreshing etc) is avoided.</para>
         </listitem>
         <listitem>
-          <para>Don’t log user passwords when debugging is set to full</para>
+          <para>Don't log user passwords when debugging is set to full</para>
         </listitem>
         <listitem>
           <para>Fixed the problem with preference view, the ldap server port preference is an
@@ -234,11 +234,11 @@
             displaying over 500 sessions</para>
         </listitem>
         <listitem>
-          <para>Removed extended info on the session blob in calendar, tradeoff for faster calendar
+          <para>Removed extended info on the session blob in calendar, trade-off for faster calendar
             drawing</para>
         </listitem>
         <listitem>
-          <para>Added “core filter” to the session list</para>
+          <para>Added "core filter" to the session list</para>
         </listitem>
         <listitem>
           <para>Fixed issue where the copy/cut/paste menu items did not work on windows.</para>
@@ -296,7 +296,7 @@
           <para>Show error message when try to use old server version with newer data file.</para>
         </listitem>
         <listitem>
-          <para>If an outcome is not classroom based or employment based, then don’t export the
+          <para>If an outcome is not classroom based or employment based, then don't export the
             attached site.</para>
         </listitem>
         <listitem>
@@ -393,7 +393,7 @@
           <para>Added dialog that shows that the enrolment confirmations were sent</para>
         </listitem>
         <listitem>
-          <para>Capturing all exceptions when courseclass duplication fails and displaying a message
+          <para>Capturing all exceptions when class duplication fails and displaying a message
             to the end user</para>
         </listitem>
         <listitem>
@@ -457,7 +457,7 @@
             </listitem>
             <listitem>
               <para>If no additional language spoken at home other than English, then the Australian
-                government doesn’t want to know how well you speak English. Sigh…</para>
+                government doesn't want to know how well you speak English. Sigh…</para>
             </listitem>
             <listitem>
               <para>Fix commencing course identifier export logic.</para>
@@ -479,18 +479,18 @@
               <para>Export only unique records for AVETMISS</para>
             </listitem>
             <listitem>
-              <para>If street address blank then export ‘NOT PROVIDED’ for AVETMISS.</para>
+              <para>If street address blank then export 'NOT PROVIDED' for AVETMISS.</para>
             </listitem>
             <listitem>
               <para>Fix handling of state and postcode when bad data supplied for AVETMISS
                 export.</para>
             </listitem>
             <listitem>
-              <para>Export @@ for students who didn’t answer language other than English
+              <para>Export @@ for students who didn't answer language other than English
                 question.</para>
             </listitem>
             <listitem>
-              <para>Is suburb not supplied then export “NOT PROVIDED”</para>
+              <para>Is suburb not supplied then export "NOT PROVIDED"</para>
             </listitem>
             <listitem>
               <para>If string longer than desired AVETMISS field, then truncate. Also strip newline,
@@ -504,15 +504,15 @@
                 allowed in the field.</para>
             </listitem>
             <listitem>
-              <para>“Training Orgainsiation Type Identifier” in NAT00010 updated from release 5 to
+              <para>"Training Organisation Type Identifier" in NAT00010 updated from release 5 to
                 6</para>
             </listitem>
             <listitem>
               <para>Upper case for the Suburb in site and Course/Qualification name</para>
             </listitem>
             <listitem>
-              <para>Fixed: “No records should appear in that files unless their is a corresponding
-                enrolment record in the NAT00120”</para>
+              <para>Fixed: "No records should appear in that files unless their is a corresponding
+                enrolment record in the NAT00120"</para>
               <para> get outcome list from course classes and then get all data (students, sites,
                 qualification, …) from that outcome list.</para>
             </listitem>
@@ -552,7 +552,7 @@
             no records are displayed (cf all records were displayed)</para>
         </listitem>
         <listitem>
-          <para>“Untag all” action added</para>
+          <para>"Untag all" action added</para>
         </listitem>
         <listitem>
           <para>Improved the enrolment cancellation process</para>
@@ -593,11 +593,11 @@
           <para>Fixing conditions for running replication. </para>
           <itemizedlist>
             <listitem>
-              <para>doesn’t depend on website being licenced (otherwise you can’t update the licence
+              <para>doesn't depend on website being licenced (otherwise you can't update the licence
                 from willow)</para>
             </listitem>
             <listitem>
-              <para>doesn’t depend on nighttime or weekends (as colleges like tango run classes on
+              <para>doesn't depend on nighttime or weekends (as colleges like tango run classes on
                 weekends and nights)</para>
             </listitem>
           </itemizedlist>
@@ -624,7 +624,7 @@
           <para>Adding class location to enrolment confirmations.</para>
         </listitem>
         <listitem>
-          <para>Display information “student on waitinglist” in contact edit view only if contact is
+          <para>Display information "student on waitinglist" in contact edit view only if contact is
             a student.</para>
         </listitem>
         <listitem>
@@ -635,7 +635,7 @@
           <para>Mailing Lists: Bounce processing</para>
         </listitem>
         <listitem>
-          <para>Outcome enrolment’s invoiceline total price unavailable, throws an exception. The
+          <para>Outcome enrolment's invoiceline total price unavailable, throws an exception. The
             field is only for det export.</para>
         </listitem>
         <listitem>
@@ -649,10 +649,10 @@
           <para>Added validation for the refund amount when cancelling the enrolment</para>
         </listitem>
         <listitem>
-          <para>Added ‘fee paid’ to the enrolment list view</para>
+          <para>Added 'fee paid' to the enrolment list view</para>
         </listitem>
         <listitem>
-          <para>“network connection lost” during automatic logout was disabled</para>
+          <para>"network connection lost" during automatic logout was disabled</para>
         </listitem>
         <listitem>
           <para>Fixed reported bugs related to automatic logout: </para>
@@ -661,7 +661,7 @@
               <para>If I uncheck the tick box, I still end up getting logged out.</para>
             </listitem>
             <listitem>
-              <para>If I take the value out of the box, I can’t save the record, even with the
+              <para>If I take the value out of the box, I can't save the record, even with the
                 checkbox unticked.</para>
             </listitem>
           </itemizedlist>
@@ -674,7 +674,7 @@
             put the same student multiple times on the list</para>
         </listitem>
         <listitem>
-          <para>Added “Friend” as available contact relation type</para>
+          <para>Added "Friend" as available contact relation type</para>
         </listitem>
         <listitem>
           <para>Find on Contact list fixed</para>

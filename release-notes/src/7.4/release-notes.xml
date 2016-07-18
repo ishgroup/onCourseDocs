@@ -26,15 +26,15 @@
       <para>Now when you cancel an enrolment, by default all outcomes with a status set will be
         retained. This allows you to cancel the enrolment for a funded student, making the place in
         the class available for another, while retaining their outcomes for reporting.</para>
-      <para>During the the enrolment cancellation a checkbox is ticked by default that says ‘Delete
-        outcomes linked to this enrolment with status “not set”’. If you have not given any outcomes
+      <para>During the the enrolment cancellation a checkbox is ticked by default that says 'Delete
+        outcomes linked to this enrolment with status "not set"'. If you have not given any outcomes
         a status yet, this may mean all the outcomes attached to the enrolment. This will be
         desirable for most types of enrolments, where you do not want to report the student as
         having enrolled in this program at all for AVETMISS purposes.</para>
       <para>If the student needs to be reported as a withdrawn student for AVETMISS purposes, you
         have two options. Either set the value of the outcomes before the cancellation process, and
-        they will be retained by default. Alternatively, you can untick the option ‘Delete outcomes
-        linked to this enrolment with status “not set”’ so all outcomes, both set and not set, will
+        they will be retained by default. Alternatively, you can untick the option 'Delete outcomes
+        linked to this enrolment with status "not set"' so all outcomes, both set and not set, will
         be retained. To avoid AVETMISS errors, you will need to make sure that any unset outcomes
         that are retained are given a valid outcomes status, such as 60 – Withdrawn after processing
         the cancellation.</para>
@@ -43,13 +43,13 @@
         Qualification record in onCourse before you cancel the class.</para>
     </section>
     <section>
-      <title>Addition of ‘Certificate Awarded’ and ‘Certificate Issued’ fields</title>
-      <para>By default, the date the certificate was created on is added to the ‘Certificate
-        Awarded’ and the date the certificate was printed is added to the ‘Certificate issued’
+      <title>Addition of 'Certificate Awarded' and 'Certificate Issued' fields</title>
+      <para>By default, the date the certificate was created on is added to the 'Certificate
+        Awarded' and the date the certificate was printed is added to the 'Certificate issued'
         field. For both these new fields, you can manually edit the date to any date you
         want.</para>
       <para>The default onCourse Statement of Attainment, Qualification and Transcript certificates
-        now show these fields instead of the ‘Created on’ and ‘Printed on’ fields. If you have a
+        now show these fields instead of the 'Created on' and 'Printed on' fields. If you have a
         custom certificate template and need assistance in updating it, please contact us</para>
     </section>
     <section>
@@ -80,8 +80,8 @@
     <para>
       <itemizedlist>
         <listitem>
-          <para>A new report has been added to the discount window called ‘Discount take up
-            summary’. This report shows during the date range specified, and for each discount
+          <para>A new report has been added to the discount window called 'Discount take up
+            summary'. This report shows during the date range specified, and for each discount
             chosen, how many enrolments for each class have used that particular discount. This
             report is for marketing purposes, so show you the take-up success of a particular
             discount during a campaign date range. <systemitem>#24468</systemitem></para>
@@ -95,7 +95,7 @@
         <listitem>
           <para>A new report was added to show the projected pre-paid fee liabilty to income
             journals for each of the next 7 months from the date the report is run, for each class.
-            This report can be found in the classes menu and is called ‘Income journal projection’
+            This report can be found in the classes menu and is called 'Income journal projection'
             <systemitem>#24109</systemitem></para>
         </listitem>
         <listitem>
@@ -118,11 +118,11 @@
             default, to apply to private classes being created in Quick Enrol <systemitem>#24721</systemitem></para>
         </listitem>
         <listitem>
-          <para>Allow voucher payment in Quick Enrol to apply to payer’s previous unpaid invoices
+          <para>Allow voucher payment in Quick Enrol to apply to payer's previous unpaid invoices
             <systemitem>#24732</systemitem></para>
         </listitem>
         <listitem>
-          <para>Search option ‘created by’ added to applications advanced search options <systemitem>#23985</systemitem></para>
+          <para>Search option 'created by' added to applications advanced search options <systemitem>#23985</systemitem></para>
         </listitem>
         <listitem>
           <para>New checkbox added to class and enrolment cancellation to send credit note email.
@@ -138,7 +138,7 @@
         </listitem>
         <listitem>
           <para>Two factor authentication will be enabled for your users during their next log in if
-            you select the option in their access role to ‘require two factor authentication’. If
+            you select the option in their access role to 'require two factor authentication'. If
             the user cancels this window, it will be shown to them again on every log in until it is
             enabled. <systemitem>#23898</systemitem></para>
         </listitem>
@@ -171,7 +171,7 @@
           <para>A new field has been added to the AVETMISS preferences panel for QLD reporting RTOs
             to record their QLD RTO ID. For AVETMISS exporting purposes, when choosing the export
             flavour QLD, this value will export, instead of the standard national Identifier. It is
-            important you retain your national RTO ID in the ‘Identifier’ field to allow for the USI
+            important you retain your national RTO ID in the 'Identifier' field to allow for the USI
             SOAP Validation process to work <systemitem>#25047</systemitem></para>
         </listitem>
         <listitem>
@@ -197,14 +197,14 @@
           mail queue rather than be marked as failed on the sending attempt <systemitem>#24149</systemitem></para>
       </listitem>
       <listitem>
-        <para>Fix to user account permission ‘override tutor payrate’ to allow this to be enabled
+        <para>Fix to user account permission 'override tutor payrate' to allow this to be enabled
           and disabled for different user roles <systemitem>#24509</systemitem></para>
       </listitem>
       <listitem>
         <para>Quick Enrol will now select the class starting next by default <systemitem>#24749</systemitem></para>
       </listitem>
       <listitem>
-        <para>Fix to advanced search results when you are searching for date type data ‘on’ a
+        <para>Fix to advanced search results when you are searching for date type data 'on' a
           specific date. Previously a from and to date range was required to return valid results
           <systemitem>#25094</systemitem></para>
       </listitem>
@@ -224,13 +224,13 @@
         <listitem>
           <para>Unicode characters are automatically replaced with ASCII characters in AVETMISS
             export files during the export process e.g. Zoë will be converted to Zoe for AVETMISS,
-            but the student’s preferred spelling will be stored in onCourse and can be printed on
+            but the student's preferred spelling will be stored in onCourse and can be printed on
             their certificate <systemitem>#24397</systemitem></para>
         </listitem>
         <listitem>
           <para>Added additional validation to the AVETMISS export process to prevent outcomes with
             start and end dates different to their class dates from exporting if their date range
-            doesn’t match those set in the export runner <systemitem>#25004</systemitem></para>
+            doesn't match those set in the export runner <systemitem>#25004</systemitem></para>
         </listitem>
       </itemizedlist>
     </section>

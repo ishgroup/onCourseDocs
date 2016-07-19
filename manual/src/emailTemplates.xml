@@ -275,15 +275,25 @@ ${it.description}
 				<para>Records that are linking to objects, such as specific class pages are written
 					without speechmarks, where links to portal URL pages are defined as strings by
 					writing them inside speech marks.</para>
-				<para>The options available include:</para>
-				<programlisting language="groovy-template">student.portalLink(courseClass) -> link to class page
-student.portalLink(enrolment)  -> link to class page
-student.portalLink(document)  -> link to download file directly
-student.portalLink(invoice)  -> link to one invoice
-student.portalLink("USI")  -> link to USI portal page
-student.portalLink("timetable")  -> link to the timetable portal page
-student.portalLink("results")  -> link to results portal page
-student.portalLink("subscriptions")  -> link to the subscriptions portal page
+				<para>If a student click on a signed link, it will limit them to accessing that page
+					within the portal. For example, if you include a standard unsubscribe link in
+					your emails like:</para>
+				<programlisting language="groovy-template">To remove yourself from the waiting list and unsubscribe to these notices, 
+please visit ${waitingList.student.getPortalLink("subscriptions")}</programlisting>
+				<para>and the user clicks on the menu item in the portal to access their outcome results, they
+					will be returned to the login screen. In this way, the security of the portal is
+					maintained, and the documents or timed links sent can't easily be distributed to
+					others or exponse potentially confidental information.</para>
+				<para>If sending from an email template linked to an enrolment, example options available
+					include:</para>
+				<programlisting language="groovy-template">${enrolment.student.portalLink(courseClass)} -> link to class page
+${enrolment.student.getPortalLink(enrolment)}  -> link to class page
+${enrolment.student.getPortalLink(document)}  -> link to download file directly
+${enrolment.student.getPortalLink(invoice)}  -> link to one invoice
+${enrolment.student.getPortalLink("USI")}  -> link to USI portal page
+${enrolment.student.getPortalLink("timetable")}  -> link to the timetable portal page
+${enrolment.student.getPortalLink("results")}  -> link to results portal page
+${enrolment.student.getPortalLink("subscriptions")}  -> link to the subscriptions portal page
 </programlisting>
 			</section>
 		</section>

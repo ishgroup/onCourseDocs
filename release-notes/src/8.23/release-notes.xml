@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://docbook.org/ns/docbook file://../../src/docbook.xsd"
+         xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-8.23">
+  <info>
+    <title>Release 8.23</title>
+    <pubdate>22 August 2016</pubdate>
+  </info>
+
+  <section role="important">
+    <title>Important changes</title>
+    <para></para>
+  </section>
+  <section role="major">
+    <title>Major features</title>
+    <para></para>
+  </section>
+  <section role="scripts">
+    <title>Reports and scripts</title>
+<itemizedlist>
+  <listitem><para>A new script has been added to onCourse called 'notification of unmarked attendance'. When
+          enabled, this script sends a daily notification to advise an admin user of any sessions
+          run the previous day where attendance was all or partially unmarked. If you have scripts
+          enabled that rely on tutors electronically marking the roll, we suggest you enable this
+          monitoring script also. <systemitem>#26608</systemitem></para></listitem>
+  <listitem>Fix to Payment In an Payment Out reports to render company names correctly<para><systemitem>#28802</systemitem></para></listitem>
+  <listitem><para><systemitem></systemitem></para></listitem>
+</itemizedlist>
+  </section>
+  <section role="minor">
+    <title>Minor features</title>
+<itemizedlist>
+  <listitem><para>All list view prefetches have been reviewed and updated, to ensure all onCourse windows are
+          opening in the fastest possible time. Windows with noticeable delays, like Applications
+          and Payment In load significantly faster <systemitem>#29058</systemitem></para></listitem>
+  <listitem><para><systemitem></systemitem></para></listitem>
+  <listitem><para><systemitem></systemitem></para></listitem>
+</itemizedlist>
+  </section>
+  <section role="fixes">
+    <title>Fixes</title>
+    <itemizedlist>
+      <listitem><para>Fix to wait list link in course record to open filtered list view of waiting list entries for that course only <systemitem>#27584</systemitem></para></listitem>
+      <listitem><para>Improvement to editing of attendance records to ensure if cancel is chosen, instead of save,
+          no changes to the attendance records are saved <systemitem>#28793</systemitem></para></listitem>
+      <listitem><para>Improvements to the WA RAPT report have been implemented to export the start and end date of
+          self paced outcomes which have been overridden, calculate the course fee based on the
+          enrolment fee divided by the units of competency, and export the USI data
+            <systemitem>#28933</systemitem></para></listitem>
+      <listitem><para>Fis to the deposit bank 'dank banked' field to allow the date to be typed into the field rather than just chosen from the calendar tool <systemitem>#29164</systemitem></para></listitem>
+      <listitem><para><systemitem></systemitem></para></listitem>
+    </itemizedlist>
+  </section>
+  <section role="web">
+    <title>Web features</title>
+<itemizedlist>
+  <listitem><para>A new feature has been added to the skillsOnCourse login screen to auto detect first time
+          visitors to the site, when following a login link from onCourse. They system will auto
+          populate their name and email address and prompt them to set up a password on their first
+            visit.<systemitem>#28881</systemitem></para></listitem>
+</itemizedlist>
+  </section>
+  <section role="web-fixes">
+    <title>Web fixes</title>
+    <para></para>
+  </section>
+</chapter>

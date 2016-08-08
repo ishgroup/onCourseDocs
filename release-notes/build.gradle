@@ -6,6 +6,7 @@ task mergeImages(type: Copy) {
     includeEmptyDirs = false
 }
 docbookHtml.dependsOn mergeImages
+docbookPdf.dependsOn mergeImages
 
 task newRelease << {
     if (project.hasProperty('docVersion')) {

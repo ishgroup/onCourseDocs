@@ -113,6 +113,35 @@
 			e.g. ActingBeg_1.</para>
 		</section>
 	<section>
+		<title>Tagging images</title>
+		<para>You have the ability to display a different hero image on each course detail page. These
+			will appear on your website on any course detail pages e.g
+			www.acme.com.au/course/business. You would then create a new tag group called 'image'
+			and a tag inside that called 'hero'</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/taggingheroimage.png" />
+			</imageobject>
+			<caption>
+				<para>Creating a new tag group called 'image'</para>
+			</caption>
+		</mediaobject>
+		<para>To enable this feature you will have to add the following code to the CourseItem.tml file </para>
+		<para>&lt;t:loop source="getAttachments(courseItemModel.course)" value="attachment"></para>
+		<para>&lt;t:if test="hasTag(attachment, 'image/hero')"></para>
+		<para>&lt;div t:type="ui/image" name="attachment.name" class="course-img" width="200"
+			height="200">&lt;/div></para>
+		<para>&lt;/t:if></para>
+		<para>&lt;/t:loop></para>
+		<para>&lt;/div></para>
+		<note>
+			<para>The CourseItem.tml file can be found in WebDAV by going to templates -> default -> CourseItem.tml. </para>
+		</note>
+		<para>You would then store attached the images you want to the course making sure the pixel width
+			and height is the same as the code in the CourseItem.tml then tag them to the tag 'hero'
+			in the tag group 'image'.</para>
+	</section>
+	<section>
 		<title>Rich text</title>
 		<para>Sometimes you want to position images and attachments not just at the end of the
 			course description, but on other pages withint your site. You may want to display an

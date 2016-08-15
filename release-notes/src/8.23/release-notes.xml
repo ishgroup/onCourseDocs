@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://docbook.org/ns/docbook file://../../src/docbook.xsd"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-8.23">
 
   <info>
@@ -9,8 +10,6 @@
 
   <section role="important">
     <title>Important changes</title>
-    <para>This header line from the release notes is causing errors. Holding here for fix: xsi:schemaLocation="http://docbook.org/ns/docbook file://../../src/docbook.xsd">
-    </para>
     <para></para>
   </section>
   <section role="major">
@@ -71,20 +70,22 @@
     <title>Web features</title>
 <itemizedlist>
   <listitem><para>The onCourse credit card payment gateway has been added to the skillsOnCourse portal, to allow debtors to make payments against their outstanding invoices or payment plans <systemitem>#19455</systemitem></para></listitem>
+  <listitem><para>A design refresh of the portal timetable has been implemented to show sessions in a continal scrolling schedule. Each session can be clicked on to expand and show additional notes and links <systemitem>#28496</systemitem></para></listitem>
+  <listitem><para>A neew team timetable view has been implemented for users with group permissions for other users in the portal. In this view you will see the attendees scheduled for each session <systemitem>#28496</systemitem></para></listitem>
   <listitem><para>An all new and improved design for tutors marking attendance via the portal now includes the CRICOS marking options for partial attendance and absent with reason <systemitem>#27482</systemitem></para></listitem>
-  <listitem><para>A feature for marking the class roll has been added to show the attendance percentage of each student<systemitem>#27482</systemitem></para></listitem>
+  <listitem><para>A feature for marking the class roll has been added to show the attendance percentage of each student <systemitem>#27482</systemitem></para></listitem>
   <listitem><para>Students (and their approved portal contacts) can see information about the student's attendance for each class, showing the marked roll results for each session as well as an overall attendance calculation <systemitem>#28804</systemitem></para></listitem>
   <listitem><para>A new feature has been added to the skillsOnCourse login screen to auto detect first time
           visitors to the site, when following a login link from onCourse. They system will auto
           populate their name and email address and prompt them to set up a password on their first
-            visit.<systemitem>#28881</systemitem></para></listitem>
+            visit <systemitem>#28881</systemitem></para></listitem>
 </itemizedlist>
   </section>
   <section role="web-fixes">
     <title>Web fixes</title>
 <itemizedlist>
   <listitem><para>Improved display of invoices in the portal to better match onCourse email templates and print reports <systemitem>#28286</systemitem></para></listitem>
-  <listitem><para><systemitem></systemitem></para></listitem>
+  <listitem><para>Hide payments in the portal of $0, including internal system payments and failed payment attempts <systemitem>#29162</systemitem></para></listitem>
 </itemizedlist>
   </section>
 </chapter>

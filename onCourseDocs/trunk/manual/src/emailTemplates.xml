@@ -55,7 +55,7 @@
 			</listitem>
 			<listitem>
 				<para><emphasis role="bold">Enrolment application rejected</emphasis> - triggered by the script
-					'Send application decision' to advise student their applicaiton has been
+					'Send application decision' to advise student their application has been
 					rejected and why. This email template can be sent manually from the application
 					list view.</para>
 			</listitem>
@@ -81,7 +81,7 @@
 			</listitem>
 			<listitem>
 				<para><emphasis role="bold">Payment receipt</emphasis> - triggered by the script 'Send payment
-					receipt' to advise debtors their payment has been recieved. This email template
+					receipt' to advise debtors their payment has been received. This email template
 					can be sent manually from the payment in list view</para>
 			</listitem>
 			<listitem>
@@ -97,15 +97,14 @@
 			<listitem>
 				<para><emphasis role="bold">Student notice of class commencement</emphasis> - triggered by the
 					script 'Send student class commencement notice' to remind students their class
-					is commening soon. This email template can be sent manually from the enrolment
+					is commencing soon. This email template can be sent manually from the enrolment
 					list view.</para>
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">Survey invitiation</emphasis> - triggered by the
-					integration scripts 'SurveyMonkey send invite on enrolment',  'SurveyMonkey send
-					invite on enrolment completion', 'SurveyGizmo send invite on enrolment' and
-					'SurveyGizmo send invite on completion'. This email template can not be run
-					manually.</para>
+				<para><emphasis role="bold">Survey invitation</emphasis> - triggered by the integration scripts
+					'SurveyMonkey send invite on enrolment', 'SurveyMonkey send invite on enrolment
+					completion', 'SurveyGizmo send invite on enrolment' and 'SurveyGizmo send invite
+					on completion'. This email template can not be run manually.</para>
 			</listitem>
 			<listitem>
 				<para><emphasis role="bold">Tax invoice</emphasis> - triggered by the script 'Send invoice' to
@@ -133,6 +132,13 @@
 					script 'Send waiting list reminder' to advise students of classes available,
 					when a student has subscribed to a waiting list. This email template can not be
 					run manually.</para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Payment reminder </emphasis>- triggered by the script
+					'Send payment plan reminder' to advise debtors of unpaid invoices, or students
+					on payment plans that their payment is overdue, or due within the next 7 days.
+					Included in the email is a link where the debtor can click to make a credit card
+					payment via the onCourse portal.</para>
 			</listitem>
 		</orderedlist>
 		<section>
@@ -171,7 +177,7 @@
 					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/sublime_email_template.png" format="png" />
 				</imageobject>
 				<caption>
-					<para>Editing HTML content in submlime. Note the email body text in white font</para>
+					<para>Editing HTML content in sublime. Note the email body text in white font</para>
 				</caption>
 			</mediaobject>
 		</section>
@@ -199,7 +205,7 @@
 				Modeler and read the section about <link xlink:href="#dataModel">using the onCourse data model</link>. </para>
 		</section>
 		<section>
-			<title>Writting Groovy in email templates</title>
+			<title>Writing Groovy in email templates</title>
 			<para>The templates are written in a programming language called Groovy which is a Java based language that can run inside the
 				onCourse application. An overview of the language can be found at <link xlink:href="http://groovy.codehaus.org"
 					>http://groovy.codehaus.org</link>. </para>

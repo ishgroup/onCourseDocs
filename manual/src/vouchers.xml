@@ -279,9 +279,9 @@
                         of this voucher if it's different from the one originally setup</para>
                 </listitem>
                 <listitem>
-                    <para>When voucher is redeemed, invoice will be sent to x - This check box
-                        allows you to choose whether an invoice gets automatically sent to the payer
-                        if the voucher gets redeemed.</para>
+                    <para>Send the invoice when the voucher is redeemed to x - This check box allows
+                        you to choose whether an invoice gets automatically sent to the payer if the
+                        voucher gets redeemed.</para>
                 </listitem>
             </itemizedlist></para>
         <mediaobject>
@@ -374,6 +374,27 @@
             <para>A voucher can online be redeemed in onCourse through the Quick Enrol window. It
                 can not be used post enrolment as a payment in type.</para>
         </note>
+            <section>
+                <title>Redeeming a voucher in Quick Enrol when the 'Send the invoice when the
+                voucher is redeemed to x' is checked.</title>
+                <para>If a user is trying to redeem a voucher when the 'Send the invoice when the
+                voucher is redeemed to x' is checked it will automatically add the defined voucher
+                invoice contact to Quick Enrol as the payer. There is also a message in red saying
+                the 'payer is locked due the voucher being redeemed' in the items and payments tab
+                under the payer name.</para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="100%" contentdepth="100%"
+                            fileref="images/vouchers/voucher_redeemed_payer_locked.png"/>
+                    </imageobject>
+                    <caption>
+                    <para>The payer is locked due the voucher being redeemed message</para>
+                </caption>
+                </mediaobject>
+                <note>
+                    <para>A second voucher cannot be added to the Quick Enrol process unless the second voucher is also locked to the same payer.</para>
+                </note>
+            </section>
         <section>
             <title>Redeeming a voucher on the web</title>
             <para>During the checkout stage of your website enrolment there is a field (as seen in

@@ -242,23 +242,23 @@
 			</listitem>
 			<listitem>
 				<para><emphasis role="bold">Synchronise availability (enrolment)</emphasis> - This script finds
-					all single session classes taught by the same tutor in the same room with
-					overlapping times and keeps the places available in sync. For each enrolment in
-					Class A, the maximum available places in Class B is reduced by one. This is
-					useful if one class is a subset of another (eg. a refresher First Aid class
-					where students need only come to the second half of the regular First Aid
-					class). If you enable this script, you'll also want to enable 'Synchronise
-					availability (cancellation)'</para>
+						all single session classes taught by the same tutor in the same room with
+						overlapping times and keeps the places available in sync. For each enrolment
+						in Class A, the maximum available places in Class B is reduced by one. This
+						is useful if one class is a subset of another (e.g.. a refresher First Aid
+						class where students need only come to the second half of the regular First
+						Aid class). If you enable this script, you'll also want to enable
+						'Synchronise availability (cancellation)'</para>
 			</listitem>
 			<listitem>
 				<para><emphasis role="bold">Synchronise availability (cancellation)</emphasis> - This script
-					finds all single session classes taught by the same tutor in the same room with
-					overlapping times and keeps the places available in sync. For each enrolment in
-					Class A, the maximum available places in Class B is reduced by one. This is
-					useful if one class is a subset of another (eg. a refresher First Aid class
-					where students need only come to the second half of the regular First Aid
-					class). If you enable this script, you'll also want to enable 'Synchronise
-					availability (enrolment)'</para>
+						finds all single session classes taught by the same tutor in the same room
+						with overlapping times and keeps the places available in sync. For each
+						enrolment in Class A, the maximum available places in Class B is reduced by
+						one. This is useful if one class is a subset of another (e.g.. a refresher
+						First Aid class where students need only come to the second half of the
+						regular First Aid class). If you enable this script, you'll also want to
+						enable 'Synchronise availability (enrolment)'</para>
 			</listitem>
 			<listitem>
 				<para><emphasis role="bold">Send certificate created notification</emphasis> - Create a
@@ -301,6 +301,23 @@
 					simple plain text email inside the script itself. To change the text, you need
 					to edit the script directly. This script is disabled by default.</para>
 			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Notification of unmarked attendance</emphasis> - This management
+						script is set to run daily and check for sessions run the previous day where
+						at least one of the enrolled students has an unmarked attendance record. If
+						an unmarked record is found, an email is sent to the admin contact so they
+						can initiate a follow up process with the tutor. Optionally, only courses
+						tagged with 'checkAttendance' will be checked, so if attendance marking is
+						important for some programs, like VET, you can ignore unmarked attendance
+						for your leisure courses.</para>
+			</listitem>
+				<listitem>
+					<para><emphasis role="bold">Send payment plan reminder</emphasis> - This script
+						will send an email (template - payment reminder) to each debtor with an
+						overdue invoice, or an invoice which has a payment due within the next 7
+						days. Included in the email is a link where the debtor can click to make a
+						credit card payment via the onCourse portal.</para>
+				</listitem>
 		</orderedlist>
 		</section>
 		<section>
@@ -368,7 +385,7 @@
 		<section>
 			<title>Time based events</title>
 			<para>onCourse scripts can be triggered by a cron expression for firing at a repeating interval.
-				cron is a unix tool that has existed since the 1970s and is extremely powerful and
+				cron is a Unix tool that has existed since the 1970s and is extremely powerful and
 				flexible. </para>
 			<para>Some pre-defined cron expressions are available to select from the drop down list
 				in the script (daily, weekly or hourly), or you can create your own custom

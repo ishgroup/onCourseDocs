@@ -3,38 +3,26 @@
 	<title>Invoices and Payment Plans</title>
 	<section xml:id="invoice-general">
 		<title>Invoices</title>
-		<para>Every time you create a purchase through Quick Enrol, an invoice (or several invoices) will
-			be automatically created for you. You can see the details of that invoice within Quick
-			Enrol and add additional custom lines (such as a surcharge for phone payments).</para>
-		<para>Invoice lines automatically created by Quick Enrol may include purchases of
-			enrolments, products, vouchers or memberships. Each item purchased will create an
-			invoice line. Payment against an invoice may be taken at the time of creation or at a
-			later date. Be default, all invoices created will have a due date of today, but you can
-			manually enter a different due date at the time or creation, or by editing the invoice
-			after creation. You can also add a customer reference to an invoice, where
-			required.</para>
-		<para>These invoices are then visible within the Invoice lists view. Like all other lists you can
-			sort, search, export and print from this view. Invoices may not be deleted and all of
-			the financial information within an invoice may not be edited once created - only the
-			invoice due date can be changed. Although this may seem like an inconvenience, immutable
-			invoices are extremely important to ensure a robust audit trail and to guarantee the
-			integrity of the general ledger transactions.</para>
-		<para>If you need to modify an invoice you should instead create a credit note. A credit note is
-			an invoice where the invoice lines have negative dollar values. Remember if you are
-			cancelling an enrolment or a class there are easier ways to do that from the class and
-			enrolment list views.</para>
-		<para>A credit note is an invoice with a negative total and is shown alongside invoices in the
-			same list view. The owing amounts on an invoice and a credit note are not automatically
-			zeroed against each other, however you can cancel them out by using the cog wheel option
-			'contra invoice'.</para>
-		<para>You can view the list of invoices by either clicking on the 'Invoice' button found in the
-			'Customer Service' and 'Account' tabs of the dashboard, or by using the top menu and by
-			going Financial -> Invoices. </para>
-		<note>
-			<para>The 'Overdue' column will show the total unpaid component of the invoice that is due prior
-				to tomorrow e.g. amounts due today, and in the past, which are unpaid are considered
-				overdue. This updates daily, not in real time.</para>
-		</note>
+		<para>Every time you create a purchase through Quick Enrol, an invoice will be automatically
+			created for you.  Each item purchased will create an invoice line, so multiple students
+			enrolling in multiple classes each can be recorded on a single invoice. An invoice is
+			assigned to a debtor, so an employer requesting two students enrolling in three classes
+			each can be issued a single invoice through one Quick Enrol process. Whereas two
+			individual students each enrolling and paying for their classes themselves would be
+			enrolled through two Quick Enrol processes, to create two invoices - one for each
+			student.</para>
+		<para>During the Quick Enrol process you can see the draft details the invoice you are
+			creating, and add additional information like a customer's purchase order number or add
+			additional custom lines, such as a surcharge for phone bookings.</para>
+		<para>Invoice lines automatically created by Quick Enrol may include purchases of enrolments,
+			products, vouchers or memberships.</para>
+		<para>Full or partial payment against an invoice may be taken at the time of creation
+			through Quick Enrol, or at a later date. A due date for the invoice can be manually set
+			in Quick Enrol.</para>
+		<para>These invoices are then visible within the Invoice list view. Like all other lists you can
+			sort, search, export and print from this view. </para>
+		<para>The invoice list view can be opened via Financial > Invoices.</para>
+		
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invoice_list_view.png"/>
@@ -43,6 +31,52 @@
 				<para>Invoice list view</para>
 			</caption>
 		</mediaobject>
+		<note>
+			<para>The 'Overdue' column will show the total unpaid component of the invoice that is due prior
+				to tomorrow e.g. amounts due today, and in the past, which are unpaid are considered
+				overdue. This updates daily, not in real time.</para>
+		</note>
+		<section>
+			<title>Invoice Terms</title>
+			<para>By default, an invoices created by onCourse will have a due date of today i.e.
+				their day of creation.</para>
+			<para>If you wish to set a different default term for all your invoices, then you can
+				set a 'default invoice terms (days)' in the Financial preferences, located at File >
+				Preferences > General > Financial. This is a good choice for organisations who do
+				not usually take payment upfront during the enrolment process.</para>
+			<para>However, if most of your enrolling students require invoices with a due date of
+				'today', and some corporate contacts require invoices with due date terms, you can
+				also set invoice terms per contact.</para>
+			<para>In the contact record, open the Financial tab and unlock the default invoice
+				terms. Replace the value with the customer specific terms.</para>
+			<para>All future invoices created for this customer, including invoices created for enrolments
+				processed over the website using a corporatePass, will have a due date set according
+				to the custom terms.</para>
+			<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invoiceTerms.png"/>
+			</imageobject>
+			<caption>
+				<para>Invoice list view</para>
+			</caption>
+			</mediaobject>
+		</section>
+<section>
+		<title>Editing Invoices</title>	
+			<para>Invoices may not be deleted and all of the financial information within an invoice may not
+				be edited once created - only the invoice due date and payment plan information can
+				be changed. Although this may seem like an inconvenience, immutable invoices are
+				extremely important to ensure a robust audit trail and to guarantee the integrity of
+				the general ledger transactions.</para>
+		<para>If you need to modify an invoice you should instead create a credit note. A credit note is
+			an invoice where the invoice lines have negative dollar values. Remember if you are
+			cancelling an enrolment or a class there are easier ways to do that from the class and
+			enrolment list views.</para>
+		<para>A credit note is an invoice with a negative total and is shown alongside invoices in the
+			same list view. The owing amounts on an invoice and a credit note are not automatically
+			zeroed against each other, however you can cancel them out by using the cog wheel option
+			'contra invoice'.</para>
+</section>
 		<section xml:id="invoice-create">
 			<title>Creating a manual invoice</title>
 			<para>While you will usually create an invoice through using Quick Enrol, it is sometimes useful
@@ -58,6 +92,8 @@
 				an outstanding balance. </para>
 			<para>Remember to associate each invoice line with the correct income account code. Once
 				you save the invoice you will not be able to change this code. </para>
+			<para>By default, invoices are ticked to 'send email'. This sends the standard invoice
+				email template to the debtor contact when you save the record.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Creating_a_new_invoice.png"/>

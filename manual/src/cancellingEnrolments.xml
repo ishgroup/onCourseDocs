@@ -313,8 +313,11 @@
 		<title>Payment reversals within the payment in window</title>
 		<para>If you processed a payment in record in error, i.e. recorded an EFTPOS payment that failed
 			to process through your EFTPOS terminal, and want to reverse the payment to set the
-			invoice back to unpaid, you can do this in the Payments In window via the following
-			steps:</para>
+			invoice back to unpaid, you can do this in the Payments In window.</para>
+		<para>To reverse a payment, it first of all must be unbanked. Some payment types are set to
+			bank automatically on creation. If your payment is banked, double click on the payment
+			in record and removed the date banked date, then save and close the record.</para>
+		<para>Your payment in is now ready to reverse via the following steps:</para>
 		<orderedlist>
 			<listitem>
 				<para>In onCourse go to "Accounts" then "Payment In"</para>
@@ -328,6 +331,15 @@
 			<listitem>
 				<para>Click reverse of the new pop up window to confirm you want to the record to be
 					reversed</para>
+			</listitem>
+			<listitem>
+				<para>A new negative payment in will be created of the same payment type as your
+					original payment, and both payment lines will have the status REVERSED. </para>
+			</listitem>
+			<listitem>
+				<para>This pair of payments will be included in the banking reports, and other
+					financial reports, and should be banked together so they balance each other
+					out.</para>
 			</listitem>
 		</orderedlist>
 		<note>

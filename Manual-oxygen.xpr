@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="17.1">
+<project version="18.0">
     <meta>
         <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
-        <options/>
+        <options>
+            <serialized version="18.0" xml:space="preserve">
+                <map>
+                    <entry>
+                        <String>enable.project.master.files.support</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                </map>
+            </serialized>
+        </options>
     </meta>
     <projectTree name="Manual-oxygen.xpr">
+        <folder masterFiles="true" name="Master Files">
+            <file name="design/src/index.xml"/>
+            <file name="manual/src/index.xml"/>
+            <file name="release-notes/src/index.xml"/>
+            <file name="web/src/index.xml"/>
+        </folder>
         <folder name="design">
             <folder name="src">
                 <folder name="images">
@@ -389,5 +404,6 @@
                 </folder>
             </folder>
         </folder>
+        <folder path="src/"/>
     </projectTree>
 </project>

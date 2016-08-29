@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://docbook.org/ns/docbook file://../../src/docbook.xsd"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-8.24">
   <info>
@@ -10,14 +10,24 @@
     <title>Major features</title>
 <section>
   <title>Automatically generate verification QR code for certificates</title>
-  <para>In preparation for the deployment of the onCourse Certificate Verification service, Statements of Attainment and Qualifications can now be printed with a unique QR code and URL verification code.</para>
-  <para>The Certificate Verification service will allow employers or other RTOs to confirm the certificate was issued to the student named without requiring them phone, or otherwise contact the RTO to request look up of the Certificate number in the  register.</para>
+  <para>In preparation for the deployment of the onCourse Certificate Verification service,
+        Statements of Attainment and Qualifications can now be printed with a unique QR (Quick
+        Response) code and URL verification code.</para>
+  <para>The Certificate Verification service will allow employers or other RTOs to confirm the
+        certificate was issued to the student named without requiring them phone, or otherwise
+        contact the RTO to request look up of the Certificate number in the register.</para>
+      <para>This web portal feature is currently in testing and will be deployed shortly. All RTOs
+        wishing to use this portal should check the default location of the QR code on their
+        certificate template and make adjustments as necessary. Certificates can also be printed
+        without QR codes if you do not wish to implement this feature.</para>
 </section>
   </section>
   <section role="scripts">
     <title>Reports and scripts</title>
     <itemizedlist>
-      <listitem><para>A new CSV export for Attendance added to the class export options, to show the attendance notes and record of who marked the roll (tutor name or office) and date of marking <systemitem>#29599</systemitem></para></listitem>
+      <listitem><para>A new CSV export for Attendance was added to the class export options, to show the attendance
+          notes and record of who marked the roll (tutor name or office) and date of marking
+            <systemitem>#29599</systemitem></para></listitem>
       <listitem><para>Improvement to SurveyMonkey API to create a single collector named 'onCourse' so SurveyMonkey basic plan account users can better utilise this integration <systemitem>#29273</systemitem></para></listitem>
       <listitem><para>Simplification of the time zone formatter in groovy for class sessions <systemitem>#29282</systemitem></para></listitem>
       <listitem><para>Auto truncate scripted SMS messages at 160 characters <systemitem>#29038</systemitem></para></listitem>
@@ -28,7 +38,9 @@
     <title>Minor features</title>
     <itemizedlist>
       <listitem><para>Improvement to the manual invoice - invoice line user interface, to allow the selection of alternate COS discount accounts and to calculate GST in reverse <systemitem>#28830</systemitem></para></listitem>
-      <listitem><para>Simplification to class cancellation process to remove options relating to charging a cancellation fee. These options are still available for cancelling individual enrolments. <systemitem>#28743</systemitem></para></listitem>
+      <listitem><para>Simplification to the class cancellation process to remove options relating to charging a
+          cancellation fee. These options are still available for cancelling individual enrolments.
+            <systemitem>#28743</systemitem></para></listitem>
       <listitem><para>Invoice date in Quick Enrol is now editable, and can not be less than the transaction locked date <systemitem>#29239</systemitem></para></listitem>
       <listitem><para>Improvement to the payment reversal process to create a matching, negative payment value for a reversed payment, and allow both payments to be banked <systemitem>#29232</systemitem></para></listitem>
       <listitem><para>Display of reversed payments in banking window in light grey text, to assist with their identification <systemitem>#29806</systemitem></para></listitem>
@@ -37,14 +49,14 @@
   <section role="fixes">
     <title>Fixes</title>
     <itemizedlist>
-      <listitem><para>Refactoring of class deletion process to improve process speed <systemitem>#26825<</systemitem></para></listitem>
-      <listitem><para>Improvement to the Tagging user interface to display the tag list and tag description field much larger and the URL value when the field is locked <systemitem>#29388</systemitem></para></listitem>
+      <listitem><para>Refactoring of class deletion process to improve process speed <systemitem>#26825</systemitem></para></listitem>
+      <listitem><para>Improvement to the Tagging user interface to display the tag list and tag description as larger fields field and show the tag URL value when the field is locked <systemitem>#29388</systemitem></para></listitem>
       <listitem><para>Improvement to tag weight ordering for exports and scripts <systemitem>#28708</systemitem></para></listitem>
       <listitem><para>Fix to the access rights for discounts to allow staff with edit permission to add new classes to existing discounts <systemitem>#29364</systemitem></para></listitem>
       <listitem><para>Improvement to allow a concession type to be added to a contact during record creation <systemitem>#29408</systemitem></para></listitem>
       <listitem><para>Fix to allow concessions to be added to discounts correctly <systemitem>#29408</systemitem></para></listitem>
       <listitem><para>Fix to allow discounts to be joined to related members <systemitem>#29719</systemitem></para></listitem>
-      <listitem><para>Improvement to calculate class budget inclusive of credit notes manually joined to the class <systemitem>#29429</systemitem></para></listitem>
+      <listitem><para>Improvement to calculate class budget income as inclusive of credit notes manually joined to the class <systemitem>#29429</systemitem></para></listitem>
     </itemizedlist>
   </section>
 </chapter>

@@ -205,9 +205,9 @@
 			<para>Refer to the NCVER publications, VET Provider Collection Specifications and
 				AVETMISS Data Element Definitions for more information regarding the definitions and
 				use of these outcomes.</para>
-			<para>* You do not need to set the outcome 'Continuing enrolment (70)' for any outcomes.
-				During the AVETMISS export process, if the outcome end date is after the date range
-				of the export, this outcome will automatically be exported.</para>
+			<para>* You do not need to set the outcome 'Continuing enrolment (70)'  for any outcomes. During
+				the AVETMISS export process, if the outcome end date is in the calendar year after
+				the date range of the export, 70 will automatically be exported. </para>
 			<para>** If you export data for non-VET outcomes, you do not need to set the outcome
 				'Non-assessed enrolment - Satisfactorily completed (81)'. This will always be
 				exported for unset non-VET outcomes. </para>
@@ -256,6 +256,35 @@
 				<note>
 					<para> Only the 'successful' outcome can be set in bulk </para>
 				</note>
+			</section>
+			<section>
+				<title>
+					Exporting outcome data
+				</title>
+				<para>All RTOs are obligied to report their training activity data under the AVETMISS standard,
+					as part of their registration obligations. For more information on Total VET
+					Activity Reporting, please refer to the <link xlink:href="AVETMISS">AVETMISS
+						chapter</link> of the user handbook.</para>
+				<para>There may be other occasision when you need to export your outcome data for your own
+					recording keeping purposes. To that end, onCourse contains some CSV exports you
+					can open in excel that are a little like more user friendly, readable versions
+					of AVETMISS data.</para>
+				<para>The 'Class Outcomes CSV' or 'Extended Outcomes CSV' exports in the class
+					window show outcome data, funding sources, and useful information for audit
+					evidence trails like the name of the tutor contact who marked the outcome via
+					the portal.</para>
+				<para>Another class export called 'Class Attendance CSV' exports an electronic
+					record of the marked class roll, with any comments made for partial attendance
+					or approved absences and the details of the tutor who marked the roll.</para>			
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/reports/extended_outcomes_csv.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>A class grouped outcomes export in excel format</para>
+					</caption>
+				</mediaobject>
 				<qandaset>
 					<title>Outcomes FAQ</title>
 					<qandaentry>

@@ -92,6 +92,10 @@
 				an outstanding balance. </para>
 			<para>Remember to associate each invoice line with the correct income account code. Once
 				you save the invoice you will not be able to change this code. </para>
+			<para>Each invoice line can have a discount applied, and that discount can optionally be
+				linked to a Cost of Sale (COS) account. If you do not apply the discount to a COS
+				account, then the income value posted to the general ledger will be reduced by the
+				value of the discount.</para>
 			<para>By default, invoices are ticked to 'send email'. This sends the standard invoice
 				email template to the debtor contact when you save the record.</para>
 			<mediaobject>
@@ -104,13 +108,15 @@
 			</mediaobject>
 		</section>
 		<section xml:id="invoice-linking">
-			<title>Link invoice lines to classes</title>
+			<title>Link invoice lines to class budgets</title>
 			<para>When creating invoice lines you may optionally link each line to a class. This will treat
 				the income with the same general ledger pre-paid fees and income deferral plan as
 				invoices created by enrolling in the class. This also adds the total of that invoice
 				line to the class budget and can be very useful when invoicing a company for an
 				entire classroom delivery without recording individual enrolments or need to include
 				additional income such as funding in a classes budget. </para>
+			<para>Type the course name or code, and select the class code from the drop down list to
+				join a manual invoice line to a class budget.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invoice_lines.png"/>

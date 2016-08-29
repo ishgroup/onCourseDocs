@@ -261,11 +261,11 @@
 				<title>
 					Exporting outcome data
 				</title>
-				<para>All RTOs are obligied to report their training activity data under the AVETMISS standard,
+				<para>All RTOs are obliged to report their training activity data under the AVETMISS standard,
 					as part of their registration obligations. For more information on Total VET
 					Activity Reporting, please refer to the <link xlink:href="AVETMISS">AVETMISS
 						chapter</link> of the user handbook.</para>
-				<para>There may be other occasision when you need to export your outcome data for your own
+				<para>There may be other occasion when you need to export your outcome data for your own
 					recording keeping purposes. To that end, onCourse contains some CSV exports you
 					can open in excel that are a little like more user friendly, readable versions
 					of AVETMISS data.</para>
@@ -459,25 +459,66 @@
 					</caption>
 				</mediaobject>
 			</section>
-			<section>
-				<title>Importing prior learning using AVETMISS files</title>
-				<para>If you are migrating to onCourse and wish to bring over your student and outcome data,
-					onCourse can import standard AVETMISS files to create student contact records
-					with prior learning data.</para>
-				<para>We recommend you only use this migration option if you are setting up a new
-					onCourse database. If you are importing data into an active onCourse database,
-					please speak with us first to confirm what import option is the best option to
-					avoid creating duplicate student records. </para>
-				<para>You will need validated NAT00060, NAT00080, NAT00085 and NAT00120 files first.
-					Make sure these files have been validated in the <link
-						xlink:href="https://avs.ncver.edu.au/avs/">NCVER AVS tool</link> and are reporting no
-					errors before importing them into onCourse. </para>
-				<para>To import these files, go to File > Import/Export > Import... and select the option
-					'onCourse AVETMISS outcome import'. The import process will prompt you to open
-					each of the NAT files listed above from a location on your computer.</para>
-				<para>Once you have selected all four files, click on the import button on the
-					bottom of the window.</para>
-				<mediaobject>
+			<section><title>Importing prior learning using AVETMISS files</title><para>If you are migrating
+					to onCourse and wish to bring over your student and outcome data, onCourse can
+					import standard AVETMISS files to create student contact records with prior
+					learning data.</para>
+				<para>There are four built in types of AVETMISS data imports, with different purposes depending
+					if you are importing new data to onCourse, or updating existing onCourse
+					records. If you are importing data into an active onCourse database, please
+					speak with us first to confirm what import option is the best option to avoid
+					creating duplicate student records.</para>
+				<orderedlist>
+					<listitem><para><emphasis role="bold">onCourse AVETMISS outcome import</emphasis> - This option is best for
+							colleges starting a new onCourse database who want to import AVETMISS
+							files from another system, and do not have student records in the
+							onCourse database yet. You will need NAT00060, NAT00080, NAT00085 and
+							NAT00120 files for this import. This import will create student records
+							in onCourse, and attach prior learning records to those students.</para>
+						<para>If you run this import twice, you will create duplicate student data.
+							This import does not try and check for matches.</para></listitem>
+					<listitem>
+						<para><emphasis role="bold">onCourse AVETMISS student import - </emphasis>
+							This is an alternative import option for colleges new to onCourse to
+							import student contact data only, via the AVETMISS NAT00080 and NAT00085
+							data. This will create contact records without any learning
+							history.</para>
+					</listitem>
+					<listitem><para><emphasis role="bold">onCourse AVETMISS outcome update import </emphasis>- This import option
+							is for colleges who already have student contact records in onCourse and
+							wish to update those records with data from an external source e.g. ARMS
+							data for AMEP students. This import will try to match a student to their
+							existing onCourse record based on a firstName, lastName and DoB match,
+							and will create a new student record if it can't find a match. Note that
+							any student matches found will have their contact data overridden by the
+							data from this import.</para>
+						<para>This import also tries to match importing outcome data to data already
+							recorded in onCourse, and avoid creating duplicate prior learning
+							records if the record doesn't already exist. This import will add
+							additional outcome data to existing prior learning records when it finds
+							multiple outcomes belonging to the same qualification code.</para>
+						<para>You will need NAT00060, NAT00080, NAT00085 and NAT00120 files for this
+							import.</para></listitem>
+					
+					<listitem><para><emphasis role="bold">onCourse AVTETMISS student update import</emphasis> - This import
+							updates student contact details in onCourse based on NAT00080 and
+							NAT00085 data files imported from another system. This import will try
+							to match a student to their existing onCourse record based on a
+							firstName, lastName and DoB match, and will create a new student record
+							if it can't find a match.</para>
+						<para>Note that you could potentially update onCourse student records with
+							outdated data using this import option, so use with caution when
+							importing data from a record set older than your onCourse
+							records.</para></listitem>
+				</orderedlist>
+				<para>You will need
+					validated NAT00060, NAT00080, NAT00085 and NAT00120 files first. Make sure these
+					files have been validated in the <link
+						xlink:href="https://avs.ncver.edu.au/avs/">NCVER AVS tool</link> and are
+					reporting no errors before importing them into onCourse. </para><para>To import these files, go to File > Import/Export > Import... and select the onCourse AVETMISS
+					option required. The import process will prompt you to open each of the NAT
+					files listed above from a location on your computer.</para><para>Once you have selected all the required files, click on the import button on the bottom of the
+					window.</para><mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" width="100%" contentdepth="100%"
 							fileref="images/import_avetmiss_files.png" format="png"/>
@@ -485,8 +526,7 @@
 					<caption>
 						<para>Selecting AVETMISS files to import into onCourse</para>
 					</caption>
-				</mediaobject>
-			</section>
+				</mediaobject></section>
 		</section>
 	</section>
 	<section xml:id="rto-CSWECourses">

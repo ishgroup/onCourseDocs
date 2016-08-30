@@ -511,19 +511,19 @@
 	</section>
 	<section xml:id="accounting-accountCodes">
 		<title>Creating additional income accounts</title>
-		<para>onCourse set up comes with a number of general ledger accounts preconfigured. These
-			accounts are used by onCourse during stardard system transactions and can be renamed or
-			recoded as needed. In the general preferences, financial, the default system accounts
-			are nominated and can be changed as needed.</para>
+		<para>onCourse set up comes with a number of general ledger accounts preconfigured. These accounts
+			are used by onCourse during standard system transactions and can be renamed or recoded
+			as needed. In the general preferences, financial, the default system accounts are
+			nominated and can be changed as needed.</para>
 		<para>You can also add additional accounts to match your general ledger requirements of your
 			primary accounting software. Only accounts onCourse will post to need to be
 			added.</para>
-		<para>Each class in onCourse is assigned to an income account. Some organisations have a
-			single income account, while others have multiple income accounts. For each income
-			account, you can select it's default tax setting. This tax setting can be overriden at
-			the class level when the account is selected, or when creating a manual invoice line
-			joined to this income acount.</para>
-		<para>You can add to the standard list of accounts, or edit exisiting accounts, via the Financial
+		<para>Each class in onCourse is assigned to an income account. Some organisations have a single
+			income account, while others have multiple income accounts. For each income account, you
+			can select it's default tax setting. This tax setting can be overridden at the class
+			level when the account is selected, or when creating a manual invoice line joined to
+			this income account.</para>
+		<para>You can add to the standard list of accounts, or edit existing accounts, via the Financial
 			menu of onCourse</para>
 		<mediaobject>
 			<imageobject>
@@ -533,7 +533,7 @@
 				<para>Select Account from onCourse Financial menu</para>
 			</caption>
 		</mediaobject>
-		<para>Within the accounts list view, use the + on the top right hand corver to add a new account.
+		<para>Within the accounts list view, use the + on the top right hand corner to add a new account.
 			When adding the new account code, you will need to stipulate what type of account it
 			will be, either asset, liability, equity, income, COS or expense.</para>
 		<para>If the account is type income, you will have the choice of setting a default tax. </para>
@@ -805,6 +805,21 @@
 					</listitem>
 				</orderedlist>
 			</example>
+			<para>If an onCourse user has reversed a payment in prior to banking because they recorded the
+				payment in error, you will see both the original payment in and the reversal of that
+				payment in the banking window.</para>
+			<para>It is generally recommended you bank both the payment and reversal together, so
+				they cancel each other out, in a single banking process. However, if the reversal is
+				processed due to a bounced cheque, you may wish to deposit the original payment on
+				the day it was received and banked, and the reversal on the day it bounced.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reversed_payments_in_bank.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Reversed cash payments displaying in the banking deposit window, awaiting banking.</para>
+				</caption>
+			</mediaobject>
 			<section>
 				<title>Viewing and adjusting banking records</title>
 
@@ -937,9 +952,8 @@
 				transaction data can be added to that period, or adjusted within this period.</para>
 			<para>This process is final, and can not be undone. Proceed with caution.</para>
 			<para>This feature is available from: Financial > Summary Extracts> Finalise Period</para>
-			<para>When the window opens, it will disaply the current locked until date, and allow
-				you to enter the date you wish to finalise until. This date must be in the
-				past.</para>
+			<para>When the window opens, it will display the current locked until date, and allow you to
+				enter the date you wish to finalise until. This date must be in the past.</para>
 			<para>After entering the date, onCourse will check for any financial records that may
 				need your attention before the finalisation process should proceed.</para>
 			<para>Records that should be addressed include unreconciled payments and unbanked
@@ -948,9 +962,9 @@
 				this window.</para>
 			<para>By opening the banking deposit records for the period, you can also quickly print
 				standard banking and reconciliation reports.</para>
-			<para>When you finalise and close the period, any banked but unreconcilled payments will
-				be banked automatically. And unbanked payments will remain unbanked. If you bank
-				these payments in the future, they can only be banked on dates after the finalised
+			<para>When you finalise and close the period, any banked but unreconciled payments will be banked
+				automatically. And unbanked payments will remain unbanked. If you bank these
+				payments in the future, they can only be banked on dates after the finalised
 				period.</para>
 			<mediaobject>
 				<imageobject>

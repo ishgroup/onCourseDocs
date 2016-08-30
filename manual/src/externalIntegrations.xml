@@ -300,10 +300,11 @@
                 questionnaire and survey software.</para>
     <para>To add a SurveyMonkey integration you will need to click on the 'Add' button below the
                 SurveyMonkey icon. You will then see a number of fields that are needed to enable
-                the integration.</para>
+                the integration. The 'Name' field is what ever you want to call this
+                integration.</para>
     <mediaobject>
         <imageobject>
-            <imagedata scalefit="1" width="70%" contentdepth="70%"
+            <imagedata scalefit="1" width="80%" contentdepth="80%"
                 fileref="images/surveymonkey_prefs.png" format="png" />
         </imageobject>
         <caption>
@@ -331,8 +332,8 @@
                 <orderedlist>
                     <listitem>
                         <para>To find the API key you must have account at
-                            https://developer.surveymonkey.com. From there you go to My Account and
-                            the API key and Secret are found, as shown below.</para>
+                            https://developer.surveymonkey.com. From there you go to My App to find
+                            the API key, as shown below.</para>
                         <mediaobject>
                             <imageobject>
                                 <imagedata scalefit="1" width="70%" contentdepth="70%"
@@ -344,34 +345,59 @@
                         </mediaobject>
                     </listitem>
                     <listitem>
-                        <para>To get the OAuth token go to
-                            https://developer.surveymonkey.com/api_console and enter your API key,
-                            Client ID (developer.surveymonkey.com account name) and secret from step
-                            1. </para>
+                        <para>To get the OAuth token click on the Settings menu option on the left
+                            hand side, scroll to the bottom of the page and copy the code in the
+                            field name 'Access Token'. </para>
                         <mediaobject>
                             <imageobject>
                                 <imagedata scalefit="1" width="70%" contentdepth="70%"
                                     fileref="images/SurveyMonkey_1.2_OAuth.png" format="png" />
                             </imageobject>
                             <caption>
-                                <para>Getting your OAuth token</para>
-                            </caption>
-                        </mediaobject>
-                        <para>You'll then be asked to login to your SurveyMonkey account (or authorize linking your OAuth token if your already logged in). After that the OAuth token will be generated in the Access Token field.</para>
-                        <mediaobject>
-                            <imageobject>
-                                <imagedata scalefit="1" width="70%" contentdepth="70%"
-                                    fileref="images/SurveyMonkey_1.3._Authorize_API.png" format="png" />
-                            </imageobject>
-                            <caption>
-                                <para>Authorizing onCourse to use your SurveyMonkey account</para>
+                                <para>Where to find the OAuth token</para>
                             </caption>
                         </mediaobject>
                     </listitem>
                     <listitem>
-                        <para>The Survey name is the name of the survey in Survey Monkey.</para>
+                        <para>The Survey name is the name of the survey in Survey Monkey, in the
+                            example below it's called Test Survey. This can be found by logging into
+                            your account in https://www.surveymonkey.com then click on the top menu
+                            option 'My Surveys'</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                    fileref="images/SurveyMonkey_name.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Finding the name of the survey I want to use</para>
+                            </caption>
+                        </mediaobject>
                     </listitem>
                 </orderedlist>
+                <para>If you haven't used SurveyMonkey before you might need to verify the
+                    collectors email address. This is done by clicking on the name of the Survey
+                    followed by on the tab 'Collect Responses' and then on the Survey name under the
+                    heading 'NICKNAME' and continuing until this email gets sent.</para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="70%" contentdepth="70%"
+                            fileref="images/survey_collector.png" format="png" />
+                    </imageobject>
+                    <caption>
+                        <para>Verifying the Collectors email address</para>
+                    </caption>
+                </mediaobject>
+                <para>The email address that it gets sent to is the same one that you would have stored in the field
+                    'Email from address' in the Messaging tab of the preferences window.</para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="70%" contentdepth="70%"
+                            fileref="images/Preferences_messaging.png" format="png" />
+                    </imageobject>
+                    <caption>
+                        <para>Messaging tab of the Preferences window</para>
+                    </caption>
+                </mediaobject>
             </section>
     </section>
         <section xml:id="externalintegrations-surveyGizmo">

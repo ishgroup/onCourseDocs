@@ -232,7 +232,51 @@
                 <para>Tax invoice</para>
             </caption>
         </mediaobject>
-                </section>
+                    <section><title>Making a credit card payment in the portal</title>
+                        <para>A student has the ability to make credit card payments in the
+                    skillsOnCourse portal, so debtors are allowed to make payments against their
+                    outstanding invoices or payment plans. This can be found in the Finance tab of
+                    the History menu. The payment option UI will only appear if the student has an
+                    overdue payment, if not, then this tab will just show a list of their finanical
+                    history. A student has an option to reduce the amount they want to pay if they
+                    can't afford to pay the full amount at the present time, with a minimum limit of
+                    $20 unless the total overdue amount is less than this. Once the user has defined
+                    the amount they want to pay the student just needs to enter the credit card
+                    details of person making the payment. The user will then get a message notifing
+                    them if the payment was successful or if it failed. If the payment fails, then a
+                    few seconds after getting a notification of this they will get directed back to
+                    the payment page allowing them to try again.</para>
+                        <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="40%" contentdepth="40%"
+                            fileref="images/Tutor Portal Making a payment.png" format="png"/>
+                    </imageobject>
+                    <caption>Making a $550 overdue payment in the skillsOnCourse portal</caption>
+                </mediaobject>
+                        <note><para>If a student has mulitple invoices that are overdue the amount shown that needs to be paid
+                        will be the combined overdue total. If they don't want to pay the full
+                        amount yet, then the payment will be taken off the oldest invoice first,
+                        even if they are on a payment plan.</para></note>
+                        <para>There is also a script called 'send payment plan reminder' that automatically sends a message
+                    7 days before the payment due date, on the day the payment is due and every 7
+                    days after that.</para><mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="40%" contentdepth="40%"
+                            fileref="images/send payment plan reminder.png" format="png"/>
+                    </imageobject>
+                    <caption>send payment plan reminder script</caption>
+                </mediaobject>
+                <para>Below is an example of the email that gets sent to a student who is overdue.
+                    There is also a link in the email that allows them to go straight to the portal,
+                    without having to log in, and pay the overdue balance.</para><mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="40%" contentdepth="40%"
+                            fileref="images/Payment Reminder Script.png" format="png"/>
+                    </imageobject>
+                    <caption>Payment reminder email</caption>
+                </mediaobject>
+                    </section>
+        </section>
     </section>
     <section>
         <title>Where a student can find their Certificate in skillsonCourse</title>

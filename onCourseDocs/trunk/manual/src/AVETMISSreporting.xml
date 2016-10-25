@@ -18,9 +18,8 @@
 				xlink:href="http://www.ish.com.au/node/1538">only free AVETMISS compliant</link>
 			student management database currently available to the Australian RTO market that
 			exports both to the NCVER National standard and each state's AVETMISS variation for
-			funded training. onCourse exports AVETMISS data compliant with the AVETMISS 7 standard,
-			including the USI requirements which came into effect for most RTOs as of January 1
-			2015.</para>
+			funded training. onCourse exports AVETMISS data compliant with the AVETMISS 7 and 8
+			standards, including the USI requirements.</para>
 		<para>The AVETMISS data you are required to submit are made up of a series of files with
 			names like NAT00120. These files must be supplied as plain text in a fixed width format.
 			These files are not very easy to create or read by a human as if one character is in the
@@ -149,9 +148,9 @@
 				AVETMISS tab. Unique client identifiers are auto assigned. You don't see these in
 				the contact detail, but you can search on them from the contact window if you later
 				get a validation error for one of your clients.</para>
-			<para>To meet the AVETMISS 7 changes, onCourse automatically splits addresses into the
-				required building name, unit name, street number and street name fields for export.
-				In the user interface, the address field remains the same - enrolling students and
+			<para>To meet the AVETMISS export, onCourse automatically splits addresses into the required
+				building name, unit name, street number and street name fields for export. In the
+				user interface, the address field remains the same - enrolling students and
 				administrative staff only need to enter the data in a single field.</para>
 			<para>The Unique Student Identifier (USI) is reported in the NAT00080 file for each
 				student engaged in Vocational Education and Training. Students who have only
@@ -214,10 +213,13 @@
 			</section>
 			<section>
 				<title>Delivery Mode Identifier</title>
-				<para>You preferred default setting can be set on the general preferences Class
-					Defaults tab. This can be changed for each Class on the VET tab. You can also
-					make changes for individual students on the Outcome list or through their
-					individual enrolment.</para>
+				<para>Your preferred default setting can be set on the general preferences Class Defaults tab.
+					This can be changed for each Class on the VET tab. You can also make changes for
+					individual students on the Outcome list or through their individual enrolment.
+					Because onCourse supports both AVETMISS 7 and 8, some delivery modes will be
+					translated when you export to the older AVETMISS 7 standard. </para>
+				<para>Classroom and online will be exported as 10, Classroom and workplace as 30,
+					Online and workplace as 30, and Classroom, online &amp; workplace as 30.</para>
 			</section>
 			<section>
 				<title>Outcome Identifier - National</title>
@@ -473,8 +475,8 @@
 		<para>There are three ways to export your data:</para>
 		<orderedlist>
 			<listitem>
-				<para>Export all the total activity data for your college between a defined date
-					range, using the file > import/export > export AVETMISS 7 option</para>
+				<para>Export all the total activity data for your college between a defined date range, using
+					the file > import/export > export AVETMISS 7 or 8 option</para>
 			</listitem>
 			<listitem>
 				<para>Export the data related to a class or group of classes, using the
@@ -513,9 +515,9 @@
 			<title>How to export date range AVETMISS data</title>
 			<orderedlist>
 				<listitem>
-					<para>Go to the file menu, select <guimenuitem>import/export</guimenuitem> and
-						choose <guimenuitem>Export AVETMISS</guimenuitem> and then
-							<guimenuitem>AVETMISS 7...</guimenuitem></para>
+					<para>Go to the file menu, select <guimenuitem>import/export</guimenuitem> and choose
+							<guimenuitem>Export AVETMISS</guimenuitem> and then
+							<guimenuitem>AVETMISS...</guimenuitem></para>
 				</listitem>
 				<listitem>
 					<para>Enter the date range for your AVETMISS data. By default, the dates will be
@@ -794,9 +796,6 @@
 					requirements of the ePayments Factsheet 4.3 - March 2014 Data Specifications.
 					This means you will export blank spaces for the outcome where the outcome has
 					not been set for this option.</para>
-				<para>Any data reported for training delivered from 1/1/2014 will need to be
-					reported against the AVETMISS 7 standard. Only training that completed in 2013
-					can be reported against the AVETMISS 6.1 Standard.</para>
 				<para>NSW has three special NSW only 'below the line' fields that are used in
 					reporting. They are the Booking ID (NAT00120 position 143), Course Site ID
 					(NAT00120 position 153) and Training Plan developed (NAT00120 position 163). The
@@ -920,7 +919,7 @@
 			</section>
 			<section>
 				<title>South Australia</title>
-				<para>onCourse complies with the SA export standard 7.0.1 release 1 Dec 2014.</para>
+				<para>onCourse complies with the SA export standard.</para>
 				<para>onCourse will export the value @@ for the Delivery Mode in the NAT00120 if the
 					outcome is set as Did Not Start</para>
 				<para>In the NAT00120 file, the 'Outcome Identifier - Training Organisation' will be
@@ -1205,15 +1204,14 @@
 				class.</para>
 		</section>
 		<section>
-			<title>Why, in the AVETMISS 7 export, do my non-VET courses have codes like
-				ISH123?</title>
+			<title>Why, in the AVETMISS export, do my non-VET courses have codes like ISH123?</title>
 			<para>In onCourse version 5.0 we increased the Course Code field length to 32
 				characters, to give onCourse Web users more SEO choices for the URL that was created
 				for their course page.</para>
-			<para>The AVETMISS 7 standard NAT00060 allows for up to 12 characters in the 'subject
-				identifier text'. We also have some users who have to report to other government
-				bodies which further restrict them to using 8 or 10 of these available characters
-				only as they append their own codes to this field.</para>
+			<para>The AVETMISS standard NAT00060 allows for up to 12 characters in the 'subject identifier
+				text'. We also have some users who have to report to other government bodies which
+				further restrict them to using 8 or 10 of these available characters only as they
+				append their own codes to this field.</para>
 			<para>While we require course codes in onCourse to be unique, if we only exported the
 				first 8 characters of user defined course code, we could very easily end up
 				exporting two courses with duplicate codes that then causes an AVETMISS validation
@@ -1247,10 +1245,10 @@
 				option in the classes or enrolments window, because they are not associated with
 				either a class or an enrolment, but instead are attached directly to the
 				student.</para>
-			<para>When you create a prior learning record with one or more outcomes attached, and
-				the start and end dates of the prior learning outcomes fall into the 'outcomes
-				after' to -'outcomes before' date range set in the AVETMISS 7 export runner, then
-				the data associated with the prior learning record will export.</para>
+			<para>When you create a prior learning record with one or more outcomes attached, and the start
+				and end dates of the prior learning outcomes fall into the 'outcomes after' to
+				-'outcomes before' date range set in the AVETMISS export runner, then the data
+				associated with the prior learning record will export.</para>
 			<para>At a minimum, to create successful AVETMISS files your prior learning outcomes
 				need, in addition to a start date and end date, an outcome status. All other values
 				are optional.</para>

@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://docbook.org/ns/docbook file://../../src/docbook.xsd"
-         xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-9.0b">
+         xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-9.0b2">
 
   <info>
-    <title>Release 9.0 Beta</title>
-    <pubdate>18 October 2016</pubdate>
+    <title>Release 9.0 Beta 2</title>
+    <pubdate>26 October 2016</pubdate>
   </info>
-
-  <section role="important">
-    <title>Important changes</title>
-    <para></para>
-  </section>
   <section role="major">
     <title>Major features</title>
     <section><title>onCourse Certificate Verification Portal</title>
-      <para>The brand new and shiny
-        onCourse Certificate Verification Portal has now been deployed for all customers who have
-        implemented the QR code printing function on their onCourse Qualification and Statement of
-        Attainment certificates.</para>
+      <para>The onCourse Certificate Verification Portal has now been deployed for all customers who
+        have implemented the QR code printing function on their onCourse Qualification and Statement
+        of Attainment certificates.</para>
       <para>The Certificate Verification Portal will allow employers or other RTOs to confirm the
         certificate was issued to the student named without requiring them phone, or otherwise
         contact the RTO to request look up of the Certificate number in the register.</para>
@@ -45,20 +39,38 @@
           <para>A verified Statement of Attainment</para>
         </caption>
       </mediaobject>
-      <para>If you are not yet printing the QR code on your certificates and you would like some assistance to do so, please get in contact with us at <link xlink:href="mailto:support@ish.com.au">support@ish.com.au</link></para>
+      <para>If you are not yet printing the QR code on your certificates and you would like some
+        assistance to do so, please get in contact with us at <link
+          xlink:href="mailto:support@ish.com.au">support@ish.com.au</link></para>
     </section>
-  </section>
+      <section>
+        <title>AVETMISS 8</title>
+        <para>The new AVETMISS export has been added to this release of onCourse which includes the
+        additional delivery modes.</para>
+        <mediaobject>
+          <imageobject>
+            <imagedata scalefit="1" width="80%" contentdepth="80%"
+              fileref="images/AVETMISS_8.png"/>
+          </imageobject>
+          <caption>
+            <para>AVETMISS 8 Export window</para>
+          </caption>
+        </mediaobject>
+      </section>
+    </section>
   <section role="scripts">
     <title>Reports and scripts</title>
-    <para></para>
+    <itemizedlist>
+      <listitem><para>Added the last outcome end date as 'Date achieved' to the Certificate of Attendance report
+            <systemitem>#30042</systemitem></para></listitem>
+    </itemizedlist>
   </section>
   <section role="minor">
     <title>Minor features</title>
     <itemizedlist>
       <listitem><para>Additional advanced search options for the Enrolment general and VET Fee Help tabs have been added <systemitem>#28696</systemitem></para></listitem>
-      <listitem><para><systemitem></systemitem></para></listitem>
-      <listitem><para><systemitem></systemitem></para></listitem>
-      <listitem><para><systemitem></systemitem></para></listitem>
+      <listitem><para>The course-class code export has been updated due to the changes to VET fee Help to make VLL
+          and VCU consistent with it<systemitem>#29842</systemitem></para></listitem>
     </itemizedlist>
   </section>
   <section role="fixes">
@@ -73,9 +85,56 @@
   <listitem><para>Fix to permission for deletion of waitlist entries <systemitem>#29436</systemitem></para></listitem>
   <listitem><para>Fix to remove text field delimiters from CQR export <systemitem>#29592</systemitem></para></listitem>
   <listitem><para>Improvement to the AVETMISS delivery mode value so the inherited value behaves like other inherited values when locked or unlocked <systemitem>#29595</systemitem></para></listitem>
-  <listitem><para><systemitem></systemitem></para></listitem>
-  <listitem><para><systemitem></systemitem></para></listitem>
-  <listitem><para><systemitem></systemitem></para></listitem>
+  <listitem>
+        <para>Improved the invoiceLine description default wording since some of the data was being
+          repeated <systemitem>#28008</systemitem></para>
+      </listitem>
+      <listitem>
+        <para>Changed the column headings in the Deposit Banking, Payment In and Payment Out list
+          views from 'Created' to 'Date paid'. Changed the field in the Payment In edit view from
+          'Date created' to Date paid' <systemitem>#29643</systemitem></para>
+      </listitem>
+  <listitem><para>Search results for census date now does not include results from day before or after selected
+          period. E.g. 1-30 Sep period shows only September results, no results from 31 Aug or 1 Oct
+            <systemitem>#29841</systemitem></para></listitem>
+  <listitem>
+        <para>The 'is not empty' filter in the advanced search now correctly shows records with
+          nothing in commitment ID field <systemitem>#29757</systemitem></para>
+      </listitem>
+  <listitem><para>When a discount is manually changed at the class level, it now duplicates across
+        when duplicating the class. <systemitem>#29852</systemitem></para>
+      </listitem>
+      <listitem>
+        <listitem><para>Class list load times have been improved <systemitem>#29918</systemitem></para>
+        </listitem>
+      </listitem>
+      <listitem>
+        <listitem><para>Emails sent to incorrect address (e.g. student@mailcom) are now being marked as
+          not 'failed' <systemitem>#28587</systemitem></para>
+        </listitem>
+      </listitem>
+  <listitem><para>Fix to the dashboard tab so it's now displaying data again
+          <systemitem>#29201</systemitem></para>
+      </listitem>
+  <listitem>
+        <para>The certificate report now always selects the correct template
+            <systemitem>#29898</systemitem></para>
+      </listitem>
+          <listitem>
+            <para>Credit notes are now automatically created when sales are cancelled
+            <systemitem>#29958</systemitem></para>
+      </listitem>
+  <listitem>
+        <para>Fix to the journals when vouchers are redeemed. Voucher liability total cannot be
+          charged for more than the amount payed for the voucher, however it can be more than the
+          used voucher value (e.g. when voucher value is less than voucher price)
+            <systemitem>#29961</systemitem></para>
+      </listitem>
+      <listitem>If the Messaging access right 'Email over 50 contacts' is not enabled then this
+        restricts sending of emails from template to 50+ people. A message is also shown to the user
+        when trying to send to more people <systemitem>#29730</systemitem></listitem>
+  <listitem><para>LDAP SSL setting incorrect changes Bind user DN
+    <systemitem>#30193</systemitem></para></listitem>
 </itemizedlist>
   </section>
   <section role="web">
@@ -84,9 +143,5 @@
       <listitem><para>A new option to the CMS has been added to enable tutor outcome marking in the portal. This option is disabled by default.
         <systemitem>#28870</systemitem></para></listitem>
     </itemizedlist>
-  </section>
-  <section role="web-fixes">
-    <title>Web fixes</title>
-    <para></para>
   </section>
 </chapter>

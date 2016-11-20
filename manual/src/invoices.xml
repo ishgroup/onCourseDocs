@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="invoice">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="invoice">
 	<title>Invoices and Payment Plans</title>
 	<section xml:id="invoice-general">
 		<title>Invoices</title>
 		<para>Every time you create a purchase through Quick Enrol, an invoice will be automatically
-			created for you.  Each item purchased will create an invoice line, so multiple students
+			created for you. Each item purchased will create an invoice line, so multiple students
 			enrolling in multiple classes each can be recorded on a single invoice. An invoice is
 			assigned to a debtor, so an employer requesting two students enrolling in three classes
 			each can be issued a single invoice through one Quick Enrol process. Whereas two
@@ -14,27 +15,27 @@
 		<para>During the Quick Enrol process you can see the draft details the invoice you are
 			creating, and add additional information like a customer's purchase order number or add
 			additional custom lines, such as a surcharge for phone bookings.</para>
-		<para>Invoice lines automatically created by Quick Enrol may include purchases of enrolments,
-			products, vouchers or memberships.</para>
+		<para>Invoice lines automatically created by Quick Enrol may include purchases of
+			enrolments, products, vouchers or memberships.</para>
 		<para>Full or partial payment against an invoice may be taken at the time of creation
 			through Quick Enrol, or at a later date. A due date for the invoice can be manually set
 			in Quick Enrol.</para>
-		<para>These invoices are then visible within the Invoice list view. Like all other lists you can
-			sort, search, export and print from this view. </para>
+		<para>These invoices are then visible within the Invoice list view. Like all other lists you
+			can sort, search, export and print from this view. </para>
 		<para>The invoice list view can be opened via Financial > Invoices.</para>
-		
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invoice_list_view.png"/>
+				<imagedata scalefit="1" width="70%" contentdepth="70%"
+					fileref="images/invoice_list_view.png"/>
 			</imageobject>
 			<caption>
 				<para>Invoice list view</para>
 			</caption>
 		</mediaobject>
 		<note>
-			<para>The 'Overdue' column will show the total unpaid component of the invoice that is due prior
-				to tomorrow e.g. amounts due today, and in the past, which are unpaid are considered
-				overdue. This updates daily, not in real time.</para>
+			<para>The 'Overdue' column will show the total unpaid component of the invoice that is
+				due prior to tomorrow e.g. amounts due today, and in the past, which are unpaid are
+				considered overdue. This updates daily, not in real time.</para>
 		</note>
 		<section>
 			<title>Invoice Terms</title>
@@ -49,40 +50,41 @@
 				also set invoice terms per contact.</para>
 			<para>In the contact record, open the Financial tab and unlock the default invoice
 				terms. Replace the value with the customer specific terms.</para>
-			<para>All future invoices created for this customer, including invoices created for enrolments
-				processed over the website using a corporatePass, will have a due date set according
-				to the custom terms.</para>
+			<para>All future invoices created for this customer, including invoices created for
+				enrolments processed over the website using a corporatePass, will have a due date
+				set according to the custom terms.</para>
 			<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invoiceTerms.png"/>
-			</imageobject>
-			<caption>
-				<para>Invoice list view</para>
-			</caption>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/invoiceTerms.png"/>
+				</imageobject>
+				<caption>
+					<para>Invoice list view</para>
+				</caption>
 			</mediaobject>
 		</section>
-<section>
-		<title>Editing Invoices</title>	
-			<para>Invoices may not be deleted and all of the financial information within an invoice may not
-				be edited once created - only the invoice due date and payment plan information can
-				be changed. Although this may seem like an inconvenience, immutable invoices are
-				extremely important to ensure a robust audit trail and to guarantee the integrity of
-				the general ledger transactions.</para>
-		<para>If you need to modify an invoice you should instead create a credit note. A credit note is
-			an invoice where the invoice lines have negative dollar values. Remember if you are
-			cancelling an enrolment or a class there are easier ways to do that from the class and
-			enrolment list views.</para>
-		<para>A credit note is an invoice with a negative total and is shown alongside invoices in the
-			same list view. The owing amounts on an invoice and a credit note are not automatically
-			zeroed against each other, however you can cancel them out by using the cog wheel option
-			'contra invoice'.</para>
-</section>
+		<section>
+			<title>Editing Invoices</title>
+			<para>Invoices may not be deleted and all of the financial information within an invoice
+				may not be edited once created - only the invoice due date and payment plan
+				information can be changed. Although this may seem like an inconvenience, immutable
+				invoices are extremely important to ensure a robust audit trail and to guarantee the
+				integrity of the general ledger transactions.</para>
+			<para>If you need to modify an invoice you should instead create a credit note. A credit
+				note is an invoice where the invoice lines have negative dollar values. Remember if
+				you are cancelling an enrolment or a class there are easier ways to do that from the
+				class and enrolment list views.</para>
+			<para>A credit note is an invoice with a negative total and is shown alongside invoices
+				in the same list view. The owing amounts on an invoice and a credit note are not
+				automatically zeroed against each other, however you can cancel them out by using
+				the cog wheel option 'contra invoice'.</para>
+		</section>
 		<section xml:id="invoice-create">
 			<title>Creating a manual invoice</title>
-			<para>While you will usually create an invoice through using Quick Enrol, it is sometimes useful
-				to create an invoice without an associated product or enrolment. You can easily do
-				that by opening the list of invoices and pressing the plus icon at the top
-				right.</para>
+			<para>While you will usually create an invoice through using Quick Enrol, it is
+				sometimes useful to create an invoice without an associated product or enrolment.
+				You can easily do that by opening the list of invoices and pressing the plus icon at
+				the top right.</para>
 			<para>Invoices created manually can have an invoice date in the past or the future,
 				although the default setting is today. Invoices created with a date in the past will
 				can be created prior to the financial period finalised date. They can only be
@@ -100,7 +102,8 @@
 				email template to the debtor contact when you save the record.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Creating_a_new_invoice.png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/Creating_a_new_invoice.png"/>
 				</imageobject>
 				<caption>
 					<para>Creating a new invoice</para>
@@ -109,17 +112,18 @@
 		</section>
 		<section xml:id="invoice-linking">
 			<title>Link invoice lines to class budgets</title>
-			<para>When creating invoice lines you may optionally link each line to a class. This will treat
-				the income with the same general ledger pre-paid fees and income deferral plan as
-				invoices created by enrolling in the class. This also adds the total of that invoice
-				line to the class budget and can be very useful when invoicing a company for an
-				entire classroom delivery without recording individual enrolments or need to include
-				additional income such as funding in a classes budget. </para>
+			<para>When creating invoice lines you may optionally link each line to a class. This
+				will treat the income with the same general ledger pre-paid fees and income deferral
+				plan as invoices created by enrolling in the class. This also adds the total of that
+				invoice line to the class budget and can be very useful when invoicing a company for
+				an entire classroom delivery without recording individual enrolments or need to
+				include additional income such as funding in a classes budget. </para>
 			<para>Type the course name or code, and select the class code from the drop down list to
 				join a manual invoice line to a class budget.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invoice_lines.png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/invoice_lines.png"/>
 				</imageobject>
 				<caption>
 					<para>Linking invoice lines to a class</para>
@@ -128,15 +132,19 @@
 		</section>
 		<section xml:id="invoice-duplicating">
 			<title>Duplicating Invoices</title>
-			<para>You have the ability to duplicate invoice by highlighting the invoice you want to duplicate
-				in the Invoice list view,  then click on the cogwheel and select the option
+			<para>You have the ability to duplicate invoice by highlighting the invoice you want to
+				duplicate in the Invoice list view, then click on the cogwheel and select the option
 				'Duplicate invoice'. This allows you to quickly re-create invoices from a previous
 				invoice template, but change contact, change the value or add a negative symbol for
 				a credit note.</para>
-			<note><para>This feature can only be used when a single invoice is selected at a time.</para></note>
+			<note>
+				<para>This feature can only be used when a single invoice is selected at a
+					time.</para>
+			</note>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invoice_duplicate.png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/invoice_duplicate.png"/>
 				</imageobject>
 				<caption>
 					<para>Duplicating an invoice</para>
@@ -146,16 +154,19 @@
 	</section>
 	<section xml:id="invoice-paymentPlan">
 		<title>Payment plans</title>
-		<para>By default invoices have a due of the day they are created. Sometimes you will want to allow
-			students to pay for training over a longer period of time. Using payment plans you can
-			set the amount of the up front deposit and a series of dates for payment of the
+		<para>By default invoices have a due of the day they are created. Sometimes you will want to
+			allow students to pay for training over a longer period of time. Using payment plans you
+			can set the amount of the up front deposit and a series of dates for payment of the
 			remainder in instalments. </para>
-		<section xml:id="invoice-dueDate"><title>Invoice due dates</title><para>An existing or new invoice
-				can be converted to a payment plan by adding payment due dates. This can be done by
-				firstly either creating a new invoice as mentioned in the section above 'Creating a
-				manual invoice' just stopping before you click on 'Save', or opening an existing
-				invoice. Then click on the '+' symbol at the top right side of the payment plans /
-				payments table for as many different payment due dates you want to add.</para><mediaobject>
+		<section xml:id="invoice-dueDate">
+			<title>Invoice due dates</title>
+			<para>An existing or new invoice can be converted to a payment plan by adding payment
+				due dates. This can be done by firstly either creating a new invoice as mentioned in
+				the section above 'Creating a manual invoice' just stopping before you click on
+				'Save', or opening an existing invoice. Then click on the '+' symbol at the top
+				right side of the payment plans / payments table for as many different payment due
+				dates you want to add.</para>
+			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
 						fileref="images/invoice_add_payment_plans.png"/>
@@ -163,11 +174,13 @@
 				<caption>
 					<para>Manually adding payment plan lines to an invoice</para>
 				</caption>
-			</mediaobject><para>Once this has been done you can then start editing these payment plan lines starting with the
-				dates you want the payments to be due. This is done by double clicking on one of the
-				'today' payment due date fields in the table and changing it to a date that you want
-				the payment to be due by. Then do the same for the other payment due date fields
-				until they are all setup correctly.</para><mediaobject>
+			</mediaobject>
+			<para>Once this has been done you can then start editing these payment plan lines
+				starting with the dates you want the payments to be due. This is done by double
+				clicking on one of the 'today' payment due date fields in the table and changing it
+				to a date that you want the payment to be due by. Then do the same for the other
+				payment due date fields until they are all setup correctly.</para>
+			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
 						fileref="images/invoice_edit_payment_due_lines.png"/>
@@ -176,9 +189,9 @@
 					<para>Editing the date for each of the payment due lines</para>
 				</caption>
 			</mediaobject>
-			<para>Then lastly change the amounts that are due on each of these dates from $0 to your chosen
-				amount. This is also done by double clicking on the relevant field in the table and
-				editing the fee amount.</para>
+			<para>Then lastly change the amounts that are due on each of these dates from $0 to your
+				chosen amount. This is also done by double clicking on the relevant field in the
+				table and editing the fee amount.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -187,16 +200,19 @@
 				<caption>
 					<para>Invoice with manually added payment due dates and amounts</para>
 				</caption>
-			</mediaobject><para>It is important that the total of the payment plan amounts equals
-				the invoice total; you will not be able to save the invoice unless they match. The
-				'Overdue' column in the Invoices list view will show the total unpaid component of
-				the invoice that is due prior to tomorrow.</para><para>You can edit the payment plan amounts and due dates at any time, for example if you grant the
-				student an extension to the payment plan.</para></section>
+			</mediaobject>
+			<para>It is important that the total of the payment plan amounts equals the invoice
+				total; you will not be able to save the invoice unless they match. The 'Overdue'
+				column in the Invoices list view will show the total unpaid component of the invoice
+				that is due prior to tomorrow.</para>
+			<para>You can edit the payment plan amounts and due dates at any time, for example if
+				you grant the student an extension to the payment plan.</para>
+		</section>
 		<section xml:id="invoice-payPlanTemplate">
 			<title>Class payment plan template</title>
-			<para>If you wish to offer a deferred payment scheme to all students in a particular class you
-				can set up a payment plan templates from the class edit view you where you normally
-				set the class fee. </para>
+			<para>If you wish to offer a deferred payment scheme to all students in a particular
+				class you can set up a payment plan templates from the class edit view you where you
+				normally set the class fee. </para>
 			<para>This can be quite useful if you an RTO who is bound by the Standards that limit
 				your prepayment of fees to $1,500. For example, if you offer a 10-week course that
 				costs $2000, the course costs $200 per week. Therefore, you could collect $1500 at
@@ -216,13 +232,14 @@
 				payment plan adds up to the existing class fee, rather than add additional costs to
 				the class fee. The 'on enrolment' fee will auto adjust to the amount
 				remaining.</para>
-			<para>Each payment line you add requires an offset date from the class start. This offset can be
-				positive (days after) or negative (days before). The actual due dates for the
-				payments for this class will be calculated and shown in the payment plan
+			<para>Each payment line you add requires an offset date from the class start. This
+				offset can be positive (days after) or negative (days before). The actual due dates
+				for the payments for this class will be calculated and shown in the payment plan
 				screen.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Class_payment_plan.png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/Class_payment_plan.png"/>
 				</imageobject>
 				<caption>
 					<para>Creating a payment plan in a class</para>
@@ -239,13 +256,14 @@
 				and $500 due 7 days before the start of class. A student enrolling 10 days before
 				the class starts will be charged $1000 and a student enrolling 5 days before class
 				starts will be charged $1500. </para>
-			<para>During Quick Enrol every involvement with a different payment plan will be added to a
-				separate invoice. In this way a single Quick Enrol process may generate two or more
-				invoices. If several enrolments have an identical payment plan, then they will end
-				up on the same invoice.</para>
+			<para>During Quick Enrol every involvement with a different payment plan will be added
+				to a separate invoice. In this way a single Quick Enrol process may generate two or
+				more invoices. If several enrolments have an identical payment plan, then they will
+				end up on the same invoice.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Payment_plan_invoices.png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/Payment_plan_invoices.png"/>
 				</imageobject>
 				<caption>
 					<para>Payment plan invoices in Quick Enrol</para>
@@ -254,13 +272,14 @@
 		</section>
 		<section>
 			<title>Online enrolments</title>
-			<para>If a payment plan applies to the class, we suggest you make some note of it in the class
-				web tab, so a potential student enrolling via the web can see what amount is payable
-				and when. The full class fee will still display in the class block when a payment
-				plan applies.</para>
+			<para>If a payment plan applies to the class, we suggest you make some note of it in the
+				class web tab, so a potential student enrolling via the web can see what amount is
+				payable and when. The full class fee will still display in the class block when a
+				payment plan applies.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/payment_plan_class_block.png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/payment_plan_class_block.png"/>
 				</imageobject>
 				<caption>
 					<para>Payment plan detail explained in the class web info</para>
@@ -272,7 +291,8 @@
 				dates.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/payment_plan_pay_now.png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/payment_plan_pay_now.png"/>
 				</imageobject>
 				<caption>
 					<para>Pay now reduced to the applicable payment plan deposit</para>
@@ -281,25 +301,27 @@
 		</section>
 		<section xml:id="invoice-script">
 			<title>Automating payment plans with scripts</title>
-			<para>If you have payment plan templates to create for very many classes you may wish to instead
-				use a script to automate the process. A simple script might identify all classes
-				with a fee over $1500 and then limit the amount due on enrolment to $1500 with the
-				remainder payable over the duration of the class.</para>
+			<para>If you have payment plan templates to create for very many classes you may wish to
+				instead use a script to automate the process. A simple script might identify all
+				classes with a fee over $1500 and then limit the amount due on enrolment to $1500
+				with the remainder payable over the duration of the class.</para>
 			<para>More sophisticated payment plan scripts can create different plans depending on
 				the duration of the class, the amount of the fee, whether the class is VET or not
 				and any other criteria.</para>
 		</section>
 		<section>
 			<title>Payment plan scheduled reminders</title>
-			<para>When a student is on a payment plan, you may wish to enable the default system script 'send
-				payment plan reminder' so the debtor is automatically emailed a reminder 7 days
-				before their payment is due a link to make the payment via the skillsOnCourse
-				portal. You can enable this from the top menu by going to File → Preferences →
-				Scripts, then double click on the script 'send payment plan reminder', click on the
-				checkbox 'Enabled' in the top right side of the window, then Save.</para>
+			<para>When a student is on a payment plan, you may wish to enable the default system
+				script 'send payment plan reminder' so the debtor is automatically emailed a
+				reminder 7 days before their payment is due a link to make the payment via the
+				skillsOnCourse portal. You can enable this from the top menu by going to File →
+				Preferences → Scripts, then double click on the script 'send payment plan reminder',
+				click on the checkbox 'Enabled' in the top right side of the window, then
+				Save.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/payment_plan_script.png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/payment_plan_script.png"/>
 				</imageobject>
 				<caption>
 					<para>'send payment plan reminder' script</para>
@@ -307,12 +329,13 @@
 			</mediaobject>
 			<para>This default reminder will also send overdue notices to any debtor who has an
 				invoice (on a payment plan or otherwise) where the payment is overdue.</para>
-			<para>This script will trigger the email template 'Payment reminder' which can be edited by going
-				to File → Preferences → Email Templates, then double click on the email template
-				'Payment reminder'.</para>
+			<para>This script will trigger the email template 'Payment reminder' which can be edited
+				by going to File → Preferences → Email Templates, then double click on the email
+				template 'Payment reminder'.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/payment_plan_email_template.png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/payment_plan_email_template.png"/>
 				</imageobject>
 				<caption>
 					<para>'Payment reminder' email template</para>

@@ -3,44 +3,241 @@
 
   <info>
     <title>Release 9.0</title>
-    <pubdate>16 November 2016</pubdate>
+    <pubdate>6 Decemeber 2016</pubdate>
   </info> 
  <section role="important">
     <title>Important changes</title>
-    <para><emphasis role="bold">Note that the release notes here are a summary of all the changes between 8.0 and 9.0. You may also wish to look at each release separately for more detail. This summary is useful mostly for self-hosted onCourse users.</emphasis></para>
+    <para><emphasis role="bold">Note that the release notes here are a summary of all the changes
+        between version 8.0.2 and 9.0. You may also wish to look at each release separately for more
+        detail. This summary is for self-hosted onCourse users.</emphasis></para>
+   <para>This release includes all changes from the following versions, previously released to cloud hosted customers:</para>
+   <itemizedlist>
+     <listitem>
+       <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-8.4.html">Release 8.4</link></para>
+     </listitem>
+     <listitem>
+       <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-8.6.html">Release 8.6</link></para>
+     </listitem>
+       <listitem>
+         <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-8.7.html">Release 8.7</link></para>
+       </listitem>
+         <listitem>
+           <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-8.10.html">Release 8.10</link></para>
+         </listitem>
+           <listitem>
+             <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-8.23.html">Release 8.12</link></para>
+           </listitem>
+             <listitem>
+               <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-8.14.html">Release 8.14</link></para>
+             </listitem>
+               <listitem>
+                 <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-8.17.html">Release 8.17</link></para>
+               </listitem>
+                 <listitem>
+                   <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-8.20.html">Release 8.20</link></para>
+                 </listitem>
+                   <listitem>
+                     <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-8.21.html">Release 8.21</link></para>
+                   </listitem>
+                     <listitem>
+                       <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-8.23.html">Release 8.23</link></para>
+                     </listitem>
+                       <listitem>
+                         <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-8.24.html">Release 8.24</link></para>
+                       </listitem>
+                         <listitem>
+                           <para><link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/release-9.0b2.html">Release 9.0 Beta 2</link></para>
+     </listitem>
+   </itemizedlist>
    <section> <title>Release notes will be displayed for each onCourse user at login</title>
-     <para>Hello and welcome to your latest onCourse upgrade! From this release onwards, each time a
-     new onCourse version is released, the release notes will be displayed to each onCourse user
-     when they log in, inside the application.</para>
+     <para>Hello and welcome to your latest onCourse upgrade! Each time a new onCourse version is
+        released, the release notes will be displayed to each onCourse user when they log in, inside
+        the application.</para>
    <para>Take a moment to read through this screen to understand what has changed since the last
      time you logged in. When you are done here, just close the window. Once you've closed the
      window, you won't see this alert again until the next upgrade is deployed.</para>
    <para>Release notes are also published on our website, so you can always visit <link xlink:href="http://www.ish.com.au/s/onCourse/doc/release-notes/">http://www.ish.com.au/s/onCourse/doc/release-notes/</link> to refer to this release again,
      or any previous release notes.</para>
    </section>
-   <section>
-     <title>Optional USI script change</title>
-     <para>Please read this information carefully and decide if you wish to update the default
-       script 'Send USI reminder'.</para>
-     <para>The USI reminder has been adjusted to send to only to students enrolled in courses with
-       units of competency attached. The previous implementation was to send to VET flagged
-       courses, however some onCourse users VET flag courses with no modules for funding purposes,
-       and those students don't need a USI. An additional line has also been added to send a
-       notification to your onCourse admin email address (as per your onCourse message preference
-       settings) each time this message is sent, advising how many students were contacted. If you
-       wish to update your script to the new version as described, please go to File > Preferences
-       > Scripts and locate 'send USI reminder'. Double click on the script and click the button
-       'Update to latest version'. Ensure the 'enabled' flag is also set. You may also wish to
-       adjust your enrolment confirmation email template that sends the first USI request to
-       enrolling students. In both the plain text and HTML email, before the USI request text is a
-       string that says:
-       <programlisting> &lt;% if (enrolment.courseClass.course.isVET == true) { %&gt; </programlisting>
-       Replace it with:
-       <programlisting> &lt;% if (enrolment.courseClass.course.modules.size() > 0) { %> </programlisting></para>
-   </section>
     </section>
 <section role="major">
   <title>Major features</title>
+  <section>
+    <title>User interface changes</title>
+    <section>
+      <title>onCourse Menu Restructure</title>
+      <para>To improve clarity and ensure all new onCourse features have a home in the menu system,
+        we have restructured the top level menus to better group related items.</para>
+      <para>A new menu option called 'Products' includes all the items you can sell via onCourse,
+        including Courses, Gift Vouchers and Memberships. </para>
+      <para>The menu item 'Training' contains the features related to setting up and scheduling
+        training, including items such as Classes, Sites and Documents.</para>
+      <para>The previous menu 'People' has been split into two menus: The new 'People' menu contains
+        the options to access contacts and their communication history via mailing lists and
+        messages, while the  new 'Activity' menu is where you will find Quick Enrol and all the
+        results of contact engagement with onCourse including Applications, Enrolments, Certificates
+        and Sales.</para>
+      <para>All options related to fees and payments, including CorporatePasses and Discounts can be
+        found under the 'Financial' menu.</para>
+      <para>The File, Edit, Windows and Help menu options are unchanged.</para>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/new_menu_structure.png" format="png"/>
+        </imageobject>
+        <caption>
+          <para>The new onCourse menu structure</para>
+        </caption>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Find related record icon relocation</title>
+      <para>The find related records function in onCourse is such a regularly used and powerful
+        function of the onCourse application, that we have moved this feature out of the cogwheel
+        list and in to its very own own action icon to make it more prominant. You can now access
+        the 'Find related' feature to the right of the search box in all onCourse list views. It's
+        icon looks like a magnifying glass hovering over a stack of papers.</para>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/find_related_on_left_side.png" format="png"/>
+        </imageobject>
+        <caption>
+          <para>The Find Related icon can now be found to the right of the search field in all
+            onCourse list views</para>
+        </caption>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Payment In &amp; Quick Enrol redesign for payment processing</title>
+      <para>Creating a payment separately from an enrolment process used to open a 'payment
+        in' window. The window that opens now is Quick Enrol. Validation has been removed
+        from inside Quick Enrol requiring the transaction to contain at least one purchase. </para>
+      <para>Now, you can use Quick Enrol to process payments against invoices with outstanding
+        balances. You can do this via the normal Quick Enrol window, or when clicking on the
+        plus option inside the payment in list view. This change in user interface also
+        introduces the opportunity for vouchers to be used as payment method after the
+        enrolment process.</para>
+    </section>
+    <section>
+      <title>onCourse font change</title>
+      <para>The onCourse system font has been changed to SourceSansPro to allow for clearer
+        display on Retina and other high resolution screens.</para>
+    </section>
+    <section>
+      <title>Preference user interface updates</title>
+      <para>The preference settings for payment types, custom fields, contact relations and
+        concession types have been moved from being their own menu item and windows, to
+        being added to the list of preference options in the File > Preferences > General
+        list view.</para>
+    </section>
+    <section>
+      <title>Class cancellation notifications moved to script and email templates</title>
+      <para>When a class was cancelled in previous versions of onCourse, a window opened asking if
+        the user wanted to send a message to the students to notify them, using a template that
+        couldn't be easily customised. To make this process consistant with other automated
+        notifications, a new script and email template set have been developed to replace this
+        manual message. Please review the new template called 'Enrolment cancellation' and make the
+        appropriate changes for your college before enabling this script.</para>
+      <para>The new script 'Send enrolment cancellation' is disabled by default. If you wish to use
+        it at your college you will need to enable it. Please note that enabling this script will
+        automatically send the 'Enrolment cancellation' email message to all enrolled students each
+        time you cancel a class. If this script is enabled this process will happen in the
+        background without the opportunity to review or disable the sending of the message.</para>
+      <para>Another new script and email template pair have been added to notify tutors when a class
+        is cancelled, in the same way students are notified. Review the script called 'Send tutor
+        class cancellation' which is disabled by default, and 'Tutor notice of class cancellation'
+        email template for any adjustments you wish to make before enabling this script.</para>
+      <para>Note these scripts do not trigger when an enrolment is cancelled - only when a class is
+        cancelled.</para>
+    </section> 
+    <section>
+      <title>Improved record loading speed over high latency internet links</title>
+      <para>The performance of communication between onCourse Client and Server has been
+        dramatically improved. Opening and saving windows is improved throughout the whole
+        application, but most noticeably if you are connecting over the internet (such as our cloud
+        hosted solution). Improvements range from 20-30% in some cases to reducing the delay by a
+        factor of 10 in other cases.</para>
+    </section>
+    <section>
+      <title>Improved performance across the application</title>   
+      <para> Improve performance across the application, and especially in the class edit view. Over
+        slow internet links the performance can be up to 10 times faster for certain actions.</para>
+    </section> 
+  </section>
+  <section> 
+    <title>RTO Features</title>
+    <section>
+      <title>onCourse portal refresh</title>
+      <para>A major refresh of the onCourse portal application has signficantly
+        improved the functionality for students, tutors, employers, agents and parents. </para>
+      <para>The new group timetable view, scrolling schedule timetable view,
+        improved class roll attendance marking and payment gateway has been deployed. A brand new
+        dashboard, outcome marking module and certificate verification service are also available.</para>
+    </section>
+  <section>
+      <title>Automated creation of VET Certificates</title>
+      <para>Unlike non-VET Certificates of Attendance, formal VET certifications like Statements of
+        Attainment and Qualifications can only be issued when a student achieves outcome results for
+        the units that make up their course. </para>
+      <para>A new script in onCourse checks daily for any outcome results which have been updated
+        during the previous 24 hours, and if all the outcomes attached to the enrolment have be set
+        to have an outcome status, a VET certification will be created if at least one of those
+        outcomes was successful.</para>
+      <para>Where the student has successfully achieved all outcomes linked to a course which
+        'satisfies complete qualification or skill set', then they will be issued a Qualification or
+        Skill Set Certificate on completion. If all outcomes have been marked, and some are
+        unsuccessful, they will be issued a Statement of Attainment instead.</para>
+      <para>For students undertaking a short course, who have successfully, or a mix of successfully
+        and unsuccessfully, completed their outcomes, a Statement of Attainment will also be created
+        for their successful units.</para>
+      <para>Deatiled documentation for enabling this feature is available in the
+        user handbook: <link xlink:href="https://www.ish.com.au/s/onCourse/doc/latest/manual/rto.html#rto-Certificates">VET Qualifications and other Certificates </link>
+      </para>
+  </section>
+    <section>
+      <title>Distribution of VET Certificates through the portal</title>
+      <para>A new script has been added to automatically print and distribute VET Certificates through
+        the skillsOnCourse portal called 'send certificate vet created notification'. Like all new
+        scripts, it is disabled by default and you will need to enable it if you wish to use
+        it.</para>
+      <para>Each day, all unprinted VET Certificates for student who have a validated USI will be
+        printed to PDF and saved to the student's enrolment record. </para>
+      <para>You will need to make sure you have created and uploaded the following three two page
+        background documents to onCourse before enabling this script:
+        vet_qualification_background.pdf, vet_skillset_background.pdf, and vet_soa_background.pdf.
+        The script will overlay the certificate template on the correct background type during the
+        print process.</para>
+      <para>The Certificate will then be uploaded to the student portal, and the student sent an
+        email notifying them is available for download.</para>
+      <para>The same email template, 'Certificate available', also called on by the non-VET
+        Certificate of Attendance distribution script is sent. Ensure any modifications you make to
+        the template suit the recipient of both VET and non-VET certificates, or create a copy of
+        the template to send a different email to VET certified students.</para>
+    </section>
+    <section>
+    <title>Automatically generate verification QR code for certificates</title>
+    <para>In preparation for the deployment of the onCourse Certificate Verification service,
+      Statements of Attainment and Qualifications can now be printed with a unique QR (Quick
+      Response) code and manual URL verification code. </para>
+    <para>The Certificate Verification service will allow employers or other RTOs to confirm the
+      certificate was issued to the student named without requiring them phone, or otherwise
+      contact the RTO to request look up of the Certificate number in the register. This web
+      portal feature is currently in testing and will be deployed shortly. </para>
+    
+    <para>Printing the built in certificate template will allow you to print Statement of
+      Attainment and Qualification certificates with or without a QR code. All RTOs wishing to use
+      the verification portal should check the default location of the QR code on their onCourse
+      certificate report and make adjustments to the background report elements or location of the
+      QR code in the report as necessary. If you wish to add the QR code to existing custom
+      certificate reports, you can contact ish for assistance.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" width="60%" contentdepth="60%" fileref="images/soa_with_qr_code.png"/>
+      </imageobject>
+      <caption>
+        <para>Example Statement of Attainment with a QR code in the bottom right hand corner</para>
+      </caption>
+    </mediaobject>
+  </section>
   <section><title>onCourse Certificate Verification Portal</title>
     <para>The onCourse Certificate Verification Portal has now been deployed for all customers who
       have implemented the QR code printing function on their onCourse Qualification and Statement
@@ -84,42 +281,68 @@
         <para>AVETMISS 8 Export window</para>
       </caption>
     </mediaobject>
-</section>
-  <section>
-    <title>Automatically generate verification QR code for certificates</title>
-  <para>In preparation for the deployment of the onCourse Certificate Verification service,
-    Statements of Attainment and Qualifications can now be printed with a unique QR (Quick
-    Response) code and manual URL verification code. </para>
-  <para>The Certificate Verification service will allow employers or other RTOs to confirm the
-    certificate was issued to the student named without requiring them phone, or otherwise
-    contact the RTO to request look up of the Certificate number in the register. This web
-    portal feature is currently in testing and will be deployed shortly. </para>
-  
-  <para>Printing the built in certificate template will allow you to print Statement of
-    Attainment and Qualification certificates with or without a QR code. All RTOs wishing to use
-    the verification portal should check the default location of the QR code on their onCourse
-    certificate report and make adjustments to the background report elements or location of the
-    QR code in the report as necessary. If you wish to add the QR code to existing custom
-    certificate reports, you can contact ish for assistance.</para>
-  <mediaobject>
-    <imageobject>
-      <imagedata scalefit="1" width="60%" contentdepth="60%" fileref="images/soa_with_qr_code.png"/>
-    </imageobject>
-    <caption>
-      <para>Example Statement of Attainment with a QR code in the bottom right hand corner</para>
-    </caption>
-  </mediaobject>
+  </section>
+    <section>
+      <title>AVETMISS improvements</title>
+      <para> A new 'suppress for AVETMISS' field has been added to the enrolment record. This
+        will let users met the NSW Smart &amp; Skilled reporting requirements of reporting
+        and retaining records of a deferred or discontinued student once, and then suppress
+        the data from reporting in subsequent monthly reports without needing to cancel the
+        enrolment in onCourse.</para>
+      <para>The AVETMISS export runner default has also been changed to automatically tick and
+        select the option 'Export 90 for VET outcomes which are not set'. This can still be
+        changed to export another value, and won't affect the rules that govern the export
+        of two blank spaces for NSW Smart &amp; Skilled or 70 for outcomes completing in the
+        following calendar year.</para>
+    </section>
+    <section>
+      <title>New duplicate course option</title>
+      <para>This feature is of particular interest to RTO onCourse users, who may need to re-create
+        courses regularly as training packages change or internally unit clustering changes. In the
+        course cogwheel, a 'duplicate course' option will copy all the marketing and attached VET
+        unit information from an existing course and automatically add a '1' to the end of the
+        course code. This new course can then have units quickly added, deleted or otherwise
+        adjusted. By default, all duplicated courses are set to be enabled on creation, but will not
+        display on the web until you set that value. NOTE: attached documents and related
+        courses/products do not duplicate with the course. </para>
+    </section>
+    <section>
+      <title>Import AVETMISS outcome data from NAT00080, NAT00085 &amp; NAT00120 files</title>
+      <para> Of particular use to customers new to onCourse transitioning from another AVETMISS
+        enabled student management system, onCourse will now allow you to import and create student
+        contacts from the combination of NAT00080, NAT00085 &amp; NAT00120 files. The NAT00080,
+        NAT00085 will create contact records in onCourse, and any enrolment data in the NAT00120
+        (whether VET or non-VET) will be added as prior learning records to the student files
+        created.</para>
+    </section>
+    <section>
+      <title>Rewrite of the import feature</title>
+      <para>onCourse imports have been re-written in a groovy syntax, making them easier for
+        users to edit and extend. The most commonly used import, the AVETMISS 80 &amp; 85
+        allows you to customise the student contact data import using AVETMISS files
+        generated by another student management system.</para>
+    </section>
+    <section>
+      <title>Prior Learning data</title>
+      <para> To extend upon the exisiting AVETMISS data import option in onCourse that was
+        used to create student records, the NAT0060 and NAT00120 files can also be imported
+        to creating prior learning records in onCourse. This allows for simple migration
+        from another AVETMISS compliant student management systems. The prior learning table
+        can also be used to add enrolment and outcome data to exisiting students inside
+        onCourse, where learning has taken place externally to the onCourse system.</para>
+      <para>These records are visible in the contact enrolment tab 'outcomes' list, like other
+        outcomes the student obtains via onCourse enrolments.</para>
+    </section>
+    <section>
+      <title>Prior learning edit and export</title>
+      <para>Prior learning data imported into onCourse now has its own view in the contact education
+        tab. These records can be double clicked to edit, and new records can be added manually. All
+        prior learning data added manually or via import will also be collected and exported in
+        whole of college date range AVETMISS reporting.</para>
+    </section>
   </section>
   <section>
-    <title>onCourse portal refresh</title>
-    <para>A major refresh of the onCourse portal application is currently underway to signficantly
-      improve the functionality for students, tutors, employers, agents and parents. These
-      improvements have begun rolling out, and more will be added in the next few months.</para>
-    <para>In the last few weeks, the new group timetable view, scrolling schedule timetable view,
-      improved class roll attendance marking and payment gateway has been deployed. A brand new
-      dashboard, outcome marking module and certificate verification service are in the works.
-      Watch this space!</para>
-  </section>
+    <title>Financial Features</title>
   <section>
     <title>Default invoice terms per contact</title>
     <para>A new field has been added to the general preferences to allow for a default due date for
@@ -129,41 +352,6 @@
       calculate an invoice due date for your corporate clients. This features ties in with the new
       invoice payment due reminder script and portal payment gateway also included in this
       release.</para>
-  </section>
-  <section>
-    <title>Improved record loading speed over high latency internet links</title>
-    <para>The performance of communication between onCourse Client and Server has been
-      dramatically improved. Opening and saving windows is improved throughout the whole
-      application, but most noticeably if you are connecting over the internet (such as our cloud
-      hosted solution). Improvements range from 20-30% in some cases to reducing the delay by a
-      factor of 10 in other cases.</para>
-  </section>
-  <section>
-    <title>Allow Discounts to change fee charged instead of charge to expenses</title>
-    <para>Previously, all discounts processed within onCourse processed the value of the discount to
-      the default COS (cost of sale) account as defined by the financial preferences, called
-      'discounts given'. For example, if your class fee was $100, with a $20 discount, so the
-      student was charged $80, then $100 income would be earnt by the transaction, with $20 of COS
-      expense posted. </para>
-    <para>Substantial changes have been made to the way discounts can be created in the system so
-      they can be either be a:</para>
-    <orderedlist>
-      <listitem><para><emphasis role="bold">Discount linked to your choice of COS Account from those created in the
-        accounts list in general ledger.</emphasis> You can now post each discount type to
-        it's own COS account or create a COS account for each department. This type of setup is
-        recommended for discounts like senior's card discounts or promotional activities.</para></listitem>
-      <listitem><para><emphasis role="bold">Discount linked to no COS account.</emphasis> These types of discounts
-        are treated as an adjustment to the income earnt e.g. if the class fee was $100, with a
-        $20 discount posted to no COS account, so the student fee is $80, then $80 income would
-        be earnt by the transaction, with no expense posted. For 'change of fee' type discounts,
-        like Smart and Skilled student fees, using the no COS discount type is recommended. </para></listitem>
-    </orderedlist>
-    <para>Changes to existing discount COS allocations will not change transactions created in the
-      past; it will only affect transactions created after the change.</para>
-    <para>All manual discounts in Quick Enrol, and discounts in manual invoices will post as a
-      reduction of income, rather than to the COS expense.</para>
-    <para>The <link xlink:href="http://ish.com.au/s/onCourse/doc/latest/manual/discounts.html">Discounts chapter</link> of the user documentation has been revised to document in detail
-      all of these changes</para>
   </section>
   <section>
     <title>Allow transaction dates to be edited before period finalised</title>
@@ -211,192 +399,33 @@
       forward.</para>
   </section>
   <section>
-    <title>New duplicate course option</title>
-    <para>This feature is of particular interest to RTO onCourse users, who may need to re-create
-      courses regularly as training packages change or internally unit clustering changes. In the
-      course cogwheel, a 'duplicate course' option will copy all the marketing and attached VET
-      unit information from an existing course and automatically add a '1' to the end of the
-      course code. This new course can then have units quickly added, deleted or otherwise
-      adjusted. By default, all duplicated courses are set to be enabled on creation, but will not
-      display on the web until you set that value. NOTE: attached documents and related
-      courses/products do not duplicate with the course. This additional function will be added as
-      part of the next onCourse release.</para>
+    <title>Allow Discounts to change fee charged instead of charge to expenses</title>
+    <para>Previously, all discounts processed within onCourse processed the value of the discount to
+      the default COS (cost of sale) account as defined by the financial preferences, called
+      'discounts given'. For example, if your class fee was $100, with a $20 discount, so the
+      student was charged $80, then $100 income would be earnt by the transaction, with $20 of COS
+      expense posted. </para>
+    <para>Substantial changes have been made to the way discounts can be created in the system so
+      they can be either be a:</para>
+    <orderedlist>
+      <listitem><para><emphasis role="bold">Discount linked to your choice of COS Account from those created in the
+        accounts list in general ledger.</emphasis> You can now post each discount type to
+        it's own COS account or create a COS account for each department. This type of setup is
+        recommended for discounts like senior's card discounts or promotional activities.</para></listitem>
+      <listitem><para><emphasis role="bold">Discount linked to no COS account.</emphasis> These types of discounts
+        are treated as an adjustment to the income earnt e.g. if the class fee was $100, with a
+        $20 discount posted to no COS account, so the student fee is $80, then $80 income would
+        be earnt by the transaction, with no expense posted. For 'change of fee' type discounts,
+        like Smart and Skilled student fees, using the no COS discount type is recommended. </para></listitem>
+    </orderedlist>
+    <para>Changes to existing discount COS allocations will not change transactions created in the
+      past; it will only affect transactions created after the change.</para>
+    <para>All manual discounts in Quick Enrol, and discounts in manual invoices will post as a
+      reduction of income, rather than to the COS expense.</para>
+    <para>The <link xlink:href="http://ish.com.au/s/onCourse/doc/latest/manual/discounts.html">Discounts chapter</link> of the user documentation has been revised to document in detail
+      all of these changes</para>
   </section>
   <section>
-    <title>Distribution of VET Certificates through the portal</title>
-    <para>A new script has been added to automatically print and distribute VET Certificates through
-      the skillsOnCourse portal called 'send certificate vet created notification'. Like all new
-      scripts, it is disabled by default and you will need to enable it if you wish to use
-      it.</para>
-    <para>Each day, all unprinted VET Certificates for student who have a validated USI will be
-      printed to PDF and saved to the student's enrolment record. </para>
-    <para>You will need to make sure you have created and uploaded the following three two page
-      background documents to onCourse before enabling this script:
-      vet_qualification_background.pdf, vet_skillset_background.pdf, and vet_soa_background.pdf.
-      The script will overlay the certificate template on the correct background type during the
-      print process.</para>
-    <para>The Certificate will then be uploaded to the student portal, and the student sent an
-      email notifying them is available for download.</para>
-    <para>The same email template, 'Certificate available', also called on by the non-VET
-      Certificate of Attendance distribution script is sent. Ensure any modifications you make to
-      the template suit the recipient of both VET and non-VET certificates, or create a copy of
-      the template to send a different email to VET certified students.</para>
-  </section>
-  <section>
-    <title>Automated creation of VET Certificates</title>
-    <para>Unlike non-VET Certificates of Attendance, formal VET certifications like Statements of
-      Attainment and Qualifications can only be issued when a student achieves outcome results for
-      the units that make up their course. </para>
-    <para>A new script in onCourse checks daily for any outcome results which have been updated
-      during the previous 24 hours, and if all the outcomes attached to the enrolment have be set
-      to have an outcome status, a VET certification will be created if at least one of those
-      outcomes was successful.</para>
-    <para>Where the student has successfully achieved all outcomes linked to a course which
-      'satisfies complete qualification or skill set', then they will be issued a Qualification or
-      Skill Set Certificate on completion. If all outcomes have been marked, and some are
-      unsuccessful, they will be issued a Statement of Attainment instead.</para>
-    <para>For students undertaking a short course, who have successfully, or a mix of successfully
-      and unsuccessfully, completed their outcomes, a Statement of Attainment will also be created
-      for their successful units.</para>
-    <para>Deatiled documentation for enabling this feature is available in the
-      user handbook: <link xlink:href="https://www.ish.com.au/s/onCourse/doc/latest/manual/rto.html#rto-Certificates">VET Qualifications and other Certificates </link>
-    </para>
-  </section>
-  <section>
-    <title>onCourse Menu Restructure</title>
-    <para>To improve clarity and ensure all new onCourse features have a home in the menu system,
-      we have restructured the top level menus to better group related items.</para>
-    <para>A new menu option called 'Products' includes all the items you can sell via onCourse,
-      including Courses, Gift Vouchers and Memberships. </para>
-    <para>The menu item 'Training' contains the features related to setting up and scheduling
-      training, including items such as Classes, Sites and Documents.</para>
-    <para>The previous menu 'People' has been split into two menus: The new 'People' menu contains
-      the options to access contacts and their communication history via mailing lists and
-      messages, while the  new 'Activity' menu is where you will find Quick Enrol and all the
-      results of contact engagement with onCourse including Applications, Enrolments, Certificates
-      and Sales.</para>
-    <para>All options related to fees and payments, including CorporatePasses and Discounts can be
-      found under the 'Financial' menu.</para>
-    <para>The File, Edit, Windows and Help menu options are unchanged.</para>
-    <mediaobject>
-      <imageobject>
-        <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/new_menu_structure.png" format="png"/>
-      </imageobject>
-      <caption>
-        <para>The new onCourse menu structure</para>
-      </caption>
-    </mediaobject>
-  </section>
-  <section>
-    <title>Find related record icon relocation</title>
-    <para>The find related records function in onCourse is such a regularly used and powerful
-      function of the onCourse application, that we have moved this feature out of the cogwheel
-      list and in to its very own own action icon to make it more prominant. You can now access
-      the 'Find related' feature to the right of the search box in all onCourse list views. It's
-      icon looks like a magnifying glass hovering over a stack of papers.</para>
-    <mediaobject>
-      <imageobject>
-        <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/find_related_on_left_side.png" format="png"/>
-      </imageobject>
-      <caption>
-        <para>The Find Related icon can now be found to the right of the search field in all
-          onCourse list views</para>
-      </caption>
-    </mediaobject>
-  </section>
-  <section>
-    <title>Class cancellation notifications moved to script and email templates</title>
-    <para>When a class was cancelled in previous versions of onCourse, a window opened asking if
-      the user wanted to send a message to the students to notify them, using a template that
-      couldn't be easily customised. To make this process consistant with other automated
-      notifications, a new script and email template set have been developed to replace this
-      manual message. Please review the new template called 'Enrolment cancellation' and make the
-      appropriate changes for your college before enabling this script.</para>
-    <para>The new script 'Send enrolment cancellation' is disabled by default. If you wish to use
-      it at your college you will need to enable it. Please note that enabling this script will
-      automatically send the 'Enrolment cancellation' email message to all enrolled students each
-      time you cancel a class. If this script is enabled this process will happen in the
-      background without the opportunity to review or disable the sending of the message.</para>
-    <para>Another new script and email template pair have been added to notify tutors when a class
-      is cancelled, in the same way students are notified. Review the script called 'Send tutor
-      class cancellation' which is disabled by default, and 'Tutor notice of class cancellation'
-      email template for any adjustments you wish to make before enabling this script.</para>
-    <para>Note these scripts do not trigger when an enrolment is cancelled - only when a class is
-      cancelled.</para>
-  </section> 
-  <section>
-    <title>Import AVETMISS outcome data from NAT00080, NAT00085 &amp; NAT00120 files</title>
-    <para> Of particular use to customers new to onCourse transitioning from another AVETMISS
-      enabled student management system, onCourse will now allow you to import and create student
-      contacts from the combination of NAT00080, NAT00085 &amp; NAT00120 files. The NAT00080,
-      NAT00085 will create contact records in onCourse, and any enrolment data in the NAT00120
-      (whether VET or non-VET) will be added as prior learning records to the student files
-      created.</para>
-  </section>
-  <section>
-    <title>Find related record icon relocation</title>
-    <para>The find related records function in onCourse is such a regularly used and powerful
-      function of the onCourse application, that we have moved this feature out of the cogwheel
-      list and in to its very own own action icon to make it more prominant. You can now access
-      the 'Find related' feature to the right of the search box in all onCourse list views. It's
-      icon looks like a magnifying glass hovering over a stack of papers.</para>
-    <mediaobject>
-      <imageobject>
-        <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/find_related_on_left_side.png" format="png"/>
-      </imageobject>
-      <caption>
-        <para>The Find Related icon can now be found to the right of the search field in all
-          onCourse list views</para>
-      </caption>
-    </mediaobject>
-  </section>
-  <section>
-    <title>Class cancellation notifications moved to script and email templates</title>
-    <para>When a class was cancelled in previous versions of onCourse, a window opened asking if
-      the user wanted to send a message to the students to notify them, using a template that
-      couldn't be easily customised. To make this process consistant with other automated
-      notifications, a new script and email template set have been developed to replace this
-      manual message. Please review the new template called 'Enrolment cancellation' and make the
-      appropriate changes for your college before enabling this script.</para>
-    <para>The new script 'Send enrolment cancellation' is disabled by default. If you wish to use
-      it at your college you will need to enable it. Please note that enabling this script will
-      automatically send the 'Enrolment cancellation' email message to all enrolled students each
-      time you cancel a class. If this script is enabled this process will happen in the
-      background without the opportunity to review or disable the sending of the message.</para>
-    <para>Another new script and email template pair have been added to notify tutors when a class
-      is cancelled, in the same way students are notified. Review the script called 'Send tutor
-      class cancellation' which is disabled by default, and 'Tutor notice of class cancellation'
-      email template for any adjustments you wish to make before enabling this script.</para>
-    <para>Note these scripts do not trigger when an enrolment is cancelled - only when a class is
-      cancelled.</para>
-  </section>
-  <section>
-    <title>Discount override at the class level</title>
-    <para>This new feature allows you to override the discount value at the class level, to assign
-      varying class fees sharing the same discount name. This option may be especially useful for
-      funded programs like Smart &amp; Skilled. For example, a number of courses and classes can
-      share the discount 'First Qualification rate' but each class can have it's own discounted
-      price. Double click on the discount in the class budget tab to edit it.</para>
-  </section>
-  <section>
-    <title>Discount offset from class start date</title>
-    <para>In addition to discounts running for a set date period, discounts can now be set to be
-      valid as an offset from the class start date. The offset can allow the discount to run prior
-      to the start date, or after the start date. This will allow the creation of both early bird
-      style pricing and discounts for in-term enrolments.</para>
-  </section>
-  <section>
-    <title>Prior learning edit and export</title>
-    <para>Prior learning data imported into onCourse now has its own view in the contact education
-      tab. These records can be double clicked to edit, and new records can be added manually. All
-      prior learning data added manually or via import will also be collected and exported in
-      whole of college date range AVETMISS reporting.</para>
-  </section>
-  <section>
-    <title>Improved performance across the application</title>   
-  <para> Improve performance across the application, and especially in the class edit view. Over
-    slow internet links the performance can be up to 10 times faster for certain actions.</para>
-  </section> <section>
     <title>New types of discounts</title>
     <para> Two new bulk purchase discount types were added to onCourse. One option allows
       you to define discounts based on the number of enrolments in the transaction e.g.
@@ -417,28 +446,21 @@
       'combine discounts' has now been removed from onCourse.</para>
   </section>
   <section>
-    <title>Rewrite of the import feature</title>
-    <para>onCourse imports have been re-written in a groovy syntax, making them easier for
-      users to edit and extend. The most commonly used import, the AVETMISS 80 &amp; 85
-      allows you to customise the student contact data import using AVETMISS files
-      generated by another student management system.</para>
+    <title>Discount override at the class level</title>
+    <para>This new feature allows you to override the discount value at the class level, to assign
+      varying class fees sharing the same discount name. This option may be especially useful for
+      funded programs like Smart &amp; Skilled. For example, a number of courses and classes can
+      share the discount 'First Qualification rate' but each class can have it's own discounted
+      price. Double click on the discount in the class budget tab to edit it.</para>
   </section>
   <section>
-    <title>onCourse font change</title>
-    <para>The onCourse system font has been changed to SourceSansPro to allow for clearer
-      display on Retina and other high resolution screens.</para>
+    <title>Discount offset from class start date</title>
+    <para>In addition to discounts running for a set date period, discounts can now be set to be
+      valid as an offset from the class start date. The offset can allow the discount to run prior
+      to the start date, or after the start date. This will allow the creation of both early bird
+      style pricing and discounts for in-term enrolments.</para>
   </section>
-  <section>
-    <title>Prior Learning data</title>
-    <para> To extend upon the exisiting AVETMISS data import option in onCourse that was
-      used to create student records, the NAT0060 and NAT00120 files can also be imported
-      to creating prior learning records in onCourse. This allows for simple migration
-      from another AVETMISS compliant student management systems. The prior learning table
-      can also be used to add enrolment and outcome data to exisiting students inside
-      onCourse, where learning has taken place externally to the onCourse system.</para>
-    <para>These records are visible in the contact enrolment tab 'outcomes' list, like other
-      outcomes the student obtains via onCourse enrolments.</para>
-  </section>
+
   <section>
     <title>Payroll Improvements</title>
     <para> Tutors can now be attached to classes with multiple roles and payrates, allowing
@@ -457,40 +479,30 @@
       period, it will appear again on that payslip. This will continue until the pay line
       is processed via a pay slip.</para>
   </section>
-  <section>
-    <title>Payment In &amp; Quick Enrol redesign for payment processing</title>
-    <para>Creating a payment separately from an enrolment process used to open a 'payment
-      in' window. The window that opens now is Quick Enrol. Validation has been removed
-      from inside Quick Enrol requiring the transaction to contain at least one purchase. </para>
-    <para>Now, you can use Quick Enrol to process payments against invoices with outstanding
-      balances. You can do this via the normal Quick Enrol window, or when clicking on the
-      plus option inside the payment in list view. This change in user interface also
-      introduces the opportunity for vouchers to be used as payment method after the
-      enrolment process.</para>
   </section>
-  <section>
-    <title>Preference user interface updates</title>
-    <para>The preference settings for payment types, custom fields, contact relations and
-      concession types have been moved from being their own menu item and windows, to
-      being added to the list of preference options in the File > Preferences > General
-      list view.</para>
-  </section>
-  <section>
-    <title>AVETMISS improvements</title>
-    <para> A new 'suppress for AVETMISS' field has been added to the enrolment record. This
-      will let users met the NSW Smart &amp; Skilled reporting requirements of reporting
-      and retaining records of a deferred or discontinued student once, and then suppress
-      the data from reporting in subsequent monthly reports without needing to cancel the
-      enrolment in onCourse.</para>
-    <para>The AVETMISS export runner default has also been changed to automatically tick and
-      select the option 'Export 90 for VET outcomes which are not set'. This can still be
-      changed to export another value, and won't affect the rules that govern the export
-      of two blank spaces for NSW Smart &amp; Skilled or 70 for outcomes completing in the
-      following calendar year.</para>
- </section>
 </section>
     <section role="scripts">
+      <section>
     <title>Reports and scripts</title>
+      <title>Optional USI script change</title>
+      <para>Please read this information carefully and decide if you wish to update the default
+        script 'Send USI reminder'.</para>
+      <para>The USI reminder has been adjusted to send to only to students enrolled in courses with
+        units of competency attached. The previous implementation was to send to VET flagged
+        courses, however some onCourse users VET flag courses with no modules for funding purposes,
+        and those students don't need a USI. An additional line has also been added to send a
+        notification to your onCourse admin email address (as per your onCourse message preference
+        settings) each time this message is sent, advising how many students were contacted. If you
+        wish to update your script to the new version as described, please go to File > Preferences
+        > Scripts and locate 'send USI reminder'. Double click on the script and click the button
+        'Update to latest version'. Ensure the 'enabled' flag is also set. You may also wish to
+        adjust your enrolment confirmation email template that sends the first USI request to
+        enrolling students. In both the plain text and HTML email, before the USI request text is a
+        string that says:
+        <programlisting> &lt;% if (enrolment.courseClass.course.isVET == true) { %&gt; </programlisting>
+        Replace it with:
+        <programlisting> &lt;% if (enrolment.courseClass.course.modules.size() > 0) { %> </programlisting></para>
+    </section>
       <itemizedlist>
         <listitem><para>Added the last outcome end date as 'Date achieved' to the Certificate of Attendance report
           <systemitem>#30042</systemitem></para></listitem>

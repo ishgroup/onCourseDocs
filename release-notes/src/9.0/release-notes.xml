@@ -539,11 +539,11 @@
         create new, or update existing student records with the same First Name, Last Name and
         Date of Birth. <systemitem>#26792</systemitem></para></listitem>
       <listitem><para>Fix to the 'Enrolment notification' email to tutors to display the price the student paid
-        inclusive of any discounts. Change the line <code>Fee Paid:
+        inclusive of any discounts. Change the line <programlisting>Fee Paid:
           ${enrolment.invoiceLine.priceEachExTax.add(enrolment.invoiceLine.taxEach)} GST
-          ${enrolment.invoiceLine.taxEach.isZero() ? 'free' : 'inc'} </code></para>
+          ${enrolment.invoiceLine.taxEach.isZero() ? 'free' : 'inc'} </programlisting></para>
         <para>to</para>
-        <para><code>Fee Paid: ${enrolment.invoiceLine.discountedPriceTotalIncTax} GST ${enrolment.invoiceLine.taxEach.isZero() ? 'free' : 'inc'} </code></para>
+        <para><programlisting>Fee Paid: ${enrolment.invoiceLine.discountedPriceTotalIncTax} GST ${enrolment.invoiceLine.taxEach.isZero() ? 'free' : 'inc'} </programlisting></para>
         <para>in both the plain and HTML copy of the template, or update the whole template with the latest version from the <link xlink:href="https://github.com/ari/oncourse-scripts">Github repository</link><systemitem> #29002</systemitem></para></listitem>
     </itemizedlist> <itemizedlist>
       <listitem><para>A new version of the debtors report has been added to the contact window that can be run to a

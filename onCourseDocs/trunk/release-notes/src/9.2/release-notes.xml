@@ -10,11 +10,29 @@
   <section role="major">
     <title>Major features</title>
 <section>
-  <title>Assessment tasks</title>
+  <title>Assessment tasks and Training Plans</title>
   <para>A new feature for onCourse has been added to allow you to create assessment tasks.
-        Assessment tasks have a name description and attached documents. This is the beginning of a
-        series of development work scheduled for assessment.</para>
+        Assessment tasks have a name, description, due date, release date and attached documents.
+        This is the beginning of a series of development work scheduled for assessment tasks.</para>
+      <para>The Attendance tab layout has been updated to show more information, including the
+        training plan information mapping the units of competency to the scheduled sessions,
+        assessment and their due dates. This means that if you attach and assessment task to a unit,
+        where the assessment due date is after the end date of class, the outcome end date will be
+        the assessment due date rather than the class end date.</para>
+      <para>For more information about the new features and changes to this tab, refer to the
+        Assessment tasks chapter of the user documentation.</para>
 </section>
+    <section>
+      <title>Time and Attendance (payroll) updates</title>
+      <para>A number of visual changes have been made to the attendance marking tab, including the
+        marking of tutor attendance for payroll purposes.</para>
+      <para>New tutor attendance/payroll status for scheduled sessions are Confirmed' (green),
+        'Rejected' (red), 'Not confirmed' (grey). Tutor payable time for each session can be
+        modified as needed to be either more than or less than the scheduled payable time from the
+        class timetable.</para>
+      <para>For more information about the new features and changes to this tab, refer to the
+        Payroll chapter of the user documentation.</para>
+    </section>
     <section>
       <title>Audit Logging</title>
       <para>A new table for audit logging was added to the onCourse user application.</para>
@@ -27,6 +45,16 @@
         <systemitem>OD-9894</systemitem></para></listitem>
       <listitem><para>A new email template has been added to the waiting list cogwheel option to allow you to manually notify students when a last minute place becomes available in a class
         <systemitem>OD-9895</systemitem></para></listitem>
+      <listitem>A new script and email template set have been added for 'Send VET course completion
+        survey' 14 days after completion of training <systemitem>OD-10041 and
+        OD-10042</systemitem></listitem>
+      <listitem>Payslip Report updated to sort printed results by tutor last name, sort pay lines
+        per tutor by date, and include a report total sum
+        <systemitem>OD-10077</systemitem></listitem>
+      <listitem>Student detail report updated to show time stamp and user for each note record printed in the report
+        <systemitem>OD-10045</systemitem></listitem>
+      <listitem>Invoice reports (both print and email templates) now sort invoiceLines in alphabetical order
+        <systemitem>OD-9935</systemitem></listitem>
     </itemizedlist>
   </section>
   <section role="minor">
@@ -54,6 +82,8 @@
       <listitem><para>A new status of 'in progress' has been added to applications, to differentiate between new and
           un-actioned items, and those that have been followed up
           <systemitem>OD-9892</systemitem></para></listitem>
+      <listitem><para>A new core filter has been added to the course window to, by default, hide disabled courses from the list view when it opens
+        <systemitem>OD-10031</systemitem></para></listitem>
       <listitem><para>Improvements to tutor records with 'date finished' in their record, to show their record in a
           greyed out font in the tutor list view and stop them from being looked up by the
           clairvoyance when adding tutors to classes <systemitem>OD-8336</systemitem></para></listitem>
@@ -77,6 +107,9 @@
       <listitem><para>Improved AVETMISS calculation of  '3 - New Enrolment' or '4 - Continuing enrolment' to take into consideration students enrolling in pathway programs that require the completion of multiple short courses
         <systemitem>OD-9903</systemitem></para></listitem>
       <listitem><para>Fix typo in payment in process <systemitem>OD-9990</systemitem></para></listitem>
+      <listitem><para>Fix to the validation process for the contact state field data to allow up to 20 characters to handle overseas customer data <systemitem>OD-10058</systemitem></para></listitem>
+      <listitem><para>Fix to the invoice creation process where in some instances the student name was missing from the invoiceLine detail <systemitem>OD-10043</systemitem></para></listitem>
+      <listitem><para>Improvement to the layout of the duplicate class sheet. 'Remove class notes' is now ticked by default <systemitem>OD-10028</systemitem></para></listitem>
     </itemizedlist>
   </section>
   <section role="web">
@@ -94,6 +127,8 @@
             <systemitem>OD-9959</systemitem></para></listitem>
       <listitem><para>Improvement to the layout of portal related contacts UI to allow better scrolling and navigation <systemitem>OD-9988 and OD-1961</systemitem></para></listitem>
       <listitem><para>Fix to delete the class web tab copy from the class web block when it is deleted from the onCourse class record <systemitem>OD-10013</systemitem></para></listitem>
+      <listitem><para>Fix to display discounts correctly on the web for search result classes <systemitem>OD-10061</systemitem></para></listitem>
+      
     </itemizedlist>
   </section>
 </chapter>

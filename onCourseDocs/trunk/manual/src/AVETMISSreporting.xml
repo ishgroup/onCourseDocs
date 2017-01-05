@@ -852,7 +852,7 @@
 							<row>
 								<entry><emphasis role="bold">NAT file</emphasis></entry>
 								<entry><emphasis role="bold">State Description</emphasis></entry>
-								<entry><emphasis role="bold">Locations</emphasis></entry>
+								<entry><emphasis role="bold">Location in onCourse</emphasis></entry>
 								<entry><emphasis role="bold">Can Customer Edit?</emphasis></entry>
 								<entry><emphasis role="bold">What is exported</emphasis></entry>
 								<entry><emphasis role="bold">Plain English</emphasis></entry>
@@ -865,7 +865,7 @@
 								<entry>System Generated</entry>
 								<entry>No</entry>
 								<entry>Lists the Software product as 'onCourse'</entry>
-								<entry>The name of your AVETMISS Program</entry>
+								<entry>Tells SkillsVictoria you use onCourse for your SMS</entry>
 							</row>
 							<row>
 								<entry>NAT 00010</entry>
@@ -873,43 +873,41 @@
 								<entry>System Generated</entry>
 								<entry>No</entry>
 								<entry> Lists the contact email 'info@ish.com.au'</entry>
-								<entry>Contact email for Ish, your software vendors</entry>
+								<entry>Provides a contact details for SkillsVictoria to contact ish</entry>
 							</row>
 							<row>
 								<entry>NAT 00080</entry>
 								<entry>Victorian Student Number (VSN)</entry>
-								<entry>VET Tab</entry>
+								<entry>Contact Record VET Tab</entry>
 								<entry>Yes</entry>
 								<entry>The VSN is exported if entered into onCourse</entry>
-								<entry>The VSN is issued by SkillsVictoria, and will need to be
-									entered into onCourse</entry>
+								<entry>Tells SkillsVictoria the VSN for that Student ID</entry>
 							</row>
 							<row>
 								<entry>NAT 00080</entry>
 								<entry>Client Industry of Employment</entry>
-								<entry>VET Tab</entry>
+								<entry>Contact Record VET Tab</entry>
 								<entry>Yes</entry>
 								<entry>The Industry of Employment is exported if entered into
 									onCourse</entry>
-								<entry>What industry you student works in</entry>
+								<entry>Tells SkillsVictoria the industry the student works in, if they work</entry>
 							</row>
 							<row>
 								<entry>NAT 00080</entry>
 								<entry>Client Occupation Identifier</entry>
-								<entry>VET Tab</entry>
+								<entry>Contact Record VET Tab</entry>
 								<entry>Yes</entry>
-								<entry>The Occpation Identifier is exported if entered into
-									onCourse</entry>
-								<entry>What kind of job they have</entry>
+								<entry>The Occupation Identifier is exported if entered into onCourse</entry>
+								<entry>Tells SkillsVictoria the student's occupation, if they  work</entry>
 							</row>
 							<row>
 								<entry>NAT 00100</entry>
 								<entry>Prior Educational Achievement Recognition Identifier</entry>
 								<entry>System Generated</entry>
 								<entry>No</entry>
-								<entry>Always exports as A for Australian. </entry>
-								<entry>Tells SkillsVictoria if the qualification received is
-									Australian or International</entry>
+								<entry>Always A for Australian. </entry>
+								<entry>Tells SkillsVictoria if the previous qualification is Australian or
+									International</entry>
 							</row>
 							<row>
 								<entry>NAT 00120</entry>
@@ -917,23 +915,23 @@
 								<entry>Class</entry>
 								<entry>Yes</entry>
 								<entry>Start date of the class the student is enrolled in</entry>
-								<entry/>
+								<entry>Tells SkillsVictoria when the student's started their program</entry>
 							</row>
 							<row>
 								<entry>NAT 00120</entry>
 								<entry>Eligibility Exemption Indicator</entry>
-								<entry/>
-								<entry/>
-								<entry/>
-								<entry/>
+								<entry>Enrolment</entry>
+								<entry>Yes</entry>
+								<entry>The code for the student's eligibility exemption</entry>
+								<entry>Tells SkillsVictoria what exemption the student has, if there is one</entry>
 							</row>
 							<row>
 								<entry>NAT 00120</entry>
 								<entry>VET FEE-HELP (Income Contingent Loan) Indicator</entry>
-								<entry/>
-								<entry/>
-								<entry/>
-								<entry/>
+								<entry>Enrolment</entry>
+								<entry>Yes</entry>
+								<entry>Indicates if the student is on VET FEE HELP</entry>
+								<entry>Tells SkillsVictoria that student is using VET FEE HELP</entry>
 							</row>
 							<row>
 								<entry>NAT 00120</entry>
@@ -942,57 +940,56 @@
 								<entry>Yes</entry>
 								<entry>onCourse will only export the ANZIC code only when VET
 									Funding Source State data is either LSG, PSG or SSG</entry>
-								<entry/>
+								<entry>Tells SkillsVictoria the ANZSIC for the course based of the details on
+									Training.gov.au</entry>
 							</row>
 							<row>
 								<entry>NAT 00120</entry>
 								<entry>Enrolment Date</entry>
 								<entry>Enrolment</entry>
 								<entry>No</entry>
-								<entry>
-									<para>the enrolment date is inserted based on the date the
-										enrolment was processed into onCourse, or the course start
-										date, which ever is earlier.</para>
-								</entry>
-								<entry/>
+								<entry> the date the enrolment was processed into onCourse, or the course start date, which
+									ever is earlier.</entry>
+								<entry>Tells SkillsVictoria when the student enrolled in the course.</entry>
 							</row>
 							<row>
 								<entry>NAT 00120</entry>
 								<entry>Enrolment Identifier</entry>
-								<entry>Enrolment</entry>
+								<entry>Outcomes</entry>
 								<entry>No</entry>
-								<entry> an enrolment identifier is added, using the record ID of the
-									outcome. This value is not visible or editable in the onCourse
-									user interface. This means once you have reported a student via
-									AVETMISS you should not cancel and re-enrol them as their unique
-									ID will change.</entry>
-								<entry/>
+								<entry>the record ID of the outcome. This value is not visible or editable in the onCourse
+									user interface. NOTE: Once you have reported a student via
+									AVETMISS you should not cancel and re-enrol in the same unit of
+									competency as their unique ID will change.</entry>
+								<entry>Gives SkillsVictoria a unique ID for Units of Competency so they can track individual
+									units.</entry>
 							</row>
 							<row>
 								<entry>NAT 00120</entry>
 								<entry>Client Fees-Other</entry>
 								<entry>System Generated</entry>
 								<entry>No</entry>
-								<entry> the 'Client Fees - other' is always exported as $0. There is
-									no corresponding field for this value in onCourse.</entry>
-								<entry/>
+								<entry>Always exported as $0. There is no corresponding field for this value in
+									onCourse.</entry>
+								<entry>Tells SkillsVictoria if there are fees in addition to the course fee. </entry>
 							</row>
 							<row>
 								<entry>NAT 00120</entry>
 								<entry>Delivery Provider ABN</entry>
 								<entry>General Preferences</entry>
 								<entry/>
-								<entry>the Delivering Training RTO ABN is always exported as the RTO
-									ABN from the general preferences. </entry>
-								<entry/>
+								<entry>The ABN listed in general preferences. </entry>
+								<entry>Tells SkillsVictoria your RTO's ABN</entry>
 							</row>
 							<row>
 								<entry>NAT 00120</entry>
 								<entry>Funding Eligibility Key</entry>
-								<entry/>
-								<entry/>
-								<entry/>
-								<entry/>
+								<entry>System Generated</entry>
+								<entry>No</entry>
+								<entry>Always exported as blank. There is no corresponding field for this value in
+									onCourse.</entry>
+								<entry>Tells SkillsVictoria the specific funding eligibility key for specific programs such
+									as Skills First</entry>
 							</row>
 							<row>
 								<entry>NAT 00130</entry>
@@ -1000,23 +997,24 @@
 								<entry>Class</entry>
 								<entry>Yes</entry>
 								<entry>Start date of the class the student is enrolled in</entry>
-								<entry/>
+								<entry>Tells SkillsVictoria when the student's started their program</entry>
 							</row>
 							<row>
 								<entry>NAT 00130</entry>
 								<entry>Program Supervised Teaching Activity Completion Date</entry>
-								<entry/>
-								<entry/>
-								<entry/>
-								<entry/>
+								<entry>System Generated</entry>
+								<entry>No</entry>
+								<entry>The date of the last session in the student's program</entry>
+								<entry>Tells SkillsVictoria when the student finished their training delivery.</entry>
 							</row>
 							<row>
 								<entry>NAT 00130</entry>
 								<entry>Program Unique Supervised Hours</entry>
-								<entry/>
-								<entry/>
-								<entry/>
-								<entry/>
+								<entry>System Generated</entry>
+								<entry>No</entry>
+								<entry>Total Number of hours for all classes attached to the certificate.</entry>
+								<entry>Tells SkillsVictoria the total planned delivery in hours, as opposed to the nominal
+									hours. </entry>
 							</row>
 						</tbody>
 					</tgroup>

@@ -1,7 +1,5 @@
 import org.codehaus.groovy.runtime.DateGroovyMethods
 
-apply plugin: JiraPlugin
-
 task mergeImages(type: Copy) {
     from fileTree(dir: 'src', include: '**/images/*').files
     into "${buildDir}/html/images"
@@ -10,9 +8,6 @@ task mergeImages(type: Copy) {
 docbookHtml.dependsOn mergeImages
 docbookPdf.dependsOn mergeImages
 
-task getReleaseNotes(type: JiraPlugin) {
-
-}
 
 task newRelease {
   doLast {

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="javascript">
+	<title>Javascript</title>
+
+	<section xml:id="js">
+		<title>Javascript</title>
+		<para>Log into webDAV and look at this folder:<programlisting>/s/js/</programlisting></para>
+		<para>In there you'll see a number of javascript files which drive your onCourse website.
+			Some are third party vendor supplied files and others are default parts of onCourse
+			itself. site.js is the starting point and it has a list of all the other files which are
+			included. Note that the order of including files can sometimes be important. Let's look
+			at site.js now:</para>
+		<para>
+			<programlisting>//= minify off
+//= require base.js
+//= require extra.js</programlisting>
+		</para>
+		<para>This is telling you that minification is disabled and that the javascript files base.js and
+			extra.js are included. This is a different syntax to SCSS so don't get them confused.
+			The combined output file is called all.js and the files which are merged don't need to
+			start with an underscore.</para>
+		<section>
+			<title>Minification</title>
+			<para>Unlike CSS, the javascript is not automatically minified. This is because sometimes
+				javascript minification can actually break your javascript (particularly if it
+				contains errors). Browsers will often manage to figure out your broken javascript,
+				but once minified, errors really cause problems.</para>
+			<para>You can enable minification by changing the "off" to "on" and saving the file. Wait about
+				30 seconds and then review your site in staging before pushing it to live.</para>
+			<para>We use the Google Closure compiler to verify and minify the output.</para>
+		</section>
+		<section>
+			<title>Compression</title>
+			<para>all.js.gz is automatically created and used by browsers. This is another reason
+				minification may not be quite so important: compression often does a pretty good job
+				of reducing the file sizes.</para>
+		</section>
+	</section>
+</chapter>

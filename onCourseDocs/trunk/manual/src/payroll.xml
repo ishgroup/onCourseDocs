@@ -342,65 +342,69 @@
 	</section>
 	<section xml:id="payroll-attendance">
 		<title>Confirming Attendance and exceptions</title>
-		<para>Not only is attendance used for students, it can also be used to record whether your
-			Tutors showed up and if they stayed for longer or shorter than their rostered time. You
-			do not have to use this function in order to pay Tutors, but it can be very useful
-			especially when managing variations in payable time. Tutor attendance can be set for
-			each session on the class Attendance tab.</para>
+		<para>Not only is attendance used for students, it is also used to generate the tutor payroll at
+			the default rate scheduled, or record whether they stayed for longer or shorter than
+			their scheduled time. You must confirm tutor attendance for payroll to be processed,
+			either by setting it manually or allowing the generate payroll process to set all
+			unmarked attendance as payable.</para>
+		<para> Tutor attendance can be set for each session on the class Attendance tab. Attendance can
+			only be confirmed for sessions that the tutor is assigned to in the class
+			timetable.</para>
 		<example>
-			<title>Setting Tutor attendance for Tutor pay</title>
+			<title>Confirming Tutor attendance for Tutor pay</title>
 			<orderedlist>
 				<listitem>
 					<para>Open a class record and navigate to the attendance tab.</para>
 				</listitem>
 				<listitem>
-					<para>For each session, click on the attendance icon and set the appropriate
-						attendance. Click once for attended, twice for not attended. Three clicks
-						will set the session back to unmarked.<inlinemediaobject>
+					<para>For each session, click on the attendance icon and set the appropriate attendance. Click
+						once for payroll confirmed (the tutor should be paid the scheduled rate),
+						twice for payroll rejected (the tutor should not be paid for this session).
+						Three clicks will set the session back to not confirmed.</para>
+					<para>Attendance can also be set in bulk by clicking on the down arrow icon next
+						to the tutor name and choosing one of the options from the drop down.</para>
+					<mediaobject>
 							<imageobject>
 								<imagedata scalefit="1" width="100%" contentdepth="100%"
 									fileref="images/payroll_tutor_attendance.png"/>
 							</imageobject>
-						</inlinemediaobject></para>
+						<caption><para>Confirming tutor pay in bulk</para></caption>
+					</mediaobject>
 				</listitem>
-				<listitem>
-					<para>To set the attendance to partial attendance, or absent with reason, right
-						click on the attendance icon and select one of these options. When you
-						select one of these values a drop down sheet will appear with fields for
-						additional information to be set. Either of these options need to be
-						approved for Tutor pay in the window.</para>
+				
+				<listitem>To change the payable time for a session to more than or less than the scheduled
+					payroll time, click on the note icon to the right of the attendance icon. This
+					icon appears when move your you mouse over the area.
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/attendance_hover_icon.png"/>
+						</imageobject>
+						<caption>Click the note icon to change the payable time for the session</caption>
+					</mediaobject>
 				</listitem>
-				<listitem>
-					<para>To set partial attendance, you need to enter in the sheet how many minutes
-						of the scheduled session minutes the person was in attendance for. You can
-						enter more or less minutes than the session duration. Note that the session
-						payable time from the timetable does not appear on this screen, only the
-						duration. Approving this Tutor pay variation means the person will be paid
-						for the payable time you have set as their override. Leaving it unapproved
-						means they will not be paid for this session at all, unless you choose to
-						check the option during the payroll export 'unapproved attendance' <inlinemediaobject>
+				<listitem>In the sheet that opens, you will see the default payable time (minutes) with a locked
+					icon next to it. Unlock the field to change the value. You can optionally add a
+					note to explain the payroll variation.<para>
+						<mediaobject>
 							<imageobject>
 								<imagedata scalefit="1" width="100%" contentdepth="100%"
 									fileref="images/payroll_partial_attendance.png"/>
 							</imageobject>
-						</inlinemediaobject></para>
-				</listitem>
+							<caption><para>Changing the payable time for one session</para></caption>
+						</mediaobject></para></listitem>
 			</orderedlist>
 		</example>
 	</section>
 	<section xml:id="payroll-payslips">
 		<title>Generating Tutor pay</title>
-		<para>onCourse generates Tutor pay records in bulk, for a given point in time, based on the
-			wages set in the class budget and the class attendance records for Tutors. While
-			generating Tutor pay records the admin user is given choices as to whether unmarked or
-			unapproved attendance should be included. Tutors can be attached to classes with
-			multiple roles and payrates, allowing you to assign the same contact, for example, as
-			both a tutor with an hourly payrate and an assessor with a per enrolment pay rate. Per
-			session pay rates display the correct pay value in the class budget, depending on the
-			number of sessions the tutor is assigned to, rather than multiplying the rate by the
-			total number of sessions in the class.</para>
+		<para>onCourse generates Tutor pay records in bulk, up until a specified date, based on the wages
+			set in the class budget and the class attendance records for Tutors. </para>
 				<para>Tutor pay is run for payslips up until, but not inclusive of your defined
 					date.</para>
+		<para>If payroll has not been confirmed in the classes for the individual sessions, then
+			tutor pay will not be processed. However, you can use the generate tutor payroll window
+			to confirm in bulk all currently unconfirmed sessions.</para>
 			<para>onCourse assists you to view the payslips by tutor with the <xref linkend="reports-Payslip"
 			/>. This report is a summary of the payslips by classes, session, and can be run against
 			a single tutor, a group of tutors, or all tutors.</para>
@@ -423,14 +427,20 @@
 						to the day prior to the date you select)</para>
 				</listitem>
 				<listitem>
-					<para>Select if unmarked or unapproved attendance is to be included when
-						generating Tutor pay. <inlinemediaobject>
+					<para>A count of the confirmed and unprocessed wages and the unconfirmed wages will display in the sheet <inlinemediaobject>
 							<imageobject>
 								<imagedata scalefit="1" width="80%" contentdepth="80%"
 									fileref="images/generateTutorPayStep2(new).png"/>
 							</imageobject>
 						</inlinemediaobject></para>
 				</listitem>
+				<listitem>Use the open related icon to see all the classes that have unconfirmed
+					tutor wages. You can then print reports from the classes list view to ensure
+					your course coordinators mark their tutor payroll confirmations.</listitem>
+				<listitem>You can choose to proceed to only process wages that have already been
+					confirmed, or by clicking 'confirm now', automatically set all unconfirmed
+					sessions to confirmed so the payroll can be processed. There is no undo option
+					from here, so proceed with caution. </listitem>
 				<listitem>
 					<para>Press save and wait until a new list view, showing all newly created Tutor
 						pay records is displayed. They will have a creation date of 'today' and will
@@ -573,10 +583,10 @@
 						will apply to them as they teach the session. Each tutor attached to the
 						session will be paid their rate multiplied by the session's payable time, in
 						the case of per timetabled hour payrates.</para>
-					<para>If the tutors attached to the session have different payable times due to
-						them i.e. only one of the tutors is paid an extra hour for opening and
-						closing the venue, then use the tutor attendance function to vary the
-						payable time for each appropriate session for that tutor only.</para>
+					<para>If the tutors attached to the session have different payable times due to them i.e. only
+						one of the tutors is paid an extra hour for opening and closing the venue,
+						then use the tutor payroll confirmation on the class attendance tab to vary
+						the payable time for each appropriate session for that tutor only.</para>
 				</answer>
 			</qandaentry>
 			<qandaentry>

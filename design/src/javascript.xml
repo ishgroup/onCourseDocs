@@ -3,7 +3,7 @@
 	<title>Javascript</title>
 
 	<section xml:id="js">
-		<title>Javascript</title>
+		<title>File structure</title>
 		<para>Log into webDAV and look at this folder:<programlisting>/s/js/</programlisting></para>
 		<para>In there you'll see a number of javascript files which drive your onCourse website.
 			Some are third party vendor supplied files and others are default parts of onCourse
@@ -34,6 +34,54 @@
 			<para>all.js.gz is automatically created and used by browsers. This is another reason
 				minification may not be quite so important: compression often does a pretty good job
 				of reducing the file sizes.</para>
+			<para/>
 		</section>
+	</section>
+	<section>
+		<title>Core libraries</title>
+		<para>We supply a number of third party javascript libraries with your site by default. The
+			following list are bundled together as dynamic.js and cannot be removed without breaking
+			some key shopping basket functionality on the site:</para>
+		<para>
+			<itemizedlist>
+				<listitem>
+					<para>classnames 2.2.5</para>
+				</listitem>
+				<listitem>
+					<para>react 0.14.8</para>
+				</listitem>
+				<listitem>
+					<para>react-dom 0.14.8</para>
+				</listitem>
+				<listitem>
+					<para>react-redux 5.0.1</para>
+				</listitem>
+				<listitem>
+					<para>redux 3.6.0</para>
+				</listitem>
+				<listitem>
+					<para>redux-thunk 2.1.0</para>
+				</listitem>
+				<listitem>
+					<para>jquery 3.1.1</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+		<para>There is also dynamic-polyfill.js to support IE 8. In addition there are some useful
+			libraries which are often used when building sites: </para>
+		<para>
+			<itemizedlist>
+				<listitem>
+					<para>BxSlider 4.1.1</para>
+				</listitem>
+				<listitem>
+					<para>jquery.customSelect 0.5.1</para>
+				</listitem>
+				<listitem>
+					<para>jQuery Validation Plugin 1.9.0</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+		<para>You may wish to remove or add more libraries for your particular design</para>
 	</section>
 </chapter>

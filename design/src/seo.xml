@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="seo">
+    <title>SEO and analysis</title>
+    <section>
+        <title>Overview</title>
+        <para>onCourse is pre-configured with a whole range of SEO features to make your life easier
+            and get good search ranking with minimal effort. Although we take care of many of the
+            technical details, there is absolutely no substitute for writing good copy. That is, if
+            you don't spend the time to write words which will get you ranking, then you are doomed
+            from the outset. But if you write course descriptions and tag descriptions which are
+            both engaging to potential students and use the correct search terms that people will
+            search for, you are well on your way to a successful website.</para>
+    </section>
+    <section>
+        <title>Tag Manager</title>
+        <para>Every site we build is created with Google Tag Manager integrated. This service drives
+            the injection of javascript and tracking pixels or html into your site in really neat
+            ways. In particular it allows:<itemizedlist>
+                <listitem>
+                    <para>Adding livechat systems to your site</para>
+                </listitem>
+                <listitem>
+                    <para>Facebook, Google and other tracking code</para>
+                </listitem>
+                <listitem>
+                    <para>A/B testing (show some elements to some people and not others)</para>
+                </listitem>
+                <listitem>
+                    <para>Different content for different country regions</para>
+                </listitem>
+                <listitem>
+                    <para>Inject advertising panels</para>
+                </listitem>
+                <listitem>
+                    <para>Javascript is asynchronously loaded (so it doesn't slow the page
+                        draw)</para>
+                </listitem>
+                <listitem>
+                    <para>Versioned changes (so you can roll back easily)</para>
+                </listitem>
+                <listitem>
+                    <para>Event tracking (such as add to shopping basket)</para>
+                </listitem>
+            </itemizedlist></para>
+        <para>When we build your site, we'll give you access to Google Tag Manager, set up some
+            initial Analytics tags for you, and get you started. You can then build more tracking or
+            hand over access to your SEO consultants.</para>
+    </section>
+    <section>
+        <title>Google analytics</title>
+        <para>Although the Google Analytics javascript is driven from Tag Manager, onCourse also
+            injects some additional data into your analytics.<itemizedlist>
+                <listitem>
+                    <para>Transactional sales dollars. Every sale through the website puts the
+                        dollar value into your Analytics. So not only can you see how many page
+                        views you got from that ad campaign, you can see the dollar value of the
+                        sales that generated. You'll discover that the two aren't always
+                        correlated.</para>
+                </listitem>
+                <listitem>
+                    <para>Course and products. Drill down in your data to see where sales are coming
+                        from. Getting lots of language course sales from an ad you placed on a
+                        friendly site? Great, now you know what works and where to focus your time
+                        and money.</para>
+                </listitem>
+                <listitem>
+                    <para>Events. Because we log "add to shopping basket" and other events, you'll
+                        be able to see who is engaging with your site but not following through to
+                        the end.</para>
+                </listitem>
+                <listitem>
+                    <para>Checkout steps. Coming very soon you'll be able to see each step in the
+                        checkout process through a Google Analytics acquisition funnel. See where
+                        and why people are dropping off.</para>
+                </listitem>
+            </itemizedlist></para>
+    </section>
+    <section>
+        <title>Sitemap</title>
+        <para>We generate a /sitemap.xml file automatically which you can add to Google's webmaster
+            tools. This allows Google to quickly find all the pages on your site without crawling
+            through them one at a time, and it also gives Google hints about when those pages are
+            updates so that they are crawled more quickly.</para>
+    </section>
+    <section>
+        <title>HTML markup</title>
+        <para>The html markup of your site is customisable throughout, but by default you get some
+            robust templates that Google will love.</para>
+        <section>
+            <title>Semantic HTML</title>
+            <para>By building the html of your onCourse site with a clear structure and meaning,
+                search engines such as Google are able to make sense of the structure and meaning.
+                onCourse comes with good html that gives you a good starting point. For example,
+                each page should only have a single h1 element, sections, footer and other modern
+                html elements.</para>
+        </section>
+        <section>
+            <title>Accessibility</title>
+            <para>Although this is not strictly an SEO benefit, adhering to <link
+                    xlink:href="https://www.w3.org/TR/WCAG20/">accessibility standards</link> means
+                that students with disabilities such as poor sight will be able to access your
+                website more easily. This goes hand in hand with good semantic HTML and also means
+                that Google and other search engines will properly index your site and understand
+                the content structure rather than just index a mass of words.</para>
+        </section>
+        <section>
+            <title>Schema.org</title>
+            <para>Schema.org is a set of markup rules endorsed by Google and other search engines.
+                It specifies ways to annotate the html to give it specific meaning allowing Google
+                to create rich search results. For example, we can markup data so that Google can
+                provide navigation structure, course dates, prices and other information right in
+                their search results.<inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/schema-results.png" scalefit="1" width="100%" contentdepth="100%" format="png"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+        </section>
+    </section>
+    <section>
+        <title>Navigation</title>
+        <para>The navigation and structure of the site's page are important to good search
+            results.</para>
+        <section>
+            <title>Canonical links</title>
+            <para>Some pages in your onCourse site don't last very long. In particular, the class
+                pages with a URL like <code>/class/ABC-123</code> will be irrelevant as soon as that
+                class is finished. You don't want to accumulate page rank on these pages, only for
+                that to evaporate. onCourse automatically adds a canonical link to the correct
+                course page, transferring any page rank and inbound links to somewhere it will do
+                good.</para>
+        </section>
+        <section>
+            <title>URLs</title>
+            <para>onCourse has clean URLs which are easy for users and contribute to your SEO. All
+                course detail and list pages contain the word "course" and you are free to create
+                long course codes which contain useful SEO keywords. And your tag structure can be
+                structured however you want.. For example, a URL like
+                "/courses/business/communication" picks up several important keywords.</para>
+        </section>
+        <section>
+            <title>Redirects</title>
+            <para>If you ever change URLs it is vital that you don't lose page rank on those old
+                pages. While you don't need to worry about classes, tags and course pages can
+                accumulate valuable scores and you should implement redirects to the closest new
+                page.</para>
+        </section>
+    </section>
+    <section>
+        <title>Meta headers</title>
+        <para>onCourse does not implement meta-keyword headers since it is well documented that no
+            search engines use them for indexing. However we do implement:<itemizedlist>
+                <listitem>
+                    <para>og:image</para>
+                </listitem>
+                <listitem>
+                    <para>og:type</para>
+                </listitem>
+                <listitem>
+                    <para>og:description (meta-description)</para>
+                </listitem>
+            </itemizedlist></para>
+        <para>These tags are useful for both Facebook, Bing and Google, helping you display better
+            search results from data discovered by each of their crawl engines.</para>
+    </section>
+    <section>
+        <title>SSL/TLS encryption</title>
+        <para>Google has indicated that sites with end-to-end encryption will get higher search
+            rankings since they are more likely to be ligitimate sites which care about the privacy
+            of their users. All onCourse sites redirect immediately to HTTPS for even the
+            non-payment gateway parts of the site.</para>
+    </section>
+    <section>
+        <title>Page speed</title>
+        <para>A lot of effort goes into making onCourse really fast, even when displaying faceted
+            search results from thousands of courses. We use separate SSL/TLS load balancers to
+            remove encryption load from the application servers, we cache database requests and page
+            rendering, and use Apache Solr as a high speed search cache. We also offload large image
+            serving to a third party AWS S3 storage, again increasing the speed with which your site
+            displays.</para>
+        <para>The end result of all this is that search engines give your site bonus points for
+            being fast. Which is good.</para>
+    </section>
+
+</chapter>

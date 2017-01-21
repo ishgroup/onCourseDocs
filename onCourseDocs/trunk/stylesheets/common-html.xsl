@@ -55,6 +55,12 @@
     <xsl:copy-of select="document('@rootDir@/js/analytics.js',/)"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"/>
     <script type="text/javascript" src="js/documentation.js"/>
+    <link rel="stylesheet" type="text/css">>>
+      <xsl:attribute name="href">
+        <xsl:text>https://fonts.googleapis.com/css?family=Merriweather:300i,300,400|Port+Lligat+Slab</xsl:text>
+      </xsl:attribute>
+    </link>
+
   </xsl:template>
 
 </xsl:stylesheet>

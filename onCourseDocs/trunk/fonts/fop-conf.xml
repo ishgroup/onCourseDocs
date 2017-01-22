@@ -10,17 +10,20 @@
     <renderer mime="application/pdf">
       <fonts>
         <!-- note that the paths below are relative to the FOP baseURI -->
-        <font embed-url="CabinSketch.ttf">
-          <font-triplet name="CabinSketch" style="normal" weight="400"/>
+        <font embed-url="PortLligatSlab-Regular.ttf">
+          <font-triplet name="Port Lligat Slab" style="normal" weight="400"/>
         </font>
-        <font embed-url="Roboto-Regular.ttf">
-          <font-triplet name="Roboto" style="normal" weight="400"/>
+        <font embed-url="Merriweather-Regular.ttf">
+          <font-triplet name="Merriweather" style="normal" weight="400"/>
         </font>
-        <font embed-url="Roboto-Light.ttf">
-          <font-triplet name="Roboto" style="light" weight="300"/>
+        <font embed-url="Merriweather-Light.ttf">
+          <font-triplet name="Merriweather" style="normal" weight="300"/>
         </font>
-        <font embed-url="Roboto-Bold.ttf">
-          <font-triplet name="Roboto" style="bold" weight="700"/>
+        <font embed-url="Merriweather-Bold.ttf">
+          <font-triplet name="Merriweather" style="normal" weight="500"/>
+        </font>
+        <font embed-url="Merriweather-Black.ttf">
+          <font-triplet name="Merriweather" style="normal" weight="700"/>
         </font>
       </fonts>
     </renderer>
@@ -29,24 +32,16 @@
   <fonts>
     <substitutions>
       <substitution>
-        <from font-family="Roboto" font-style="normal"/>
-        <to font-family="Roboto" font-style="light" font-weight="300"/>
+        <from font-family="Merriweather" font-style="normal"/>
+        <to font-family="Merriweather" font-style="normal" font-weight="300"/>
       </substitution>
       <substitution>
-        <from font-family="Roboto" font-style="italic"/>
-        <to font-family="Roboto" font-style="light" font-weight="300"/>
+        <from font-family="Port Lligat Slab" font-style="italic" font-weight="700"/>
+        <to font-family="Port Lligat Slab" font-style="normal" font-weight="400"/>
       </substitution>
       <substitution>
-        <from font-family="Roboto" font-style="normal" font-weight="700"/>
-        <to font-family="Roboto" font-style="bold" font-weight="700"/>
-      </substitution>
-      <substitution>
-        <from font-family="CabinSketch" font-style="italic" font-weight="700"/>
-        <to font-family="CabinSketch" font-style="normal" font-weight="400"/>
-      </substitution>
-      <substitution>
-        <from font-family="CabinSketch" font-style="normal" font-weight="700"/>
-        <to font-family="CabinSketch" font-weight="400"/>
+        <from font-family="Port Lligat Slab" font-style="normal" font-weight="700"/>
+        <to font-family="Port Lligat Slab" font-weight="400"/>
       </substitution>
     </substitutions>
   </fonts>

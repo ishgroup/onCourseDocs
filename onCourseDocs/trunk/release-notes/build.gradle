@@ -15,8 +15,8 @@ task newRelease {
         version = project.docVersion
     }
     
-    if (!version || !version.isNumber()) {
-        logger.lifecycle("You must call this task like ./gradlew -PdocVersion=8.2")
+    if (!version) {
+        logger.lifecycle("You must call this task like ./gradlew release-notes:newRelease -PdocVersion=8.2")
     } else {
         logger.lifecycle("Creating a new release document for version " + version)
         

@@ -47,9 +47,9 @@
     <xsl:param name="variablelist.max.termlength">18</xsl:param>
 
     <!-- Custom font settings - preferred truetype font -->
-    <xsl:param name="title.font.family">CabinSketch</xsl:param>
-    <xsl:param name="body.font.family">Roboto</xsl:param>
-    <xsl:param name="dingbat.font.family">Roboto</xsl:param>
+    <xsl:param name="title.font.family">Port Lligat Slab</xsl:param>
+    <xsl:param name="body.font.family">Merriweather</xsl:param>
+    <xsl:param name="dingbat.font.family">Merriweather</xsl:param>
     <xsl:param name="monospace.font.family">monospace</xsl:param>
 
     <!-- Specify the default text alignment. The default text alignment is used for most body text. -->
@@ -102,7 +102,7 @@
     </xsl:attribute-set>
 
     <xsl:attribute-set name="section.title.properties">
-        <xsl:attribute name="font-family">CabinSketch</xsl:attribute>
+        <xsl:attribute name="font-family">Port Lligat Slab</xsl:attribute>
         <xsl:attribute name="color">#F69256</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
         <!-- font size is calculated dynamically by section.heading template -->

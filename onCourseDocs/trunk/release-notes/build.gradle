@@ -126,7 +126,7 @@ xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-${versi
 """
 
   issues_reports.each { issue ->
-      f << "    <listitem><para>$issue.fields.summary<systemitem>$issue.key</systemitem></para></listitem>\n"
+      f << "    <listitem><para>$issue.fields.summary <systemitem>$issue.key</systemitem></para></listitem>\n"
     }
 
 f <<
@@ -138,7 +138,7 @@ f <<
 """
 
   issues_angel.findAll{ issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
-      f << "    <listitem><para>$issue.fields.summary<systemitem>$issue.key</systemitem></para></listitem>\n"
+      f << "    <listitem><para>$issue.fields.summary <systemitem>$issue.key</systemitem></para></listitem>\n"
     }
 
 f <<
@@ -150,7 +150,7 @@ f <<
 """
 
   issues_angel.findAll{ issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
-      f << "    <listitem><para>$issue.fields.summary<systemitem>$issue.key</systemitem></para></listitem>\n"
+      f << "    <listitem><para>$issue.fields.summary <systemitem>$issue.key</systemitem></para></listitem>\n"
     }
 
 f <<
@@ -162,7 +162,7 @@ f <<
 """
 
   issues_web.findAll{ issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
-      f << "    <listitem><para>$issue.fields.summary<systemitem>$issue.key</systemitem></para></listitem>\n"
+      f << "    <listitem><para>$issue.fields.summary <systemitem>$issue.key</systemitem></para></listitem>\n"
     }
 
 f <<
@@ -174,7 +174,7 @@ f <<
 """
 
   issues_web.findAll{ issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
-      f << "    <listitem><para>$issue.fields.summary<systemitem>$issue.key</systemitem></para></listitem>\n"
+      f << "    <listitem><para>$issue.fields.summary <systemitem>$issue.key</systemitem></para></listitem>\n"
     }
 
 f <<

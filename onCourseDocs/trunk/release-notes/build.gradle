@@ -1,4 +1,17 @@
 import org.codehaus.groovy.runtime.DateGroovyMethods
+import groovyx.net.http.*
+import groovy.swing.SwingBuilder
+
+buildscript {
+    repositories {
+      maven {
+        url 'https://repo.ish.com.au/content/groups/public'
+      }
+    }
+    dependencies {
+        classpath 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.2'
+    }
+}
 
 task mergeImages(type: Copy) {
     from fileTree(dir: 'src', include: '**/images/*').files
@@ -9,64 +22,166 @@ docbookHtml.dependsOn mergeImages
 docbookPdf.dependsOn mergeImages
 
 
-task newRelease {
-  doLast {
-    if (project.hasProperty('docVersion')) {
-        version = project.docVersion
+// Run the following task to create new release notes from squish
+task releaseNotes(type: ReleaseNotes) {
+  description = 'Generate new release notes.'
+}
+
+class ReleaseNotes extends DefaultTask {
+
+  @TaskAction
+  def getNotes() {
+
+    def jiraUsername = ''
+    def jiraPassword = ''
+    def jiraFixVersion = ''
+    new SwingBuilder().edt {
+      dialog(modal: true,
+          title: 'Enter password',
+          alwaysOnTop: true,
+          resizable: false,
+          locationRelativeTo: null, // Place dialog in center of the screen
+          pack: true,
+          show: true
+      ) {
+        vbox {
+          label(text: "Enter your squish username:")
+          input_user = textField()
+          label(text: "Enter your squish password:")
+          input_pass = passwordField()
+          label(text: "Which version of onCourse are you releasing:")
+          input_version = textField()
+          button(defaultButton: true, text: 'OK', actionPerformed: {
+            jiraUsername = input_user.text
+            jiraPassword = input_pass.password.toString()
+            jiraFixVersion = input_version.text
+            dispose()
+          })
+        }
+      }
     }
+
+    logger.lifecycle "Getting issues..."
     
-    if (!version) {
-        logger.lifecycle("You must call this task like ./gradlew release-notes:newRelease -PdocVersion=8.2")
-    } else {
-        logger.lifecycle("Creating a new release document for version " + version)
-        
-        def subdir = new File(project.projectDir, "/src/" + version)
-        subdir.mkdirs()
-        def imagesDir = new File(subdir, "images")
-        imagesDir.mkdirs()
+    // https://docs.atlassian.com/jira/REST/latest/#idp1389824
+    def SQUISH_URL = "https://squish.ish.com.au/rest/api/latest/search"
+    def query = "?jql=fixVersion=${jiraFixVersion}&maxResults=1000"
+    def encoded_auth = "$jiraUsername:$jiraPassword".getBytes().encodeBase64().toString()
 
-        def notes = new File(subdir, "release-notes.xml")
-        notes << """<?xml version="1.0" encoding="UTF-8"?>
+    def connection = (SQUISH_URL + query).toURL().openConnection()
+    connection.addRequestProperty("Authorization", "Basic ${encoded_auth}")
+    connection.addRequestProperty("Content-Type", "application/json")
+    connection.setRequestMethod("GET")
+    connection.doOutput = false
+    connection.connect()
+    
+    def slurper = new groovy.json.JsonSlurper()
+    def json_data = slurper.parseText(connection.content.text)
+    logger.debug new groovy.json.JsonBuilder(json_data).toPrettyString()
+
+    logger.lifecycle "Found issues..."
+    buildDocBook(jiraFixVersion, json_data.issues)
+
+  }
+
+  def buildDocBook(version, issues) {
+    issues.sort { issue -> issue.key }
+    issues.each { issue ->
+      logger.lifecycle issue.key + " " + issue.fields.summary
+    }
+    def issues_reports, issues_web, issues_angel
+    def WEB_APPS = ['Web','Enrol','CMS','Portal','Search']
+    (issues_web, issues_angel) = issues.split{ issue -> issue.fields.components.any{WEB_APPS.contains(it.name) } }
+    (issues_reports, issues_angel) = issues.split{ issue -> issue.fields.summary.contains('report') }
+
+    def subdir = new File(project.projectDir, "/src/" + version)
+    subdir.mkdirs()
+    def imagesDir = new File(subdir, "images")
+    imagesDir.mkdirs()
+
+    def f = new File(subdir, "release-notes.xml")
+    f.setText("")
+    f << 
+"""<?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://docbook.org/ns/docbook file://../../src/docbook.xsd"
-         xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-${version}">
+xsi:schemaLocation="http://docbook.org/ns/docbook file://../../src/docbook.xsd"
+xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-${version}">
 
-  <info>
-    <title>Release ${version}</title>
-    <pubdate>xx Jan 2016</pubdate>
-  </info>
+<info>
+  <title>Release ${version}</title>
+  <pubdate>${new Date().format('d MMM yyyy')}</pubdate>
+</info>
 
-  <section role="important">
-    <title>Important changes</title>
-    <para></para>
-  </section>
-  <section role="major">
-    <title>Major features</title>
-    <para></para>
-  </section>
-  <section role="scripts">
-    <title>Reports and scripts</title>
-    <para></para>
-  </section>
-  <section role="minor">
-    <title>Minor features</title>
-    <para></para>
-  </section>
-  <section role="fixes">
-    <title>Fixes</title>
-    <para></para>
-  </section>
-  <section role="web">
-    <title>Web features</title>
-    <para></para>
-  </section>
-  <section role="web-fixes">
-    <title>Web fixes</title>
-    <para></para>
-  </section>
+<section role="important">
+  <title>Important changes</title>
+  <para></para>
+</section>
+<section role="major">
+  <title>Major features</title>
+  <para></para>
+</section>
+<section role="scripts">
+  <title>Reports and scripts</title>
+  <itemizedlist>
+"""
+
+  issues_reports.each { issue ->
+      f << "    <listitem><para>$issue.fields.summary<systemitem>$issue.key</systemitem></para></listitem>\n"
+    }
+
+f <<
+""" </itemizedlist>
+</section>
+<section role="minor">
+  <title>Minor features</title>
+  <itemizedlist>
+"""
+
+  issues_angel.findAll{ issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
+      f << "    <listitem><para>$issue.fields.summary<systemitem>$issue.key</systemitem></para></listitem>\n"
+    }
+
+f <<
+""" </itemizedlist>
+</section>
+<section role="fixes">
+  <title>Fixes</title>
+  <itemizedlist>
+"""
+
+  issues_angel.findAll{ issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
+      f << "    <listitem><para>$issue.fields.summary<systemitem>$issue.key</systemitem></para></listitem>\n"
+    }
+
+f <<
+""" </itemizedlist>
+</section>
+<section role="web">
+  <title>Web features</title>
+  <itemizedlist>
+"""
+
+  issues_web.findAll{ issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
+      f << "    <listitem><para>$issue.fields.summary<systemitem>$issue.key</systemitem></para></listitem>\n"
+    }
+
+f <<
+""" </itemizedlist>
+</section>
+<section role="web-fixes">
+  <title>Web fixes</title>
+  <itemizedlist>
+"""
+
+  issues_web.findAll{ issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
+      f << "    <listitem><para>$issue.fields.summary<systemitem>$issue.key</systemitem></para></listitem>\n"
+    }
+
+f <<
+""" </itemizedlist>
+</section>
 </chapter>
 """
 
-    }
   }
 }

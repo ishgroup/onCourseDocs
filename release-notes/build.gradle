@@ -92,7 +92,7 @@ class ReleaseNotes extends DefaultTask {
     def issues_reports, issues_web, issues_angel
     def WEB_APPS = ['Web','Enrol','CMS','Portal','Search']
     (issues_web, issues_angel) = issues.split{ issue -> issue.fields.components.any{WEB_APPS.contains(it.name) } }
-    (issues_reports, issues_angel) = issues.split{ issue -> issue.fields.summary.contains('report') }
+    (issues_reports, issues_angel) = issues_angel.split{ issue -> issue.fields.summary.contains('report') }
 
     def subdir = new File(project.projectDir, "/src/" + version)
     subdir.mkdirs()

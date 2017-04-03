@@ -23,10 +23,10 @@
 		<para>These invoices are then visible within the Invoice list view. Like all other lists you
 			can sort, search, export and print from this view. </para>
 		<para>The invoice list view can be opened via Financial > Invoices.</para>
-		<para>The quick seach option in the top left hand corner of the screen allows you to search
-			for invoices by debtor last name, company name or invoice number. When you begin typing
-			the text into this field, the list of invoices shown will automatically reduce to meet
-			your criteria.</para>
+		<para>The quick search option in the top left hand corner of the screen allows you to search for
+			invoices by debtor last name, company name or invoice number. When you begin typing the
+			text into this field, the list of invoices shown will automatically reduce to meet your
+			criteria.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="70%" contentdepth="70%"
@@ -135,25 +135,85 @@
 			</mediaobject>
 		</section>
 		<section xml:id="invoice-duplicating">
-			<title>Duplicating Invoices</title>
-			<para>You have the ability to duplicate invoice by highlighting the invoice you want to
-				duplicate in the Invoice list view, then click on the cogwheel and select the option
-				'Duplicate invoice'. This allows you to quickly re-create invoices from a previous
-				invoice template, but change contact, change the value or add a negative symbol for
-				a credit note.</para>
-			<note>
-				<para>This feature can only be used when a single invoice is selected at a
-					time.</para>
-			</note>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/invoice_duplicate.png"/>
-				</imageobject>
-				<caption>
-					<para>Duplicating an invoice</para>
-				</caption>
-			</mediaobject>
+			<title>Duplicating and reversing invoices</title>
+			<para>This feature is mostly used to create a credit note when you have cancelled the enrolment,
+				but retained the invoice by mistake. These types of enrolments will have the status
+				'cancelled' rather than 'credited'. </para>
+			<para>Alternatively, you might use this option to 'fix' the fee due post enrolment, if
+				the student was charged the wrong fee during the enrolment process and you don't
+				want to reverse the enrolment entirely. In this case, you would create a reversed
+				invoice for part of the course fee.</para>
+			<para>You can also use this process to reverse a credit note that shouldn't have been created.
+				The reversal of a credit note will be an invoice. </para>
+				<para>If you want to create a copy of an invoice, follow the same process by remove
+					the minus signs from the invoice lines.</para>
+			<para>Remember, you can't edit or delete 'mistakes' in onCourse invoices, but every invoice or
+				credit note can be corrected by creating an equal and opposite reversal action. This
+				tool is your shortcut to fixing those sorts of mistakes.</para>
+			<para>This feature can only be used on one invoice at a time.</para>
+			<example>
+				<title>How to manually credit an invoice</title>
+				<orderedlist>
+					<listitem><para>Open the invoice list view and single click on the invoice you want to fully or partially reverse.</para></listitem>
+					<listitem><para>Click on the cogwheel and select
+						the option 'Duplicate and reverse invoice'.</para></listitem>
+					<listitem><para>A new invoice window will open. This will be a duplicate of the original invoice, in reverse.
+							e.g. all the original dollar values will now have negative sign in front
+							of them.</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/invoice_duplicate.png"/>
+							</imageobject>
+							<caption>
+								<para>Duplicating an invoice from the cogwheel</para>
+							</caption>
+						</mediaobject></listitem>
+					<listitem>You can edit the value of every field of the new invoice/credit note,
+						including changing the value the reversal is for, to make it more or less
+						than the original invoice value.</listitem>
+					<listitem><para>Note that each invoice line from the original invoice will be reversed. You can
+						delete invoice lines from this credit note you do not want to reverse e.g. if there
+						were two enrolments on the original invoice and you only want to credit one.</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/duplicated_and_reversed_invoice_two_lines.png"/>
+							</imageobject>
+							<caption>
+								<para>This reversed invoice has two invoice lines. Select one and click the minus sign (delete) button to remove it from the invoice.</para>
+							</caption>
+						</mediaobject></listitem>
+					<listitem><para>You can also add additional lines to the invoice, with either negative or positive values, for
+							example, if you wanted to manually charge an admin fee, you can add the
+							fee as an additional line with a positive amount. This will reduce the
+							balance of the credit available to the student.</para></listitem>
+					<listitem><para>If you want this new invoice/credit note to be applied to the class budget and pre-paid fee
+							liability process, double click on each invoice line and manually link
+							it to the course and class by code. If this invoice reversal was for an
+							enrolment, you will see the course and class code you need to manually
+							reverse against in the invoice line description.</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/join_invoice_line_to_budget.png"/>
+							</imageobject>
+							<caption>
+								<para>Adding the course and class code to assign this income to the budget manually</para>
+							</caption>
+						</mediaobject></listitem>
+					<listitem>By default, this new credit note won't be sent by email to the payer.
+						Check the option 'send email' if you want a copy to be sent.</listitem>
+					<listitem>Save and close the new credit note/invoice once you have confirmed all
+						the values are correct. You can not change any of the data after you have
+						saved it as all financial records are immutable.</listitem>
+					<listitem>If you wish to use this new credit note to contra pay and existing
+						invoice with a balance outstanding, select in the invoice list, and from the
+						cogwheel choose 'contra invoice'. A new window will open allowing you to
+						select unpaid invoices from the same contact you can credit
+						against.</listitem>
+				</orderedlist>
+			</example>
 		</section>
 	</section>
 	<section xml:id="invoice-paymentPlan">

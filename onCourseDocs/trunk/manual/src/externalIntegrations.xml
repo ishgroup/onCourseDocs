@@ -312,10 +312,11 @@
         </caption>
     </mediaobject>
             <para>Once these preferences have been defined you will need to enable at least one of
-                the SurveyMonkey scripts to automatic the process. These scripts can be found by
+                the SurveyMonkey scripts to automate the process. These scripts can be found by
                 going File -> Preferences -> Scripts, doubling clicking on either 'SurveyMonkey send
-                invite on enrolment' or 'SurveyMonkey send invite on enrolment completion', clicking
-                on the checkbox 'Enabled' and saving the script.</para>
+                invite on enrolment',  'SurveyMonkey send invite on enrolment completion', or 'VET
+                Course completion survey' clicking on the checkbox 'Enabled' and saving the
+                script.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="70%" contentdepth="70%"
@@ -326,55 +327,70 @@
                 </caption>
             </mediaobject>
             <section>
-                <title>Where to find the preferences in SurveyMonkey</title>
-                <para>Below is the information that is needed to enable the integration that can be
-                    found in SurveyMonkey.</para>
+                <title>Access Tokens and Creating a developer account</title>
+                <para>Survey Monkey introduced access tokens as a means of integration in January
+                    2017. All integrations created after that date will need to use access tokens.
+                    API Keys will not be used after this time. Existing integrations using an API
+                    key will continue to use the API key. To create an access token, you set up a
+                    developer account in SurveyMonkey and add onCourse as an App.  </para>
                 <orderedlist>
                     <listitem>
-                        <para>To find the API key you must have account at
-                            https://developer.surveymonkey.com. From there you go to My App to find
-                            the API key, as shown below.</para>
+                        <para>Go to SurveyMonkey.com and login using your regular login. If you do
+                            not have a login for SurveyMonkey you will need to create one.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Once logged in, got to the URL https://developer.surveymonkey.com.
+                            This will bring you to the developers area to set up your
+                            integration.</para>
+                    </listitem>
+                    <listitem>
+                        <para>In the Developers area, go to My Apps and click on 'Add New App'.
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata scalefit="1" width="80%" contentdepth="80%"
+                                        fileref="images/surveymonkeyAddApp.png" format="png" />
+                                </imageobject>
+                                <caption>
+                                    <para>SurveyMonkey Developer site Add New App Feature</para>
+                                </caption>
+                            </mediaobject>
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>This will open new window asking you to add an App. You can choose the
+                            name of App i.e. 'onCourse'</para>
+                    </listitem>
+                    <listitem>
+                        <para>In the App record, go to Setting, scroll down to the section
+                            Credentials and locate the 'Access Token' field. The Access token is the
+                            string of numbers and letters in the field e.g.
+                            F2RlLbeTeGLrDX.8BHgNtUT1-25s-T20qQVC1lyhHqbHjk3U8lD7iCvjbG2KMhFjC4SxqFn0oCXyd.AKETZ85aqZOCaI18arK1gvQz98K7tnSH3jlLBoNahZL2cRmstP </para>
                         <mediaobject>
                             <imageobject>
-                                <imagedata scalefit="1" width="70%" contentdepth="70%"
-                                    fileref="images/SurveyMonkey_1.1_APIkey.png" format="png" />
+                                <imagedata scalefit="1" width="80%" contentdepth="80%"
+                                    fileref="images/surveymonkeyCredientials.png" format="png" />
                             </imageobject>
                             <caption>
-                                <para>Where to find the SurveyMonkey API key</para>
+                                <para>SurveyMonkey Access Token Location</para>
                             </caption>
                         </mediaobject>
                     </listitem>
-                    <listitem>
-                        <para>To get the OAuth token click on the Settings menu option on the left
-                            hand side, scroll to the bottom of the page and copy the code in the
-                            field name 'Access Token'. </para>
+                </orderedlist>
+                        <para>The Survey name you need to enter is the name listed in the 'Title'
+                            field on Survey Monkey, in the example below it's called Test Survey.
+                            This can be found by logging into your account in
+                            https://www.surveymonkey.com then click on the top menu option 'My
+                            Surveys'</para>
                         <mediaobject>
                             <imageobject>
                                 <imagedata scalefit="1" width="70%" contentdepth="70%"
-                                    fileref="images/SurveyMonkey_1.2_OAuth.png" format="png" />
-                            </imageobject>
-                            <caption>
-                                <para>Where to find the OAuth token</para>
-                            </caption>
-                        </mediaobject>
-                    </listitem>
-                    <listitem>
-                        <para>The Survey name is the name of the survey in Survey Monkey, in the
-                            example below it's called Test Survey. This can be found by logging into
-                            your account in https://www.surveymonkey.com then click on the top menu
-                            option 'My Surveys'</para>
-                        <mediaobject>
-                            <imageobject>
-                                <imagedata scalefit="1" width="70%" contentdepth="70%"
-                                    fileref="images/SurveyMonkey_name.png" format="png" />
+                                    fileref="images/SurveyMonkey_name.png" format="png"/>
                             </imageobject>
                             <caption>
                                 <para>Finding the name of the survey I want to use</para>
                             </caption>
                         </mediaobject>
-                    </listitem>
-                </orderedlist>
-                <para>If you haven't used SurveyMonkey before you might need to verify the
+                                    <para>If you haven't used SurveyMonkey before you might need to verify the
                     collectors email address. This is done by clicking on the name of the Survey
                     followed by on the tab 'Collect Responses' and then on the Survey name under the
                     heading 'NICKNAME' and continuing until this email gets sent.</para>

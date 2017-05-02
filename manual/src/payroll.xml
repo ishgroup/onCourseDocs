@@ -405,6 +405,10 @@
 		<para>If payroll has not been confirmed in the classes for the individual sessions, then
 			tutor pay will not be processed. However, you can use the generate tutor payroll window
 			to confirm in bulk all currently unconfirmed sessions.</para>
+		<para>You do not want to automatically confirm all sessions for payment if you have a manual
+			process where you confirm each session at a time. It is perfectly ok to proceed to
+			process the payroll with unconfirmed sessions. Those that aren't confirmed will not be
+			processed.</para>
 			<para>onCourse assists you to view the payslips by tutor with the <xref linkend="reports-Payslip"
 			/>. This report is a summary of the payslips by classes, session, and can be run against
 			a single tutor, a group of tutors, or all tutors.</para>
@@ -518,6 +522,52 @@
 				</caption>
 			</mediaobject>
 		</section>
+		<section><title>Managing employees vs contractors</title><para>As the onCourse payroll
+				functionality is a time and attendance calculation, rather than a complete payroll
+				system that calculates income tax and leave allowances, both employees and
+				contractors should be treated in the same way within the system.</para>
+			<para>If you are
+			exporting the tutor payslip data from onCourse into your primary accounting system to
+			complete the final stages of the payroll process, you will want to be able to clearly
+			identify your employees and contractors.</para>
+			<para>In the onCourse tutor contact record, on the tab labelled tutor, you can enter a payroll
+				reference number. This number is shown in the list of payslips generated.
+				Often,employees and contractors will have different types of identification numbers,
+				for example all employees may have a unique ID from the primary payroll system used
+				to match them on import, and contractors have the label 'contractor'. In the payslip
+				list view, this makes employees and contractors easy to identify.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/payslip_contractor.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>In the payslip window, payslips for contractors can be easily identified and excluded from export</para>
+				</caption>
+			</mediaobject>
+			<para>You may then select your employee payslip records and export and finalise them,
+				locking the payslip from further adjustment and locking the attendance and approval
+				data for the included paylines.</para>
+			<para>Employee payslips may be exported from onCourse and marked as finalised on a
+				fortnightly basis, but you also need to keep a track of your contractor invoices  -
+				have they been issued to you as expected, and do they match the amount you budgeted
+				for?</para>
+			<para>In this case, having time and attendance payslips generated for your contractors gives you
+				the data you need to compare against the invoice you receive. These contractors may
+				not invoice you on the same cycle as employees are paid, even though onCourse will
+				create the payslip data for them on the same cycle. However, by having the payslip
+				data in onCourse with a status of 'new' provided you don't finalise that payslip,
+				each fortnight when you run the generate pay process, the contractor payslip will be
+				added to.</para>
+			<para>This way, over time, you may have eight weeks, or four pay cycles of contractor data in a
+				single payslip which matches their eventual invoice. When the invoice is received,
+				you can compare it to this payslip, and the finalise the payslip that matches your
+				invoice.</para>
+			<para>You may choose to defer some paylines if they aren't included on the invoice received, and
+				that is fine, it means they will come back again the next time you run a pay cycle,
+				but this time on a new payslip.</para>
+		
+		</section>
 		<section>
 			<title>Tagging Payslips</title>
 			<para>Payslips are taggable to assist you in creating your own custom steps for handling
@@ -587,6 +637,8 @@
 						one of the tutors is paid an extra hour for opening and closing the venue,
 						then use the tutor payroll confirmation on the class attendance tab to vary
 						the payable time for each appropriate session for that tutor only.</para>
+					<para>Tutor payable time can be either increased or decreased from the scheduled
+						session time.</para>
 				</answer>
 			</qandaentry>
 			<qandaentry>
@@ -614,13 +666,13 @@
 						This will give you the correct class budget payroll expenses, but the two
 						hour tutor will see in their timetable that they are 'teaching' a five hour
 						session. </para>
-					<para>A third option would be to keep both tutors assigned as above, but use the
-						attendance marking function for the two hour attending tutor to mark them as
-						'partially attended' and their payable time to be 120 minutes only. This
-						option will generate the correct payroll for the tutor, but the budget will
-						show that you expect to pay them for five hours of attendance, not two, so
-						will be overestimating the class costs. The tutor timetable will also show
-						that the two hour tutor is 'teaching' a five hour session.</para>
+					<para>A third option would be to keep both tutors assigned as above, but use the attendance
+						marking function for the two hour attending tutor to mark their payable time
+						to be 120 minutes only. This option will generate the correct payroll for
+						the tutor, but the budget will show that you expect to pay them for five
+						hours of attendance, not two, so will be overestimating the class costs. The
+						tutor timetable will also show that the two hour tutor is 'teaching' a five
+						hour session.</para>
 				</answer>
 			</qandaentry>
 			<qandaentry>
@@ -629,10 +681,10 @@
 						this so they are not paid for that class session?</para>
 				</question>
 				<answer>
-					<para>You can either untick the tutor from the session who didn't attend or mark
-						their attendance record with a red cross. Either option will prevent a per
-						timetabled hour or per session payroll type being generated for them for
-						that particular session.</para>
+					<para>You can either untick the tutor from the session who didn't attend or mark their
+						attendance record with a red cross (rejected for payroll). Either option
+						will prevent a per timetabled hour or per session payroll type being
+						generated for them for that particular session.</para>
 					<para>You can then add the casual who filled in for them to the class and just
 						assign them to that session and ensure the appropriate wage line is added to
 						the budget for them (it's best to untick the option 'add selected tutor to
@@ -654,12 +706,12 @@
 					<para>Alternatively, you could override the tutor payrate from the normal per
 						timetabled hour option to a per session option where you manually worked out
 						the 2 hour rate. This would also keep the budget accurate.</para>
-					<para>The other option would be to use the partial attendance option, and
-						increase their payable time from 90 mins to 120 mins, so the correct pay was
-						generated, but it wouldn't affect the budget projection, which would keep
-						their estimated pay amount being multiplied by 1hr 30 mins per session. This
-						is a better choice if you had two tutors assigned to the session and only
-						one of the tutors was affected by this award condition.</para>
+					<para>The other option would be to use the session by session payable time value, and increase
+						their payable time from 90 mins to 120 mins, so the correct pay was
+						generated, however it wouldn't affect the budget projection, which would
+						keep their estimated pay amount being multiplied by 1hr 30 mins per session.
+						This is a better choice if you had two tutors assigned to the session and
+						only one of the tutors was affected by this award condition.</para>
 				</answer>
 			</qandaentry>
 			<qandaentry>

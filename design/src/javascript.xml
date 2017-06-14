@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="javascript">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="javascript">
 	<title>Javascript</title>
-
 	<section xml:id="js">
 		<title>File structure</title>
 		<para>Log into webDAV and look at this folder:<programlisting>/s/js/</programlisting></para>
@@ -9,24 +9,25 @@
 			Some are third party vendor supplied files and others are default parts of onCourse
 			itself. site.js is the starting point and it has a list of all the other files which are
 			included. Note that the order of including files can sometimes be important. Let's look
-			at site.js now:</para>
+			at base.js now:</para>
 		<para>
 			<programlisting>//= minify off
 //= require base.js
 //= require extra.js</programlisting>
 		</para>
-		<para>This is telling you that minification is disabled and that the javascript files base.js and
-			extra.js are included. This is a different syntax to SCSS so don't get them confused.
-			The combined output file is called all.js and the files which are merged don't need to
-			start with an underscore.</para>
+		<para>This is telling you that minification is disabled and that the javascript files
+			base.js and extra.js are included. This is a different syntax to SCSS so don't get them
+			confused. The combined output file is called all.js and the files which are merged don't
+			need to start with an underscore.</para>
 		<section>
 			<title>Minification</title>
-			<para>Unlike CSS, the javascript is not automatically minified. This is because sometimes
-				javascript minification can actually break your javascript (particularly if it
-				contains errors). Browsers will often manage to figure out your broken javascript,
-				but once minified, errors really cause problems.</para>
-			<para>You can enable minification by changing the "off" to "on" and saving the file. Wait about
-				30 seconds and then review your site in staging before pushing it to live.</para>
+			<para>Unlike CSS, the javascript is not automatically minified. This is because
+				sometimes javascript minification can actually break your javascript (particularly
+				if it contains errors). Browsers will often manage to figure out your broken
+				javascript, but once minified, errors really cause problems.</para>
+			<para>You can enable minification by changing the "off" to "on" and saving the file.
+				Wait about 30 seconds and then review your site in staging before pushing it to
+				live.</para>
 			<para>We use the Google Closure compiler to verify and minify the output.</para>
 		</section>
 		<section>
@@ -45,40 +46,39 @@
 		<para>
 			<itemizedlist>
 				<listitem>
-					<para>classnames 2.2.5</para>
+					<para>classnames</para>
 				</listitem>
 				<listitem>
-					<para>react 0.14.8</para>
+					<para>react</para>
 				</listitem>
 				<listitem>
-					<para>react-dom 0.14.8</para>
+					<para>react-dom </para>
 				</listitem>
 				<listitem>
-					<para>react-redux 5.0.1</para>
+					<para>react-redux</para>
 				</listitem>
 				<listitem>
-					<para>redux 3.6.0</para>
+					<para>redux</para>
 				</listitem>
 				<listitem>
-					<para>redux-thunk 2.1.0</para>
+					<para>redux-thunk</para>
 				</listitem>
 				<listitem>
-					<para>jquery 3.1.1</para>
+					<para>jquery 3.x</para>
 				</listitem>
 			</itemizedlist>
 		</para>
-		<para>There is also dynamic-polyfill.js to support IE 8. In addition there are some useful
-			libraries which are often used when building sites: </para>
+		<para>In addition there are some useful libraries which are often used when building sites: </para>
 		<para>
 			<itemizedlist>
 				<listitem>
-					<para>BxSlider 4.1.1</para>
+					<para>BxSlider 4.x</para>
 				</listitem>
 				<listitem>
-					<para>jquery.customSelect 0.5.1</para>
+					<para>jquery.customSelect</para>
 				</listitem>
 				<listitem>
-					<para>jQuery Validation Plugin 1.9.0</para>
+					<para>jQuery Validation Plugin</para>
 				</listitem>
 			</itemizedlist>
 		</para>

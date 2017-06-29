@@ -1,5 +1,5 @@
 var version;
-var availableVersions = ['6.0', '7.1', '8.0', '9.0', 'latest'];
+var availableVersions = ['8.0', '9.0', '9.2', '9.3', 'latest'];
 
 $(document).ready(function() {
 	$('.chapter > .toc').prepend("<gcse:search></gcse:search>");

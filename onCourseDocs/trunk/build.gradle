@@ -40,7 +40,7 @@ buildscript {
 				'apache-xerces:resolver:2.9.1',
 				fopDeps,
 				'net.sf.xslthl:xslthl:2.1.0',
-                'com.github.ben-manes:gradle-versions-plugin:0.13.0'
+                'com.github.ben-manes:gradle-versions-plugin:0.15.0'
 
         classpath('xml-apis:xml-apis:1.4.01') {
             force = true
@@ -149,7 +149,7 @@ subprojects {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.3'
+    gradleVersion = '4.0'
 }
 
 public class Docbook extends DefaultTask {

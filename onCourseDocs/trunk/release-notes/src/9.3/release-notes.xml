@@ -4,13 +4,44 @@
     <title>Release 9.3</title>
     <pubdate>30 Jun 2017</pubdate>
   </info>
-  <section role='important'>
-    <title>Important changes</title>
-    <para> </para>
-  </section>
   <section role='major'>
     <title>Major features</title>
-    <para> </para>
+    <section>
+      <title>Data collection rules</title>
+      <para> Since the beginning of onCourse you have been able to select which fields are visible
+        and which are mandatory for online enrolments. You can also specify the rules for mailing
+        lists and waiting lists.</para>
+      <para>Now Data Collection rules take this idea to the next level. You are able to define rule
+        sets for which fields are visible and mandatory, then link those rule sets back to specific
+        courses. So your VET courses might have one set of data fields and your leisure courses a
+        smaller set. Your seminar programme might then collect data about meal choices and
+        streams.</para>
+      <para>The Data Collection rules can be very detailed. Each field can be re-ordered, you can
+        separate them with headings and text of your choice. You can rename the labels and help
+        text.</para>
+      <para>We think you'll love the flexibility that comes with Data Collection rules and you'll be
+        able to collection just the data you need without overwhelming students with too many
+        choices.</para>
+    </section>
+    <section>
+      <title>Custom fields</title>
+      <para>Custom fields have been available for Contact records for a long time now. In this
+        release we now make the custom field concept extend to enrolments, courses, applications and
+        waiting lists. This allows for a range of interesting possibilities.<itemizedlist>
+          <listitem>
+            <para>Menu choice on enrolments: vegetarian/chicken/fish</para>
+          </listitem>
+          <listitem>
+            <para>Funding data collection on applications (eg. citizenship, healthcare card)</para>
+          </listitem>
+          <listitem>
+            <para>External reference codes for linking courses to an LMS or other system</para>
+          </listitem>
+          <listitem>
+            <para>Anything you can think of!</para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
   </section>
   <section role='scripts'>
     <title>Reports and scripts</title>
@@ -31,7 +62,7 @@
         </para>
       </listitem>
       <listitem>
-        <para>Rename exisiting report 'Statement' to 'Transaction report'
+        <para>Rename existing report 'Statement' to 'Transaction report'
           <systemitem>OD-10501</systemitem>
         </para>
       </listitem>
@@ -75,63 +106,13 @@
           </para>
         </listitem>
         <listitem>
-          <para>React component to handle FieldConfiguration
-            <systemitem>OD-10265</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Investigation: Key-values API to get Contacts related properties  
-            <systemitem>OD-10409</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>New script - reminder 7 days before class starts
             <systemitem>OD-10414</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Custom field for course
+          <para>Custom field for course and application
             <systemitem>OD-10429</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI FieldEditor Component
-            <systemitem>OD-10435</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Test CustomField cayenne schema update
-            <systemitem>OD-10445</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI  FieldConfigurationGroupEditor
-            <systemitem>OD-10470</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI FieldConfigurationGroupList Container
-            <systemitem>OD-10471</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI FieldHeaderEditor
-            <systemitem>OD-10472</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI FieldConfigurationEditor drag&amp;drop FieldEditor-s
-            <systemitem>OD-10473</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>FieldConfiguration for extended custom fields 
-            <systemitem>OD-10476</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Custom fields for application
-            <systemitem>OD-10499</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -145,32 +126,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>FieldHeader add ordering field
-            <systemitem>OD-10509</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>D&amp;D function for Field Header 
-            <systemitem>OD-10510</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Field configuration -&gt; data collection rules
-            <systemitem>OD-10512</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI: Add relation to Data collection rules in Course edit
-            <systemitem>OD-10548</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Don't show Delete button for Default Field Configuration
-            <systemitem>OD-10550</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Contra payment auto application to oldest invoice incorrect
+          <para>Contra payment auto application current rather than oldest invoice
             <systemitem>OD-10565</systemitem>
           </para>
         </listitem>
@@ -185,63 +141,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Can't use newly added custom fields/data collections in related preferences until saved
-            <systemitem>OD-10611</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Group marketing fields into separate heading 
-            <systemitem>OD-10624</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Postpone data collection rules for CSO and Smart &amp; Skilled
-            <systemitem>OD-10676</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Deployment of default data collection rules
-            <systemitem>OD-10677</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Add possibility to add all custom fields to data collection
-            <systemitem>OD-10678</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Data collection UI re-label
-            <systemitem>OD-10697</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Data collection liquibase update
-            <systemitem>OD-10699</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Link to user docs for Data Collection preference help
-            <systemitem>OD-10703</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Change validation: Allow class status to be 'enrolment disabled' when it has enrolments
             <systemitem>OD-6763</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Field configuration default records
-            <systemitem>OD-9964</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI FieldConfigurationEditor
-            <systemitem>OD-9965</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Field configuration enrol fields
-            <systemitem>OD-9966</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -255,7 +156,7 @@
       <title>Fixes</title>
       <itemizedlist>
         <listitem>
-          <para>Change to Survey Monkey API integration
+          <para>Update to new Survey Monkey API
             <systemitem>OD-10116</systemitem>
           </para>
         </listitem>
@@ -325,7 +226,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>In Checkout if amount is added for pay now, can't change back to $0
+          <para>In checkout if amount is added for pay now, can't change back to $0
             <systemitem>OD-10376</systemitem>
           </para>
         </listitem>
@@ -335,7 +236,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Fix to Transcript Template alignment
+          <para>Fix to Transcript template alignment
             <systemitem>OD-10401</systemitem>
           </para>
         </listitem>
@@ -355,33 +256,13 @@
           </para>
         </listitem>
         <listitem>
-          <para>All sessions cannot be unticked for one unit
+          <para>All sessions cannot be unticked for one unit of competency
             <systemitem>OD-10547</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Can't delete Data collection without deleting fields and headers first
-            <systemitem>OD-10549</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Scrolling doesn't work for Data collection and Data collection rules
-            <systemitem>OD-10552</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Field ordering saved incorrectly
-            <systemitem>OD-10553</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Custom field type delete action is not replicated to willow
+          <para>Custom field type delete action is not replicated to website
             <systemitem>OD-10557</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>ContactCustomField queued records are not deleted on willow
-            <systemitem>OD-10567</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -395,18 +276,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Mutiple payment in (contra) on Invoice 
+          <para>Contra payments should not link for $0 since this slows performance a lot
             <systemitem>OD-10575</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Data Collection UI issues
-            <systemitem>OD-10581</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>javax.swing.JScrollPane cannot be cast to ish.view.components.CustomComponent
-            <systemitem>OD-10604</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -415,13 +286,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Sometimes Preferences are not loaded
+          <para>Sometimes Preferences are not visible
             <systemitem>OD-10610</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Fix scrolling behavior for new Data collections and rules.
-            <systemitem>OD-10623</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -440,7 +306,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Contact record opens displaying no data in fields
+          <para>Contact record opens displaying no data in fields when some invalid data was present
             <systemitem>OD-10731</systemitem>
           </para>
         </listitem>
@@ -455,17 +321,12 @@
           </para>
         </listitem>
         <listitem>
-          <para>Tag manager split into two tags
+          <para>Tag manager split into two tags for improved performance
             <systemitem>OD-10223</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Keyword search Byron2017 - Search Tool
-            <systemitem>OD-10288</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Implement og:image tag for Facebook where this is a course image
+          <para>Implement og:image tag for Facebook where there is a course image
             <systemitem>OD-10302</systemitem>
           </para>
         </listitem>
@@ -490,18 +351,13 @@
           </para>
         </listitem>
         <listitem>
-          <para>Can't add blocks to themes: CMS JQuery bug
+          <para>Can't add blocks to themes
             <systemitem>OD-10354</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>SkillsOnCourse payment date field doesn't accept two digit years
             <systemitem>OD-10407</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Javascript breakage kills site
-            <systemitem>OD-10568</systemitem>
           </para>
         </listitem>
       </itemizedlist>

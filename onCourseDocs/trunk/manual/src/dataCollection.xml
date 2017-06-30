@@ -2,17 +2,187 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" xml:id="dataCollection">
 	<title>onCourse scripts and custom workflow</title>
-	<para>something</para>
+	<para>Data collection forms and data collection rules combine to allow you to create a variety of
+		online enrolment, waiting list and application forms for different course types.</para>
+	<para>Data collection forms are a collection of fields that will be made visible to a user
+		during an online interaction with your business. Each field can be set as optional or
+		mandatory, and you can define the field label and helper text that applies. </para>
+	<para>In each form, you can sort and group fields into sections with labels and descriptions, to
+		better explain the data collection process to the end user.</para>
+	<para>By combining standard onCourse fields with custom fields you have added to your onCourse
+		database, to meet your business specific data collection requirements, a truly customisable
+		data collection experience is available for all types of training organisations.</para>
+	<para>A data collection rule is the grouping of three data collection forms for the processes of
+		enrolment, waiting list and application into a group with a name. This rule group can then
+		be applied to courses.</para>
+	<para>By default, your new onCourse database will contain data collection rules for both
+		accredited (VET) and non-accredited courses, and a default field form for collecting data
+		during product purchases. Consider these a starting point for guiding you through the basic
+		ideas of creating your own forms and rules.</para>
+	<section xml:id="dataCollection-access"><title>Accessing the default data collection forms and rules</title>
+		<para>You can locate the data collection forms by going to File > Preferences > General and
+			selecting 'Data collection forms' from the list on the left hand panel.</para>
+		<para>By default, your new onCourse database will contain the following data collection
+			forms: </para>
+		<itemizedlist>
+			<listitem>
+				<para><emphasis role="bold">Default field form</emphasis> - This form applies to the contact
+					data collection for product sales, memberships and gift voucher
+					purchases.</para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Non-accredited course enrolment form</emphasis> - The form is
+					designed for the collection of data from students enrolling into a general
+					interest course where AVETMISS data reporting is not required.</para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Accredited course enrolment form</emphasis> - This form is designed
+					to collect contact details plus AVETMISS question responses.</para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Waiting list form</emphasis> - A form to collect information from a
+					student adding themselves to a course waiting list.</para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Application form</emphasis> - A form to collect information from a
+					student applying for a course. </para>
+			</listitem>
+		</itemizedlist>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="80%" contentdepth="80%"
+					fileref="images/data_collection/data_collection_forms_default.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Viewing the default data collection forms</para>
+			</caption>
+		</mediaobject>
+		<para>The forms are grouped into 'Data collection rules', also available from the left hand panel of the general preferences window.</para>
+		<para>By default, your onCourse database will contain two data collections rules:</para>
+		<itemizedlist>
+			<listitem>
+				<para><emphasis role="bold">Non-accredited course</emphasis> - These rules contain the
+					non-accredited course enrolment form, and generic application and waiting list
+					form.</para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Accredited course</emphasis> - These rules contain the accredit
+					course enrolment form, and generic application and waiting list form. </para>
+			</listitem>
+		</itemizedlist>
+		<para>Note that both of these data collection rules use the same form for waiting lists and
+			applications. If you edit the default form, your changes will apply to both accredited
+			and non-accredited applications or wait list entries.</para>
+		<para>If you do not want both data collection rules to use the same forms, you can create a new form and adjust the rule groups so the each have their own application form, for example.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="80%" contentdepth="80%"
+					fileref="images/data_collection/data_collection_rules_default.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Viewing the default data collection rules</para>
+			</caption>
+		</mediaobject>
+	</section>
 	<section xml:id="dataCollection-edit">
-		<title>Editing default data collection rules</title>
-		<para>How to edit the default data collection rules that apply to all onCourse databases</para>
+		<title>Editing data collection forms</title>
+		<para>You can edit the default data collection forms in onCourse to include your business specific
+			rules.</para>
+		<para>You may wish to start by changing some of the fields from optional to madatory. When a
+			field is deemend mandatory, this means the student can not progress further through the
+			form without adding data. It also means if a student returns to your website to make
+			another application, enrolment or purchase, they will only be asked to complete data for
+			mandatory fields they haven't previously completed. This assists in making return visits
+			and purchases faster for your customers.</para>
+		<para>You can also change the field lable and helper text. For example, you may wish to
+			change the label of the field 'street' to 'address', and the helper text from 'Enter
+			your street address' to 'Enter your mailing address' if this is the data you would
+			prefer to collect (keep in mind, if you are an Australian RTO obliged to report AVETMISS
+			data for your students, you need to collect the student's current residental address for
+			reporting purposes).</para>
+		<para>You can adjust the order the field appear in the form by clicking on the six dot icon
+			next to the field name and dragging and dropping the field in the form.</para>
+		<para>Fields are grouped under headings. To edit the heading name or description, click the
+			Edit button to the right of the heading name.</para>
+		<para>Make your changes to the heading and click done when complete.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="80%" contentdepth="80%"
+					fileref="images/data_collection/data_heading_edit.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Editing the heading and description that appears before a group of data fields.</para>
+			</caption>
+		</mediaobject>
+		<para>You can add additional onCourse standard or your own custom fields to the form by scrolling
+			to the bottom of the form and choosing 'add field'. Select the field from the drop down
+			list available. Fields you have already added to this form will not be available to
+			select from the list. Your custom fields are also available to add.</para>
+		<para>Your newly added field will be added to the bottom of the form. You will need to drag it to the placement you want in the list.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="80%" contentdepth="80%"
+					fileref="images/data_collection/add_field_to_form.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Adding a custom field to a data collection form</para>
+			</caption>
+		</mediaobject>
+		<para>You can delete fields from data collection forms by clicking on the x icon to the right of the field.</para>
+		<para>New headings and descriptions can also be added to your form, and dragged to the
+			appropriate location.</para>
 	</section>
 		<section xml:id="dataCollection-create">
-			<title>Creating new data collection rules</title>
-			<para>How to create a new set of data collection rules</para>
+			<title>Creating new data collection forms</title>
+			<para>Before you add a new form to onCourse, think about how this form will be grouped with other forms into a 'Data collection rule'. The name you choose for your new form will either need to be specific for the one type of rule it belongs to, or generic to make sense when you apply it to multiple rules.</para>
+		<para>You also need to consider what process this form will be used for - enrolment,
+			application or waiting list. It helps to name your form in a way that indicates it's
+			process.</para>
+		<para>You can add a new form by scrolling to the bottom of all the exisiting forms and
+			clicking the button 'add new form'.</para>
+		<para>You will then need to work through the process of adding group headings, fields and
+			setting their label and help text properties. When creating a new form you should add
+			the headings and fields in the order you want them displayed to the end user, to avoid
+			you having to re-order them.</para>
 	</section>
-	<section xml:id="dataCollection-courses">
-		<title>Adding data collection rules to courses</title>
-		<para>How to set the data collection rule for each course</para>
+	<section>
+		<title>Editing and creating new data collection rules</title>
+		<para>Data collection rules are a group of three forms, for the enrolment process, wait list and application.</para>
+		<para>You can change the names of the rules or forms that have been selected for the
+			rules.</para>
+		<para>Keep in mind that if your onCourse website is already using data collection rules, any
+			changes you make to the form selection process will take effect immediately, for the
+			courses where that rule collection is applied.</para>
+		<para>If you are creating a new data collection rule, you will need to add it to a course or
+			courses, before it will be available on the web.</para>
+		<para>You can create a new rule group by clicking on the button at the bottom of the window
+			'Add new data rule'. </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="80%" contentdepth="80%"
+					fileref="images/data_collection/add_new_collection_rule.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Adding a new data collection rule</para>
+			</caption>
+		</mediaobject>
+	</section>
+	<section xml:id="dataCollection-courses"><title>Adding data collection rules to
+			courses</title><para>By default, any exisiting onCourse courses will have a data
+			collection rule applied to them based on their VET status. VET courses will have the
+			'accredited course' rule selected, and non-VET courses will have the 'non-accredited
+			course' rule applied.</para><para>You can change the data collection rule for any
+			exisiting course, and will need to set the data collection rule for any new course you
+			create.</para>
+		<para>On the general tab of the course, you can select a data collection rule from those available in onCourse.</para> 
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="80%" contentdepth="80%"
+					fileref="images/data_collection/set_collection_rule_course.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Setting the data collection rule that applies to a course</para>
+			</caption>
+		</mediaobject>
 	</section>
 </chapter>

@@ -827,13 +827,13 @@
 							skillsonCourse portal.</para>
 					</listitem>
 					<listitem>
-						<para>Send the student an email advising them the certificate is available
-							in the portal. If you create an email template to this, you can use the
-							code <code>${enrolment.student.getPortalLink(certificate)}</code> to
-							send the student a login free link directly to retrieve their
-							Certificate. After 7 days, this login free link expires, however the
-							student can still click the link and login to access their Certificate
-							again at any time.</para>
+						<para>Send the student an email advising them the certificate is available in the portal. If
+						you create an email template to this, you can use the code
+							<code>${enrolment.student.getPortalLink(document)}</code> to send the
+						student a login free link directly to retrieve their Certificate. After 7
+						days, this login free link expires, however the student can still click the
+						link and login to access their Certificate again at any time. If you want to
+						extend the link beyond 7 days, to say 30 days, format the link <code>${enrolment.student.getPortalLink(document, 30)}</code></para>
 					</listitem>
 				</orderedlist>
 			</section>

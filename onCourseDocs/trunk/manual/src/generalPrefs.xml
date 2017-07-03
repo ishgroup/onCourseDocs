@@ -2,11 +2,7 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
 	version="5.0" xml:id="generalPrefs">
 	<title>General Preferences</title>
-	<para>When you begin onCourse with a new database the setup wizard set up will take you through
-		the steps required to set up onCourse for the first time. You will be guided step by step and
-		prompted to enter the relevant information you need to set up onCourse to ensure it runs
-		efficiently and effectively. You can also return to modify your general preferences at any time
-		in the future.</para>
+	<para>When you begin onCourse with a new database the setup process should commence with you setting your general preferences.</para>
 	<tip>
 		<para>You can save your changes as you work through the preferences tabs by clicking
 			<guibutton>save</guibutton> This will also close the window, but you can open it again from
@@ -477,9 +473,9 @@
 				the completion of the first session of the Class. Refer to the chapter on <link
 					xlink:href="accounting.html">Accounting</link> for more information about
 				deferred income.</para>
-			<para>There is also a field at the top on the Finanical preferences called 'Invoice
-				remittance instructions' that allow you to define what instructions you want to
-				provide to the payer on the bottom left side of a Tax Invoice report using the code
+			<para>There is also a field at the top on the Financial preferences called 'Invoice remittance
+				instructions' that allow you to define what instructions you want to provide to the
+				payer on the bottom left side of a Tax Invoice report using the code
 				$F{pref.college.paymentInfo}.</para>
 			<mediaobject>
 				<imageobject>
@@ -523,7 +519,7 @@
 				</listitem>
 			<listitem>
 				<para>Repeat every - how often this holiday is repeated. The options you have here are: </para>
-				<orderedlist>
+				<itemizedlist>
 					<listitem>
 						<para>hour</para>
 					</listitem>
@@ -542,13 +538,13 @@
 						<listitem>
 							<para>None</para>
 						</listitem>
-				</orderedlist>
+				</itemizedlist>
 			</listitem>
 			<listitem>
 				<para>End repeat - as long as you don't select 'None' in the 'Repeat every' dropdown box this
 						dropdown option will appear. This option allows you to choose how many times
 						the holiday is repeated before it stops. The options you have here are: </para>
-				<orderedlist>
+				<itemizedlist>
 					<listitem>
 						<para>Never</para>
 					</listitem>
@@ -558,7 +554,7 @@
 					<listitem>
 						<para>On date</para>
 					</listitem>
-				</orderedlist>
+				</itemizedlist>
 			</listitem>
 				<listitem>
 					<para>On date - this date field will only appear if you choose the option 'On date' in the 'End
@@ -773,9 +769,19 @@
 		</section>
 		<section xml:id="generalPrefs-customFields">
 			<title>Custom Field Types</title>
-			<para>Navigate here by clicking on 'File' -> 'Preferences' -> 'General' from the top menu, then
-				click on the Custom fields option. To add a new custom field click on the 'Add new
-				custom field' button.</para>
+			<para>Navigate here by going to the menu File > Preferences >  General. Click on the Custom
+				fields option in the left hand panel. To add a new custom field click on the 'Add
+				new custom field' button.</para>
+			<para>Custom fields are available for Contact, Course, Enrolment, Application and
+				Waiting List.</para>
+			<para>Before you add a custom field to the database, consider how and when it will be
+				used and which would be the best record type (entity) to link the custom field
+				to.</para>
+			<para>For example, information you would only ask the student once that will stay near to the
+				same over time belongs in the contact record, like the person's Driver's Licence, or
+				alternate email address. Information that is specific to a particular enrolment or
+				application process belongs in those records, for example, meal selection for a
+				conference or application data collected for approval for a funded program.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -785,33 +791,31 @@
 					<para>The "Custom fields" Preferences</para>
 				</caption>
 			</mediaobject>
-			<para>You can create custom fields for contacts which are searchable. This allows you to
-				create fields for, and record information that is particular to your business. Some
-				examples of how this field may be used are payroll numbers, licence numbers, student
-				numbers that stay with the student between training organisations and date of
-				initial contact. These fields can be made mandatory. You can add as many additional
-				fields as you need to, that apply to contacts. These fields will appear on the
-				bottom of the 'general' tab in each contacts record.</para>
+			<para>All custom fields are searchable. This allows you to create fields for, and record
+				information, that is particular to your business. Custom field can be made
+				mandatory, but that means every contact in your database needs to complete the field
+				before the record can be saved. Often the better choice is to make the completion
+				mandatory on the form or forms where it applies. You can add as many additional
+				fields as you need to, and they will display in the records in the order they have
+				been added. </para>
+			<para>Each custom field has a key which is the code that is used to reference the custom field in
+				exports and reports. For example, the custom field in the image below with key
+				'howDidYouHearAboutUs' can be referenced as a field in email template as </para>
+			<programlisting language="groovy">Thanks for letting us know that ${contact.howDidYouHearAboutUs} was how you heard about us!</programlisting>
+			<para>The same custom field can easily be added to exports using it's key also:</para>
+			<programlisting language="groovy">"How Did You Hear About Us?"  :  contact.howDidYouHearAboutUs?.value</programlisting>
+			<para>Custom fields can be free text fields, have a list of pre-defined choices in a
+				drop down list or have a single set default values. If you want to set a list of
+				predefined choices, separate each item in the list with a semicolon. If you want to
+				include a free choice option at the end of your list, make the final option a star
+				character. e.g. Radio; TV; Internet; *</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
 						fileref="images/NewCustomField.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>Create a new custom field </para>
-				</caption>
-			</mediaobject>
-			<para>Custom fields for contact records can now be made into drop down selections of choices for 
-				use inside both the onCourse application and on your onCourse enrolment website. This feature 
-				allows you to define a list of choices inside the custom field settings, separating each item 
-				with a ; e.g. Radio; TV; Internet; *</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/DropDownCustomField.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Create a new custom field using drop down options</para>
+					<para>Creating a new custom field </para>
 				</caption>
 			</mediaobject>
 			<para>If you include an asterisk (*) in the list as per the example above, then your users will
@@ -835,6 +839,18 @@
 				</imageobject>
 				<caption>
 					<para>What happens when you select the asterisk option in a custom field drop down</para>
+				</caption>
+			</mediaobject>
+			<para>Custom fields added to contact records will appear on the bottom of the 'general' tab in
+				each contacts record. Custom fields added to enrolments, applications, waiting lists
+				or courses will appear on the custom field tab of that record.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/waitlistCustomField.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Custom field on a wait list</para>
 				</caption>
 			</mediaobject>
 			<note><para>Any custom fields created will be added to the list of questions that can be added to the

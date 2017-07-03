@@ -395,56 +395,80 @@
 				not be adjusted after the expiry date.</para>
 		</section>
 	</section>
-	<section xml:id="accounting-contraPaymentTypes">
-		<title>Contra Payment Types for Refunds</title>
-		<para>A contra payment is a special type of payment that debits the balance outstanding on
-			an invoice with the balance of an available credit note. It saves you from having to
-			look at the total balance of a student's debits and credits and works out what their end
-			position is. It may be especially useful for companies who process multiple students in
-			an invoice and have some students cancel and credited.</para>
-		<para>This works automatically for a credit note and is created through the enrolment
-			cancellation process. For example, if the student had enrolled, but not paid their
-			class, which was later cancelled and you issued them a credit note, automatically both
-			the credit note and their original invoice would have a $0 balance, as they would cancel
-			each other out.</para>
-		<mediaobject>
+	<section xml:id="accounting-contraPaymentTypes"><title>Contra Payment Types for invoice
+			reversals</title><para>A contra payment is a special type of payment that debits the
+			balance outstanding on an invoice with the balance of an available credit note. It saves
+			you from having to look at the total balance of a student's debits and credits and works
+			out what their end position is. It may be especially useful for companies who process
+			multiple students in an invoice and have some students cancel and credited.</para>
+		<para>Contra payments are processed automatically for a credit note that is created through the
+			enrolment cancellation process. For example, if the student had enrolled, but not paid
+			their class, which was later cancelled and you issued them a credit note, automatically
+			both the credit note and their original invoice would have a $0 balance, as they would
+			cancel each other out. The credit note will 'contra pay' the unpaid invoice.</para>
+		<para>In the enrolment transfer process, a credit note created from the original enrolment
+			invoice cancellation will be used to contra pay the new enrolment invoice being created
+			during the transfer process.</para>
+		<para>These are the only two instances where contra payments will apply automatically. In
+			other situations, you will need to decide how to apply the credit as a contra
+			payment.</para><mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/create_contra_via_invoice_window.png" format="png"/>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/create_contra_via_invoice_window.png" format="png"/>
 			</imageobject>
 			<caption>
 				<para>Create a contra invoice via the invoice window advanced function
 					cogwheel</para>
 			</caption>
 		</mediaobject>
-		<para>Alternatively, you can do this manually in the invoice window for manual credit notes
-			too. For example, if a student had an invoice for $100 for an enrolment that they have
-			not made a payment against, so have a balance outstanding of $100, and there then issued
-			a credit note for $70 for a manual refund for a different class that they had paid for,
-			you could choose to 'contra' the $70 credit note balance against the $100 outstanding
-			balance on the invoice. This would then show their credit note as having a $0 balance
-			(as though you had refunded them, or they had used the credit note for another
-			enrolment) and their invoice as having a balance of $30 outstanding that they need to
-			pay. </para>
-		<para>You can only use credit notes to contra invoices for the same contact. You can't take
-			a credit note from Student A and use it to 'pay off' an invoice that was issued to
-			Student B.</para>
+		<para>When a cancellation or transfer takes place and the student has credit remaining, as
+			well as other unpaid invoices, you can choose to manually apply the credit as a contra
+			payment against the invoice of your choice.</para>
+		<para>For example, if a student had an invoice for $100 for an enrolment that they have not made a
+			payment against, so have a balance outstanding of $100, and there then issued a credit
+			note for $70 for a different class that they had paid for, you could choose to 'contra'
+			the $70 credit note balance against the $100 outstanding balance on the invoice. This
+			would then show their credit note as having a $0 balance (as though you had refunded
+			them, or they had used the credit note for another enrolment) and their invoice as
+			having a balance of $30 outstanding that they need to pay. </para>
+		<para>To manually contra a credit note against and unpaid invoice, do the following:</para>
+		<orderedlist>
+			<listitem>
+				<para>Locate the credit note in the invoice / credit note list view and single click on it to
+					highlight it</para>
+			</listitem>
+			<listitem>
+				<para>In the cogwheel, select 'contra invoice'</para>
+			</listitem>
+			<listitem>
+				<para>A new window will open showing all the invoices for the contact with balances
+					outstanding</para>
+			</listitem>
+			<listitem>
+				<para>In this window tick the invoice or invoices you want the credit note to contra
+					pay against and save.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/contraPayInvoice.png" format="png"/>
+					</imageobject>
+					<caption>
+						<para>Choosing an invoice to contra pay a credit against</para>
+					</caption>
+				</mediaobject>
+			</listitem>
+		</orderedlist><para>You can only use credit notes to contra invoices for the
+			same contact. You can't take a credit note from Student A and use it to 'pay off' an
+			invoice that was issued to Student B.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/contra_invoice_edit_view.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>Edit view of a Contra Invoice</para>
-			</caption>
-		</mediaobject>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/invoice_detail_showing_contra_payment.png" format="png"/>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/invoice_detail_showing_contra_payment.png" format="png"/>
 			</imageobject>
 			<caption>
 				<para>Invoice detail showing a contra payment</para>
 			</caption>
-		</mediaobject>
-	</section>
+		</mediaobject></section>
 	<section xml:id="accounting-deferredIncome">
 		<title>Deferred Income</title>
 		<para>In this section we provide an overview of how deferred income works within onCourse

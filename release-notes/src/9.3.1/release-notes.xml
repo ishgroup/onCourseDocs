@@ -2,16 +2,11 @@
 <chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.3.1'>
   <info>
     <title>Release 9.3.1</title>
-    <pubdate>27 Jul 2017</pubdate>
+    <pubdate>1 Aug 2017</pubdate>
   </info>
   <section role='scripts'>
     <title>Reports and scripts</title>
     <itemizedlist>
-      <listitem>
-        <para>Script to send statement report to contact with outstanding balances
-          <systemitem>OD-10416</systemitem>
-        </para>
-      </listitem>
       <listitem>
         <para>Validation on Transaction report if there is no results for the selected date range
           <systemitem>OD-10725</systemitem>
@@ -42,23 +37,17 @@
           </para>
         </listitem>
         <listitem>
-          <para>Funding Contract replication
-            <systemitem>OD-10325</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Contact GST override willow schema
-            <systemitem>OD-10463</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Make a bigger clickable target for attendance icon
             <systemitem>OD-10496</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Create Import process for payments IN
-            <systemitem>OD-10618</systemitem>
+          <para>Message created by key to prevent sending duplicate messages
+              <systemitem>OD-10520</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Create Import process for payments <systemitem>OD-10618</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -77,21 +66,6 @@
           </para>
         </listitem>
         <listitem>
-          <para>Java 9 passing tests
-            <systemitem>OD-10769</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Create MessageUtils to work with message keys and generate keys
-            <systemitem>OD-10772</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Angel: Upgrade Cayenne: Cayenne 4.0.B1
-            <systemitem>OD-9541</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Remember highlighted record in list view
             <systemitem>OD-9705</systemitem>
           </para>
@@ -101,11 +75,6 @@
     <section role='fixes'>
       <title>Fixes</title>
       <itemizedlist>
-        <listitem>
-          <para>9.2 Attendance tab performance
-            <systemitem>OD-10220</systemitem>
-          </para>
-        </listitem>
         <listitem>
           <para>Fix layout of 'Add Related Courses' sheet
             <systemitem>OD-10292</systemitem>
@@ -192,8 +161,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Angel client doesn't logout properly
-            <systemitem>OD-10758</systemitem>
+          <para>Client doesn't logout properly sometimes <systemitem>OD-10758</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -202,9 +170,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>PaymentOut status should be leave 'in transaction' if the sync replication is finished with Exception
-            <systemitem>OD-10764</systemitem>
-          </para>
+          <para>PaymentOut status should be leave 'in transaction' if the sync replication is
+            finished with Exception <systemitem>OD-10764</systemitem></para>
         </listitem>
         <listitem>
           <para>Tag set bound to Tutors does not accept mandatory option even though all tutors are tagged
@@ -213,7 +180,7 @@
         </listitem>
         <listitem>
           <para>Java 8 release 141 can not verify signing in resource
-            <systemitem>OD-10805</systemitem>
+              <systemitem>OD-10805</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -222,8 +189,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>manual payment plan unclear
-            <systemitem>OD-9332</systemitem>
+          <para>Manual payment plan unclear in the user interface <systemitem>OD-9332</systemitem>
           </para>
         </listitem>
       </itemizedlist>

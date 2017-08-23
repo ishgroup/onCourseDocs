@@ -281,20 +281,19 @@
 			all together so we still recommend one of the third party video delivery systems like
 			YouTube or Vimeo.</para>
 	</section>
-	<section><title>Favicon</title><para>To add a favicon to your onCourse website, first you will need
-			a favicon image in both '.ico' and '.png' format. The standard is to have the .ico
-			images in either 16x16 or 32x32 size, and the .png up to 180x180.</para><para>Both of
-			these images have to be uploaded via Cyberduck to the directory '/s/images' with the
-			names 'favicon.ico' and 'apple-touch-icon-precomposed' (you can use any names for these
-			images, but these are the convention).</para><para>Next, add the relevant html tags to the
-				PageHead.tml file, found in the '/templates/default/' directory in Cyberduck.</para><para>Adding
+	<section><title>Favicon</title><para>Some websites show a tiny icon in the URL bar and in bookmarks. This is called a favicon. To
+			add a favicon to your onCourse website, you need an image in both '.ico' and '.png'
+			format. The standard is to have the .ico images in either 16x16 or 32x32 size, and the
+			.png up to 180x180.</para><para>Both of these images have to be uploaded via WebDAV to the directory '/s/images' with the
+			names 'favicon.ico' and 'apple-touch-icon-precomposed.png' (you can use any names for
+			these images, but these are the convention).</para><para>Next, add the relevant html to the PageHead.tml file, found in the '/templates/' directory in
+			WebDAV.</para><para>Adding
 			the following lines (assuming you have named the .ico and .png files conventionally)
 			should have web browsers auto detect and display the favicon images</para>
 		<para>
-			<programlisting linenumbering="numbered" language="xml">&lt;!DOCTYPE html>
-			&lt;<link href="/s/images/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
-			&lt;<link href="/s/images/favicon.ico" rel="shortcut icon" type="images/x-icon"/>
-			&lt;<link rel="apple-touch-icon-precomposed" href="/s/images/apple-touch-icon-precomposed.png"/>
-			</programlisting>
+			<programlisting language="xml">
+&lt;link href="/s/images/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+&lt;link href="/s/images/favicon.ico" rel="shortcut icon" type="images/x-icon"/>
+&lt;link rel="apple-touch-icon-precomposed" href="/s/images/apple-touch-icon-precomposed.png"/>			</programlisting>
 		</para></section>
 </chapter>

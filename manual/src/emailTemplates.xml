@@ -24,145 +24,190 @@
 		<para>Be careful when changing the names of the email templates. If the template is used by
 			a script, you will need to change the reference to the template name in the script
 			also.</para>
-		<para>The default templates included in onCourse are:</para>
-		<orderedlist>
-			<listitem>
-				<para><emphasis role="bold">Certificate available</emphasis> - triggered by the script 'Send
-					certificate VET created notification' and 'Send certificate created
-					notification' to advise students certificates are available in the portal and
-					include a link to complete the class survey and download their certificate. This
-					email template can not be run manually and should not be linked to an
-					entity.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Class cancellation</emphasis> - triggered by the script
-					'Send class cancellation' to advise students their class was cancelled, send
-					them a link to the website showing other options for the class, and requesting
-					they contact you to request a transfer or refund. This email template can be
-					sent manually from the enrolment list view.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Enrolment application accepted</emphasis> - triggered by
-					the script 'Send application decision' to advise students their application has
-					been accepted and include a link so they can proceed to enrol and pay. This
-					email template can be sent manually from the application list view.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Enrolment application received</emphasis> - triggered by
-					the script 'Send application received notification' to advise students their
-					application has been received and if send them a link to complete additional
-					application questions, or complete the USI portal process if they are applying
-					for a VET course. This email template can be sent manually from the application
-					list view. </para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Enrolment application rejected</emphasis> - triggered by
-					the script 'Send application decision' to advise student their application has
-					been rejected and why. This email template can be sent manually from the
-					application list view.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Enrolment Confirmation</emphasis> - triggered by the
-					script 'Send enrolment' to advise students their enrolment was successful, and
-					of the details of their class sessions. This email template can be sent manually
-					from the enrolment list view.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Enrolment notification</emphasis> - triggered by the
-					script 'Send enrolment notice for tutors' to advise a tutor or third party each
-					time an enrolment is received into their class. This email template can be sent
-					manually from the enrolment list view.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Header</emphasis> - this email template is embedded into
-					all other email templates, to include your college name and optionally, the
-					logo.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Footer</emphasis> this email template is embedded into
-					all other email templates to include your college contact details.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Payment receipt</emphasis> - triggered by the script
-					'Send payment receipt' to advise debtors their payment has been received. This
-					email template can be sent manually from the payment in list view</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Payment reminder</emphasis> - triggered by the script
-					'Send payment plan reminder' to advise debtors their payment is due and send
-					them a link to make payment. This email template can be sent manually from the
-					invoice list view.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Refund advice</emphasis> - triggered by the script 'Send
-					refund advice' to advise contacts a refund has been processed for them.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Student notice of class commencement</emphasis> - triggered by the
-					script 'Send student class commencement notice' and the script 'send student
-					class commencement notice 7 days' 'to remind students their class is commencing
-					soon. This email template can be sent manually from the enrolment list
-					view.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Survey invitation</emphasis> - triggered by the
-					integration scripts 'SurveyMonkey send invite on enrolment', 'SurveyMonkey send
-					invite on enrolment completion', 'SurveyGizmo send invite on enrolment' and
-					'SurveyGizmo send invite on completion'. This email template can not be run
-					manually.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Tax invoice</emphasis> - triggered by the script 'Send
-					invoice' to the invoice payer on enrolment, or via checkbox on manual invoice
-					creation. This email template can be sent manually from the invoice list
-					view.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Tutor notice of class commencement </emphasis>-
-					triggered by the script 'Send tutor class commencement notice' to remind tutors
-					their class is commencing. This email template can not be run manually.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">USI reminder email</emphasis> - triggered by the script
-					'Send USI reminder' to remind VET enrolled students to provide their USI before
-					their class completes. This email template can be sent manually from the
-					enrolment list view.</para>
-			</listitem>
-			<listitem xml:id="emailTemplates-Voucheremail">
-				<para><emphasis role="bold">Voucher email</emphasis> - triggered by the script 'Send voucher' to
-					send the voucher code for redemption. This email template can be sent manually
-					from the voucher or Sales list view</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Waiting list reminder </emphasis>- triggered by the
-					script 'Send waiting list reminder' to advise students of classes available,
-					when a student has subscribed to a waiting list. This email template can not be
-					run manually.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Waiting list notification </emphasis>- This template is not linked
-					to a script. It is designed to be sent manually to students on a waiting list to
-					suggest they enrol in a class that may have limited vacancies available.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Payment reminder </emphasis>- triggered by the script
-					'Send payment plan reminder' to advise debtors of unpaid invoices, or students
-					on payment plans that their payment is overdue, or due within the next 7 days.
-					Included in the email is a link where the debtor can click to make a credit card
-					payment via the onCourse portal.</para>
-			</listitem>
-			<listitem xml:id="emailTemplates-VETcourseCompletion">
-				<para><emphasis role="bold">VET course completion Survey </emphasis>-
-					triggered by the script 'VET course completion Survey' to advise VET
-					learners of the Learner Questionnaire.  </para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Membership Notification Renewal </emphasis>- triggered by the script
-					'Membership Notification Renewal' to advise current members to renew before
-					their membership expires. This email can also be sent manually from the Sales
-					window.</para>
-			</listitem>
-		</orderedlist>
+		<para>The default templates included in onCourse are listed in the sections below.</para>
+		<section>
+			<title>Enrolment cog wheel templates</title>
+			<orderedlist>
+				<listitem>
+					<para><emphasis role="bold">Class cancellation</emphasis> - triggered by the script
+						'Send class cancellation' to advise students their class was cancelled, send
+						them a link to the website showing other options for the class, and requesting
+						they contact you to request a transfer or refund. This email template can be
+						sent manually from the enrolment list view.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Enrolment Confirmation</emphasis> - triggered by the
+						script 'Send enrolment' to advise students their enrolment was successful, and
+						of the details of their class sessions. This email template can be sent manually
+						from the enrolment list view.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Enrolment notification</emphasis> - triggered by the
+						script 'Send enrolment notice for tutors' to advise a tutor or third party each
+						time an enrolment is received into their class. This email template can be sent
+						manually from the enrolment list view.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Student notice of class commencement</emphasis> - triggered by the
+						script 'Send student class commencement notice' and the script 'send student
+						class commencement notice 7 days' 'to remind students their class is commencing
+						soon. This email template can be sent manually from the enrolment list
+						view.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">USI reminder email</emphasis> - triggered by the script
+						'Send USI reminder' to remind VET enrolled students to provide their USI before
+						their class completes. This email template can be sent manually from the
+						enrolment list view.</para>
+				</listitem>
+				<listitem xml:id="emailTemplates-VETcourseCompletion">
+					<para><emphasis role="bold">VET course completion Survey </emphasis>-
+						triggered by the script 'VET course completion Survey' to advise VET
+						learners of the Learner Questionnaire.  </para>
+				</listitem>	
+				<listitem>
+					<para><emphasis role="bold">Course completion survey </emphasis>- triggered by the script 'Send
+						class completion survey' to send an email to each student requesting they complete
+						the skillsOnCourse survey. This email can also be sent manually from the enrolment
+						window.</para>
+				</listitem>
+			</orderedlist>
+		</section>
+		<section>
+			<title>Invoice cog wheel templates</title>
+			<orderedlist>
+				<listitem>
+					<para><emphasis role="bold">Tax invoice</emphasis> - triggered by the script 'Send
+						invoice' to the invoice payer on enrolment, or via checkbox on manual invoice
+						creation. This email template can be sent manually from the invoice list
+						view.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Payment reminder</emphasis> - triggered by the script
+						'Send payment plan reminder' to advise debtors their payment is due and send
+						them a link to make payment. This email template can be sent manually from the
+						invoice list view.</para>
+				</listitem>
+			</orderedlist>
+		</section>
+				<section>
+					<title>Payment In cog wheel templates</title>
+					<orderedlist>
+						<listitem>
+							<para><emphasis role="bold">Payment receipt</emphasis> - triggered by the script
+								'Send payment receipt' to advise debtors their payment has been received. This
+								email template can be sent manually from the payment in list view</para>
+						</listitem>
+					</orderedlist>
+				</section>
+		<section>
+			<title>Payment Out cog wheel templates</title>
+			<orderedlist>
+		<listitem>
+			<para><emphasis role="bold">Refund advice</emphasis> - triggered by the script 'Send
+				refund advice' to advise contacts a refund has been processed for them.</para>
+		</listitem>
+			</orderedlist>
+		</section>
+		<section>
+			<title>Application cog wheel templates</title>
+			<orderedlist>
+				<listitem>
+					<para><emphasis role="bold">Enrolment application received</emphasis> - triggered by
+						the script 'Send application received notification' to advise students their
+						application has been received and if send them a link to complete additional
+						application questions, or complete the USI portal process if they are applying
+						for a VET course. This email template can be sent manually from the application
+						list view. </para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Enrolment application accepted</emphasis> - triggered by
+						the script 'Send application decision' to advise students their application has
+						been accepted and include a link so they can proceed to enrol and pay. This
+						email template can be sent manually from the application list view.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Enrolment application rejected</emphasis> - triggered by
+						the script 'Send application decision' to advise student their application has
+						been rejected and why. This email template can be sent manually from the
+						application list view.</para>
+				</listitem>
+			</orderedlist>
+		</section>
+		<section>
+			<title>Sales cog wheel templates</title>
+			<orderedlist>
+				<listitem xml:id="emailTemplates-Voucheremail">
+					<para><emphasis role="bold">Voucher email</emphasis> - triggered by the script 'Send voucher' to
+						send the voucher code for redemption. This email template can be sent manually
+						from the voucher or Sales list view</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Membership Notification Renewal </emphasis>- triggered by the script
+						'Membership Notification Renewal' to advise current members to renew before
+						their membership expires. This email can also be sent manually from the Sales
+						window.</para>
+				</listitem>
+			</orderedlist>
+		</section>
+		<section>
+			<title>Waitlist cog wheel templates</title>
+			<orderedlist>
+				<listitem>
+					<para><emphasis role="bold">Waiting list notification </emphasis>- This template is not linked
+						to a script. It is designed to be sent manually to students on a waiting list to
+						suggest they enrol in a class that may have limited vacancies available.</para>
+				</listitem>
+			</orderedlist>
+		</section>
+		<section>
+			<title>System Templates</title>
+			<para>These templates are either embedded within other templates, or can only be triggered from scripts. They can not be sent manually.</para>
+			<orderedlist>
+				<listitem>
+					<para><emphasis role="bold">Header</emphasis> - this email template is embedded into
+						all other email templates, to include your college name and optionally, the
+						logo.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Footer</emphasis> this email template is embedded into
+						all other email templates to include your college contact details.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Certificate available</emphasis> - triggered by the script 'Send
+						certificate VET created notification' and 'Send certificate created
+						notification' to advise students certificates are available in the portal and
+						include a link to complete the class survey and download their certificate. This
+						email template can not be run manually and should not be linked to an
+						entity.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Tutor notice of class commencement </emphasis>-
+						triggered by the script 'Send tutor class commencement notice' to remind tutors
+						their class is commencing. This email template can not be run manually.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Waiting list reminder </emphasis>- triggered by the
+						script 'Send waiting list reminder' to advise students of classes available,
+						when a student has subscribed to a waiting list. This email template can not be
+						run manually.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Payment reminder </emphasis>- triggered by the script
+						'Send payment plan reminder' to advise debtors of unpaid invoices, or students
+						on payment plans that their payment is overdue, or due within the next 7 days.
+						Included in the email is a link where the debtor can click to make a credit card
+						payment via the onCourse portal.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Survey invitation</emphasis> - triggered by the
+						integration scripts 'SurveyMonkey send invite on enrolment', 'SurveyMonkey send
+						invite on enrolment completion', 'SurveyGizmo send invite on enrolment' and
+						'SurveyGizmo send invite on completion'. This email template can not be run
+						manually.</para>
+				</listitem>
+			</orderedlist>
+		</section>
 		<section>
 			<title>Editing an existing message template</title>
 			<orderedlist>

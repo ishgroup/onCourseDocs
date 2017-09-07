@@ -183,167 +183,204 @@
 			downloaded.</para>
 		<para>You can enable or disable these scripts in your database at any time, and make modifications
 			as desired if your licence level allows.</para>
-		<orderedlist>
-			<listitem>
-				<para><emphasis role="bold">Send student class commencement notice</emphasis> - automatically
-					send a reminder email (template - Student notice of class commencement) to
-					active enrolled students one day before their class commences</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">send student class commencement notice 7 days</emphasis> -
-						automatically send a reminder email (template - Student notice of class
-						commencement) to active enrolled students seven days before their class
-						commences. </para>
-					<para>NOTE: Depending on your business processes, you may wish to enable only
-						one of the reminder scripts (1 day before or 7 days before), or both. By
-						default, these scripts use the same email template. </para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Send tutor class commencement notice</emphasis> - automatically send
-					a reminder email (template - Tutor notice of class commencement) to all class
-					tutors two days before their class commences</para>
-			</listitem>
-				<listitem>
-					<para><emphasis role="bold">Send class cancellation</emphasis> - Send an email
-						(template - Class Cancellation) to the students who were enrolled with
-						information about class cancellation options, when a class is
-						cancelled</para>
-				</listitem>
-			<listitem>
-				<para><emphasis role="bold">Cancelled class notice for tutor</emphasis> - automatically sends a
-					cancellation email (template - Tutor notice of class cancellation) to the
-					tutor/s if a class they are teaching gets cancelled</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Send USI reminder</emphasis> - automatically send a reminder email
-					(template - USI reminder email) to VET students every 7 days for the next month
-					if they haven't supplied their USI on or shortly after enrolment</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Send waiting list reminder</emphasis> - for students who have been
-					added to a waiting list, send them an email (template - Waiting List reminder)
-					every 7 days of the classes currently available for the courses they are on wait
-					lists for</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Send refund advice</emphasis> - When a successful payment out is
-					created e.g. credit card refund, send an email (template - Refund advice) to the
-					payee</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Send application received notification</emphasis> - When an
-						application has been created via the web or in the office, send the student
-						an email (template - Enrolment application received) to notify them, and
-						send an email to the default admin email address to schedule the follow up
-						process.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Send application decision</emphasis> - When an application status is
-					set to offered, send an email (template - Enrolment application accepted) to a
-					student to notify them their application has been accepted, what their custom
-					enrolment fee is and how they can enrol. When an application is set to rejected,
-					send an email (template Enrolment application rejected) to the student to notify
-					them.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Send enrolment notice for tutors</emphasis> - For classes tagged
-					with 'Notify manager', send an email (template - Enrolment notification) to the
-					tutor attached with the role 'course manager' to advise them that a student has
-					enrolled in the class.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Synchronise availability (enrolment)</emphasis> - This script finds
-						all single session classes taught by the same tutor in the same room with
-						overlapping times and keeps the places available in sync. For each enrolment
-						in Class A, the maximum available places in Class B is reduced by one. This
-						is useful if one class is a subset of another (e.g.. a refresher First Aid
-						class where students need only come to the second half of the regular First
-						Aid class). If you enable this script, you'll also want to enable
-						'Synchronise availability (cancellation)'</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Synchronise availability (cancellation)</emphasis> - This script
-						finds all single session classes taught by the same tutor in the same room
-						with overlapping times and keeps the places available in sync. For each
-						enrolment in Class A, the maximum available places in Class B is reduced by
-						one. This is useful if one class is a subset of another (e.g.. a refresher
-						First Aid class where students need only come to the second half of the
-						regular First Aid class). If you enable this script, you'll also want to
-						enable 'Synchronise availability (enrolment)'</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Send certificate created notification</emphasis> - Create a
-					certificate of attendance for non-VET training with your custom
-					certificate_attendance_backgound.pdf, upload the certificate to the portal and
-					send an email (template - Certificate available) to the student containing the
-					link. There are options in the script to check attendance requirements before
-					creating certificates, which are commented out by default.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Automatic creation of VET Certificates</emphasis> - For each
-					enrolment, at 4am every day check for outcomes which have been modified in the
-					previous 24 hrs. If any outcomes attached to the enrolment are not yet marked,
-					skip this enrolment. For students with at least one successful outcome, create
-					the certificate record (Statement of Attainment or Qualification, based on the
-					isFullQual flag at the course level). If the outcome is already joined to a
-					certificate, do not create a new certificate containing that outcome</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Send certificate VET created notification</emphasis> - At 5am each
-					day, print to PDF and upload to the portal all unprinted VET certificates, where
-					the student meets the requirements for certification, including having supplied
-					their USI. Send an email (template - Certificate available) to notify the
-					student that their certificate is available in the portal. You must ensure you
-					have created and uploaded into onCourse backgrounds named
-					vet_soa_background.pdf, vet_qualification_background.pdf and
-					vet_skillset_background.pdf before enabling this script.</para>
-			</listitem>
-				<listitem>
-					<para><emphasis role="bold">Send weekly finance summary report</emphasis> - Send
-						the Trial Balance report for the previous 7 days each Monday morning to the
-						default system administrator email address. There is an option in this
-						script to change the reporting period from weekly to monthly if that is your
-						reporting period preference. </para>
-				</listitem>
-			<listitem>
-				<para><emphasis role="bold">Send product purchased email</emphasis> - Each time a product is
-					purchased on the website, and email is sent to the admin email address to notify
-					them of the purchase. Rather than using an email template, the email layout is a
-					simple plain text email inside the script itself. To change the text, you need
-					to edit the script directly. This script is disabled by default.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis role="bold">Notification of unmarked attendance</emphasis> - This management
-						script is set to run daily and check for sessions run the previous day where
-						at least one of the enrolled students has an unmarked attendance record. If
-						an unmarked record is found, an email is sent to the admin contact so they
-						can initiate a follow up process with the tutor. Optionally, only courses
-						tagged with 'checkAttendance' will be checked, so if attendance marking is
-						important for some programs, like VET, you can ignore unmarked attendance
-						for your leisure courses.</para>
-			</listitem>
-				<listitem>
-					<para><emphasis role="bold">Send payment plan reminder</emphasis> - This script
-						will send an email (template - payment reminder) to each debtor with an
-						overdue invoice, or an invoice which has a payment due within the next 7
-						days. Included in the email is a link where the debtor can click to make a
-						credit card payment via the onCourse portal.</para>
-				</listitem>
-			<listitem xml:id="scripts-VETcourseCompletion">
-					<para><emphasis role="bold">VET course completion Survey </emphasis>- This script will send an
-						email (template - VET course completion Survey) to each student two weeks
-						after to the completion of the course. </para>
-				</listitem>
-			<listitem>
-				<para><emphasis role="bold">Membership notification renewal </emphasis>- This script will send
-						an email (template - Membership Notification Renewal) to each contact with
-						an active membership 7 days prior to it's expiry to remind them to purchase
-						a renewal.</para>
-			</listitem>
-		</orderedlist>
-		</section>
+			<section>
+				<title>Student notifications</title>
+				<orderedlist>
+					<listitem>
+						<para><emphasis role="bold">Send student class commencement notice</emphasis> - automatically
+							send a reminder email (template - Student notice of class commencement) to
+							active enrolled students one day before their class commences</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">send student class commencement notice 7 days</emphasis> -
+							automatically send a reminder email (template - Student notice of class
+							commencement) to active enrolled students seven days before their class
+							commences. </para>
+						<para>NOTE: Depending on your business processes, you may wish to enable only
+							one of the reminder scripts (1 day before or 7 days before), or both. By
+							default, these scripts use the same email template. </para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Send class cancellation</emphasis> - Send an email
+							(template - Class Cancellation) to the students who were enrolled with
+							information about class cancellation options, when a class is
+							cancelled</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Send application received notification</emphasis> - When an
+							application has been created via the web or in the office, send the student
+							an email (template - Enrolment application received) to notify them, and
+							send an email to the default admin email address to schedule the follow up
+							process.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Send application decision</emphasis> - When an application status is
+							set to offered, send an email (template - Enrolment application accepted) to a
+							student to notify them their application has been accepted, what their custom
+							enrolment fee is and how they can enrol. When an application is set to rejected,
+							send an email (template Enrolment application rejected) to the student to notify
+							them.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Send certificate created notification</emphasis> - Create a
+							certificate of attendance for non-VET training with your custom
+							certificate_attendance_backgound.pdf, upload the certificate to the portal and
+							send an email (template - Certificate available) to the student containing the
+							link. There are options in the script to check attendance requirements before
+							creating certificates, which are commented out by default.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Send class completion survey</emphasis> - The day after a class is
+							completed send an email (template - Course completion survey) to all
+							classes that are not tagged with "no survey" requesting students
+							complete the skillsOnCourse portal survey process.</para>
+					</listitem>					
+				</orderedlist>
+			</section>
+			<section>
+				<title>Tutor notifications</title>
+				<orderedlist>
+					<listitem>
+						<para><emphasis role="bold">Send tutor class commencement notice</emphasis> - automatically send
+							a reminder email (template - Tutor notice of class commencement) to all class
+							tutors two days before their class commences</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Cancelled class notice for tutor</emphasis> - automatically sends a
+							cancellation email (template - Tutor notice of class cancellation) to the
+							tutor/s if a class they are teaching gets cancelled</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Send enrolment notice for tutors</emphasis> - For classes tagged
+							with 'Notify manager', send an email (template - Enrolment notification) to the
+							tutor attached with the role 'course manager' to advise them that a student has
+							enrolled in the class.</para>
+					</listitem>
+				</orderedlist>
+			</section>
+			<section>
+				<title>VET specific scripts</title>
+				<orderedlist>
+					<listitem>
+						<para><emphasis role="bold">Send USI reminder</emphasis> - automatically send a reminder email
+							(template - USI reminder email) to VET students every 7 days for the next month
+							if they haven't supplied their USI on or shortly after enrolment</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Automatic creation of VET Certificates</emphasis> - For each
+							enrolment, at 4am every day check for outcomes which have been modified in the
+							previous 24 hrs. If any outcomes attached to the enrolment are not yet marked,
+							skip this enrolment. For students with at least one successful outcome, create
+							the certificate record (Statement of Attainment or Qualification, based on the
+							isFullQual flag at the course level). If the outcome is already joined to a
+							certificate, do not create a new certificate containing that outcome</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Send certificate VET created notification</emphasis> - At 5am each
+							day, print to PDF and upload to the portal all unprinted VET certificates, where
+							the student meets the requirements for certification, including having supplied
+							their USI. Send an email (template - Certificate available) to notify the
+							student that their certificate is available in the portal. You must ensure you
+							have created and uploaded into onCourse backgrounds named
+							vet_soa_background.pdf, vet_qualification_background.pdf and
+							vet_skillset_background.pdf before enabling this script.</para>
+					</listitem>
+					<listitem xml:id="scripts-VETcourseCompletion">
+						<para><emphasis role="bold">VET course completion Survey </emphasis>- This script will send an
+							email (template - VET course completion Survey) to each student two weeks
+							after to the completion of the course. </para>
+					</listitem>
+				</orderedlist>
+			</section>
+			<section>
+				<title>Financial scripts</title>
+				<orderedlist>
+					<listitem>
+						<para><emphasis role="bold">Send refund advice</emphasis> - When a successful payment out is
+							created e.g. credit card refund, send an email (template - Refund advice) to the
+							payee</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Send weekly finance summary report</emphasis> - Send
+							the Trial Balance report for the previous 7 days each Monday morning to the
+							default system administrator email address. There is an option in this
+							script to change the reporting period from weekly to monthly if that is your
+							reporting period preference. </para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Send payment plan reminder</emphasis> - This script
+							will send an email (template - payment reminder) to each debtor with an
+							overdue invoice, or an invoice which has a payment due within the next 7
+							days. Included in the email is a link where the debtor can click to make a
+							credit card payment via the onCourse portal.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Membership notification renewal </emphasis>- This script will send
+							an email (template - Membership Notification Renewal) to each contact with
+							an active membership 7 days prior to it's expiry to remind them to purchase
+							a renewal.</para>
+					</listitem>
+				</orderedlist>
+			</section>
+			<section>
+				<title>Marketing and sales scripts</title>
+				<orderedlist>
+					<listitem>
+						<para><emphasis role="bold">Synchronise availability (enrolment)</emphasis> - This script finds
+							all single session classes taught by the same tutor in the same room with
+							overlapping times and keeps the places available in sync. For each enrolment
+							in Class A, the maximum available places in Class B is reduced by one. This
+							is useful if one class is a subset of another (e.g.. a refresher First Aid
+							class where students need only come to the second half of the regular First
+							Aid class). If you enable this script, you'll also want to enable
+							'Synchronise availability (cancellation)'</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Synchronise availability (cancellation)</emphasis> - This script
+							finds all single session classes taught by the same tutor in the same room
+							with overlapping times and keeps the places available in sync. For each
+							enrolment in Class A, the maximum available places in Class B is reduced by
+							one. This is useful if one class is a subset of another (e.g.. a refresher
+							First Aid class where students need only come to the second half of the
+							regular First Aid class). If you enable this script, you'll also want to
+							enable 'Synchronise availability (enrolment)'</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Send waiting list reminder</emphasis> - for students who have been
+							added to a waiting list, send them an email (template - Waiting List
+							reminder) every 7 days of the classes currently available for the
+							courses they are on wait lists for. </para>
+						<para>NOTE: There is also a manual email template 'Waiting list notification' that is designed
+							to be sent manually when a class has limited vacancies available, to
+							students on the wait list for the course.</para>
+					</listitem>
+				</orderedlist>
+			</section>
+			<section>
+				<title>Administrative scripts</title>
+				<orderedlist>
+					<listitem>
+						<para><emphasis role="bold">Send product purchased email</emphasis> - Each time a product is
+							purchased on the website, and email is sent to the admin email address to notify
+							them of the purchase. Rather than using an email template, the email layout is a
+							simple plain text email inside the script itself. To change the text, you need
+							to edit the script directly. This script is disabled by default.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Notification of unmarked attendance</emphasis> - This management
+							script is set to run daily and check for sessions run the previous day where
+							at least one of the enrolled students has an unmarked attendance record. If
+							an unmarked record is found, an email is sent to the admin contact so they
+							can initiate a follow up process with the tutor. Optionally, only courses
+							tagged with 'checkAttendance' will be checked, so if attendance marking is
+							important for some programs, like VET, you can ignore unmarked attendance
+							for your leisure courses.</para>
+					</listitem>
+				</orderedlist>
+			</section>
+
 		<section>
-			<title>Disabled Integration scripts</title>
+			<title>Integration scripts</title>
 			<para>A number of 3rd party integrations are included with onCourse and as standard, and each
 				integration includes integration scripts to enable you to fine tune how the
 				integration works. For more information about 3rd party application integrations refer to the chapter
@@ -403,6 +440,7 @@
 						the total transactions for each account created on the previous day</para>
 				</listitem>
 			</orderedlist>
+		</section>
 		</section>
 	</section>
 	<section xml:id="scripts-scriptTriggers">

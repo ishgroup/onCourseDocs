@@ -194,4 +194,154 @@
             being fast. Which is good.</para>
     </section>
 
+    <section>
+        <title>eCommerce Setup</title>
+        <para>
+            Setup of Google Analytics (eCommerce) with Google Tag Manager
+        </para>
+        <section>
+            <title>Tag manager setup</title>
+            <para>
+                If no Google Analytics Tag:
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            Add New Tag
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Choose Universal Analytics
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Enable overriding settings in this tag
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Fill Tracking ID with ID from Google Analytics account ID
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Choose More Settings -> Ecommerce -> choose true in Enable Enhanced Ecommerce Features dropdown
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Enable Use Data Layer
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Add new trigger (choose + -> Other -> Custom Event)
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Enable Use regex matching and paste: .*
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Save and Publish
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+
+            <para>
+                If Have Universal Google Analytic Tag:
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            Choose existing Universal Analytics tag
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Enable overriding settings in this tag
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Fill Tracking ID with ID from Google Analytics account ID
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Choose More Settings -> Ecommerce -> choose true in Enable Enhanced Ecommerce Features dropdown
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Enable Use Data Layer
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Add new trigger (choose + -> Other -> Custom Event)
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Enable Use regex matching and paste: .*
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Save and Publish
+                        </para>
+                    </listitem>
+                </itemizedlist>
+                <inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/gtm_settings.png" scalefit="1" width="100%" contentdepth="100%" format="png"/>
+                    </imageobject>
+                </inlinemediaobject>
+            </para>
+
+            <section>
+                <title>Google Analytics Setup</title>
+                <para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>
+                                Enable enhanced ecommerce reporting in the Google Analytics view admin setting, under ‘Ecommerce Settings’
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>
+                                Select names for your checkout steps (Optional)
+                                1 - Empty Cart
+                                2 - Add Contact
+                                3 - Edit Contact
+                                4 - Summary
+                                5 - Payment
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>
+                                Submit changes
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                    <inlinemediaobject>
+                        <imageobject>
+                            <imagedata fileref="images/google_analytics_settings.png" scalefit="1" width="100%" contentdepth="100%" format="png"/>
+                        </imageobject>
+                    </inlinemediaobject>
+                </para>
+                <para>
+                    Checking it is working: There is no ‘real time’ ecommerce reporting yet,
+                    so you’ll need to wait a few hours for events to process and then view the shopping
+                    behaviour and checkout behaviour reports.
+                </para>
+            </section>
+
+        </section>
+    </section>
+
 </chapter>

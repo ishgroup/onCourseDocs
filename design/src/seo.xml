@@ -46,16 +46,17 @@
             initial Analytics tags for you, and get you started. You can then build more tracking or
             hand over access to your SEO consultants.</para>
     </section>
-    <section>
+    <section xml:id="seo-analytics">
         <title>Google analytics</title>
-        <para>Although the Google Analytics javascript is driven from Tag Manager, onCourse also
-            injects some additional data into your analytics.<itemizedlist>
+        <para>onCourse injects some additional data into your analytics beyond the standard page views:<itemizedlist>
                 <listitem>
                     <para>Transactional sales dollars. Every sale through the website puts the
                         dollar value into your Analytics. So not only can you see how many page
                         views you got from that ad campaign, you can see the dollar value of the
-                        sales that generated. You'll discover that the two aren't always
-                        correlated.</para>
+                        sales that generated. You'll discover that the two aren't always correlated.
+                        Do you care about ten thousand views from Facebook likes or the 200 real
+                        sales from a targeted campaign? This is how you can tell the
+                        difference.</para>
                 </listitem>
                 <listitem>
                     <para>Course and products. Drill down in your data to see where sales are coming
@@ -69,11 +70,73 @@
                         the end.</para>
                 </listitem>
                 <listitem>
-                    <para>Checkout steps. Coming very soon you'll be able to see each step in the
-                        checkout process through a Google Analytics acquisition funnel. See where
-                        and why people are dropping off.</para>
+                    <para>Checkout steps. You can track each step in the checkout process through a
+                        Google Analytics acquisition funnel. See where and why people are dropping
+                        off.</para>
                 </listitem>
             </itemizedlist></para>
+        <section>
+            <title>Google Analytics Setup</title>
+            <para> In order to get data into your Google Analytics account you'll need to complete
+                the following steps:
+                <itemizedlist>
+                    <listitem>
+                        <para>Create a new <link
+                                xlink:href="https://analytics.google.com/analytics/web/">Google
+                                Analytics</link> account (or use an existing one). Under <code>Admin
+                                → Property → Tracking code</code> look for the tracking id and make
+                            a note of it.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Log into <link xlink:href="http://tagmanager.google.com/">Google
+                                TagManager</link> and find <code>ish onCourse Google Analytics
+                                settings</code> under variables. Put your tracking id in there to
+                            replace the dummy one.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Back in Google Analytics, you should soon be able to the Tracking Code
+                            status update to show data coming in. Visit your website to generate a
+                            bit of traffic.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Enable enhanced ecommerce reporting in the Google Analytics under
+                                <code>Admin → View → E-commerce settings</code></para>
+                    </listitem>
+                    <listitem>
+                        <para>Select names for your checkout steps
+                            <itemizedlist><listitem>
+                                    <para>1 - Empty Cart</para>
+                                </listitem>
+                                <listitem>
+                                    <para>2 - Add Contact</para>
+                                </listitem>
+                                <listitem>
+                                    <para>3 - Edit Contact</para>
+                                </listitem>
+                                <listitem>
+                                    <para>4 - Summary</para>
+                                </listitem>
+                                <listitem>
+                                    <para>5 - Payment</para>
+                                </listitem></itemizedlist></para>
+                    </listitem>
+                    <listitem>
+                        <para> Submit changes </para>
+                    </listitem>
+                </itemizedlist>
+                <inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/google_analytics_settings.png" scalefit="1"
+                            width="100%" contentdepth="100%" format="png"/>
+                    </imageobject>
+                </inlinemediaobject>
+            </para>
+            <para> There is no real time e-commerce reporting yet, so you’ll need to wait a few
+                hours for events to process and then view the shopping behaviour and checkout
+                behaviour reports.</para>
+            <para>When you have some time, explore the Analytics "goals" setup for ways to get
+                useful information such as dropoff in your checkout rates.</para>
+        </section>
     </section>
     <section>
         <title>Sitemap</title>
@@ -192,156 +255,6 @@
             displays.</para>
         <para>The end result of all this is that search engines give your site bonus points for
             being fast. Which is good.</para>
-    </section>
-
-    <section>
-        <title>eCommerce Setup</title>
-        <para>
-            Setup of Google Analytics (eCommerce) with Google Tag Manager
-        </para>
-        <section>
-            <title>Tag manager setup</title>
-            <para>
-                If no Google Analytics Tag:
-                <itemizedlist>
-                    <listitem>
-                        <para>
-                            Add New Tag
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Choose Universal Analytics
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Enable overriding settings in this tag
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Fill Tracking ID with ID from Google Analytics account ID
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Choose More Settings -> Ecommerce -> choose true in Enable Enhanced Ecommerce Features dropdown
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Enable Use Data Layer
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Add new trigger (choose + -> Other -> Custom Event)
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Enable Use regex matching and paste: .*
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Save and Publish
-                        </para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-
-            <para>
-                If Have Universal Google Analytic Tag:
-                <itemizedlist>
-                    <listitem>
-                        <para>
-                            Choose existing Universal Analytics tag
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Enable overriding settings in this tag
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Fill Tracking ID with ID from Google Analytics account ID
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Choose More Settings -> Ecommerce -> choose true in Enable Enhanced Ecommerce Features dropdown
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Enable Use Data Layer
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Add new trigger (choose + -> Other -> Custom Event)
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Enable Use regex matching and paste: .*
-                        </para>
-                    </listitem>
-                    <listitem>
-                        <para>
-                            Save and Publish
-                        </para>
-                    </listitem>
-                </itemizedlist>
-                <inlinemediaobject>
-                    <imageobject>
-                        <imagedata fileref="images/gtm_settings.png" scalefit="1" width="100%" contentdepth="100%" format="png"/>
-                    </imageobject>
-                </inlinemediaobject>
-            </para>
-
-            <section>
-                <title>Google Analytics Setup</title>
-                <para>
-                    <itemizedlist>
-                        <listitem>
-                            <para>
-                                Enable enhanced ecommerce reporting in the Google Analytics view admin setting, under ‘Ecommerce Settings’
-                            </para>
-                        </listitem>
-                        <listitem>
-                            <para>
-                                Select names for your checkout steps (Optional)
-                                1 - Empty Cart
-                                2 - Add Contact
-                                3 - Edit Contact
-                                4 - Summary
-                                5 - Payment
-                            </para>
-                        </listitem>
-                        <listitem>
-                            <para>
-                                Submit changes
-                            </para>
-                        </listitem>
-                    </itemizedlist>
-                    <inlinemediaobject>
-                        <imageobject>
-                            <imagedata fileref="images/google_analytics_settings.png" scalefit="1" width="100%" contentdepth="100%" format="png"/>
-                        </imageobject>
-                    </inlinemediaobject>
-                </para>
-                <para>
-                    Checking it is working: There is no ‘real time’ ecommerce reporting yet,
-                    so you’ll need to wait a few hours for events to process and then view the shopping
-                    behaviour and checkout behaviour reports.
-                </para>
-            </section>
-
-        </section>
     </section>
 
 </chapter>

@@ -69,9 +69,10 @@ class ReleaseNotes extends DefaultTask {
 
     // https://docs.atlassian.com/jira/REST/latest/#idp1389824
     def SQUISH_URL = "https://squish.ish.com.au/rest/api/latest/search"
-    def query = "?jql=fixVersion=${jiraFixVersion}&maxResults=1000"
+    def query = "?jql=resolution+in+(closed,Unresolved)+and+fixVersion=${jiraFixVersion}&maxResults=1000"
     def encoded_auth = "$jiraUsername:$jiraPassword".getBytes().encodeBase64().toString()
 
+    logger.lifecycle "Getting " + (SQUISH_URL + query).toURL()
     def connection = (SQUISH_URL + query).toURL().openConnection()
     connection.addRequestProperty("Authorization", "Basic ${encoded_auth}")
     connection.addRequestProperty("Content-Type", "application/json")
@@ -83,7 +84,7 @@ class ReleaseNotes extends DefaultTask {
     def json_data = slurper.parseText(connection.content.text)
     logger.debug new JsonBuilder(json_data).toPrettyString()
 
-    logger.lifecycle "Found issues..."
+    logger.lifecycle "Found ${json_data.issues.size()} issues..."
     buildDocBook(jiraFixVersion, json_data.issues)
 
   }

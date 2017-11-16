@@ -501,5 +501,80 @@ records.each { AccountTransaction t ->
 			Integrations.</link></para>
 		<para>Custom import processes and integration scripts can also be created on request. Please
 			send you request to support@ish.com.au</para>
+		<section xml:id="importExport-payentIn">
+			<title>Payment In Import</title>
+			<para>If you receive bulk payments from an outside source, you can use the Payment In import to
+				have the payments recorded against the invoices. To be successful, the import file
+				must have the correct columns and be in CSV format. </para>
+			<para>The first step is to confirm the payment data you receive has the invoice number
+				included. If your onCourse invoice number is included in the information then the
+				payment in import will not work</para>
+			<para>If the invoice number is included in the data, then your next step is to determine
+				how you will prepare the data to be imported. If you have access to a payment
+				portal, like with internet banking, you many need download the data in a CSV format
+				and edit it in a spreadsheet program so that the correct columns are available for
+				the import. If your data is being sent from a internal department or supplier, you
+				many find they are able to send the information in the correct format for you. </para>
+			<para>To import the CSV, go to File > Import / Export > Import and select 'onCourse
+				payment in csv import' as the import type.</para>
+			<section><title>Payment In Import file</title>
+			<para>Please see below for the import file specification</para>
+			<table frame="all">
+						<title>Payment In Import files</title>
+						<tgroup cols="7" align="left" colsep="1" rowsep="1">
+						<colspec colnum="1" colname="c1" colwidth="1*"/>
+						<colspec colnum="2" colname="c2" colwidth="1*"/>
+						<colspec colnum="3" colname="c3" colwidth="1*"/>
+						<colspec colnum="4" colname="c4" colwidth="1*"/>
+						<colspec colname="c5" colnum="5" colwidth="1*"/>
+						<colspec colnum="6" colname="c6" colwidth="1*"/>
+						<colspec colname="c7" colnum="7" colwidth="1*"/>
+						<thead>
+							<row>
+								<entry><emphasis role="bold">payment.invoice</emphasis></entry>
+								<entry><emphasis role="bold">payment.dateBanked </emphasis></entry>
+								<entry><emphasis role="bold">payment.amount?</emphasis></entry>
+								<entry><emphasis role="bold"
+									>paymentIn.paymentMethod.name</emphasis></entry>
+								<entry><emphasis role="bold">payment.chequeBank</emphasis></entry>
+								<entry><emphasis role="bold">payment.chequeBranch</emphasis></entry>
+								<entry><emphasis role="bold">payment.chequeDrawer</emphasis></entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry>insert the onCourse invoice numbers here</entry>
+								<entry>insert the date the payment was  banked here, in date format
+									DD/MM/YY</entry>
+								<entry>insert the amount as numbers. Do not use dollar symbols or
+									commas </entry>
+								<entry>enter the payment method name as per your onCourse
+									database</entry>
+								<entry/>
+								<entry/>
+								<entry/>
+							</row>
+							<row>
+								<entry>12045</entry>
+								<entry>31/10/2017</entry>
+								<entry>1295.50</entry>
+								<entry>other</entry>
+								<entry/>
+								<entry/>
+								<entry/>
+							</row>
+							<row>
+								<entry>12892</entry>
+								<entry>30/10/2017</entry>
+								<entry>1000</entry>
+								<entry>Cheque</entry>
+								<entry/>
+								<entry/>
+								<entry/>
+							</row>
+						</tbody>
+					</tgroup>
+					</table></section>
+		</section>
 	</section>
 </chapter>

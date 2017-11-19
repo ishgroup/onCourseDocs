@@ -526,5 +526,102 @@
                     enrolment cluster vouchers. </para>
             </note>
         </section>
+        <section>
+            <title>Using a vouchers in place of credit notes</title>
+            <para>You may want to use vouchers in place of credit notes for a variety reasons:</para>
+            <orderedlist>
+                <listitem>
+                    <para>They remove credit note balances from your trade debtors account</para>
+                </listitem>
+                <listitem>
+                    <para>If unused by the student, they automatically expire after a fixed period of time to become income for your business, instead of remaining as a liability indefinitely</para>
+                </listitem>
+                <listitem>
+                    <para>They can be used to enrol online by anyone who has the voucher code e.g. the student can gift their credit to a friend by giving them the voucher code</para>
+                </listitem>
+            </orderedlist>
+            <para>To convert credit notes into gift vouchers, you first need to ensure you have a voucher type set up that can be purchased for a variable amount.</para>
+ <example>
+     <title>How to create a voucher type that can be purchased and redeemed for an amount of any value</title>
+<orderedlist>
+    <listitem>
+        <para>Go to the menu Products > Voucher Types to open the list view</para>
+    </listitem>
+    <listitem>
+        <para>Click on the + to create a new type of voucher</para>
+    </listitem>
+                    <listitem>
+                        <para>Enter a SKU and voucher name. Commonly, this type of voucher is called a 'Gift Voucher'</para>
+                    </listitem>
+    <listitem>
+        <para>By default, your vouchers will be set to expire a year after purchase (365 days). Change this value if you wish.</para>
+    </listitem>
+    <listitem>
+        <para>Select Can be redeemed for... 'Purchase Price'. This will make all the other options on the general tab disapear.</para>
+    </listitem>
+    <listitem>
+        <para>If you wish to sell this voucher on your website, go to the tab Web and check the option 'Can be purchased online'. You may also wish to add a product description on this tab also</para></listitem>
+    <listitem>
+        <para>Save and close your new voucher type</para>
+    </listitem>
+</orderedlist>
+     <mediaobject>
+         <imageobject>
+             <imagedata scalefit="1" width="100%" contentdepth="100%"
+                 fileref="images/vouchers/gift_voucher_settings.png"/>
+         </imageobject>
+         <caption>
+             <para>Settings to create a gift voucher type</para>
+         </caption>
+     </mediaobject>
+ </example>
+            <example>
+                <title>Using a credit note to puchase a gift voucher</title>
+                <para>If a customer has a credit on their record, this credit can be used to puchase
+                    a gift voucher, provided the credit they have exceeds any amount outstanding in
+                    relation to unpaid invoice. Their total debtors position must be one of
+                    credit.</para>
+                <para>To see the credit availble to a customer, open Quick Enrol and type their name
+                    in. Their Balance Outstanding needs to be negative (shown in brackets) to have
+                    credit available for the purchase of a voucher as per this process.</para>
+                <para>In most instances, you are going to sell the customer a voucher that is equal
+                    to the value of their Balance outstanding. You can also sell a voucher for less
+                    than or more than this amount if needed, but will also need to collect payment
+                    for the difference.</para>
+                <orderedlist>
+                    <listitem>
+                        <para>Open Quick Enrol and type in the customer name</para>
+                    </listitem>
+                    <listitem>
+                        <para>Under items, type in the name of your voucher type e.g. Gift
+                            Voucher</para>
+                    </listitem>
+                    <listitem>
+                        <para>In the 'Price each' field, enter the value of the voucher you wish to
+                            sell e.g. the value of their Balance outstanding.</para>
+                    </listitem>
+                    <listitem>
+                        <para>If you want the students whose credit is being used to puchase the
+                            voucher to be notified when the voucher is redeemed, check the option
+                            'send the invoice when the voucher is redeemed to xxx'. Optionally
+                            override the expiry date of the voucher in this window also.</para>
+                    </listitem>
+                    <listitem>
+                        <para>If the sale price of the voucher is equal to the Balance outstanding,
+                            there should be no amount payable. Select save to create the voucher and
+                            send the redemption instructions to the student.</para>
+                    </listitem>
+                </orderedlist>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="100%" contentdepth="100%"
+                            fileref="images/vouchers/sell_gift_voucher.png"/>
+                    </imageobject>
+                    <caption>
+                        <para>Selling a gift voucher equal to the amount a student has in credit</para>
+                    </caption>
+                </mediaobject>
+            </example>
+        </section>
     </section>
 </chapter>

@@ -50,7 +50,8 @@ buildscript {
 }
 
 plugins {
-  id 'com.github.ben-manes.versions' version '0.17.0' // adds the task 'dependencyUpdates'
+    id 'com.github.ben-manes.versions' version '0.17.0' // adds the task 'dependencyUpdates'
+    id 'java-gradle-plugin'
 }
 
 task buildScriptDependencies(type: DependencyReportTask) {
@@ -64,12 +65,13 @@ allprojects {
         docbookxslt
     }
 
-    dependencies {
-        repositories {
-            maven {
-                url 'https://repo.ish.com.au/content/groups/public'
-            }
+    repositories {
+        maven {
+            url 'https://repo.ish.com.au/content/groups/public'
         }
+    }
+
+    dependencies {
         docbookxslt 'net.sf.docbook:docbook-xsl:1.79.1:resources@zip'
     }
 
@@ -147,6 +149,7 @@ subprojects {
 		description = 'Generates all HTML and PDF documentation.'
 	}
 
+    // this task should be periodically run manually to optimise files in the source folders
     task optimise {
         description = "Optimise all the images"
 
@@ -174,14 +177,13 @@ subprojects {
             }
         }
     }
-
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '4.3.1'
 }
 
-public class Docbook extends DefaultTask {
+class Docbook extends DefaultTask {
 	@InputDirectory
 	File sourceDirectory = new File(project.getProjectDir(), "src");
 
@@ -192,7 +194,7 @@ public class Docbook extends DefaultTask {
 	File outputFile
 
 	@TaskAction
-	public final void transform() {
+	def transform() {
 		// the docbook tasks issue spurious content to the console. redirect to INFO level
 		// so it doesn't show up in the default log level of LIFECYCLE unless the user has
 		// run gradle with '-d' or '-i' switches -- in that case show them everything
@@ -205,63 +207,62 @@ public class Docbook extends DefaultTask {
 				logging.captureStandardError(LogLevel.INFO)
 		}
 
-		SAXParserFactory factory = new SAXParserFactoryImpl();
-		factory.setXIncludeAware(true);
-        XMLReader reader = factory.newSAXParser().getXMLReader();
-        def transformerFactory = new TransformerFactoryImpl();
+		SAXParserFactory factory = new SAXParserFactoryImpl()
+		factory.setXIncludeAware(true)
+        XMLReader reader = factory.newSAXParser().getXMLReader()
+        def transformerFactory = new TransformerFactoryImpl()
 
-		File srcFile = new File(sourceDirectory, "index.xml");
-        InputSource inputSource = new InputSource(srcFile.getAbsolutePath());
+		File srcFile = new File(sourceDirectory, "index.xml")
+        InputSource inputSource = new InputSource(srcFile.getAbsolutePath())
 
         outputFile.getParentFile().mkdirs();
-		Result result = new StreamResult(outputFile.getAbsolutePath());
+		Result result = new StreamResult(outputFile.getAbsolutePath())
 
 		URL url = stylesheet.toURI().toURL();
-		Source source = new StreamSource(url.openStream(), url.toExternalForm());
+		Source source = new StreamSource(url.openStream(), url.toExternalForm())
 		def transformer = transformerFactory.newTransformer(source);
 
-        String rootFilename = outputFile.getName();
-        rootFilename = rootFilename.substring(0, rootFilename.lastIndexOf('.'));
-        transformer.setParameter("root.filename", rootFilename);
-        transformer.setParameter("base.dir", outputFile.getParent() + File.separator);
-        transformer.setParameter('highlight.xslthl.config', 'file://' + project.getBuildDir().getAbsolutePath() + '/stylesheets/xslthl-config.xml' );
+        String rootFilename = outputFile.getName()
+        rootFilename = rootFilename.substring(0, rootFilename.lastIndexOf('.'))
+        transformer.setParameter("root.filename", rootFilename)
+        transformer.setParameter("base.dir", outputFile.getParent() + File.separator)
+        transformer.setParameter('highlight.xslthl.config', 'file://' + project.getBuildDir().getAbsolutePath() + '/stylesheets/xslthl-config.xml' )
 
-        transformer.transform(new SAXSource(reader, inputSource), result);
+        transformer.transform(new SAXSource(reader, inputSource), result)
 	}
 }
 
-public class DocbookPdf extends DefaultTask {
-
+class DocbookPdf extends DefaultTask {
     @InputFile
-    File sourceFile;
+    File sourceFile
 
     @OutputFile
-    File outputFile;
+    File outputFile
 
     @TaskAction
-    public final void transform() {
+    def transform() {
         
         FopFactory fopFactory = new FopConfParser(
             new File(project.getRootDir().getAbsolutePath() + '/fonts/fop-conf.xml'),
             new File(project.getProjectDir().getAbsolutePath() + '/src').toURI()
-        ).getFopFactoryBuilder().build();
+        ).getFopFactoryBuilder().build()
 
-		OutputStream out = new BufferedOutputStream(new FileOutputStream(outputFile));
+		OutputStream out = new BufferedOutputStream(new FileOutputStream(outputFile))
 
 		try {
-			Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, out);
+			Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, out)
 
-			TransformerFactory factory = TransformerFactory.newInstance();
-			Transformer transformer = factory.newTransformer();
-            transformer.setParameter('highlight.xslthl.config', 'file://' + project.getRootDir().getAbsolutePath() + '/stylesheets/xslthl-config.xml' );
+			TransformerFactory factory = TransformerFactory.newInstance()
+			Transformer transformer = factory.newTransformer()
+            transformer.setParameter('highlight.xslthl.config', 'file://' + project.getRootDir().getAbsolutePath() + '/stylesheets/xslthl-config.xml' )
 
 			Source src = new StreamSource(sourceFile);
-			Result res = new SAXResult(fop.getDefaultHandler());
+			Result res = new SAXResult(fop.getDefaultHandler())
 
-			transformer.transform(src, res);
+			transformer.transform(src, res)
 
 		} finally {
-			out.close();
+			out.close()
 		}
 	}
 }

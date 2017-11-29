@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.0" xml:id="editor">
+    <title>onCourse CMS - Editor </title>
+    
+    <section xml:id="editorIntroduction"><title>Introduction</title>
+            <para> 
+                The onCourse Editor is your platform to create, manage and distribute information to your website. 
+                The Editor is a Content Managment System (CMS) that  provides simple but powerful tools 
+                to manage the struture and content of your website in a collaborative environment.
+            </para>
+        
+        <section xml:id="editorAccess"> <title> Setting up Access to the Editor </title>
+            <para>
+                Before you start editing content within the Editor you need to set up a user name and password to log in.           
+            </para>
+            <para>
+                onCourse enables any user to also have the ability to log into and edit content within the CMS using the same log in credentials for the Editor 
+                that you use to access the onCourse Client . To do this go to File > Preferences > Users and open the relevant record, then tick the box 'Can edit CMS'. 
+            </para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/edit_user_CMS_access.png" format="png" />
+                </imageobject>
+                <caption>
+                    <para>Enabling Editor Access within onCourse User Profile</para>
+                </caption>
+            </mediaobject>
+        </section>
+        
+        <section xml:id="editorLoggingIn"><title>Logging In</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_login.png" format="png"></imagedata>        
+                </imageobject>
+            </mediaobject>
+           
+            <para> You can access the editor by visiting your name site and adding
+                    <emphasis>'#editor'</emphasis> at the end of the url. For example, if your website
+                url is <emphasis>'http://www.acme.com.au'</emphasis> the editor can be accessed at
+                    <emphasis>'xml http://www.acme.com.au#editor'</emphasis>. 
+            </para>
+        </section>
+        
+        <section xml:id="editorView"><title>The Editor View</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_SideBar.png"></imagedata>
+                </imageobject>
+                <caption>
+                    <para>Finding your way around the Editor view</para>
+                </caption>
+            </mediaobject>
+            <para>
+                Once logged in, a new toolbar will be visible o the left hand side of the browser window. You can continue to browse through your site as normal
+                while logged into the Editor.
+            </para>
+            <para>
+                Across the left of the screen you will find icons that allows you to quickly access the primary areas of the Editor. 
+                In addition, you will also see an option to publish any changes you've made to the live site, 
+                as well as view a log of all recent changes to the site.
+            </para>
+            
+            <para>
+                The Editor is navigated by the icons on the Editor toolbar on the left hand side of the screen. 
+                These icons allows you to access different ares of the Editor quickly.
+                //TODO
+            </para>
+            <variablelist>
+                <varlistentry>
+                    <term>Site</term>
+                    <listitem>
+                        <para>Returns you to viewing your website. All changes made in the Editor will be visible.</para>
+                    </listitem>
+                </varlistentry>
+                
+                <varlistentry>
+                    <term>Content</term>
+                    <listitem>
+                        <para>Allows you to edit the Blocks, Pages and Menus that appear on your site</para>
+                    </listitem>
+                </varlistentry>
+                
+                <varlistentry>
+                    <term>Settings</term>
+                    <listitem>
+                        <para>Allows you to manage a number of different aspects of how your website and portal display information. </para>
+                    </listitem>
+                </varlistentry>
+                
+                <varlistentry>
+                    <term>Design</term>
+                    <listitem>
+                        <para>Allows for the themes of the website to be edited</para>
+                    </listitem>
+                </varlistentry>
+            </variablelist>
+        </section>
+    </section>
+    
+    <section xml:id="editorContent"><title>Editing Content</title>
+
+    <para>
+        Clicking the Content Icon will take you to the editor for Blocks, Pages and Themes. These three components make up the strucutre of the website.
+    </para>
+    <mediaobject>
+        <imageobject>
+            <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_content.png"></imagedata>
+        </imageobject>
+    </mediaobject>
+    
+        
+        <section xml:id="editorBlocks"><title> Blocks </title>
+            <para>
+                Blocks are the cornerstone to your website's variety and page dynamics. 
+                For example if you wanted an element (a banner for example) on every page of your web site, then blocks are your answer. 
+                If you wanted an area on several different pages dedicated to a contact form, blocks are ideal. 
+                Blocks are re-usable snippets of text, pictures, rich text markup, javascript, etc.
+            </para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_blocks.png"></imagedata>
+                </imageobject>
+                <caption>
+                    <para>
+                        The Blocks page allows you to easily add, search and edit blocks. 
+                    </para>
+                </caption>
+            </mediaobject>
+            <para>
+                Selecting a block will take you to the Editor page for that specific block.
+                Here, you can change the name of the block, as well as editing it's content. 
+                On the righ side of the screen you will see a rendering of what the block will look like on your website 
+            </para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_blocksEdit.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+            
+            <para>
+                Clicking on the block contents will open the block in a text editor view. 
+                Here, you can write markup text or html to be added to the block. 
+                Clicking save will close the text editor and render your changes for you to view.
+            </para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_blocksEditHtml.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+            
+            
+            <para>
+                However just creating a block will not achieve anything of itself. You need to place that block onto your site in one of two ways:
+                //TODO
+            </para>
+        </section>
+        
+        <section xml:id="editorPages"><title> Pages </title>
+            <para> Many pages generated in your "onCourse" website will be content automatically
+                generated from your Course, Classes, and Tutor descriptions. Some of the pages in
+                your site have URLs like this: <itemizedlist>
+                    <listitem>
+                        <para>/courses</para>
+                    </listitem>
+                    <listitem>
+                        <para>/courses/arts/photography</para>
+                    </listitem>
+                    <listitem>
+                        <para>/course/ABC</para>
+                    </listitem>
+                    <listitem>
+                        <para>/sites</para>
+                    </listitem>
+                    <listitem>
+                        <para>/tutor/123</para>
+                    </listitem>
+                    <listitem>
+                        <para>/site/234</para>
+                    </listitem>
+                    <listitem>
+                        <para>/checkout</para>
+                    </listitem>
+                </itemizedlist></para>
+            <para>
+                Additionally, you can create 'static' pages to your website. 
+                These allows you to add additional content to add breadth and cohesion to your website. 
+                For example, you may like to add an "about us" or "contact" page.
+            </para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_pages.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+            <para> The Pages view will list of all the static pages in your site and gives you quick
+                access to search for, edit and delete pages. Similar to the Block view, clicking on
+                a Page will open that Page in a text editor view. 
+            </para>
+            <para>
+                Here, you can change the theme that is applied to this page, the pages name, as well as editting the content of the
+                page. You can also elect whether any given page is 'avaiable'. Pages that are not
+                marked as available can only be accessed with their direct url link. 
+                Keep pages that you don't want users stumbling across, or that may be under contruction as 'invisible'.
+            </para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_pagesEdit.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+        </section>
+        
+        <section xml:id="editorMenus"><title> Menus </title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_menus.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+            <para></para>
+        </section>
+    </section>
+    
+    <section xml:id="editorSettings"><title>Settings</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_settings.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+             
+        <section xml:id="editorSkillsOnCourse"><title>SkillsOnCourse</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_settingsSkillsOnCourse.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+            <para></para>
+        </section>
+        
+        <section xml:id="editorWebsite"><title>Website Settings</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_settingsWebsite.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+            <para></para>
+        </section>
+        
+        <section xml:id="editorCheckOut"><title>Checkout</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_settingsCheckout.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+            <para></para>
+        </section>
+        
+        <section xml:id="editorRedirect"><title>Redirects</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_settingsRedirect.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+            <para></para>
+        </section>
+   
+    </section>
+    
+    <section xml:id="editorDesign"><title>Design</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_design.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+        <para></para>
+        <section xml:id="Theme"><title>Themes</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_designThemes.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_designEditThemes.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+            <para> </para>
+        </section>
+    </section>  
+
+    <section xml:id="editorChangeLogs"><title>Change Log</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_changeLog.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+        <para></para>
+        <section xml:id="editorRevertingChanges"><title>Reverting Changes</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_revertChanges.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+            <para></para>
+        </section>
+    </section>
+    
+    <section xml:id="editorPublish"><title>Publishing your changes</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_publish.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+        <para></para>
+    </section>
+
+
+
+
+</chapter>    

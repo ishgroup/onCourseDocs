@@ -15,7 +15,7 @@
                 Before you start editing content within the Editor you need to set up a user name and password to log in.           
             </para>
             <para>
-                onCourse enables any user to also have the ability to log into and edit content within the CMS using the same log in credentials for the Editor 
+                onCourse enables any user to also have the ability to log into and edit content within the Editor using the same log in credentials 
                 that you use to access the onCourse Client . To do this go to File > Preferences > Users and open the relevant record, then tick the box 'Can edit CMS'. 
             </para>
             <mediaobject>
@@ -216,6 +216,16 @@
                 </imageobject>
             </mediaobject>
             <para></para>
+            <para>
+                Most websites will have a primary navigation menu which users will use to find their way around. 
+                In this place you can add new menu items, and link them to particular pages or external URLs. 
+                The user interface here is very simple: click on the menu name to edit it. The name is visible to users of your website. 
+                Drag the menu items into a different order or nest them within other menu items. 
+                And click to edit the URL (that is, the page to which the menu links).
+            </para>
+            <para>
+                Menus exist in a heirarchy. Dropping a menu item onto another will make it part of a submenu.
+            </para>
         </section>
     </section>
     
@@ -225,14 +235,35 @@
                 <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_settings.png"></imagedata>
             </imageobject>
         </mediaobject>
+        <para>
+            The onCourse website editor allows users to manage a number of different aspects of how their website and portal displays information.
+            This includes determining the site redirects, what information can be viewed through the Skills onCourse portal and any checkout settings.
+        </para>
              
         <section xml:id="editorSkillsOnCourse"><title>SkillsOnCourse</title>
+            <para>
+                The Editor settings page allows Colleges to manage the amount of information that is able to be viewed by Tutors in the Skills onCourse portal. You can also choose whether you want the tutors to be able to mark outcomes in the portal. 
+                It is also possible to specify as to which email address tutor feedback is sent to within the College.  
+            </para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_settingsSkillsOnCourse.png"></imagedata>
                 </imageobject>
             </mediaobject>
-            <para></para>
+            <para> 
+                When viewing the class roll via the Skills onCourse, Colleges can determine whether they want their tutors to be able to view the email address, phone numbers of each student on the class roll. 
+                Please note that it is not possible to not display the contact details for one class, but display it for another, as this setting is universally applied. 
+            </para>
+            <para>
+                See the following screen from the Skills onCourse portal which shows where the student contact details display within the class roll. 
+                By specifying that you do not want the contact details to be displayed, this class list would simply show as a list of student names. 
+            </para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/cms_set_portal_info_display.png"/>
+                </imageobject>
+            </mediaobject>
         </section>
         
         <section xml:id="editorWebsite"><title>Website Settings</title>
@@ -241,7 +272,48 @@
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_settingsWebsite.png"></imagedata>
                 </imageobject>
             </mediaobject>
-            <para></para>
+            <para>The Editor gives you access to a powerful social media linking tool called
+                'Add This'. This free tool will enable a college to insert social media links into
+                courses and web pages, as well as giving you access to analytical tools to gain
+                insight into your audience. </para>
+            <para>In order to add these social media links, you need to set up a free account with
+                'Add This', including specifying which social media links you wish to display on
+                your website, the size and format of those links, as well as the free analytics
+                tools that are part of your account set up. </para>
+            <para>Once you have set up the 'Add This' account by following the link within the Editor,
+                all you need to do to insert the id into the field provided and then specify as to
+                whether you wish these links to appear on your course description and or web page. </para>
+            <para>Once you set up your AddThis account you will be given a snippet of html to put
+                into your site. It might look something like this:</para>
+            <para>
+                <programlisting language="html">&lt;!-- AddThis Button BEGIN -->
+                    &lt;div class="addthis_toolbox addthis_default_style ">
+                    &lt;a class="addthis_button_preferred_1">&lt;/a>
+                    &lt;a class="addthis_button_preferred_2">&lt;/a>
+                    &lt;a class="addthis_button_preferred_3">&lt;/a>
+                    &lt;a class="addthis_button_preferred_4">&lt;/a>
+                    &lt;a class="addthis_button_compact">&lt;/a>
+                    &lt;a class="addthis_counter addthis_bubble_style">&lt;/a>
+                    &lt;/div>
+                    &lt;script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f0fc25723d304e0">&lt;/script>
+                    &lt;!-- AddThis Button END-->
+                </programlisting> 
+            </para>
+            <para>
+                   If you insert the social media links to your course information, it displays as
+                follows. 
+            </para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/adding_social_media_links.png"/>
+                </imageobject>
+                <caption>
+                    <para>Example of how you can add social media links to any courses on your
+                        website</para>
+                </caption>
+            </mediaobject>
+            
         </section>
         
         <section xml:id="editorCheckOut"><title>Checkout</title>
@@ -250,7 +322,9 @@
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_settingsCheckout.png"></imagedata>
                 </imageobject>
             </mediaobject>
-            <para></para>
+            <para> You can customise the checkout process using the editor settings menu.</para>
+            <para> Here you can set where a student is directed after the enrolment process. In addtion, you can also set a custom page to outline 
+            any policies, procedures or terms and conditions a student must adhere to on enrolmnet.</para>
         </section>
         
         <section xml:id="editorRedirect"><title>Redirects</title>
@@ -259,7 +333,10 @@
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_settingsRedirect.png"></imagedata>
                 </imageobject>
             </mediaobject>
-            <para></para>
+            <para>You have the ability to create 301 redirects to your website by entering the local path in the field on the left (starting with '/') 
+                and the destination in the field on the right (either starting with '/' for another local page or starting with http/https for redirecting 
+                to another website). Once you have done this simply click on the save button which in turn will 
+                add them to the list of redirects below.</para>
         </section>
    
     </section>
@@ -270,19 +347,37 @@
                 <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_design.png"></imagedata>
             </imageobject>
         </mediaobject>
-        <para></para>
+        <para>The Design menu lets you edit the Themes applied to your onCourse website. </para>
         <section xml:id="Theme"><title>Themes</title>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_designThemes.png"></imagedata>
-                </imageobject>
-            </mediaobject>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_designEditThemes.png"></imagedata>
-                </imageobject>
-            </mediaobject>
-            <para> </para>
+            <para>Themes are a way to describe a page structure made up by a number of blocks and by
+                a design layout created for you by your designer. There will always be a layout
+                called "default". If you want different parts of your site to have very different
+                looks, ask your designer to create alternative layouts for you to use. </para>
+            <para>
+                Each theme can have a number of blocks arranged in any way you choose. There are five regions available:
+                <itemizedlist>
+                    <listitem>
+                        <para>header</para>
+                    </listitem>
+                    <listitem>
+                        <para>left</para>
+                    </listitem>
+                    <listitem>
+                        <para>content</para>
+                    </listitem>
+                    <listitem>
+                        <para>right</para>
+                    </listitem>
+                    <listitem>
+                        <para>footer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para> Each region can contain one or more blocks which you drag from the right area. 
+                To remove a block just drag it back into the list of unused blocks on the right. 
+                You can order the blocks on the page by dragging them into the position of your choice. 
+                Remember, that when the page is shown the content area will also contain any content for the page itself. 
+                The blocks are shown above the page content, although your web designer can change that if they choose. </para>
         </section>
     </section>  
 
@@ -292,27 +387,39 @@
                 <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_changeLog.png"></imagedata>
             </imageobject>
         </mediaobject>
-        <para></para>
+        <para> Clicking the 'edits' button at the bottom of the right hand Editor bar will navigate to the Change Log. 
+            This will display the most recent versions of the site, the date this version of the site was publish and who published this version of the site.
+            You will also see the current version of the site and have the option to publish your changes from this page.
+     
+        </para>
         <section xml:id="editorRevertingChanges"><title>Reverting Changes</title>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_revertChanges.png"></imagedata>
                 </imageobject>
             </mediaobject>
-            <para></para>
+            <para>
+                    Each revision of the site has an option to revert the site to this version. 
+                    Reverting changes will revert the site to how it was on the given date.  
+                    Reverting changes cannot be undone. To recover your site it will have to be restored from a local backup.
+            </para>
         </section>
     </section>
     
     <section xml:id="editorPublish"><title>Publishing your changes</title>
+
+        <para>  
+            Any changes you've made are only visbile when logged into the Editor. 
+            Your site must be publshed before any changes made in the Editor appear on the live site.
+        </para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_publish.png"></imagedata>
             </imageobject>
         </mediaobject>
-        <para></para>
+        <para> To push your changes to your live site, click on the blue 'Publish' button on the
+            bottom of the Editor sidebar. This will prompt the user to confirm that they want their
+            changes published. Clicking 'Confirm' will commit any changes you have made, and make
+            these changes visible on the live version of your site.</para>
     </section>
-
-
-
-
 </chapter>    

@@ -6,9 +6,9 @@
 		decisions, and even more importantly, seeing it in a way that makes sense to you.</subtitle>
 	<section xml:id="reports-printing">
 		<title>Using reports</title>
-		<para>onCourse comes prepackaged with a large range of reports. You can use them as is, or
-			copy and modify any of them to suit your needs. You can also create brand new reports
-			from scratch.</para>
+		<para>onCourse comes prepackaged with a large range of reports. You can use them as is, or stcopy
+			and modify any of them to suit your needs. You can also create brand new reports from
+			scratch.</para>
 		<section>
 			<title>Printing Reports in onCourse</title>
 			<para>The first thing to be aware of when attempting to print a report is that you must
@@ -835,9 +835,10 @@
 		</section>
 		<section xml:id="reports-TransactionReport">
 			<title>Transaction Report</title>
-			<subtitle>onCourse Statement report</subtitle>
-			<para>Use: To print a list of all transactions (both debits and credits) for a specified
-				period of time for a particular contact </para>
+			<subtitle>onCourse Transaction report</subtitle>
+			<para>Use: To print a list of all transactions (both debits and credits) for a specified period
+				of time for a particular contact. This is similar to a Statement report, but a date
+				range can be defined and the date range will be printed in the report.</para>
 			<para>Report Location: From the <guimenu>Contact</guimenu> menu, Select
 					<guimenuitem>Print</guimenuitem> and Choose <guimenuitem>Transaction
 					Report</guimenuitem>, and define a date range. Remember to select the
@@ -846,7 +847,7 @@
 				<mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" width="80%" contentdepth="80%"
-							fileref="images/reports/Statement.png" format="png"/>
+							fileref="images/reports/contact_transaction.png" format="png"/>
 					</imageobject>
 					<caption>
 						<para> A Transaction Report </para>
@@ -859,14 +860,14 @@
 			<subtitle>onCourse Transaction Detail</subtitle>
 			<para>Use: To provide a detailed report displaying transactions made to and from each
 				general ledger account over a specified period of time.</para>
-			<para>Report Location: To access this report you must first be in the "Accounts" section
-				of onCourse, you can access this through a number of ways. From the splash screen or
-				from the top menu Financial > Accounts. Once in "Accounts" click on "Account",
-				there's a subtle difference. Once in "Account" (under "Accounts") you may select
-				(from the top menu) File > Print then select Transaction Detail from the list of
-				available reports. Remember to select the appropriate background for this report
-				then run the report. You can also set the date far back so that you may include more
-				records that have occurred over time.</para>
+			<para>Report Location:  You can access this report from Financial > Transactions or Financial >
+				Accounts. Once in either "Transaction" or "Accounts" list view,  go to File > Print
+				then select Transaction Summary from the list of available reports. Be sure to
+				adjust the date to suit your requirements. Generally this report is printed for one
+				selected account at a time, but can be printed for all accounts as needed. Select
+				the appropriate background for this report then run the report. </para>
+			<para>You can also print this report from the contact window, to show the general ledger
+				transactions from one or more selected contacts.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -880,22 +881,18 @@
 		<section xml:id="reports-TransactionSummary">
 			<title>Transaction Summary</title>
 			<subtitle>onCourse Transaction Summary</subtitle>
-			<para>Use: To provide a more general overview of transactions made over a specified
-				period of time. The date selector field for the print engine is a date time field so
-				you can clearly see the start and end of the data you wish to collect. By default,
-				the start and end date will be 12am. To print all data for the range 1/1/2014 -
-				31/12/2014 enter the date range 1/1/2014 12.00am to 1/2/2014 12.00am. This report
-				will provide you with for example; Student Enrolments overall rather than each
-				individual student</para>
-			<para>Report Location: To access this report you must first be in the "Accounts" tab of
-				onCourse, you can access this through a number of ways. You can print this report in
-				both the Transaction the Account windows which can be access from the splash screen,
-				or from the top menu by Financial > Transactions or Financial > Accounts. Once in
-				either "Transaction" or "Account" (under "Accounts") you may select (from the top
-				menu) File > Print then select Transaction Summary from the list of available
-				reports. Remember to select the appropriate background for this report then run the
-				report. Be sure to adjust the date and time to suit your requirements. Remembering
-				you can highlight multiple records in these windows. </para>
+			<para>Use: To provide a more general overview of transactions made over a specified period of
+				time. This report is commonly printed each month and used to prepare a journal for
+				import into the primary accounting system.</para>
+			<para>Report Location: You can access this report from Financial > Transactions or Financial >
+				Accounts. Once in either "Transaction" or "Accounts" list view,  go to File > Print
+				then select Transaction Summary from the list of available reports. Be sure to
+				adjust the date to suit your requirements. Generally this report is printed to
+				include all displayed records. Select the appropriate background for this report
+				then run the report. </para>
+				<para>You can also print this report from the contact window, to show the general
+					ledger transactions from one or more selected contacts.</para>
+			
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -953,8 +950,8 @@
 		<section xml:id="reports-Statement">
 			<title>Statement Report</title>
 			<subtitle>onCourse Statement report</subtitle>
-			<para>Use: To print a list of all transactions (both debits and credits) for a
-				particular contact</para>
+			<para>Use: To print a list of all transactions (both debits and credits) for a particular contact
+				for all time, showing their opening and closing balances.</para>
 			<para>Report Location: From the <guimenu>Contact</guimenu> menu, Select
 					<guimenuitem>Print</guimenuitem> and Choose
 				<guimenuitem>Statement</guimenuitem>. This report will print the entire transaction

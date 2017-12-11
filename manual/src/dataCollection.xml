@@ -92,24 +92,40 @@
 	<section xml:id="dataCollection-edit">
 		<title>Editing data collection forms</title>
 		<para>You can edit the default data collection forms in onCourse to include your business specific
-			rules.</para>
+			rules. It is usually best practice to edit the forms included by default, before you
+			start creating additional forms.</para>
+		<section>
+			<title>Mandatory or optional fields</title>
 		<para>You may wish to start by changing some of the fields from optional to mandatory. When a
 			field is deemed mandatory, this means the student can not progress further through the
 			form without adding data. It also means if a student returns to your website to make
 			another application, enrolment or purchase, they will only be asked to complete data for
 			mandatory fields they haven't previously completed. This assists in making return visits
 			and purchases faster for your customers.</para>
-		<para>You can also change the field label and helper text. For example, you may wish to
-			change the label of the field 'street' to 'address', and the helper text from 'Enter
-			your street address' to 'Enter your mailing address' if this is the data you would
-			prefer to collect (keep in mind, if you are an Australian RTO obliged to report AVETMISS
-			data for your students, you need to collect the student's current residential address for
-			reporting purposes).</para>
-		<para>You can adjust the order the field appear in the form by clicking on the six dot icon
-			next to the field name and dragging and dropping the field in the form.</para>
+			</section>
+		<section><title>Changing field labels and help text</title><para>You can change the field label
+				and helper text. By default, the field label will be the name of the field, but you
+				can change it to make more sense in the context of the form. </para><para>For
+				example, you may wish to change the label of the field 'street' to 'address', and
+				the helper text from 'Enter your street address' to 'Enter your mailing address' if
+				this is the data you would prefer to collect (keep in mind, if you are an Australian
+				RTO obliged to report AVETMISS data for your students, you need to collect the
+				student's current residential address for reporting purposes).</para>
+			<para>The AVETMISS field labels are often phrased as questions, so 'Year School Completed' might
+				be better labelled as  'What year did you complete school?' </para>
+			<para>In some website designs, the 'Help text' appears within the field before the
+				student supplies their answer. In other designs, it appears when the field is
+				hovered over. Consider your help text wording in the context of your website design
+				choices.</para> </section>
+		<section>
+			<title>Ordering and grouping fields under headings</title>
+		<para>You can adjust the order the fields appear in the form by clicking on the six dot icon next
+				to the field name and dragging and dropping the field in the form.</para>
 		<para>Fields are grouped under headings. To edit the heading name or description, click the
 			Edit button to the right of the heading name.</para>
 		<para>Make your changes to the heading and click done when complete.</para>
+			<para>Heading descriptions are often used to provide instructions text to students or
+				explain why the data is being collected.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100"
@@ -119,11 +135,20 @@
 				<para>Editing the heading and description that appears before a group of data fields.</para>
 			</caption>
 		</mediaobject>
-		<para>You can add additional onCourse standard or your own custom fields to the form by scrolling
-			to the bottom of the form and choosing 'add field'. Select the field from the drop down
-			list available. Fields you have already added to this form will not be available to
-			select from the list. Your custom fields are also available to add.</para>
-		<para>Your newly added field will be added to the bottom of the form. You will need to drag it to the placement you want in the list.</para>
+		</section>
+		<section>
+			<title>Adding and deleting fields on the form</title>
+		<para>You can add additional onCourse standard contact fields, or your own custom fields to the
+				form by scrolling to the bottom of the form and choosing 'add field'. Select the
+				field from the drop down list available. Fields you have already added to this form
+				will not be available to select from the list. </para>
+				<para>Your newly added field will be added to the bottom of the form you are editing. You will
+				need to drag the field to the placement you want in the list.</para>
+			
+			<para>Your custom fields are also available to add to forms. You should be careful to only add
+				custom fields that make sense for the type of form you are creating. For example,
+				custom fields for contact records can be added to any type of form, but only custom
+				enrolment fields should be added to enrolment forms. </para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100"
@@ -134,8 +159,9 @@
 			</caption>
 		</mediaobject>
 		<para>You can delete fields from data collection forms by clicking on the x icon to the right of the field.</para>
-		<para>New headings and descriptions can also be added to your form, and dragged to the
-			appropriate location.</para>
+		<para>New headings and descriptions can also be added to your form, and dragged to the appropriate
+				location, like fields.</para>
+		</section>
 	</section>
 		<section xml:id="dataCollection-create">
 			<title>Creating new data collection forms</title>
@@ -189,5 +215,63 @@
 				<para>Setting the data collection rule that applies to a course</para>
 			</caption>
 		</mediaobject>
+	</section>
+	<section>
+		<title>Data collection on the web</title>
+		<para>The field settings you have defined in your data collection forms and rules will drive the
+			questions the students are prompted to answer when they engage with your website,
+			whether that engagement is to add a course to their waiting list, purchase a product,
+			apply for a course or enrol in a class.</para>
+		<para>What each individual student sees will depend on the combination of items in their
+			shopping cart, and their previous engagement with you.</para>
+		<para>For example, if a student is an existing contact in your database and is matched on
+			their first name, last name and email address with an existing contact, then they will
+			only be asked to complete fields marked as mandatory in the data collection rules that
+			they haven't completed previously. They will not be shown the responses to any fields
+			they have supplied before, or fields set to optional that they haven't completed.</para>
+		<section>
+			<title>Your details - contact fields</title>
+			<para>When a student is enrolling or applying for multiple courses and classes in the online
+				checkout process, they will see the combination of required and mandatory fields
+				based on the data collection rules assigned to all the courses in their shopping
+				cart.</para>
+			<para>Breaking fields up into clear groups with headings to explain assists in creating
+				a clear and self explanatory user interface in your website. In the example below, this advice has not been followed.</para>
+			<para>You should always perform comprehensive user testing of your website application and
+				enrolment settings when adjusting data collection rules so you can confirm the
+				process the student sees is what you envisioned. </para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100"
+						fileref="images/data_collection/data_collection_contact_summary.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>This is not a clear example of data collection forms, as the first section displayed has no heading or user instruction</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section><title>Summary - enrolment or application specific fields</title><para>Custom fields that
+				apply to the enrolment or application are asked in specific relation to the course
+				the student is enrolling in or applying for.</para><para>That means that if the
+				student is enrolling or applying for multiple courses where the same data collection
+				rules apply, they may be asked the same questions twice. The types of questions
+				asked here should be specific to the course e.g. for an event with elective breakout
+				activities, do you want to attend stream 1 or stream 2.</para><para>Generic
+				questions about the students preferences or demographic information tend to belong
+				in the contact record, rather than the enrolment or application.</para> <para>The one place where this is not the case is for funded enrolments or applications, where the
+				student needs to answer questions related to their funding eligibility and declare
+				they are true and accurate at the time of application or enrolment. It would not be
+				appropriate here to rely upon answers a student may have supplied six months ago in
+				a previous application. </para> 
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100"
+						fileref="images/data_collection/data_collection_custom_application_web.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Answering application specific questions during the online process</para>
+				</caption>
+			</mediaobject>
+		</section>
 	</section>
 </chapter>

@@ -2,35 +2,77 @@
 <chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook ../../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.4'>
   <info>
     <title>Release 9.4</title>
-    <pubdate>1 Nov. 2017</pubdate>
+    <pubdate>14 Dec 2017</pubdate>
   </info>
   <section role='major'>
     <title>Major features</title>
     <section>
       <title>Dashboard</title>
-      <para>onCourse now has a new dashboard which you can access from the File menu. It is still in
-        beta so let us know how it works for you. It includes some new features:</para>
+      <para>onCourse now has a new dashboard which you can access from the File > Preferences > New
+        Dashboard. It is still in beta testing so we would appreciate your feedback to let us know
+        how it works for you. It includes some new features:</para>
       <para>
         <itemizedlist>
           <listitem>
-            <para>Smart search across many entities in one go</para>
+            <para>Smart search across many entities in one go e.g. searching 'cook' will give you
+              results of courses and class containing the name cook, and contacts whose name
+              contains cook.</para>
           </listitem>
           <listitem>
-            <para>Customise your list of frequently used parts of onCourse</para>
+            <para>Ability to personally customise your list of frequently used elements of onCourse
+              using the favourites function</para>
           </listitem>
           <listitem>
-            <para>An easier to use way to find parts of onCourse you need to use</para>
+            <para>An easier way to find the functions of onCourse you need to use via search e.g.
+              type discount in the search bar in press enter on your keyboard to open the discount
+              window </para>
           </listitem>
         </itemizedlist>
       </para>
     </section>
     <section>
-      <title>Website ecommerce engine</title>
-      <para>Yeay</para>
+      <title>Website eCommerce engine</title>
+      <para>Significant updates to the online sales process have taken place in the last release, to
+        allow you to implement your data collection rules (released in 9.3) into the checkout
+        process, including the addition of enrolment, application and waiting list custom
+        fields.</para>
+      <para>This means you can now ask additional per enrolment / per application specific questions
+        of each student, replacing processes that may have been asked post enrolment or via
+        surveys.</para>
+      <itemizedlist>
+        <listitem>
+      <para>Add custom enrolment fields to the checkout <systemitem>OD-11002</systemitem>
+          </para> </listitem>
+      <listitem>
+        <para>Display custom application fields in checkout <systemitem>OD-11182</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Implement Waiting list form for checkout app <systemitem>OD-11188</systemitem>
+        </para>
+      </listitem>
+        <listitem>
+          <para>Checkout: CorporatePass preference only enabled when active corporate passes exist
+            <systemitem>OD-11148</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
     </section>
     <section>
-      <title>Funding contract</title>
-      <para>Yeay</para>
+      <title>AVETMISS improvements with funding contracts</title>
+      <para>The AVETMISS export runner window has undergone some significant updates to make it
+        simpler to use and to provide you with more options when exporting your data to various
+        reporting agencies.</para>
+      <para>Most significantly, the export runner will pre-count the outcomes that will be exported,
+        advise you of any that need a final outcome status because their end date is in the past,
+        and allow you to set an override end date option for export to push their end date into the
+        future.</para>
+      <para>The new funding contact option will allow you to set classes and enrolments belonging to
+        specific state funding programs, which is a list you can extend with as many program types
+        as you wish.</para>
+      <para>A history of each export you run is stored in onCourse as a funding upload, allowing you
+        to track when you last reported and set if the funding export from onCourse was accepted by
+        the funding agency. </para>
     </section>
   </section>
   <section role='scripts'>
@@ -42,13 +84,30 @@
         </para>
       </listitem>
       <listitem>
-        <para>New report: Contract Demographic data
-          <systemitem>OD-10734</systemitem>
+        <para>New Script: notify the trainer when a session has not been marked
+          <systemitem>OD-10048</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Send monthly finance summary script - reporting incorrect date
-            <systemitem>OD-10911</systemitem>
+        <para>New Marketing Script: Related class taught by the same tutor
+            <systemitem>OD-10701</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>New Marketing Email Template: Related class taught by the same tutor
+            <systemitem>OD-10702</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>New Email Template - class schedule changes <systemitem>OD-10978</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>New Report: Contract Demographic data <systemitem>OD-10734</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>New Report - Assessment Outcomes - per Student' <systemitem>OD-11054</systemitem>
         </para>
       </listitem>
       <listitem>
@@ -57,24 +116,50 @@
         </para>
       </listitem>
       <listitem>
-        <para>New Report - Assessment Outcomes - per Student' <systemitem>OD-11054</systemitem>
+        <para>Script update: Send monthly finance summary script was reporting incorrect date. If
+          you use this script, please go to File > Preferences > Scripts, locate the script, open it
+          and select 'update script', save and close. <systemitem>OD-10911</systemitem>
         </para>
       </listitem>
+      <listitem>
+        <para>Improve validation in contact CSV import script to work correctly
+          <systemitem>OD-11057</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Add message created by key to avoid message sending duplication when messages are sent
+          by scripts <systemitem>OD-10520</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Add new onCourse script trigger option - 'Class published'
+            <systemitem>OD-10776</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Class Invoice Report - Incorrect outstanding total balance removed
+            <systemitem>OD-11151</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Invoice Print Report - was printing on two pages when only one printable page exists
+          <systemitem>OD-11134</systemitem>
+        </para>
+      </listitem>
+      <listitem><para>Certificate of Attendance print report - printing without expected page breaks between
+          certificate records <systemitem>OD-11053</systemitem></para></listitem>
     </itemizedlist>
   </section>
   <section role="web">
     <title>Web features</title>
     <itemizedlist>
       <listitem>
-        <para>Hide {block} syntax in portal <systemitem>OD-10319</systemitem>
+        <para>Hide {block} syntax in portal content <systemitem>OD-10319</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Portal: sort related contacts by name <systemitem>OD-10419</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Robots to include pointer to sitemap <systemitem>OD-10434</systemitem>
+        <para>Portal: sort related contacts by name in drop down list
+            <systemitem>OD-10419</systemitem>
         </para>
       </listitem>
       <listitem>
@@ -87,13 +172,17 @@
             <systemitem>OD-1949</systemitem>
         </para>
       </listitem>
+      <listitem>
+        <para>Robots.txt to include pointer to sitemap <systemitem>OD-10434</systemitem>
+        </para>
+      </listitem>
     </itemizedlist>
   </section>
   <section role="web-fixes">
     <title>Web fixes</title>
     <itemizedlist>
       <listitem>
-        <para>Portal render queue error on tutor class page <systemitem>OD-10264</systemitem>
+        <para>Fix portal render queue error on tutor class page <systemitem>OD-10264</systemitem>
         </para>
       </listitem>
       <listitem>
@@ -106,16 +195,17 @@
         </para>
       </listitem>
       <listitem>
-        <para>Class Rating not working in iphone <systemitem>OD-10922</systemitem>
+        <para>Fix class rating feature where is was not working on iPhone
+            <systemitem>OD-10922</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Portal class page does not display web description images and blocks
+        <para>Portal: class page should not display web description images and blocks
             <systemitem>OD-11085</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Portal: can't remove Waiting List if there's custom field attached.
+        <para>Portal: allow removal Waiting List when there's a custom field attached
             <systemitem>OD-11171</systemitem>
         </para>
       </listitem>
@@ -125,201 +215,21 @@
         </para>
       </listitem>
       <listitem>
-        <para>Language setting error in AVETMISS <systemitem>OD-9958</systemitem>
-        </para>
-      </listitem>
-    </itemizedlist>
-  </section>
-  <section role="fixes">
-    <title>Fixes</title>
-    <itemizedlist>
-      <listitem>
-        <para>Improve Attendance tab loading speed and performance <systemitem>OD-10220</systemitem>
+        <para>Fix Language setting error in AVETMISS when students enrol online
+            <systemitem>OD-9958</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>AVETMISS import120 uses AvetmissImportService.getContactBy(String) in wrong way
-            <systemitem>OD-10283</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Improve UI display for USI verification <systemitem>OD-10285</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>license.payroll and license.attendance interaction <systemitem>OD-10286</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Improve validation for $0 tutor wage <systemitem>OD-10305</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>enrolling existing students from inside contact record doesn't load contact into QE
-            <systemitem>OD-10306</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Prevent General Preferences screen loading blank if data connection lost
-            <systemitem>OD-10328</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Exception cancelling an enrolment joined to a certificate
-            <systemitem>OD-10344</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Deployment of new onCourse servers - not getting latest scripts
-            <systemitem>OD-10373</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Show error message in QE when promo code fails to apply as expected during office
-          enrolment due to corporatePass join <systemitem>OD-10558</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>"OutOfMemoryError: java heap space" when reopen File-&gt;Preferences-&gt;General...
-          several times <systemitem>OD-10566</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Access control - mailing list create permission <systemitem>OD-10590</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Tag set bound to Tutors does not accept mandatory option even though all tutors are
-          tagged <systemitem>OD-10787</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Non-timetable related wages are counted as unprocessed if class hasn't started yet
-            <systemitem>OD-10876</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>QE: adding payment plan class before contact keeps duplicating records on Payments
-          view <systemitem>OD-10886</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Emails cannot send to contacts with comma in their name
-            <systemitem>OD-10986</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Automatic logout stopped working <systemitem>OD-11065</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Courses: sessions scheduling dialog is rendered in the wrong place (under all courses)
-            <systemitem>OD-11076</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Outcome.deliveryMode not getting value from CourseClass
-            <systemitem>OD-11078</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Wording on concession date field <systemitem>OD-11089</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Failed payment should cause invoice to not be emailed
-            <systemitem>OD-11095</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Java 9 support <systemitem>OD-11115</systemitem>
-          <systemitem>OD-11116</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Adjust USI service to return plain string response instead of complex SoapFault
-            <systemitem>OD-11117</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Use contra instead of zero payment type for credit payment transfer process
-            <systemitem>OD-11124</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Invoices printing on two pages when only one printable page exists
-            <systemitem>OD-11134</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Tutor and Student attendance marking freezes the window
-            <systemitem>OD-11143</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Invoice - Incorrect outstanding balance <systemitem>OD-11151</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Checkout Payment Successful Page reads 'omega' <systemitem>OD-11180</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Replication of Enrolment custom fields from willow to angel throws error
-            <systemitem>OD-11194</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Exception when creating a new Funding Contract <systemitem>OD-11196</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Find related outcomes on Funding Uploads does not return expected results
-            <systemitem>OD-11197</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Licence should not apply to Funding Upload <systemitem>OD-11198</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Funding source licence message grammar <systemitem>OD-11201</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>New AVETMISS export runner doesn't override outcome end date as expected
-            <systemitem>OD-11204</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Funding contract find related Classes doesn't return expected results
-            <systemitem>OD-11205</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Angel Client: http://www.ish.com.au/blog/rss.xml is not available
-            <systemitem>OD-11206</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>available places wording incorrect when checkout deployed
-            <systemitem>OD-11213</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Tutor pay requiring confirmation includes already confirmed records
-            <systemitem>OD-11219</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Attendance attendedFrom/Until is overwritten after Canceling attendance edit
-            <systemitem>OD-11221</systemitem>
+        <para>Available places wording incorrect on website - should read 'There are x places
+          available' <systemitem>OD-11213</systemitem>
         </para>
       </listitem>
     </itemizedlist>
   </section>
   <section role="minor">
     <title>Minor features</title>
+    <section> 
+      <title>Financial and payroll features</title>
     <itemizedlist>
       <listitem>
         <para>New feature: Process payment out from credit note by selecting cogwheel option
@@ -331,23 +241,47 @@
             <systemitem>OD-10033</systemitem>
         </para>
       </listitem>
+
       <listitem>
-        <para>New script: notify the trainer when a session has not been marked
-            <systemitem>OD-10048</systemitem>
-        </para>
+        <para>Improve relation between Tutor Attendance status and Payable time
+              field<systemitem>OD-10120</systemitem>
+          </para>
       </listitem>
       <listitem>
-        <para>Improve relation between Tutor Attendance status and Payable time field
-            <systemitem>OD-10120</systemitem>
-        </para>
+        <para>Tutor payable time sheet UI improvement <systemitem>OD-10494</systemitem>
+          </para>
       </listitem>
       <listitem>
         <para>Attendance UI Scrolling improvements <systemitem>OD-10132</systemitem>
         </para>
       </listitem>
       <listitem>
+        <para>Improve Attendance tab loading speed and performance <systemitem>OD-10220</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Make payroll confirmation editable in attendance confirmation sheet
+          <systemitem>OD-10497</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Improve validation for $0 tutor wage so it can not be copied when duplicating a class
+              <systemitem>OD-10305</systemitem>
+          </para>
+      </listitem>
+      <listitem>
         <para>$0 wages should not try to generate payroll records <systemitem>OD-10459</systemitem>
         </para>
+      </listitem>
+      <listitem>
+        <para>Exclude from unprocessed payroll counter - non-timetable related wages where class hasn't started yet
+          <systemitem>OD-10876</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Exclude from unprocessed payroll counter - tutor pay requiring confirmation that has
+            already been confirmed <systemitem>OD-11219</systemitem>
+          </para>
       </listitem>
       <listitem>
         <para>New field on contact finance tab: override class GST settings on purchase
@@ -359,157 +293,38 @@
         </para>
       </listitem>
       <listitem>
-        <para>Contact GST web enrol (invoice and finance) <systemitem>OD-10468</systemitem>
-        </para>
+        <para>Use Contact GST override in web enrol (invoice and finance)
+              <systemitem>OD-10468</systemitem>
+          </para>
       </listitem>
-      <listitem>
-        <para>Tutor payable time sheet improvement <systemitem>OD-10494</systemitem>
-        </para>
+    </itemizedlist>
+    </section>
+    <section>
+      <title>Other features</title>
+      <itemizedlist>
+
+      
+            <listitem>
+        <para>Move contact record custom fields to their own tab <systemitem>OD-10744</systemitem>
+          </para>
       </listitem>
+
       <listitem>
-        <para>Make payroll confirmation editable in attendance confirmation sheet
-            <systemitem>OD-10497</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Add message created by key to avoid message sending duplication
-            <systemitem>OD-10520</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>New marketing script: related class taught by the same tutor
-            <systemitem>OD-10701</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>New marketing email template: related class taught by the same tutor
-            <systemitem>OD-10702</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Move contact custom fields to their own tab <systemitem>OD-10744</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Create onCourse script trigger 'Class published' <systemitem>OD-10776</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Cron script to send waitingList reminder no so frequently
-            <systemitem>OD-10778</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Remove the ability to set a default value for Custom Fields
-            <systemitem>OD-10798</systemitem>
-        </para>
+        <para>Remove the ability to set a default value for Custom Fields in preferences (a
+          requirement for Data Collection) <systemitem>OD-10798</systemitem></para>
       </listitem>
       <listitem>
         <para>Implement USI soap service new version <systemitem>OD-10880</systemitem>
         </para>
       </listitem>
+        <listitem>
+          <para>Improve UI display for USI verification <systemitem>OD-10285</systemitem>
+          </para>
+        </listitem>
       <listitem>
-        <para>Schema: Survey: Add "testimonial" and "netPromoterScore" (Willow,Angel Entity and
-          replication) <systemitem>OD-10894</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Create RunScript class-function to do script autotests
-            <systemitem>OD-10926</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Arrived / Departed fields in partial attendance on onCourse
-            <systemitem>OD-10949</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Remove jQuery from checkout app <systemitem>OD-10953</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>New email template - class schedule changes <systemitem>OD-10978</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Add custom enrolment fields to the checkout <systemitem>OD-11002</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>UI: Custom enrolment fields <systemitem>OD-11004</systemitem>
-        </para>
-      </listitem>
-      <listitem/>
-      <listitem>
-        <para>Adjust contactCSVimport script to work correctly <systemitem>OD-11057</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Improve Report 'records' argument to get not only lists
-            <systemitem>OD-11058</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Add double click (or one click) on favorite items when list is in editing state
-            <systemitem>OD-11071</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>add split line between lists when favourite items in edit state.
-            <systemitem>OD-11072</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Angel server crashes when protostaff tries to serealize
-          org.apache.cxf.binding.soap.SoapFault <systemitem>OD-11118</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Checkout: CorporatePass enabled preference <systemitem>OD-11148</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Introduce webSite preferences: add webSiteId fk for Preference table
-            <systemitem>OD-11152</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Java 9 - 'about, preferences and quit' menus not working correct
-            <systemitem>OD-11158</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Display custom application fields in checkout <systemitem>OD-11182</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Implement Waiting list form cor checkout app <systemitem>OD-11188</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Implement Waiting list API <systemitem>OD-11189</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Styling improvements to new AVETMISS export window <systemitem>OD-11202</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Validation for deleting Funding Contracts <systemitem>OD-11203</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Fix unit tests on jenkins <systemitem>OD-11231</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Data collection API documentation and cleanup <systemitem>OD-11232</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>StudentConcession and Student creation in different transactions
-            <systemitem>OD-1485</systemitem>
-        </para>
+        <para>Improve arrived / departed time fields behaviour when setting partial attendance on
+            onCourse <systemitem>OD-10949</systemitem>
+          </para>
       </listitem>
       <listitem>
         <para>Add to class duplication: optionally skip copying of class tags and class notes
@@ -521,14 +336,98 @@
         </para>
       </listitem>
       <listitem>
-        <para>Select appropriate student/payer when using pre-populated QE from Enrolment transfer
-          function of enrolment window cogwheel <systemitem>OD-9346</systemitem>
+        <para>Auto select appropriate student/payer when using pre-populated QE from Enrolment
+            transfer function of enrolment window cogwheel <systemitem>OD-9346</systemitem>
+          </para>
+      </listitem>
+      <listitem>
+        <para>New access control - view private documents <systemitem>OD-9631</systemitem>
+        </para>
+      </listitem>
+        <listitem>
+          <para>New access control - mailing list create permission <systemitem>OD-10590</systemitem>
+          </para>
+        </listitem>
+    </itemizedlist>
+    </section>
+  </section>
+  <section role="fixes">
+    <title>Fixes</title>
+    <itemizedlist>
+      <listitem>
+        <para>Enrolling existing students from inside contact record doesn't load contact into QE as expected <systemitem>OD-10306</systemitem></para>
+      </listitem>
+      <listitem>
+        <para>Prevent General Preferences screen loading blank if data connection lost
+          <systemitem>OD-10328</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Add access level control to view private documents <systemitem>OD-9631</systemitem>
+        <para>Catch exception cancelling an enrolment joined to a certificate
+            <systemitem>OD-10344</systemitem>
         </para>
       </listitem>
+      <listitem>
+        <para>Show error message in QE when promo code fails to apply as expected during office
+          enrolment due to corporatePass join <systemitem>OD-10558</systemitem>
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>Tag set bound to Tutors does not accept mandatory option even though all tutors are
+          tagged <systemitem>OD-10787</systemitem>
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>Quick Enrol: adding payment plan class before contact keeps duplicating records on
+          Payments view <systemitem>OD-10886</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Emails cannot send to contacts with comma in their name
+          <systemitem>OD-10986</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Automatic logout stopped working <systemitem>OD-11065</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Outcome delivery mode was not getting value from value set in the
+            class<systemitem>OD-11078</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Java 9 support <systemitem>OD-11115</systemitem>
+          <systemitem>OD-11116</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Adjust USI service to return plain string response instead of complex SoapFault
+          <systemitem>OD-11117</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Use contra instead of zero payment type for credit payment transfer process
+          <systemitem>OD-11124</systemitem>
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>Tutor and Student attendance marking freezes the window
+          <systemitem>OD-11143</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Angel Client: http://www.ish.com.au/blog/rss.xml is not available
+          <systemitem>OD-11206</systemitem>
+        </para>
+      </listitem>
+      <listitem><para>Fix display of documents list view to load records as expected
+            <systemitem>OD-10921</systemitem></para></listitem>
+
+
     </itemizedlist>
   </section>
 </chapter>

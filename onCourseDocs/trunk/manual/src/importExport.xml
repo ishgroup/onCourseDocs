@@ -611,7 +611,10 @@ records.each { AccountTransaction t ->
 				in csv import' as the import type.</para>
 			<section>
 				<title>Payment In Import file set up</title>
-				<para>Please see below for the import file specification</para>
+				<para>Please see below for the import file specification. You will need to ensure that each line
+					in the CSV relates to an invoice, or the import will fail. To make sure this is
+					the case, please deleted any lines in the spreadsheet that appear after the last
+					invoice record.</para>
 				<table frame="all">
 					<title>Payment In Import file format</title>
 					<tgroup cols="7" align="left" colsep="1" rowsep="1">

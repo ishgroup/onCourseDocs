@@ -784,51 +784,9 @@
 			</section>
 			<section>
 				<title>NSW Smart and Skilled (for 2015 onwards data)</title>
-				<para>This export option is for reporting Smart &amp; Skilled funded training in NSW
-					and meets the requirements of the <link
-						xlink:href="https://www.ish.com.au/sites/ish.com.au/files/NOV2015_e-reporting_tech_specs.pdf"
-						>Smart and Skilled eReporting Technical Specifications and Business
-						Validations Version 1.3 November 2015 specifications.</link></para>
-				<para>The 'Outcome identifier - Training Organisation' field has been added to the
-					Enrolment general tab to record the possible Training not completed (TNC) or
-					Training Deferred (D) value for the enrolment.</para> 
-				<para>After changing the Enrolment to TNC, you will need to go to the outcomes change them all
-					to 'Did Not Start'. </para>
-				<para>NOTE: Smart &amp; Skilled flavour exports will convert any outcome marked as
-					Did not Start - 66 as two blank spaces  for reporting. Did not Start - 66 is not
-					a valid outcome code for Smart &amp; Skilled reporting. Outcomes code Did Not
-					Start - 66 will only export a 66 as the code if reporting in OLiV Flavour. </para>
-				<para>Once you have reported this enrolment, and had it accepted by State Training Services, you
-					may wish to suppress it from future AVETMISS exports. If this is the case, on
-					the general tab of the enrolment select the option 'Do not report for
-					AVETMISS'.</para>
-				<para>The field Purchasing Contract Identifier, which previously existed at the
-					class level has also been added to the enrolment general tab, with the NSW
-					specific label of Commitment ID. All outcomes in an enrolment will be reported
-					with the same Commitment ID.</para>
-				<para>The field Funding Source - State Training Authority field which was previously
-					available at the class and outcome level has also been added to the enrolment
-					general tab.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="70%" contentdepth="70%"
-							fileref="images/smart_and_skilled_fields.png" format="png"/>
-					</imageobject>
-					<caption>
-						<para>Red text showing where specific Smart and Skilled data is recorded
-						</para>
-					</caption>
-				</mediaobject>
-				<para>At the point in time the Smart &amp; Skilled export is run, any outcomes
-					selected with a start date in the future will export with a two blank spaces in
-					the place of the outcome identifier - national, regardless of what has been set
-					in the database or in the export runner preferences. i.e. you can choose the
-					option 'export 90 - not yet available for VET outcomes which are not set' and
-					the Smart &amp; Skilled override for the two blank spaces will still apply where
-					appropriate.</para>
-				<para>An email address for all Smart &amp; Skilled students is mandatory. If the
-					student does not have an email address, or has chosen not to provide one,
-					onCourse will export notprovided@example.com.</para>
+				<para>Smart and Skilled specific reporting requirements are discussed here: <xref
+						linkend="reporting_smartandSkilled"/>
+				</para>
 			</section>
 			<section>
 				<title>NSW DET - APL (for 2014 data or earlier)</title>

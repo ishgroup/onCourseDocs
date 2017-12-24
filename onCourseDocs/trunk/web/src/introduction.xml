@@ -3,63 +3,23 @@
 	<title>Creating an onCourse website</title>
 	<section>
 		<title>Your college online</title>
-		<para>One of the key features of onCourse is the integrated website. This allows you to promote your courses on your website and provide
-			seamless online enrolments, waiting lists, mailing lists, discounts, credit card payments, student and tutor portals and much
-			more.</para>
+		<para>One of the key features of onCourse is the integrated website. This allows you to promote
+			your courses and products on your website and provide seamless online enrolments,
+			waiting lists, mailing lists, discounts, credit card payments, student and tutor portals
+			and much more.</para>
 	</section>
 	<section>
 		<title>Updating your site</title>
-		<para>Because ish onCourse has been written as one comprehensive system, updating your web site is completely painless. Every time you
-			make a change to any relevant information those changes are automatically uploaded to your web site in the background. So, as courses
-			are filled, the web site shows prospective students that places are limited.</para>
-		<para>All you need are the computers you own today and a simple server (possibly shared on your existing server) to run ish onCourse.
-			And a plain, simple low-cost internet link. We provide the rest.</para>
-		<itemizedlist>
-			<title>Key features</title>
-			<listitem>
-				<para>automatic uploads to web site every time you make a change</para>
-			</listitem>
-			<listitem>
-				<para>resilient to outages in your internet connection</para>
-			</listitem>
-			<listitem>
-				<para>does not require a high speed connection</para>
-			</listitem>
-			<listitem>
-				<para>automatic download of new enrolments and students from web site</para>
-			</listitem>
-			<listitem>
-				<para>since you aren't serving the web site from your office, you don't need to supply, support or service data-centre quality links
-					and equipment</para>
-			</listitem>
-			<listitem>
-				<para>our data centre is constantly monitored and supported by experienced Unix system administrators. It has 24 hour airlock
-					security, temperature control, diesel power backup, halon gas fire control and its own electricity sub-station.</para>
-			</listitem>
-			<listitem>
-				<para>separate monitoring systems at ish check the availability of every web site every 15 minutes. Any outage is notified to our
-					support staff by SMS.</para>
-			</listitem>
-		</itemizedlist>
+		<para>Because ish onCourse has been written as one comprehensive system, updating your web site is
+			completely painless. Every time you make a change to any relevant information those
+			changes are automatically uploaded to your web site in the background. So, as courses
+			are filled, the web site shows prospective students that places are limited. This works
+			equally well if you are hosting onCourse yourself or in our cloud service.</para>
 	</section>
 	<section>
 		<title>Enabling courses for online display</title>
-		<para>Courses need to be checkmarked “Enabled and visible online” in the General tab of each course, to display on your site. To get
-			here in the onCourse client follow these steps:</para>
-		<orderedlist>
-			<listitem>
-				<para>Go to "Course"</para>
-			</listitem>
-			<listitem>
-				<para>Double click on a class record</para>
-			</listitem>
-			<listitem>
-				<para>In the general tab, make sure the "Enabled and visible online" option is on under "status"</para>
-			</listitem>
-			<listitem>
-				<para>Press save</para>
-			</listitem>
-		</orderedlist>
+		<para>Courses need to be <command>Enabled and visible online</command> in the General tab of each
+			course, to display on your site.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/visibleOnline.png"/>
@@ -68,9 +28,11 @@
 				<para>Selecting this option will display the course online</para>
 			</caption>
 		</mediaobject>
-		<para>You must also tag your courses with Subject tags for them to display on your web site. You may choose to allow subject tags to be
-			set more than once, or limit to one. If a course is tagged with more than one subject, it will appear in the menu for each tag you
-			have assigned. Check the onCourse manual for more on tagging.</para>
+		<para>You must also tag your courses with Subject tags for them to display on your web site
+			browsing navigation. You may choose to allow subject tags to be set more than once, or
+			limit to one. If a course is tagged with more than one subject, it will appear in the
+			menu for each tag you have assigned. Check the onCourse manual for more on
+			tagging.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/WelcomePageSubjectTag.png"/>
@@ -81,17 +43,21 @@
 		</mediaobject>
 		<section>
 			<title>Course description</title>
-			<para>The field ‘web description' is where you should enter all the information about the course description, what people should
-				bring, pre-requisites, outcomes and anything else you can think of. As this is the course, this information needs to pertain to all
-				the classes of this course. If you have class specific information you should put this in the class web description.</para>
+			<para>The field <command>web description</command> is where you should enter all the information
+				about the course description, what people should bring, pre-requisites, outcomes and
+				anything else you can think of. As this is the course, this information needs to
+				pertain to all the classes of this course. If you have class specific information
+				you should put this in the class web description.</para>
 			<para>The description fields are rich text fields, so you can use bullets, headings and numbered lists. See <xref xlink:href="#richText"/> for more on this. You can also include images and attachments in your pages.</para>
 		</section>
 		<section>
 			<title>Displaying Classes</title>
-			<para>Once a course has been tagged and enabled for the web, classes in that course will be displayed if they have the “Enrolment
-				allowed and visible online” option selected in their “General” tab. The classes themselves do not need to be tagged with anything
-				from the Subjects tag group in order to appear on the website. You can also select a series of classes in the list view and select
-				the cog wheel option "Show class on website" to web enable classes in bulk.</para>
+			<para>Once a course has been tagged and enabled for the web, classes in that course will be
+				displayed if they have the “Enrolment allowed and visible online” option selected in
+				their “General” tab. The classes themselves do not need to be tagged with anything
+				from the Subjects tag group in order to appear on the website. You can also select a
+				series of classes in the list view and select the cog wheel option <command>Show
+					class on website</command> to web enable classes in bulk.</para>
 		</section>
 		<section>
 			<title>Class descriptions</title>
@@ -176,15 +142,22 @@
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>/enrol</term>
+					<term>/checkout</term>
 					<listitem>
-						<para>All pages under this path are reserved for the enrolment processing pages.</para>
+						<para>All pages under this path are used for the checkout system. You can however move that to
+							a different path.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>/cms</term>
+					<term>/editor</term>
 					<listitem>
-						<para>All pages under this path are reserved for the cms.</para>
+						<para>All pages under this path are reserved for the web page editor.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>/s</term>
+					<listitem>
+						<para>Static files like css, images and js live here.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist></para>
@@ -417,68 +390,5 @@
 			/courses?near=sydney/2000/5; if you only selected RSA Courses then the URL you would get
 			is /courses/rsa+courses; and if you selected both Sydney and RSA Courses then the URL
 			you would get is /courses/rsa+courses?near=sydney/2000/5.</para>
-	</section>
-	<section>
-		<title>Search Engine Optimisation</title>
-		<para>There are a number of tools available to you to help maximise the search engine optimisation for your onCourse website. </para>
-		<section>
-			<title>Google tools</title>
-			<para>Google offer a range of really useful free tools to help drive search results to your site and analyse who is visiting your
-				site, why they are visiting your site and how much they are spending. </para>
-		</section>
-		<section>
-			<title>Analytics</title>
-			<para>ish will automatically sign you up to this service when we set up your account. onCourse has special hooks into Google Analytics
-				to pass through spending details of people who visit your site, so not only can you see who is coming to your site and from where,
-				but you can see which sources of traffic result in actual money being spent. It is all very well to get thousands of page views from
-				Facebook, but unless that traffic is generating enrolments you aren't getting the results you really need.</para>
-		</section>
-		<section>
-			<title>Tag Manager</title>
-			<para>Google Tag Manager is a powerful tool which allows you to inject javascript, images or
-				other content into your web pages. Every onCourse site automatically comes with a
-				tag manager account for your use. Although you can get by with never logging into
-				Tag Manager, this is a really useful way to dynamically add scripts to your site.
-				There are so many tools available for you, many of them free.</para>
-			<para>
-				<itemizedlist>
-					<listitem>
-						<para>user tracking</para>
-					</listitem>
-					<listitem>
-						<para>remarketing tools (following users around the internet with ads for
-							your site)</para>
-					</listitem>
-					<listitem>
-						<para>Facebook</para>
-					</listitem>
-					<listitem>
-						<para>user experience measurement (eg. using hotjar to watch a user's mouse
-							clicks to see which parts of your site are hard to use)</para>
-					</listitem>
-					<listitem>
-						<para>A-B testing (show different content to different users and measure the
-							results)</para>
-					</listitem>
-				</itemizedlist>
-			</para>
-		</section>
-		<section>
-			<title>Webmaster Tools</title>
-			<para>This free tool is something you can set up yourself. Just go to <link xlink:href="https://www.google.com/webmasters/tools">www.google.com/webmasters/tools</link> and click "add a site". You'll be given several choices for how to verify your site;
-				choose "HTML file upload" option. Take the file and upload it to your onCourse site in the top of the /s folder. Don't forget to
-				then publish your site changes into production. </para>
-			<para>You may decide to engage the services of an SEO company, and they may want to add your site to their own Webmaster tools. There
-				is no problem with uploading several different Google html verification files to your site. </para>
-			<para>Once you have performed the verification, a huge number of options are available to you. Most importantly you'll want to review
-				your organic search results, look at who is linking to you, make sure Google knows which country you are in. </para>
-		</section>
-		<section>
-			<title>Site Map</title>
-			<para>onCourse automatically generates a sitemap for all your content, so you don't need to maintain this by hand. This ensures that
-				Google is able to locate every page in your site and index it. Whether you get page hits from Google search will of course depend on
-				what you have on that page and how popular it is, but at least you know that Google will find every single page of your site.
-			</para>
-		</section>
 	</section>
 </chapter>

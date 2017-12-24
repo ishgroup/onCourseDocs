@@ -151,17 +151,15 @@
 				<para>Bulk tagging documents</para>
 			</caption>
 		</mediaobject>
-		<para>To enable this feature you will have to add the following code to the CourseItem.tml file </para>
-		<para>&lt;t:loop source="getAttachments(courseItemModel.course)" value="attachment"></para>
-		<para>&lt;t:if test="hasTag(attachment, 'image/hero')"></para>
-		<para>&lt;div t:type="ui/image" name="attachment.name" class="course-img" width="200"
-			height="200">&lt;/div></para>
-		<para>&lt;/t:if></para>
-		<para>&lt;/t:loop></para>
-		<para>&lt;/div></para>
-		<note>
-			<para>The CourseItem.tml file can be found in WebDAV by going to templates -> default -> CourseItem.tml. </para>
-		</note>
+		<para>To enable this feature you will have to add the following code to the CourseItem.tml file
+			:</para>
+		<para>
+			<programlisting>&lt;t:loop source="getAttachments(courseItemModel.course)" value="attachment">
+  &lt;t:if test="hasTag(attachment, 'image/hero')">
+    &lt;div t:type="ui/image" name="attachment.name" class="course-img" width="200" height="200">&lt;/div>
+  &lt;/t:if>
+&lt;/t:loop></programlisting>
+		</para>
 		<para>Lastly you would go into each course you want these images to be displayed on the
 			corresponding web page, click on the marketing tab, then on the '+' symbol in the bottom
 			left side of the window. Once you have found the image you want to be displayed on the

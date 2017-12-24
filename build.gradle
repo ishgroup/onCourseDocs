@@ -24,15 +24,15 @@ buildscript {
 		}
 	}
 	dependencies {
-		def fopDeps = ['org.apache.xmlgraphics:fop:2.1@jar',
-				'org.apache.xmlgraphics:xmlgraphics-commons:2.1',
-				'org.apache.xmlgraphics:batik-bridge:1.8@jar',
-				'org.apache.xmlgraphics:batik-css:1.8@jar',
-				'org.apache.xmlgraphics:batik-dom:1.8',
-                'org.apache.xmlgraphics:batik-transcoder:1.8',
-                'org.apache.xmlgraphics:batik-gvt:1.8',
-                'org.apache.xmlgraphics:batik-svggen:1.8',
-                'org.apache.xmlgraphics:batik-svg-dom:1.8@jar',
+		def fopDeps = ['org.apache.xmlgraphics:fop:2.2@jar',
+				'org.apache.xmlgraphics:xmlgraphics-commons:2.2',
+				'org.apache.xmlgraphics:batik-bridge:1.9.1@jar',
+				'org.apache.xmlgraphics:batik-css:1.9.1@jar',
+				'org.apache.xmlgraphics:batik-dom:1.9.1',
+                'org.apache.xmlgraphics:batik-transcoder:1.9.1',
+                'org.apache.xmlgraphics:batik-gvt:1.9.1',
+                'org.apache.xmlgraphics:batik-svggen:1.9.1',
+                'org.apache.xmlgraphics:batik-svg-dom:1.9.1@jar',
                 'org.apache.avalon.framework:avalon-framework-impl:4.3.1']
 
 		classpath 'saxon:saxon:6.5.3',
@@ -42,7 +42,7 @@ buildscript {
 				'net.sf.xslthl:xslthl:2.1.0',
                 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
 
-        classpath('xml-apis:xml-apis:1.4.01') {
+        classpath('xml-apis:xml-apis:2.0.2') {
             force = true
         }
 	}

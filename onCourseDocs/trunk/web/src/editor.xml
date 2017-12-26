@@ -8,7 +8,7 @@
             powerful tools to manage the struture and content of your website in a collaborative
             environment. </para>
         
-        <section xml:id="editorAccess"> <title> Setting up Access to the Editor </title>
+        <section xml:id="editorAccess"> <title> Access to the Editor </title>
             <para>Before you start editing content within the Editor you need to set up a user name
                 and password to log in. </para>
             <para>onCourse enables any user to also have the ability to log into and edit content
@@ -26,11 +26,11 @@
         </section>
         
         <section xml:id="editorLoggingIn"><title>Logging In</title>
-            <para>Access the editor by visiting your website and adding
-                    <emphasis>'#editor'</emphasis> at the end of the url. For example, if your
-                website url is <emphasis>'http://www.acme.com.au'</emphasis> the editor can be
-                accessed at <emphasis>'xml http://www.acme.com.au#editor'</emphasis>. </para>
-            <para>Log in using the same credentials that you use to access onCourse.</para>
+            <para>Access the editor by visiting your website and adding <code>#editor</code>
+                at the end of the url. For example, if your website url is
+                <code>http://www.acme.com.au</code> the editor can be accessed at
+                <code>http://www.acme.com.au#editor</code>. </para>
+            <para>Log in using your email address.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_login.png" format="png"/>        
@@ -43,7 +43,12 @@
                 continue to browse through your site as normal while logged into the Editor. </para>
             <para>On the toolbar, you can see icons that allows you to quickly access the primary
                 areas of the Editor. At the bottom of the toolbar, there is an option to publish any
-                changes you've made to the live site,and a log of all recent changes. </para>
+                changes you've made. This will push all your changes to the production servers so
+                they are visible to everyone.</para>
+            <para>While you are logged into the editor you are looking at a draft version of the
+                site which cannot be seen by anyone not also logged into the editor. Changes you
+                make with webDAV (static files, images, javascript, css, etc) are also only visible
+                while logged in to the editor, until you publish the site.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_SideBar.png"/>
@@ -53,8 +58,8 @@
                 </caption>
             </mediaobject>
             
-            <para>Navigate through the Edutor by using the icons on the toolbar. These icons allows
-                you to access different ares of the Editor quickly. </para>
+            <para>Navigate through the Editor by using the icons on the toolbar. These icons allows
+                you to access different areas of the Editor quickly. </para>
             <variablelist>
                 <varlistentry>
                     <term>Site </term>
@@ -64,7 +69,8 @@
                                 <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editorIconSite.png"/>
                             </imageobject>
                         </mediaobject>
-                        <para>Returns you to viewing your website. All changes made in the Editor will be visible.</para>
+                        <para>Returns you to viewing your website. All changes made in the Editor
+                            (and not published) will be visible until you log out.</para>
                     </listitem>
                 </varlistentry>
                 
@@ -88,7 +94,7 @@
                                 <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editorIconSettings.png"/>
                             </imageobject>
                         </mediaobject>
-                        <para>Allows you to manage a number of different aspects of how your website and portal display information. </para>
+                        <para>Allows you to manage how your website and portal display information. </para>
                     </listitem>
                 </varlistentry>
                 
@@ -109,8 +115,8 @@
     
     <section xml:id="editorContent"><title>Editing Content</title>
     
-    <para>Click the Content icon to see the editor for Blocks, Pages and Themes. These
-            three components make up the strucutre of the website. </para>
+    <para>Click the Content icon to see the editor for Blocks, Pages and Themes. These three
+            components make up the structure of the website. </para>
     <mediaobject>
         <imageobject>
             <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_content.png"/>
@@ -120,10 +126,11 @@
         
         <section xml:id="editorBlocks">
             <title> Blocks </title>
-            <para>Blocks are the cornerstone to your website's variety and page dynamics. Blocks are
-                re-usable snippets of text, pictures, rich text markup, javascript, etc. If you
-                wanted to add a banner on every page of your web siteor an area on several different
-                pages dedicated to a contact form, blocks are ideal.  </para>
+            <para>Blocks are re-usable snippets of text, pictures, rich text markup, etc. If you
+                wanted to add a banner on every page of your web site or an area on several
+                different pages dedicated to a contact form, blocks are ideal. Even if you only use
+                them once, they are a convenient way to break apart complicated pages into easy to
+                edit pieces.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_blocks.png"/>
@@ -139,8 +146,8 @@
                     side of the screen you see a preview of what the block will look like on your
                     website.</para>
                 <para>Click on the block contents to open the block in a text editor view. Enter
-                    your markup text or html to be added to the block and click save. This closes
-                    the text editor and renders your changes for you to review. </para>
+                    your rich text or html to be added to the block and click save. This closes the
+                    text editor and renders your changes for you to review. </para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_BlocksHTML.png"/>
@@ -158,7 +165,8 @@
                 <title>Creating a new block</title>
                 <para>You can create a new Block from the Block view by clicking on 'ADD NEW'. You
                     will have to give your new block a name in the 'Title' field, as well as some
-                    markup or HTML in the content field do the right.</para>
+                    rich text or HTML in the content field do the right. Remember that renaming a
+                    block might break places you have embedded that block using rich text.</para>
                 <para>Once you are happy with your new block, save it by hitting the blue 'SAVE'
                     button. If you wish to discard the your new block, hit the red 'REMOVE'
                     button.</para>
@@ -196,10 +204,10 @@
                         <para>/checkout</para>
                     </listitem>
                 </itemizedlist></para>
-            <para>Pages not automatically generated from onCourse are known as static pages. The
+            <para>Pages not automatically generated from onCourse can be created in the Editor. The
                 Pages view shows a list of all the static pages in your website and gives you quick
                 access to search for, edit and delete pages. Similar to the Block view, clicking on
-                a Page will open that Page in a text editor view.</para>
+                a Page will open text editor.</para>
             <section>
                 <title>Editing existing pages</title>
                 <para> From the Content menu, select Pages to get a list of all static pages on your site. </para>
@@ -209,35 +217,26 @@
                     </imageobject>
                 </mediaobject>
                 
-                <para>When a specific page is selected, the editor allows you to chage the theme
+                <para>When a specific page is selected, the editor allows you to change the theme
                     that is applied to this page, the page name, as well as editing the content. You
-                    can also elect whether any given page is 'visible'. Checking and unchecking the
-                    visbility box toggles whether a page is 'visible' on your live site. Pages that
-                    are not marked as visible can only be accessed with their direct url link. Keep
-                    pages that you don't want users stumbling across, or that may be under
-                    contruction, as unchecked (or 'invisibile').</para>
-                <para/>
+                    can also select whether any given page is 'visible'. The page title will be
+                    visible in the window title of the user's browser. Every page will be given an
+                    automatic URL like /page/5 however you may wish to give it an easier to use URLs
+                    like /terms or /about/contact-us. You can even give a page multiple URLs which
+                    will all work to display the same page to the user. Only one of the pages will
+                    be 'canonical' and the others will redirect to it.</para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_pagesEdit.png"/>
                     </imageobject>
                 </mediaobject>
-                <para>You can return to the Page list view by clicking the title of the page.</para>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editorPagesBack.png"/>
-                    </imageobject>
-                </mediaobject>
             </section>
             <section>
                 <title>Create new pages</title>
-                <para>You can also create 'static' pages. These allows you to add additional content
-                    to add breadth and cohesion to your website. For example, you may like to add an
-                    "about us" or "contact" page. </para>
                 <para>Click the 'ADD NEW' button to create a new blank page. Here you can edit the
                     pages Title, the pages URL as well as the theme that is applied to this page.
                     You can also toggle if the new page is visible. Clicking the 'Sample content'
-                    will open the page in the text editor to be editted.</para>
+                    will open the page in the text editor to be edited.</para>
                 <para>Once you have finished creating your new page, you will have to save it by
                     hitting the blue 'SAVE' button or discard your changes by the red 'REMOVE'
                     button.</para>
@@ -251,11 +250,11 @@
         
         <section xml:id="editorMenus">
             <title> Menus </title>
-            <para>From the Content view, the primary header nativigation can be edited from
+            <para>From the Content view, the primary header navigation can be edited from
                 'Menus'.</para>
             <para>Most websites have a primary navigation menu which users will use to find their
                 way around. In Menu's you can add new menu items, and link them to particular pages
-                or external URL's.</para>
+                or external URLs.</para>
             <section><title>Edit an existing menu item</title><para>Click on a menu name to edit it.
                     The menu name is as shown on your website. </para><para>Click, hold and drag the
                     menu items into a different order or nest them within other menu
@@ -376,11 +375,12 @@
             <para>The checkout settings allow you to customise the checkout process.</para>
             <para><emphasis role="bold">After payment successful redirect user to URL</emphasis>
                 allows you to set where a student is directed after the enrolment process. Maybe you
-                want to take them to the homepage or the emrolment terms and conditions - you can
+                want to take them to the homepage or the enrolment terms and conditions - you can
                 set this here.</para>
             <para><emphasis role="bold">Refund policy page</emphasis> allows you to set a custom
                 page to outline any policies, procedures or terms and conditions a student must
-                adhere to on enrolmnet.</para>
+                agree to. They will have to tick a checkbox stating that they agree on the final
+                checkout page.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/editor_settingsCheckout.png"/>
@@ -402,15 +402,17 @@
         </section>
         <section>
             <title>Editing an existing redirect</title>
-            <para>You can edit an existing redirect by changing the <emphasis role="bold">From</emphasis> and <emphasis role="bold">To</emphasis> parametres. </para>
+            <para>You can edit an existing redirect by changing the <emphasis role="bold"
+                    >From</emphasis> and <emphasis role="bold">To</emphasis> parameters. </para>
         </section>
         <section>
             <title>Adding a new redirect</title>
             <para>Clicking 'ADD NEW' creates a new redirect at the bottom of the redirects, with
                 blank <emphasis role="bold">From</emphasis> and <emphasis role="bold">To</emphasis>
-                parametres. </para>
+                parameters. </para>
         </section>
-        <para>Once you have finished editing the list of redirects, click 'SAVE' to add the reidrects to your site.</para>
+        <para>Once you have finished editing the list of redirects, click 'SAVE' to add the
+            redirects to your site.</para>
    
     </section>
     
@@ -481,8 +483,8 @@
     
     <section xml:id="editorPublish">
         <title>Publishing your changes</title>
-        <para>Any changes you've made are only visbile when logged into the Editor. Your site must
-            be publshed before any changes appear on the live site. </para>
+        <para>Any changes you've made are only visible when logged into the Editor. Your site must
+            be published before any changes appear on the live site. </para>
         <para>To publish your changes to your live site, click 'Publish' from the bottom of the
             toolbar. This prompts you to confirm that you want the changes published. Click
             'Confirm' to commit any changes you have made and make these changes visible on the live

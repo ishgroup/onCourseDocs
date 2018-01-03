@@ -15,16 +15,20 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('Build API docs') {
             steps {
-                checkout scm
+                sh "./gradlew apidocs:docbookHtml"
             }
         }
 
-        stage('Build') {
+        stage('Build release notes') {
             steps {
-                sh "./gradlew apidocs:docbookHtml"
                 sh "./gradlew release-notes:docbookHtml"
+            }
+        }
+
+        stage('Build manual') {
+            steps {
                 sh "./gradlew manual:docbook"
             }
         }
@@ -35,7 +39,7 @@ pipeline {
             }
         }
 
-        stage('Deploy snapshot') {
+        stage('Deploy release') {
             when {
                 expression { params.version != '' }
             }

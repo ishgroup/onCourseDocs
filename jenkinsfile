@@ -5,6 +5,10 @@ pipeline {
         label 'freebsd'
     }
 
+    parameters {
+        string(defaultValue: '', description: 'Release version. Leave blank to not release.', name: 'version')
+    }
+
     environment {
         DEPLOY_SERVER = "jenkins@astonish.ish.com.au"
         DEPLOY_PATH = "/usr/fileshare/website-deploy/ish/onCourse/doc"
@@ -31,15 +35,18 @@ pipeline {
             }
         }
 
-        // stage('Deploy snapshot') {
-        //     steps {
-        //         sh 'scp -r manual/build/pdf/*.pdf ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${docVersion}/manual/'
-        //         sh 'scp -r apidocs/build/html/*  ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${docVersion}/api/'
-        //         sh 'scp -r release-notes/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/release-notes/'
-        //         sh 'scp -r manual/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${docVersion}/manual/'
-        //         sh 'ssh ${env.DEPLOY_SERVER} "cd ${env.DEPLOY_PATH}; rm -f latest; ln -s ${docVersion} latest"'
-        //     }
-        // }
+        stage('Deploy snapshot') {
+            when {
+                expression { params.version != '' }
+            }
+            steps {
+                sh 'scp -r manual/build/pdf/*.pdf ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/manual/'
+                sh 'scp -r apidocs/build/html/*  ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/api/'
+                sh 'scp -r release-notes/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/release-notes/'
+                sh 'scp -r manual/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/manual/'
+                sh 'ssh ${env.DEPLOY_SERVER} "cd ${env.DEPLOY_PATH}; rm -f latest; ln -s ${params.version} latest"'
+            }
+        }
     }
 
     post { 

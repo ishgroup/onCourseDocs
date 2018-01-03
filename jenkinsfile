@@ -18,22 +18,10 @@ pipeline {
         }
 
         stage('Build') {
-            parallel {
-                stage('Build API') {
-                    steps {
-                        sh "./gradlew apidocs:docbookHtml"
-                    }
-                }
-                stage('Build release notes') {
-                    steps {
-                        sh "./gradlew release-notes:docbookHtml"
-                    }
-                }
-                stage('Build manual') {
-                    steps {
-                        sh "./gradlew manual:docbook"
-                    }
-                }
+            steps {
+                sh "./gradlew apidocs:docbookHtml"
+                sh "./gradlew release-notes:docbookHtml"
+                sh "./gradlew manual:docbook"
             }
         }
 
@@ -57,7 +45,7 @@ pipeline {
     post { 
         failure { 
             mail(
-                from: "development@@ish.com.au", 
+                from: "development@ish.com.au", 
                 to: "development@ish.com.au", 
                 subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                 body: """<p>FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>

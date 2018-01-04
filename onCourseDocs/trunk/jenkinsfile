@@ -17,6 +17,15 @@ pipeline {
     stages {
         stage('Build API docs') {
             steps {
+                script {
+                    currentBuild.displayName = "onCourse manual"
+                    currentBuild.description = """
+<ul>
+  <li><a href="${env.JOB_URL}/lastSuccessfulBuild/artifact/apidocs/build/html/index.html">API Documentation</a></li>
+  <li><a href="${env.JOB_URL}/lastSuccessfulBuild/artifact/release-notes/build/html/index.html">Release notes</a></li>
+  <li><a href="${env.JOB_URL}/lastSuccessfulBuild/artifact/manual/build/html/index.html">Manual</a></li>
+</ul>"""
+                }
                 sh "./gradlew apidocs:docbookHtml"
             }
         }
@@ -44,11 +53,11 @@ pipeline {
                 expression { params.version != '' }
             }
             steps {
-                sh 'scp -r manual/build/pdf/*.pdf ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/manual/'
-                sh 'scp -r apidocs/build/html/*  ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/api/'
-                sh 'scp -r release-notes/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/release-notes/'
-                sh 'scp -r manual/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/manual/'
-                sh 'ssh ${env.DEPLOY_SERVER} "cd ${env.DEPLOY_PATH}; rm -f latest; ln -s ${params.version} latest"'
+                sh "scp -r manual/build/pdf/*.pdf ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/manual/"
+                sh "scp -r apidocs/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/api/"
+                sh "scp -r release-notes/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/release-notes/"
+                sh "scp -r manual/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/manual/"
+                sh "ssh ${env.DEPLOY_SERVER} 'cd ${env.DEPLOY_PATH}; rm -f latest; ln -s ${params.version} latest'"
             }
         }
     }
@@ -56,17 +65,23 @@ pipeline {
     post { 
         failure { 
             mail(
-                from: "development@ish.com.au", 
                 to: "development@ish.com.au", 
-                subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: """<p>FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
-                <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+                subject: "ERROR: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: "Check console output at ${env.BUILD_URL}",
+            )
+        }
+        unstable { 
+            mail(
+                to: "development@ish.com.au", 
+                subject: "TEST FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: "Check console output at ${env.BUILD_URL}",
             )
         }
     }
 
     options {
+        disableConcurrentBuilds()
         buildDiscarder(logRotator(numToKeepStr:'10'))
-        timeout(time: 10, unit: 'MINUTES')
+        timeout(time: 60, unit: 'MINUTES')
     }
 }

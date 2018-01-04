@@ -33,12 +33,6 @@ pipeline {
             }
         }
 
-        stage('Archive') {
-            steps {
-                archiveArtifacts artifacts: '**/build/html/**/*,**/build/pdf/*.pdf,apidocs/build/html/**/*'
-            }
-        }
-
         stage('Deploy release') {
             when {
                 expression { params.version != '' }
@@ -60,16 +54,19 @@ pipeline {
         failure { 
             mail(
                 to: "development@ish.com.au", 
-                subject: "ERROR: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                subject: "${currentBuild.result}: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
                 body: "Check console output at ${env.BUILD_URL}",
             )
         }
         unstable { 
             mail(
                 to: "development@ish.com.au", 
-                subject: "TEST FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                subject: "${currentBuild.result}: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
                 body: "Check console output at ${env.BUILD_URL}",
             )
+        }
+        success {
+            archiveArtifacts artifacts: '**/build/html/**/*,**/build/pdf/*.pdf,apidocs/build/html/**/*'
         }
     }
 

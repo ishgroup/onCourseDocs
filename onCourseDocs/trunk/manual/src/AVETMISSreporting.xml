@@ -480,30 +480,53 @@
 		</mediaobject>
 	</section>
 	<section>
-		<title>Outcome status</title>
-		<para>You never need to set an outcome of 70 in onCourse. </para>
-		<para>In the AVETMISS runner, you also have an option, ticked by default, to export '70 -
-			Continuing Enrolment' for all VET outcomes which are not set. This is almost always the
-			correct answer for outcomes being reported within a calendar year, but not still in
-			progress. You can also change this value to 81 as needed.</para>
-		<para>You never need to set an outcome of 70 or 81 in onCourse. Choosing this option won't
-			change the value stored in onCourse, only export the value you need in the AVETMISS
-			files. The onCourse outcome status value will remain 'not set'.</para>
-		<para>All non-VET outcomes will also be exported as 81, unless you have manually defined
-			them within onCourse as 82.</para>
+		<title>Special default Outcome Status and overrides</title>
+		<para>You never need to set an outcomes of 70 or 81 in onCourse. </para>
+		<para>In the AVETMISS runner you will see information about outcome statuses that will be set by
+			default during the export.</para>
+		<para>Any VET outcome that is currently 'in progress' i.e. the end date is in the future,
+			will be automatically exported with an outcome of 70, no matter the value set in the
+			onCourse database. If the outcome status is unset, a 70 will be exported. If an outcome
+			value like a 20 is set, a 70 will be exported. This is because the only valid value for
+			an in progress outcome is 70.</para>
+		<para>Any non-VET outcome with no status set will be exported as 81. You can manually set a
+			non-vet outcome status within onCourse as 82 when it is needed, but there is no need to
+			set 81, unless you have a business process that requires it.</para>
+		<para>If you have any outcomes where the end date is in the past, and a final outcome status
+			has not yet been set, you can use the export runner to locate these outcomes and open
+			the list in a new window, so you can set the value.</para>
+		<para>Alternativly you can check the option in the export runner that says 'report these as
+			continuing enrolment (70) ending 7 days from now' and the export runner will set the end
+			date to the outcome to the future and set the value to 70. This saves you having to
+			manually change end dates, when a student was predicted to, but didn't actually complete
+			an outcome in the expected time frame.</para>
+		<para>The information showed in the runner won't change the value stored in onCourse, only
+			export the value you need in the AVETMISS files. The onCourse outcome status value will
+			remain 'not set' or the other value already set in the database. A count of each of the
+			special overrides is displayed in the AVETMISS runner so you can check the outcomes it
+			applies to by clicking the open related record icon next to the count.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/AVETMISS_override_counts.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Ensure you select the right 'AVETMISS flavour' for the export</para>
+			</caption>
+		</mediaobject>
 	</section>
 	<section xml:id="AVETMISS-AVETMISSExports">
 		<title>AVETMISS Exports</title>
 
 		<subtitle>How to get your AVETMISS data out of onCourse to submit to the government funding
 			body of your choice</subtitle>
-		<para>There are three ways to export your data:</para>
+		<para>There are four ways to export your data:</para>
 		<orderedlist>
 			<listitem>
 				<para>Export all the total activity data using the file > import/export > AVETMISS</para>
 			</listitem>
 			<listitem>
-				<para>Export all the data for a funding contract  using the file > import/export >
+				<para>Export all the data for one or more funding contracts using the file > import/export >
 					AVETMISS</para>
 			</listitem>
 			<listitem>
@@ -560,11 +583,11 @@
 						excluded.</para>
 				</listitem>
 				<listitem>
-					<para>You can optionally select to export all blank outcomes with continuing
-						enrolment (70). This is useful if you have student who have started the
-						outcome but not yet completed. You can use the find related icon next to "x
-						completed outcomes need a status' to open a list of the outcomes affected
-						and modify them if needed. </para>
+					<para>You can optionally select to export all completed but not yet set outcomes with
+						continuing enrolment (70). This is useful if you have student who have
+						started the outcome but not yet completed. You can use the find related icon
+						next to "x completed outcomes need a status' to open a list of the outcomes
+						affected and modify them if needed. </para>
 				</listitem>
 				<listitem>
 					<para>The export runner will indicate the total number of outcomes you have
@@ -616,15 +639,16 @@
 				</listitem>
 				<listitem>
 					<para>If you run both VET and non-VET training, you may choose to tick 'export only VET
-						courses'. Non-VET training is only mandatory if you are reporting Oliv
-						(Community College), and can be excluded for other default contracts.</para>
+						courses'. Non-VET training is generally only reported by community colleges.
+						Non-VET training covered by the CSO reporting contract will be included if
+						you select that contract.</para>
 				</listitem>
 				<listitem>
-					<para>You can optionally select to export all blank outcomes with continuing
-						enrolment (70). This is useful if you have student who have started the
-						outcome but not yet completed. You can use the find related icon next to "x
-						completed outcomes need a status' to open a list of the outcomes affected
-						and modify them if needed. </para>
+					<para>You can optionally select to export all completed but not yet set outcomes with
+						continuing enrolment (70). This is useful if you have student who have
+						started the outcome but not yet completed. You can use the find related icon
+						next to "x completed outcomes need a status' to open a list of the outcomes
+						affected and modify them if needed.  </para>
 				</listitem>
 				<listitem>
 					<para>The export runner will indicate the total number of outcomes you have
@@ -837,7 +861,7 @@
 				</listitem>
 			</itemizedlist>
 			<section>
-				<title>AVETMISS Standard</title>
+				<title>AVETMISS Standard - Fee for service VET (non-funded)</title>
 				<para>This export is to the AVETMISS VET Provider Collection Specifications National
 					Length only, for each of the NAT file specifications. This is the option you
 					should choose when reporting directly to NCVER. If you require a standard
@@ -848,26 +872,23 @@
 					each file and doesn't include any of the state specific fields.</para>
 			</section>
 			<section>
-				<title>NSW OLiV reporting</title>
-				<para>AVETMISS reporting via OLiV is required for Adult and Community Education
-					customers who receive funding under the ACE Provider Contract to deliver the
-					Adult and Community Education Community Service Obligation Program (ACE CSO
-					Program) and/or the Tech Savvy Seniors (TSS) program.</para>
-				<para>Although this program is a subset of the NSW Smart &amp; Skilled program it is
-					not reported via the usual STSOnline portal. ACE colleges are also expected to
-					lodge the entirety of their training data for total VET Activity reporting via
-					OLiV, where it will be collated and sent to NCVER as a sector wide report.
-					Non-VET training activity data can also be lodged via OLiV and it is encouraged
-					that ACE providers to so.</para>
-				<para>State specific funded training (e.g. Smart &amp; Skilled) must also be
-					reported via the State Training Service portal for that state. Reporting this
-					data via OLiV does not exclude you from your reporting requirements for other
-					contracts.</para>
-				<para>Customers reporting in NSW using the OLiV portal are advised to choose this
-					export option in the AVETMISS export process. This export option includes the
-					standard below the line fields.</para>
-				<para>Outcomes code Did Not Start - 66 will export a 66 code if reporting in OLiV
-					Flavour. </para>
+				<title>CSO (Community Colleges)</title>
+				<para>AVETMISS CSO reporting is for Adult and Community Education customers who receive funding
+				under the ACE Provider Contract to deliver the Adult and Community Education
+				Community Service Obligation Program (ACE CSO Program) and/or the Tech Savvy Seniors
+				(TSS) program.</para>
+				<para>Although this program is a subset of the NSW Smart &amp; Skilled program it is not
+				reported via the usual STSOnline portal. ACE colleges are also expected to lodge the
+				entirety of their training data for total VET Activity reporting, where it will be
+				collated and sent to NCVER as a sector wide report. Non-VET training activity data
+				can also be lodged and it is encouraged that ACE providers to so.</para>
+				<para>State specific funded training (e.g. Smart &amp; Skilled) must also be reported via the
+				State Training Service portal for that state. Reporting this data elsewhere does not
+				exclude you from your reporting requirements for other contracts.</para>
+				<para>Customers reporting CSO data are advised to choose this export option in the AVETMISS
+				export process. This export option includes the standard below the line
+				fields.</para>
+				<para>Outcomes code Did Not Start - 66 will export a 66 code if reporting in CSO Flavour. </para>
 				<para>Additional export overrides are in place to assist with the correct reporting
 					of CSO and TSS data.</para>
 				<itemizedlist>
@@ -883,7 +904,7 @@
 				</itemizedlist>
 			</section>
 			<section>
-				<title>NSW Smart and Skilled (for 2015 onwards data)</title>
+				<title>NSW STSOnline (for 2015 onwards data)</title>
 				<para>Smart and Skilled specific reporting requirements are discussed here: <xref
 						linkend="reporting_smartandSkilled"/>
 				</para>
@@ -940,7 +961,7 @@
 					specified.</para>
 			</section>
 			<section>
-				<title>Victoria</title>
+				<title>Skills Victoria</title>
 				<table frame="all">
 					<title>Victorian Specific Data Fields</title>
 					<tgroup cols="6" align="left" colsep="1" rowsep="1">
@@ -1131,7 +1152,7 @@
 				<para>This export option is used to report against the Victorian VET Student
 					Statistical Collection Guidelines - 2015 v 2015.</para>
 				<section>
-					<title>Variations on Standard AVETMISS Fields for Victoria</title>
+					<title>Variations on Standard AVETMISS Fields for Skills Victoria</title>
 					<para>The RTO ID is prefixed with leading zeros in the NAT0010, NAT00020 and
 						NAT0030 as required in Victoria only</para>
 					<para>The addresses of your training venues in the NAT00020 are broken into
@@ -1148,7 +1169,7 @@
 				</section>
 			</section>
 			<section>
-				<title>Queensland</title>
+				<title>DETConnect (Queensland)</title>
 				<para>In QLD, AVETMISS reporting is against your State RTO ID, rather than your
 					National RTO ID. The National ID must be recorded in onCourse in the AVETMISS
 					'Identifier' field for the USI validation process to work. Your QLD RTO ID
@@ -1175,13 +1196,13 @@
 					Qualification) where it has been selected for each outcome.</para>
 			</section>
 			<section>
-				<title>Tasmania</title>
+				<title>Skills Tasmania</title>
 				<para>onCourse will export the client Title in the NAT00085 as Mr if male or Ms if
 					female, if not otherwise specified (this was added specifically for Tasmania,
 					but applies to all exports)</para>
 			</section>
 			<section>
-				<title>South Australia</title>
+				<title>STELA (South Australia)</title>
 				<para>onCourse complies with the SA export standard.</para>
 				<para>onCourse will export the value @@ for the Delivery Mode in the NAT00120 if the
 					outcome is set as Did Not Start</para>
@@ -1194,13 +1215,12 @@
 					document.</para>
 			</section>
 			<section>
-				<title>Northern Territory &amp; the Australian Capital Territory</title>
-				<para>NT &amp; ACT do not have any additional requirements, but they do require the
-					below the optional below the line fields to be completed and reported on. We
-					recommend using the TAS export for NT or ACT.</para>
+				<title>Northern Territories VET Provider Portal &amp; AVETARS (ACT)</title>
+				<para>NT &amp; ACT do not have any additional requirements, but they do require the below the
+				optional below the line fields to be completed and reported on. </para>
 			</section>
 			<section>
-				<title>Western Australia</title>
+				<title>STARS (Western Australia)</title>
 				<para>WA use a whole different standard again, called RAPT. The files you generate
 					when you choose WA RAPT are quite different to the AVETMISS files that are
 					generated in other states and territories. See the chapter <link

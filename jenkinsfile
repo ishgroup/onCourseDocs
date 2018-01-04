@@ -10,7 +10,7 @@ pipeline {
     }
 
     environment {
-        DEPLOY_SERVER = "jenkins@astonish.ish.com.au"
+        DEPLOY_SERVER = "deploy@astonish.ish.com.au"
         DEPLOY_PATH = "/usr/fileshare/website-deploy/ish/onCourse/doc"
     }
 
@@ -46,6 +46,7 @@ pipeline {
                 sh "scp -r release-notes/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/release-notes/"
                 sh "scp -r manual/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/manual/"
                 sh "ssh ${env.DEPLOY_SERVER} 'cd ${env.DEPLOY_PATH}; rm -f latest; ln -s ${params.version} latest'"
+                sh "ssh ${env.DEPLOY_SERVER} '/usr/local/etc/periodic/rsynctosplash.sh'"
             }
         }
     }

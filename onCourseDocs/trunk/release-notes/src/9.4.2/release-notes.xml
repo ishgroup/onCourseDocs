@@ -1,26 +1,52 @@
 <?xml version='1.0' encoding='utf-8'?>
-<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.4.2'>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://docbook.org/ns/docbook file://../../src/docbook.xsd"
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-9.4.2">
   <info>
     <title>Release 9.4.2</title>
     <pubdate>5 Feb 2018</pubdate>
   </info>
 
-  <section role='fixes'>
+  <section role="fixes">
     <title>Fixes</title>
     <itemizedlist>
       <listitem>
         <para>onCourse windows sometimes freezing after 9.4.1 deployment
-          <systemitem>OD-11541</systemitem>
+            <systemitem>OD-11541</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>AVETMISS 7 cogwheel option exports AVETMISS 8 data
-          <systemitem>OD-11555</systemitem>
+        <para>AVETMISS 7 cogwheel option exports AVETMISS 8 data <systemitem>OD-11555</systemitem>
         </para>
       </listitem>
       <listitem>
         <para>AVETMISS export selects additional certificates outside date range
-          <systemitem>OD-11556</systemitem>
+            <systemitem>OD-11556</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section role="web-fixes">
+    <title>Web fixes</title>
+    <itemizedlist>
+      <listitem>
+        <para> Implement better failure mode for the checkout app to ensure 'Enrol Now' buttons are visible
+          <systemitem>OD-11518</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para> Improvement to waiting list checkout behaviour to check for shopping cart changes
+          <systemitem>OD-11505</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para> Display negative numbers with two decimal places in portal
+          <systemitem>OD-11510</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para> Display money with $ symbol on web
+          <systemitem>OD-11379</systemitem>
         </para>
       </listitem>
     </itemizedlist>

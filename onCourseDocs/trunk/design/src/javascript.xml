@@ -84,4 +84,37 @@
 		</para>
 		<para>You may wish to remove or add more libraries for your particular design</para>
 	</section>
+
+	<section> <title> Updating Checkout redirects in config.js </title>
+		<para>config.js controls the behaviour of the browser application parts of onCourse. In
+			particular, the checkout application that drives the shopping basket, enrol buttons,
+			places available, discounts and the whole checkout and ecommerce engine. config.js can
+			be accessed via WebDAV, and can be found at the path
+				<emphasis>~/s/js/config.js</emphasis>
+		</para>
+		<para>Two important variables can be configured in the config.js file:</para>
+		<itemizedlist>
+			<listitem>
+				<para><emphasis>termsAndConditions</emphasis> - allows you to set the path to the page where a
+					student is directed after the enrolment process. Maybe you want to take them to
+					the homepage or a page with enrolment terms and conditions - you can set this
+					here.</para>
+			</listitem>
+			<listitem>
+				<para><emphasis>paymentSuccessURL</emphasis> -  allows you to set a custom page to outline any policies, procedures or terms and conditions a student must agree to. They will have to tick a checkbox stating that they agree on the final checkout page.</para>
+			</listitem>
+		</itemizedlist>
+		<para>These two variables accept strings in the form of the path to the web page you want to direct the student to. Example:</para>
+		<programlisting language="javascript"> 
+checkout_config = {
+....
+  termsAndConditions: "/page/8",
+  paymentSuccessURL: "/addinfo",
+....
+}
+		</programlisting>
+		
+	</section>
 </chapter>
+
+

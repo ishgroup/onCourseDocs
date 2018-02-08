@@ -250,9 +250,6 @@
 						</listitem>
 					</itemizedlist>
 				</listitem>
-				<listitem>
-					<para>redirects.txt</para>
-				</listitem>
 			</itemizedlist> In addition you will see a redirects.txt file that will contain a full
 			list of the redirects on your website.<mediaobject>
 				<imageobject>
@@ -275,11 +272,12 @@
 	<section> <title> Editing redirects in WebDAV</title>
 		<para>Any 301 redirects added to your site can be seen in plaintext format in the <emphasis
 				role="bold">redirects.txt</emphasis> file, located in your sites root directory.
-			These redirects are structured with the <emphasis role="bold">"From URL"</emphasis> on
-			the left, the <emphasis role="bold">"To URL"</emphasis> on the right, and a space
+			These redirects are structured with the <emphasis role="bold">"From URL"</emphasis> a
+			the left, the <emphasis role="bold">"To URL"</emphasis> a the right, and a space
 			seperating them.</para>
 		<para>301 redirects can be added in the Editor or typed directly into this file.</para>
-		<para> The redirects.txt file accepts 301 redirects that conform to the following structure</para>
+		<para> The redirects.txt file accepts 301 redirects that conform to the following
+			structure:</para>
 		<itemizedlist>
 			<listitem>
 				<para><emphasis role="bold">"From" URLs</emphasis> must point from a page on your site. All "From" URLs must start with a forward slash "/"</para>
@@ -319,21 +317,22 @@
 			</listitem>
 			
 			<listitem>
-				<para>Each 301 redirect must be a new line.</para>
+				<para>Each 301 redirect must be on a new line.</para>
 			</listitem>
 			
 			<listitem>
-				<para>The "From" URL and the "To" URL in a redirect must be seperated by a space. "From" and "To" addresses must be on the same line.</para>
+				<para>The "From" and  "To" URLs in a redirect must be seperated by a space. "From" and "To" URLs
+					must be on the same line.</para>
 				<para>Examples of valid redirects:</para>
 				<itemizedlist>
 					<listitem>
-						<para>/contact/about-us    /contact</para>
+						<para>/contact/about-us xml &#009;/contact</para>
 					</listitem>
 					<listitem>
-						<para>/course/ABC123    /courses/</para>
+						<para>/course/ABC123 &#009;/courses/</para>
 					</listitem>
 					<listitem>
-						<para>/courses?near=2000    https://www.externalsite.com.au</para>
+						<para>/courses?near=2000 &#009;https://www.externalsite.com.au</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>

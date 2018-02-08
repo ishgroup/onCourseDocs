@@ -217,7 +217,8 @@
 	</section>
 	<section>
 		<title>WebDAV files</title>
-		<para>When you login into WebDAV you will see folders like this: <itemizedlist>
+		<para>When you login into WebDAV you will see folders like this: 
+			<itemizedlist>
 				<listitem>
 					<para>pages</para>
 				</listitem>
@@ -249,6 +250,9 @@
 						</listitem>
 					</itemizedlist>
 				</listitem>
+				<listitem>
+					<para>redirects.txt</para>
+				</listitem>
 			</itemizedlist> In addition you will see a redirects.txt file that will contain a full
 			list of the redirects on your website.<mediaobject>
 				<imageobject>
@@ -268,6 +272,79 @@
 		<para>You can edit pages and blocks directly from within WebDAV. The result is the same as
 			if you had edited those same items from within the CMS.</para>
 	</section>
+	<section> <title> Editing redirects in WebDAV</title>
+		<para>Any 301 redirects added to your site can be seen in plaintext format in the <emphasis
+				role="bold">redirects.txt</emphasis> file, located in your sites root directory.
+			These redirects are structured with the <emphasis role="bold">"From URL"</emphasis> on
+			the left, the <emphasis role="bold">"To URL"</emphasis> on the right, and a space
+			seperating them.</para>
+		<para>301 redirects can be added in the Editor or typed directly into this file.</para>
+		<para> The redirects.txt file accepts 301 redirects that conform to the following structure</para>
+		<itemizedlist>
+			<listitem>
+				<para><emphasis role="bold">"From" URLs</emphasis> must point from a page on your site. All "From" URLs must start with a forward slash "/"</para>
+				<para>Example:</para>
+				<itemizedlist>
+					<listitem>
+						<para>/</para>
+					</listitem>
+					<listitem>
+						<para>/courses</para>
+					</listitem>
+					<listitem>
+						<para>/contact/about-us</para>
+					</listitem>
+					<listitem>
+						<para>/courses/business/business?tag=/business/accounting</para>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+			
+			<listitem>
+				<para><emphasis role="bold">"To" URLs</emphasis> can point to another page on your site or an external webpage. "To" URLs can start with a forward slash "/"
+					(for internal redirects) , "http://", or "https://" (for external redirects).
+				</para>
+				<para>Example:</para>
+				<itemizedlist>
+					<listitem>
+						<para>/</para>
+					</listitem>
+					<listitem>
+						<para>/checkout</para>
+					</listitem>
+					<listitem>
+						<para>https://www.ish.com.au/</para>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+			
+			<listitem>
+				<para>Each 301 redirect must be a new line.</para>
+			</listitem>
+			
+			<listitem>
+				<para>The "From" URL and the "To" URL in a redirect must be seperated by a space. "From" and "To" addresses must be on the same line.</para>
+				<para>Examples of valid redirects:</para>
+				<itemizedlist>
+					<listitem>
+						<para>/contact/about-us    /contact</para>
+					</listitem>
+					<listitem>
+						<para>/course/ABC123    /courses/</para>
+					</listitem>
+					<listitem>
+						<para>/courses?near=2000    https://www.externalsite.com.au</para>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+			
+		</itemizedlist>
+		
+		
+		<para>If an invalid redirect is entered into the redirects.txt file, the file will not be able to
+			be saved.</para>
+	</section>
+	
 	<section>
 		<title>Video</title>
 		<para>Although it is possible to load video files directly into the static folder, the

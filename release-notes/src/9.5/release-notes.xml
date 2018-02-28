@@ -1,0 +1,445 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.5'>
+  <info>
+    <title>Release 9.5</title>
+    <pubdate>28 Feb. 2018</pubdate>
+  </info>
+  <section role='important'>
+    <title>Important changes</title>
+    <para> </para>
+  </section>
+  <section role='major'>
+    <title>Major features</title>
+    <para> </para>
+  </section>
+  <section role='scripts'>
+    <title>Reports and scripts</title>
+    <itemizedlist>
+      <listitem>
+        <para>Course completion survey report calculation was incorrectly including zero star rating in calculation
+          <systemitem>OD-10955</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <section role='minor'>
+      <title>Minor features</title>
+      <itemizedlist>
+        <listitem>
+          <para>Rename AVETMISS Flavours
+            <systemitem>OD-10248</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Tutor payable time sheet UI improvement
+            <systemitem>OD-10494</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>CMS webdav: allow  to edit (add new lines) redirects.txt file
+            <systemitem>OD-10722</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Editor: Add a publish History log to allow users to revert to a previous version
+            <systemitem>OD-10852</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>UI: Student Feedback List View
+            <systemitem>OD-10895</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>UI: Student Feedback List View: Find related 
+            <systemitem>OD-10896</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>UI: Student Feedback Edit View
+            <systemitem>OD-10897</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>UI: Student Feedback List View: Export to XML, CSV
+            <systemitem>OD-10898</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>UI: Student Feedback "Related to Student Feedback" on the other Lists
+            <systemitem>OD-10900</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>BUG: relational operators for Money fail tests
+            <systemitem>OD-10915</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add additional find related functions to the user list view - messages, invoices, payments in, payments out and audit log
+            <systemitem>OD-11122</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Allow QR code to be applied to all custom certificate keycodes
+            <systemitem>OD-11126</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add Find related - 'voucher redeemed' to invoice, enrolment and payment in list views
+            <systemitem>OD-11166</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add 'data collection rule' to course advanced search
+            <systemitem>OD-11179</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add 'Enrolment type' to course advanced search
+            <systemitem>OD-11181</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add Funding Contract to Enrolment advanced search
+            <systemitem>OD-11199</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add Funding Contract to Class advanced search
+            <systemitem>OD-11200</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove student and tutor columns from Message_Person table in w2live
+            <systemitem>OD-11207</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement webdav for cms api
+            <systemitem>OD-11234</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Apply ZK session storage for editor authorisation
+            <systemitem>OD-11262</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add Survey type
+            <systemitem>OD-11269</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Support rest API feature like 'publish'
+            <systemitem>OD-11279</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add advanced search to Audits on Action (created, updated, deleted, email collision, script failure)
+            <systemitem>OD-11287</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Auto suppress 'add concession' from checkout when the college has no concession options available for self selection on the web
+            <systemitem>OD-11290</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove Server version from response headers
+            <systemitem>OD-11297</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Content &gt; Menus: not optimal position of "Save" button
+            <systemitem>OD-11334</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Update DeliveryMode descriptions for AVETMISS 8 to remove numerical descriptor
+            <systemitem>OD-11478</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Update onCourse UI to support Survey Field Configurations in data collection rules
+            <systemitem>OD-11519</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Adjust checkout-api build in accordance with swagger codegen
+            <systemitem>OD-11639</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Check securityDefinitions for swagger schema
+            <systemitem>OD-11640</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Editor-api schema questions
+            <systemitem>OD-11641</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add Audit logs on script failure
+            <systemitem>OD-9780</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Audit logs linked to entities via find related
+            <systemitem>OD-9991</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='fixes'>
+      <title>Fixes</title>
+      <itemizedlist>
+        <listitem>
+          <para>In-app links in onCourse release notes should render destination page correctly
+            <systemitem>OD-10759</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Reversed payments in status display needs to be consistant throughout onCourse
+            <systemitem>OD-10794</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Payment out was posting to the 'default' asset account instead of payment method asset accout
+            <systemitem>OD-10795</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Scroll to top of contact details page when there's an error
+            <systemitem>OD-10799</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Class roll - Do not suppress second student with identical name from roll
+            <systemitem>OD-11007</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Replication: Student: Validation failures: (yearSchoolCompleted) Validation failure for ish.oncourse.server.cayenne.Student:
+            <systemitem>OD-11014</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>VCU File outcome export incorrect when outcome in not set or 82
+            <systemitem>OD-11084</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove message tab from user record and add to find related function
+            <systemitem>OD-11121</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Enrolment outcome delivery mode cannot be changed from edit sheet
+            <systemitem>OD-11209</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Still at School displaying incorrectly in new checkout
+            <systemitem>OD-11255</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Special Needs help text on /checkout not rendering
+            <systemitem>OD-11256</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Payroll sheet fails to render when class contains a per timetabled hour sunk cost
+            <systemitem>OD-11289</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Auto suppress credit card payment option from checkout when willow admin preferences have not enabled online payment with credit card
+            <systemitem>OD-11293</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Discounts not applying as expected in checkout
+            <systemitem>OD-11300</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Custom Field in Checkout - ensure 'other' options works as expected
+            <systemitem>OD-11309</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>End of checkout process says purchase items are not valid
+            <systemitem>OD-11317</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Fix wording of label in Gift voucher sale in checkout to encourage the user to insert their voucher price choice
+            <systemitem>OD-11321</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Check main services cases after migtration willow common projects to tapestry 5.4 and java 1.8
+            <systemitem>OD-11358</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Field receives incorrect fieldOrder when added to existing Data Collection form
+            <systemitem>OD-11371</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove extra symbols within web prices 
+            <systemitem>OD-11377</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>CMS &gt; Settings &gt; Website: Missed scroll in days amount field
+            <systemitem>OD-11407</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>editor - 'Menus' list doesn't fill page when expanded
+            <systemitem>OD-11489</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>editor - redirect list doesn't scroll
+            <systemitem>OD-11490</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>$0 Courses showing with price 'TBA' on website
+            <systemitem>OD-11495</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>End User online enrolment - intermittant error message in checkout
+            <systemitem>OD-11501</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Waiting list checkout response inconsistant
+            <systemitem>OD-11505</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Intermittent missing Enrol Now buttons
+            <systemitem>OD-11509</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Blank payment gateway response
+            <systemitem>OD-11546</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Prevent another payment out from being processed for contact when it has a payment out 'in transaction' status
+            <systemitem>OD-11549</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Update summary state after deleting items from cart
+            <systemitem>OD-11565</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Website- Enrol Button greyed out and not functioning
+            <systemitem>OD-11569</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Fix inability to edit fields in attendance dialog 
+            <systemitem>OD-11614</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Advanced search Save Find breaks text fields in client
+            <systemitem>OD-11633</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='web'>
+      <title>Web features</title>
+      <itemizedlist>
+        <listitem>
+          <para>Migrate Solr reindex functionality for Courses to Java implementation 
+            <systemitem>OD-10214</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Portal:Class Surveys: Add net promoter score and adjust feedback label based on response
+            <systemitem>OD-10902</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Web: Course Page: Testimonials Component
+            <systemitem>OD-10903</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Portal: Feedback star colours improvement for visual clarity
+            <systemitem>OD-10945</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Survey: public comment status refactoring to allow student to give permission to publish their testimonal
+            <systemitem>OD-11294</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Show invisible pages in editor
+            <systemitem>OD-11301</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove /class robots.txt file to improve SEO
+            <systemitem>OD-11524</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Adjust common search implementation (web/portal)
+            <systemitem>OD-11561</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='web-fixes'>
+      <title>Web fixes</title>
+      <itemizedlist>
+        <listitem>
+          <para>Class status "enrolment disabled" shouldn't hide session from kiosk display
+            <systemitem>OD-10959</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Kiosk fix: Only show tutors ticked for the class session
+            <systemitem>OD-11075</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>QR Code validation broken
+            <systemitem>OD-11308</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Wrong money format on web
+            <systemitem>OD-11379</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Display room name instead of site name in Kiosk view
+            <systemitem>OD-11400</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Final '0' gets truncated in negative currency sums on portal
+            <systemitem>OD-11510</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </section>
+</chapter>

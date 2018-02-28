@@ -4,20 +4,42 @@
     <title>Release 9.5</title>
     <pubdate>28 Feb. 2018</pubdate>
   </info>
-  <section role='important'>
-    <title>Important changes</title>
-    <para> </para>
-  </section>
   <section role='major'>
     <title>Major features</title>
-    <para> </para>
+    <section>
+      <title>Student feedback</title>
+      <para>Student feedback has gone from being a minor feature in the portal to a first class part
+        of onCourse. You can now set up student feedback as part of your Data Collection rules. In
+        this first release student feedback is fixed to just four ratings plus a short answer field,
+        but we'll be rolling out custom fields and links to third party tools like SurveyMonkey for
+        really complex forms.</para>
+      <para>Because we've linked this to Data Collection, your VET courses can have additional
+        surveys for employers several months later, while other courses might have a survey after
+        each session.</para>
+      <para>Just as importantly, feedback can be marked by you to be marketing worthy. This means
+        that with the addition of a small component to your site you can have testimonials
+        completely integrated into your workflow.</para>
+    </section>
+    <section>
+      <title>New editor</title>
+      <para>Our new editor has now replaced the old CMS. It is more powerful and much easier to use.
+        Built on a modern React framework it allows us to more quickly add new functionality to your
+        site. Already you now have the ability to roll back to previous site versions as well as
+        suppress certain pages from your sitemap, and you can now edit the redirects in
+        WebDav.</para>
+    </section>
+    <section><title>Editor API</title>The new editor <link
+        xlink:href="https://www.ish.com.au/s/onCourse/doc/editor-api/v1/">now also has an
+      API</link>. This is a very important step forward in the refresh of our technology stack. You
+      can script actions to do anything that the editor UI itself can do, right through to
+      publishing your site.</section>
   </section>
   <section role='scripts'>
     <title>Reports and scripts</title>
     <itemizedlist>
       <listitem>
-        <para>Course completion survey report calculation was incorrectly including zero star rating in calculation
-          <systemitem>OD-10955</systemitem>
+        <para>Course completion survey report calculation was incorrectly including zero (unmarked)
+          star rating in calculation <systemitem>OD-10955</systemitem>
         </para>
       </listitem>
     </itemizedlist>
@@ -25,8 +47,7 @@
       <title>Minor features</title>
       <itemizedlist>
         <listitem>
-          <para>Rename AVETMISS Flavours
-            <systemitem>OD-10248</systemitem>
+          <para>Rename AVETMISS Flavours to make them clearer <systemitem>OD-10248</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -42,36 +63,6 @@
         <listitem>
           <para>Editor: Add a publish History log to allow users to revert to a previous version
             <systemitem>OD-10852</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI: Student Feedback List View
-            <systemitem>OD-10895</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI: Student Feedback List View: Find related 
-            <systemitem>OD-10896</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI: Student Feedback Edit View
-            <systemitem>OD-10897</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI: Student Feedback List View: Export to XML, CSV
-            <systemitem>OD-10898</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>UI: Student Feedback "Related to Student Feedback" on the other Lists
-            <systemitem>OD-10900</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>BUG: relational operators for Money fail tests
-            <systemitem>OD-10915</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -110,33 +101,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Remove student and tutor columns from Message_Person table in w2live
-            <systemitem>OD-11207</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Implement webdav for cms api
-            <systemitem>OD-11234</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Apply ZK session storage for editor authorisation
-            <systemitem>OD-11262</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Add Survey type
-            <systemitem>OD-11269</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Support rest API feature like 'publish'
-            <systemitem>OD-11279</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Add advanced search to Audits on Action (created, updated, deleted, email collision, script failure)
-            <systemitem>OD-11287</systemitem>
+          <para>Add advanced search to Audits on Action (created, updated, deleted, email collision,
+            script failure) <systemitem>OD-11287</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -150,8 +116,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Content &gt; Menus: not optimal position of "Save" button
-            <systemitem>OD-11334</systemitem>
+          <para>Content > Menus: not optimal position of "Save" button
+              <systemitem>OD-11334</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -165,23 +131,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Adjust checkout-api build in accordance with swagger codegen
-            <systemitem>OD-11639</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Check securityDefinitions for swagger schema
-            <systemitem>OD-11640</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Editor-api schema questions
-            <systemitem>OD-11641</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Add Audit logs on script failure
-            <systemitem>OD-9780</systemitem>
+          <para>Add Audit logs on script failure <systemitem>OD-9780</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -200,13 +150,13 @@
           </para>
         </listitem>
         <listitem>
-          <para>Reversed payments in status display needs to be consistant throughout onCourse
-            <systemitem>OD-10794</systemitem>
+          <para>Reversed payments in status display needs to be consistent throughout onCourse
+              <systemitem>OD-10794</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Payment out was posting to the 'default' asset account instead of payment method asset accout
-            <systemitem>OD-10795</systemitem>
+          <para>Payment out was posting to the 'default' asset account instead of payment method
+            asset account <systemitem>OD-10795</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -217,11 +167,6 @@
         <listitem>
           <para>Class roll - Do not suppress second student with identical name from roll
             <systemitem>OD-11007</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Replication: Student: Validation failures: (yearSchoolCompleted) Validation failure for ish.oncourse.server.cayenne.Student:
-            <systemitem>OD-11014</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -270,18 +215,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>End of checkout process says purchase items are not valid
-            <systemitem>OD-11317</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Fix wording of label in Gift voucher sale in checkout to encourage the user to insert their voucher price choice
             <systemitem>OD-11321</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Check main services cases after migtration willow common projects to tapestry 5.4 and java 1.8
-            <systemitem>OD-11358</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -295,8 +230,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>CMS &gt; Settings &gt; Website: Missed scroll in days amount field
-            <systemitem>OD-11407</systemitem>
+          <para>CMS > Settings > Website: Missed scroll in days amount field
+              <systemitem>OD-11407</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -315,18 +250,12 @@
           </para>
         </listitem>
         <listitem>
-          <para>End User online enrolment - intermittant error message in checkout
-            <systemitem>OD-11501</systemitem>
+          <para>End User online enrolment - intermittent error message in checkout
+              <systemitem>OD-11501</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Waiting list checkout response inconsistant
-            <systemitem>OD-11505</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Intermittent missing Enrol Now buttons
-            <systemitem>OD-11509</systemitem>
+          <para>Waiting list checkout response inconsistent <systemitem>OD-11505</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -365,18 +294,12 @@
       <title>Web features</title>
       <itemizedlist>
         <listitem>
-          <para>Migrate Solr reindex functionality for Courses to Java implementation 
-            <systemitem>OD-10214</systemitem>
+          <para>Portal Class Surveys: Add net promoter score and adjust feedback label based on
+            response <systemitem>OD-10902</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Portal:Class Surveys: Add net promoter score and adjust feedback label based on response
-            <systemitem>OD-10902</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Web: Course Page: Testimonials Component
-            <systemitem>OD-10903</systemitem>
+          <para>Web: Testimonials Component <systemitem>OD-10903</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -385,8 +308,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Survey: public comment status refactoring to allow student to give permission to publish their testimonal
-            <systemitem>OD-11294</systemitem>
+          <para>Survey: public comment status refactoring to allow student to give permission to
+            publish their testimonial <systemitem>OD-11294</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -395,8 +318,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Remove /class robots.txt file to improve SEO
-            <systemitem>OD-11524</systemitem>
+          <para>Remove /class in robots.txt file to improve SEO <systemitem>OD-11524</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -420,8 +342,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>QR Code validation broken
-            <systemitem>OD-11308</systemitem>
+          <para>QR Code validation broken in some circumstances <systemitem>OD-11308</systemitem>
           </para>
         </listitem>
         <listitem>

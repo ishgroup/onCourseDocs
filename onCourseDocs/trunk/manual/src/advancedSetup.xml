@@ -716,7 +716,28 @@
 	</section>
 	<section>
 		<title>Audit Logging</title>
-		<para>Available from the preferences menu is the option 'Audit Logging'.</para>
-		<para>This list view window displays all entities edited or created by each onCourse user and the date and time of that action. </para>
+		<para>Available from the preferences menu is the option 'Audit Logging'. Audit logs are created
+			when a record is created, edited or deleted. When a script fails or an email key
+			collision occurs, an audit log record is also created.</para>
+		<para>The Audit Log list view window displays all entities edited or created by each onCourse user
+			and the date and time of that action. </para>
+		<para>The advanced search function in Audit logs allows you to search for a particular type
+			of log e.g. script failure or log from a particular user.</para>
+		<para>Double clicking on the audit log for a script failure or email key collision will
+			provide additional information in 'message' field in the edit view. Edit, create or
+			delete logs do not show any additional information in the edit view.</para>
+		<para>You can also access the audit logs for a particular record by using the 'find related'
+			feature from any list view. For example, you can select a class and find the related
+			audit logs for that one particular class, or from the user account record, all audit
+			logs for one particular user.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/audit_log_list_view.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>The list view of the audit logs</para>
+			</caption>
+		</mediaobject>
 	</section>
 </chapter>

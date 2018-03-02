@@ -1,5 +1,34 @@
+apply plugin: 'groovy'
+
 repositories {
     maven {
         url 'https://repo.ish.com.au/content/groups/public'
+    }
+}
+
+dependencies {
+    //Jira
+    compile 'com.atlassian.jira:jira-rest-java-client-api:4.0.0'
+
+    // FOP (pdf generation)
+    compile 'org.apache.xmlgraphics:fop:2.2'
+//    compile 'org.apache.xmlgraphics:xmlgraphics-commons:2.2'
+//    compile 'org.apache.xmlgraphics:batik-bridge:1.9.1'
+//    compile 'org.apache.xmlgraphics:batik-css:1.9.1'
+//    compile 'org.apache.xmlgraphics:batik-dom:1.9.1'
+//    compile 'org.apache.xmlgraphics:batik-transcoder:1.9.1'
+//    compile 'org.apache.xmlgraphics:batik-gvt:1.9.1'
+//    compile 'org.apache.xmlgraphics:batik-svggen:1.9.1'
+//    compile 'org.apache.xmlgraphics:batik-svg-dom:1.9.1'
+//    compile 'org.apache.avalon.framework:avalon-framework-impl:4.3.1'
+
+    // XSLT docbook
+    compile 'saxon:saxon:6.5.3'
+    compile 'xerces:xercesImpl:2.11.0'
+    compile 'apache-xerces:resolver:2.9.1'
+    compile 'net.sf.xslthl:xslthl:2.1.0'
+
+    compile('xml-apis:xml-apis:2.0.2') {
+        force = true
     }
 }

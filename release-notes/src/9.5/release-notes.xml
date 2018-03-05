@@ -1,38 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
-<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.5'>
+<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.5.1'>
   <info>
-    <title>Release 9.5</title>
-    <pubdate>28 Feb. 2018</pubdate>
+    <title>Release 9.5.1</title>
+    <pubdate>6 March 2018</pubdate>
   </info>
   <section role='major'>
     <title>Major features</title>
-    <section>
-      <title>Student feedback</title>
-      <para>Student feedback has gone from being a minor feature in the portal to a first class part
-        of onCourse. You can now set up student feedback as part of your Data Collection rules. In
-        this first release student feedback is fixed to just four ratings plus a short answer field,
-        but we'll be rolling out custom fields and links to third party tools like SurveyMonkey for
-        really complex forms.</para>
-      <para>Because we've linked this to Data Collection, your VET courses can have additional
-        surveys for employers several months later, while other courses might have a survey after
-        each session.</para>
-      <para>Just as importantly, feedback can be marked by you to be marketing worthy. This means
-        that with the addition of a small component to your site you can have testimonials
-        completely integrated into your workflow.</para>
-    </section>
+    <section><title>Student feedback</title><para>Student feedback has gone from being a minor
+        feature in the portal to a first class part of onCourse.</para><para>onCourse now includes the ability to view, edit and approve for publication student
+        testimonials captured through the onCourse portal student feedback process. These
+        testimonials will then become part of the marketing copy of your course pages.</para> 
+       <para>More more information on this feature, please
+         review the <link
+           xlink:href="https://www.ish.com.au/s/onCourse/doc/latest/manual/feedback.html">Feedback and Surveys</link> chapter in the user handbook. </para></section>
     <section>
       <title>New editor</title>
       <para>Our new editor has now replaced the old CMS. It is more powerful and much easier to use.
         Built on a modern React framework it allows us to more quickly add new functionality to your
-        site. Already you now have the ability to roll back to previous site versions as well as
-        suppress certain pages from your sitemap, and you can now edit the redirects in
-        WebDav.</para>
+        site. You now have the ability to roll back to previous site versions as well as suppress
+        certain pages from your sitemap, and you can now edit the 301 redirects in WebDav.</para>
     </section>
-    <section><title>Editor API</title>The new editor <link
+    <section><title>Editor API</title>
+      <para>The new editor <link
         xlink:href="https://www.ish.com.au/s/onCourse/doc/editor-api/v1/">now also has an
       API</link>. This is a very important step forward in the refresh of our technology stack. You
       can script actions to do anything that the editor UI itself can do, right through to
-      publishing your site.</section>
+      publishing your site.
+      </para>
+    </section>
   </section>
   <section role='scripts'>
     <title>Reports and scripts</title>
@@ -42,39 +37,26 @@
           star rating in calculation <systemitem>OD-10955</systemitem>
         </para>
       </listitem>
+      <listitem>
+        <para>Allow QR code to be applied to all custom certificate keycodes
+          <systemitem>OD-11126</systemitem>
+        </para>
+      </listitem>
+        <listitem>
+          <para>Class roll - Do not suppress second student with identical name from roll
+            <systemitem>OD-11007</systemitem>
+          </para>
+        </listitem>
     </itemizedlist>
     <section role='minor'>
       <title>Minor features</title>
       <itemizedlist>
         <listitem>
-          <para>Rename AVETMISS Flavours to make them clearer <systemitem>OD-10248</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Tutor payable time sheet UI improvement
-            <systemitem>OD-10494</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>CMS webdav: allow  to edit (add new lines) redirects.txt file
-            <systemitem>OD-10722</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Editor: Add a publish History log to allow users to revert to a previous version
-            <systemitem>OD-10852</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Add additional find related functions to the user list view - messages, invoices, payments in, payments out and audit log
             <systemitem>OD-11122</systemitem>
           </para>
         </listitem>
-        <listitem>
-          <para>Allow QR code to be applied to all custom certificate keycodes
-            <systemitem>OD-11126</systemitem>
-          </para>
-        </listitem>
+
         <listitem>
           <para>Add Find related - 'voucher redeemed' to invoice, enrolment and payment in list views
             <systemitem>OD-11166</systemitem>
@@ -106,18 +88,12 @@
           </para>
         </listitem>
         <listitem>
-          <para>Auto suppress 'add concession' from checkout when the college has no concession options available for self selection on the web
-            <systemitem>OD-11290</systemitem>
+          <para>Add Audit logs on script failure <systemitem>OD-9780</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Remove Server version from response headers
-            <systemitem>OD-11297</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Content > Menus: not optimal position of "Save" button
-              <systemitem>OD-11334</systemitem>
+          <para>Audit logs linked to entities via find related
+            <systemitem>OD-9991</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -126,17 +102,12 @@
           </para>
         </listitem>
         <listitem>
-          <para>Update onCourse UI to support Survey Field Configurations in data collection rules
-            <systemitem>OD-11519</systemitem>
+          <para>Rename AVETMISS Flavours to make them clearer <systemitem>OD-10248</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Add Audit logs on script failure <systemitem>OD-9780</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Audit logs linked to entities via find related
-            <systemitem>OD-9991</systemitem>
+          <para>Tutor payable time sheet UI improvement
+            <systemitem>OD-10494</systemitem>
           </para>
         </listitem>
       </itemizedlist>
@@ -160,13 +131,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Scroll to top of contact details page when there's an error
-            <systemitem>OD-10799</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Class roll - Do not suppress second student with identical name from roll
-            <systemitem>OD-11007</systemitem>
+          <para>Add scroll to top of contact details page when there's an error
+              <systemitem>OD-10799</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -176,91 +142,24 @@
         </listitem>
         <listitem>
           <para>Remove message tab from user record and add to find related function
-            <systemitem>OD-11121</systemitem>
+              <systemitem>OD-11121</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Enrolment outcome delivery mode cannot be changed from edit sheet
-            <systemitem>OD-11209</systemitem>
+          <para>Fix: Enrolment outcome delivery mode cannot be changed from edit sheet when unlocked
+              <systemitem>OD-11209</systemitem>
           </para>
         </listitem>
+
         <listitem>
-          <para>Still at School displaying incorrectly in new checkout
-            <systemitem>OD-11255</systemitem>
+          <para>Fix: Payroll sheet fails to render when class contains a per timetabled hour sunk
+            cost <systemitem>OD-11289</systemitem>
           </para>
         </listitem>
+       
         <listitem>
-          <para>Special Needs help text on /checkout not rendering
-            <systemitem>OD-11256</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Payroll sheet fails to render when class contains a per timetabled hour sunk cost
-            <systemitem>OD-11289</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Auto suppress credit card payment option from checkout when willow admin preferences have not enabled online payment with credit card
-            <systemitem>OD-11293</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Discounts not applying as expected in checkout
-            <systemitem>OD-11300</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Custom Field in Checkout - ensure 'other' options works as expected
-            <systemitem>OD-11309</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Fix wording of label in Gift voucher sale in checkout to encourage the user to insert their voucher price choice
-            <systemitem>OD-11321</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Field receives incorrect fieldOrder when added to existing Data Collection form
-            <systemitem>OD-11371</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Remove extra symbols within web prices 
-            <systemitem>OD-11377</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>CMS > Settings > Website: Missed scroll in days amount field
-              <systemitem>OD-11407</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>editor - 'Menus' list doesn't fill page when expanded
-            <systemitem>OD-11489</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>editor - redirect list doesn't scroll
-            <systemitem>OD-11490</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>$0 Courses showing with price 'TBA' on website
-            <systemitem>OD-11495</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>End User online enrolment - intermittent error message in checkout
-              <systemitem>OD-11501</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Waiting list checkout response inconsistent <systemitem>OD-11505</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Blank payment gateway response
-            <systemitem>OD-11546</systemitem>
+          <para>Field receives incorrect field order when added to existing Data Collection form
+              <systemitem>OD-11371</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -269,23 +168,13 @@
           </para>
         </listitem>
         <listitem>
-          <para>Update summary state after deleting items from cart
-            <systemitem>OD-11565</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Website- Enrol Button greyed out and not functioning
-            <systemitem>OD-11569</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Fix inability to edit fields in attendance dialog 
             <systemitem>OD-11614</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Advanced search Save Find breaks text fields in client
-            <systemitem>OD-11633</systemitem>
+          <para>Advanced search Save Find breaks text fields in client when accessed from new
+            dashboard <systemitem>OD-11633</systemitem>
           </para>
         </listitem>
       </itemizedlist>
@@ -299,7 +188,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Web: Testimonials Component <systemitem>OD-10903</systemitem>
+          <para>Web: Add testimonials Component to course page <systemitem>OD-10903</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -308,22 +197,26 @@
           </para>
         </listitem>
         <listitem>
-          <para>Survey: public comment status refactoring to allow student to give permission to
-            publish their testimonial <systemitem>OD-11294</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Show invisible pages in editor
-            <systemitem>OD-11301</systemitem>
+          <para>Show system 'invisible' pages in editor <systemitem>OD-11301</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>Remove /class in robots.txt file to improve SEO <systemitem>OD-11524</systemitem>
           </para>
         </listitem>
+          <listitem>
+            <para>Auto suppress 'add concession' from checkout when the college has no concession options available for self selection on the web
+              <systemitem>OD-11290</systemitem>
+            </para>
+          </listitem>
         <listitem>
-          <para>Adjust common search implementation (web/portal)
-            <systemitem>OD-11561</systemitem>
+          <para>Auto suppress credit card payment option from checkout when willow admin preferences have not enabled online payment with credit card
+            <systemitem>OD-11293</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Improve wording of label in Gift voucher sale in checkout to encourage the user to
+            insert their voucher price choice <systemitem>OD-11321</systemitem>
           </para>
         </listitem>
       </itemizedlist>
@@ -331,6 +224,80 @@
     <section role='web-fixes'>
       <title>Web fixes</title>
       <itemizedlist>
+        <listitem>
+          <para>Update summary shopping card state after deleting items from cart
+              <systemitem>OD-11565</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>$0 Courses showing with price 'TBA' on website
+            <systemitem>OD-11495</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Website- Enrol Button greyed out and not functioning
+            <systemitem>OD-11569</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+        <para>Remove extra symbols within web prices 
+          <systemitem>OD-11377</systemitem>
+        </para>
+        </listitem>
+        <listitem>
+          <para>Wrong money format on web
+            <systemitem>OD-11379</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>CMS > Settings > Website: Missed scroll in days amount field
+            <systemitem>OD-11407</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>editor - 'Menus' list doesn't fill page when expanded
+            <systemitem>OD-11489</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>editor - redirect list doesn't scroll
+            <systemitem>OD-11490</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>End User online enrolment - intermittent error message in checkout
+            <systemitem>OD-11501</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Waiting list checkout response inconsistent <systemitem>OD-11505</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Intermittent blank payment gateway response <systemitem>OD-11546</systemitem>
+          </para>
+        </listitem>
+
+        <listitem>
+          <para>Multi purchase discounts not applying as expected in checkout
+              <systemitem>OD-11300</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Custom Field in Checkout - ensure 'other' options works as expected
+            <systemitem>OD-11309</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Still at School displaying incorrectly in new checkout
+            <systemitem>OD-11255</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Special Needs help text on /checkout not rendering
+            <systemitem>OD-11256</systemitem>
+          </para>
+        </listitem>
         <listitem>
           <para>Class status "enrolment disabled" shouldn't hide session from kiosk display
             <systemitem>OD-10959</systemitem>
@@ -342,17 +309,12 @@
           </para>
         </listitem>
         <listitem>
-          <para>QR Code validation broken in some circumstances <systemitem>OD-11308</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Wrong money format on web
-            <systemitem>OD-11379</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Display room name instead of site name in Kiosk view
             <systemitem>OD-11400</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>QR Code validation broken in some circumstances <systemitem>OD-11308</systemitem>
           </para>
         </listitem>
         <listitem>

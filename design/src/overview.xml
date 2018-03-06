@@ -28,7 +28,7 @@
 			<para>Log into WebDAV using any standards compliant application. We recommend <link
 					xlink:href="http://cyberduck.io">Cyberduck</link> which is free for use on
 				Windows and Mac. Configure a connection in Cyberduck with the URL
-				https://www.acme.edu.au/cms/webdav/</para>
+				https://www.acme.edu.au/editor/webdav/</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%" format="jpg"
@@ -43,19 +43,20 @@
 	<section>
 		<title>Draft site</title>
 		<para>All onCourse websites have both draft site and a live website. The draft site will be
-			visible to you only when you are logged into the CMS. If your site is
-			http://www.acme.edu.au, then you can log into the CMS at https://www.acme.edu.au/cms/.
-			Any changes you make in the CMS or through WebDAV are only visible to you and any other
-			users logged into the CMS. You can make content changes and experiment in any way you
-			choose without disturbing your live website.</para>
+			visible to you only when you are logged into the Editor. If your site is
+			http://www.acme.edu.au, then you can log into the Editor at
+			https://www.acme.edu.au/#editor. Any changes you make in the Editor or through WebDAV
+			are only visible to you and any other users logged into the Editor. You can make content
+			changes and experiment in any way you choose without disturbing your live
+			website.</para>
 		<para>Once you have finished with your changes to the draft site and are ready to publish them to
-			the live site you can do this within the CMS. The "publish" button can be found in the
-			Website section of the Site Settings tab within the CMS. Any changes made within either
-			WebDAV or the CMS will be deployed to the live site when you press the publish button.
-			You'll need to wait a few minutes before the content is visible on your production site
-			due to caching in our cluster of servers. Some users may need to wait even longer if
-			they have a local proxy server, which keeps a copy of the old site until it expires from
-			its cache.</para>
+			the live site you can do this within the Editor. The "publish" button can be found on
+			the left hand side of the Editor panel. Any changes made within either WebDAV or the
+			Editor will be deployed to the live site when you press the publish button. You'll need
+			to wait a few minutes before the content is visible on your production site due to
+			caching in our cluster of servers. Some users may need to wait even longer if they have
+			a local proxy server, which keeps a copy of the old site until it expires from its
+			cache.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%" format="jpg" fileref="images/Publishing_your_site.png" />
@@ -69,8 +70,8 @@
 		<title>Special URLs</title>
 		<para>Some URLs in your site are reserved for special pages. These pages are delivered by the
 			onCourse software itself. To customise them, consult the templates chapter for details
-			of how these pages are created. You cannot edit the content of the pages within the CMS
-			because you will use the onCourse software to edit the courses, classes and other
+			of how these pages are created. You cannot edit the content of the pages within the
+			Editor because you will use the onCourse software to edit the courses, classes and other
 			information which drives them. These pages include:<variablelist>
 				<varlistentry>
 					<term>/courses</term>
@@ -118,9 +119,9 @@
 				<varlistentry>
 					<term>/page/1</term>
 					<listitem>
-						<para>Every page you make in the CMS will be given an automatic page number
-							reference. Even if you don't give it a nicer path, it will always be
-							accessible by this URL.</para>
+						<para>Every page you make in the Editor will be given an automatic page
+							number reference. Even if you don't give it a nicer path, it will always
+							be accessible by this URL.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -137,7 +138,7 @@
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>/cms/webdav</term>
+					<term>/editor/webdav</term>
 					<listitem>
 						<para>All pages under this path are reserved for webdav access.</para>
 					</listitem>
@@ -145,8 +146,8 @@
 			</variablelist></para>
 	</section>
 	<section>
-		<title>Building CMS pages</title>
-		<para>Pages which are not 'special' are delivered from the CMS. That is, you are able to create
+		<title>Building Editor pages</title>
+		<para>Pages which are not 'special' are delivered from the Editor. That is, you are able to create
 			pages and assign them to any URL you choose. Each page belongs to a website. You can
 			have more than one website for the same onCourse database. Each page can also be given a
 			theme which defines which blocks appear on the page. Themes are then linked to layouts
@@ -181,8 +182,9 @@
 		</section>
 		<section>
 			<title>The pages</title>
-			<para>The website is made up of pages entered through the CMS. For full details on how to write and build web pages, consult
-				the onCourse website and CMS handbook. Each page has content (text, pictures, etc) and will be linked to a theme.</para>
+			<para>The website is made up of pages entered through the Editor. For full details on how to
+				write and build web pages, consult the onCourse website and Editor handbook. Each
+				page has content (text, pictures, etc) and will be linked to a theme.</para>
 		</section>
 		<section>
 			<title>The theme</title>
@@ -211,8 +213,9 @@
 				a certain piece of html on the page. In this way you have full control over the
 				entire layout and design of the site, right down to every line of html sent to the
 				browser.</para>
-			<para>There is always a layout called 'default' which is used by the system for the special pages outlined above. You can
-				create as many layouts you like and link them to themes you create in the CMS.</para>
+			<para>There is always a layout called 'default' which is used by the system for the special pages
+				outlined above. You can create as many layouts you like and link them to themes you
+				create in the Editor.</para>
 		</section>
 	</section>
 	<section>

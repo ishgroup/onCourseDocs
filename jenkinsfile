@@ -29,7 +29,7 @@ pipeline {
 
         stage('Build manual') {
             steps {
-                sh "./gradlew manual:docbook"
+                sh "./gradlew manual:docbookHtml"
             }
         }
 

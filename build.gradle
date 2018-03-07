@@ -4,63 +4,79 @@ import java.time.format.DateTimeFormatter
 
 plugins {
     id 'com.github.ben-manes.versions' version '0.17.0' // adds the task 'dependencyUpdates'
-    id 'java-gradle-plugin'
     id 'distribution'
     id 'maven'
+    id 'maven-publish'
+}
+
+configurations {
+    docbookxslt
+}
+repositories.maven {
+    url 'https://repo.ish.com.au/content/groups/public'
+}
+dependencies {
+    docbookxslt 'net.sf.docbook:docbook-xsl:1.79.1:resources@zip'
+}
+task explodeXSL(type: Copy) {
+    from zipTree(configurations.docbookxslt.singleFile)
+    into "${buildDir}/xslt"
 }
 
 allprojects {
-    configurations {
-        docbookxslt
-    }
+    apply plugin: 'maven'
+    apply plugin: 'maven-publish'
 
-    repositories {
-        maven {
-            url 'https://repo.ish.com.au/content/groups/public'
+    group = 'ish.oncourse.docs'
+    version = project.hasProperty('releaseVersion') ? project.docVersion : 'SNAPSHOT'
+
+    publishing {
+        publications {
+            html(MavenPublication) {
+                artifact htmlDistZip
+            }
+//            pdf(MavenPublication) {
+//                artifact pdfDistZip
+//            }
         }
-    }
-
-    dependencies {
-        docbookxslt 'net.sf.docbook:docbook-xsl:1.79.1:resources@zip'
-    }
-
-    distTar.enabled = false
-
-    task explodeXSL(type: Copy) {
-        from zipTree(configurations.docbookxslt.singleFile)
-        into "${buildDir}/xslt"
+        repositories {
+            maven {
+                name "snapshots"
+                url "https://repo.ish.com.au/content/repositories/ish-snapshots"
+                credentials {
+                    username nexusUsername
+                    password nexusPassword
+                }
+            }
+            maven {
+                name "releases"
+                url "https://repo.ish.com.au/content/repositories/ish-releases"
+                credentials {
+                    username nexusUsername
+                    password nexusPassword
+                }
+            }
+        }
     }
 }
 
 subprojects {
     apply plugin: 'distribution'
-    apply plugin: 'maven'
-
-    version = project.hasProperty('docVersion') ? project.docVersion : 'unspecified'
 
     distributions {
-        docbookHtml {
+        html {
             contents {
-                from "${buildDir}/dist/html"
+                from "${buildDir}/html"
             }
         }
-        docbookPdf {
+        pdf {
             contents {
-                from "${buildDir}/dist/pdf/*.pdf"
+                from "${buildDir}/*.pdf"
             }
         }
     }
-
-    uploadArchives {
-        repositories.mavenDeployer {
-            repository(id:'ish-releases', url: 'https://repo.ish.com.au/content/repositories/ish-releases') {
-                authentication(userName: nexusUsername, password: nexusPassword)
-            }
-            snapshotRepository(id:'ish-snapshots', url: 'https://repo.ish.com.au/content/repositories/ish-snapshots') {
-                authentication(userName: nexusUsername, password: nexusPassword)
-            }
-        }
-    }
+    uploadArchives.dependsOn htmlDistZip
+    distTar.enabled = false
 
     task processCommonSrc(type: Copy, dependsOn: parent.tasks['explodeXSL']) {
         from "${rootDir}/src"
@@ -97,10 +113,7 @@ subprojects {
         sourceCss = file("${buildDir}/processed/css")
         sourceJs = file("${buildDir}/processed/js")
 	}
-    docbookHtmlDistZip {
-        dependsOn docbookHtml
-        into "${buildDir}/dist/html"
-    }
+    htmlDistZip.dependsOn(docbookHtml)
 
     task docbookPdfPrepare(type: Docbook, dependsOn: processSrc) {
         type = 'fo'
@@ -115,9 +128,9 @@ subprojects {
         sourceDirectory = file("${buildDir}/processed")
         foFile = file("${sourceDirectory}/index.fo")
         fopConfFile = file("${sourceDirectory}/fonts/fop-conf.xml")
-        outputFile = file("${buildDir}/dist/pdf/${project.name}.pdf")
+        outputFile = file("${buildDir}/${project.name}.pdf")
 	}
-    docbookPdfDistZip.dependsOn(docbookPdf)
+    pdfDistZip.dependsOn(docbookPdf)
 
     task docbook(dependsOn: [docbookHtml, docbookPdf]) {
 		group = 'Documentation'

@@ -9,16 +9,10 @@ configurations.apidocs {
             cacheChangingModulesFor 0, 'seconds'
     }
 }
-
+repositories.maven {
+    url 'https://repo.ish.com.au/content/groups/ish'
+}
 dependencies {
-    repositories {
-        maven {
-            url 'https://repo.ish.com.au/content/groups/public'
-        }
-        maven {
-            url 'https://repo.ish.com.au/content/groups/ish'
-        }
-    }
     apidocs 'ish.oncourse.angel:server:99-SNAPSHOT:apidocs'
 }
 

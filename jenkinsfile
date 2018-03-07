@@ -33,7 +33,16 @@ pipeline {
             }
         }
 
-        stage('Deploy release') {
+        stage('Upload snapshot') {
+            when {
+                expression { params.version == '' }
+            }
+            steps {
+                sh "./gradlew publishHtmlPublicationToSnapshotRepository"
+            }
+        }
+
+        stage('Upload release') {
             when {
                 expression { params.version != '' }
             }
@@ -41,25 +50,20 @@ pipeline {
                 script {
                     currentBuild.displayName = "Release ${params.version}"
                 }
-                sh "scp -r manual/build/pdf/*.pdf ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/manual/"
-                sh "scp -r apidocs/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/api/"
-                sh "scp -r release-notes/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/release-notes/"
-                sh "scp -r manual/build/html/* ${env.DEPLOY_SERVER}:${env.DEPLOY_PATH}/${params.version}/manual/"
-                sh "ssh ${env.DEPLOY_SERVER} 'cd ${env.DEPLOY_PATH}; rm -f latest; ln -s ${params.version} latest'"
-                sh "ssh ${env.DEPLOY_SERVER} '/usr/local/etc/periodic/rsynctosplash.sh'"
+                sh "./gradlew publishHtmlPublicationToReleaseRepository -PreleaseVersion=${params.version}"
             }
         }
     }
 
     post { 
-        failure { 
+        failure {
             mail(
                 to: "development@ish.com.au", 
                 subject: "${currentBuild.result}: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
                 body: "Check console output at ${env.BUILD_URL}",
             )
         }
-        unstable { 
+        unstable {
             mail(
                 to: "development@ish.com.au", 
                 subject: "${currentBuild.result}: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
@@ -67,7 +71,7 @@ pipeline {
             )
         }
         success {
-            archiveArtifacts artifacts: '**/build/html/**/*,**/build/pdf/*.pdf,apidocs/build/html/**/*'
+            archiveArtifacts artifacts: '**/build/html/**/*,**/build/pdf/*.pdf'
         }
     }
 

@@ -29,7 +29,7 @@ subprojects {
     apply plugin: 'maven-publish'
 
     group = 'ish.oncourse.docs'
-    version = project.hasProperty('releaseVersion') ? project.docVersion : 'SNAPSHOT'
+    version = project.hasProperty('releaseVersion') ? project.releaseVersion : 'SNAPSHOT'
 
     publishing {
         publications {

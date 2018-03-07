@@ -52,7 +52,7 @@
         </xsl:call-template>
       </xsl:attribute>
     </link>
-    <xsl:copy-of select="document('@rootDir@/js/analytics.js',/)"/>
+    <xsl:copy-of select="document('@buildDir@/processed/js/analytics.js',/)"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"/>
     <script type="text/javascript" src="js/documentation.js"/>
     <link rel="stylesheet" type="text/css">

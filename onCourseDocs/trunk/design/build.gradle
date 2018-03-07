@@ -1,0 +1,9 @@
+task processTapestryFiles(type: Copy) {
+    from(projectDir) {
+        include "components/*"
+        include "pages/*"
+    }
+    into "${buildDir}"
+}
+
+processSrc.dependsOn(processTapestryFiles)

@@ -5,15 +5,11 @@ import java.time.format.DateTimeFormatter
 plugins {
     id 'com.github.ben-manes.versions' version '0.17.0' // adds the task 'dependencyUpdates'
     id 'java-gradle-plugin'
-}
-
-task buildScriptDependencies(type: DependencyReportTask) {
-    configurations = project.buildscript.configurations
+    id 'distribution'
+    id 'maven'
 }
 
 allprojects {
-    version = project.hasProperty('docVersion') ? project.docVersion : 'unspecified'
-
     configurations {
         docbookxslt
     }
@@ -28,6 +24,8 @@ allprojects {
         docbookxslt 'net.sf.docbook:docbook-xsl:1.79.1:resources@zip'
     }
 
+    distTar.enabled = false
+
     task explodeXSL(type: Copy) {
         from zipTree(configurations.docbookxslt.singleFile)
         into "${buildDir}/xslt"
@@ -35,18 +33,47 @@ allprojects {
 }
 
 subprojects {
-    task processXSLT(type: Copy) {
-        from "${rootDir}/stylesheets"
-        into "${buildDir}/stylesheets"
+    apply plugin: 'distribution'
+    apply plugin: 'maven'
+
+    version = project.hasProperty('docVersion') ? project.docVersion : 'unspecified'
+
+    distributions {
+        docbookHtml {
+            contents {
+                from "${buildDir}/dist/html"
+            }
+        }
+        docbookPdf {
+            contents {
+                from "${buildDir}/dist/pdf/*.pdf"
+            }
+        }
+    }
+
+    uploadArchives {
+        repositories.mavenDeployer {
+            repository(id:'ish-releases', url: 'https://repo.ish.com.au/content/repositories/ish-releases') {
+                authentication(userName: nexusUsername, password: nexusPassword)
+            }
+            snapshotRepository(id:'ish-snapshots', url: 'https://repo.ish.com.au/content/repositories/ish-snapshots') {
+                authentication(userName: nexusUsername, password: nexusPassword)
+            }
+        }
+    }
+
+    task processCommonSrc(type: Copy, dependsOn: parent.tasks['explodeXSL']) {
+        from "${rootDir}/src"
+        into "${buildDir}/processed"
         filter(ReplaceTokens,tokens: [
             canonicalLink: canonicalLink,
             rootDir: rootDir.absolutePath
         ])
     }
 
-    task processSrc(type: Copy) {
+    task processSrc(type: Copy, dependsOn: processCommonSrc) {
         from "src"
-        into "${buildDir}"
+        into "${buildDir}/processed"
         filter(ReplaceTokens,tokens: [
                 projectName: project.name,
                 version: version,
@@ -55,51 +82,44 @@ subprojects {
         ])
     }
 
-    task docbookHtml(type: Docbook, dependsOn: [processXSLT, processSrc, parent.tasks['explodeXSL']]) {
+    task docbookHtml(type: Docbook, dependsOn: processSrc) {
 		description = 'Generates chunked docbook html output.'
-        outputFile = file("${buildDir}/html/index.html")
-        sourceDirectory = file("${projectDir}/src")
+        outputDirectory = file("${buildDir}/html")
+        sourceDirectory = file("${buildDir}/processed")
         if (project.path == ":apidocs") {
-            stylesheet = file("${buildDir}/stylesheets/api-html.xsl")
+            stylesheet = file("${buildDir}/processed/stylesheets/api-html.xsl")
         } else if (project.path == ":release-notes") {
-            stylesheet = file("${buildDir}/stylesheets/release-html.xsl")
+            stylesheet = file("${buildDir}/processed/stylesheets/release-html.xsl")
         } else {
-            stylesheet = file("${buildDir}/stylesheets/standard-html.xsl")
+            stylesheet = file("${buildDir}/processed/stylesheets/standard-html.xsl")
         }
-		
-        sourceDirectory = file( "${buildDir}" )
-
-        doLast {
-            copy {
-                into "${buildDir}/html/images"
-                from "src/images"
-            }
-            copy {
-                into "${buildDir}/html/css"
-                from "${rootDir}/css"
-            }
-            copy {
-                into "${buildDir}/html/js"
-                from "${rootDir}/js"
-            }
-        }
+        sourceImages = file("${projectDir}/src/images")
+        sourceCss = file("${buildDir}/processed/css")
+        sourceJs = file("${buildDir}/processed/js")
 	}
+    docbookHtmlDistZip {
+        dependsOn docbookHtml
+        into "${buildDir}/dist/html"
+    }
 
-    task docbookPdfPrepare(type: Docbook, dependsOn: [processXSLT, processSrc, parent.tasks['explodeXSL']]) {
-        description = 'Generates PDF fo output.'
-        outputFile = file("${buildDir}/pdf/index.fo")
-        stylesheet = file("${buildDir}/stylesheets/pdf.xsl")
-        sourceDirectory = file("${projectDir}/src")
+    task docbookPdfPrepare(type: Docbook, dependsOn: processSrc) {
+        type = 'fo'
+        description = 'Generates PDF fo output ready to be converted to pdf.'
+        outputDirectory = file("${buildDir}/processed")
+        stylesheet = file("${buildDir}/processed/stylesheets/pdf.xsl")
+        sourceDirectory = file("${buildDir}/processed")
     }
 
 	task docbookPdf(type: DocbookPdf, dependsOn: 'docbookPdfPrepare') {
 		description = 'Generates PDF final output.'
-        foFile = file("${buildDir}/pdf/index.fo")
-        sourceDirectory = file("${projectDir}/src")
-        outputFile = file("${buildDir}/pdf/${project.name}.pdf")
+        sourceDirectory = file("${buildDir}/processed")
+        foFile = file("${sourceDirectory}/index.fo")
+        fopConfFile = file("${sourceDirectory}/fonts/fop-conf.xml")
+        outputFile = file("${buildDir}/dist/pdf/${project.name}.pdf")
 	}
+    docbookPdfDistZip.dependsOn(docbookPdf)
 
-	task docbook(dependsOn: [docbookHtml, docbookPdf]) {
+    task docbook(dependsOn: [docbookHtml, docbookPdf]) {
 		group = 'Documentation'
 		description = 'Generates all HTML and PDF documentation.'
 	}

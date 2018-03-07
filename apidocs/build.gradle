@@ -12,7 +12,6 @@ configurations.apidocs {
 
 dependencies {
     repositories {
-        mavenLocal()
         maven {
             url 'https://repo.ish.com.au/content/groups/public'
         }
@@ -25,7 +24,7 @@ dependencies {
 
 task extractAPIdocbook(type: Copy) {
     from zipTree(configurations.apidocs.singleFile)
-    into "${buildDir}"
+    into "${buildDir}/processed"
     filter(ReplaceTokens,tokens: [
             projectName: project.name,
             version: version,

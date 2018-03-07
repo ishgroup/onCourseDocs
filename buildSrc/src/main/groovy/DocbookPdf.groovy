@@ -1,4 +1,3 @@
-import com.icl.saxon.TransformerFactoryImpl
 import org.apache.fop.apps.FopFactory
 import org.apache.fop.apps.MimeConstants
 import org.gradle.api.DefaultTask
@@ -17,8 +16,14 @@ import org.apache.fop.apps.FopConfParser
 import org.apache.fop.apps.Fop
 
 class DocbookPdf extends DefaultTask {
+    DocbookPdf() {
+        group = "documentation"
+    }
     @InputFile
     File foFile
+
+    @InputFile
+    File fopConfFile
 
     @InputDirectory
     File sourceDirectory
@@ -28,12 +33,7 @@ class DocbookPdf extends DefaultTask {
 
     @TaskAction
     def run() {
-
-        FopFactory fopFactory = new FopConfParser(
-                new File("${project.rootDir}/fonts/fop-conf.xml"),
-                sourceDirectory.toURI()
-        ).getFopFactoryBuilder().build()
-
+        FopFactory fopFactory = new FopConfParser(fopConfFile,sourceDirectory.toURI()).getFopFactoryBuilder().build()
         OutputStream out = new BufferedOutputStream(new FileOutputStream(outputFile))
 
         try {
@@ -41,7 +41,7 @@ class DocbookPdf extends DefaultTask {
 
             TransformerFactory factory = TransformerFactory.newInstance()
             Transformer transformer = factory.newTransformer()
-            transformer.setParameter('highlight.xslthl.config', "file://${project.rootDir}/stylesheets/xslthl-config.xml" )
+            transformer.setParameter('highlight.xslthl.config', "file://${sourceDirectory}/stylesheets/xslthl-config.xml" )
 
             Source src = new StreamSource(foFile)
             Result res = new SAXResult(fop.getDefaultHandler())

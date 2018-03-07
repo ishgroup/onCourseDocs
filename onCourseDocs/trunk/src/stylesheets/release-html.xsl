@@ -64,7 +64,7 @@
 				</xsl:call-template>
 			</xsl:attribute>
 		</meta>
-		<xsl:copy-of select="document('@rootDir@/js/analytics.js',/)"/>
+		<xsl:copy-of select="document('@buildDir@/processed/js/analytics.js',/)"/>
 	</xsl:template>
 
 

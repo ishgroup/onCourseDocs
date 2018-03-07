@@ -23,7 +23,8 @@ task explodeXSL(type: Copy) {
     into "${buildDir}/xslt"
 }
 
-allprojects {
+subprojects {
+    apply plugin: 'distribution'
     apply plugin: 'maven'
     apply plugin: 'maven-publish'
 
@@ -58,10 +59,6 @@ allprojects {
             }
         }
     }
-}
-
-subprojects {
-    apply plugin: 'distribution'
 
     distributions {
         html {
@@ -83,7 +80,8 @@ subprojects {
         into "${buildDir}/processed"
         filter(ReplaceTokens,tokens: [
             canonicalLink: canonicalLink,
-            rootDir: rootDir.absolutePath
+            rootDir: rootDir.absolutePath,
+            buildDir: buildDir.absolutePath
         ])
     }
 

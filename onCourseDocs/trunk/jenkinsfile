@@ -17,19 +17,19 @@ pipeline {
     stages {
         stage('Build API docs') {
             steps {
-                sh "./gradlew apidocs:docbookHtml"
+                sh "./gradlew apidocs:docbookHtml -PreleaseVersion=${params.version}"
             }
         }
 
         stage('Build release notes') {
             steps {
-                sh "./gradlew release-notes:docbookHtml"
+                sh "./gradlew release-notes:docbookHtml -PreleaseVersion=${params.version}"
             }
         }
 
         stage('Build manual') {
             steps {
-                sh "./gradlew manual:docbookHtml"
+                sh "./gradlew manual:docbookHtml -PreleaseVersion=${params.version}"
             }
         }
 

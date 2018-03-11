@@ -3,8 +3,8 @@ import org.apache.tools.ant.filters.ReplaceTokens
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-configurations.create('apidocs')
-configurations.apidocs {
+configurations.create('dsl')
+configurations.dsl {
         resolutionStrategy {
             cacheChangingModulesFor 0, 'seconds'
     }
@@ -13,11 +13,11 @@ repositories.maven {
     url 'https://repo.ish.com.au/content/groups/ish'
 }
 dependencies {
-    apidocs 'ish.oncourse.angel:server:99-SNAPSHOT:apidocs'
+    dsl 'ish.oncourse.angel:server:99-SNAPSHOT:apidocs'
 }
 
 task extractAPIdocbook(type: Copy) {
-    from zipTree(configurations.apidocs.singleFile)
+    from zipTree(configurations.dsl.singleFile)
     into "${buildDir}/processed"
     filter(ReplaceTokens,tokens: [
             projectName: project.name,

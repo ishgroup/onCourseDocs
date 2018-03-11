@@ -17,7 +17,7 @@ pipeline {
     stages {
         stage('Build API docs') {
             steps {
-                sh "./gradlew apidocs:docbookHtml -PreleaseVersion=${params.version}"
+                sh "./gradlew dsl:docbookHtml -PreleaseVersion=${params.version}"
             }
         }
 
@@ -51,7 +51,7 @@ pipeline {
                     currentBuild.displayName = "Release ${params.version}"
                 }
                 sh "./gradlew publishHtmlPublicationToReleaseRepository -PreleaseVersion=${params.version}"
-                sudo /usr/local/bin/salt-run state.orch orchestration.apidocs
+                sudo /usr/local/bin/salt-run state.orch orchestration.docs
             }
         }
     }

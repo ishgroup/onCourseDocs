@@ -100,7 +100,7 @@ subprojects {
 		description = 'Generates chunked docbook html output.'
         outputDirectory = file("${buildDir}/html")
         sourceDirectory = file("${buildDir}/processed")
-        if (project.path == ":apidocs") {
+        if (project.path == ":dsl") {
             stylesheet = file("${buildDir}/processed/stylesheets/api-html.xsl")
         } else if (project.path == ":release-notes") {
             stylesheet = file("${buildDir}/processed/stylesheets/release-html.xsl")

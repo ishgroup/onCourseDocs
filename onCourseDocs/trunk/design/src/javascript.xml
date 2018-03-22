@@ -85,36 +85,96 @@
 		<para>You may wish to remove or add more libraries for your particular design</para>
 	</section>
 
-	<section> <title> Updating Checkout redirects in config.js </title>
+	<section> <title> config.js </title>
 		<para>config.js controls the behaviour of the browser application parts of onCourse. In
 			particular, the checkout application that drives the shopping basket, enrol buttons,
 			places available, discounts and the whole checkout and ecommerce engine. config.js can
 			be accessed via WebDAV, and can be found at the path
-				<emphasis>~/s/js/config.js</emphasis>
+				<code>~/s/js/config.js</code>
 		</para>
-		<para>Two important variables can be configured in the config.js file:</para>
-		<itemizedlist>
-			<listitem>
-				<para><emphasis>termsAndConditions</emphasis> - allows you to set the path to the page where a
-					student is directed after the enrolment process. Maybe you want to take them to
-					the homepage or a page with enrolment terms and conditions - you can set this
-					here.</para>
-			</listitem>
-			<listitem>
-				<para><emphasis>paymentSuccessURL</emphasis> -  allows you to set a custom page to outline any policies, procedures or terms and conditions a student must agree to. They will have to tick a checkbox stating that they agree on the final checkout page.</para>
-			</listitem>
-		</itemizedlist>
+		<para>Important variables can be configured in the config.js file:<variablelist>
+			<varlistentry>
+				<term>checkoutPath</term>
+				<listitem>
+					<para>The path on which your checkout page lives. You can point this to any page on your
+						site, as long as you create that page in the editor and add the
+						correct markup for the checkout engine to be displayed.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>paymentSuccessURL</term>
+				<listitem>
+					<para>The path to the page where a student is directed after the enrolment process. Perhaps you
+							want to take them to the homepage, a survey, additional products or a
+							page with enrolment terms and conditions. You can set this here. If you
+							don't provide this, they remain on the thank you page at the end of the
+							checkout process.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>termsAndConditions</term>
+				<listitem>
+					<para>A URL to outline any policies, procedures or terms and conditions a student must agree
+							to. On the payment page a checkbox is displayed with the words "I
+							understand the enrolment, sale and refund policy." If you provide a URL
+							in this variable, those words will be hyperlinked to that URL.
+						<inlinemediaobject>
+							<imageobject>
+								<imagedata fileref="images/TandC_one.png" scalefit="1"
+									width="100%" contentdepth="100%" format="png"/>
+							</imageobject>
+						</inlinemediaobject>
+						    If you
+							don't provide a value they will still have to check the option but there
+							will be no link.
+						<inlinemediaobject>
+							<imageobject>
+								<imagedata fileref="images/TandC_none.png" scalefit="1"
+									width="100%" contentdepth="100%" format="png"/>
+							</imageobject>
+						</inlinemediaobject>
+					</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>featureEnrolmentDisclosure</term>
+				<listitem>
+					<para>If you provide a URL here, a second sentence is added below the terms and conditions
+							checkbox with the words "I have read the Student Information or have had
+							it explained to me, and I agree to accept these conditions." The words
+							"Student Information" is linked to whatever destination you enter
+							here.
+						<inlinemediaobject>
+							<imageobject>
+								<imagedata fileref="images/TandC_both.png" scalefit="1"
+									width="100%" contentdepth="100%" format="png"/>
+							</imageobject>
+						</inlinemediaobject>
+					</para>
+				</listitem>
+			</varlistentry>
+				<varlistentry>
+					<term>guardianRequiredAge</term>
+					<listitem>
+						<para>Students under this age will be allowed to enrol, however the checkout
+							process will prompt the user to enter both the student and a
+							parent/guardian over this age. In order for this to work, you should
+							ensure you have set up your data collection rules to collect the date of
+							birth as a mandatory field.</para>
+					</listitem>
+				</varlistentry>
+		</variablelist></para>
 		<para>These two variables accept strings in the form of the path to the web page you want to direct the student to. Example:</para>
-		<programlisting language="javascript"> 
-checkout_config = {
-....
-  termsAndConditions: "/page/8",
-  paymentSuccessURL: "/addinfo",
-....
-}
-		</programlisting>
+		<programlisting language="javascript">var checkout_config = {
+
+  "checkoutPath": "/checkout",
+
+  "paymentSuccessURL": "/products",
+  "termsAndConditions": "/termsAndConditions",
+  "featureEnrolmentDisclosure": "/policies/enrolment",
+  "guardianRequiredAge": 16
+}		</programlisting>
 		
 	</section>
 </chapter>
-
-

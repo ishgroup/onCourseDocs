@@ -165,7 +165,8 @@
 					</listitem>
 				</varlistentry>
 		</variablelist></para>
-		<para>These two variables accept strings in the form of the path to the web page you want to direct the student to. Example:</para>
+		<para>These variables accept strings in the form of the path to the web page you want to direct
+			the student to. Example:</para>
 		<programlisting language="javascript">var checkout_config = {
 
   "checkoutPath": "/checkout",
@@ -175,6 +176,29 @@
   "featureEnrolmentDisclosure": "/policies/enrolment",
   "guardianRequiredAge": 16
 }		</programlisting>
+		
+	<variablelist>
+		<varlistentry>
+			<term>canCreateContact</term>
+			<listitem>
+				<para>If a student tries to enrol in a course, or sign up to a mailing or waiting list, the
+						checkout web application can create a new contact record for this student .
+						You can specify whether or not a new contact record  can be created if a
+						student does not have a contact in your onCourse database. You can set
+						different rules for enrolments, waiting lists and mailiing lists. </para>
+				<para> If one of the <emphasis role="bold">canCreateContact</emphasis> parametres are set to
+						FALSE, only an existing contact can be used for a transaction of this type,
+						no new contact will be created. </para>
+				<programlisting language="javascript">
+canCreateContact: {
+    enrol: true,
+    waitingList: true,
+    mailingList: true
+ },									
+				</programlisting>
+			</listitem>
+		</varlistentry>
+	</variablelist>
 		
 	</section>
 </chapter>

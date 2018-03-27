@@ -131,13 +131,17 @@
 						more frequent lodgements than to wait for once a month. </para>
 				</listitem>
 				<listitem>
-					<para>At the point in time the Smart &amp; Skilled export is run, any outcomes
-						selected with a start date in the future will export with two blank spaces
-						in the place of the outcome identifier - national, regardless of what has
-						been set in the database or in the export runner preferences. i.e. you can
-						choose the option 'export 70 - continuing enrolment for VET outcomes which
-						are not set' and the Smart &amp; Skilled override for the two blank spaces
-						will still apply where appropriate.</para>
+					<para>At the point in time the Smart &amp; Skilled export is run, any outcomes selected with a
+						start date in the future will export '85' as the outcome identifier -
+						national, regardless of what has been set in the database or in the export
+						runner preferences. i.e. you can choose the option 'export 70 - continuing
+						enrolment for VET outcomes which are not set' and the override  will still
+						apply the 85 code where appropriate.</para>
+				</listitem>
+				<listitem>
+					<para>The if you set theoutcome Did Not Start (NSW:66, SA:@@) but do not change
+						the end date of outcome to a passed date, the outcome will report as '70 -
+						continuing enrolment' until the end date has passed. </para>
 				</listitem>
 			</itemizedlist></para>
 		<para>For more information please refer to the "Smart and Skilled eReporting Technical
@@ -150,8 +154,9 @@
 			Training not completed (TNC) or Training Deferred (D) value for the enrolment. </para>
 		<para>For the Deferred enrolment, you will need to change the outcome start and end dates to
 			the expected future dates. </para>
-		<para>For Training not completed, you will need to go to the outcomes change them all to
-			'Did not Start - 66 '. </para>
+		<para>For Training not completed, you will need to go to the outcomes change them all to 'Did not
+			Start - 66 '.  You will need to make the end date the current or earlier date, or the
+			outcome will not report correctly.</para>
 		<para>NOTE: STSOnline (NSW) flavour exports will convert outcomes set as Did not Start - 66
 			as two blank spaces as Did not Start - 66 is not a valid outcome code for Smart &amp;
 			Skilled reporting. </para>

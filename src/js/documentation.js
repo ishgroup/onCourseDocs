@@ -4,6 +4,7 @@ var availableVersions = ['8.0', '9.0', '9.2', '9.3', 'latest'];
 $(document).ready(function() {
 	$('.chapter > .toc').prepend("<gcse:search></gcse:search>");
 
+  $('head').append('<style type="text/css">.gsc-adBlock, .gsc-resultsHeader, .gcsc-branding {display: none !important;}</style>');
 
   $('.toc > dl.toc > dd > dl > dt').click(function(e) {
     if (e.offsetX < 15) {  /* only detect clicks on the triangle icon */
@@ -16,7 +17,7 @@ $(document).ready(function() {
 
   try {
     version = window.location.href.match(/doc\/(.*?)\//)[1];
-    
+
     if ( $.isNumeric(version) ) {
       availableVersions.push(version);
       // and dedupe
@@ -28,7 +29,7 @@ $(document).ready(function() {
     var versionsHtml = "";
     availableVersions.sort().forEach(function(v) {
       versionsHtml = versionsHtml + "<a href='" + window.location.href.replace(/\/doc\/.*?\//,"/doc/" + v + "/") + "' class='btn";
-      if (v == version) { 
+      if (v == version) {
         versionsHtml = versionsHtml + " active";
       }
       versionsHtml = versionsHtml + "'>" + v + "</a>";
@@ -46,7 +47,7 @@ $(document).ready(function() {
 	window.setTimeout(function() {
   		$('input.gsc-input').attr('placeholder', 'search...');
 	} , 1000);
-	
+
 });
 
 // Custom search

@@ -465,13 +465,12 @@
 			record change.</para>
 		<section>
 			<title>Time based events</title>
-			<para>onCourse scripts can be triggered by a cron expression for firing at a repeating interval.
-				cron is a Unix tool that has existed since the 1970s and is extremely powerful and
-				flexible. </para>
+			<para>onCourse scripts can be triggered by a cron expression for firing at a repeating
+				interval. cron is a Unix tool that has existed since the 1970s and is extremely
+				powerful and flexible. </para>
 			<para>Some pre-defined cron expressions are available to select from the drop down list
 				in the script (daily, weekly or hourly), or you can create your own custom
 				cron.</para>
-
 			<para>You need only write six fields separated by spaces to describe the recurring
 				timing. For example, you can specify "every Monday at 9am" or "1am on the first
 				Sunday of every month".</para>
@@ -535,14 +534,15 @@
 				<varlistentry>
 					<term>L ("last")</term>
 					<listitem>
-						<para>has different meaning in each of the two fields in which it is allowed. For example, the
-							value "L" in the day-of-month field means "the last day of the month" -
-							day 31 for January, day 28 for February on non-leap years. If used in
-							the day-of-week field by itself, it simply means "7" or "SAT". But if
-							used in the day-of-week field after another value, it means "the last
-							xxx day of the month" - for example "6L" means "the last Friday of the
-							month". When using the 'L' option, it is important not to specify lists,
-							or ranges of values, as you'll get confusing results.</para>
+						<para>has different meaning in each of the two fields in which it is
+							allowed. For example, the value "L" in the day-of-month field means "the
+							last day of the month" - day 31 for January, day 28 for February on
+							non-leap years. If used in the day-of-week field by itself, it simply
+							means "7" or "SAT". But if used in the day-of-week field after another
+							value, it means "the last xxx day of the month" - for example "6L" means
+							"the last Friday of the month". When using the 'L' option, it is
+							important not to specify lists, or ranges of values, as you'll get
+							confusing results.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -650,8 +650,8 @@
 						</tr>
 						<tr>
 							<td>0 15 10 ? * 6L 2002-2005 </td>
-							<td>Fire at 10:15am on every last Friday of every month during the years 2002, 2003, 2004 and
-								2005</td>
+							<td>Fire at 10:15am on every last Friday of every month during the years
+								2002, 2003, 2004 and 2005</td>
 						</tr>
 						<tr>
 							<td>0 15 10 ? * 6#3 </td>
@@ -671,14 +671,30 @@
 			</para>
 		</section>
 		<section>
-			<title>Record change events</title>
-			<para>Rather than a specific time, the trigger for a script can instead be a record change. You
-				are able to specify the entity name and the type of change: create, update, create
-				or update, or remove. Note that entity names are mostly the same as database table
-				names, but there is a difference. Some entities don't map directly to the
-				database.</para>
+			<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
+			<title>Entity events</title>
+			<para>Rather than a specific time, the trigger for a script can instead be a record
+				change, otherwise known as an entity event. You are able to specify the entity name
+				and the type of change to trigger the script: create, update, create or update, or
+				remove. Note that entity names are mostly the same as database table names, but
+				there is a difference. Some entities don't map directly to the database.</para>
 			<para>For more details of what entities are available, please consult our detailed API
 				documentation.</para>
+		</section>
+		<section>
+			<title>onCourse events</title>
+			<para>There are also specific events in onCourse that can be used to trigger scripts,
+				called onCourse events. These events relate entirely to cancellation and/or creation
+				of enrolments as well as the publishing and/or cancelling of classes. The events
+				types are specified as: enrolment successful, enrolment cancelled, class published
+				and class cancelled.</para>
+		</section>
+		<section>
+			<title>On Demand events</title>
+			<para>When a script is set as On Demand it means the script can only be triggered
+				manually by the user via the cogwheel menu in onCourse. The entity class defines
+				from which screen in onCourse the script can be triggered, and must be defined under
+				the 'Entity Event' trigger type for this to function.</para><?oxy_custom_end?>
 		</section>
 	</section>
 	<section xml:id="scripts-Content">

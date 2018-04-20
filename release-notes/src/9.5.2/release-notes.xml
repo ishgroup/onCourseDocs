@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.5.2'>
+  <info>
+    <title>Release 9.5.2</title>
+    <pubdate>23 Apr 2018</pubdate>
+  </info>
+  <section role='major'>
+    <title>Major features</title>
+    <para>Create the ability to save dynamic dates in the advanced search <systemitem>OD-8821</systemitem>. You can now save a search for a date of (say) +7 which will always be 7 days from the date the search is run.
+    </para>
+  </section>
+  <section role='scripts'>
+    <title>Reports and scripts</title>
+    <itemizedlist />
+    <section role='minor'>
+      <title>Minor features</title>
+      <itemizedlist>
+        <listitem>
+          <para>Set automatic logout to 60 minutes in new databases
+            <systemitem>OD-10087</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove approved property from TutorAttendance entity
+            <systemitem>OD-10113</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Access control for generate tutor pay
+            <systemitem>OD-10515</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add Funding Contract to Enrolment advanced search
+            <systemitem>OD-11199</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Load all fonts and not just TrueType
+            <systemitem>OD-11246</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>onCourse CSV Import file improvements
+            <systemitem>OD-11258</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS 8 Add new outcome option - Incomplete due to RTO closure (41)
+            <systemitem>OD-11303</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS 8 Outcome identifier – national - 85 – Not yet started
+            <systemitem>OD-11338</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS 8 USI - allow code INDIV
+            <systemitem>OD-11339</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS cogwheel export runner - no override option
+            <systemitem>OD-11611</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Refactor implementation of creating SavedFind
+            <systemitem>OD-11631</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove label Beta from AVETMISS 8 exports
+            <systemitem>OD-11638</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add 'about' to new Dashboard's help tab for windows
+            <systemitem>OD-11701</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Survey.comment should be LONGTEXT
+            <systemitem>OD-11721</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Survey Export
+            <systemitem>OD-11734</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Money.multiply(double) doesn't work
+            <systemitem>OD-11772</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove special handling of QLD superceded outcome status
+            <systemitem>OD-11778</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Update contact CSV to include the standard WWCC fields
+            <systemitem>OD-11793</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add checkbox to AVETMISS runner - include related outcomes
+            <systemitem>OD-11803</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Certificate printing for single name students
+            <systemitem>OD-9468</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove BinaryInfo Table/entity on angel
+            <systemitem>OD-9554</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='fixes'>
+      <title>Fixes</title>
+      <itemizedlist>
+        <listitem>
+          <para>Inconsistency in course name length validation
+            <systemitem>OD-10616</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Payment Out total owing should not be recalculated 
+            <systemitem>OD-11064</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>contact fullName field doesn't print one name when firstName and lastName are the same
+            <systemitem>OD-11102</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>en_AU locale broken in Java 9
+            <systemitem>OD-11115</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Find related works differently on voucher from 'Vouchers' or 'Sales'
+            <systemitem>OD-11164</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Incorrect AccountTransactions for Voucher type paymentInLines 
+            <systemitem>OD-11322</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Include Funding Contract in class duplication - does not behave like other class vet tab fields
+            <systemitem>OD-11449</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contacts should be able to have &gt;1 relationships with the same contact if they are of different relationship types
+            <systemitem>OD-11469</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Unable to perform search from Cog Option in Class list advanced find
+            <systemitem>OD-11545</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Change of rules to USI exemption SHORT
+            <systemitem>OD-11594</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Sometimes cannot switch between onCourse application windows
+            <systemitem>OD-11612</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>onCourse still freezing with functions to do with Contacts files
+            <systemitem>OD-11651</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Splash screen no longer appears on onCourse startup
+            <systemitem>OD-11657</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Webstart doesn't load FX stylesheets with spaces in path
+            <systemitem>OD-11661</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Type missing from advanced search in Payment in and payment out
+            <systemitem>OD-11668</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Application fee override defaults to $0.00 on new applications 
+            <systemitem>OD-11675</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Script event 'Class Published' puts wrong object into args.value
+            <systemitem>OD-11676</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>onCourse contact search UI freeze
+            <systemitem>OD-11686</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>'Credits' text on splashScreen is not placed in splashScreen's size.
+            <systemitem>OD-11698</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Splash screen doesn't disappear if double opened
+            <systemitem>OD-11699</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS exported - commenced enrolments exports wrong data
+            <systemitem>OD-11750</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS: 'Did not Start' should always export as two blank spaces for Smart &amp; Skilled exports
+            <systemitem>OD-11751</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Illegal control characters break replication
+            <systemitem>OD-11767</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Tutor Role search doesn't work
+            <systemitem>OD-9986</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='web'>
+      <title>Web features</title>
+      <para>
+        Massive improvements in performance have been the result of the last year of improvements to the web platform now being rolled out. In many cases the page rendering speed is 2-3 times faster.
+      </para>
+    </section>
+  </section>
+</chapter>

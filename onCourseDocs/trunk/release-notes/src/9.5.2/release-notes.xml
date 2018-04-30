@@ -11,7 +11,27 @@
   </section>
   <section role='scripts'>
     <title>Reports and scripts</title>
-    <itemizedlist />
+    <itemizedlist>
+      <listitem>
+        <para>Add Survey Export <systemitem>OD-11734</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>onCourse CSV Import file improvements to show better validation errors
+          <systemitem>OD-11258</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Update contact CSV to include the standard WWCC fields
+          <systemitem>OD-11793</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Improve Certificate printing for single name students to only print their name once
+            <systemitem>OD-9468</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
     <section role='minor'>
       <title>Minor features</title>
       <itemizedlist>
@@ -26,7 +46,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Access control for generate tutor pay
+          <para>Improved access control for generate tutor pay
             <systemitem>OD-10515</systemitem>
           </para>
         </listitem>
@@ -38,11 +58,6 @@
         <listitem>
           <para>Load all fonts and not just TrueType
             <systemitem>OD-11246</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>onCourse CSV Import file improvements
-            <systemitem>OD-11258</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -61,13 +76,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>AVETMISS cogwheel export runner - no override option
-            <systemitem>OD-11611</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Refactor implementation of creating SavedFind
-            <systemitem>OD-11631</systemitem>
+          <para>AVETMISS cogwheel export runner - don't show override option that doesn't apply when
+            running from enrolments or classes <systemitem>OD-11611</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -76,48 +86,27 @@
           </para>
         </listitem>
         <listitem>
-          <para>Add 'about' to new Dashboard's help tab for windows
-            <systemitem>OD-11701</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Survey.comment should be LONGTEXT
-            <systemitem>OD-11721</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Survey Export
-            <systemitem>OD-11734</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Money.multiply(double) doesn't work
-            <systemitem>OD-11772</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Remove special handling of QLD superceded outcome status
             <systemitem>OD-11778</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Update contact CSV to include the standard WWCC fields
-            <systemitem>OD-11793</systemitem>
+          <para>Add checkbox to AVETMISS runner - include outcomes linked by enrolment
+              <systemitem>OD-11803</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Add checkbox to AVETMISS runner - include related outcomes
-            <systemitem>OD-11803</systemitem>
+          <para>Refactor implementation of creating SavedFind
+            <systemitem>OD-11631</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Certificate printing for single name students
-            <systemitem>OD-9468</systemitem>
+          <para>Add 'about' to new Dashboard's help tab for windows
+            <systemitem>OD-11701</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Remove BinaryInfo Table/entity on angel
-            <systemitem>OD-9554</systemitem>
+          <para>Increase Survey.comment to LONGTEXT <systemitem>OD-11721</systemitem>
           </para>
         </listitem>
       </itemizedlist>
@@ -181,15 +170,15 @@
           </para>
         </listitem>
         <listitem>
-          <para>onCourse still freezing with functions to do with Contacts files
-            <systemitem>OD-11651</systemitem>
+          <para>onCourse freezing when closing Contacts files and running new search
+              <systemitem>OD-11651</systemitem>
           </para>
         </listitem>
-        <listitem>
-          <para>Splash screen no longer appears on onCourse startup
-            <systemitem>OD-11657</systemitem>
-          </para>
-        </listitem>
+          <listitem>
+            <para>onCourse contact search UI freeze
+              <systemitem>OD-11686</systemitem>
+            </para>
+          </listitem>
         <listitem>
           <para>Webstart doesn't load FX stylesheets with spaces in path
             <systemitem>OD-11661</systemitem>
@@ -211,12 +200,12 @@
           </para>
         </listitem>
         <listitem>
-          <para>onCourse contact search UI freeze
-            <systemitem>OD-11686</systemitem>
+          <para>Splash screen no longer appears on onCourse startup
+            <systemitem>OD-11657</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>'Credits' text on splashScreen is not placed in splashScreen's size.
+        <para>'Credits' text on splashScreen is not placed in splashScreen's size.
             <systemitem>OD-11698</systemitem>
           </para>
         </listitem>
@@ -249,9 +238,9 @@
     </section>
     <section role='web'>
       <title>Web features</title>
-      <para>
-        Massive improvements in performance have been the result of the last year of improvements to the web platform now being rolled out. In many cases the page rendering speed is 2-3 times faster.
-      </para>
+      <para>Massive improvements in performance have been the result of the last year of
+        improvements to the web platform now being rolled out. In many cases the page rendering
+        speed is 2-3 times faster. </para>
     </section>
   </section>
 </chapter>

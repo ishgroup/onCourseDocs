@@ -495,7 +495,7 @@
 		<para>If you have any outcomes where the end date is in the past, and a final outcome status
 			has not yet been set, you can use the export runner to locate these outcomes and open
 			the list in a new window, so you can set the value.</para>
-		<para>Alternativly you can check the option in the export runner that says 'report these as
+		<para>Alternatively you can check the option in the export runner that says 'report these as
 			continuing enrolment (70) ending 7 days from now' and the export runner will set the end
 			date to the outcome to the future and set the value to 70. This saves you having to
 			manually change end dates, when a student was predicted to, but didn't actually complete
@@ -505,15 +505,63 @@
 			remain 'not set' or the other value already set in the database. A count of each of the
 			special overrides is displayed in the AVETMISS runner so you can check the outcomes it
 			applies to by clicking the open related record icon next to the count.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/AVETMISS_override_counts.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>Ensure you select the right 'AVETMISS flavour' for the export</para>
-			</caption>
-		</mediaobject>
+		<section>
+			<title>Explaining the AVETMISS runner choices</title>
+			<para><emphasis role="bold">Export to folder: </emphasis> Select a location where a
+				folder containing the 10 AVETMISS text files will be created . The location MUST be
+				on a local drive, you can not export to a folder on a network drive.</para>
+			<para><emphasis role="bold">Flavour: </emphasis>This AVETMISS variation type you want to
+				export. Often these variations are based on State</para>
+			<para><emphasis role="bold">Select enrolments from: </emphasis>This directs the export
+				runner to chose certain enrolments based on their Funding Source. If you haven't set
+				any funding sources, all your courses will be Fee for service VET (non-funded) by
+				default. For 'Fee for Service', you can further refine by delivery state. You can
+				select multiple options here.</para>
+			<para><emphasis role="bold">Date range: </emphasis>The options available here are date
+				based and will collect the OUTCOMES that fall into this date range: </para>
+			<para><emphasis>commenced outcomes</emphasis> - all outcomes that have a start date in
+				the past from the chosen enrolments. Be careful choosing this with 'Fee for service
+				VET' or 'Non VET' as you will export every outcome ever created in your onCourse
+				database. It is better chosen in combination with a specific Funding Source.</para>
+			<para><emphasis>Previous calendar year</emphasis> - this will show in the drop down as a
+				date range like '2017 year'</para>
+			<para><emphasis>Previous calendar quarter</emphasis> - this will show in the drop down
+				as a date range like '1 Jan 2018 - 30 April 2018'</para>
+			<para><emphasis>Custom date range</emphasis> - this will display two text fields where
+				you can enter your own start and end dates</para>
+			<para><emphasis role="bold">Checkbox - Include all outcomes linked by
+					enrolment:</emphasis> When running a funded export, you often need to select
+				this option as this collects the additional outcomes associated with the funded
+				enrolment that may fall outside the outcome date range selected. For example. when
+				reporting to Smart and Skilled, you must always report all outcomes associated with
+				the funding, even if they haven't yet commenced, or completed in the past.</para>
+			<para><emphasis role="bold">Checkbox - xxx completed VET outcomes need a status. report these as
+					continuing enrolment (70) ending 7 days from now:</emphasis> If the AVETMISS
+				pre-run checks find outcomes that ended in the past where you haven't set a final
+				status, you can automatically push the outcome end date forward by 7 days and report
+				a 70. This does not change the outcome end date in onCourse, only for the data in
+				the export file. The find related icon here also allows you to open the records in
+				question and actually set a final outcome status if required.</para>
+			<para><emphasis role="bold">xxx completed non-Vet outcomes have no status and will be reported as
+					satisfactorily completed (81): </emphasis> If you have included non-VET outcomes
+				in your export set, then an 81 will be reported for all unset outcomes. Where you
+				have manually set another value like 82, that will be reported. The find related
+				icon here also allows you to open the records in question and check where this
+				override will be applied.</para>
+			<para><emphasis role="bold">xxx outcomes will be exported: </emphasis>This is the total
+				number of outcomes that the pre-run checks have found that meet your criteria. You
+				should check this number matches the value you are expecting, and where needed, use
+				the find related icon to view in a list the outcomes about to be exported.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/AVETMISS_override_counts.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Ensure you select the right 'AVETMISS flavour' for the export</para>
+				</caption>
+			</mediaobject>
+		</section>
 	</section>
 	<section xml:id="AVETMISS-AVETMISSExports">
 		<title>AVETMISS Exports</title>
@@ -643,6 +691,9 @@
 						Non-VET training covered by the CSO reporting contract will be included if
 						you select that contract.</para>
 				</listitem>
+				<listitem>When running a funded export, you often need to select 'include all outcomes linked by
+					enrolment' as this collects the additional outcomes associated with the funded
+					enrolment that may fall outside the outcome date range selected. </listitem>
 				<listitem>
 					<para>You can optionally select to export all completed but not yet set outcomes with
 						continuing enrolment (70). This is useful if you have student who have
@@ -746,7 +797,7 @@
 			have been changed in onCourse since the export was run - when you use the find related
 			option you are looking at the outcome values as they exisit right now - not at the time
 			of the export.</para>
-		<para>By defult, each AVETMISS export that successfully completes from onCourse will be set to
+		<para>By default, each AVETMISS export that successfully completes from onCourse will be set to
 			status SUCCESS. If you want to change the status to EXPORTED or FAILED, double click on
 			the record in the list view and change the value in the drop down menu.</para>
 		<para>An access right control exists for this feature, so each user who needs permission to
@@ -1277,7 +1328,7 @@
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/outcomes_export_excel_output.png" format="png"/>
+						fileref="images/exports/outcomes_export_excel_output.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Excerpt of student outcomes export viewed via excel </para>

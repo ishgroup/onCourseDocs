@@ -133,7 +133,7 @@
 				<title>Exporting from the Class - CSV data</title>
 				<para>The Class list includes a number of CSV exports, some with specific purposes. The
 					'CourseClass CSV export' is a generic export that includes most of the class
-					fields.</para>
+					fields. </para>
 				<mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -150,8 +150,8 @@
 								window.</para>
 						</listitem>
 						<listitem>
-							<para>Go to File > Import/Export > Export Classes or select from the
-								export icon in the top right hand corner of the list window</para>
+							<para>Go to File > Import/Export > Export Classes or select the export icon in the top right
+								hand corner of the list window</para>
 						</listitem>
 						<listitem>
 							<para>You then have the following export options to select from the drop
@@ -223,7 +223,7 @@
 											</imageobject>
 											<caption>
 												<para>Excerpt of extended outcomes export viewed via
-												numbers </para>
+												numbers </para>		
 											</caption>
 										</mediaobject>
 									</listitem>
@@ -257,8 +257,7 @@
 													format="png"/>
 											</imageobject>
 											<caption>
-												<para>Excerpt of Class sessions export viewed via
-													numbers</para>
+												<para>Excerpt of Class attendance export viewed via Excel</para>
 											</caption>
 										</mediaobject>
 									</listitem>
@@ -287,21 +286,21 @@
 						<para>Available exports via the Invoice list</para>
 					</caption>
 				</mediaobject>
-				<para>The steps involved in running these additional exports are the same as with
-					any other export: <orderedlist>
+				<para>
+					<orderedlist>
 						<listitem>
-							<para>Select the invoice records you wish to export information for from
-								within the Invoice window.</para>
+							<para>Highligh the invoice records you wish to export information for
+								from within the Invoice window.</para>
 						</listitem>
 						<listitem>
-							<para>Go to <guimenuitem>File</guimenuitem>,
-									<guimenuitem>Import/Export</guimenuitem>, <guimenuitem>Export
-									Invoices/Credit Notes</guimenuitem>.</para>
+							<para>Go to File > Import/Export > Export Invoices/Credit notes or
+								select the export icon in the top right hand corner of the list
+								window</para>
 						</listitem>
 						<listitem>
-							<para>You can then export either the invoices as a standard CSV (one
-								line per invoice) or alternatively you can export the invoice line
-								detail.</para>
+							<para>You can then export either the invoices as a standard Invoice CSV
+								(one line per invoice) or alternatively you can export the invoice
+								line detail.</para>
 						</listitem>
 					</orderedlist>
 				</para>
@@ -335,25 +334,242 @@
 			</tip>
 		</section>
 	</section>
+	<section><title>Customing export templates</title><para>There are three options for creating custom
+			exports in onCourse. What you choose depends on your familiarity with database
+			structures, queries and the Groovy language.</para><orderedlist>
+			<listitem>
+				<para>Copy an exisiting export to make a new export file, and then make changes to
+					the copy</para>
+			</listitem>
+			<listitem>
+				<para>Create a new export from scratch</para>
+			</listitem>
+			<listitem>
+				<para>Create a standalone export that is run manually, or an export that is
+					triggered by a script to pass it certain pre-defined parameters</para>
+			</listitem>
+			<listitem>
+				<para>Engage ish or Groovy developer of your choice to create a custom export for
+					your business</para>
+			</listitem>
+		</orderedlist><para>onCourse exports are powered by a groovy based scripting language. These scripts run on the
+			server and call the same groovy DSL that you'll find in the scripting chapter and
+			available here: <link xlink:href="https://www.ish.com.au/onCourse/doc/latest/dsl/"/>.
+			You can use the full power and expression of the groovy language, and have access the
+			entire onCourse schema. In short, you access the data to export from the variable
+			"records" and just return from the script the formatted text to export. </para> <para>There is a built in a CSV toolkit, so exporting to CSV is the most simple export type to
+			create or edit without a great deal of prior experience. By default the delimited is a
+			comma, but you can define a different delimiter like a tab as per the example below: </para>
+			<programlisting language="groovy"><![CDATA[
+csv.delimiter = '\t'
+
+records.each { AccountTransaction t ->
+	csv << [
+			"Date"          : t.transactionDate?.format("D/M/Y"),
+			"Memo"          : t.transactionDescription,
+			"Account Number": t.account.accountCode,
+			"Debit Amount"  : t.amount.compareTo(Money.ZERO) > 1 ? t.amount.toPlainString() : Money.ZERO.toPlainString(),
+			"Credit Amount" : t.amount.compareTo(Money.ZERO) > 1 ? Money.ZERO.toPlainString() : t.amount.toPlainString()
+	]
+}
+]]></programlisting>
 		<section>
-			<title>Direct access to the SQL database</title>
-			<para>Although we largely recommend that you produce reports within onCourse itself, it
-				is also possible to connect to the backend database directly. If you are using a
-				third party database like MySQL or MS-SQL you will already know how to do this. If
-				you are using the built in database which comes with onCourse server, use the
-				following connection properties. Start with a tool such as Squirrel SQL or DBeaver
-				and use them to browse your data. Once you have that working, you can use any
-				reporting tool (JasperBI, Automate, Crystal Reports, etc) to extract and report on
-				data.<programlisting>
+			<title>Creating a new export in onCourse</title>
+			<para>The simplist way to begin this process is to find an exsiting export from the entity to
+				copy and use as the basis of your new export.</para>
+			<para>For example, if I wanted a new export for Tutor data that started from the Contact entity,
+				I'd choose the default 'Contact CSV export' as my starting point.</para>
+			<orderedlist>
+				<listitem>
+					<para>Go to File > Preferences > Export templates and double click on export 'Contact CSV export'</para>
+				</listitem>
+				<listitem>
+					<para>Highlight the text in the script field and copy and paste this into a
+						plain text editor like Sublime Text (In a tool like Sublime you can specify
+						the text is Groovy, so it will add colour coding to assist with the editing
+						process).</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/exports/export_edit_sublime.png" format="png"/>
+						</imageobject>
+						<caption>
+							<para>Viewing the export text in Sublime</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+				<listitem>
+					<para>The first part of the export code
+						<programlisting language="groovy">records.each { Contact c ->  
+csv &lt;&lt; [ </programlisting>
+						means that in this file, the letter 'c' will be used as shorthand for the
+						'Contact' object and the export will create a CSV file. For your export to
+						work correctly, do not modify this header information.</para>
+				</listitem>
+				<listitem>
+					<para>Go to the DSL documentation for the entity so you can see the fields, or
+						instance methods names and values. For the contact entity, this information
+						is available at  <link
+							xlink:href="https://www.ish.com.au/onCourse/doc/latest/dsl/ish/oncourse/server/cayenne/Contact.html"
+						/></para>
+				</listitem>
+				<listitem>
+					<para>Each row that follows defines the column name in the CSV export and where that data comes
+						from in onCourse, and how it is formatted. For example:</para>
+					<programlisting language="groovy">"gender"     : c.isMale ? "M" : (c.isMale == null) ? "" : "F",</programlisting>
+					<para>Means create a column labelled 'gender' and from the contact record (referred to in the
+						shorthand 'c') take the value from the boolean isMale. If the value = true,
+						export the character 'M', if the value is null (not set) then export a blank
+						space, else export "F".  </para>
+					<para>In this example, the question mark character is the ternary conditional
+						operator which allows for three arguments to be defined and is a shortcut
+						way of writing an if...else statement in Groovy.</para>
+					<para>For example, if you wanted to change these export values to Male, Female
+						and Not supplied you can change this row to:</para>
+					<programlisting language="groovy">"gender"     : c.isMale ? "Male" : (c.isMale == null) ? "Not supplied" : "Female",</programlisting>
+					<para>If the code was just </para>
+					<programlisting language="groovy">"gender"     : c.isMale,</programlisting>
+					<para>Then export value would be TRUE when the contact was set to Male, FALSE when the contact
+						was set as female, and blank, or null, when no value was set in
+						onCourse.</para>
+				</listitem>
+				<listitem>
+					<para>You can add additional rows to the export, or delete or re-order rows. Note that each row
+						ends with the comma delimiter "," except the last row in the export file.
+						For example, the contact export ends with the resume field value, so there
+						is no comma after this row.</para>
+					<programlisting language="groovy">
+			"workingWithChildrenCheckDate"	: c.tutor?.wwChildrenCheckedOn?.format("yyyy-MM-dd"),
+			"workingWithChildrenCheckRef"	 : c.tutor?.wwChildrenRef,
+			"workingWithChildrenCheckExpiry"    : c.tutor?.wwChildrenExpiry?.format("yyyy-MM-dd"),
+			"tutorResume"                    : c.tutor?.resume
+		]
+}
+					</programlisting>
+					<para>You can also see above that the export file ends with the bracket closure characters  "]"
+						and "}". It is important you don't remove these.</para>
+				</listitem>
+				<listitem>
+					<para>If you want to access data from other objects than the entity defined in the export, you
+						need to add joins to the export and structure your query in a way that
+						matches the onCourse DSL and schema. For example, in the contact CSV file,
+						some of the fields are from the student or tutor object. These joins are
+						represented by the full stop character. For example, the Working With
+						Children Check Reference number is part of the tutor object, so the join
+						from the contact to the tutor is 'c.tutor.wwChildrenRef' which means the
+						same as 'contact.tutor.wwChildrenRef'.</para>
+					<programlisting language="groovy">
+			"workingWithChildrenCheckRef"	 : c.tutor?.wwChildrenRef,
+					</programlisting>
+					<para>In this example, the addition of the question mark character is a safe-navigation
+						operator to avoid the export throwing a null pointer exception. Null pointer
+						exceptions occur when the export can not follow the join you have defined
+						because it doesn't exisit (i.e. not every contact selected for export will
+						be a tutor, so if there is a non-tutor contact included, adding the
+						safe-navigation operator just means the export will skip past this field for
+						that record.)</para>
+				</listitem>
+				<listitem>
+					<para>If you have custom fields you wish to include in your export, you can use the custom
+						field keycode to add these fields. You won't find these fields defined in
+						the onCourse DSL documentation as they are custom to your database. For
+						example, if you have a contact custom field with the keycode
+						'howDidYouHearAboutUs' you could add it your export as follows:
+						<programlisting language="groovy">"How Did You Hear About Us?"  :  c.howDidYouHearAboutUs?.value</programlisting></para>
+					<para>Refer to the <link xlink:href="#generalPrefs-customFields">Custom Field documentation</link> for more information about creating custom fields in onCourse. </para>
+				</listitem>
+			</orderedlist>
+			<section>
+				<title>Creating and testing your export in onCourse</title>
+				<para>When you are ready to test your new export in onCourse, you can create a new export and copy your export code.</para>
+				<orderedlist>
+					<listitem>
+						<para>Go to File > Preferences > Export Templates and click the + in the top right hand corner
+							to create a new export.</para>
+					</listitem>
+					<listitem>
+						<para>Name your export. This is what appears in the drop down when you run
+							the export, so make it clear.</para>
+					</listitem>
+					<listitem>
+						<para>Provide a unique keycode for your export. This should be in the format
+							companyName.onCourse.exportName.exportType</para>
+					</listitem>
+					<listitem>
+						<para>Join your export to the corect entity. The name must be spelt exactly
+							as it appears in the DSL documentation with the correct
+							capitalisation.</para>
+					</listitem>
+					<listitem>
+						<para>Copy and paste your code into the body 'script' and save your
+							export.</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/exports/new_export_template.png" format="png"/>
+							</imageobject>
+							<caption>
+								<para>Creating a new export in onCourse</para>
+							</caption>
+						</mediaobject>
+					</listitem>
+					<listitem>
+						<para>Once you have saved your export, it will now be available for you to test in the Entity you defined.</para>
+					</listitem>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/exports/testing_new_export.png" format="png"/>
+						</imageobject>
+						<caption>
+							<para>Testing the new export 'Working with Children Check' in the contact window</para>
+						</caption>
+					</mediaobject>
+					<listitem>
+						<para>If you attempt to run the report and instead of generating the expected output, it shows
+							an error in the window, then you need to adjust your export code to
+							resolve the error, save the changes and try again. This may be a process
+							you repeat a few times if you are new to creating and editing export
+							files.</para>
+					</listitem>
+					<listitem>
+						<para>When your export runs successfully, check the output is formatted as expected, and make
+							adjustments to your export as needed. Please note: When opening CSV
+							files in a spreadsheet application like Excel, Excel may reformat some
+							of your data based on it's own rules. For example, data it thinks are
+							numbers will often be reformatted, so the leading zeros from mobile
+							phones numbers may be stripped . You should run your formatting checks
+							in a text editor like Sublime or Notepad.</para>
+					</listitem>
+				</orderedlist>
+			</section>
+		</section>
+		
+		<section>
+		<title>Direct access to the SQL database</title>
+		<para><emphasis role="bold">This function is only available to customers running locally
+				hosted onCourse databases. If your onCourse database is hosted by ish in the cloud
+				we recommend you create a custom export using the Groovy and the
+			DSL.</emphasis></para>
+		<para>Although we largely recommend that you produce reports within onCourse itself, it is
+			also possible to connect to the backend database directly. If you are using a third
+			party database like MySQL or MS-SQL you will already know how to do this. If you are
+			using the built in database which comes with onCourse server, use the following
+			connection properties. Start with a tool such as Squirrel SQL or DBeaver and use them to
+			browse your data. Once you have that working, you can use any reporting tool (JasperBI,
+			Automate, Crystal Reports, etc) to extract and report on
+			data.<programlisting>
 	       JDBC Driver:  org.apache.derby.jdbc.ClientDriver
 	       JDBC URL: jdbc:derby://&lt;server hostname&gt;/onCourse
 	       username: report
 	       password: 948ty
             </programlisting></para>
-			<para>It is important to note that you should NEVER write to the database. Not only do
-				you risk introducing bad data, but you bypass all of the onCourse 'business logic'
-				which holds together the financial and relational integrity of the data.</para>
-		</section>
+		<para>Note this function does not let you write to the database: it is read only access.
+		</para>
+	</section>
+	</section>
+	<section>
+		<title>Other export types and options</title>
 		<section>
 			<title>AVETMISS export</title>
 			<para>To export your AVETMISS go to the file menu, select import/export and choose
@@ -367,22 +583,12 @@
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/export_avetmiss.png" format="png"/>
+						fileref="images/exports/export_avetmiss.png" format="png"/>
 				</imageobject>
 			</mediaobject>
 		</section>
-		<section>
-			<title>Sending messages</title>
-			<para>Although you can send emails and SMS directly from onCourse, you can also export a
-				list of contact email and postal details so that you can use an external mailing
-				system, mail merge in Word or send a list of addresses to an external mailing house.
-				More details about how to export from the messages window can be found in the <link
-					xlink:href="messages.html">Messages chapter</link>.</para>
-		</section>
-		<section xml:id="importExport_InDesign">
-			<title>Exporting to Adobe Indesign</title>
-			<para>onCourse already comes with a template for exporting to Adobe Indesign.</para>
-			<para>
+		<section xml:id="importExport_InDesign"><title>Exporting to Adobe Indesign</title><para>onCourse
+				already comes with a template for exporting to Adobe Indesign.</para><para>
 				<orderedlist>
 					<listitem>
 						<para>Open the class list view</para>
@@ -397,8 +603,7 @@
 							it to disk somewhere. It will be an XML file, ready for inDesign.</para>
 					</listitem>
 				</orderedlist>
-			</para>
-			<para>Now fire up Adobe Indesign and import this file.<orderedlist>
+			</para><para>Now fire up Adobe Indesign and import this file.<orderedlist>
 					<listitem>
 						<para>
 							<menuchoice>
@@ -425,14 +630,15 @@
 							mapping so that next time you create this document with fresh data all
 							the styles are linked quickly and simply.</para>
 					</listitem>
-				</orderedlist></para>
-			<para>If you now spend a bit of time tidying up your stylesheets (both character styles
-				and paragraph styles) in inDesign you can set up the whole process to be almost
-				completely automated. Next time you export from onCourse, the data will flow right
-				into inDesign complete with all the formatting you need. Just paginate your
-				brochure, place in some pictures and you are done.</para>
-			<para>When you are ready to customise your export further, read the following section on
-				how to edit the export formatter.</para>
+				</orderedlist></para><para>If you now spend a bit of time tidying up your
+				stylesheets (both character styles and paragraph styles) in inDesign you can set up
+				the whole process to be almost completely automated. Next time you export from
+				onCourse, the data will flow right into inDesign complete with all the formatting
+				you need. Just paginate your brochure, place in some pictures and you are
+				done.</para>
+			<para>If you need to customise your export further, you can do this yourself if you have the
+				skills in house, or engage ish to make the changes for you.</para>
+		</section>
 			<section>
 				<title>OLGR CSV Export</title>
 				<para>onCourse has an export that allows you to export student data into OLGR for
@@ -465,7 +671,7 @@
 							<mediaobject>
 								<imageobject>
 									<imagedata scalefit="1" width="100%" contentdepth="100%"
-										fileref="images/olgrExport.png" format="png"/>
+										fileref="images/exports/olgrExport.png" format="png"/>
 								</imageobject>
 							</mediaobject>
 						</listitem>
@@ -481,38 +687,6 @@
 					</orderedlist>
 				</para>
 			</section>
-		</section>
-		<section>
-			<title>Custom export templates</title>
-			<para>You've seen how easy it can be to export course information from onCourse. You can
-				also customise the output and create any type of publication you can dream of. You
-				might export payroll data to an obscure finance system or send data to an external
-				CRM system.</para>
-			<para>onCourse exports are powered by a groovy based scripting language. These scripts
-				run on the server and call the same groovy API that you'll find in the scripting
-				chapter. That means that you can use the full power and expression of the groovy
-				language, and access the entire onCourse schema. In short, you access the data to
-				exports from the variable "records" and just return from the script the formatted
-				text to export. This gives you infinite flexibility.</para>
-			<para>We've built in a CSV toolkit, so exporting to CSV is really simple. And tab
-				delimited output can be treated just like CSV but with tab separators between the
-				fields.</para>
-			<para>
-				<programlisting language="groovy"><![CDATA[
-csv.delimiter = '\t'
-
-records.each { AccountTransaction t ->
-	csv << [
-			"Date"          : t.transactionDate?.format("D/M/Y"),
-			"Memo"          : t.transactionDescription,
-			"Account Number": t.account.accountCode,
-			"Debit Amount"  : t.amount.compareTo(Money.ZERO) > 1 ? t.amount.toPlainString() : Money.ZERO.toPlainString(),
-			"Credit Amount" : t.amount.compareTo(Money.ZERO) > 1 ? Money.ZERO.toPlainString() : t.amount.toPlainString()
-	]
-}
-]]></programlisting>
-			</para>
-		</section>
 	<section xml:id="importExport-MYOB">
 		<title>Exporting to MYOB</title>
 		<para> If your organisation utilizes MYOB as the key financial system, you can generate an
@@ -520,7 +694,7 @@ records.each { AccountTransaction t ->
 			different pathways within the onCourse Client to access and generate the financial data
 			export for MYOB.</para>
 		<section>
-			<title>Generating the Export via the Financial Summary Extract Menu</title>
+			<title>Generating a MYOB Export via the Financial Summary Extract Menu</title>
 			<para>The steps involved in running this export are as follows:</para>
 			<orderedlist>
 				<listitem>
@@ -528,7 +702,7 @@ records.each { AccountTransaction t ->
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/MYOB_Export_via_Summary_Extract.png" format="png"/>
+								fileref="images/exports/MYOB_Export_via_Summary_Extract.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Selecting MYOB Export via Summary Extract menu</para>
@@ -540,7 +714,7 @@ records.each { AccountTransaction t ->
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/MYOB_Export_set_date_range.png" format="png"/>
+								fileref="images/exports/MYOB_Export_set_date_range.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Select date range for MYOB Export</para>
@@ -559,7 +733,7 @@ records.each { AccountTransaction t ->
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/MYOB_Export_data_output.png" format="png"/>
+								fileref="images/exports/MYOB_Export_data_output.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Extract of MYOB Export viewed via Microsoft Excel</para>
@@ -569,7 +743,7 @@ records.each { AccountTransaction t ->
 			</orderedlist>
 		</section>
 		<section>
-			<title>Generating the Export via the Transaction Window</title>
+			<title>Generating a MYOB Export via the Transaction Window</title>
 			<para>Unlike the approach of generating the MYOB Export via the Summary Extract menu of
 				onCourse, by running the export via the Transactions window, you can define exactly
 				which transactions you wish to export to the resulting text file. The steps involved
@@ -589,7 +763,7 @@ records.each { AccountTransaction t ->
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/MYOB_Export_Window.png" format="png"/>
+								fileref="images/exports/MYOB_Export_Window.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Selecting MYOB Export from Import/Export dialog box</para>
@@ -602,7 +776,7 @@ records.each { AccountTransaction t ->
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/MYOB_Export_data_output.png" format="png"/>
+								fileref="images/exports/MYOB_Export_data_output.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Extract of MYOB Export viewed via Microsoft Excel</para>
@@ -611,6 +785,7 @@ records.each { AccountTransaction t ->
 				</listitem>
 			</orderedlist>
 		</section>
+	</section>
 	</section><section xml:id="importExport-Import">
 		<title>Importing</title>
 		<para>Using the onCourse Groovy scripting engine, powerful import process can be created in
@@ -622,6 +797,15 @@ records.each { AccountTransaction t ->
 				xlink:href="externalintegrations.html">External Integrations.</link></para>
 		<para>Custom import processes and integration scripts can also be created on request. Please
 			send you request to support@ish.com.au</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/exports/importafile.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Accessing the imports from the file menu</para>
+			</caption>
+		</mediaobject>
 		<section>
 			<title>Standard Imports available</title>
 			<orderedlist>
@@ -659,15 +843,6 @@ records.each { AccountTransaction t ->
 					records with invoices. </listitem>
 			</orderedlist>
 		</section>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/importafile.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>Accessing the imports from the file menu</para>
-			</caption>
-		</mediaobject>
 		<section xml:id="importExport-payentIn">
 			<title>Payment In Import</title>
 			<para>If you receive bulk payment data from an outside source, you can use the Payment
@@ -685,7 +860,7 @@ records.each { AccountTransaction t ->
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/paymentInImportWindow.png" format="png"/>
+						fileref="images/exports/paymentInImportWindow.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>Selecting the Payment In Import from Import/Export dialog box</para>

@@ -116,15 +116,22 @@
 	<section>
 		<title>Editing Course Hero Images in onCourse</title>
 		<para>You can use images you have uploaded into onCourse as hero images for a specific course. To
-			do so, you first need to add a snippet of code to your sites CourseItem.tml file, which you can find within your sites WebDAV. </para>
-		<note><para>The CourseItem.tml file can be found in WebDAV by going to templates -> default -> CourseItem.tml.</para></note>
+			do so, you first need to add a snippet of code to your site's CourseItem.tml file. </para>
+		<note><para>The CourseItem.tml file can be found in <link xlink:href="https://www.ish.com.au/s/onCourse/doc/design/overview.html#d5e33">WebDAV</link> 
+			by going to templates -> default -> CourseItem.tml.</para></note>
 		<para>This snippet is pasted below:</para>
 		<programlisting>
  &lt;div class="hero-image-banner">
             &lt;div t:type="ui/image" name="${courseItemModel.course.code}_hero" class="course-img" width="275" height="183">&lt;/div>
           &lt;/div> 			
 		</programlisting>
-		<para>Once you've added this code, ensure the name of the uploaded hero images is x_hero, where 'x' is the course code in onCourse</para>
+		<para>Open the CourseItem.tml in a text editing tool, like NotePad++ or Sublime, then copy and
+			paste this code into the file somewhere out of the way. Ensure that you set the name of
+			the uploaded hero image in onCourse to x_hero, where 'x' is the course code of the
+			course the image is intended for - e.g. for a Pottery course with the course code
+			POT001, in onCourse you'd want to name the image POT001_hero.</para>
+		<para>You can edit the height and width values, but be aware that this may result in
+			inconsistent results if the images you upload are all different szes to begin with. </para>
 		</section>
 
 	<section>

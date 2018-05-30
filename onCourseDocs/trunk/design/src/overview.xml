@@ -19,16 +19,25 @@
 			quite technical. Don't worry: you can still edit content using the online CMS without
 			understanding anything here. Your designer, or ish, will be able to work on the page
 			design and create something into which you can drop your content.</para>
-		<section>
-			<title>Editing your site</title>
-			<para>While you can log into your CMS to edit content, if you want to change the design of your
-				website you'll need to use WebDAV. This is very similar to ftp except it makes it
+		<section><title>Editing your site via WebDAV</title><para>While you can log into your CMS to edit content, to
+				make more granular changes to the code or design of your website you'll need to use
+				WebDAV. This is very similar to FTP (File Transfer Protocol) except it makes it
 				easier for us to encrypt your connection and apply special automatic rules and
-				filters.</para>
-			<para>Log into WebDAV using any standards compliant application. We recommend <link
-					xlink:href="http://cyberduck.io">Cyberduck</link> which is free for use on
-				Windows and Mac. Configure a connection in Cyberduck with the URL
-				https://www.acme.edu.au/editor/webdav/</para>
+				filters.</para><para>To access and log into WebDAV we recommend using any standard compliant application, like
+					<link xlink:href="http://cyberduck.io">Cyberduck</link>, which is free for use
+				on Windows and Mac. To configure a connection in Cyberduck, first click the
+				Bookmarks tab, then in the bottom left of that screen, click the '+' button to add a
+				new bookmarked connection. </para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="80%" contentdepth="80%" format="jpg"
+						fileref="images/cyberduck_bookmarks.png"/>
+				</imageobject>
+				<caption>
+					<para>The Bookmarks screen in Cyberduck</para>
+				</caption>
+			</mediaobject>
+			<para>A screen like below will appear:</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%" format="jpg"
@@ -39,6 +48,21 @@
 				</caption>
 			</mediaobject>
 		</section>
+		<para>Enter the following details: <itemizedlist>
+				<listitem>
+					<para>Server = the URL of your website</para>
+				</listitem>
+				<listitem>
+					<para>Username = the username you use to access your site's CMS</para>
+				</listitem>
+				<listitem>
+					<para>Path (located under the expandable menu More Options) =
+						/editor/webdav.</para>
+				</listitem>
+			</itemizedlist>Close the box. If you've entered everything correctly, your connection
+			will now appear in the bookmarked like. Double-click your new bookmarked connection and
+			you'll be asked to enter your password, which will be the same as the one you use to
+			access the CMS. Once you have access you'll see your site's folder structure. </para>	
 	</section>
 	<section>
 		<title>Draft site</title>

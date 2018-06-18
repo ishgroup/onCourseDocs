@@ -529,19 +529,27 @@
 				as a date range like '1 Jan 2018 - 30 April 2018'</para>
 			<para><emphasis>Custom date range</emphasis> - this will display two text fields where
 				you can enter your own start and end dates</para>
-			<para><emphasis role="bold">Checkbox - Include all outcomes linked by
-					enrolment:</emphasis> When running a funded export, you often need to select
-				this option as this collects the additional outcomes associated with the funded
-				enrolment that may fall outside the outcome date range selected. For example. when
-				reporting to Smart and Skilled, you must always report all outcomes associated with
-				the funding, even if they haven't yet commenced, or completed in the past.</para>
+			<para><emphasis role="bold">Checkbox - Include all outcomes linked by enrolment:</emphasis> When
+				running a funded export, you often need to select this option as this collects the
+				additional outcomes associated with the funded enrolment that may fall outside the
+				outcome date range selected. For example. when reporting to Smart and Skilled, you
+				must always report all outcomes associated with the funding, even if they haven't
+				yet commenced, or completed in the past. This option is only available when you run
+				the AVETMISS export from File > Import/Export. It doesn't display when running from
+				the cogwheel, as all outcomes from enrolments are always included.</para>
 			<para><emphasis role="bold">Checkbox - xxx completed VET outcomes need a status. report these as
 					continuing enrolment (70) ending 7 days from now:</emphasis> If the AVETMISS
 				pre-run checks find outcomes that ended in the past where you haven't set a final
 				status, you can automatically push the outcome end date forward by 7 days and report
 				a 70. This does not change the outcome end date in onCourse, only for the data in
 				the export file. The find related icon here also allows you to open the records in
-				question and actually set a final outcome status if required.</para>
+				question and actually set a final outcome status if required. Note that if you have
+				set an export end date in the future, this setting will not make much sense. e.g. If
+				I have an outcome that was due to end next week, it would be reported today as an in
+				progress 70. If I set an outcome end date of the end of the calender year, the
+				outcome is considered to have been completed, but not properly finalised. Moral to
+				the story - don't set an export end date after today's date unless you want some
+				funky data issues.</para>
 			<para><emphasis role="bold">xxx completed non-Vet outcomes have no status and will be reported as
 					satisfactorily completed (81): </emphasis> If you have included non-VET outcomes
 				in your export set, then an 81 will be reported for all unset outcomes. Where you

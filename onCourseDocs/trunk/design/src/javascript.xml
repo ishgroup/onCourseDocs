@@ -92,7 +92,20 @@
 			be accessed via WebDAV, and can be found at the path
 				<code>~/s/js/config.js</code>
 		</para>
-		<para>Important variables can be configured in the config.js file:<variablelist>
+		<para>You can add the following variables to your checkout_config to change and customise the behaviour of the web application. 
+			These variables accept strings in the form of the path to the web page you want to direct a student to. Example:</para>
+		<programlisting language="javascript">var checkout_config = {
+
+  "checkoutPath": "/checkout",
+  "paymentSuccessURL": "/products",
+  "termsAndConditions": "/termsAndConditions",
+  "featureEnrolmentDisclosure": "/policies/enrolment",
+  "guardianRequiredAge": 16
+}		</programlisting>
+		
+		<para>Important variables can be configured in the config.js file.
+			
+			<variablelist>
 			<varlistentry>
 				<term>checkoutPath</term>
 				<listitem>
@@ -165,18 +178,6 @@
 					</listitem>
 				</varlistentry>
 		</variablelist></para>
-		<para>These variables accept strings in the form of the path to the web page you want to direct
-			the student to. Example:</para>
-		<programlisting language="javascript">var checkout_config = {
-
-  "checkoutPath": "/checkout",
-
-  "paymentSuccessURL": "/products",
-  "termsAndConditions": "/termsAndConditions",
-  "featureEnrolmentDisclosure": "/policies/enrolment",
-  "guardianRequiredAge": 16
-}		</programlisting>
-		
 	<variablelist>
 		<varlistentry>
 			<term>canCreateContact</term>

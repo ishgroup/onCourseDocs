@@ -351,11 +351,13 @@
                             integration.</para>
                     </listitem>
                     <listitem>
-                        <para>In the Developers area, go to My Apps and click on 'Add New App'.
-                            <mediaobject>
+                        <para>In the Developers area, go to My Apps. If you already have an App,
+                            make sure it's not disabled or expired. If you don't already have an
+                            app, or if yours is currently expired/disabled, click on 'Add a New
+                            App'. <mediaobject>
                                 <imageobject>
                                     <imagedata scalefit="1" width="80%" contentdepth="80%"
-                                        fileref="images/surveymonkeyAddApp.png" format="png" />
+                                        fileref="images/surveymonkeyAddApp.png" format="png"/>
                                 </imageobject>
                                 <caption>
                                     <para>SurveyMonkey Developer site Add New App Feature</para>
@@ -368,10 +370,38 @@
                             name of App i.e. 'onCourse'</para>
                     </listitem>
                     <listitem>
-                        <para>In the App record, go to Setting, scroll down to the section
-                            Credentials and locate the 'Access Token' field. The Access token is the
-                            string of numbers and letters in the field e.g.
-                            F2RlLbeTeGLrDX.8BHgNtUT1-25s-T20qQVC1lyhHqbHjk3U8lD7iCvjbG2KMhFjC4SxqFn0oCXyd.AKETZ85aqZOCaI18arK1gvQz98K7tnSH3jlLBoNahZL2cRmstP </para>
+                        <para>In the App record, go to Settings, scroll down to the section called
+                            Scopes and activate the following three Scopes: 
+                               <itemizedlist>
+                                   <listitem>
+                                       <para>Create/Modify Collectors</para>
+                                   </listitem>
+                                   <listitem>
+                                       <para>View Collectors</para>
+                                   </listitem>
+                                   <listitem>
+                                       <para>View Surveys</para>
+                                   </listitem>
+                               </itemizedlist>
+                            Without these Scopes being activated, the integration will fail to work.
+                        </para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="80%" contentdepth="80%"
+                                    fileref="images/surveymonkeyScopes.png" format="png" />
+                            </imageobject>
+                            <caption>
+                                <para>Scopes in SurveyMonkey</para>
+                            </caption>
+                        </mediaobject>
+                    </listitem>
+                    <listitem>
+                        <para>Once you've activated the required Scopes, scroll up to the
+                            Credentials section and locate the 'Access Token' field. The Access
+                            token is the large string of numbers and letters in the field. Copy all
+                            the text in this field and paste it into the 'OAuth token' field within
+                            the Integration you're setting up in onCourse. (File > Preferences >
+                            General... > Integrations)</para>
                         <mediaobject>
                             <imageobject>
                                 <imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -383,35 +413,43 @@
                         </mediaobject>
                     </listitem>
                 </orderedlist>
-                        <para>The Survey name you need to enter is the name listed in the 'Title'
-                            field on Survey Monkey, in the example below it's called Test Survey.
-                            This can be found by logging into your account in
-                            https://www.surveymonkey.com then click on the top menu option 'My
-                            Surveys'</para>
+                        <para>The Survey Name you need to enter in onCourse is the name listed in
+                    the 'Title' field on Survey Monkey, in the example below it's simply called
+                    'Test'. This can be found by logging into your account in
+                    https://www.surveymonkey.com then clicking on the top menu option 'My
+                    Surveys'</para>
                         <mediaobject>
                             <imageobject>
-                                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                                <imagedata scalefit="1" width="80%" contentdepth="80%"
                                     fileref="images/SurveyMonkey_name.png" format="png"/>
                             </imageobject>
                             <caption>
-                                <para>Finding the name of the survey I want to use</para>
+                                <para>All your surveys inSurveyMonkey will be listed in 'My
+                            Surveys'</para>
                             </caption>
                         </mediaobject>
-                                    <para>If you haven't used SurveyMonkey before you might need to verify the
-                    collectors email address. This is done by clicking on the name of the Survey
-                    followed by on the tab 'Collect Responses' and then on the Survey name under the
-                    heading 'NICKNAME' and continuing until this email gets sent.</para>
+                <para>Survey Monkey uses the term 'Collectors' to describe ways you can send out
+                    your survey and collect responses. <link
+                        xlink:href="https://help.surveymonkey.com/articles/en_US/kb/How-to-collect-responses"
+                        > You can read more about Collectors here</link>. </para>
+                <para>Set up your collector and name it 'onCourse', as this is the default collector
+                    name the app looks for. If there is no Collector by this name, then the first
+                    Collector in the list is selected. We highly recommend naming the Collector
+                    'onCourse'.</para>
+                <para>If you haven't used SurveyMonkey before you will need to
+                    verify the collectors email address. This is done by clicking on the name of the
+                    Survey followed by on the tab 'Collect Responses' and then on the Survey name
+                    under the heading 'NICKNAME' and continuing until this email gets sent.</para>
                 <mediaobject>
                     <imageobject>
-                        <imagedata scalefit="1" width="70%" contentdepth="70%"
+                        <imagedata scalefit="1" width="80%" contentdepth="80%"
                             fileref="images/survey_collector.png" format="png" />
                     </imageobject>
-                    <caption>
-                        <para>Verifying the Collectors email address</para>
-                    </caption>
+                    <caption>A view of some Collectors, one has yet to be configured</caption>
                 </mediaobject>
-                <para>The email address that it gets sent to is the same one that you would have stored in the field
-                    'Email from address' in the Messaging tab of the preferences window.</para>
+                <para>The 'Sender email address' that survey responses are sent to is the same one
+                    that you should have stored in the field 'Email from address' in the Messaging
+                    tab of the onCourse preferences window.</para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" width="70%" contentdepth="70%"

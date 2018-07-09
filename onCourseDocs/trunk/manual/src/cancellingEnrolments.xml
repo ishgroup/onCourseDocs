@@ -94,8 +94,9 @@
 				be available as credit to the student, or can be refunded to them. </para>
 			<para>Note that if you charge GST, this amount will be added on to the value you specify e.g. in
 				the screen shot below a $20 plus GST fee has been charged, totalling $22.</para>
-			<para> You can select to have this administrative fee deposited into the income account
-				of your choice. Any GST component will be credited to the GST account.</para>
+			<para> You can select to have this administrative fee deposited into the income account of your
+				choice. By default, the income account associated with the enrolment income line
+				will be selected. Any GST component will be credited to the GST account.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -183,42 +184,45 @@
 	</section>
 	<section xml:id="cancellingEnrolments-creditNote">
 		<title>Creating a manual credit note</title>
-		<para>On occasion, you may need to create a credit note of refund for a student with out
-			using the enrolment cancellation process. This may be because you wish to offer the
-			student a credit to apply to further training (perhaps their was problem with the class
-			they attended), because they purchased another product outside of the class enrolment,
-			or because you created a credit note for the wrong amount during the enrolment
+		<para>On occasion, you may need to create a credit note of refund for a student without using the
+			enrolment cancellation process. This may be because you wish to offer the student a
+			credit to apply to further training (perhaps there was problem with the class they
+			attended), because they purchased another product outside of the class enrolment, or
+			because you created a credit note for the wrong amount during the enrolment
 			cancellation.</para>
-		<para>Before you can issue any type of refund, you must create a credit note. You can do
-			this manually in the invoice window </para>
-		<para>The best way to create a credit note to fix an error is to find the original invoice, duplicate it and reverse
-			it.</para>
+		<para>Before you can issue any type of refund, you must create a credit note. You can create a
+			credit note manually in the invoice window. Note that this process is not necessary if
+			you create a credit note during the enrolment cancellation process.</para>
+		<para>The quickest way to create a credit note to fix an error is to find the original invoice,
+			duplicate it and reverse it.</para>
 		<example>
 			<title>How to reverse an invoice to create a credit note</title>
 			<orderedlist>
 				<listitem><para>Reversing an invoice manually allows you to make an adjustment (partial reversal) or complete
 						reversal to an invoice created in error. Begin by opening the invoice window
-						and locating the invoice that is problematic</para></listitem>
+						and locating the invoice that is problematic.</para></listitem>
 				<listitem>
-					<para>Single click on the invoice, and from the cogwheel select the option
-						'Duplicate invoice'. A new manual invoice/credit note window will
-						open</para>
+					<para>Single click on the invoice, and from the cogwheel select the option 'Duplicate and
+						reverse invoice'. A new manual invoice/credit note window will open.</para>
 				</listitem>
 				<listitem>
-					<para>Locate the invoice line you wish to reverse and double click on it. When
-						it opens, add a - to the value in the 'Price each ex tax field' and any
-						value in the 'discount each ex tax' field. This will change the line total
-						to a negative of it's previous value. If you are dong a partial adjustment,
-						you can also change the amount.</para>
+					<para>This new credit note will contain all the same invoice lines as the
+						origional invoice line, but with each line item reversed. Remove any invoice
+						lines you do not want to include in this credit note.</para>
+				</listitem>
+				<listitem>
+					<para>To adjust the value of a remaining invoice line or charge the reversal to a different
+						income account, double click on it. You can make changes to any of the
+						fields available in the sheet. </para>
 				</listitem>
 				<listitem>
 					<para>Optionally link the reversal back to it's original course-class code to
-						deduct this amount from the class income.</para>
+						deduct this amount from the class income. This will also make the invoice
+						show in the class budget tab.</para>
 				</listitem>
 				<listitem>
-					<para>Click OK to save the adjustment to the invoice line, and repeat the
-						process for each additional invoice line you want to reverse. If the invoice
-						contains lines you do not want to reverse, delete them.</para>
+					<para>Click OK to save the adjustment to the invoice line, and repeat the process for each
+						additional invoice line you want to reverse. </para>
 				</listitem>
 				<listitem>
 					<para>Remove the check box from the 'send email' option if you do not want a
@@ -256,7 +260,9 @@
 					<para>In the invoice lines section of the window, click on the '+' button to add
 						charges/credits to the record. Give your item a title, select the general
 						ledger income account it will be debited from, enter the appropriate
-						negative amount in the 'Price Each Ex Tax' field. </para>
+						negative amount in the 'Price Each Ex Tax' field.  Ensure if you are
+						creating a credit note that the value has a minus sign in front of
+						it.</para>
 				</listitem>
 				<listitem>
 					<para>Enter any other relevant information and save the credit note. You will

@@ -12,7 +12,8 @@
 		<para>For more information on state based variations, how to set up your onCourse database
 			and how to export AVETMSS data, refer to the chapter <link xlink:href="AVETMISS.html">AVETMISS Reporting</link>
 		</para>
-		<para>AVETMISS 8 is the current standard, required for reporting training activity data from 1 Janurary 2018.</para>
+		<para>AVETMISS 8 is the current standard, required for reporting training activity data from 1
+			January 2018.</para>
 		<para>The AVETMISS standard documents are outlined in two key files, supplied by 
 			<link
 				xlink:href="https://www.ncver.edu.au/publications/publications/all-publications/statistical-standard-software/avetmiss-vet-provider-collection-specifications-release-8.0"
@@ -29,7 +30,7 @@
 			</listitem>
 		</itemizedlist>
 		<para>You should ensure you have copies of the most up to date versions of these documents on hand
-			if you are responsible for AVETMISS reporting. They contain a detailed explantion of
+			if you are responsible for AVETMISS reporting. They contain a detailed explanation of
 			what the standard includes and expects.</para>
 		<para>An AVETMISS export is made up of 10 plain text fixed width files, that are explained in this
 			chapter. These files are designed to be uploaded to validation systems, like AVS
@@ -90,15 +91,15 @@
 				nothing to do with AVETMISS, it is part of our timetabling feature) so to make it
 				simple, give each site a room with a generic name like 'default'.</para>
 			<para>It is important that each Australian site you create has an address with a State, Suburb
-				and Postocode that matches a value in the Australian Postcode data file. Sites in
+				and Postcode that matches a value in the Australian Postcode data file. Sites in
 				other countries will automatically export OSPC for the postcode value.</para>
 			<para>The site you have designated as your Admin site in onCourse will be the site any
 				self paced classes will be reported at.</para>
 		</section>
 		<section>
 			<title>Program (NAT00030) File </title>
-			<para>This information comes from the Qualification data enterned into the Course VET tab where
-				the option 'Satisifes complete qualification or skill set' is ticked. Qualification
+			<para>This information comes from the Qualification data entered into the Course VET tab where
+				the option 'Satisfies complete qualification or skill set' is ticked. Qualification
 				Certificates you create in onCourse also will add records to the NAT00030 file. Each
 				Qualification or Skill Set will only be added once.</para>
 			<para>When you create a new course in onCourse, go to the VET tab and add the Qualification or
@@ -112,7 +113,7 @@
 				the related Qualification record after adding it to the course, or by finding the
 				qualification under Training > Qualifications.</para>
 			<para>Courses do not have to have Qualification or Skill Set assigned. If you add the code, but
-				don't tick the 'Satisifes complete qualification or skill set' option, then the
+				don't tick the 'Satisfies complete qualification or skill set' option, then the
 				information will not be added to the NAT00030 file, or the associated NAT00120
 				records, but the information will be added to the student's Statement of Attainment.
 				You can add this information or tick the checkbox after you have created the course
@@ -129,11 +130,10 @@
 				your courses, or manually add to student's enrolment records or prior learning
 				records. Each unit you deliver is only added once to the NAT00060 file, regardless
 				of how many times you deliver it. </para>
-			<para>When refering to units or modules, this is the data from training.gov.au that is
-				available in onCourse and updated daily. When building a <link
-					xlink:href="courses.html">course</link>, these units are added to the VET tab on
-				course creation. This course forms a template for adding outcomes to the student
-				record.</para>
+			<para>When referring to units or modules, this is the data from training.gov.au that is available
+				in onCourse and updated daily. When building a <link xlink:href="courses.html"
+					>course</link>, these units are added to the VET tab on course creation. This
+				course forms a template for adding outcomes to the student record.</para>
 			<para>When a student <link xlink:href="processingEnrolments.html">enrols</link> in a
 					<link xlink:href="classes.html">class</link>from the course, the units from the
 				course are added as outcome records for the student enrolment. Units can be added or
@@ -162,27 +162,26 @@
 		<section>
 			<title>Client (NAT00080) File </title>
 			<para>Client AVETMISS files are created from onCourse contact records who have an outcome whose
-				dates match the the reporting period you've selected on export.  Unique client
+				dates match the reporting period you've selected on export. Unique client
 				identifiers are auto assigned and called 'Student Numbers' in onCourse. You don't
 				see these in the contact detail other than in the header bar, but you can search on
 				them from the contact window advanced search if you later get a validation error for
 				one of your clients.</para>
-			<para>Create each of your students as contacts in onCourse, ensuring you fill in their
-				address details accuractly, in particular the State, Suburb and Postcode which need
-				to match the Australian post data set. To meet the AVETMISS export, onCourse
-				automatically splits addresses into the required building name, unit name, street
-				number and street name fields for export. In the user interface, the address field
-				remains the same - enrolling students and administrative staff only need to enter
-				the data in a single field. If the student address has a country that is not
-				Australia, OSPC will be automatically exported.</para>
-			<para>The data on the VET tab in the contact record also forms a large part of the data
-				exported in this record, including the indigenous status identifer, language
-				identifer, labour force identifier and more. It is ok to leave all or some of these
-				fields blank - onCourse will automatically export the value @ for not specified. The <link
-					xlink:href="usi.html">post enrolment data collection process</link>
-				 will ask the students these questions and ask
-				them to supply or create their USI if they haven't provided it to you
-				previously.</para>
+			<para>Create each of your students as contacts in onCourse, ensuring you fill in their address
+				details accurately, in particular the State, Suburb and Postcode which need to match
+				the Australian post data set. To meet the AVETMISS export, onCourse automatically
+				splits addresses into the required building name, unit name, street number and
+				street name fields for export. In the user interface, the address field remains the
+				same - enrolling students and administrative staff only need to enter the data in a
+				single field. If the student address has a country that is not Australia, OSPC will
+				be automatically exported.</para>
+			<para>The data on the VET tab in the contact record also forms a large part of the data exported
+				in this record, including the indigenous status identifier, language identifier,
+				labour force identifier and more. It is ok to leave all or some of these fields
+				blank - onCourse will automatically export the value @ for not specified. The <link
+					xlink:href="usi.html">post enrolment data collection process</link> will ask the
+				students these questions and ask them to supply or create their USI if they haven't
+				provided it to you previously.</para>
 			<para>The Unique Student Identifier (USI) is reported in the NAT00080 file for each
 				student engaged in Vocational Education and Training. Students who have only
 				attended non-vocational courses do not need to have a USI supplied for AVETMISS

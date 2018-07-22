@@ -1088,10 +1088,10 @@
 		</section>
 		<section>
 			<title>How can I get my State Accredited Modules added to onCourse?</title>
-			<para>We add custom modules on request for customers with a commercial support contract.
-				We need to add them manually to onCourse as they are not published by TGA. You can
-				send an Excel file to ish with the following information: Unit code, Unit Title and
-				the Field of Education ID (6 characters).</para>
+			<para>We add custom modules on request for customers with a commercial support contract. We need
+				to add them manually to onCourse as they are not published by training.gov.au. You
+				can send an Excel file to ish with the following information: Unit code, Unit Title
+				and the Field of Education ID (6 characters).</para>
 			<para> Once these have been added by us, your onCourse server will download the changes within 48
 				hours, and they will be available in the Unit of Competency list with the other
 				included units. </para>
@@ -1289,6 +1289,88 @@
 			<para>The VET in Schools flag will always export as No.</para>
 			<para>The training location for all prior learning outcomes will be set to your college
 				default administration site address.</para>
+		</section>
+		<section>
+			<title>How can I add the outcome 85 to my AVETMISS data?</title>
+			<para>This outcome is not available in the drop down list to set in onCourse because it is a
+				transactional outcome status, not a final status. Transitional statuses are outcomes
+				that change over the duration of the student's study and just have meaning related
+				to the outcome start and end date, like 'in progress' or 'not yet commenced'. 85
+				means 'Not Yet Started' therefore, the outcome start date is after the day you run
+				the export. If your start and end dates are set to represent the student's intended
+				traning plan, 85 will export automatically where it is the only correct value. The
+				same process applies to '70 - Continuing Activity', where the outcomes start date is
+				before today and end date is after today.</para>
+		</section>
+		<section>
+			<title>I set an outcome status in onCourse, but something different came out in the AVETMISS export. Why?</title>
+			<para>onCourse includes advanced error correction in the AVETMISS export process to reduce the
+				error rate during the reporting process. For example, if you have an outcome end
+				date after the export end date (or today, if you have entered no export end date),
+				then the only valid outcome is '70 - Continuing Activity' because the outcome is
+				still in progress. If you have set a final outcome, like '20 - Competency Achieved'
+				but the end date is in the future, then 70 will be exported because it is the only
+				valid status for the date range.</para>
+			<para>Note that if your tutors use the SkillsOnCourse portal to set outcomes, it will
+				automatically set the outcome end date to the day a final status is set, reducing
+				the instance of this issue.</para>
+		</section>
+		<section>
+			<title>Why can I add the outcome 70 to my AVETMISS data if it applies automatically when it's required? </title>
+			<para>For the management purposes of enrolments with complex and changing training plans, some
+				organisations like to manually set 70 to indicate a student has actually commenced
+				their scheduled training, and leave the outcomes that are yet to commence as 'not
+				set'. This can be a second process check along with ensuring the training plan dates
+				in onCourse are accurate.</para>
+			<para>There is no need to ever set 70 in onCourse for accurate AVETMISS reporting, but
+				you can set 70 for other, intenal data management, reasons.</para>
+		</section>
+		<section>
+			<title>What happens if a set an outcome status only applicable to one state in onCourse,
+				like '90 - Status no result QLD' but report that data to another state?</title>
+			<para> It will produce an error in lodgement if you manage to export a 90 (if one of the
+				overrides don't replace it with a 70 or 85) because 90 is not a valid Outcomes
+				status according to the AVETMISS 8 documentation (It was only a valid value in
+				AVETMISS 7 and is still valid in QLD).</para><para>For example, If you had the
+				following outcomes with the following values in onCourse: </para><para>Outcome A
+				starts 1/1/2018 ends 30/6/2018 status = 90 </para><para>Outcome B starts 1/1/208
+				ends 31/12/2018 status = 90 </para><para>Outcome C starts 1/8/2018 ends 31/12/2018
+				status = 90 </para><para>And ran an AVETMISS export now of any flavour (13/7/2018),
+				you'd get</para><para>Outcome A starts 1/1/2018 ends 30/6/2018 status = 90 : exports
+				the value in the database, because the outcome has ended (this should throw an error
+				in the external validation system, because 90 is not an allowed outcome anymore)
+				</para><para>Outcome B starts 1/1/208 ends 31/12/2018 status = 70 : overrides to 70
+				because the dates say this is in progress and is the only possibly valid
+				outcome</para><para>Outcome C starts 1/8/2018 ends 31/12/2018 status = 85 :
+				overrides to 85 because the dates say this is not yet started and is the only
+				possible valid outcome</para> 
+			<para>Conversely, if you had set the following: </para>
+		<para>Outcome A starts 1/1/2018 ends 30/6/2018 status = 70 </para>
+			<para>Outcome B starts 1/1/208 ends 31/12/2018 status = 70 </para>
+			<para>Outcome C starts 1/8/2018 ends 31/12/2018 status = 70 </para>
+			<para>And ran an AVETMISS export now of any flavour (13/7/2018), you'd get</para> 
+			<para>Outcome A starts 1/1/2018 ends 30/6/2018 status = 70 : exports the value in the database,
+				because the outcome has ended (this will throw an error in the external validation
+				system, because 70 is not an allowed outcome when it has ended and the onCourse
+				helper won't pick it up as a suggested outcome that needs a final status because you
+				shouldn't have set it to 70 in the first place) </para>
+			<para>Outcome B starts 1/1/208 ends 31/12/2018 status = 70 : exports as 70, not because
+				you set it, but because the dates say this is in progress and is the only possibly
+				valid outcome</para> 
+			<para>Outcome C starts 1/8/2018 ends 31/12/2018 status = 85 : overrides to 85 because the dates
+				say this is not yet started and is the only possible valid outcome</para>
+			<para>And if you had set the following: </para>
+			<para>Outcome A starts 1/1/2018 ends 30/6/2018 status = not set </para>
+			<para>Outcome B starts 1/1/208 ends 31/12/2018 status = not set </para>
+			<para>Outcome C starts 1/8/2018 ends 31/12/2018 status = not set </para>
+			<para>And ran an AVETMISS export now of any flavour (13/7/2018), you'd get:</para>
+			<para>Outcome A starts 1/1/2018 ends 30/6/2018 status = 00 : if you doing nothing but the
+				AVETMISS runner helper suggests you should set a final status or push the end date
+				forward by 7 days and report it as a 70 </para>
+			<para>Outcome B starts 1/1/208 ends 31/12/2018 status = 70 : exports as 70 because the
+				dates say this is in progress and is the only possibly valid outcome </para><para>Outcome C
+				starts 1/8/2018 ends 31/12/2018 status = 85 : overrides to 85 because the dates say
+				this is not yet started and is the only possible valid outcome </para>
 		</section>
 	</section>
 </chapter>

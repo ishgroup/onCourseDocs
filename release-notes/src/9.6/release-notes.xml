@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.6'>
+  <info>
+    <title>Release 9.6</title>
+    <pubdate>28 Jul 2018</pubdate>
+  </info>
+  <section role='important'>
+    <title>Important changes</title>
+    <para> </para>
+  </section>
+  <section role='major'>
+    <title>Major features</title>
+    <para>onCourse now supports Java 9, 10 and 11. You can upgrade your local installation of Java past version 8 now, although there is no need to do so until Java 8 is discontinued in 2019.</para>
+    <para>We have also completely rebuilt the user interface for general preferences. There are only minor functional changes as this is our prototype of the new UI which will be progressively rolled out across the whole application. We welcome feedback on the usability of these changes.</para>
+    <para>The third major change in this release is a complete rebuild of the way the server application initialises itself. Although this isn't a user visible change, it will help us to better fine tune server caching, memory usage and performance.</para>
+  </section>
+
+  <section role='scripts'>
+    <title>Reports and scripts</title>
+    <itemizedlist>
+      <listitem>
+        <para>No survey reports will generate - error message running report
+          <systemitem>OD-11771</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Cancelled class count report total doesn't match total value of records selected
+          <systemitem>OD-11796</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Tax Invoice report missing Discount column
+          <systemitem>OD-11889</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Smart &amp; Skilled reporting 85 - Not Yet Stared and TNC for Did Not Start outcome results
+          <systemitem>OD-11982</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+
+    <section role='minor'>
+      <title>Minor features</title>
+      <itemizedlist>
+        <listitem>
+          <para>Feature to duplicate data collection forms
+            <systemitem>OD-10821</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Custom fields can now be sorted
+            <systemitem>OD-11017</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Data Collection rules for payer and parent. You can now create rules for collecting data from people who are the payer or the parent on an online enrolment.
+            <systemitem>OD-11918</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>New generic import to unsubscribe contacts from marketing materials
+            <systemitem>OD-11962</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='fixes'>
+      <title>Fixes</title>
+      <itemizedlist>
+        <listitem>
+          <para>onCourse ish blog entries are again shown in menu.
+            <systemitem>OD-11127</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Transfer process not applying contra payments as expected
+            <systemitem>OD-11844</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Application might lock up when clicking next in class edit view on Budget tab
+            <systemitem>OD-11882</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Make 'vouchers' a printable entity
+            <systemitem>OD-11890</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS export runner checkbox for override displays when there is no count of records
+            <systemitem>OD-11903</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Duplicate and reverse invoice with payment plan is always invalid
+            <systemitem>OD-11922</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contacts: 'Custom fields' tab which contains mandatory fields is not highlighted in red
+            <systemitem>OD-11926</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Next Steps sends to students already attended course entity
+            <systemitem>OD-11934</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Change completed outcomes without a status range to include today
+            <systemitem>OD-11940</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Outcome override rules are incorrect when 'Did not start' outcome status is present
+            <systemitem>OD-11946</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Survey Report Error
+            <systemitem>OD-11947</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS 8 NAT00080 Client Name for Encryption was incorrect for single name students
+            <systemitem>OD-11950</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='web'>
+      <title>Web features</title>
+      <itemizedlist />
+    </section>
+    <section role='web-fixes'>
+      <title>Web fixes</title>
+      <itemizedlist />
+    </section>
+  </section>
+</chapter>

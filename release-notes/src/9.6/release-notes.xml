@@ -19,22 +19,22 @@
     <title>Reports and scripts</title>
     <itemizedlist>
       <listitem>
-        <para>No survey reports will generate - error message running report
+        <para>Fixed an error in the Course Completiton Survey reports that makes the print process fail when one or more survey responses has a blank response
           <systemitem>OD-11771</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Cancelled class count report total doesn't match total value of records selected
+        <para>Fixed an error where the Cancelled Class report was including records that should be suppressed
           <systemitem>OD-11796</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Tax Invoice report missing Discount column
+        <para>Fixed the plain text version of the Tax Invoice report to show the missing Discount column
           <systemitem>OD-11889</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Smart &amp; Skilled reporting 85 - Not Yet Stared and TNC for Did Not Start outcome results
+        <para>Updated Smart and Skilled (NSW) export flavour to reflect recent changes around reporting requirements. Please refer to Smart and Skilled update 64 for more information.
           <systemitem>OD-11982</systemitem>
         </para>
       </listitem>
@@ -45,23 +45,23 @@
       <title>Minor features</title>
       <itemizedlist>
         <listitem>
-          <para>Feature to duplicate data collection forms
+          <para>Added the ability to duplicate data collection forms
             <systemitem>OD-10821</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Custom fields can now be sorted
+          <para>Custom fields created in onCourse Preferences can now be manually sorted by dragging and dropping them on the page
             <systemitem>OD-11017</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Data Collection rules for payer and parent. You can now create rules for collecting data from people who are the payer or the parent on an online enrolment.
+          <para>Added Data Collection rules for payer and parent. You can now create separate rules for collecting data from people who are the allocated payer 
+            or the parent on an online enrolment.
             <systemitem>OD-11918</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>New generic import to unsubscribe contacts from marketing materials
-            <systemitem>OD-11962</systemitem>
+          <para>New import CSV 'onCourse contact update subscriptions CSV import' added to onCourse. Lets you set marketing flags for contacts via CSV import.
           </para>
         </listitem>
       </itemizedlist>
@@ -70,62 +70,57 @@
       <title>Fixes</title>
       <itemizedlist>
         <listitem>
-          <para>onCourse ish blog entries are again shown in menu.
+          <para>onCourse ish blog entries are again shown in the menu.
             <systemitem>OD-11127</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Transfer process not applying contra payments as expected
+          <para>Fixed an issue where the transfer process was not applying contra payments as expected
             <systemitem>OD-11844</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Application might lock up when clicking next in class edit view on Budget tab
+          <para>Fixed an issue where the application could lock up when clicking 'next' in class edit view on the Budget tab
             <systemitem>OD-11882</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Make 'vouchers' a printable entity
+          <para>'Vouchers' are now a printable entity, meaning they can be printed as a report
             <systemitem>OD-11890</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>AVETMISS export runner checkbox for override displays when there is no count of records
+          <para>Amended some logic in the AVETMISS export window that showed an override checkbox without context
             <systemitem>OD-11903</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Duplicate and reverse invoice with payment plan is always invalid
+          <para>Fixed an error where you couldn't duplicate and reverse an invoice with an attached payment plan
             <systemitem>OD-11922</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Contacts: 'Custom fields' tab which contains mandatory fields is not highlighted in red
+          <para>Contacts: The 'Custom fields' tab will now show in red when an error exists within a mandatory custom field
             <systemitem>OD-11926</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Next Steps sends to students already attended course entity
+          <para>Fixed an error that caused the 'alert students of related class' script to send to students who were already enrolled
             <systemitem>OD-11934</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Change completed outcomes without a status range to include today
-            <systemitem>OD-11940</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Outcome override rules are incorrect when 'Did not start' outcome status is present
+          <para>Updated override information that displays for AVETMISS export flavour formats STSOnline and SA
             <systemitem>OD-11946</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Survey Report Error
+          <para>Fixed an error in the Survey Report caused when every survey related to one of the selected classes has one or more scores set to equal 0
             <systemitem>OD-11947</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>AVETMISS 8 NAT00080 Client Name for Encryption was incorrect for single name students
+          <para>Fixed an AVETMISS 8 error where NAT00080 'Client Name for Encryption' was incorrectly set for single name students
             <systemitem>OD-11950</systemitem>
           </para>
         </listitem>

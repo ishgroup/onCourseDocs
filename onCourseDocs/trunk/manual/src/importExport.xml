@@ -12,27 +12,26 @@
 			<title>onCourse Export files</title>
 			<para>Go to File > Preferences > Export templates to see the list of export files available in
 				your onCourse application. </para>
-			<para> The list of exports available to you will include
-					those supplied as part of the default onCourse application configuration and any
-					additional custom exports you have created or have commisioned ish to create on
-					your behalf.</para>
-			<para>Generally, export files that end with CSV (comma seperated files) are designed to
-				be opened, viewed and edited in a plain text editor or spreadsheet application.
-				These are flat files containing columns and rows of data. Export files that end with
-				XML (eXtensible Markup Language) are designed to be imported into other software
+			<para> The list of exports available to you will include those supplied as part of the default
+				onCourse application configuration and any additional custom exports you have
+				created or have commissioned ish to create on your behalf.</para>
+			<para>Generally, export files that end with CSV (comma separated files) are designed to be
+				opened, viewed and edited in a plain text editor or spreadsheet application. These
+				are flat files containing columns and rows of data. Export files that end with XML
+				(eXtensible Markup Language) are designed to be imported into other software
 				applications and represent a relational data structure.</para>
 			<para>Each export displayed in this list has a Name, Entity, Code and Version Number. </para>
 			<para>The Name is a descriptor of the export and usually includes information about the
 				export format type. </para>
 			<para>The Entity is the object in the database that the export is joined to, and will
 				indicate which list view you will be able to find this export. </para>
-			<para>The Code is a unique identifier for the export and when supplied by ish as part of
-				the default onCourse application will begin with 'ish'. When the export is custom,
-				is should begin with an identifing acronym for the organisation. The last part of
-				the code defines the export file type, for example, CSV or XML.</para>
-			<para>The Version number allows ish to automatically update the export, for example, to
-				add additional fields as they are added to the database strucutre, when new versions
-				of the onCourse application are deployed.</para>
+			<para>The Code is a unique identifier for the export and when supplied by ish as part of the
+				default onCourse application will begin with 'ish'. When the export is custom, is
+				should begin with an identifying acronym for the organisation. The last part of the
+				code defines the export file type, for example, CSV or XML.</para>
+			<para>The Version number allows ish to automatically update the export, for example, to add
+				additional fields as they are added to the database structure, when new versions of
+				the onCourse application are deployed.</para>
 			<para>You can double click on the export record in the list to see the structure of the
 				export file, what fields are included and what formatting is applied. </para>
 			<mediaobject>
@@ -41,7 +40,7 @@
 						fileref="images/exports/export_template_list.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>Listview showing the exports available in onCourse</para>
+					<para>List view showing the exports available in onCourse</para>
 				</caption>
 			</mediaobject>
 		</section>
@@ -112,12 +111,11 @@
 				<title>Exporting class information to create a print brochure</title>
 				<para>Begin by opening the Classes window and running a query or otherwise selecting the range
 					of classes you wish to export for the brochure.</para>
-				<para>From the export options, select 'Indesign Brochure XML export' and save the
-					resulting file to a location on your computer. This default layout includes the
-					information from the course general tab 'Print brochure description' and
-					combines it with the class summary information including location, cost, start
-					date and time and tutor. The information is grouped by the Subject tag
-					heirachy.</para>
+				<para>From the export options, select 'InDesign Brochure XML export' and save the resulting file
+					to a location on your computer. This default layout includes the information
+					from the course general tab 'Print brochure description' and combines it with
+					the class summary information including location, cost, start date and time and
+					tutor. The information is grouped by the Subject tag hierarchy.</para>
 <para>The XML file is designed to be imported into a publishing product such as Adobe InDesign and
 					then customised however you wish with the addition of styles and images. The XML
 					tags in the onCourse export can be mapped to styles in InDesign, allowing the
@@ -289,8 +287,8 @@
 				<para>
 					<orderedlist>
 						<listitem>
-							<para>Highligh the invoice records you wish to export information for
-								from within the Invoice window.</para>
+							<para>Highlight the invoice records you wish to export information for from within the
+								Invoice window.</para>
 						</listitem>
 						<listitem>
 							<para>Go to File > Import/Export > Export Invoices/Credit notes or
@@ -334,16 +332,12 @@
 			</tip>
 		</section>
 	</section>
-	<section><title>Customing export templates</title>
-		<procedure>
-			<step>
-				<para/>
-			</step>
-		</procedure><para>There are a range of options for creating custom exports in onCourse. What you choose depends
+	<section><title>Customising export templates</title>
+<para>There are a range of options for creating custom exports in onCourse. What you choose depends
 			on your familiarity with database structures, queries and the Groovy language.</para><orderedlist>
 			<listitem>
-				<para>Copy an exisiting export to make a new export file, and then make changes to
-					the copy</para>
+				<para>Copy an existing export to make a new export file, and then make changes to the
+					copy</para>
 			</listitem>
 			<listitem>
 				<para>Create a new export from scratch</para>
@@ -379,7 +373,7 @@ records.each { AccountTransaction t ->
 ]]></programlisting>
 		<section>
 			<title>Creating a new export in onCourse</title>
-			<para>The simplist way to begin this process is to find an exsiting export from the entity to
+			<para>The simplest way to begin this process is to find an existing export from the entity to
 				copy and use as the basis of your new export.</para>
 			<para>For example, if I wanted a new export for Tutor data that started from the Contact entity,
 				I'd choose the default 'Contact CSV export' as my starting point.</para>
@@ -468,8 +462,8 @@ csv &lt;&lt; [ </programlisting>
 					<para>In this example, the addition of the question mark character is a safe-navigation
 						operator to avoid the export throwing a null pointer exception. Null pointer
 						exceptions occur when the export can not follow the join you have defined
-						because it doesn't exisit (i.e. not every contact selected for export will
-						be a tutor, so if there is a non-tutor contact included, adding the
+						because it doesn't exist (i.e. not every contact selected for export will be
+						a tutor, so if there is a non-tutor contact included, adding the
 						safe-navigation operator just means the export will skip past this field for
 						that record.)</para>
 				</listitem>
@@ -500,9 +494,8 @@ csv &lt;&lt; [ </programlisting>
 							companyName.onCourse.exportName.exportType</para>
 					</listitem>
 					<listitem>
-						<para>Join your export to the corect entity. The name must be spelt exactly
-							as it appears in the DSL documentation with the correct
-							capitalisation.</para>
+						<para>Join your export to the correct entity. The name must be spelt exactly as it appears in
+							the DSL documentation with the correct capitalisation.</para>
 					</listitem>
 					<listitem>
 						<para>Copy and paste your code into the body 'script' and save your
@@ -591,8 +584,7 @@ csv &lt;&lt; [ </programlisting>
 				</imageobject>
 			</mediaobject>
 		</section>
-		<section xml:id="importExport_InDesign"><title>Exporting to Adobe Indesign</title><para>onCourse
-				already comes with a template for exporting to Adobe Indesign.</para><para>
+		<section xml:id="importExport_InDesign"><title>Exporting to Adobe InDesign</title><para>onCourse already comes with a template for exporting to Adobe InDesign.</para><para>
 				<orderedlist>
 					<listitem>
 						<para>Open the class list view</para>
@@ -602,12 +594,12 @@ csv &lt;&lt; [ </programlisting>
 							brochure. This might be one or a thousand classes.</para>
 					</listitem>
 					<listitem>
-						<para>Choose "Import/Export" from the File menu and select "Export classes".
-							Select the "Indesign Brochure" output format. Export this data and save
-							it to disk somewhere. It will be an XML file, ready for inDesign.</para>
+						<para>Choose "Import/Export" from the File menu and select "Export classes". Select the
+							"InDesign Brochure" output format. Export this data and save it to disk
+							somewhere. It will be an XML file, ready for InDesign.</para>
 					</listitem>
 				</orderedlist>
-			</para><para>Now fire up Adobe Indesign and import this file.<orderedlist>
+			</para><para>Now fire up Adobe InDesign and import this file.<orderedlist>
 					<listitem>
 						<para>
 							<menuchoice>
@@ -634,12 +626,11 @@ csv &lt;&lt; [ </programlisting>
 							mapping so that next time you create this document with fresh data all
 							the styles are linked quickly and simply.</para>
 					</listitem>
-				</orderedlist></para><para>If you now spend a bit of time tidying up your
-				stylesheets (both character styles and paragraph styles) in inDesign you can set up
-				the whole process to be almost completely automated. Next time you export from
-				onCourse, the data will flow right into inDesign complete with all the formatting
-				you need. Just paginate your brochure, place in some pictures and you are
-				done.</para>
+				</orderedlist></para><para>If you now spend a bit of time tidying up your stylesheets (both character styles and
+				paragraph styles) in InDesign you can set up the whole process to be almost
+				completely automated. Next time you export from onCourse, the data will flow right
+				into InDesign complete with all the formatting you need. Just paginate your
+				brochure, place in some pictures and you are done.</para>
 			<para>If you need to customise your export further, you can do this yourself if you have the
 				skills in house, or engage ish to make the changes for you.</para>
 		</section>
@@ -754,8 +745,8 @@ csv &lt;&lt; [ </programlisting>
 				in running this export via the Transactions window are as follows: </para>
 			<orderedlist>
 				<listitem>
-					<para>Filter and hilight the transaction records you wish to export within the
-						Transaction window</para>
+					<para>Filter and highlight the transaction records you wish to export within the Transaction
+							window</para>
 				</listitem>
 				<listitem>
 					<para>Go to File > Import/Export > Export Transactions to bring up the export

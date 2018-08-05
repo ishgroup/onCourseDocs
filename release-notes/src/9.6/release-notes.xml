@@ -128,11 +128,43 @@
     </section>
     <section role='web'>
       <title>Web features</title>
-      <itemizedlist />
+      <itemizedlist>
+        <listitem>
+          <para>Changing the class hiding date now change search results. That is, if you set classes to disappear from the website 5 days before they finish, that should change which courses are found in a search.
+            <systemitem>OD-10279</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>301 redirects now work with query string parameters (for example a URL like "/about-us?source=mail" is now redirected the same way as just "/about-us")
+            <systemitem>OD-11923</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Kiosk now displays tutor for a session where that tutor is different to the default for the class.
+            <systemitem>OD-11902</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove tutor page from the website when tutor employment termination date in the past.
+            <systemitem>OD-11760</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
     </section>
     <section role='web-fixes'>
       <title>Web fixes</title>
-      <itemizedlist />
+      <itemizedlist>
+        <listitem>
+          <para>"Near" courses search sorts results incorrectly. We were sorting by distance in the wrong units which threw off some sorting.
+            <systemitem>OD-11920</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Search "after date" before today throws error. You can use a URL like /courses?after=20180820 but previously that would only work if the date was in the future.
+            <systemitem>OD-11842</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
     </section>
   </section>
 </chapter>

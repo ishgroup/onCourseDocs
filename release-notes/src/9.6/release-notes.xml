@@ -19,17 +19,17 @@
     <title>Reports and scripts</title>
     <itemizedlist>
       <listitem>
-        <para>Fixed an error in the Course Completiton Survey reports that makes the print process fail when one or more survey responses has a blank response
+        <para>Fixed an error in the Course Completiton Survey reports that makes the print process fail when one or more survey responses has a blank response.
           <systemitem>OD-11771</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Fixed an error where the Cancelled Class report was including records that should be suppressed
+        <para>Fixed an error where the Cancelled Class report was including records that should be suppressed.
           <systemitem>OD-11796</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Fixed the plain text version of the Tax Invoice report to show the missing Discount column
+        <para>Fixed the plain text version of the Tax Invoice report to show the missing Discount column.
           <systemitem>OD-11889</systemitem>
         </para>
       </listitem>
@@ -45,12 +45,12 @@
       <title>Minor features</title>
       <itemizedlist>
         <listitem>
-          <para>Added the ability to duplicate data collection forms
+          <para>Added the ability to duplicate data collection forms.
             <systemitem>OD-10821</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Custom fields created in onCourse Preferences can now be manually sorted by dragging and dropping them on the page
+          <para>Custom fields created in onCourse Preferences can now be manually sorted by dragging and dropping them on the page.
             <systemitem>OD-11017</systemitem>
           </para>
         </listitem>
@@ -75,52 +75,52 @@
           </para>
         </listitem>
         <listitem>
-          <para>Fixed an issue where the transfer process was not applying contra payments as expected
+          <para>Fixed an issue where the transfer process was not applying contra payments as expected.
             <systemitem>OD-11844</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Fixed an issue where the application could lock up when clicking 'next' in class edit view on the Budget tab
+          <para>Fixed an issue where the application could lock up when clicking 'next' in class edit view on the Budget tab.
             <systemitem>OD-11882</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>'Vouchers' are now a printable entity, meaning they can be printed as a report
+          <para>'Vouchers' are now a printable entity, meaning they can be printed as a report.
             <systemitem>OD-11890</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Amended some logic in the AVETMISS export window that showed an override checkbox without context
+          <para>Amended some logic in the AVETMISS export window that showed an override checkbox without context.
             <systemitem>OD-11903</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Fixed an error where you couldn't duplicate and reverse an invoice with an attached payment plan
+          <para>Fixed an error where you couldn't duplicate and reverse an invoice with an attached payment plan.
             <systemitem>OD-11922</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Contacts: The 'Custom fields' tab will now show in red when an error exists within a mandatory custom field
+          <para>Contacts: The 'Custom fields' tab will now show in red when an error exists within a mandatory custom field.
             <systemitem>OD-11926</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Fixed an error that caused the 'alert students of related class' script to send to students who were already enrolled
+          <para>Fixed an error that caused the 'alert students of related class' script to send to students who were already enrolled.
             <systemitem>OD-11934</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Updated override information that displays for AVETMISS export flavour formats STSOnline and SA
+          <para>Updated override information that displays for AVETMISS export flavour formats STSOnline and SA.
             <systemitem>OD-11946</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Fixed an error in the Survey Report caused when every survey related to one of the selected classes has one or more scores set to equal 0
+          <para>Fixed an error in the Survey Report caused when every survey related to one of the selected classes has one or more scores set to equal 0.
             <systemitem>OD-11947</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Fixed an AVETMISS 8 error where NAT00080 'Client Name for Encryption' was incorrectly set for single name students
+          <para>Fixed an AVETMISS 8 error where NAT00080 'Client Name for Encryption' was incorrectly set for single name students.
             <systemitem>OD-11950</systemitem>
           </para>
         </listitem>
@@ -130,22 +130,22 @@
       <title>Web features</title>
       <itemizedlist>
         <listitem>
-          <para>Changing the class hiding date now change search results. That is, if you set classes to disappear from the website 5 days before they finish, that should change which courses are found in a search.
+          <para>Changing the class hiding date will now change search results. That is, if you set classes to disappear from the website 5 days before they finish, that should change which courses are found in a search.
             <systemitem>OD-10279</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>301 redirects now work with query string parameters (for example a URL like "/about-us?source=mail" is now redirected the same way as just "/about-us")
+          <para>301 redirects now work with query string parameters (for example a URL like "/about-us?source=mail" is now redirected the same way as just "/about-us").
             <systemitem>OD-11923</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Kiosk now displays tutor for a session where that tutor is different to the default for the class.
+          <para>Kiosk now displays the tutor for a session where that tutor is different to the default for the class.
             <systemitem>OD-11902</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Remove tutor page from the website when tutor employment termination date in the past.
+          <para>Remove the tutor page from the website when the tutor's employment termination date in the past.
             <systemitem>OD-11760</systemitem>
           </para>
         </listitem>
@@ -155,12 +155,12 @@
       <title>Web fixes</title>
       <itemizedlist>
         <listitem>
-          <para>"Near" courses search sorts results incorrectly. We were sorting by distance in the wrong units which threw off some sorting.
+          <para>Fixed an issue where "Near" courses searched sorts results incorrectly. We were sorting by distance in the wrong units which threw off some of the results.
             <systemitem>OD-11920</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Search "after date" before today throws error. You can use a URL like /courses?after=20180820 but previously that would only work if the date was in the future.
+          <para>Fixed an issue where searching for "after date before today" by URL query threw an error. You can use a URL like /courses?after=20180820 but previously that would only work if the date was in the future.
             <systemitem>OD-11842</systemitem>
           </para>
         </listitem>

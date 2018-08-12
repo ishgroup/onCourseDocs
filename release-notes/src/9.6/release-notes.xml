@@ -10,8 +10,14 @@
   </section>
   <section role='major'>
     <title>Major features</title>
-    <para>onCourse now supports Java 9, 10 and 11. You can upgrade your local installation of Java past version 8 now, although there is no need to do so until Java 8 is discontinued in 2019.</para>
-    <para>We have also completely rebuilt the user interface for general preferences. There are only minor functional changes as this is our prototype of the new UI which will be progressively rolled out across the whole application. We welcome feedback on the usability of these changes.</para>
+    <para>onCourse now supports Java 9 and 10. You can upgrade your local installation of Java past
+      version 8 now, although there is no need to do so until Java 8 is discontinued in 2019. Java
+      11 drops the webstart functionality which means you'll need to install a client onCourse
+      application manually after each upgrade. We'll have a solution for that in 2019.</para>
+    <para>We have also completely rebuilt the user interface for general preferences. There are only
+      minor functional changes as this is our prototype of the new UI which will be progressively
+      rolled out across the whole application. We welcome feedback on the usability of these
+      changes.</para>
     <para>The third major change in this release is a complete rebuild of the way the server application initialises itself. Although this isn't a user visible change, it will help us to better fine tune server caching, memory usage and performance.</para>
   </section>
 
@@ -19,8 +25,9 @@
     <title>Reports and scripts</title>
     <itemizedlist>
       <listitem>
-        <para>Fixed an error in the Course Completiton Survey reports that makes the print process fail when one or more survey responses has a blank response.
-          <systemitem>OD-11771</systemitem>
+        <para>Fixed an error in the Course Completion Survey reports that makes the print process
+          fail when one or more survey responses has a blank response.
+            <systemitem>OD-11771</systemitem>
         </para>
       </listitem>
       <listitem>
@@ -160,9 +167,10 @@
       <title>Web fixes</title>
       <itemizedlist>
         <listitem>
-          <para>Fixed an issue where "Near" courses searched sorts results incorrectly. We were sorting by distance in the wrong units which threw off some of the results.
+          <para>Fixed an issue where "Near" courses searched sorts results incorrectly. We were
+          assigning sort weight by distance in the wrong units which threw off some of the results.
             <systemitem>OD-11920</systemitem>
-          </para>
+        </para>
         </listitem>
         <listitem>
           <para>Fixed an issue where searching for "after date before today" by URL query threw an error. You can use a URL like /courses?after=20180820 but previously that would only work if the date was in the future.
@@ -171,5 +179,4 @@
         </listitem>
       </itemizedlist>
     </section>
-  </section>
 </chapter>

@@ -6,14 +6,20 @@
   </info>
   <section role='important'>
     <title>Important changes</title>
-    <para> </para>
+    <para> When you first run onCourse 9.6, it downloads all the new application resources as usual.
+      Note that this release has a very large set of new resources totalling about 190Mb so this
+      might take some time on slower connections. It is not expected that every future release will
+      be this large since it incrementally just downloads changes resources.</para>
   </section>
   <section role='major'>
     <title>Major features</title>
     <para>onCourse now supports Java 9 and 10. You can upgrade your local installation of Java past
       version 8 now, although there is no need to do so until Java 8 is discontinued in 2019. Java
       11 drops the webstart functionality which means you'll need to install a client onCourse
-      application manually after each upgrade. We'll have a solution for that in 2019.</para>
+      application manually after each upgrade. We'll have a solution for that in 2019, in the
+      meantime it will be easier if you remain on Java 10. Also note that we needed to rebuild how
+      the attendance view in the class edit screen scrolls horizontally to work around some Java 9
+      issues. This will only impact you if you have a large number of sessions in a class.</para>
     <para>We have also completely rebuilt the user interface for general preferences. There are only
       minor functional changes as this is our prototype of the new UI which will be progressively
       rolled out across the whole application. We welcome feedback on the usability of these

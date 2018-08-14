@@ -3,7 +3,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 plugins {
-    id 'com.github.ben-manes.versions' version '0.17.0' // adds the task 'dependencyUpdates'
+    id 'com.github.ben-manes.versions' version '0.20.0' // adds the task 'dependencyUpdates'
     id 'distribution'
     id 'maven'
     id 'maven-publish'
@@ -163,8 +163,4 @@ subprojects {
             }
         }
     }
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.6'
 }

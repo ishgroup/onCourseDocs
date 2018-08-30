@@ -933,4 +933,50 @@ csv &lt;&lt; [ </programlisting>
 				</table>
 			</section>
 		</section>
-	</section></chapter>
+		<section xml:id="importExport-updateSubscriptions">
+			<title>Contact Update Subscriptions CSV import</title>
+			<para>This import will allow you to update, in bulk, the email, post and sms subscription
+				preferences of a contact record, as identified by its email address. Below is an
+				example of how your CSV file should be laid out. When you format your CSV, be sure
+				to allow the table headers otherwise the import will fail.</para>
+			
+		</section>
+		<table frame="all">
+			<title>Contact Subscription Update CSV format</title>
+			<tgroup cols="4">
+				<colspec colname="c1" colnum="1" colwidth="1*"/>
+				<colspec colname="c2" colnum="2" colwidth="1*"/>
+				<colspec colname="c3" colnum="3" colwidth="1*"/>
+				<colspec colname="c4" colnum="4" colwidth="1*"/>
+				<thead>
+					<row>
+						<entry>email</entry>
+						<entry>allowEmail</entry>
+						<entry>allowPost</entry>
+						<entry>allowSms</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry>alice@email.com.au</entry>
+						<entry>TRUE</entry>
+						<entry>TRUE</entry>
+						<entry>FALSE</entry>
+					</row>
+					<row>
+						<entry>bob@email.com.au</entry>
+						<entry>TRUE</entry>
+						<entry>FALSE</entry>
+						<entry>FALSE</entry>
+					</row>
+					<row>
+						<entry>charlie@email.com.au</entry>
+						<entry>FALSE</entry>
+						<entry>FALSE</entry>
+						<entry>FALSE</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>	
+	</section>
+	</chapter>

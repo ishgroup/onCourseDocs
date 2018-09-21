@@ -21,7 +21,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 table {
-    line-height: inherit;
+	line-height: inherit;
+	border-collapse: collapse;
 }
 
 strong {
@@ -45,6 +46,10 @@ ol, ul {
 	list-style: none;
 }
 /* tables still need 'cellspacing="0"' in the markup */
+div.table-contents {
+	overflow: hidden;
+	overflow-x: auto;
+}
 div.table-contents td, div.table-contents th {
 	border-collapse: separate;
 	border-spacing: 0;
@@ -366,6 +371,7 @@ div.chapter h4, div.chapter h5 {
 
 .chapter p {
 	margin-bottom: 0.6em;
+	word-break: break-word;
 }
 
 /* Title */
@@ -562,6 +568,7 @@ pre.programlisting {
 img {
 	margin-bottom: 30px;
 	box-shadow: 3px 3px 8px #aaa;
+	max-width: 100%;
 }
 
 div.caption {

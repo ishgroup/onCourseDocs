@@ -392,4 +392,31 @@
 			tax applicable and amount outstanding. For many payers this invoice is also the payment
 			receipt where they have paid some or all of the fee on enrolment.</para>
 	</section>
+	<section>
+		<title>Avoiding spam filters</title>
+		<para>You want most of your outbound messages to be delivered successfully, so there are a few
+			tips to help this happen.</para>
+		<section>
+			<title>SPF</title>
+			<para>If you have an SPF record on your domain and is is hosting your onCourse service,
+				you'll want to add our SPF record as well. Without this, lots of your email will be
+				dropped.</para>
+			<para>
+				<programlisting>include:_spf.oncourse.cc</programlisting>
+			</para>
+		</section>
+		<section>
+			<title>Content</title>
+			<para>Write emails which contain substantial content and not just a link. Spam filters
+				analyse the words in your message for common phrases.</para>
+		</section>
+		<section>
+			<title>Reputation</title>
+			<para>Use a third party service like Mailchimp to send your bulk marketing or newsletter
+				emails and keep onCourse's messaging system for procedural emails or very targeted
+				marketing campaigns. Mail servers classify the source of email with a reputation
+				score and you don't want to damage yours unnecessarily.</para>
+		</section>
+		
+	</section>
 </chapter>

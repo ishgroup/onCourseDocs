@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.7'>
+  <info>
+    <title>Release 9.7</title>
+    <pubdate>13 Oct 2018</pubdate>
+  </info>
+  <section role='important'>
+    <title>Important changes</title>
+    <para/>
+  </section>
+  <section role='major'>
+    <title>Major features</title>
+    <section>
+      <title>New login and security screens</title>
+      <para>The entire login process (<systemitem>OD-11935</systemitem>) and the security
+        preferences (<systemitem>OD-11936</systemitem>) have been rebuilt using our new user
+        interface. Users might notice several things:</para>
+      <para>
+        <itemizedlist>
+          <listitem>the new design</listitem>
+          <listitem>a reminder to set two factor authentication</listitem>
+          <listitem>a prompt to change their password if it a bit rubbish</listitem>
+        </itemizedlist>
+      </para>
+      <para>Although we've had two factor authentication for about five years, few people have used
+        it. Yes, its slightly less convenient, but it does improve security by a huge amount, so
+        onCourse will start nagging you to turn it on at every launch. You can still ignore these
+        requests, but the administrator can enforce this policy in the new security settings. The
+        administrator can also increase the threshold of what we consider a rubbish password,
+        forcing users to pick a better one. No, replacing 'o' with '0' doesn't make a better
+        password.</para>
+    </section>
+  </section>
+  <section role='scripts'>
+    <title>Reports and scripts</title>
+    <itemizedlist>
+      <listitem>
+        <para>Accurate Program identifier reporting
+          <systemitem>OD-11340</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Smart &amp; Skilled reporting 85 - Not Yet Stared and TNC for Did Not Start outcome results
+          <systemitem>OD-11982</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <section role='minor'>
+      <title>Minor features</title>
+      <itemizedlist>
+        <listitem>
+          <para>Possible incorrect setting VCU File outcomes statuses
+            <systemitem>OD-11620</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Script to send birthday email
+            <systemitem>OD-11746</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Update contact CSV to include the standard WWCC fields
+            <systemitem>OD-11793</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Split bundle to chunks by main routes
+            <systemitem>OD-11807</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Mailing list for data collection
+            <systemitem>OD-11833</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Question mark help icon for preferences <systemitem>OD-11917</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>New generic import to unsub contacts from marketing materials
+            <systemitem>OD-11962</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>deprecate id methods in the dsl
+            <systemitem>OD-12018</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>High thread count
+            <systemitem>OD-12019</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Certificate expiry
+            <systemitem>OD-12031</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Create ANTLR grammar rules
+            <systemitem>OD-12038</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Embed AQL to Angel
+            <systemitem>OD-12085</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>eCoach integration 
+            <systemitem>OD-12108</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add to class duplication: optionally skip copying of class tags and class notes
+            <systemitem>OD-7475</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Link a manual invoice to an enrolment
+            <systemitem>OD-8284</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Duplicate invoice join to enrolment
+            <systemitem>OD-9274</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Adjust Enrolment mixin <systemitem>OD-9334</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>'to many' relation enrolment.invoiceLine
+            <systemitem>OD-9335</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='fixes'>
+      <title>Fixes</title>
+      <itemizedlist>
+        <listitem>
+          <para>Special Smart &amp; Skilled and SkillsTAS NAT00130 rules no longer apply
+            <systemitem>OD-11753</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>onCourse login doesn't show 2FA token field
+            <systemitem>OD-11878</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>No from email address defined in default script 'send product purchased email'
+            <systemitem>OD-11928</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS 8 defect: NAT00080 - Client Name for Encryption: single name students
+            <systemitem>OD-11950</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Can't add VET modules to course on OS X webstart with Java 10
+            <systemitem>OD-11997</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Scrolling bug in Class Attendance tab
+            <systemitem>OD-12004</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Invoices - COS account not appearing in Invoice Detail as expected
+            <systemitem>OD-12005</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Scripts are sending emails twice
+            <systemitem>OD-12012</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Don't save Sessions information for Class record until sessions are added
+            <systemitem>OD-12014</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Authorisation for preferences
+            <systemitem>OD-12024</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Attendance screen doesn't line up
+            <systemitem>OD-12042</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Attendance screen mark whole column
+            <systemitem>OD-12043</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='web'>
+      <title>Web features</title>
+      <itemizedlist />
+    </section>
+    <section role='web-fixes'>
+      <title>Web fixes</title>
+      <itemizedlist />
+    </section>
+  </section>
+</chapter>

@@ -2,7 +2,7 @@
 <chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.7'>
   <info>
     <title>Release 9.7</title>
-    <pubdate>13 Oct 2018</pubdate>
+    <pubdate>17 Oct 2018</pubdate>
   </info>
   <section role='important'>
     <title>Important changes</title>
@@ -19,16 +19,27 @@
         <itemizedlist>
           <listitem>the new design</listitem>
           <listitem>a reminder to set two factor authentication</listitem>
-          <listitem>a prompt to change their password if it a bit rubbish</listitem>
+          <listitem>a prompt to change their password if it low quality</listitem>
         </itemizedlist>
       </para>
-      <para>Although we've had two factor authentication for about five years, few people have used
+      <para>Although we've had two factor one-time-passwords (OTP) for about five years, few people have used
         it. Yes, its slightly less convenient, but it does improve security by a huge amount, so
         onCourse will start nagging you to turn it on at every launch. You can still ignore these
-        requests, but the administrator can enforce this policy in the new security settings. The
+        requests, but the administrator can enforce a OTP policy in the new security settings. The
         administrator can also increase the threshold of what we consider a rubbish password,
-        forcing users to pick a better one. No, replacing 'o' with '0' doesn't make a better
-        password.</para>
+        forcing users to change to a better one.</para>
+    </section>
+    <section>
+      <title>Special interests in data collection</title>
+          <para>With mailing lists being removed from onCourse (everyone is using more specialised advanced tools like Mailchimp), we've repurposed the old functionality into 'special interests' <systemitem>OD-11833</systemitem>. This means that you can now add Contact tags into data collection rules and make them part of the questions you ask during enrolment, applications or waiting list.</para>
+          <para>For example, you might like a set of checkboxes whenever someone adds themselves to a waiting list</para>
+          <para><programlisting>
+Other than this course, what other areas of training are you interested in:
+[ ] leisure courses
+[ ] languages
+[ ] computer courses
+            </programlisting></para>
+          <para>Or, ask specific questions about experience, work history or profession as part of the enrolments process. Any set of Contact tags in onCourse can now be entered by students directly if you choose to make them part of a Data Collection rule.</para>
     </section>
   </section>
   <section role='scripts'>
@@ -42,6 +53,11 @@
       <listitem>
         <para>Smart &amp; Skilled reporting 85 - Not Yet Stared and TNC for Did Not Start outcome results
           <systemitem>OD-11982</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Update contact CSV export to include the standard WWCC fields
+          <systemitem>OD-11793</systemitem>
         </para>
       </listitem>
     </itemizedlist>
@@ -59,21 +75,6 @@
           </para>
         </listitem>
         <listitem>
-          <para>Update contact CSV to include the standard WWCC fields
-            <systemitem>OD-11793</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Split bundle to chunks by main routes
-            <systemitem>OD-11807</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Mailing list for data collection
-            <systemitem>OD-11833</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Question mark help icon for preferences <systemitem>OD-11917</systemitem>
           </para>
         </listitem>
@@ -83,33 +84,13 @@
           </para>
         </listitem>
         <listitem>
-          <para>deprecate id methods in the dsl
+          <para>Deprecate id methods in the dsl. You should rarely be using the record ids directly in an onCourse script and we've now removed them from the documentation. They will still work for now.
             <systemitem>OD-12018</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>High thread count
-            <systemitem>OD-12019</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Certificate expiry
+          <para>Certificate expiry. You can now add an expiry date to a certificate record. Although VET certificates don't expire according to the standard, there are many cases where other bodies require regular recertification such as First Aid.
             <systemitem>OD-12031</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Create ANTLR grammar rules
-            <systemitem>OD-12038</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Embed AQL to Angel
-            <systemitem>OD-12085</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>eCoach integration 
-            <systemitem>OD-12108</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -120,20 +101,6 @@
         <listitem>
           <para>Link a manual invoice to an enrolment
             <systemitem>OD-8284</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Duplicate invoice join to enrolment
-            <systemitem>OD-9274</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Adjust Enrolment mixin <systemitem>OD-9334</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>'to many' relation enrolment.invoiceLine
-            <systemitem>OD-9335</systemitem>
           </para>
         </listitem>
       </itemizedlist>

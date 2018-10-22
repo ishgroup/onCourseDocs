@@ -3,12 +3,56 @@
     version="5.0" xml:id="users">
     <title>Users and Authentication</title>
     <section xml:id="users-Users">
-        <title>Users</title>
-        <para>To find the full list of onCourse users go File -> Preferences -> Users. You then have the 
-            abiltiy to add new users or edit existing users details such as their name, email address, 
-            access level or password. Only users with admin rights will be able to see, edit and add users, 
-            everyone else can only edit their own user settings. There are no limits to the number of users in 
-            onCourse. Users should be deactivated if they leave your organisation.</para>
+        <title>Security Settings</title>
+        <para>New to onCourse 9.7 is the Security section, found in File > Preferences > Security.
+            Along with some standard security-related preferences, here you will find a full list of
+            users with login access to your onCourse application and data, along with the different
+            user roles you have defined within onCourse. </para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/security_settings.png" format="png"/>
+            </imageobject>
+            <caption>
+                <para>The new Security window</para>
+            </caption>
+        </mediaobject>
+        <para>The first section is called 'Settings', containing onCourse's main security related
+            preferences, including rules around enforcing two-factor authentication. You have the
+            following preferences to switch on or off:<itemizedlist>
+                <listitem>
+                    <para><emphasis role="bold">Automatically disable inactive accounts</emphasis> -
+                        this will disable accounts that haven't logged in after a set number of
+                        days. </para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Require better passwords</emphasis> - when enabled,
+                        this feature demands the use of a more secure password. When enabled, it
+                        will typically reject any common passwords and enforce a higher standard of
+                        password to be used by all users.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Require password change every &lt;x> days</emphasis>
+                        - When enabled, this feature will demand users change their password every
+                        set number of days. You can change the number of days manually by clicking
+                        the number in the field.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Require two-factor authentication every &lt;x>
+                            hours</emphasis> - When enabled, this will require all users to get a
+                        new authorisation via a third-party authorisation app after the set number
+                        of hours. You can change the number of hours manually by editing the number
+                        in the field.</para>
+                </listitem>
+            </itemizedlist></para>
+    </section>   
+    <section>
+        <title>Users</title>  
+        <para>You then have the abiltiy to add new users or edit existing users details such as
+            their name, email address, access level or password. Only users with admin rights will
+            be able to see, edit and add users, everyone else can only edit their own user settings.
+            There are no limits to the number of users in onCourse. Users should be deactivated if
+            they leave your organisation.</para>
         <para>Every person in the organisation who uses onCourse should have their own user account.
             We do not recommend users 'share' a login as various user layout preferences are saved
             against each user account. Important records created in onCourse like invoices, payments
@@ -22,7 +66,11 @@
                     something simple to remember like 'John'.</para>
             </listitem>
             <listitem>
-                <para>Password</para>
+                <para>Password - this is where you enter a new user's password. Only visible when
+                    creating a new user.</para>
+            </listitem>
+            <listitem>
+                <para>Reset Password - reset the selected user's password.</para>
             </listitem>
             <listitem>
                 <para>First Name</para>
@@ -39,7 +87,7 @@
             </listitem>
             <listitem>
                 <para>Email - the users primary email address (this email address will be used for
-                    the CMS login process)</para>
+                    the CMS login process).</para>
             </listitem>
             <listitem>
                 <para>Active - selecting this allows the user to login to onCourse. If active is
@@ -52,13 +100,17 @@
             </listitem>
             <listitem>
                 <para>Last logged in - not editable, just tells you when that user last logged into
-                    onCourse</para>
+                    onCourse.</para>
             </listitem>
             <listitem>
                 <para>Can edit CMS - this is a special permission that allows this user to login to
                     your website via the CMS URL and make changes to the website pages directly. You
                     do not need this permission to edit website content like courses, classes and
                     products via onCourse.</para>
+            </listitem>
+            <listitem>
+                <para>2FA status - displays whether this user has two-factor authentication enabled
+                    or not.</para>
             </listitem>
         </itemizedlist>
         <mediaobject>
@@ -72,9 +124,6 @@
         </mediaobject>
         <section>
             <title>Changing user settings and passwords</title>
-            <para>For an onCourse user who has edit rights to the user accounts, the password for
-                any other user account can be reset by clicking 'reset password' in the user record.
-                This is useful when users forget their passwords and are unable to login.</para>
         <para>A user can change their own password by going File -> Preferences -> and click on the
                 option 'Change my password' at any time. Once they do this a window will pop up
                 asking them to enter what they would like their new password to be.</para>
@@ -102,116 +151,480 @@
                 <para>Switching the administration centre</para>
             </caption>
         </mediaobject>
-    </section>
         <section>
-            <title>Preventing users from logging in twice concurrently</title>
-            <para>If you try and log into onCourse with the same login credentials as a user that is
-                already logged in, then a window will pop up asking you what you want to do. You
-                will then have the option to quit your log in attempt, or log in and kick the other
-                user using the same log in details out. So to prevent this from happening it's best
-                to always have your own username and password to log in with.</para>
+            <title>Require password change</title>    
+                    <para>An administrator can request a user change their password at their next
+                        login by hitting the 'require password change' button under 'Users'. </para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/user_already_logged_in.png" format="png"/>
+                        fileref="images/require_password_change.png" format="png"/>
                 </imageobject>
-                <caption>
-                    <para>Users who try and log in twice concurrently</para>
-                </caption>
+                <caption>When your administrator requests a new password, you'll see this
+                        screen</caption>
             </mediaobject>
         </section>
-        <section>
-            <title>Users List view and Find Related</title>
-            <para>All users you create in onCourse will appear in this list view. Double-click the record 
-            to open and view it in greater detail. You can use the Find Related button on the page to search 
-            for the following reocords related to the specifically highlighted user:</para>
-            <itemizedlist>
-                <listitem>
-                    <para>Messages</para>
-                </listitem>
-            </itemizedlist>
-            <itemizedlist>
-                <listitem>
-                    <para>Invoices</para>
-                </listitem>
-            </itemizedlist>
-            <itemizedlist>
-                <listitem>
-                    <para>Payments In</para>
-                </listitem>
-            </itemizedlist>
-            <itemizedlist>
-                <listitem>
-                    <para>Payments Out</para>
-                </listitem>
-            </itemizedlist>
-            <itemizedlist>
-                <listitem>
-                    <para>Audits</para>
-                </listitem>
-            </itemizedlist>
+        <section> 
+            <title>Require better passwords</title>
+            <para>If you have this setting enabled, the application will demand a better quality of
+                    password from your users, rejecting simple passwords e.g. a sequence of numbers
+                    or anything containing the word 'password'. If a user logs in and their password
+                    is deemed unsecure, they will see a pop up prompting them to create a new
+                    one.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/users_find_related.png" format="png"/>
+                        fileref="images/password_minimum_requirements.png" format="png"/>
                 </imageobject>
                 <caption>
-                    <para>Users List View showing Find related options</para>
+                    <para>The prompt asking for a more secure password</para>
                 </caption>
             </mediaobject>
         </section>
+            <section>
+                <title>Preventing users from logging in twice concurrently</title>
+                <para>If you try and log into onCourse with the same login credentials as a user that is
+                    already logged in, then a window will pop up asking you what you want to do. You
+                    will then have the option to quit your log in attempt, or log in and kick the other
+                    user using the same log in details out. So to prevent this from happening it's best
+                    to always have your own username and password to log in with.</para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="100%" contentdepth="100%"
+                            fileref="images/user_already_logged_in.png" format="png"/>
+                    </imageobject>
+                    <caption>
+                        <para>Users who try and log in twice concurrently will see this screen</para>
+                    </caption>
+                </mediaobject>
+            </section>    
+        </section>    
     </section>
-    <section xml:id="users-TOTP">
-        <title>onCourse Login with Two Factor Authentication</title>
-        <para>Two factor authentication is an added layer of security for users accessing onCourse
+
+        <section>
+            <title>User Roles</title>
+        <para>Access rights restrict what parts of onCourse users can modify, print, view or delete.
+            This is an advanced feature, available for onCourse "Professional and Enterprise"
+            customers. Four pre-defined user roles are available within the system, Enrolment
+            Officer, Administration Manager, Course Manager and Financial Manager. You can modify
+            these and create new access rights groups as needed. Each user within your organisation
+            can be given Admin access rights (full access) or be added to any of your access groups.
+            Select the access rights when creating or editing user profiles, as above.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/security_user_roles.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>Users who try and log in twice concurrently will see this screen</para>
+                </caption>
+            </mediaobject>
+            <section>
+			<title>Creating and Editing User Roles</title>
+			<para>To access the "Users" menu, in onCourse go to File > Preferences > Access.</para>
+			<para>Here you can create roles for users, such as "Administration Manager." Some
+				default access roles have been created in onCourse however you should edit these and
+				create roles applicable to your own organisation.</para>
+			<para>Each onCourse user should be assigned to a user role that defines their access
+				levels, by default all new users created will have full admin access to all aspects
+				of onCourse.</para>
+			<para>You can edit an existing access role by double clicking on it, or create new
+				access roles using the + button in the top right hand corner of the window.</para>
+			<itemizedlist>
+				<title>Before we delve into the specifics of the Access menu, it's important to know
+					what each option means. If an option like "create" is greyed out, it means that
+					part of onCourse can't be restricted.</title>
+				<listitem>
+					<para><emphasis role="bold">View:</emphasis> A view permission only allows the contact to see
+                        data already created, but does not allow existing records to be edited or
+                        new records to be created.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Edit: </emphasis>Allows both edit and view rights.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Create:</emphasis> Allows the creation of new records, edit and
+                        view rights.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Delete: </emphasis>Allows record deletion where permitted by
+                        onCourse validation. Linked and locked records can not be deleted just
+                        because a user has delete rights.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Print:</emphasis> Allows printing of reports associated with this
+                        record type</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Hide:</emphasis> Some processes only have one level of access -
+                        allow. If this option is not ticked, it means the ability to run the process
+                        is denied and the element is hidden from use.</para>
+				</listitem>
+			</itemizedlist>
+			<itemizedlist>
+				<title>What can you edit in the "Access" menu?</title>
+				<listitem>
+					<para><emphasis role="bold">Name: </emphasis>here you define the name of the role, e.g;
+                        "Administration Manager".</para>
+				</listitem>
+				<listitem>
+					<para>People and companies</para>
+					<itemizedlist>
+						<listitem>
+							<para>Contact: this refers to all onCourse students, tutors and companies. Full create rights
+								are recommended for any user who needs to process enrolments as new
+								contacts are often created at this time.</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Course Management</para>
+					<itemizedlist>
+						<listitem>
+							<para>Course: permission to work with any course type, including traineeships, Vocational and
+								non-vocational courses</para>
+						</listitem>
+						<listitem>
+							<para>VET course details: this only relates to adding or removing unit of competency details
+								from a course</para>
+						</listitem>
+						<listitem>
+							<para>Class: permission to work with any class type</para>
+						</listitem>
+						<listitem>
+							<para>Enrolment outcomes: only edit rights are editable. This allows the user to set outcome
+								results or change the outcomes linked to a student's record</para>
+						</listitem>
+						<listitem>
+							<para>Budget: viewing the class budget can be disabled</para>
+						</listitem>
+						<listitem>
+							<para>Session: this permission relates to sessions as they belong to classes</para>
+						</listitem>
+						<listitem>
+							<para>Waiting list: permission to work with all wait list records</para>
+						</listitem>
+						<listitem>
+							<para>Mailing list: permission to work within existing and create new
+								mailing lists</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>VET Management</para>
+					<itemizedlist>
+						<listitem>
+							<para>Qualification reference data: the only permission available here is edit, allowing you
+								to add your choice of nominal hours. All reference data is centrally
+								managed by ish.</para>
+						</listitem>
+						<listitem>
+							<para>Certificate: this relates to VET Statements of Attainment and Qualifications only. All
+								contacts with class print permissions can create non-vocational
+								certificates of attendance.</para>
+						</listitem>
+						<listitem>
+							<para>Print certificate without verified USI: This allows VET certificates to be printed when
+								the student has a USI on record that has not yet been verified. A
+								warning to the user will still be shown. This only applies to
+								certificates created after 1/1/2015</para>
+						</listitem>
+						<listitem>
+							<para>Print certificate without USI: This allows VET certificates to be printed when the
+								student has no USI on record. A warning to the user will still be
+								shown. This only applies to certificates created after
+								1/1/2015</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Resources</para>
+					<itemizedlist>
+						<listitem>
+							<para>Site: view can not be disabled, allows user to create new and edit current
+								Sites.</para>
+						</listitem>
+						<listitem>
+							<para>Room: view can not be disabled, allows user to create new and edit current
+								Rooms.</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Financial</para>
+					<itemizedlist>
+						<listitem>
+							<para>Enrolment: Create permission needed for an onCourse user to use Quick Enrol</para>
+						</listitem>
+						<listitem>
+							<para>Custom enrolment discount: Allow permission gives the ability for any manual discount
+								to be added to any enrolment processed through Quick Enrol.</para>
+						</listitem>
+						<listitem>
+							<para>Applications: Lets the user access course applications from prospective students.</para>
+						</listitem>
+						<listitem>
+							<para>Discount: This permission relates to the creation of discount strategies. Discounts
+								will auto apply to any applicable enrolment regardless of permission
+								here. Also the ability to link discounts to classes, corporate
+								passes, concession types and membership types.</para>
+						</listitem>
+						<listitem>
+							<para>Tutor roles: These roles determine pay rates for teaching staff.</para>
+						</listitem>
+						<listitem>
+							<para>Tutor pay: This permission relates to the creation and editing of payslips.</para>
+						</listitem>
+						<listitem>
+							<para>Override tutor session payable time: allows user to unlock and modify a tutor's payable 
+								time manually</para>
+						</listitem>
+						<listitem>
+							<para>Bulk confirm tutor wages: allows users to click the 'confirm now' button in the Generate 
+								tutor payroll sheet that confirms all the unconfirmed paylines</para>
+						</listitem>
+						<listitem>
+							<para>Invoice: This permission relates to the creation of manual invoices (invoices not
+								created as part of the Quick Enrol process).</para>
+						</listitem>
+						<listitem>
+							<para>Credit note: Allow the creation of manual credit notes. This permission is not needed
+								for the creation of automatic credit notes during enrolment or class
+								cancellation.</para>
+						</listitem>
+						<listitem>
+							<para>Payment In: Permission relates only to manual payment in records, not those created
+								during Quick Enrol.</para>
+						</listitem>
+						<listitem>
+							<para>Payment Out: This permission is about creating refunds, usually processed in real time
+								back to payer's credit cards.</para>
+						</listitem>
+						<listitem>
+							<para>Payment Method: This allows the user to change the payment method when accepting
+								payments.</para>
+						</listitem>
+						<listitem>
+							<para>Account: Account settings for onCourse chart of accounts</para>
+						</listitem>
+						<listitem>
+							<para>Transaction: general ledger transaction records created during all financial
+								transactions. These can only be viewed, never edited or manually
+								created.</para>
+						</listitem>
+						<listitem>
+							<para>Financial preferences: The onCourse preferences that set the default accounts for
+								various transaction types</para>
+						</listitem>
+						<listitem>
+							<para>Banking: Allow permission to run the bank process</para>
+						</listitem>
+						<listitem>
+							<para>Reconciliation: Allow permission to reconcile payments</para>
+						</listitem>
+						<listitem>
+							<para>Corporate pass: Permissions relating to the creation or editing or CorporatePass. This
+								permission is not required to process a website enrolment that uses
+								a CorporatePass for payment.</para>
+						</listitem>
+						<listitem>
+							<para>Payment plan: Permissions relating to the creation or editing Payment plans.</para>
+						</listitem>
+						<listitem>
+							<para>Summary extracts: Permission that allows a user to export/print MYOB Export and Trial
+								Balance from the Financial menu.</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Special actions</para>
+					<itemizedlist>
+						<listitem>
+							<para>Class duplication/rollover: Allow duplication of one or more classes from existing
+								class(es)</para>
+						</listitem>
+						<listitem>
+							<para>Class cancellation: Cancellation process that prevents further enrolments and creates
+								credit notes for existing enrolments</para>
+						</listitem>
+						<listitem>
+							<para>Exporting to XML: Export of class information for brochure production</para>
+						</listitem>
+						<listitem>
+							<para>Creating certificate from class: Bulk certificate creation process for VET and non-VET
+								enrolments</para>
+						</listitem>
+						<listitem>
+							<para>Contact merging: Merge duplicate student records</para>
+						</listitem>
+						<listitem>
+							<para>Enrolment cancellation and transferring: Cancel or transfer individual enrolments and create a credit note</para>
+						</listitem>
+						<listitem>
+							<para>Export AVETMISS: Export training data for government reporting</para>
+						</listitem>
+						<listitem>
+							<para>Data import: import data into onCourse</para>
+						</listitem>
+						<listitem>
+							<para>Override tutor payrate: Allow a local override at the class level to any manually set
+								payrate</para>
+						</listitem>
+						<listitem>
+							<para>Edit/Delete Notes: Gives permission to edit and delete record note items</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Messaging</para>
+					<itemizedlist>
+						<listitem>
+							<para>Email up to 50 contacts: This permission is useful for admin staff who may need to
+								notify a class of students about changes.</para>
+						</listitem>
+						<listitem>
+							<para>Email over 50 contacts: This permission is most appropriate to marketing staff.</para>
+						</listitem>
+						<listitem>
+							<para>SMS up to 50 contacts: This permission is for admin staff who may need to notify a
+								class of students about changes.</para>
+						</listitem>
+						<listitem>
+							<para>SMS over 50 contacts: This permission is most appropriate to marketing staff.</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Web and content management</para>
+					<itemizedlist>
+						<listitem>
+							<para>Documents: Permissions relating to documents used on the public website, inside
+								onCourse and available via the portal</para>
+						</listitem>
+						<listitem>
+							<para>Private Documents: Permissions relating to documents set as
+								Private within onCourse. Can only view, edit and create. Cannot
+								delete or print.</para>
+						</listitem>
+						<listitem>
+							<para>Tag: Permission relating to all tag groups, including those that drive the website
+								navigation. This permission is not required to add tags to records,
+								only to edit tag groups.</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Products</para>
+					<itemizedlist>
+						<listitem>
+							<para>Product: This permission relates to the creation and editing of Products</para>
+						</listitem>
+						<listitem>
+							<para>Memberships: This permission relates to the creation and editing of Memberships</para>
+						</listitem>
+						<listitem>
+							<para>Vouchers: This permission relates to the creation and editing of Vouchers</para>
+						</listitem>
+						<listitem>
+							<para>Sales: This permission relates to the creation and editing of Sales</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>Other</para>
+					<itemizedlist>
+						<listitem>
+							<para>Report: Permissions to view, modify and print reports.</para>
+						</listitem>
+						<listitem>
+							<para>Email Template: Permission to modify Email Templates.</para>
+						</listitem>
+						<listitem>
+							<para>Export Template: Permission to modify Export Templates.</para>
+						</listitem>
+						<listitem>
+							<para>Scripts: Permission to modify Scripts.</para>
+						</listitem>
+						<listitem>
+							<para>Funding contract: Allows user to view/modify Funding
+								Contracts</para>
+						</listitem>
+						<listitem>
+							<para>Funding upload: Allows user to access Funding Uploads</para>
+						</listitem>
+						<listitem>
+							<para>Audit logging: Allows user to access Audit Logs</para>
+						</listitem>
+						<listitem>
+							<para>Contact relation types: Permissions to view/modify contact types.</para>
+						</listitem>
+						<listitem>
+							<para>General preferences: Relates to onCourse application preferences that affects all
+								users</para>
+						</listitem>
+						<listitem>
+							<para>Change administration centre: Allows user to change administration centre
+								details</para>
+						</listitem>
+						<listitem>
+							<para>Concession type: Permission to modify available concessions. This permission is not
+								needed to add concession types to contact records.</para>
+						</listitem>
+						<listitem>
+							<para>Require two factor authentication: If this is allowed then a user who logs in without
+								two factor authentication enabled is immediately shown the "Enable
+								two factor authentication" dialog</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+			</itemizedlist>
+        </section>
+        </section>
+    <section xml:id="users-TOTP"><title>onCourse Login with Two Factor
+            Authentication</title><para>Two factor authentication (2FA) is an added layer of security for users accessing onCourse
             cloud instances, in particular, but also useful for locally hosted onCourse servers with
-            VPN access enabled. </para>
-        <para>Two factor authentication means that there are two 'secrets' a user needs to know to
-            successfully log in to your onCourse application. One secret is the password set for the
-            user account. The second 'secret' is a code that requires a device such as a smart phone
-            with an application such as <link
-                xlink:href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator"
-                >Google Authenticator</link> installed, with an account linked to
-            the onCourse user account. This service generates a unique code every 30 seconds. To
-            login successfully you will need both the user password and a current token.</para>
-        <para>When two factor authentication is enabled, during login there is a third field called
-            Token that needs to be filled in with the 6 digit code provided by your TOTP
-            application. If it is not enabled, then the Token field can be left blank and you can
-            login with a login name and password only. </para>
-        <para>When two factor authentication is enabled, if you try to log in with the wrong Token
-            or Password, then you will get an error message saying 'Authentication failed'.</para>
+            VPN access enabled. From onCourse 9.7 onwards, you will be encouraged at every login
+            attempt to enable 2FA. </para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/Two_factor_authentication.png" format="png"/>
+                    fileref="images/2fa_notification.png" format="png"/>
             </imageobject>
             <caption>
                 <para>Login window</para>
             </caption>
         </mediaobject>
-        <section>
-            <title>Enabling two factor authentication</title>
-            <para>Each onCourse user needs to enable two factor authentication after they have
-                logged into onCourse by going File -> Preferences -> Enable two factor authentication.</para>
+        <para>2FA means that there are two 'secrets' a user needs to know to successfully log in to your
+            onCourse application. One secret is the password set for the user account. The second
+            'secret' is a code that requires a device such as a smart phone with an application such
+            as <link
+                xlink:href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator"
+                >Google Authenticator</link> installed, with an account linked to the onCourse user
+            account. This service generates a unique code every 30 seconds. To login successfully
+            you will need both the user password and a current token. </para>
+        <para>When 2FA is enabled, after initial login there is a third field that asks for the 6
+            digit code provided by your TOTP application. If you try to log in with the wrong Token
+            or Password, then you will get an error message saying 'Authentication failed'.</para>
+        <section><title>Enabling two factor authentication</title>
+            <para>To enable 2FA, simply click 'Enable' when prompted at the login window. </para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/Enable_two_factor_authentication.png" format="png"/>
+                        fileref="images/enter_2fa_code.png" format="png"/>
                 </imageobject>
                 <caption>
-                    <para>Window you see when trying to enable your own two factor authentication</para>
+                    <para>Window you see when trying to enable your own two factor
+                        authentication</para>
                 </caption>
-            </mediaobject>
-            <para>Have your mobile phone handy while you do this as you will need to install the
-                TOTP software as the first part of the process. Search for 'Google Authenticator' in
-                your phone's app store and install it. </para>
-            <para>When you first run the Authenticator app and click 'Begin setup' you may also be
-                asked to install a QR code reader if you don't already have one. You do not have to
-                do this, as you can choose to manually add an account by selecting 'Enter provided
-                key', however there is less chance of data entry error if you scan the code.</para>
-            <para>The account name you create in Google Authenticator can be anything you like, such
-                as "My onCourse login". It does not have to match your onCourse user name.</para>
-            <mediaobject>
+            </mediaobject><para>Have your mobile phone handy while you do this as you will need to
+                install the TOTP software as the first part of the process. Search for 'Google
+                Authenticator' in your phone's app store and install it. </para><para>When you first
+                run the Authenticator app and click 'Begin setup' you may also be asked to install a
+                QR code reader if you don't already have one. You do not have to do this, as you can
+                choose to manually add an account by selecting 'Enter provided key', however there
+                is less chance of data entry error if you scan the code.</para><para>The account
+                name you create in Google Authenticator can be anything you like, such as "My
+                onCourse login". It does not have to match your onCourse user name.</para><mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
                         fileref="images/googleAuthenticatorApp.png" format="png"/>
@@ -219,106 +632,51 @@
                 <caption>
                     <para>Install Google Authenticator on your smart phone</para>
                 </caption>
-            </mediaobject>
-            <para>To enable two factor authentication, login to onCourse and go to File ->
-                Preferences -> then select the option 'Enable two factor authentication'. A new
-                window will appear in onCourse providing instructions on what to do next. </para>
-            <para>On this window you will find a list of five scratch codes to allow you a once off
-                emergency login to onCourse if you don't have your phone and the Google
-                Authenticator app available. These codes are unique for each onCourse user and
-                expire once they are used. We suggest you write these down and store them in a
-                secure place.</para>
-            <para>Once you have followed these instructions by downloading the app and scanning the
-                QR code or typing the Key into Google Authenticator on your phone, enter the 6 digit
-                code that appears on your phone screen into the onCourse window. You can not save or
-                enable two factor authentication without successfully configuring your phone and
-                generating a valid key.</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/Enable_two_factor_authentication.png" format="png"/>
-            </imageobject>
-            <caption>
-                <para>Window you see when trying to enable your own two factor authentication</para>
-            </caption>
-        </mediaobject>
-        </section>
-        <section>
+            </mediaobject><para>You will be shown a six-digit code hat will change every 30 seconds. Enter this code into the
+                authentication code field in onCourse and click Login.</para></section><section>
             <title>Disabling or resetting two factor authentication</title>
-            <para>If a user has two factor authentication enabled and they wish to disable it, they
-                can go to File -> Preferences -> and click on the option 'Disable two factor
-                authentication'.</para>
-        <para>A window will appear confirming that you definitely want to disable this feature and
-                explaining how to re-enable it. To confirm, click on the 'Disable' button.</para>
+            <para>If a user has two factor authentication enabled and they wish to disable it, in
+                the Security preferences click on the User's account name, then click 'Disable
+                2FA'.</para>
+            <para>A window will appear confirming that you definitely want to disable this feature
+                and explaining how to re-enable it. To confirm, click on the 'Disable'
+                button.</para>
             <para>You should follow this process if you have bought a new smart phone and need to
                 set up Google Authenticator again.</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/Disable_two_factor_authentication_message.png" format="png"/>
-            </imageobject>
-            <caption>
-                <para>Message window you see when trying to disable your own two factor
-                    authentication</para>
-            </caption>
-        </mediaobject>
-        <para>An admin user has the power to change a users password or disable a users two factor
-                authentication, for example, if they have forgotten their mobile phone.  You can do
-                this by going to File -> Preferences -> Users -> double click on the user you want
-                to change, then click on the button 'Reset authentication'.</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/users_screenshot.png" format="png"/>
-            </imageobject>
-            <caption>
-                <para>User edit view window</para>
-            </caption>
-        </mediaobject>
-        <para>Once you click on the button 'Reset authentication' and the user has their two factor
-            authentication disabled then the sheet that appears, as shown below, will only allow the
-            admin user to reset their password.</para>
-        <note>
-            <para>Only the user can enable their own two factor authentication.</para>
-        </note>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/Two_factor_authentication_disabled.png" format="png"/>
-            </imageobject>
-            <caption>
-                <para>Sheet that appears when you click on the 'Reset authentication' button in the
-                    user edit view if the selected user has two factor authentication
-                    disabled</para>
-            </caption>
-        </mediaobject>
-        <para>If the user has their two factor authentication enabled then the sheet that appears,
-            as shown below. This will allow the admin user to both reset their password and to
-            disable their two factor authentication.</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/Two_factor_authentication_enabled.png" format="png"/>
-            </imageobject>
-            <caption>
-                <para>Sheet that appears when you click on the 'Reset authentication' button in the
-                    user edit view if the selected user has two factor authentication enabled</para>
-            </caption>
-        </mediaobject>
-        <para>An admin user can see a list of all users that have this feature enabled in the users
-                list view by whether the checkbox is ticked in the Two factor authentication column,
-                next to their name.</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="80%" contentdepth="80%"
-                    fileref="images/Users_list_view.png" format="png"/>
-            </imageobject>
-            <caption>
-                <para>Users list view</para>
-            </caption>
-        </mediaobject>
-        </section>
-    </section>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/Disable_two_factor_authentication_message.png" format="png"
+                    />
+                </imageobject>
+                <caption>
+                    <para>Message window you see when trying to disable your own two factor
+                        authentication</para>
+                </caption>
+            </mediaobject>
+            <para>An admin user has the power to change a users password or disable a users two
+                factor authentication, for example, if they have forgotten their mobile phone. You
+                can do this by going to File -> Preferences -> Security -> double click on the user
+                you want to change, then click on the button 'Reset Password'.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/users_screenshot.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>User edit view window</para>
+                </caption>
+            </mediaobject>
+            <para>Once you click on the button 'Reset authentication' and the user has their two
+                factor authentication disabled then the sheet that appears, as shown below, will
+                only allow the admin user to reset their password.</para>
+            <note>
+                <para>Only the user can enable their own two factor authentication.</para>
+            </note>
+            <para>An admin user can see a list of all users that have this feature enabled in the
+                Security window by looking at the User accounts listed under 'Users'. Any user with
+                2FA enabled will have a small icon appear next to their name.</para>
+        </section></section>
     <section>
         <title>Emergency access</title>
         <para>Should you lock yourself out of your onCourse Server because you have lost or

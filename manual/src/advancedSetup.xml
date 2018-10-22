@@ -139,28 +139,27 @@
 		</section>
 	</section>
 	<section xml:id="advancedSetup-accessControl">
-		<title>Access Control (authorisation)</title>
-		<para>Access control in onCourse has the ability to assign different access rights and roles
-			to different users in your organisation. There are two main aspects of Access control,
-			"Users" and "Access". Access rights restrict what parts of onCourse users can modify,
-			print, view or delete. This is an advanced feature, available for onCourse "Professional
-			and Enterprise" customers. Four pre-defined user roles are available within the system,
-			Enrolment Officer, Administration Manager, Course Manager and Financial Manager. You can
-			modify these and create new access rights groups as needed. Each user within your
-			organisation can be given Admin access rights (full access) or be added to any of your
-			access groups. Select the access rights when creating or editing user profiles, as
-			above.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/access_control_menu.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>"Users" and "Access" menus</para>
-			</caption>
-		</mediaobject>
+		<title>Controlling User Access (authorisation)</title>
 		<section xml:id="advancedSetup-Access">
-			<title>Access</title>
+            <title>User Roles</title>
+        <para>Access rights restrict what parts of onCourse users can modify, print, view or delete.
+            This is an advanced feature, available for onCourse "Professional and Enterprise"
+            customers. Four pre-defined user roles are available within the system, Enrolment
+            Officer, Administration Manager, Course Manager and Financial Manager. You can modify
+            these and create new access rights groups as needed. Each user within your organisation
+            can be given Admin access rights (full access) or be added to any of your access groups.
+            Select the access rights when creating or editing user profiles, as above.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/security_user_roles.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>Users who try and log in twice concurrently will see this screen</para>
+                </caption>
+            </mediaobject>
+            <section>
+			<title>Creating and Editing User Roles</title>
 			<para>To access the "Users" menu, in onCourse go to File > Preferences > Access.</para>
 			<para>Here you can create roles for users, such as "Administration Manager." Some
 				default access roles have been created in onCourse however you should edit these and
@@ -175,31 +174,37 @@
 					what each option means. If an option like "create" is greyed out, it means that
 					part of onCourse can't be restricted.</title>
 				<listitem>
-					<para>View: A view permission only allows the contact to see data already created, but does not
-						allow existing records to be edited or new records to be created.</para>
+					<para><emphasis role="bold">View:</emphasis> A view permission only allows the contact to see
+                        data already created, but does not allow existing records to be edited or
+                        new records to be created.</para>
 				</listitem>
 				<listitem>
-					<para>Edit: Allows both edit and view rights.</para>
+					<para><emphasis role="bold">Edit: </emphasis>Allows both edit and view rights.</para>
 				</listitem>
 				<listitem>
-					<para>Create: Allows the creation of new records, edit and view rights.</para>
+					<para><emphasis role="bold">Create:</emphasis> Allows the creation of new records, edit and
+                        view rights.</para>
 				</listitem>
 				<listitem>
-					<para>Delete: Allows record deletion where permitted by onCourse validation. Linked and locked
-						records can not be deleted just because a user has delete rights.</para>
+					<para><emphasis role="bold">Delete: </emphasis>Allows record deletion where permitted by
+                        onCourse validation. Linked and locked records can not be deleted just
+                        because a user has delete rights.</para>
 				</listitem>
 				<listitem>
-					<para>Print: Allows printing of reports associated with this record type</para>
+					<para><emphasis role="bold">Print:</emphasis> Allows printing of reports associated with this
+                        record type</para>
 				</listitem>
 				<listitem>
-					<para>Allow: Some processes only have one level of access - allow. If this option is not
-						ticked, it means the ability to run the process is denied.</para>
+					<para><emphasis role="bold">Hide:</emphasis> Some processes only have one level of access -
+                        allow. If this option is not ticked, it means the ability to run the process
+                        is denied and the element is hidden from use.</para>
 				</listitem>
 			</itemizedlist>
 			<itemizedlist>
 				<title>What can you edit in the "Access" menu?</title>
 				<listitem>
-					<para>Name: here you define the name of the role, e.g; "Administration Manager".</para>
+					<para><emphasis role="bold">Name: </emphasis>here you define the name of the role, e.g;
+                        "Administration Manager".</para>
 				</listitem>
 				<listitem>
 					<para>People and companies</para>
@@ -208,10 +213,6 @@
 							<para>Contact: this refers to all onCourse students, tutors and companies. Full create rights
 								are recommended for any user who needs to process enrolments as new
 								contacts are often created at this time.</para>
-						</listitem>
-						<listitem>
-							<para>Users: this refers to the administrative staff who use onCourse and need a log in
-								created.</para>
 						</listitem>
 					</itemizedlist>
 				</listitem>
@@ -516,16 +517,8 @@
 					</itemizedlist>
 				</listitem>
 			</itemizedlist>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/access_window.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Setting access rights for an administration manager role</para>
-				</caption>
-			</mediaobject>
-		</section>
+            </section>	
+        </section>
 		<section>
 			<title>Setting up Active Directory (AD) authentication and authorisation.</title>
 			<para>The below example has been completed with Windows Server 2003 R2 SP2 and onCourse

@@ -19,19 +19,23 @@
         <itemizedlist>
           <listitem><para>the new design</para></listitem>
           <listitem><para>a reminder to set two factor authentication</para></listitem>
-          <listitem><para>a prompt to change their password if it low quality</para></listitem>
+          <listitem><para>a prompt to change their password if it's considered of low quality</para></listitem>
         </itemizedlist>
       </para>
-      <para>Although we've had two factor one-time-passwords (OTP) for about five years, few people have used
-        it. Yes, its slightly less convenient, but it does improve security by a huge amount, so
-        onCourse will start nagging you to turn it on at every launch. You can still ignore these
-        requests, but the administrator can enforce a OTP policy in the new security settings. The
-        administrator can also increase the threshold of what we consider a rubbish password,
-        forcing users to change to a better one.</para>
+      <para>Although we've had two factor one-time-passwords (OTP) for about five years, few people
+        have used it. Yes, it's slightly less convenient, but it does improve security by a huge
+        amount, so onCourse will start nagging you to turn it on at every launch. You can still
+        ignore these requests, but the administrator can enforce an OTP policy in the new security
+        settings. The administrator can also increase the threshold of what we consider a rubbish
+        password, forcing users to change to a better one.</para>
     </section>
     <section>
       <title>Special interests in data collection</title>
-          <para>With mailing lists being removed from onCourse (everyone is using more specialised advanced tools like Mailchimp), we've repurposed the old functionality into 'special interests' <systemitem>OD-11833</systemitem>. This means that you can now add Contact tags into data collection rules and make them part of the questions you ask during enrolment, applications or waiting list.</para>
+          <para>With mailing lists being removed from onCourse (everyone is using more specialised
+        advanced tools like Mailchimp), we've repurposed the old functionality into 'special
+        interests' <systemitem>OD-11833</systemitem>. This means that you can now add Contact tags
+        into data collection rules and make them part of the questions you ask during enrolment,
+        applications or waiting lists.</para>
           <para>For example, you might like a set of checkboxes whenever someone adds themselves to a waiting list</para>
           <para><programlisting>
 Other than this course, what other areas of training are you interested in:
@@ -46,18 +50,13 @@ Other than this course, what other areas of training are you interested in:
     <title>Reports and scripts</title>
     <itemizedlist>
       <listitem>
-        <para>Accurate Program identifier reporting
-          <systemitem>OD-11340</systemitem>
+        <para>Smart &amp; Skilled reporting 85 - Not Yet Started and TNC for Did Not Start outcome
+          results. This has been in place since version 9.6 <systemitem>OD-11982</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Smart &amp; Skilled reporting 85 - Not Yet Stared and TNC for Did Not Start outcome results
-          <systemitem>OD-11982</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Update contact CSV export to include the standard WWCC fields
-          <systemitem>OD-11793</systemitem>
+        <para>Update contact CSV export to include the standard working with children check fields
+            <systemitem>OD-11793</systemitem>
         </para>
       </listitem>
     </itemizedlist>
@@ -65,27 +64,23 @@ Other than this course, what other areas of training are you interested in:
       <title>Minor features</title>
       <itemizedlist>
         <listitem>
-          <para>Possible incorrect setting VCU File outcomes statuses
-            <systemitem>OD-11620</systemitem>
+          <para>Added script to send birthday gift email <systemitem>OD-11746</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Script to send birthday email
-            <systemitem>OD-11746</systemitem>
+          <para>Added link to manual to question mark help icon within preferences
+              <systemitem>OD-11917</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Question mark help icon for preferences <systemitem>OD-11917</systemitem>
+          <para>New generic import to change subscription to marketing materials permissions, per
+            user <systemitem>OD-11962</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>New generic import to unsub contacts from marketing materials
-            <systemitem>OD-11962</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Deprecate id methods in the dsl. You should rarely be using the record ids directly in an onCourse script and we've now removed them from the documentation. They will still work for now.
-            <systemitem>OD-12018</systemitem>
+          <para>Deprecate id methods in the DSL. You should rarely be using the record ids directly
+            in an onCourse script and we've now removed them from the documentation. They will still
+            work for now. <systemitem>OD-12018</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -109,58 +104,47 @@ Other than this course, what other areas of training are you interested in:
       <title>Fixes</title>
       <itemizedlist>
         <listitem>
-          <para>Special Smart &amp; Skilled and SkillsTAS NAT00130 rules no longer apply
-            <systemitem>OD-11753</systemitem>
+          <para>Fixed small error that caused Special Smart &amp; Skilled and SkillsTAS NAT00130
+            rules to no longer apply <systemitem>OD-11753</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>No from email address defined in default script 'send product purchased email'
-            <systemitem>OD-11928</systemitem>
+          <para>Fixed where no 'from' email address was defined in default script 'send product
+            purchased email' <systemitem>OD-11928</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>AVETMISS 8 NAT00080 - Client Name for Encryption: single name students
+          <para>Fixed handling of single name students in AVETMISS 8 NAT00080 files
               <systemitem>OD-11950</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Can't add VET modules to course on OS X webstart with Java 10
-            <systemitem>OD-11997</systemitem>
+          <para>Fixed issue where users couldn't add VET modules to course on OS X webstart with
+            Java 10 <systemitem>OD-11997</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Scrolling bug in Class Attendance tab
-            <systemitem>OD-12004</systemitem>
+          <para>Fixed the scrolling bug in Class Attendance tab <systemitem>OD-12004</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Invoices - COS account not appearing in Invoice Detail as expected
-            <systemitem>OD-12005</systemitem>
+          <para>Fixed an issue where the COS account wasn't appearing in Invoice Detail as expected
+              <systemitem>OD-12005</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Scripts are sending emails twice
-            <systemitem>OD-12012</systemitem>
+          <para>Fixed an issue where sessions information for class records were being saved before
+            sessions were added <systemitem>OD-12014</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Don't save Sessions information for Class record until sessions are added
-            <systemitem>OD-12014</systemitem>
+          <para>Fixed an issue where the Attendance screen didn't line up
+              <systemitem>OD-12042</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Authorisation for preferences
-            <systemitem>OD-12024</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Attendance screen doesn't line up
-            <systemitem>OD-12042</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Attendance screen mark whole column
-            <systemitem>OD-12043</systemitem>
+          <para>Fixed an issue where users could no longer mark Attendance by the column
+              <systemitem>OD-12043</systemitem>
           </para>
         </listitem>
       </itemizedlist>

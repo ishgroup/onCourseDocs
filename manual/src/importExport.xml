@@ -512,16 +512,16 @@ csv &lt;&lt; [ </programlisting>
 					</listitem>
 					<listitem>
 						<para>Once you have saved your export, it will now be available for you to test in the Entity you defined.</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/exports/testing_new_export.png" format="png"/>
+							</imageobject>
+							<caption>
+								<para>Testing the new export 'Working with Children Check' in the contact window</para>
+							</caption>
+						</mediaobject>
 					</listitem>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/exports/testing_new_export.png" format="png"/>
-						</imageobject>
-						<caption>
-							<para>Testing the new export 'Working with Children Check' in the contact window</para>
-						</caption>
-					</mediaobject>
 					<listitem>
 						<para>If you attempt to run the report and instead of generating the expected output, it shows
 							an error in the window, then you need to adjust your export code to
@@ -541,29 +541,6 @@ csv &lt;&lt; [ </programlisting>
 				</orderedlist>
 			</section>
 		</section>
-		
-		<section>
-		<title>Direct access to the SQL database</title>
-		<para><emphasis role="bold">This function is only available to customers running locally
-				hosted onCourse databases. If your onCourse database is hosted by ish in the cloud
-				we recommend you create a custom export using the Groovy and the
-			DSL.</emphasis></para>
-		<para>Although we largely recommend that you produce reports within onCourse itself, it is
-			also possible to connect to the backend database directly. If you are using a third
-			party database like MySQL or MS-SQL you will already know how to do this. If you are
-			using the built in database which comes with onCourse server, use the following
-			connection properties. Start with a tool such as Squirrel SQL or DBeaver and use them to
-			browse your data. Once you have that working, you can use any reporting tool (JasperBI,
-			Automate, Crystal Reports, etc) to extract and report on
-			data.<programlisting>
-	       JDBC Driver:  org.apache.derby.jdbc.ClientDriver
-	       JDBC URL: jdbc:derby://&lt;server hostname&gt;/onCourse
-	       username: report
-	       password: 948ty
-            </programlisting></para>
-		<para>Note this function does not let you write to the database: it is read only access.
-		</para>
-	</section>
 	</section>
 	<section>
 		<title>Other export types and options</title>
@@ -816,29 +793,29 @@ csv &lt;&lt; [ </programlisting>
 						tool into onCourse. Running this import on the same data set twice will
 						create duplicate records for each student.</para>
 				</listitem>
-				<listitem><emphasis role="bold">onCourse AVETMISS outcome update import</emphasis> -
+				<listitem><para><emphasis role="bold">onCourse AVETMISS outcome update import</emphasis> -
 					Using data from an import set of NAT00120, NAT00060, NAT00080 and NAT00085
 					files, <emphasis>update</emphasis> existing students in onCourse with prior
 					learning data. This process does not create new contact records, only adds prior
-					learning data to existing contacts.</listitem>
-				<listitem><emphasis role="bold">onCourse AVETMISS student import </emphasis>- Using
+					learning data to existing contacts.</para></listitem>
+				<listitem><para><emphasis role="bold">onCourse AVETMISS student import </emphasis>- Using
 					a data from an import set of NAT00080 &amp; NAT000085 files, create new student
 					contact records in onCourse. Running this import on the same data set twice will
-					create duplicate records for each student.</listitem>
-				<listitem><emphasis role="bold">onCourse AVETMISS student update import </emphasis>-
+					create duplicate records for each student.</para></listitem>
+				<listitem><para><emphasis role="bold">onCourse AVETMISS student update import </emphasis>-
 					Using a data from an import set of NAT00080 &amp; NAT000085 files, update
 					existing student contact records in onCourse. This process does not create new
-					contact records, only adds prior learning data to existing contacts.</listitem>
-				<listitem><emphasis role="bold">onCourse contact CSV import</emphasis> - Import
+					contact records, only adds prior learning data to existing contacts.</para></listitem>
+				<listitem><para><emphasis role="bold">onCourse contact CSV import</emphasis> - Import
 					contact data from CSV file to create new contacts, students, tutors and/or
 					companies in the database. Running this import on the same data set twice will
-					create duplicate records for each student.</listitem>
-				<listitem><emphasis role="bold">onCourse paymentIn CSV import </emphasis>- Using CSV
+					create duplicate records for each student.</para></listitem>
+				<listitem><para><emphasis role="bold">onCourse paymentIn CSV import </emphasis>- Using CSV
 					data, import paymentIn information in order to automatically match paymentIn
-					records with invoices. </listitem>
-				<listitem><emphasis role="bold">onCourse Contact Update Subscriptions CSV import</emphasis>- 
+					records with invoices. </para></listitem>
+				<listitem><para><emphasis role="bold">onCourse Contact Update Subscriptions CSV import</emphasis>- 
 				Search for contacts based on the provided email address and update their marketing permissions
-				in bulk.</listitem>
+				in bulk.</para></listitem>
 			</orderedlist>
 		</section>
 		<section xml:id="importExport-payentIn">

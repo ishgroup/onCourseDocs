@@ -704,41 +704,6 @@
 				on <link xlink:href="importExport.html#importExport-MYOB">Exporting to
 				MYOB.</link></para>
 		</section>
-		<section>
-			<title>Running Queries Directly from the Database</title>
-			<para>It is possible within onCourse to run queries on information directly from the
-				database server. Whether the server runs on Apache Derby or MySQL or MS SQL all of
-				these relational databases allow you to query the database directly.</para>
-			<para>This allows you write and edit your own custom reports on demand. Instructions are
-				available <link xlink:href="http://www.ish.com.au/s/onCourse/doc/2.0/manual/reports.html"> in
-					the reports documentation </link> for downloading and installing a free SQL tool
-				for writing your own reports. A high level of familiarity with SQL is required to
-				use this function - it is not part of the standard onCourse product support, but an
-				advanced option which is also available for your own use. If you do not have these
-				skills in house, custom reports can be created for you on request by ish. A quote
-				will be provided for each report. </para>
-			<para>From an accountancy perspective, what type of relational database you use is not
-				important, the thing you want to be clear about is knowing exactly what data you
-				need to see and how you want to see it. </para>
-			<para>As an example, if your company wants to run a monthly query against the database which
-				tells you all payments received, for which enrolments within a give time frame, you
-				would follow these 4 basic steps.</para>
-			<simplelist>
-				<member>(1) Define the data you wish to include in your query. It could be the
-					invoice number, invoice date, course code and enrolled student first name and
-					last name.</member>
-				<member>(2) Define how you want this query to appear, which is as simple as setting
-					up your columns within an excel worksheet. By defining this, you are determining
-					the relationship between the data.</member>
-				<member>(3) Define the date range of the query (in other words, set the date
-					range)</member>
-				<member>(4) Run the resulting query against the database</member>
-			</simplelist>
-			<para>If you run the same query on a monthly basis, once you have worked out Step 1 and
-				2, the only thing you need to do to run the query each month is to update the date
-				range. Once this query has been run, you can then import this directly into an excel
-				document and you are ready to go.</para>
-		</section>
 	</section>
 	<section xml:id="accounting-Deposit">
 		<title>Banking and Reconciliation</title>

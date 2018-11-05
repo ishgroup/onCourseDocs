@@ -44,7 +44,7 @@
             </itemizedlist></para>
         <para>When we build your site, we'll give you access to Google Tag Manager, set up some
             initial Analytics tags for you, and get you started. You can then build more tracking or
-            hand over access to your SEO consultants.</para>
+            hand over access to your SEO consultants. We will continue to need access to tag manager so that we can debug problems and update core code as needed.</para>
     </section>
     <section xml:id="seo-analytics">
         <title>Google analytics</title>
@@ -132,11 +132,136 @@
                         <imagedata fileref="images/google_analytics_settings.png" scalefit="1"
                             width="100%" contentdepth="100%" format="png"/>
                     </imageobject>
-                </inlinemediaobject>There is no real time e-commerce reporting yet, so you'll need to wait a few
-                hours for events to process and then view the shopping behaviour and checkout
-                behaviour reports.</para>
+                </inlinemediaobject></para>
             <para>When you have some time, explore the Analytics "goals" setup for ways to get
                 useful information such as dropoff in your checkout rates.</para>
+            <section>
+                <title>Events</title>
+                <para>Events are sent to Google Analytics at various points in the checkout process.
+                    Along with the event, onCourse sends a rich data structure which you can then
+                    report on. The following steps are sent as events:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Checkout step: 1 - checkout without
+                            any items in cart</para>
+                    </listitem>
+                    <listitem>
+                        <para>Checkout step: 2 - Add payer
+                            screen</para>
+                    </listitem>
+                    <listitem>
+                        <para>Checkout step: 3 - Edit contact
+                            screen</para>
+                    </listitem>
+                    <listitem>
+                        <para>Checkout step: 4 - Summary
+                            screen</para>
+                    </listitem>
+                    <listitem>
+                        <para>Checkout step: 4 option: Change Parent - change parent for child from
+                            summary</para>
+                    </listitem>
+                    <listitem>
+                        <para>Checkout step: 4 option: Add concession - add concession for
+                            contact</para>
+                    </listitem>
+                    <listitem>
+                        <para>Checkout step: 4 option: Add contact - add contact from summary</para>
+                    </listitem>
+                    <listitem>
+                        <para>Checkout step: 5 - Payment
+                            screen</para>
+                    </listitem>
+                    <listitem>
+                        <para>Checkout step: 4 option: Add a company - Add a company from payment
+                            screen</para>
+                    </listitem>
+                    <listitem>
+                        <para>Checkout step: 4 option: Add a payer - Add a payer from payment
+                            screen</para>
+                    </listitem>
+                    <listitem>
+                        <para>Checkout step: 4 option: Payment Page (Credit Card) - Payment Page
+                            Credit Card tab;</para>
+                    </listitem>
+                    <listitem>
+                        <para>Checkout step: 4 option: Payment Page (Corporate Pass); - Payment Page
+                            Corporate Pass tab;</para>
+                    </listitem>
+                </itemizedlist>
+                <para>Add or remove items from shopping cart:</para>
+                <programlisting>dataLayer.push({
+    'event': 'addToCart' | 'removeFromCart',
+    'ecommerce': {
+      'currencyCode': 'AUD',
+      'add': {
+        'products': [{
+          'name': {{item_name}},
+          'id': {{item_id}},
+          'price': {{item_price}},
+          'category': 'Course Class' | 'Product',
+'quantity': 1,
+        }],
+      },
+    },
+  });
+</programlisting>
+                <para>Set Checkout Page:</para>
+                <programlisting>dataLayer.push({
+    'event': 'checkout',
+    'ecommerce': {
+      'checkout': {
+        'actionField': {
+          'step': {{ 1 | 2 | 3 | 4 | 5 }},
+          'option': "Init Checkout Process" | "Add Payer" | "Edit Contact Details" | "Summary Page" | "Payment Page"
+        },
+        'products': [{ 
+         'name':{{item.name}}, 
+         'id': {{item.id}}, 
+         'price': {{item.price}}, 
+         'category': 'Course Class' | 'Product',  
+         'quantity': 1, 
+        }],
+      },
+    },
+  });
+
+</programlisting>
+                <para>Set Checkout Page Option (something like sub page/phase):</para>
+                <para>At the moment we have options only for 4,5 steps</para>
+                <programlisting>dataLayer.push({
+  'event': 'checkoutOption',
+  'ecommerce': {
+    'checkout_option': {
+      'actionField': {
+        'step': {{ 4 | 5 }},
+        'option': "Change Parent" | "Add concession" | "Add contact" | "Add a company" | "Add a payer" | "Payment Page (Corporate Pass)" | "Payment Page (Credit Card)"
+      },
+    },
+  },
+});</programlisting>
+                <para>purchase:</para>
+                <programlisting>dataLayer.push({
+    'event': 'purchase',
+    'ecommerce': {
+      'purchase': {
+        'actionField': {
+          'id': {{ data.id }},
+          'affiliation': 'credit card' | 'corporate pass',
+          'revenue': {{ amount.total }}, // includes tax
+        },
+        'products': [{ 
+         'name':{{ item.name }}, 
+         'id': {{ item.id }}, 
+         'price': {{ item.price }}, 
+         'category': 'Course Class' | 'Product',
+         'quantity': 1, 
+        }],
+      },
+    },
+  });
+</programlisting>
+            </section>
         </section>
     </section>
     <section xml:id="seo-webmaster">

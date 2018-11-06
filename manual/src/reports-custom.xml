@@ -199,9 +199,10 @@
 				expression will find the course linked to the current class, get a list of modules,
 				take the first one (using a null safe operator so that nothing bad happens if there
 				isn't any modules liked at all), then display the national code.</para>
-			<para>Custom attributes can be accessed in the same way, like this
-					<code>$F{contact}.passportNumber</code> or if the field name contains spaces
-				like this <code>$F{contact}.customFieldValue("how did you hear")</code>.</para>
+			<para>Custom attributes can be accessed by passing the custom field name to the customField()
+				method. For example, if a contact had a custom field called 'how did you hear', the
+				data stored in this field could be referenced by: <code>$F{contact}.customField("how
+					did you hear")</code>.</para>
 			<para> </para>
 		</section>
 	</section>

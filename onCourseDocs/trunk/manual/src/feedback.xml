@@ -8,15 +8,13 @@
             rating them out of five. In addition, the students can complete a Net Promoter Score
             (rating out of 10) where they indicate how likely they are to recommend you to a friend
             and provide free-form text feedback you can use to improve your services or publish to
-            the website as a testimonial.</para>
-        <para>This survey is expected to be used at the end of a training program, and a link sent
-            to the students via email. The students complete their survey response in the
+            the website as a testimonial. You can also add additional questions of your own using
+            custom fields, or delete any of the default questions should they be unwanted.</para>
+        <para>These Surveys can be set to display at set points through out a Course, or triggered
+            'on demand' via a custom script. The students complete their survey response in the
             SkillsOnCourse portal, and tutors are able to see a feedback summary in their portal
             also. More detailed views and reports regarding survey completion are available to admin
             users of the onCourse application.</para>
-        <para>The questions available in this feedback form can not be modified. If you are looking
-            to send your students a custom survey, we suggest you use specialised customisable tool
-            like Survey Monkey. More information about setting up these tools can found in <xref linkend="externalintegrations"/></para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="70%" contentdepth="70%" fileref="images/feedback/feedback_positive.png" format="png"/>
@@ -27,7 +25,97 @@
         </mediaobject>
     </section>
     <section>
+        <title>How to Edit/Remove Survey Questions</title>
+        <para>To edit, remove, or add survey questions:</para>
+            <itemizedlist>
+                <listitem>
+                    <para>in onCourse go to <emphasis role="bold">File > Preferences >
+                            General</emphasis></para>
+                </listitem>
+            </itemizedlist>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="70%" contentdepth="70%" fileref="images/data_collection/feedback_default_form.png" format="png"/>
+            </imageobject>
+            <caption>The default field form for Student Feedback</caption>
+        </mediaobject> 
+            <itemizedlist>
+                <listitem>
+                    <para>In the left hand panel, under 'Data Collection Forms', you'll find a form
+                        called <emphasis role="bold">Default Field Form (Student
+                            Feedback)</emphasis></para>
+                </listitem>
+            </itemizedlist><para>From here you can edit any of the Fields to say whatever you like. </para>
+        <para>Keep in mind that the 'Comment' block is only a free standing text block and should
+            not be edited (however it can be deleted), while all other blocks ask for a Star Rating. </para>
+    </section>
+    <section>
+        <title>How to Add Custom Survey Questions</title>
+        <para>You can add your own custom questions to the survey by using the Custom Fields
+            section. These questions will not use the same format as the default questions and don't
+            display the Stars to respond with, instead adding a free text field for users to type
+            their answers in, or a drop down menu with pre-entered answers you can set when creating
+            the field. To add a question:<itemizedlist>
+                <listitem>
+                    <para>in onCourse go to <emphasis role="bold">File > Preferences >
+                            General</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para>Scroll the left-hand panel to the bottom and click <emphasis role="bold"
+                            >Custom Fields</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para>Hit the <emphasis role="bold">(+)</emphasis> button to add a new field and
+                        set the Record Type as 'Survey'</para>
+                </listitem>
+            </itemizedlist> 
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="70%" contentdepth="70%" fileref="images/data_collection/feedback_customfield_record_type.png" format="png"/>
+                    </imageobject>
+                    <caption>The beginning of creating a new Custom Field for a survey</caption>
+                </mediaobject>   
+            <itemizedlist>    
+            <listitem>
+                    <para>Name the field the question you wish to ask i.e. Rate the relevance of the
+                        provided course materials</para>
+                </listitem>
+                <listitem>
+                    <para>If you wish to have pre-prepared answers for students to choose from,
+                        enter these answers into the Default Value field and separate them with a
+                        semi-colon (;)</para>
+                </listitem>
+                <listitem><para>The custom key you choose must be unique. Make the Custom Key something
+                    short and simple to reference later and enter it here.</para></listitem>
+            </itemizedlist></para>
+    </section>
+    <section>
         <title>Requesting Feedback from Students</title>
+        <para>As of onCourse 9.7 you can now request feedback from students at different points
+            during a course:
+            <itemizedlist>
+                <listitem>
+                    <para><emphasis role="bold">On Enrolment</emphasis> - This will make the survey
+                        available to students upon enrolment into a course</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">On Start</emphasis> - This will make the survey
+                        available from midnight the day the course begins</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Midway</emphasis> - This will make the survey
+                        available from midnight the middle day of the course</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">At Completion</emphasis> - This will make the survey
+                        available from the moment the course is completed</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">On Demand</emphasis> - This setting will require a
+                        custom script to define the time's at which this survey will be sent to
+                        student's to fill out.</para>
+                </listitem>
+            </itemizedlist></para>
         <para>There are two default scripts and associated templates available as standard to
             communicate survey completion requests to students. These can be modified as required to
             suit your business requirements. More information about onCourse customising scripts can
@@ -40,7 +128,8 @@
             ${enrolment.student.getPortalLink(enrolment, 30)} means the link lasts for 30 days
             before login is required.</para>
         <para>By default the scripts trigger the day after the final class session, allowing you to
-            collect feedback as soon as practical after the event is over.</para>
+            collect feedback as soon as practical after the event is over, however if you change
+            this setting within the form, it will send at the corrected time.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="70%" contentdepth="70%" fileref="images/feedback/standard_email_cert_and_feedback.png" format="png"/>

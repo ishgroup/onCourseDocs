@@ -168,15 +168,13 @@
             <para>There are three types MailChimp integrations available in onCourse:</para>
             <orderedlist>
                 <listitem><para><emphasis role="bold">mailchimp subscribe</emphasis> for onCourse mailing list subscription:
-                        This type of integration triggers when you manually subscribe a contact to
-                        an onCourse mailing list, or when a contact self-subscribes to an onCourse
-                        mailing list via your website or portal. You can create multiple mailing
-                        lists in onCourse that integrate with multiple MailChimp lists.</para></listitem>
+                        This type of integration triggers when you manually attach a Mailing List
+                        tag an onCourse contact. You can create multiple mailing list tag groups in
+                        onCourse that integrate with multiple MailChimp lists.</para></listitem>
                 <listitem>
                     <para><emphasis role="bold">mailchimp unsubscribe</emphasis> onCourse mailing
                         list unsubscription: This type of integration triggers when you manually
-                        remove a contact from an onCourse mailing list, or when a contact
-                        unsubscribes themselves via the portal. This script should be enabled the
+                        remove a mailing list tag from a contact. This script should be enabled the
                         script 'mailchimp subscribe'.</para>
                 </listitem>
                 <listitem>
@@ -189,9 +187,9 @@
             </orderedlist>
             <section>
                 <title>Creating an onCourse mailing list integration</title>
-                <para>The name of your onCourse mailing list and MailChimp integration must be the
-                    same for this to work. This integration will only add new subscribers to your
-                    mailing list to MailChimp, once enabled. </para>
+                <para>The name of your onCourse mailing list tag and MailChimp integration must be
+                    the same for this to work. This integration will only add new subscribers to
+                    your mailing list to MailChimp, once enabled. </para>
             <orderedlist>
                 <listitem><para>Log into MailChimp and obtain an API key for your account at <link
                                 xlink:href="http://kb.mailchimp.com/accounts/management/about-api-keys"
@@ -203,12 +201,11 @@
                              Go
                             to the Lists page > Settings, and scroll to find the unique List ID
                             field</para></listitem>
-                <listitem><para>In onCourse, go to People > Mailing lists to create a new mailing list, or check the settings
-                            of mailing lists you have already created in onCourse.</para></listitem>
+                <listitem><para>In onCourse, go to File > Preferences > Tags. Find the Tag Group named 'Mailing Lists', and
+                            double-click to open the Tag's window.</para></listitem>
                     <listitem>
-                        <para>To create a new mailing list, click the plus in the top right hand
-                            corner. You mailing list needs a name, optional description, and
-                            optional permission to allow online subscriptions.</para>
+                        <para>To create a new mailing list, click the green plus in the bottom left
+                            hand corner. Name your tag, then click 'Save'</para>
                     </listitem>
                     <listitem>
                         <para>To add the MailChimp integration, go to File > Preferences > General

@@ -1,3 +1,4 @@
+import com.sun.org.apache.xalan.internal.xsltc.compiler.Copy
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
 import groovy.xml.MarkupBuilder
@@ -5,17 +6,6 @@ import groovy.xml.XmlUtil
 import org.codehaus.groovy.runtime.DateGroovyMethods
 import groovyx.net.http.*
 import groovy.swing.SwingBuilder
-
-buildscript {
-    repositories {
-      maven {
-        url 'https://repo.ish.com.au/content/groups/public'
-      }
-    }
-    dependencies {
-        classpath 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.2'
-    }
-}
 
 task mergeImages(type: Copy) {
     from fileTree(dir: 'src', include: '**/images/*').files

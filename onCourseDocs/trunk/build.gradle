@@ -1,13 +1,31 @@
+import com.sun.org.apache.xalan.internal.xsltc.compiler.Copy
 import org.apache.tools.ant.filters.ReplaceTokens
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://repo.ish.com.au/content/groups/public'
+        }
+        maven {
+            url 'https://repo.ish.com.au/content/groups/ish'
+        }
+    }
+    dependencies {
+      //  classpath 'org.codehaus.groovy:groovy-all:2.5.4'
+    }
+}
 
 plugins {
     id 'com.github.ben-manes.versions' version '0.20.0' // adds the task 'dependencyUpdates'
     id 'distribution'
     id 'maven'
     id 'maven-publish'
+    id 'groovy'
 }
+
+apply plugin: 'groovy'
 
 configurations {
     docbookxslt
@@ -160,6 +178,20 @@ subprojects {
                     commandLine 'optipng'
                     args '-fix', '-strip all', f.absolutePath
                 }
+            }
+        }
+    }
+}
+
+// Skip beta and other non-final releases in the update report
+dependencyUpdates.resolutionStrategy {
+    componentSelection { rules ->
+        rules.all { ComponentSelection selection ->
+            boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm', 'preview', 'ea'].any { qualifier ->
+                selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+            }
+            if (rejected) {
+                selection.reject('Release candidate')
             }
         }
     }

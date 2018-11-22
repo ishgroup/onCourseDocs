@@ -9,14 +9,12 @@ configurations.dsl {
             cacheChangingModulesFor 0, 'seconds'
     }
 }
-repositories.maven {
-    url 'https://repo.ish.com.au/content/groups/ish'
-}
+
 dependencies {
     dsl 'ish.oncourse.angel:server:99-SNAPSHOT:apidocs'
 }
 
-task extractAPIdocbook(type: Copy) {
+task extractAPIdocbook(type: org.gradle.api.tasks.Copy) {
     from zipTree(configurations.dsl.singleFile)
     into "${buildDir}/processed"
     filter(ReplaceTokens,tokens: [

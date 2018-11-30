@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="editor">
+    <title>Search</title>
+    
+    <note>
+        <para> 
+            IMPORTANT: 
+        </para>
+    </note>
+    <section xml:id="search-introduction"><title>Introduction</title>
+     <para> </para>
+    </section>
+    
+    <section xml:id="search-listView"><title>Searching in the list view</title>
+        <para> </para>
+                
+    </section>
+    
+    <section xml:id="search-advanced"><title>Advanced search</title>
+        <para>A simple query consists of a field, followed by an operator, followed by one or more values //TODO Example</para>
+        <para> You can link clauses together with keywords to make more complex queries //TODO Example</para>
+        <section xml:id="search-advanced-fields"><title>Fields</title>
+                <para>  </para>
+            </section>
+                           
+            <section xml:id="search-advanced-operators"><title>Operators</title>              
+                <section xml:id="search-advanced-operators-numeric"> <title>Numeric and date operators</title> 
+                    <para>
+                        <variablelist>
+                            <varlistentry>
+                                <term>EQUALS: = </term>
+                                <listitem>
+                                    <para>The EQUALS operator returns true if the first operand is of equal value to the second operand.</para>
+                                    <para>Useage: 
+                                        <programlisting language="javascript"> 
+                                            createdOn = 2018-01-01
+                                        </programlisting>
+                                    </para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>NOT EQUAL: !=</term>
+                                <listitem>
+                                    <para>The NOT EQUAL operator returns true if the first operands is not of equal value to the second operand.</para>
+                                    <para> Useage: 
+                                        <programlisting language="javascript"> 
+                                            deliveryMode != ONLINE
+                                        </programlisting>
+                                    </para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>LESS THAN: &lt;</term>
+                                <listitem>
+                                    <para> The LESS THAN operator returns true if the first operand is less than the second. </para>
+                                    <para> LESS THAN can also be used with the equals operator to return true if the first 
+                                    operand is less than or equal too the second operand</para>
+                                    <para> Useage:
+                                        <programlisting language="javascript"> 
+                                            enrolmentCount &lt; 10
+                                        </programlisting>
+                                        <programlisting language="javascript"> 
+                                            enrolmentCount &lt;= 9
+                                        </programlisting>
+                                    </para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>GREATER THAN: &gt;</term>
+                                <listitem>
+                                    <para>The GREATER THAN operator returns true if the first operand is greater than the second.</para>
+                                    <para> As with the LESS THAN operator, the GREATER THAN operator can be combined with the equal
+                                    operator to return true if the first operand is greater than or equal to the second operand</para>
+                                    <para> Useage:
+                                        <programlisting language="javascript"> 
+                                            age &gt; 17
+                                        </programlisting>
+                                        <programlisting language="javascript"> 
+                                            age &gt;= 18
+                                        </programlisting>
+                                    </para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>IN: in</term>
+                                <listitem>
+                                    <para>The IN operator is used to check if an object (left operand) exists in a set (the right operand). 
+                                        The IN operator will return true if the left operand exists within the right operand set.</para>
+                                    <para>
+                                        <programlisting language="javascript"> 
+                                            course.code in  ("ABC", "DEF", "GHI")
+                                        </programlisting>
+                                    </para>
+                                </listitem>
+                            </varlistentry>
+                        </variablelist>
+                    </para>   
+                </section>
+                
+                <section xml:id="search-advanced-operators-string"> <title>String operators</title> 
+                    <para>
+                        <variablelist>
+                            <varlistentry>
+                                <term> LIKE: ~ </term>
+                                <listitem>
+                                    <para> </para>
+                                    <para>Useage: </para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>CONTAINS: contains</term>
+                                <listitem>
+                                    <para> CONTAINS returns true if the first operand string contains the second operand string.</para>
+                                    <para> Useage:
+                                        <programlisting language="javascript"> 
+                                            course.name contains "Gardening"
+                                        </programlisting>
+                                    </para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>STARTS_WITH: starts with</term>
+                                <listitem>
+                                    <para> STARTS_WITH returns true if the first operand string starts with the second operand string.</para>
+                                    <para> Useage:
+                                        <programlisting language="javascript"> 
+                                            course.name starts with "Cooking"
+                                        </programlisting>
+                                    </para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>ENDS_WITH: ends with</term>
+                                <listitem>
+                                    <para> ENDS_WITH returns true if the first operand string ends with the second operand string.</para>
+                                    <para> Useage:
+                                        <programlisting language="javascript"> 
+                                            course.name ends with "Beginners"
+                                        </programlisting>
+                                    </para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>NOT: not</term>
+                                <listitem>
+                                    <para>The NOT operator inverts the returned value of string operators.</para>
+                                    <para>For example, 'course.code not contains "Gardening"' with return all courses that do not contain 'Gardening' </para>
+                                    <para> Useage:
+                                        <programlisting language="javascript"> 
+                                            name !~John
+                                        </programlisting>
+                                        <programlisting language="javascript"> 
+                                            name not like John
+                                        </programlisting>
+                                        <programlisting language="javascript"> 
+                                            course.name not contains "Gardening"
+                                        </programlisting>
+                                        <programlisting language="javascript"> 
+                                            course.name not starts with "Cooking"
+                                        </programlisting>
+                                        <programlisting language="javascript"> 
+                                            course.name not ends with "Beginners"
+                                        </programlisting>
+                                    </para>
+                                </listitem>
+                            </varlistentry>
+                        </variablelist>
+                    </para>   
+                </section>
+                
+                               
+            </section>
+            
+            <section xml:id="search-advanced-keywords"><title>Keywords and Conditions</title>
+                <para>
+                    <variablelist>
+                        <varlistentry>
+                            <term>OR: or</term>
+                            <listitem>
+                                <para> The OR condition will return true if at least one of the
+                                contditions operands are true. Operand conditions are constructed
+                                from operands and operators outlined in the Operators
+                                chapter.</para>
+                                    <para>
+                                        <programlisting language="javascript"> 
+                                            condition or condition
+                                        </programlisting>
+                                        <programlisting language="javascript"> 
+                                        course.name contains "Gardening" or course.code starts with "GAR"
+                                        </programlisting>
+                                    </para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>AND: and</term>
+                            <listitem>
+                                <para>The AND condition will return true if all of the conditionas are true.</para>
+                                <para>
+                                    <programlisting language="javascript"> 
+                                            condition and condition
+                                    </programlisting>
+                                    <programlisting language="javascript"> 
+                                            courseClass.startDateTime = tomorrow and courseClass.successAndQueuedEnrolments >= courseClass.minimumPlaces 
+                                    </programlisting>
+                                </para>
+                            </listitem>
+                        </varlistentry>
+                    </variablelist>
+                </para>
+            </section>
+        
+            <section xml:id="search-advanced-functions"><title>Functions</title>
+                <para>  </para>
+            </section>
+        
+            <section xml:id="search-advanced-fuzzy"><title>Fuzzy Search</title>
+                <para>  </para>
+            </section>
+               
+            <section xml:id="search-advanced-example"><title>Putting together a query</title>
+                <para>  </para>
+            </section>
+    </section>
+
+</chapter>

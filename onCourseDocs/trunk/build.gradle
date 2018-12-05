@@ -1,28 +1,17 @@
-import com.sun.org.apache.xalan.internal.xsltc.compiler.Copy
 import org.apache.tools.ant.filters.ReplaceTokens
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 buildscript {
-    repositories {
-        maven {
-            url 'https://repo.ish.com.au/content/groups/public'
-        }
-        maven {
-            url 'https://repo.ish.com.au/content/groups/ish'
-        }
-    }
-    dependencies {
-      //  classpath 'org.codehaus.groovy:groovy-all:2.5.4'
+    repositories.maven {
+        url 'https://repo.ish.com.au/content/groups/public'
     }
 }
 
 plugins {
     id 'com.github.ben-manes.versions' version '0.20.0' // adds the task 'dependencyUpdates'
     id 'distribution'
-    id 'maven'
     id 'maven-publish'
-    id 'groovy'
 }
 
 apply plugin: 'groovy'
@@ -33,6 +22,7 @@ configurations {
 repositories.maven {
     url 'https://repo.ish.com.au/content/groups/public'
 }
+
 dependencies {
     docbookxslt 'net.sf.docbook:docbook-xsl:1.79.1:resources@zip'
 }
@@ -42,12 +32,27 @@ task explodeXSL(type: Copy) {
 }
 
 subprojects {
-    apply plugin: 'distribution'
     apply plugin: 'maven'
     apply plugin: 'maven-publish'
+    apply plugin: 'distribution'
 
     group = 'ish.oncourse.docs'
     version = project.hasProperty('releaseVersion') ? project.releaseVersion : 'SNAPSHOT'
+
+    distributions {
+        html {
+            contents {
+                from "${buildDir}/html"
+            }
+        }
+        pdf {
+            contents {
+                from "${buildDir}/*.pdf"
+            }
+        }
+    }
+    uploadArchives.dependsOn htmlDistZip
+    distTar.enabled = false
 
     publishing {
         publications {
@@ -77,21 +82,6 @@ subprojects {
             }
         }
     }
-
-    distributions {
-        html {
-            contents {
-                from "${buildDir}/html"
-            }
-        }
-        pdf {
-            contents {
-                from "${buildDir}/*.pdf"
-            }
-        }
-    }
-    uploadArchives.dependsOn htmlDistZip
-    distTar.enabled = false
 
     task processCommonSrc(type: Copy, dependsOn: parent.tasks['explodeXSL']) {
         from "${rootDir}/src"
@@ -164,19 +154,19 @@ subprojects {
                     exec {
                         commandLine 'magick'
                         standardOutput = resolution
-                        args 'identify', '-format', '%x', f.absolutePath
+                        args ['identify', '-format', '%x', f.absolutePath]
                     }
                     if (resolution?.toString()?.isInteger() && resolution.toString() as Integer != 72) {
                         logger.warn('Found image {} which has resolution {}. Resizing now.', f.absolutePath, resolution.toString())
                         exec {
                             commandLine 'convert'
-                            args f.absolutePath, '-strip', '-units' ,'PixelsPerInch', '-resample', '72', f.absolutePath
+                            args [f.absolutePath, '-strip', '-units' ,'PixelsPerInch', '-resample', '72', f.absolutePath]
                         }
                     }
                 }
                 exec {
                     commandLine 'optipng'
-                    args '-fix', '-strip all', f.absolutePath
+                    args ['-fix', '-strip all', f.absolutePath]
                 }
             }
         }

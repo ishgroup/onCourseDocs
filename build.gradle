@@ -152,21 +152,21 @@ subprojects {
             fileTree("src").matching{ include '**/*.png' }.each{ f ->
                 new ByteArrayOutputStream().withStream { resolution -> 
                     exec {
-                        commandLine 'magick'
+                        commandLine = 'magick'
                         standardOutput = resolution
-                        args ['identify', '-format', '%x', f.absolutePath]
+                        args = ['identify', '-format', '%x', f.absolutePath]
                     }
                     if (resolution?.toString()?.isInteger() && resolution.toString() as Integer != 72) {
                         logger.warn('Found image {} which has resolution {}. Resizing now.', f.absolutePath, resolution.toString())
                         exec {
-                            commandLine 'convert'
-                            args [f.absolutePath, '-strip', '-units' ,'PixelsPerInch', '-resample', '72', f.absolutePath]
+                            commandLine = 'convert'
+                            args = [f.absolutePath, '-strip', '-units' ,'PixelsPerInch', '-resample', '72', f.absolutePath]
                         }
                     }
                 }
                 exec {
-                    commandLine 'optipng'
-                    args ['-fix', '-strip all', f.absolutePath]
+                    commandLine = 'optipng'
+                    args = ['-fix', '-strip all', f.absolutePath]
                 }
             }
         }

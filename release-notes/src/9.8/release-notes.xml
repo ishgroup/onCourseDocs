@@ -6,215 +6,107 @@
     <title>Release 9.8</title>
     <pubdate>11 Dec 2018</pubdate>
   </info>
-  <section role='important'>
-    <title>Important changes</title>
-    <para></para>
-  </section>
+
   <section role='major'>
     <title>Major features</title>
-    <para></para>
+
+    <section>
+      <title>onCourse query language</title>
+
+      <para>
+        <systemitem>OD-12002</systemitem>This release introduces the new onCourse query language in what might be the most useful usability
+        feature introduced to onCourse since "Find Related". For now, this query language is
+        available only in the new Modules, Qualifications and Script views and will be rolled out
+        across the entire user interface in upcoming releases.
+      </para>
+    </section>
+
+    <section>
+      <title>Script user interface</title>
+
+      <para>
+        <systemitem>OD-11969</systemitem>Scripts now have a clean new user interface, allowing you to more easily create and edit scripts for
+        onCourse. With the new query language integration, you can easily find records in onCourse
+        to perform operations on.
+      </para>
+    </section>
+
+    <section>
+      <title>New AVETMISS export user interface</title>
+
+      <para>
+        <systemitem>OD-12114</systemitem>The AVETMISS export process has a pretty new UI to make it clearer and simpler to export the data you need.
+        With more detailed information about each step in your VET workflow, it makes it easier to find and correct data.
+      </para>
+    </section>
+
+    <section>
+      <title>New list and edit user interface</title>
+
+      <para>
+        <systemitem>OD-12203</systemitem>We've rolled out the new three panel combined list/edit view in Modules and Qualifications. This is a seldom used part of onCourse
+        so its a good place to show off what we've done without introducing major changes right at the end of the year. Even if you aren't an RTO take a look at these new screens
+        and play with the search and column selection options. We want your feedback as we continue to roll this UI across the entire application.
+      </para>
+    </section>
+
   </section>
+
   <section role='minor'>
     <title>Minor features</title>
+
     <itemizedlist>
       <listitem>
-        <para>Script NG React templates
-          <systemitem>OD-11969</systemitem>
+        <para>
+          Certificate expiry date<systemitem>OD-12031</systemitem>. Certificates can be given an expiry date which is useful for courses like first aid.
         </para>
       </listitem>
       <listitem>
-        <para>Query language implementation
-          <systemitem>OD-12002</systemitem>
+        <para>
+          The new user interface has been applied to managing tags.<systemitem>OD-12105</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>React login frame: advanced configuration
-          <systemitem>OD-12010</systemitem>
+        <para>
+          Bundle Java 11 inside the standalone client application.<systemitem>OD-12137</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Certificate expiry
-          <systemitem>OD-12031</systemitem>
+        <para>
+          Fix incorrect display of non-$ currency symbol in PDF and CSV<systemitem>OD-12147</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>password reset in react security preferences
-          <systemitem>OD-12035</systemitem>
+        <para>
+          Login screen adjustments<systemitem>OD-12195</systemitem>. When running the standalone client application, you can now specify the server host as a single
+          word. Port now defaults to 443.
         </para>
       </listitem>
       <listitem>
-        <para>disable 2 factor authentication in react security preferences
-          <systemitem>OD-12037</systemitem>
+        <para>
+          Remove Avetmiss 6 export<systemitem>OD-12201</systemitem>. The time has come to remove some old export code no one needs any more.
         </para>
       </listitem>
       <listitem>
-        <para>React Tag API
-          <systemitem>OD-12098</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>React Tag Groups templates
-          <systemitem>OD-12105</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>AVETMISS export react templates
-          <systemitem>OD-12114</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Webstart going away. Put java inside .exe .dmg
-          <systemitem>OD-12137</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Adjust wrong display of currency symbol in PDF and CSV
-          <systemitem>OD-12147</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Add Karate tests for path 'tag'
-          <systemitem>OD-12149</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Angel build issues
-          <systemitem>OD-12166</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>jxbrowser proxy settings
-          <systemitem>OD-12167</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>New Tag Groups: Who can see and edit tags
-          <systemitem>OD-12178</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Server-API: AVETMISS export
-          <systemitem>OD-12184</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Fix broken karate tests
-          <systemitem>OD-12188</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Unified list view API and business logic
-          <systemitem>OD-12190</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Angel client: handle new/old windows for scripts, audits
-          <systemitem>OD-12191</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>angel-api: unified list view for backend
-          <systemitem>OD-12194</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Login screen adjustments
-          <systemitem>OD-12195</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Revert JXBrovser proxy settings
-          <systemitem>OD-12199</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Remove Avetmiss6 export for app
-          <systemitem>OD-12201</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Module/Qualification API
-          <systemitem>OD-12203</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Self-updating client app
-          <systemitem>OD-12204</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Reduce size of standalone application
-          <systemitem>OD-12205</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Update JNLP configuration for different platforms
-          <systemitem>OD-12213</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Unit of competency on React
-          <systemitem>OD-12215</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Find related feature for List
-          <systemitem>OD-12224</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Add Karate tests for path 'list'
-          <systemitem>OD-12225</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Custom filter feature for Unified List View
-          <systemitem>OD-12227</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Signed OSX client from buildbot isn't opening
-          <systemitem>OD-12229</systemitem>
+        <para>
+          Self-updating client app<systemitem>OD-12204</systemitem>
         </para>
       </listitem>
     </itemizedlist>
   </section>
+
   <section role='fixes'>
     <title>Fixes</title>
+
     <itemizedlist>
       <listitem>
-        <para>Preferences &gt; Scripts/Audit. Unable to open new design frame using SHIFT key (only Windows)
-          <systemitem>OD-12139</systemitem>
+        <para>
+          Unable to log in with two instances of onCourse client running<systemitem>OD-12152</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Unable to log in with two instnaces of onCourse client running
-          <systemitem>OD-12152</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Groovy: MissingMethodException on java.util.Date.format()
-          <systemitem>OD-12165</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Error message occurs when webstart client starts
-          <systemitem>OD-12171</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Currency: EUR amount incorrect displaying
-          <systemitem>OD-12183</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Require two-factor authentication every &lt;x&gt; hours not working
-          <systemitem>OD-12192</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Shift-click doesn't open old Tags and AVETMISS UI on Windows
-          <systemitem>OD-12218</systemitem>
+        <para>
+          Require two-factor authentication every &lt;x&gt; hours not working<systemitem>OD-12192</systemitem>
         </para>
       </listitem>
     </itemizedlist>

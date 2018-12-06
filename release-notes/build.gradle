@@ -13,66 +13,58 @@ docbookPdf.dependsOn mergeImages
 
 
 // Run the following task to create new release notes from squish
+// ./gradlew release-notes:releaseNotes -PreleaseVersion=1.1
 task releaseNotes(type: ReleaseNotes) {
-  description = 'Generate new release notes.'
+  version = releaseVersion
 }
 
 class ReleaseNotes extends DefaultTask {
 
+  @Input
+  String version
+
   @TaskAction
   def getNotes() {
 
-    def jiraUsername = ''
-    def jiraPassword = ''
-    def jiraFixVersion = ''
-    new SwingBuilder().edt {
-      dialog(modal: true,
-              title: 'Enter password',
-              alwaysOnTop: true,
-              resizable: false,
-              locationRelativeTo: null, // Place dialog in center of the screen
-              pack: true,
-              show: true
-      ) {
-        vbox {
-          label(text: "Enter your squish username:")
-          input_user = textField()
-          label(text: "Enter your squish password:")
-          input_pass = passwordField()
-          label(text: "Which version of onCourse are you releasing:")
-          input_version = textField()
-          button(defaultButton: true, text: 'OK', actionPerformed: {
-            jiraUsername = input_user.text
-            jiraPassword = input_pass.password.toString()
-            jiraFixVersion = input_version.text
-            dispose()
-          })
-        }
-      }
-    }
+    def query = "?jql=resolution+in+(closed,Unresolved)+and+fixVersion=${version}&maxResults=1000"
+    def issues = getJiraResponse('api/latest/search' + query)
 
-    logger.lifecycle "Getting issues..."
+    logger.debug new JsonBuilder(issues).toPrettyString()
 
-    // https://docs.atlassian.com/jira/REST/latest/#idp1389824
-    def SQUISH_URL = "https://squish.ish.com.au/rest/api/latest/search"
-    def query = "?jql=resolution+in+(closed,Unresolved)+and+fixVersion=${jiraFixVersion}&maxResults=1000"
-    def encoded_auth = "$jiraUsername:$jiraPassword".getBytes().encodeBase64().toString()
+    logger.lifecycle "Found ${issues.issues.size()} issues..."
+    buildDocBook(version, issues.issues)
 
-    logger.lifecycle "Getting " + (SQUISH_URL + query).toURL()
+  }
+
+  def getJiraResponse(query, data=null, action="POST") {
+    // https://developer.atlassian.com/cloud/jira/platform/rest/
+    def SQUISH_URL = "https://squish.ish.com.au/rest/"
+    def jiraUsername = "gradle"
+    def jiraPassword = "7Am1*^X8A#ul"
+    def encoded_auth = "${jiraUsername}:${jiraPassword}".getBytes().encodeBase64().toString()
+
     def connection = (SQUISH_URL + query).toURL().openConnection()
+
     connection.addRequestProperty("Authorization", "Basic ${encoded_auth}")
     connection.addRequestProperty("Content-Type", "application/json")
-    connection.setRequestMethod("GET")
-    connection.doOutput = false
+    connection.addRequestProperty("Accept", "application/json")
+
+    if (data) {
+      connection.setRequestMethod(action)
+      connection.setDoOutput(true)
+
+      def writer = new OutputStreamWriter(connection.outputStream)
+      writer.write(data.toString())
+      writer.flush()
+      writer.close()
+    } else {
+      connection.setRequestMethod("GET")
+    }
     connection.connect()
 
     def slurper = new JsonSlurper()
-    def json_data = slurper.parseText(connection.content.text)
-    logger.debug new JsonBuilder(json_data).toPrettyString()
-
-    logger.lifecycle "Found ${json_data.issues.size()} issues..."
-    buildDocBook(jiraFixVersion, json_data.issues)
-
+    def response = slurper.parseText(connection.content.text)
+    return response
   }
 
   def buildDocBook(version, issues) {

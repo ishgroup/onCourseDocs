@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+         xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd'
+         version='5.0' xml:id='release-9.8'>
+  <info>
+    <title>Release 9.8</title>
+    <pubdate>11 Dec 2018</pubdate>
+  </info>
+  <section role='important'>
+    <title>Important changes</title>
+    <para></para>
+  </section>
+  <section role='major'>
+    <title>Major features</title>
+    <para></para>
+  </section>
+  <section role='minor'>
+    <title>Minor features</title>
+    <itemizedlist>
+      <listitem>
+        <para>Script NG React templates
+          <systemitem>OD-11969</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Query language implementation
+          <systemitem>OD-12002</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>React login frame: advanced configuration
+          <systemitem>OD-12010</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Certificate expiry
+          <systemitem>OD-12031</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>password reset in react security preferences
+          <systemitem>OD-12035</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>disable 2 factor authentication in react security preferences
+          <systemitem>OD-12037</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>React Tag API
+          <systemitem>OD-12098</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>React Tag Groups templates
+          <systemitem>OD-12105</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>AVETMISS export react templates
+          <systemitem>OD-12114</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Webstart going away. Put java inside .exe .dmg
+          <systemitem>OD-12137</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Adjust wrong display of currency symbol in PDF and CSV
+          <systemitem>OD-12147</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Add Karate tests for path 'tag'
+          <systemitem>OD-12149</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Angel build issues
+          <systemitem>OD-12166</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>jxbrowser proxy settings
+          <systemitem>OD-12167</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>New Tag Groups: Who can see and edit tags
+          <systemitem>OD-12178</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Server-API: AVETMISS export
+          <systemitem>OD-12184</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Fix broken karate tests
+          <systemitem>OD-12188</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Unified list view API and business logic
+          <systemitem>OD-12190</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Angel client: handle new/old windows for scripts, audits
+          <systemitem>OD-12191</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>angel-api: unified list view for backend
+          <systemitem>OD-12194</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Login screen adjustments
+          <systemitem>OD-12195</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Revert JXBrovser proxy settings
+          <systemitem>OD-12199</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Remove Avetmiss6 export for app
+          <systemitem>OD-12201</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Module/Qualification API
+          <systemitem>OD-12203</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Self-updating client app
+          <systemitem>OD-12204</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Reduce size of standalone application
+          <systemitem>OD-12205</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Update JNLP configuration for different platforms
+          <systemitem>OD-12213</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Unit of competency on React
+          <systemitem>OD-12215</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Find related feature for List
+          <systemitem>OD-12224</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Add Karate tests for path 'list'
+          <systemitem>OD-12225</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Custom filter feature for Unified List View
+          <systemitem>OD-12227</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Signed OSX client from buildbot isn't opening
+          <systemitem>OD-12229</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section role='fixes'>
+    <title>Fixes</title>
+    <itemizedlist>
+      <listitem>
+        <para>Preferences &gt; Scripts/Audit. Unable to open new design frame using SHIFT key (only Windows)
+          <systemitem>OD-12139</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Unable to log in with two instnaces of onCourse client running
+          <systemitem>OD-12152</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Groovy: MissingMethodException on java.util.Date.format()
+          <systemitem>OD-12165</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Error message occurs when webstart client starts
+          <systemitem>OD-12171</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Currency: EUR amount incorrect displaying
+          <systemitem>OD-12183</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Require two-factor authentication every &lt;x&gt; hours not working
+          <systemitem>OD-12192</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Shift-click doesn't open old Tags and AVETMISS UI on Windows
+          <systemitem>OD-12218</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+</chapter>

@@ -384,6 +384,12 @@
 			</variablelist>
 			<para>Produces a brief introduction to a Course Class</para>
 			<para>Called by "Courses" and "CourseDetails"</para>
+			<para>getImages(courseItemModel.course) retrieves all images related to this course and have 'image/jpeg' mimeType</para>
+			<programlisting linenumbering="numbered" language="xml">
+&lt;t:loop source="getImages(courseItemModel.course)" value="attachment"&gt;
+	&lt;div t:type="ui/image" name="attachment.name"/&gt;
+&lt;/t:loop&gt;
+			</programlisting>
 			<programlisting linenumbering="numbered" language="xml"><xi:include href="../components/CourseItem.tml" parse="text" /></programlisting>
 		</section>
 		<section>

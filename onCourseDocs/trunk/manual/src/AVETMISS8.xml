@@ -1,153 +1,215 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="AVETMISS8">
 	<title>AVETMISS</title>
-	<section>
-		<title>Before taking enrolments</title>
-		<para>If you're required to report AVETMISS or funded training there are a few steps you'll need
-			to take to ensure that reporting time goes as smoothly as possible. Do these things
-			before you accept your first enrolment into the VET classes.</para>
-		<section>
-			<title>General preferences</title>
-			<para>Set up your AVETMISS details within the General Preferences window. To access this, in the
-				navigation menu click File > Preferences > General, then find the AVETMISS tab in
-				the left-hand column on the window. 'Show RTO related screens and menus' should be
-				enabled. Then fill out the rest of the page and be especially certain that both your
-				Training organisation name and RTO Identifier field match the details recorded on
-				training.gov.au.</para>
-			<para>When you've finished, hit the 'Save' button in the top-corner of the window, then close
-				it.</para>
-		</section>
-		<section>
-			<title>Competency components</title>
-			<para>onCourse tracks VET competencies such as Qualifications, Accredited Courses, Skill
-				groups/sets, Units of Competency, and Modules. It also tracks higher education
-				Courses and Units of Study.</para>
-			<para>onCourse automatically imports all this data regularly from training.gov.au. The can view
-				Competency Components from the Training menu.</para>
-			<para>For each competency on your scope, tick the 'is offered' option; this will ensure
-				that only those records can be added to your courses. You can also create your own
-				competencies for Skills groups, modules and higher education which aren't imported
-				automatically from training.gov.au.</para>
-		</section>
-		<section>
-			<title>Funding source</title>
-			<para>Make sure you remember to add the correct funding contract at the Class level, and then
-				make any required changes for individual students at the Enrolment level.</para>
-		</section>
-		<section>
-			<title>Site setup</title>
-			<para>You should ensure that all of the sites you've set up have the correct address, suburb and
-				postcode. Any sites that are used for VET classes will have these details included
-				in reporting, so ensuring accuracy in this data is important.</para>
-		</section>
-		<section>
-			<title>Course setup</title>
-			<para>Access the VET section within the Course edit view to add the correct Qualification and the
-				Units of Competency (or Accredited Course and Modules) for the course. When you
-				start typing into the national code field, it will list the closest matching records
-				listed on training.gov.au to what you've entered. You can then add the Units/Modules
-				by clicking the green '+' button in the top-right of the section. These are also
-				'smart' so will collate a drop down list of options that closely matches what you
-				begin to type.</para>
-			<para>The nominal hours information needs to be manually added to the qualification or
-				skills set as it is not automatically supplied from training.gov.au. You only need
-				to do this once for each qualification or skill set you deliver, either by opening
-				the related Qualification record after adding it to the course, or by finding the
-				qualification under Training > Qualifications.</para>
-			<para>Courses do not have to have Qualification or Skill Set assigned. If you add the
-				code, but don't tick the 'Satisfies complete qualification or skill set' option,
-				then the information will not be added to the NAT00030 file, or the associated
-				NAT00120 records, but the information will be added to the student's Statement of
-				Attainment. You can add this information or tick the checkbox after you have created
-				the course and enrolled students. </para>
-				<para>When referring to units or modules, this is the data from training.gov.au that
-					is available in onCourse and updated daily. When building a <link xlink:href="courses.html">course</link>, these units are added to the VET
-					tab on course creation. This course forms a template for adding outcomes to the
-					student record.</para>
-				<para>When a student <link xlink:href="processingEnrolments.html">enrols</link> in a
-						<link xlink:href="classes.html">class</link>from the course, the units from
-					the course are added as outcome records for the student enrolment. Units can be
-					added or removed from a student enrolment records as needed.</para>
-			
-			<para>If your course is VET, but not from a training package or accredited course, you can also
-				flag it as VET here and allocate its Field of Education ID. You can also add the
-				reportable hours here.</para>
-			<para>As you add the units to courses, you should also add the nominal hours
-					information to each unit. You only need to do this once for each unit you
-					deliver. Many users refer to the <link xlink:href="https://www.education.vic.gov.au/training/providers/rto/Pages/purchasingguides.aspx">Victorian Purchasing Guides</link> for this data. 
-			</para>
-			<para>
-				<note>
-					<para>Currently training.gov.au doesn't record or publish the module details of state
-						accredited courses. If you would like us to add the accredited course
-						modules or skills groups you deliver to onCourse, please contact us and we
-						will import them for you at no additional charge. </para>
-				</note>
-			</para>
-			<para>
-				The data on the VET tab in the contact record also forms a large part of the
-					data exported, including the indigenous status identifier, language identifier,
-					labour force identifier and more. It is ok to leave all or some of these fields
-					blank - onCourse will automatically export the value @ for not specified. The
-						<link xlink:href="usi.html">post enrolment data collection process</link>
-					will ask the students these questions and ask them to supply or create their USI
-					if they haven't provided it to you previously.
-			</para>
-		</section>
-		<section>
-			<title>Class setup</title>
-			<para>Access the VET section in the Class edit view to add specific information for that
-				delivery such as delivery mode and Funding Source National fields. When you
-				duplicate classes this information is carried to the new class, so set it up
-				correctly now.</para>
-			<para>It is very important that you link each class to the correct Funding Source if the
-				training is funded. When you start taking enrolments, you can individually change
-				the funding source for each enrolment.</para>
-			<para>When you set up a class in onCourse, create a class schedule with at least two
-					sessions representing the start and end date on the timetable tab. If you need
-					to modify the start or end date for an individual student, you can do it through
-					their contact record or through the class window by looking on the Outcome tab
-					and changing the date in the field for the student/unit combination of your
-					choice. If you change the class start and end dates, it will update the outcome
-					start and end dates for all students enrolled in the class, except those where
-					you have already manually edited the date.
-			</para>
-			<section>
-				<title>Delivery Mode Identifier</title>
-				<para>Your preferred default setting can be set on the general preferences Class Defaults tab. This can be changed for each Class on the VET tab. You can also make changes for individual students on the Outcome list or through their individual enrolment. Because onCourse supports both AVETMISS 7 and 8, some delivery modes will be translated when you export to the older AVETMISS 7 standard. 
-					Classroom and online will be exported as 10, Classroom and workplace as 30, Online and workplace as 30, and Classroom, online and workplace as 30.</para>
-				
-			</section>
-			<section>
-				<title>Funding Source - National</title>
-				<para>You preferred default setting can be set on the general preferences Class
-					Defaults tab. This can be changed for each Class on the VET tab. You can also
-					change it for each outcome in the class Outcomes tab or for each student in
-					their Enrolment record on the General tab. Double click the outcome to see this
-					field.</para>
-			</section>
-			<section>
-				<title>Scheduled Hours</title>
-				<para>The scheduled hours reported are the nominal hours that you set in the unit of
-					competency. If you added the nominal hours when setting up the course it will
-					report here. You can override the Scheduled Hours in the individual
-					outcome.</para>
-			</section>
-			<section>
-				<title>Purchasing Contract Schedule Identifier</title>
-				<para>This is set in the class on the VET tab</para>
-			</section>
-			<section>
-				<title>Commencing Program Identifier</title>
-				<para>If the student was enrolled in a class linked to a course marked as a full
-					qualification, then we output the value 3 - Commencing enrolment in a
-					qualification or course. If the enrolment was not linked to a course marked as a
-					full qualification, then this will export as 8 - Unit of competency or module
-					only enrolment.</para>
-			</section>
-		</section>
-
+	<section><title>Navigation</title>
+		<para>As of onCourse 9.8, there have been some changes to the way the AVETMISS export window
+			looks. Functionally, everything remains the same except for one key difference; the
+			AVETMISS runner will no longer query the database automatically once you confirm your
+			date ranges. </para>
+		<para>Below is the AVETMISS runner window where you select your type of reporting you need to
+			do--known in onCourse as 'Flavour'--as well as confirming the data you need included in
+			the export. Click the 'Flavour' box to show a drop-down of all the possible
+			selections.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/AVETMISS8_blank.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>The new-look AVETMISS runner is functionally the same as before</para>
+			</caption>
+		</mediaobject>
+		<para>You need to ensure you select a date range from the 'Outcomes in progress during' box. You
+			can select from a preset date range or year, or choose 'custom date range' and choose
+			your own date range. You can also choose to include all outcomes that might be outside
+			your selected date range, but are linked to the same enrolment.</para>
+		<para>Once you've selected your flavour, the data sets to be included and chosen a date
+			range, the 'Find' button will become active. Once you select this, the button will
+			change into a loading spinner and the query will run.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/AVETMISS8_selections.png" format="png"/>
+			</imageobject>
+			<caption>Example of a custom date range being requested and the active Find button</caption>
+		</mediaobject>
+		<para>Once the query has run, you will be presented with a breakdown of all the query's findings.
+			You can review the findings here, and if you're happy with them, hit Export. </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/AVETMISS_results.png" format="png"/>
+			</imageobject>
+			<caption>The query results will show the total number of outcomes and enrolments, along with lots
+				of other information</caption>
+		</mediaobject>
+		<para>The export itself can take some time to run and varies from database to databsae
+			depending on size. Once it's complete, a small dialogue box wil open asking you to name
+			the .zip file that has been created, and where you'd like to save it. Choose an easily
+			accessible/easy to remember location and hit Save. </para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/AVETMISS_save.png" format="png"/>
+			</imageobject>
+			<caption>After the export has run, name your export .zip file and choose a place to save it</caption>
+		</mediaobject>
 	</section>
+	<section>
+		<title>Before Taking Enrolments</title>
+		<para>
+				If you're required to report AVETMISS or funded training there are a few steps
+					you'll need to take to ensure that reporting time goes as smoothly as possible.
+					Do these things before you accept your first enrolment into the VET
+					classes.</para>
+				<section>
+					<title>General preferences</title>
+					<para>Set up your AVETMISS details within the General Preferences window. To
+						access this, in the navigation menu click File > Preferences > General, then
+						find the AVETMISS tab in the left-hand column on the window. 'Show RTO
+						related screens and menus' should be enabled. Then fill out the rest of the
+						page and be especially certain that both your Training organisation name and
+						RTO Identifier field match the details recorded on training.gov.au.</para>
+					<para>When you've finished, hit the 'Save' button in the top-corner of the
+						window, then close it.</para>
+				</section>
+				<section>
+					<title>Competency components</title>
+					<para>onCourse tracks VET competencies such as Qualifications, Accredited
+						Courses, Skill groups/sets, Units of Competency, and Modules. It also tracks
+						higher education Courses and Units of Study.</para>
+					<para>onCourse automatically imports all this data regularly from
+						training.gov.au. The can view Competency Components from the Training
+						menu.</para>
+					<para>For each competency on your scope, tick the 'is offered' option; this will
+						ensure that only those records can be added to your courses. You can also
+						create your own competencies for Skills groups, modules and higher education
+						which aren't imported automatically from training.gov.au.</para>
+				</section>
+				<section>
+					<title>Funding source</title>
+					<para>Make sure you remember to add the correct funding contract at the Class
+						level, and then make any required changes for individual students at the
+						Enrolment level.</para>
+				</section>
+				<section>
+					<title>Site setup</title>
+					<para>You should ensure that all of the sites you've set up have the correct
+						address, suburb and postcode. Any sites that are used for VET classes will
+						have these details included in reporting, so ensuring accuracy in this data
+						is important.</para>
+				</section>
+				<section>
+					<title>Course setup</title>
+					<para>Access the VET section within the Course edit view to add the correct
+						Qualification and the Units of Competency (or Accredited Course and Modules)
+						for the course. When you start typing into the national code field, it will
+						list the closest matching records listed on training.gov.au to what you've
+						entered. You can then add the Units/Modules by clicking the green '+' button
+						in the top-right of the section. These are also 'smart' so will collate a
+						drop down list of options that closely matches what you begin to
+						type.</para>
+					<para>The nominal hours information needs to be manually added to the
+						qualification or skills set as it is not automatically supplied from
+						training.gov.au. You only need to do this once for each qualification or
+						skill set you deliver, either by opening the related Qualification record
+						after adding it to the course, or by finding the qualification under
+						Training > Qualifications.</para>
+					<para>Courses do not have to have Qualification or Skill Set assigned. If you
+						add the code, but don't tick the 'Satisfies complete qualification or skill
+						set' option, then the information will not be added to the NAT00030 file, or
+						the associated NAT00120 records, but the information will be added to the
+						student's Statement of Attainment. You can add this information or tick the
+						checkbox after you have created the course and enrolled students. </para>
+					<para>When referring to units or modules, this is the data from training.gov.au
+						that is available in onCourse and updated daily. When building a <link
+							xlink:href="courses.html">course</link>, these units are added to the
+						VET tab on course creation. This course forms a template for adding outcomes
+						to the student record.</para>
+					<para>When a student <link xlink:href="processingEnrolments.html">enrols</link>
+						in a <link xlink:href="classes.html">class</link>from the course, the units
+						from the course are added as outcome records for the student enrolment.
+						Units can be added or removed from a student enrolment records as
+						needed.</para>
+					<para>If your course is VET, but not from a training package or accredited
+						course, you can also flag it as VET here and allocate its Field of Education
+						ID. You can also add the reportable hours here.</para>
+					<para>As you add the units to courses, you should also add the nominal hours
+						information to each unit. You only need to do this once for each unit you
+						deliver. Many users refer to the <link
+							xlink:href="https://www.education.vic.gov.au/training/providers/rto/Pages/purchasingguides.aspx"
+							>Victorian Purchasing Guides</link> for this data. </para>
+					<para>
+						<note>
+							<para>Currently training.gov.au doesn't record or publish the module
+								details of state accredited courses. If you would like us to add the
+								accredited course modules or skills groups you deliver to onCourse,
+								please contact us and we will import them for you at no additional
+								charge. </para>
+						</note>
+					</para>
+					<para> The data on the VET tab in the contact record also forms a large part of
+						the data exported, including the indigenous status identifier, language
+						identifier, labour force identifier and more. It is ok to leave all or some
+						of these fields blank - onCourse will automatically export the value @ for
+						not specified. The <link xlink:href="usi.html">post enrolment data
+							collection process</link> will ask the students these questions and ask
+						them to supply or create their USI if they haven't provided it to you
+						previously. </para>
+				</section>
+				<section>
+					<title>Class setup</title>
+					<para>Access the VET section in the Class edit view to add specific information
+						for that delivery such as delivery mode and Funding Source National fields.
+						When you duplicate classes this information is carried to the new class, so
+						set it up correctly now.</para>
+					<para>It is very important that you link each class to the correct Funding
+						Source if the training is funded. When you start taking enrolments, you can
+						individually change the funding source for each enrolment.</para>
+					<para>When you set up a class in onCourse, create a class schedule with at least
+						two sessions representing the start and end date on the timetable tab. If
+						you need to modify the start or end date for an individual student, you can
+						do it through their contact record or through the class window by looking on
+						the Outcome tab and changing the date in the field for the student/unit
+						combination of your choice. If you change the class start and end dates, it
+						will update the outcome start and end dates for all students enrolled in the
+						class, except those where you have already manually edited the date. </para>
+					<section>
+						<title>Delivery Mode Identifier</title>
+						<para>Your preferred default setting can be set on the general preferences
+							Class Defaults tab. This can be changed for each Class on the VET tab.
+							You can also make changes for individual students on the Outcome list or
+							through their individual enrolment. Because onCourse supports both
+							AVETMISS 7 and 8, some delivery modes will be translated when you export
+							to the older AVETMISS 7 standard. Classroom and online will be exported
+							as 10, Classroom and workplace as 30, Online and workplace as 30, and
+							Classroom, online and workplace as 30.</para>
+					</section>
+					<section>
+						<title>Funding Source - National</title>
+						<para>You preferred default setting can be set on the general preferences
+							Class Defaults tab. This can be changed for each Class on the VET tab.
+							You can also change it for each outcome in the class Outcomes tab or for
+							each student in their Enrolment record on the General tab. Double click
+							the outcome to see this field.</para>
+					</section>
+					<section>
+						<title>Scheduled Hours</title>
+						<para>The scheduled hours reported are the nominal hours that you set in the
+							unit of competency. If you added the nominal hours when setting up the
+							course it will report here. You can override the Scheduled Hours in the
+							individual outcome.</para>
+					</section>
+					<section>
+						<title>Purchasing Contract Schedule Identifier</title>
+						<para>This is set in the class on the VET tab</para>
+					</section>
+					<section>
+						<title>Commencing Program Identifier</title>
+						<para>If the student was enrolled in a class linked to a course marked as a
+							full qualification, then we output the value 3 - Commencing enrolment in
+							a qualification or course. If the enrolment was not linked to a course
+							marked as a full qualification, then this will export as 8 - Unit of
+							competency or module only enrolment.</para>
+					</section>
+				</section>
+		</section>
 	<section>
 		<title>During delivery</title>
 		<para>Right, that's everything you need to take care of before letting students hand over their

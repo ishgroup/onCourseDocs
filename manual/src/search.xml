@@ -75,263 +75,250 @@
             <para>Operators are methods of comparing two entities. The two entities that are being
                 compared are called operands. The first operand appears on the left of the operator,
                 while the second operand appears on the right.</para>
-            <section xml:id="search-advanced-operators-numeric">
-                <title>Numeric and date operators</title>
-                <para>
-                    <variablelist>
-                        <varlistentry>
-                            <term>EQUALS: = </term>
-                            <listitem>
-                                <para>The EQUALS operator returns true if the first operand is of
-                                    equal value to the second operand.</para>
-                                <para>Usage:
-                                    <programlisting> 
-                                            createdOn = today
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                        <varlistentry>
-                            <term>NOT EQUAL: !=</term>
-                            <listitem>
-                                <para>The NOT EQUAL operator returns true if the first operands is
-                                    not of equal value to the second operand.</para>
-                                <para> Usage:
-                                    <programlisting> 
-                                            deliveryMode != ONLINE
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                        <varlistentry>
-                            <term>LESS THAN: &lt;</term>
-                            <listitem>
-                                <para> The LESS THAN operator returns true if the first operand is
-                                    less than the second. </para>
-                                <para> LESS THAN can also be concatenated with the equals operator
-                                    to return true if the first operand is less than or equal too
-                                    the second operand</para>
-                                <para> Usage: <programlisting> 
-                                            enrolmentCount &lt; 10
-                                        </programlisting>
-                                    <programlisting> 
-                                            enrolmentCount &lt;= 9
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                        <varlistentry>
-                            <term>GREATER THAN: &gt;</term>
-                            <listitem>
-                                <para>The GREATER THAN operator returns true if the first operand is
-                                    greater than the second.</para>
-                                <para> As with the LESS THAN operator, the GREATER THAN operator can
-                                    be concatenated with the equal operator to return true if the
-                                    first operand is greater than or equal to the second
-                                    operand</para>
-                                <para> Usage: <programlisting> 
-                                            age &gt; 17
-                                        </programlisting>
-                                    <programlisting> 
-                                            age &gt;= 18
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                        <varlistentry>
-                            <term>IN: in</term>
-                            <listitem>
-                                <para>The IN operator will return true if the left operand exists
-                                    within the right operand set.</para>
-                                <para>A set is denoted as a pair of brackets, where each element of
-                                    the set is separated by a comma.</para>
-                                <para> Usage:
-                                    <programlisting> 
-                                            code in  ("ABC", "DEF", "GHI")
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                        <varlistentry>
-                            <term>BEFORE: before</term>
-                            <listitem>
-                                <para>The BEFORE operator is a date operator that will return true
-                                    if the first operand occurs before the second operand.</para>
-                                <para>Usage:
-                                    <programlisting> 
-                                            createdOn before today
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                        <varlistentry>
-                            <term>AFTER: after</term>
-                            <listitem>
-                                <para>The BEFORE operator is a date operator that will return true
-                                    if the first operand occurs after the second operand.</para>
-                                <para>Usage:
-                                    <programlisting> 
-                                            createdOn after today
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                    </variablelist>
-                </para>
-            </section>
-            <section xml:id="search-advanced-operators-string">
-                <title>String operators</title>
-                <para>
-                    <variablelist>
-                        <varlistentry>
-                            <term> LIKE: ~ </term>
-                            <listitem>
-                                <para>The LIKE (~) operator is used to search a field for a specific
-                                    string pattern.</para>
-                                <para>There are two special wild card characters used with the LIKE
-                                    operator: <orderedlist>
-                                        <listitem>
-                                            <para>%: the percent sign is used to represent any
-                                                amount of characters (including zero)</para>
-                                        </listitem>
-                                        <listitem>
-                                            <para>_: the underscore is used to represent exactly one
-                                                character</para>
-                                        </listitem>
-                                    </orderedlist>
-                                </para>
-                                <para> Examples of the LIKE operator with wild card characters <variablelist>
-                                        <varlistentry>
-                                            <term>name ~ "a%"</term>
-                                            <term>name like "a%"</term>
-                                            <listitem>
-                                                <para>finds any record that has a name starting with
-                                                  "a"</para>
-                                            </listitem>
-                                        </varlistentry>
-                                        <varlistentry>
-                                            <term>name ~ "%a"</term>
-                                            <listitem>
-                                                <para>finds any record that has a name ending with
-                                                  "a"</para>
-                                            </listitem>
-                                        </varlistentry>
-                                        <varlistentry>
-                                            <term>name ~ "%ab%"</term>
-                                            <listitem>
-                                                <para>finds any record that has a name containing
-                                                  "ab"</para>
-                                            </listitem>
-                                        </varlistentry>
-                                        <varlistentry>
-                                            <term>name ~ "_a%"</term>
-                                            <listitem>
-                                                <para>finds any record that has a name with "a" as
-                                                  the second letter</para>
-                                            </listitem>
-                                        </varlistentry>
-                                        <varlistentry>
-                                            <term>name ~ "_%_%_%"</term>
-                                            <listitem>
-                                                <para>finds any record that has a name with at least
-                                                  a length of 3 characters</para>
-                                            </listitem>
-                                        </varlistentry>
-                                        <varlistentry>
-                                            <term>name ~ "a%b"</term>
-                                            <listitem>
-                                                <para>finds any record that has a name starting with
-                                                  "a" and ending with "b"</para>
-                                            </listitem>
-                                        </varlistentry>
-                                    </variablelist>
-                                </para>
-                                <para>Usage:
-                                    <programlisting> 
-                                                name ~ "Gardening%"
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                        <varlistentry>
-                            <term>CONTAINS: contains</term>
-                            <listitem>
-                                <para> CONTAINS returns true if the first operand string contains
-                                    the second operand string.</para>
-                                <para> Usage:
-                                    <programlisting> 
-                                                name contains "Gardening"
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                        <varlistentry>
-                            <term>STARTS_WITH: starts with</term>
-                            <listitem>
-                                <para> STARTS_WITH returns true if the first operand string starts
-                                    with the second operand string.</para>
-                                <para> Usage:
-                                    <programlisting> 
-                                            name starts with "Cooking"
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                        <varlistentry>
-                            <term>ENDS_WITH: ends with</term>
-                            <listitem>
-                                <para> ENDS_WITH returns true if the first operand string ends with
-                                    the second operand string.</para>
-                                <para> Usage:
-                                    <programlisting> 
-                                            name ends with "Expert"
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                        <varlistentry>
-                            <term>NOT: not</term>
-                            <listitem>
-                                <para>The NOT operator inverts the returned value of all of the
-                                    previous string operators.</para>
-                                <para>For example, 'code not contains "Gardening"' with return all
-                                    courses that has a code that does not contain the string
-                                    'Gardening' </para>
-                                <para> Usage: <programlisting> 
-                                            name !~ John
-                                        </programlisting>
-                                    <programlisting> 
-                                            name not like John
-                                        </programlisting>
-                                    <programlisting> 
-                                            name not contains "Gardening"
-                                        </programlisting>
-                                    <programlisting> 
-                                            name not starts with "Cooking"
-                                        </programlisting>
-                                    <programlisting> 
-                                            name not ends with "Beginners"
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                    </variablelist>
-                </para>
-            </section>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term>EQUALS ( = ) </term>
+                        <listitem>
+                            <para>EQUALS  returns true if the left hand side  equal to the
+                                right</para>
+                            <para>Usage:
+                                <programlisting> 
+                                        createdOn = today
+                                </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>NOT EQUAL: ( != )</term>
+                        <listitem>
+                            <para>NOT EQUAL returns true if the left hand side isn't equal to
+                                the right</para>
+                            <para> Usage:
+                                <programlisting> 
+                                        deliveryMode != ONLINE
+                                    </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>LESS THAN: &lt;</term>
+                        <listitem>
+                            <para>LESS THAN returns true if the left hand side  is less than the
+                                right.</para>
+                            <para>LESS THAN can also used with EQUALS to return true if the left
+                                is less than or equal too the right</para>
+                            <para> Usage: <programlisting> 
+                                        enrolmentCount &lt; 10
+                                    </programlisting>
+                                <programlisting> 
+                                        enrolmentCount &lt;= 9
+                                    </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>GREATER THAN: &gt;</term>
+                        <listitem>
+                            <para>GREATER THAN returns true if the left hand side  is greater
+                                than the right.</para>
+                            <para>GREATER THAN  can be used with EQUALS to return true if the
+                                left is greater than or equal to the right</para>
+                            <para> Usage: <programlisting> 
+                                        age &gt; 17
+                                    </programlisting>
+                                <programlisting> 
+                                        age &gt;= 18
+                                    </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>IN</term>
+                        <listitem>
+                            <para>IN will return true if the left exists within the right hand
+                                side set.</para>
+                            <para>A set is denoted as a pair of brackets, where each element of
+                                the set is separated by a comma.</para>
+                            <para> Usage:
+                                <programlisting> 
+                                        code in  ("ABC", "DEF", "GHI")
+                                    </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>BEFORE</term>
+                        <listitem>
+                            <para>BEFORE that will return true if the left hand side occurs
+                                before the right.</para>
+                            <para>Usage:
+                                <programlisting> 
+                                        createdOn before today
+                                    </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>AFTER: after</term>
+                        <listitem>
+                            <para>AFTER will return true if the left hand side  occurs after the
+                                right.</para>
+                            <para>Usage:
+                                <programlisting> 
+                                        createdOn after today
+                                    </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term>CONTAINS</term>
+                        <listitem>
+                            <para> CONTAINS returns true if the left hand side contains the
+                                right.</para>
+                            <para> Usage:
+                                <programlisting> 
+                                            name contains "Gardening"
+                                    </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>STARTS WITH:</term>
+                        <listitem>
+                            <para>STARTS WITH returns true if the left hand side starts with the
+                                right.</para>
+                            <para> Usage:
+                                <programlisting> 
+                                        name starts with "Cooking"
+                                    </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>ENDS WITH: ends with</term>
+                        <listitem>
+                            <para> ENDS WITH returns true if the left hand side ends with the
+                                right.</para>
+                            <para> Usage:
+                                <programlisting> 
+                                        name ends with "Expert"
+                                    </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>NOT</term>
+                        <listitem>
+                            <para>NOT reverses the returned value of all of the previous
+                                operations.</para>
+                            <para>For example, 'code not contains "Gardening"' with return all
+                                courses that has a code that does not contain the string 'Gardening' </para>
+                            <para> Usage: 
+                                <programlisting> 
+                                        name not like John
+                                    </programlisting>
+                                <programlisting> 
+                                        name not contains "Gardening"
+                                    </programlisting>
+                                <programlisting> 
+                                        name not starts with "Cooking"
+                                    </programlisting>
+                                <programlisting> 
+                                        name not ends with "Beginners"
+                                    </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term> LIKE: ( ~ ) </term>
+                        <listitem>
+                            <para>The LIKE (~) operator is used to search a field for a specific
+                                string pattern.</para>
+                            <para>There are two special wild card characters used with the LIKE
+                                operator: <orderedlist>
+                                    <listitem>
+                                        <para>%: the percent sign is used to represent any
+                                            amount of characters (including zero)</para>
+                                    </listitem>
+                                    <listitem>
+                                        <para>_: the underscore is used to represent exactly one
+                                            character</para>
+                                    </listitem>
+                                </orderedlist>
+                            </para>
+                            <para> Examples of the LIKE operator with wild card characters <variablelist>
+                                <varlistentry>
+                                    <term>name ~ "a%"</term>
+                                    <term>name like "a%"</term>
+                                    <listitem>
+                                        <para>finds any record that has a name starting with
+                                            "a"</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>name ~ "%a"</term>
+                                    <listitem>
+                                        <para>finds any record that has a name ending with
+                                            "a"</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>name ~ "%ab%"</term>
+                                    <listitem>
+                                        <para>finds any record that has a name containing
+                                            "ab"</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>name ~ "_a%"</term>
+                                    <listitem>
+                                        <para>finds any record that has a name with "a" as
+                                            the second letter</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>name ~ "_%_%_%"</term>
+                                    <listitem>
+                                        <para>finds any record that has a name with at least
+                                            a length of 3 characters</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>name ~ "a%b"</term>
+                                    <listitem>
+                                        <para>finds any record that has a name starting with
+                                            "a" and ending with "b"</para>
+                                    </listitem>
+                                </varlistentry>
+                            </variablelist>
+                            </para>
+                            <para>Usage:
+                                <programlisting> 
+                                            name ~ "Gardening%"
+                                    </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+
         </section>
         <section xml:id="search-advanced-keywords">
-            <title>Keywords and Conditions</title>
-            <section xml:id="search-advanced-keywords-conditional">
-                <title>Conditional Operators</title>
-                <para> Conditional operators are used to chain multiple queries together to build
-                    more complex queries. </para>
+            <title>Conditions</title>
+                <para> Conditions can be used to chain multiple queries together to build more
+                    complex searches. </para>
                 <para>
                     <variablelist>
                         <varlistentry>
-                            <term>OR: or</term>
+                            <term>OR</term>
                             <listitem>
-                                <para> The OR condition will return true if at least one of the
-                                    operand queries are true.</para>
+                                <para> The OR condition will return true if either left hand side or
+                                    right hand side are true.</para>
                                 <para>
                                     <programlisting> 
                                             condition or condition
@@ -345,21 +332,21 @@
                         <varlistentry>
                             <term>AND: and</term>
                             <listitem>
-                                <para>The AND condition will return true if both of the operand
-                                    queries are true.</para>
+                                <para>The AND condition will return true if both the left hand and
+                                    right hand sides are true.</para>
                                 <para>
                                     <programlisting> 
                                             condition and condition
                                     </programlisting>
                                     <programlisting> 
-                                            startDateTime = tomorrow and successAndQueuedEnrolments >= minimumPlaces 
+                    startDateTime = tomorrow and successAndQueuedEnrolments >= minimumPlaces 
                                     </programlisting>
                                 </para>
                             </listitem>
                         </varlistentry>
                     </variablelist>
                 </para>
-            </section>
+
         </section>
     </section>
     <section xml:id="search-script"><title>Searching in custom scripts</title>
@@ -372,7 +359,7 @@
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/search/searchScriptBox.png" format="png"/>
+                        fileref="images/search/searchScript.png" format="png"/>
                 </imageobject>
             </mediaobject>
         <para>The results of this query are then available to you in your script in the variable

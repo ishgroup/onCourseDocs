@@ -13,9 +13,8 @@
         <para>You can search of records in OnCourse by entering search terms or queries into the
             search bar. The search bar can be found at footer of 'list view' windows. </para>
         <para>Typing into the Search bar will retrieve all records that approximately match your input. This is called a 'fuzzy' search.</para>
-        <para>For example, in the Unit of Competency list view, searching for either a name or code
-            will return the associated UOC record. The fuzzy search will match on both name and code
-            for this record type. <mediaobject>
+        <para>For example, in the Unit of Competency list view, searching for a unit name or code will return the associated UoC record. 
+            <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchFuzzyCode.png" format="png"/>
                 </imageobject>
@@ -29,9 +28,7 @@
     </section>
     
     <section xml:id="search-advanced"><title>Advanced search</title>
-        <para>You can construct more powerful search queries using Advanced Search. Advanced Search
-            allows for specific conditions to be set and will only returns records thats match these
-            conditions. You can toggle between Basic and Advanced Search by clicking the relative
+        <para>You can construct more powerful search queries using Advanced Search. You can toggle between Basic and Advanced Search by clicking the relative
             magnifying glass icons. <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchBasic.png" format="png"/>
@@ -43,14 +40,14 @@
                 </imageobject>
             </mediaobject>
         </para>
-        <para> Advanced Search requires you to input a search query to return records. You can link queries together to create more refined searches.</para>
+        <para> Advanced Search requires you to input a search query.</para>
         
         <section xml:id="search-advanced-syntax"><title>Syntax</title>
             <para>A simple query consists of a field, followed by an operator, followed by a value. </para>
             <programlisting language="javascript"> 
                 title starts with "Apply"             
             </programlisting>
-            <para>This query returns Units of Competancy that have a title beginning with 'Apply'.
+            <para>This query returns Units of Competency that have a title beginning with 'Apply'.
                 In this example, 'title' is the field, 'starts with' is the operator, and "Apply" is
                 the value searched on. </para>
             
@@ -58,7 +55,7 @@
             <programlisting language="javascript"> 
                 title starts with 'Apply' and nationalCode starts with "B"                  
             </programlisting>
-            <para>In this example, 'and' is the conditional operator that combines the two seperate
+            <para>In this example, 'and' is the conditional operator that combines the two separate
                 queries. Only records that satisfy both queries are returned.</para>
             <mediaobject>
                 <imageobject>
@@ -69,7 +66,8 @@
         
         <section xml:id="search-advanced-fields"><title>Fields</title>
             <para>
-                When you click into the Advanced Search box, a dropdown of available fields will appear. As you type, this list will be filtered to allow for easy construction of queries.
+                When you click into the Advanced Search box, a drop-down list of available fields will appear. 
+                As you type, this list will be filtered to allow for easy construction of queries.
             </para>
             <para>
                 The fields that are available to use in queries will change depending on which record type you are searching on.
@@ -77,9 +75,8 @@
          </section>
                            
         <section xml:id="search-advanced-operators"><title>Operators</title>
-            <para>Operators are methods of comparing two entitis. The two entities that are being compared are called operands. The first operand appears on 
-                the left of the operator and is typically an entity field, while the second operand appears on the right of the operator is 
-                typically some number or string value. </para>
+            <para>Operators are methods of comparing two entities. The two entities that are being compared are called operands. The first operand appears on 
+                the left of the operator, while the second operand appears on the right.</para>
                 <section xml:id="search-advanced-operators-numeric"> <title>Numeric and date operators</title> 
                     <para>
                         <variablelist>
@@ -87,7 +84,7 @@
                                 <term>EQUALS: = </term>
                                 <listitem>
                                     <para>The EQUALS operator returns true if the first operand is of equal value to the second operand.</para>
-                                    <para>Useage:
+                                    <para>Usage:
                                     <programlisting language="javascript"> 
                                             createdOn = today
                                         </programlisting>
@@ -98,7 +95,7 @@
                                 <term>NOT EQUAL: !=</term>
                                 <listitem>
                                     <para>The NOT EQUAL operator returns true if the first operands is not of equal value to the second operand.</para>
-                                    <para> Useage: 
+                                    <para> Usage: 
                                         <programlisting language="javascript"> 
                                             deliveryMode != ONLINE
                                         </programlisting>
@@ -112,7 +109,7 @@
                                     <para> LESS THAN can also be concatenated with the equals
                                     operator to return true if the first operand is less than or
                                     equal too the second operand</para>
-                                    <para> Useage:
+                                    <para> Usage:
                                         <programlisting language="javascript"> 
                                             enrolmentCount &lt; 10
                                         </programlisting>
@@ -146,9 +143,9 @@
                                     <para>The IN operator will return true if the left operand
                                     exists within the right operand set.</para> 
                                     <para>A set is denoted as a pair
-                                    of brackets, where each element of the set is seperated by a
+                                    of brackets, where each element of the set is separated by a
                                     comma.</para>
-                                    <para> Useage:
+                                    <para> Usage:
                                         <programlisting language="javascript"> 
                                             code in  ("ABC", "DEF", "GHI")
                                         </programlisting>
@@ -175,7 +172,7 @@
                                     <para>The BEFORE operator is a date operator that will return
                                     true if the first operand occurs after the second
                                     operand.</para>
-                                    <para>Useage:
+                                    <para>Usage:
                                         <programlisting language="javascript"> 
                                             createdOn after today
                                         </programlisting>
@@ -194,7 +191,7 @@
                                 <listitem>
                                     <para>The LIKE operator is used to search a field for a specific
                                     string pattern.</para>
-                                    <para>There are two special wildcard characters used with the LIKE operator:
+                                    <para>There are two special wild card characters used with the LIKE operator:
                                         <orderedlist>
                                             <listitem>
                                                 <para>%: the percent sign is used to represent any amount of characters (including zero)</para>
@@ -205,7 +202,7 @@
                                         </orderedlist>
                                     </para>
                                     <para>
-                                        Examples of the LIKE operator with wildcard characters
+                                        Examples of the LIKE operator with wild card characters
                                         <variablelist>
                                             <varlistentry>
                                                 <term>name ~ "a%"</term>
@@ -246,7 +243,7 @@
                                             </varlistentry>
                                         </variablelist>
                                     </para>
-                                    <para>Useage: 
+                                    <para>Usage: 
                                         <programlisting language="javascript"> 
                                                 name ~ "Gardening%"
                                         </programlisting>
@@ -257,7 +254,7 @@
                                 <term>CONTAINS: contains</term>
                                 <listitem>
                                     <para> CONTAINS returns true if the first operand string contains the second operand string.</para>
-                                    <para> Useage:
+                                    <para> Usage:
                                         <programlisting language="javascript"> 
                                                 name contains "Gardening"
                                         </programlisting>
@@ -268,7 +265,7 @@
                                 <term>STARTS_WITH: starts with</term>
                                 <listitem>
                                     <para> STARTS_WITH returns true if the first operand string starts with the second operand string.</para>
-                                    <para> Useage:
+                                    <para> Usage:
                                     <programlisting language="javascript"> 
                                             name starts with "Cooking"
                                         </programlisting>
@@ -279,7 +276,7 @@
                                 <term>ENDS_WITH: ends with</term>
                                 <listitem>
                                     <para> ENDS_WITH returns true if the first operand string ends with the second operand string.</para>
-                                    <para> Useage:
+                                    <para> Usage:
                                     <programlisting language="javascript"> 
                                             name ends with "Expert"
                                         </programlisting>
@@ -294,7 +291,7 @@
                                     <para>For example, 'code not contains "Gardening"' with return
                                     all courses that has a code that does not contain the string
                                     'Gardening' </para>
-                                    <para> Useage: <programlisting language="javascript"> 
+                                    <para> Usage: <programlisting language="javascript"> 
                                             name !~ John
                                         </programlisting>
                                     <programlisting language="javascript"> 
@@ -328,9 +325,7 @@
                                 <term>OR: or</term>
                                 <listitem>
                                     <para> The OR condition will return true if at least one of the
-                                        contditions operands are true. Operand conditions are constructed
-                                        from operands and operators outlined in the Operators
-                                        chapter.</para>
+                                        operand queries are true.</para>
                                     <para>
                                         <programlisting language="javascript"> 
                                             condition or condition
@@ -344,7 +339,7 @@
                             <varlistentry>
                                 <term>AND: and</term>
                                 <listitem>
-                                    <para>The AND condition will return true if all of the conditionas are true.</para>
+                                    <para>The AND condition will return true if both of the operand queries are true.</para>
                                     <para>
                                         <programlisting language="javascript"> 
                                             condition and condition
@@ -360,10 +355,35 @@
                 </section>
             </section>
     </section>
-    <section xml:id="search-script"><title>Searching in scripts</title>
-        <para>
-     
-        </para>
+    <section xml:id="search-script"><title>Searching in custom scripts</title>
+        <para>Scripts often need retrieve records from your database to perform some function. For
+            example, if you wanted to contact all students who are enrolled in a class starting
+            tomorrow, you would need to retrieve all classes that start tomorrow from the
+            database.</para>
+        <para> Search can be used in custom scripts to queries your databases and retrieve certain
+            records. </para>
+        
+        <section xml:id="search-script-query"><title>Query Card</title>
+            <para>Custom scripts are broken up into cards. The 'Query' card will generate Groovy a
+                groovy closure and inject it into your script.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/search/searchScriptBox.png" format="png"/>
+                </imageobject>
+            </mediaobject>
+            <para>It must be specified which record is going to be queried. Enter the type of record you want to retrieve in the 'entity' field.</para>
+            <para>You can then enter your query. Queries are constructed using the same syntax
+                Advanced Search. </para>
+            <para>Clicking 'ADD' will create a Groovy closure equivalent to your query and inject it
+                into the script. </para>
+            <para> The retrieved records will be stored in a Groovy list named 'result'.<mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="100%" contentdepth="100%"
+                            fileref="images/search/searchScript.png" format="png"/>
+                    </imageobject>
+                </mediaobject>
+            </para>
+        </section>
     </section>
-
 </chapter>

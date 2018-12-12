@@ -6,398 +6,376 @@
         <para> IMPORTANT: This chapter is under construction and subject to change.</para>
     </note>
     <section xml:id="search-introduction"><title>Introduction</title>
-     <para>As of onCourse 9.8, we have introduced a new search function thats currently available in
-            any screens using the new look user interface. Functionally, it's very similar to the
-            advanced search you see in most onCourse list views, with a few major exceptions. The
-            first is that it's now integrated into the window itself, at the bottom of the section
-            along with the rest of the nav bar. The second is that the new advanced search uses
-            allows you to type out your search query using a very simple-to-use query language that
-            uses guided selections.</para>
+        <para>onCourse has powerful tools for searching across every piece of data you have
+            collected. You can search in lists, perform advanced searches on any attribute of the
+            data and use these searches to write scripts and reports. In this chapter we'll start
+            from the simplest tools and then show you more advanced possibilities.</para>
     </section>
     
-    <section xml:id="search-listView"><title>Searching in the list view</title>
-        <para>You can search for records in OnCourse by entering search terms or queries into the
-            search bar. The search bar can be found at footer of the new 'list view' windows from
-            onCourse 9.8 onwards.</para>
-        <para>Typing into the Search bar will retrieve all records that approximately match your input. This is called a 'fuzzy' search.</para>
-        <para>For example, in the Unit of Competency list view, searching for a unit name or code will return the associated UoC record. 
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchFuzzyCode.png" format="png"/>
-                </imageobject>
-            </mediaobject>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchFuzzyName.png" format="png"/>
-                </imageobject>
-                <caption>
-                    <para>Searching for either the unit code or the unit name will return the same
-                        results</para>
-                </caption>
-            </mediaobject>
-        </para>      
-    </section>
-    
-    <section xml:id="search-advanced"><title>Advanced search</title>
-        <para>You can construct more powerful search queries using Advanced Search. You can toggle
-            between Basic and Advanced Search by clicking the relative magnifying glass icons inside
-            the search panel. <mediaobject>
+    <section xml:id="search-listView"><title>Lists</title>
+        <para>Every list view has a search panel across the bottom.<mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
                         fileref="images/search/searchBasic.png" format="png"/>
                 </imageobject>
+            </mediaobject></para>
+        <para>Typing into the Search bar will retrieve all records that match your input across
+            certain fields. For example, in the Contact list, the text you enter will be found in
+            first name, last name and email address fields.  <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/search/searchFuzzyName.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>Searching units of competency</para>
+                </caption>
             </mediaobject>
-            <mediaobject>
+        </para>      
+    </section>
+    <section xml:id="search-advanced">
+        <title>Advanced search query language</title>
+        <para>You can construct more powerful Advanced Search queries using the onCourse query
+            language. You can toggle between Basic and Advanced Search by clicking the magnifying
+            glass icon on the left of the search panel. When you are in advanced mode, a plus symbol
+            appears next to the icon.<mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
                         fileref="images/search/searchAdvanced.png" format="png"/>
                 </imageobject>
             </mediaobject>
         </para>
-
-        
-        <section xml:id="search-advanced-syntax"><title>Syntax</title>
-            <para>Advanced Search requires you to input a search query. Don't worry if you don't
-                know the search terms, as you type the query will populate a drop down list of
-                possible parameters that would be suitable. A simple query consists of a field,
-                followed by an operator, followed by a value:</para>
-            <programlisting language="javascript"> 
+        <para>A simple query consists of a field, followed by an operator, followed by a
+            value:</para>
+        <programlisting> 
                 title starts with "Apply"             
             </programlisting>
-            <para>In the above example, the field is 'title', the operator is 'starts with', and the
-                value is 'Apply". This query returns Units of Competency that have a title beginning
-                with 'Apply'. </para>
-            
-            <para>Two or more queries can be linked together with conditional operators.</para>
-            <programlisting language="javascript"> 
+        <para>In the above example, the field is 'title', the operator is 'starts with', and the
+            value is 'Apply'. In the Unit of Competency list this will show you records beginning
+            with 'Apply'. Two or more queries can be linked together with conditional
+            operators.</para>
+        <programlisting> 
                 title starts with 'Apply' and nationalCode starts with "B"                  
             </programlisting>
-            <para>In this example, 'and' is the conditional operator that combines the two separate
-                queries. Only records that satisfy both queries are returned.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchOperator.png" format="png"/>
-                </imageobject>
-            </mediaobject>
-        </section>
-        
-        <section xml:id="search-advanced-fields"><title>Fields</title>
+        <para>In this example, 'and' is the conditional operator that combines the two separate
+            queries. Only records that satisfy both queries are returned.</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/search/searchOperator.png" format="png"/>
+            </imageobject>
+        </mediaobject>
+        <section xml:id="search-advanced-fields">
+            <title>Fields</title>
             <para>When you click into the Advanced Search box, a drop-down list of available fields
-                will appear. As you type, this list will be filtered to allow for easy construction
-                of queries. </para>
-            <para>The fields that are available to use in queries will change depending on which
-                record type you are searching on. </para>
-         </section>
-                           
-        <section xml:id="search-advanced-operators"><title>Operators</title>
-            <para>Operators are methods of comparing two entities. The two entities that are being compared are called operands. The first operand appears on 
-                the left of the operator, while the second operand appears on the right.</para>
-                <section xml:id="search-advanced-operators-numeric"> <title>Numeric and date operators</title> 
-                    <para>
-                        <variablelist>
-                            <varlistentry>
-                                <term>EQUALS: = </term>
-                                <listitem>
-                                    <para>The EQUALS operator returns true if the first operand is of equal value to the second operand.</para>
-                                    <para>Usage:
-                                    <programlisting language="javascript"> 
+                will appear. The fields that are available to use in queries will change depending
+                on which record type you are searching on. </para>
+        </section>
+        <section xml:id="search-advanced-operators">
+            <title>Operators</title>
+            <para>Operators are methods of comparing two entities. The two entities that are being
+                compared are called operands. The first operand appears on the left of the operator,
+                while the second operand appears on the right.</para>
+            <section xml:id="search-advanced-operators-numeric">
+                <title>Numeric and date operators</title>
+                <para>
+                    <variablelist>
+                        <varlistentry>
+                            <term>EQUALS: = </term>
+                            <listitem>
+                                <para>The EQUALS operator returns true if the first operand is of
+                                    equal value to the second operand.</para>
+                                <para>Usage:
+                                    <programlisting> 
                                             createdOn = today
                                         </programlisting>
                                 </para>
-                                </listitem>
-                            </varlistentry>
-                            <varlistentry>
-                                <term>NOT EQUAL: !=</term>
-                                <listitem>
-                                    <para>The NOT EQUAL operator returns true if the first operands is not of equal value to the second operand.</para>
-                                    <para> Usage: 
-                                        <programlisting language="javascript"> 
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>NOT EQUAL: !=</term>
+                            <listitem>
+                                <para>The NOT EQUAL operator returns true if the first operands is
+                                    not of equal value to the second operand.</para>
+                                <para> Usage:
+                                    <programlisting> 
                                             deliveryMode != ONLINE
                                         </programlisting>
-                                    </para>
-                                </listitem>
-                            </varlistentry>
-                            <varlistentry>
-                                <term>LESS THAN: &lt;</term>
-                                <listitem>
-                                    <para> The LESS THAN operator returns true if the first operand is less than the second. </para>
-                                    <para> LESS THAN can also be concatenated with the equals
-                                    operator to return true if the first operand is less than or
-                                    equal too the second operand</para>
-                                    <para> Usage:
-                                        <programlisting language="javascript"> 
+                                </para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>LESS THAN: &lt;</term>
+                            <listitem>
+                                <para> The LESS THAN operator returns true if the first operand is
+                                    less than the second. </para>
+                                <para> LESS THAN can also be concatenated with the equals operator
+                                    to return true if the first operand is less than or equal too
+                                    the second operand</para>
+                                <para> Usage: <programlisting> 
                                             enrolmentCount &lt; 10
                                         </programlisting>
-                                        <programlisting language="javascript"> 
+                                    <programlisting> 
                                             enrolmentCount &lt;= 9
                                         </programlisting>
-                                    </para>
-                                </listitem>
-                            </varlistentry>
-                            <varlistentry>
-                                <term>GREATER THAN: &gt;</term>
-                                <listitem>
-                                    <para>The GREATER THAN operator returns true if the first operand is greater than the second.</para>
-                                    <para> As with the LESS THAN operator, the GREATER THAN operator
-                                    can be concatenated with the equal operator to return true if
-                                    the first operand is greater than or equal to the second
+                                </para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>GREATER THAN: &gt;</term>
+                            <listitem>
+                                <para>The GREATER THAN operator returns true if the first operand is
+                                    greater than the second.</para>
+                                <para> As with the LESS THAN operator, the GREATER THAN operator can
+                                    be concatenated with the equal operator to return true if the
+                                    first operand is greater than or equal to the second
                                     operand</para>
-                                    <para> Usage: <programlisting language="javascript"> 
+                                <para> Usage: <programlisting> 
                                             age &gt; 17
                                         </programlisting>
-                                    <programlisting language="javascript"> 
+                                    <programlisting> 
                                             age &gt;= 18
                                         </programlisting>
                                 </para>
-                                </listitem>
-                            </varlistentry>
-                            <varlistentry>
-                                <term>IN: in</term>
-                                <listitem>
-                                    <para>The IN operator will return true if the left operand
-                                    exists within the right operand set.</para> 
-                                    <para>A set is denoted as a pair
-                                    of brackets, where each element of the set is separated by a
-                                    comma.</para>
-                                    <para> Usage:
-                                        <programlisting language="javascript"> 
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>IN: in</term>
+                            <listitem>
+                                <para>The IN operator will return true if the left operand exists
+                                    within the right operand set.</para>
+                                <para>A set is denoted as a pair of brackets, where each element of
+                                    the set is separated by a comma.</para>
+                                <para> Usage:
+                                    <programlisting> 
                                             code in  ("ABC", "DEF", "GHI")
                                         </programlisting>
-                                    </para>
-                                </listitem>
-                            </varlistentry>
-                            
-                            <varlistentry>
-                                <term>BEFORE: before</term>
-                                <listitem>
-                                    <para>The BEFORE operator is a date operator that will return
-                                    true if the first operand occurs before the second
-                                    operand.</para>
-                                    <para>Usage:
-                                    <programlisting language="javascript"> 
+                                </para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>BEFORE: before</term>
+                            <listitem>
+                                <para>The BEFORE operator is a date operator that will return true
+                                    if the first operand occurs before the second operand.</para>
+                                <para>Usage:
+                                    <programlisting> 
                                             createdOn before today
                                         </programlisting>
                                 </para>
-                                </listitem>
-                            </varlistentry>
-                            <varlistentry>
-                                <term>AFTER: after</term>
-                                <listitem>
-                                    <para>The BEFORE operator is a date operator that will return
-                                    true if the first operand occurs after the second
-                                    operand.</para>
-                                    <para>Usage:
-                                        <programlisting language="javascript"> 
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>AFTER: after</term>
+                            <listitem>
+                                <para>The BEFORE operator is a date operator that will return true
+                                    if the first operand occurs after the second operand.</para>
+                                <para>Usage:
+                                    <programlisting> 
                                             createdOn after today
                                         </programlisting>
-                                    </para>
-                                </listitem>
-                            </varlistentry>
-                        </variablelist>
-                    </para>   
-                </section>
-                
-                <section xml:id="search-advanced-operators-string"> <title>String operators</title> 
-                    <para>
-                        <variablelist>
-                            <varlistentry>
-                                <term> LIKE: ~ </term>
-                                <listitem>
-                                    <para>The LIKE (~) operator is used to search a field for a
-                                    specific string pattern.</para>
-                                    <para>There are two special wild card characters used with the LIKE operator:
-                                        <orderedlist>
+                                </para>
+                            </listitem>
+                        </varlistentry>
+                    </variablelist>
+                </para>
+            </section>
+            <section xml:id="search-advanced-operators-string">
+                <title>String operators</title>
+                <para>
+                    <variablelist>
+                        <varlistentry>
+                            <term> LIKE: ~ </term>
+                            <listitem>
+                                <para>The LIKE (~) operator is used to search a field for a specific
+                                    string pattern.</para>
+                                <para>There are two special wild card characters used with the LIKE
+                                    operator: <orderedlist>
+                                        <listitem>
+                                            <para>%: the percent sign is used to represent any
+                                                amount of characters (including zero)</para>
+                                        </listitem>
+                                        <listitem>
+                                            <para>_: the underscore is used to represent exactly one
+                                                character</para>
+                                        </listitem>
+                                    </orderedlist>
+                                </para>
+                                <para> Examples of the LIKE operator with wild card characters <variablelist>
+                                        <varlistentry>
+                                            <term>name ~ "a%"</term>
+                                            <term>name like "a%"</term>
                                             <listitem>
-                                                <para>%: the percent sign is used to represent any amount of characters (including zero)</para>
+                                                <para>finds any record that has a name starting with
+                                                  "a"</para>
                                             </listitem>
+                                        </varlistentry>
+                                        <varlistentry>
+                                            <term>name ~ "%a"</term>
                                             <listitem>
-                                                <para>_: the underscore is used to represent exactly one character</para>
+                                                <para>finds any record that has a name ending with
+                                                  "a"</para>
                                             </listitem>
-                                        </orderedlist>
-                                    </para>
-                                    <para>
-                                        Examples of the LIKE operator with wild card characters
-                                        <variablelist>
-                                            <varlistentry>
-                                                <term>name ~ "a%"</term>
-                                                <term>name like "a%"</term>
-                                                <listitem>
-                                                    <para>finds any record that has a name starting with "a"</para>
-                                                </listitem>
-                                            </varlistentry>
-                                            <varlistentry>
-                                                <term>name ~ "%a"</term>
-                                                <listitem>
-                                                    <para>finds any record that has a name ending with "a"</para>
-                                                </listitem>
-                                            </varlistentry>
-                                            <varlistentry>
-                                                <term>name ~ "%ab%"</term>
-                                                <listitem>
-                                                    <para>finds any record that has a name containing "ab"</para>
-                                                </listitem>
-                                            </varlistentry>
-                                            <varlistentry>
-                                                <term>name ~ "_a%"</term>
-                                                <listitem>
-                                                    <para>finds any record that has a name with "a" as the second letter</para>
-                                                </listitem>
-                                            </varlistentry>
-                                            <varlistentry>
-                                                <term>name ~ "_%_%_%"</term>
-                                                <listitem>
-                                                    <para>finds any record that has a name with at least a length of 3 characters</para>
-                                                </listitem>
-                                            </varlistentry>
-                                            <varlistentry>
-                                                <term>name ~ "a%b"</term>
-                                                <listitem>
-                                                    <para>finds any record that has a name starting with "a" and ending with "b"</para>
-                                                </listitem>
-                                            </varlistentry>
-                                        </variablelist>
-                                    </para>
-                                    <para>Usage: 
-                                        <programlisting language="javascript"> 
+                                        </varlistentry>
+                                        <varlistentry>
+                                            <term>name ~ "%ab%"</term>
+                                            <listitem>
+                                                <para>finds any record that has a name containing
+                                                  "ab"</para>
+                                            </listitem>
+                                        </varlistentry>
+                                        <varlistentry>
+                                            <term>name ~ "_a%"</term>
+                                            <listitem>
+                                                <para>finds any record that has a name with "a" as
+                                                  the second letter</para>
+                                            </listitem>
+                                        </varlistentry>
+                                        <varlistentry>
+                                            <term>name ~ "_%_%_%"</term>
+                                            <listitem>
+                                                <para>finds any record that has a name with at least
+                                                  a length of 3 characters</para>
+                                            </listitem>
+                                        </varlistentry>
+                                        <varlistentry>
+                                            <term>name ~ "a%b"</term>
+                                            <listitem>
+                                                <para>finds any record that has a name starting with
+                                                  "a" and ending with "b"</para>
+                                            </listitem>
+                                        </varlistentry>
+                                    </variablelist>
+                                </para>
+                                <para>Usage:
+                                    <programlisting> 
                                                 name ~ "Gardening%"
                                         </programlisting>
-                                    </para>
-                                </listitem>
-                            </varlistentry>
-                            <varlistentry>
-                                <term>CONTAINS: contains</term>
-                                <listitem>
-                                    <para> CONTAINS returns true if the first operand string contains the second operand string.</para>
-                                    <para> Usage:
-                                        <programlisting language="javascript"> 
+                                </para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>CONTAINS: contains</term>
+                            <listitem>
+                                <para> CONTAINS returns true if the first operand string contains
+                                    the second operand string.</para>
+                                <para> Usage:
+                                    <programlisting> 
                                                 name contains "Gardening"
                                         </programlisting>
                                 </para>
-                                </listitem>
-                            </varlistentry>
-                            <varlistentry>
-                                <term>STARTS_WITH: starts with</term>
-                                <listitem>
-                                    <para> STARTS_WITH returns true if the first operand string starts with the second operand string.</para>
-                                    <para> Usage:
-                                    <programlisting language="javascript"> 
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>STARTS_WITH: starts with</term>
+                            <listitem>
+                                <para> STARTS_WITH returns true if the first operand string starts
+                                    with the second operand string.</para>
+                                <para> Usage:
+                                    <programlisting> 
                                             name starts with "Cooking"
                                         </programlisting>
                                 </para>
-                                </listitem>
-                            </varlistentry>
-                            <varlistentry>
-                                <term>ENDS_WITH: ends with</term>
-                                <listitem>
-                                    <para> ENDS_WITH returns true if the first operand string ends with the second operand string.</para>
-                                    <para> Usage:
-                                    <programlisting language="javascript"> 
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>ENDS_WITH: ends with</term>
+                            <listitem>
+                                <para> ENDS_WITH returns true if the first operand string ends with
+                                    the second operand string.</para>
+                                <para> Usage:
+                                    <programlisting> 
                                             name ends with "Expert"
                                         </programlisting>
                                 </para>
-                                </listitem>
-                            </varlistentry>
-                            <varlistentry>
-                                <term>NOT: not</term>
-                                <listitem>
-                                    <para>The NOT operator inverts the returned value of all  of the
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>NOT: not</term>
+                            <listitem>
+                                <para>The NOT operator inverts the returned value of all of the
                                     previous string operators.</para>
-                                    <para>For example, 'code not contains "Gardening"' with return
-                                    all courses that has a code that does not contain the string
+                                <para>For example, 'code not contains "Gardening"' with return all
+                                    courses that has a code that does not contain the string
                                     'Gardening' </para>
-                                    <para> Usage: <programlisting language="javascript"> 
+                                <para> Usage: <programlisting> 
                                             name !~ John
                                         </programlisting>
-                                    <programlisting language="javascript"> 
+                                    <programlisting> 
                                             name not like John
                                         </programlisting>
-                                    <programlisting language="javascript"> 
+                                    <programlisting> 
                                             name not contains "Gardening"
                                         </programlisting>
-                                    <programlisting language="javascript"> 
+                                    <programlisting> 
                                             name not starts with "Cooking"
                                         </programlisting>
-                                    <programlisting language="javascript"> 
+                                    <programlisting> 
                                             name not ends with "Beginners"
                                         </programlisting>
                                 </para>
-                                </listitem>
-                            </varlistentry>
-                        </variablelist>
-                    </para>   
-                </section>
-                
-                               
+                            </listitem>
+                        </varlistentry>
+                    </variablelist>
+                </para>
             </section>
-            
-            <section xml:id="search-advanced-keywords"><title>Keywords and Conditions</title>
-                <section xml:id="search-advanced-keywords-conditional"><title>Conditional Operators</title>
-                    <para> Conditional operators are used to chain multiple queries together to build more complex queries. </para>
-                    <para>
-                        <variablelist>
-                            <varlistentry>
-                                <term>OR: or</term>
-                                <listitem>
-                                    <para> The OR condition will return true if at least one of the
-                                        operand queries are true.</para>
-                                    <para>
-                                        <programlisting language="javascript"> 
+        </section>
+        <section xml:id="search-advanced-keywords">
+            <title>Keywords and Conditions</title>
+            <section xml:id="search-advanced-keywords-conditional">
+                <title>Conditional Operators</title>
+                <para> Conditional operators are used to chain multiple queries together to build
+                    more complex queries. </para>
+                <para>
+                    <variablelist>
+                        <varlistentry>
+                            <term>OR: or</term>
+                            <listitem>
+                                <para> The OR condition will return true if at least one of the
+                                    operand queries are true.</para>
+                                <para>
+                                    <programlisting> 
                                             condition or condition
                                         </programlisting>
-                                        <programlisting language="javascript"> 
+                                    <programlisting> 
                                         name contains "Gardening" or code starts with "GAR"
                                         </programlisting>
-                                    </para>
-                                </listitem>
-                            </varlistentry>
-                            <varlistentry>
-                                <term>AND: and</term>
-                                <listitem>
-                                    <para>The AND condition will return true if both of the operand queries are true.</para>
-                                    <para>
-                                        <programlisting language="javascript"> 
+                                </para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>AND: and</term>
+                            <listitem>
+                                <para>The AND condition will return true if both of the operand
+                                    queries are true.</para>
+                                <para>
+                                    <programlisting> 
                                             condition and condition
                                     </programlisting>
-                                        <programlisting language="javascript"> 
+                                    <programlisting> 
                                             startDateTime = tomorrow and successAndQueuedEnrolments >= minimumPlaces 
                                     </programlisting>
-                                    </para>
-                                </listitem>
-                            </varlistentry>
-                        </variablelist>
-                    </para>
-                </section>
+                                </para>
+                            </listitem>
+                        </varlistentry>
+                    </variablelist>
+                </para>
             </section>
+        </section>
     </section>
     <section xml:id="search-script"><title>Searching in custom scripts</title>
         <para>Scripts often need retrieve records from your database to perform some function. For
             example, if you wanted to contact all students who are enrolled in a class starting
             tomorrow, you would need to retrieve all classes that start tomorrow from the
             database.</para>
-        <para> Search can be used in custom scripts to queries your databases and retrieve certain
-            records. </para>
         
-        <section xml:id="search-script-query"><title>Query Card</title>
-            <para>Custom scripts are broken up into cards. The 'Query' card will generate Groovy a
-                groovy closure and inject it into your script.</para>
+            <para>Add a query panel to your script like this.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
                         fileref="images/search/searchScriptBox.png" format="png"/>
                 </imageobject>
             </mediaobject>
-            <para>It must be specified which record is going to be queried. Enter the type of record you want to retrieve in the 'entity' field.</para>
-            <para>You can then enter your query. Queries are constructed using the same syntax
-                Advanced Search. </para>
-            <para>Clicking 'ADD' will create a Groovy closure equivalent to your query and inject it
-                into the script. </para>
-            <para> The retrieved records will be stored in a Groovy list named 'result'.<mediaobject>
-                    <imageobject>
-                        <imagedata scalefit="1" width="100%" contentdepth="100%"
-                            fileref="images/search/searchScript.png" format="png"/>
-                    </imageobject>
-                </mediaobject>
-            </para>
-        </section>
+        <para>The results of this query are then available to you in your script in the variable
+            'records'. You can use this to perform additional actions in the script. </para>
     </section>
 </chapter>

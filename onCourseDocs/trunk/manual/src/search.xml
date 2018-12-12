@@ -6,12 +6,19 @@
         <para> IMPORTANT: This chapter is under construction and subject to change.</para>
     </note>
     <section xml:id="search-introduction"><title>Introduction</title>
-     <para> </para>
+     <para>As of onCourse 9.8, we have introduced a new search function thats currently available in
+            any screens using the new look user interface. Functionally, it's very similar to the
+            advanced search you see in most onCourse list views, with a few major exceptions. The
+            first is that it's now integrated into the window itself, at the bottom of the section
+            along with the rest of the nav bar. The second is that the new advanced search uses
+            allows you to type out your search query using a very simple-to-use query language that
+            uses guided selections.</para>
     </section>
     
     <section xml:id="search-listView"><title>Searching in the list view</title>
-        <para>You can search of records in OnCourse by entering search terms or queries into the
-            search bar. The search bar can be found at footer of 'list view' windows. </para>
+        <para>You can search for records in OnCourse by entering search terms or queries into the
+            search bar. The search bar can be found at footer of the new 'list view' windows from
+            onCourse 9.8 onwards.</para>
         <para>Typing into the Search bar will retrieve all records that approximately match your input. This is called a 'fuzzy' search.</para>
         <para>For example, in the Unit of Competency list view, searching for a unit name or code will return the associated UoC record. 
             <mediaobject>
@@ -23,33 +30,43 @@
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchFuzzyName.png" format="png"/>
                 </imageobject>
+                <caption>
+                    <para>Searching for either the unit code or the unit name will return the same
+                        results</para>
+                </caption>
             </mediaobject>
         </para>      
     </section>
     
     <section xml:id="search-advanced"><title>Advanced search</title>
-        <para>You can construct more powerful search queries using Advanced Search. You can toggle between Basic and Advanced Search by clicking the relative
-            magnifying glass icons. <mediaobject>
+        <para>You can construct more powerful search queries using Advanced Search. You can toggle
+            between Basic and Advanced Search by clicking the relative magnifying glass icons inside
+            the search panel. <mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchBasic.png" format="png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/search/searchBasic.png" format="png"/>
                 </imageobject>
             </mediaobject>
             <mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchAdvanced.png" format="png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/search/searchAdvanced.png" format="png"/>
                 </imageobject>
             </mediaobject>
         </para>
-        <para> Advanced Search requires you to input a search query.</para>
+
         
         <section xml:id="search-advanced-syntax"><title>Syntax</title>
-            <para>A simple query consists of a field, followed by an operator, followed by a value. </para>
+            <para>Advanced Search requires you to input a search query. Don't worry if you don't
+                know the search terms, as you type the query will populate a drop down list of
+                possible parameters that would be suitable. A simple query consists of a field,
+                followed by an operator, followed by a value:</para>
             <programlisting language="javascript"> 
                 title starts with "Apply"             
             </programlisting>
-            <para>This query returns Units of Competency that have a title beginning with 'Apply'.
-                In this example, 'title' is the field, 'starts with' is the operator, and "Apply" is
-                the value searched on. </para>
+            <para>In the above example, the field is 'title', the operator is 'starts with', and the
+                value is 'Apply". This query returns Units of Competency that have a title beginning
+                with 'Apply'. </para>
             
             <para>Two or more queries can be linked together with conditional operators.</para>
             <programlisting language="javascript"> 
@@ -65,13 +82,11 @@
         </section>
         
         <section xml:id="search-advanced-fields"><title>Fields</title>
-            <para>
-                When you click into the Advanced Search box, a drop-down list of available fields will appear. 
-                As you type, this list will be filtered to allow for easy construction of queries.
-            </para>
-            <para>
-                The fields that are available to use in queries will change depending on which record type you are searching on.
-            </para>
+            <para>When you click into the Advanced Search box, a drop-down list of available fields
+                will appear. As you type, this list will be filtered to allow for easy construction
+                of queries. </para>
+            <para>The fields that are available to use in queries will change depending on which
+                record type you are searching on. </para>
          </section>
                            
         <section xml:id="search-advanced-operators"><title>Operators</title>
@@ -127,14 +142,13 @@
                                     can be concatenated with the equal operator to return true if
                                     the first operand is greater than or equal to the second
                                     operand</para>
-                                    <para> Useage:
-                                        <programlisting language="javascript"> 
+                                    <para> Usage: <programlisting language="javascript"> 
                                             age &gt; 17
                                         </programlisting>
-                                        <programlisting language="javascript"> 
+                                    <programlisting language="javascript"> 
                                             age &gt;= 18
                                         </programlisting>
-                                    </para>
+                                </para>
                                 </listitem>
                             </varlistentry>
                             <varlistentry>
@@ -159,11 +173,11 @@
                                     <para>The BEFORE operator is a date operator that will return
                                     true if the first operand occurs before the second
                                     operand.</para>
-                                    <para>Useage:
-                                        <programlisting language="javascript"> 
+                                    <para>Usage:
+                                    <programlisting language="javascript"> 
                                             createdOn before today
                                         </programlisting>
-                                    </para>
+                                </para>
                                 </listitem>
                             </varlistentry>
                             <varlistentry>
@@ -189,8 +203,8 @@
                             <varlistentry>
                                 <term> LIKE: ~ </term>
                                 <listitem>
-                                    <para>The LIKE operator is used to search a field for a specific
-                                    string pattern.</para>
+                                    <para>The LIKE (~) operator is used to search a field for a
+                                    specific string pattern.</para>
                                     <para>There are two special wild card characters used with the LIKE operator:
                                         <orderedlist>
                                             <listitem>

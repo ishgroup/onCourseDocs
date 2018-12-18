@@ -15,16 +15,14 @@
     <section xml:id="search-listView"><title>Lists</title>
         <para>Every list view has a search panel across the bottom.<mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/search/searchBasic.png" format="png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchBasic.png" format="png"/>
                 </imageobject>
             </mediaobject></para>
         <para>Typing into the Search bar will retrieve all records that match your input across
             certain fields. For example, in the Contact list, the text you enter will be found in
             first name, last name and email address fields.  <mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/search/searchFuzzyName.png" format="png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchFuzzyName.png" format="png"/>
                 </imageobject>
                 <caption>
                     <para>Searching units of competency</para>
@@ -32,7 +30,7 @@
             </mediaobject>
         </para>      
     </section>
-    <section xml:id='search-findRelated'>
+    <section xml:id="search-findRelated">
         <title>Find related records</title>
         <para>Find related records is one of the most powerful tools inside onCourse, let you
             quickly jump from window to window, finding records related to groups of other
@@ -46,8 +44,7 @@
             students'. </para>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/find_related_records.png" format="png" />
+                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/find_related_records.png" format="png"/>
             </imageobject>
             <caption>
                 <para>Finding enrolled students related to a class from the cogwheel menu</para>
@@ -64,8 +61,7 @@
         <note><para>Find related can only be run on a max of 1000 records</para></note>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="70%" contentdepth="70%"
-                    fileref="images/find_related_records_search.png" format="png" />
+                <imagedata scalefit="1" width="70%" contentdepth="70%" fileref="images/find_related_records_search.png" format="png"/>
             </imageobject>
             <caption>
                 <para>Finding the employers of enrolled students related to a class</para>
@@ -80,8 +76,7 @@
             glass icon on the left of the search panel. When you are in advanced mode, a plus symbol
             appears next to the icon.<mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/search/searchAdvanced.png" format="png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchAdvanced.png" format="png"/>
                 </imageobject>
             </mediaobject>
         </para>
@@ -101,8 +96,7 @@
             queries. Only records that satisfy both queries are returned.</para>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/search/searchOperator.png" format="png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchOperator.png" format="png"/>
             </imageobject>
         </mediaobject>
         <section xml:id="search-advanced-fields">
@@ -175,15 +169,35 @@
                         </listitem>
                     </varlistentry>
                     <varlistentry>
+                        <term>BETWEEN: ( .. )</term>
+                        <listitem>
+                            <para>BETWEEN ( .. ) is used to specify a date range. BETWEEN ( .. ) will return records that with the specified attribute that occurs
+                            in the given range.</para>
+                            <para> Usage:
+                                <programlisting>
+                                    createdOn 01/01/2018 .. 01/02/2018
+                                </programlisting>
+                            </para>
+                            <para>BETWEEN can be used with a star closure ( * ).The star closure can be used to represent all dates before/ all dates after a given date.</para>
+                            <programlisting>
+                                // all dates before 01/01/2018
+                                createdOn *..01/01/2018
+                            </programlisting><programlisting>
+                                // all dates after 01/01/2018
+                                createdOn 01/01/2018..*
+                            </programlisting>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
                         <term>IN</term>
                         <listitem>
                             <para>IN will return true if the left exists within the right hand
                                 side set.</para>
-                            <para>A set is denoted as a pair of brackets, where each element of
-                                the set is separated by a comma.</para>
+                            <para>A set is denoted as a list of items, where each element of the set
+                                is separated by a comma.</para>
                             <para> Usage:
                                 <programlisting> 
-                                        code in  ("ABC", "DEF", "GHI")
+                                    confirmationStatus in NOT_SENT, DO_NOT_SEND
                                     </programlisting>
                             </para>
                         </listitem>
@@ -276,6 +290,19 @@
                         </listitem>
                     </varlistentry>
                     <varlistentry>
+                        <term>HAS TAG: ( # ) </term>
+                        <listitem>
+                            <para>The HAS TAG ( # ) operator with return records that have the
+                                specified tag in onCourse.</para>
+                            <para>Usage:
+                                <programlisting>
+                                    CourseClass # 'health and care'
+                                </programlisting>
+                            </para>
+                            
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
                         <term> LIKE: ( ~ ) </term>
                         <listitem>
                             <para>The LIKE (~) operator is used to search a field for a specific
@@ -349,7 +376,7 @@
             </para>
 
         </section>
-        <section xml:id="search-advanced-keywords">
+        <section xml:id="search-advanced-conditions">
             <title>Conditions</title>
                 <para> Conditions can be used to chain multiple queries together to build more
                     complex searches. </para>
@@ -389,6 +416,109 @@
                 </para>
 
         </section>
+        <section xml:id="search-advanced-keywords"> <title>Keywords</title>
+            <para>In onCourse, a keyword is a reserved word that has a predefined meaning. Keywords can assist in creating search queries. </para>
+            <variablelist>
+                <varlistentry>
+                    <term>DATES</term>
+                    <listitem>
+                        <para>Date keywords:
+                            <variablelist>
+                                <varlistentry>
+                                    <term>today</term>
+                                    <listitem>
+                                        <para>the current day from 00:00 to 23:59</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>yesterday</term>
+                                    <listitem>
+                                        <para>yesterday from 00:00 to 23:59</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>tomorrow</term>
+                                    <listitem>
+                                        <para>tomorrow from 00:00 to 23:59</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>last year</term>
+                                    <listitem>
+                                        <para>from January 1 00:00 to December 31 23:59 of the previous year</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>last month </term>
+                                    <listitem>
+                                        <para>from the 1st of the previous month 00:00, to the last
+                                            day of the previous month 23:59 </para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>last week</term>
+                                    <listitem>
+                                        <para>from Monday 00:00 to Sunday 23:59 of the previous week.</para>
+                                        <para>If 'today' is Thursday 13 September 2018, then 'last week' will be from Monday 3 September 2018 to 9 September 2018.</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>next year</term>
+                                    <listitem>
+                                        <para>from January 1 00:00 to December 31 23:59 of the next year</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>next month</term>
+                                    <listitem>
+                                        <para>from the 1st of the next month 00:00 , to the last day
+                                            of the next month 23:59</para>
+                                    </listitem>
+                                </varlistentry>
+                                <varlistentry>
+                                    <term>next week</term>
+                                    <listitem>
+                                        <para>from Monday 00:00 to Sunday 23:59 of the next week.</para>
+                                        <para>If 'today' is Thursday 13 September 2018, then 'next
+                                            week' will be from Monday 17 September 2018 to 24
+                                            September 2018.</para>
+                                    </listitem>
+                                </varlistentry>
+                            </variablelist>
+                        </para>
+                        <para>Usage:
+                            <programlisting>
+                                    createdOn today
+                                    createdOn yesterday .. tomorrow
+                                    startDateTime last week
+                                    endDateTime next year
+                                </programlisting>
+                        </para>
+                        <para>Dates can be operated on using arithmetic and specifying the time unit
+                            to add/subtract.</para>
+                        <para>Usage:
+                            <programlisting>
+                                    createdOn today + 1 day
+                                    createdOn yesterday..tomorrow + 2 week
+                                    createdOn * .. today + 6 month
+                                    createdOn 9:00 .. 19:00 today - 1 year
+                                </programlisting>
+                        </para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term>ME</term>
+                    <listitem>
+                        <para>ME allows for search to be constructed using the currently logged in user as a query value.</para>
+                        <para> Usage
+                            <programlisting>
+                                          Invoice.createdByUser = me   
+                            </programlisting>
+                        </para>
+                    </listitem>
+                </varlistentry>
+            </variablelist>
+        </section>
     </section>
     <section xml:id="search-script"><title>Searching in custom scripts</title>
         <para>Scripts often need retrieve records from your database to perform some function. For
@@ -399,8 +529,7 @@
             <para>Add a query panel to your script like this.</para>
             <mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/search/searchScript.png" format="png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchScript.png" format="png"/>
                 </imageobject>
             </mediaobject>
         <para>The results of this query are then available to you in your script in the variable

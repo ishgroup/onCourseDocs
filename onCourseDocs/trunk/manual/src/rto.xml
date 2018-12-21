@@ -1,930 +1,507 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="rto">
-	<title>RTO Guide</title>
-	<para>Documentation for features that relate to delivering Australian Vocational Education</para>
-	<section xml:id="rto-Outcomes">
-		<title>Understanding how outcomes are attached to enrolments</title>
-		<para>When a VET course is created, qualifications, accredited courses, skillsets, modules and units of competency are set at the
-			course level. More information about setting up VET courses is available in the <link xlink:href="courses.html#courses-VET">courses chapter</link>. Classes for the course inherit the
-			units set at the course level. You can see these units in the Training Plan on the
-			outcomes tab of the class.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Training_plan_timetable.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>Selecting units of competency to be delivered in the first class
-					session</para>
-			</caption>
-		</mediaobject>
-		<para>When a student enrols in the class, the units of competency attached to the course
-			become the outcomes attached to the student's enrolment. The start and end date of class
-			become the start and end date of the outcomes, unless you choose to define different
-			dates in the training plan. The settings on the class VET tab become the default
-			settings for each outcome for that class, but can be changed on an outcome by outcome
-			basis. Within the class level outcomes can be changed or set, but can not be deleted and
-			new outcomes can not be added here. </para>
-		<para>You can see the outcomes that have been assigned to each student in the class on the
-			outcomes tab, in the student's record on the enrolment tab, and on the enrolment record
-			on the outcomes tab.</para>
-		<para>Via the student's enrolment record, outcomes added in error can be deleted from the
-			enrolment record and additional outcomes can be added. Adding or deleting outcomes needs
-			to be done per enrolment where training and assessment is taking place at your RTO. For
-			outcomes gained in learning outside of onCourse, prior learning records can be imported,
-			or manually added to the student's education tab.</para>
-			<para>Once outcomes are linked to certificates, a laurel icon is displayed next to the outcome.
-			Once the certificate is printed and issued, the outcomes become locked in the system and
-			greyed out so they can't be edited. If the certificate is later revoked, the outcomes
-			can be edited again.</para>
-		
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/Training_Plan_outcomes.png" format="png"/>
-			</imageobject>
-			<caption>A student's education tab showing outcomes linked to certificates, via enrolments and
-				prior learning. </caption>
-		</mediaobject>
-		<section>
-			<title>Cancelling VET enrolments</title>
-			<para>Sometimes when you cancel a VET enrolment, it is because it was created in error and you
-				want to delete all the outcomes. At other times, often when the training is funded,
-				you want the enrolment cancelled to make another position available in the class,
-				but have the outcomes retained for reporting purposes.</para>
-			<para>When you cancel an enrolment, by default the checkbox option retains any outcomes that have
-				had a status set, and deletes any outcomes with a status of 'not set'.</para>
-			<para>If, at this point, no outcomes have had their status set (for example, the student
-				was enrolled into the wrong class) then all outcomes will be deleted. However, if
-				this was a funded enrolment and you wanted to retain all the outcomes to later mark
-				as 'withdrawn' then you can uncheck this option.</para>
-			<para>If you are cancelling an enrolment where you have already set all the outcomes,
-				e.g. all set to withdrawn already, leaving this option checked will delete
-				nothing.</para>
-			<para>If you have set outcomes on an enrolment record and want them deleted, and not
-				retained, then you will need to either set them back to 'not set' before cancelling
-				the enrolment, or you can manually delete them from the enrolment record after
-				processing the cancellation.</para>
-			<para>If you have created a certificate that includes outcomes from the enrolment, they will
-				always be retained on the student's outcome and can not be deleted manually, even if
-				the certificate has been revoked.</para>
+	<title>RTO Setup</title>
+	<section xml:id="rto-enrolments">
+		<title>Before Taking Enrolments</title>
+		<para>
+			If you're required to report AVETMISS or funded training there are a few steps
+			you'll need to take to ensure that reporting time goes as smoothly as possible.
+			Do these things before you accept your first enrolment into the VET
+			classes.</para>
+		<section xml:id="rto-enrolments-general">
+			<title>Set up General Preferences</title>
+			<para>Set up your AVETMISS details within the General Preferences window. To
+				access this, in the navigation menu click File > Preferences > General, then
+				find the AVETMISS tab in the left-hand column on the window. 'Show RTO
+				related screens and menus' should be enabled. Then fill out the rest of the
+				page and be especially certain that both your Training organisation name and
+				RTO Identifier field match the details recorded on training.gov.au.</para>
+			<para>When you've finished, hit the 'Save' button in the top-corner of the
+				window, then close it.</para>
+		</section>
+		<section xml:id="rto-enrolments-competency">
+			<title>Competency components</title>
+			<para>onCourse tracks VET competencies such as Qualifications, Accredited
+				Courses, Skill groups/sets, Units of Competency, and Modules. It also tracks
+				higher education Courses and Units of Study.</para>
+			<para>onCourse automatically imports all this data regularly from
+				training.gov.au. The can view Competency Components from the Training
+				menu.</para>
+			<para>For each competency on your scope, tick the 'is offered' option; this will
+				ensure that only those records can be added to your courses. You can also
+				create your own competencies for Skills groups, modules and higher education
+				which aren't imported automatically from training.gov.au.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/cancel_enrolment.png" format="png"/>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/quals_standard.png"/>
 				</imageobject>
 				<caption>
-					<para>Cancelling an enrolment and deleting all unset outcomes</para>
+					<para>The new Qualifications/Units of Competency list view</para>
+				</caption>
+			</mediaobject>
+			<para>You can view all of the Qualifications and Modules/Units of Competency (including
+				skill sets) by opening the Qualifications window, either via the Dashboard, or by
+				clicking Training > Qualifications in the nav menu. This has been merged with the
+				Unit of Competency window as well, so all of these are able to be viewed and
+				reviewed together in the one place. </para>
+			<para>You can switch between the three-column view or a list view by selecting the
+				switcher at the bottom of the window.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/quals_3column_view.png"/>
+				</imageobject>
+				<caption>
+					<para>The new Qualifications/Units of Competency window in three-column view
+						mode</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/quals_listview.png"/>
+				</imageobject>
+				<caption>
+					<para>The new Qualifications/Units of Competency window in list view mode</para>
 				</caption>
 			</mediaobject>
 		</section>
-	</section>
-	<section xml:id="rto-trainingPlans">
-		<title>Creating Class Training Plans</title>
-		<para>Where a class has multiple units of competency assigned to it, you may wish to create
-			a training plan to define at which points during the class delivery each unit begins and
-			ends. </para>
-		<para>For some government funding training, is it important in the AVETMISS reporting to
-			show the sequence of the delivery of units by having varied start and end dates.
-			Training plans allow you to achieve this.</para>
-		<para>Training plans are linked to sessions and can be found in the class timetable. </para>
-		<para>By default, all units of competency are assigned to all sessions unless you choose to
-			change this in the training plan. Units can not be assigned to no sessions as they would
-			then have no start or end date, creating errors in AVETMISS reporting.</para>
-		<para>The Training Plan report allows you to provide hard copy evidence of the outcomes
-			delivered in each sessions of you class and the tutors you have assigned to deliver
-			them. This report may be useful to provide to government funding bodies or ASQA
-			auditors, as well as being used for internal planning and resource management.</para>
-		<example>
-			<title>How to create a class training plan</title>
-			<orderedlist>
-				<listitem>
-					<para>For an existing VET class, open the class record and go to the Timetable
-						tab. </para>
-				</listitem>
-				<listitem>
-					<para>Select a session from the list to view the Training Plan in the left hand panel of the
-						timetable. By default, all the available units will be ticked. You can tick
-						all/ untick all as needed to start preparing the training plan for that
-						session.</para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/assessment/timetable_training_plan.png" format="png"/>
-						</imageobject>
-						<caption>
-							<para>Select all outcomes for delivery during a session</para>
-						</caption>
-					</mediaobject>
-				</listitem>
-				<listitem>
-					<para>Progressing through each session, select and de-select the units in the
-						left hand panel which will be delivered in that session.</para>
-				</listitem>
-				<listitem>
-					<para>Note that the first session where the unit is delivered and the last
-						session where the unit is delivered will become the start and end dates of
-						the outcomes. If there are sessions in between these two where the unit is
-						not selected, this will have no impact on your AVETMISS reporting, only your
-						internal resource management.</para>
-				</listitem>
-				<listitem>
-					<para>For each session in the timetable, you can define one or more tutors and
-						one or more units. These combine to form the training plan.</para>
-				</listitem>
-				<listitem>
-					<para>Once the class record has been saved, the start and end dates now set for
-						each unit are available on the class Outcomes panel, in the training plan
-						section. The lower half of the window shows the outcomes assigned to student
-						enrolled in this class.</para>
-				</listitem>
-				<listitem>
-					<para>The start dates and end dates defined by each unit must fall within the
-						sessions of the class. You can not manually set a date in a training plan
-						outside the class boundaries, but you can do this on an outcome by outcome
-						basis if required.</para>
-				</listitem>
-				<listitem>
-					<para>If a student's outcome has been modified manually e.g. the end date has
-						been extended beyond the duration of the class, the Training Plan settings
-						will not modify the manual overrides you have created. </para>
-				</listitem>
-				<listitem>
-					<para>To print the training plan report for class, save and close the record and
-						ensure the class is selected in the class list view. Select File > Print >
-						Training Plan to print the report. </para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TrainingPlanPageOne.png" format="png"/>
-						</imageobject>
-						<caption>
-							<para>Training Plan Report showing the unit list and their start and end
-								dates</para>
-						</caption>
-					</mediaobject>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/TrainingPlanPageTwo.png" format="png"/>
-						</imageobject>
-						<caption>
-							<para>Training Plan Report showing the units scheduled for delivery for
-								each session and the tutors responsible for their delivery</para>
-						</caption>
-					</mediaobject>
-				</listitem>
-			</orderedlist>
-		</example>
-	</section>
-	<section xml:id="rto-modifyingOutcomes">
-		<title>Setting and modifying outcomes</title>
-		<para>How to set and customise outcomes to meet your reporting needs</para>
-		<para>When you set up a VET course and class and enrol students, outcomes will automatically
-			be created for each of the units of competency you assigned to the course, with the
-			properties start and end date, reportable hours, delivery mode and funding type you set
-			in the class.</para>
-		<para>There are multiple places you can access the outcomes and set them, plus modify the details
-			mentioned above for individual students - in the class outcome tab, in the student
-			enrolments tab, in the enrolment outcomes tab, the find related outcomes window and in
-			the certificate window when you are creating a new certificate.</para>
+		<section xml:id="rto-enrolments-funding">
+			<title>Funding source</title>
+			<para>Make sure you remember to add the correct funding contract at the Class
+				level, and then make any required changes for individual students at the
+				Enrolment level.</para>
+			<para>To learn more about <link linkend="fundingContract">Funding Contracts, click here </link>.</para>
+		</section>
 		<section>
-			<title>What are outcomes?</title>
-			<para>A students outcome is the record of their engagement with a Unit of Competency or
-				Module from a training package or accredited course. Outcomes are often reported to
-				government through processes such as AVETMISS and must meet certain validation
-				rules. Primarily, an outcome records if a student has passed or failed their course.
-				The outcomes available for selection are as follows:</para>
-			<simplelist>
-				<member> Competency achieved/pass (20)</member>
-				<member> Competency not achieved/fail (30)</member>
-				<member> Withdrawn (40)</member>
-				<member> Recognition of prior learning granted (51)</member>
-				<member> Recognition of prior learning not granted (52)</member>
-				<member> Recognition of current competency granted (53)</member>
-				<member> Recognition of current competency not granted (54)</member>
-				<member> Credit transfer (60)</member>
-				<member> Did not start (NSW: 66, SA: @@)</member>
-				<member> Continuing enrolment (70) *</member>
-				<member> Non-assessed enrolment - Satisfactorily completed (81) **</member>
-				<member> Non-assessed enrolment - Withdrawn or not satisfactorily completed (82)</member>
-				<member> Result not available (90) ***</member>
-			</simplelist>
-			<para>Refer to the NCVER publications, VET Provider Collection Specifications and
-				AVETMISS Data Element Definitions for more information regarding the definitions and
-				use of these outcomes.</para>
-			<para>* You do not need to set the outcome 'Continuing enrolment (70)'  for any outcomes. During
-				the AVETMISS export process, if the outcome end date is in the calendar year after
-				the date range of the export, 70 will automatically be exported. </para>
-			<para>** If you export data for non-VET outcomes, you do not need to set the outcome
-				'Non-assessed enrolment - Satisfactorily completed (81)'. This will always be
-				exported for unset non-VET outcomes. </para>
-			<para>*** You may not need to set 'Result not available (90)'. During the export
-				process, you can choose to set this outcome for all unset VET outcomes</para>
-			<section>
-				<title>Finding outcomes</title>
-				<para>Outcome data is available in the enrolment record, the student record, the class record
-					and via the 'Find related' outcomes option.</para>
-				<para>From the file menu, select Activity > Outcomes to see all outcomes in the
-					database. The outcomes list view allows you to search and sort on all outcomes,
-					or use the core filter to view outcomes in progress, pre-commencement or
-					completed.</para>
-				<para>To see outcomes related to a particular record, such as an enrolment record, double click
-					on the enrolment and navigate to the outcomes tab. You can do the same thing in
-					a class to see all outcome records for the students enrolled in that
-					class.</para>
-				<para>When you look at the education tab of a student's contact record, you can see
-					all their outcomes. These outcomes could have been created via enrolments in
-					onCourse or through prior learning record imports.</para>
+			<title xml:id="rto-enrolments-sites">Site setup</title>
+			<para>You should ensure that all of the sites you've set up have the correct address, suburb and
+				postcode. Any sites that are used for VET classes will have these details included
+				in reporting, so ensuring accuracy in this data is important.</para>
+			<para>You can learn more about <link
+				linkend="sitesRooms">adding Sites and Rooms by clicking here</link>.</para>
+		</section>
+		<section xml:id="rto-enrolments-courses">
+			<title>Course setup</title>
+				<para>If you are an RTO who offers short accredited programs, or full
+					qualifications, you will appreciate the ease in which you can set up your
+					courses with the right unit and qualification details. This then flows through
+					to recording outcomes, creating transcripts and certifications, and generating
+					AVETMISS compliant data.</para>
+				<tip>
+					<para>In this section when we talk about Qualifications we really mean
+						"Qualifications, Accredited Courses or Skillsets". And when we say "Unit of
+						Competency" we also include "Modules". Although the words are different
+						between state and commonwealth accreditation regimes, the processes in
+						onCourse are exactly the same.</para>
+				</tip>
+				<para>You must ensure that in the File > General > Preferences > AVETMISS you have
+					the 'show RTO related screens and menus' option enabled. This makes the VET tabs
+					in the course and class records and the AVETMISS tab in the student record
+					visible for data entry.</para>
+				<para>In the VET tab of the course record you can select the Qualification and the
+					Units from the built in NTIS data for your chosen course. If your course is VET,
+					but not from a training package or accredited course, you can also flag it VET
+					here and allocate its Field of Education ID. This is something you may need to
+					do as part of your government funding requirements for non accredited
+					courses.</para>
+				<tip>
+					<para>Do you deliver state accredited courses? You will find the course listed
+						in onCourse but not the modules that make up the course. This is because
+						they are not publicly available on NTIS. You can send us the modules names,
+						codes and field of Education IDs in a spreadsheet and we will manually add
+						them to onCourse for you.</para>
+				</tip>
+				<para>onCourse does not contain the qualification packaging rules, so it is up to
+					you as the RTO to ensure that you are compliant with your own scope of
+					registration and the requirements of the training packages you are authorised to
+					deliver. You should refer to these requirements when creating your courses and
+					only select those units which are allowed to contribute towards that particular
+					qualification.</para>
+				<orderedlist>
+					<title>There are a few different ways you can structure VET Courses within
+						onCourse:</title>
+					<listitem>
+						<para> A full Qualification where you know all the units the students will
+							complete in advance i.e. all students will complete the same core and
+							elective units. Students will graduate with a complete
+							Qualification.</para>
+					</listitem>
+					<listitem>
+						<para>A full Qualification where all students will undertake the core units,
+							but may all select different elective units. Students will graduate with
+							a complete Qualification.</para>
+					</listitem>
+					<listitem>
+						<para>A short course which has one or more units of competency embedded
+							within it. The units may or may not all contribute to the same
+							Qualification. Students will graduate with a Statement of
+							Attainment.</para>
+					</listitem>
+					<listitem>
+						<para>A short course where you know which qualification a student will be
+							working towards in advance, but the students in the class will complete
+							a variable number and selection of units. Some may achieve a Statement
+							of Attainment, some may be working towards a full Qualification, and
+							some may simply receive a non-vet Statement of Attendance.</para>
+					</listitem>
+					<listitem>
+						<para>A course which is not linked to any national or state accredited
+							training packages or accredited courses, but has a vocational learning
+							outcome. Depending on your reporting requirements, these courses may
+							also contribute towards your annual VET delivery.</para>
+					</listitem>
+				</orderedlist>
+				<para>In onCourse outcomes (records of undertaking and achieving a unit of
+					competency) flow down from the course to the student via an enrolment in a
+					class. If a course has 15 units attached to it, when a student is enrolled in a
+					class for that course, the student will have 15 outcomes created for them - one
+					for each unit. You can always modify the units for the student in their own
+					enrolment, for example if they change to a different elective. What this means
+					is that you can save yourself a lot of data entry work if you set your course up
+					with all the units to begin with. </para>
 				<example>
-					<title>Using find related outcomes</title>
+					<title>Creating a VET Course</title>
 					<orderedlist>
-						<listitem><para>Start from the classes window and locate the class, or group of classes you wish to find the
-								outcomes for.</para>
-						</listitem>
-						<listitem><para>Highlight the classes, and from the 'Find related' icon in the list view, select
-								'outcomes'.</para>
-							<mediaobject>
-								<imageobject>
-									<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/classes_find_related_outcomes.png" format="png"/>
-								</imageobject>
-								<caption>
-									<para>Finding the related outcomes for the highlighted classes</para>
-								</caption>
-							</mediaobject>
-						</listitem>
-						<listitem><para>A new window will open showing the outcomes list. From this list you can run further searches or use the filters to search the outcome list for outcomes in progress, pre-commencement or completed.</para>
-						<mediaobject>
-							<imageobject>
-								<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/outcomes_list_view.png" format="png"/>
-							</imageobject>
-							<caption>
-								<para>Looking at the outcomes list view</para>
-							</caption>
-						</mediaobject>
+						<listitem>
+							<para>Follow the instructions to create a new course. Open the course
+								record to the <guibutton>VET tab</guibutton>.</para>
 						</listitem>
 						<listitem>
-							<para>This same process can be done from the contact, student or the enrolments list view.
-								Outcomes linked to prior learning records (which are available from
-								the contact or student record) will not show any data in the course
-								or code column, as they were not created via an enrolment in
-								onCourse.</para>
+							<para>Enter the <guilabel>National Code</guilabel>. The fields are
+								clairvoyant, so as you type in them, onCourse will search for and
+								list the qualifications in the built in training.gov.au database.
+								Select the qualification by clicking on it. You can also search for
+								qualification by name in <guilabel>Qualification</guilabel>. Omit
+								the words Certificate in or Diploma of in your search. For example,
+								search for the Certificate IV in Aged Care by typing 'Aged
+								Care'.</para>
+						</listitem>
+						<listitem>
+							<para> The qualification information is broken into different fields so
+								the Certificate IV Training and Assessment would read
+									<guilabel>National code</guilabel> - TAA40104
+									<guilabel>Qualification</guilabel> - Training and Assessment
+									<guilabel>Level</guilabel> - Certificate IV </para>
+						</listitem>
+						<listitem>
+							<para>You can then add modules and the units by clicking the
+									<guibutton>+</guibutton>icon on the right hand side of the
+								screen. This will open a drop down screen.</para>
+						</listitem>
+						<listitem>
+							<para>Enter the <guilabel>National Code</guilabel> or
+									<guilabel>Title</guilabel> These fields are also clairvoyant so
+								make your selection and press ok. You will then be returned to the
+								course screen where you will see the modules and units listed. To
+								add more units simply click on the <guibutton>+</guibutton>sign and
+								repeat the process. To delete any units, click the
+									<guibutton>-</guibutton> sign. When you are done, click
+									<guibutton>save</guibutton>. You can also set the nominal hours
+								for the units as you attach them to the course.</para>
 						</listitem>
 					</orderedlist>
 				</example>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/vet_course_tab.png"/>
+					</imageobject>
+					<caption>
+						<para>The VET tab of the course, showing a full qualification with selected
+							units</para>
+					</caption>
+				</mediaobject>
+				<caution>
+					<title>Changing units in a course</title>
+					<para>Once a course has a class with an enrolment in it you CAN NOT change the
+						units of competency assigned to the course. This is because onCourse has
+						created an immutable relationship with this data - if you changed it at the
+						course level, every student ever enrolled in a class for this course would
+						have their outcomes changed. </para>
+					<para>However - you can always retire the old course and create a new course to
+						use for future enrolment using the 'duplicate course' option in the list
+						view cogwheel. The new course can have the same name but will have to have a
+						different course code. You may choose to change the code of the old course
+						instead, so the new course can use the existing code, which is adventagous
+						for your SEO. Make sure to set the status of the old course to 'course
+						disabled' and when you are ready, the status of the new course to 'enabled
+						and visible online'. </para>
+					<para>You may also want to duplicate one of the classes from the old course and
+						assign it to the new course to use the same timetables and teaching
+						schedules. </para>
+				</caution>
+				<example>
+					<title>How to "add" a unit of competency to a course</title>
+					<para>You cannot actually add a Unit of competency to a course if it already has
+						enrolments (see the caution above), you can only cancel the old course and
+						then create a new course with the additional unit of competency you want
+						included. This is because changing the units of competency changes the very
+						nature of the course, but the history of the old course and it's previous
+						students need to be retained. </para>
+					<para>If needed, you can also add units directly to student enrolments. This
+						will not change the course units for new students enrolling, but can be used
+						to correct or update the records of existing students.</para>
+					<para>If the unit change is substantial, you may want to consider creating a new
+						class against the new course, and transferring all the students from the
+						class linked to the old course to the class linked to the new course. This
+						will remove all the old units from their record (provided outcomes have not
+						yet been set), and with their new enrolment, add all the new units to their
+						record.</para>
+					<orderedlist>
+						<title>How to duplicate a course:</title>
+						<listitem>
+							<para>First go to "Course" list view and single click to select the old
+								version of the course</para>
+						</listitem>
+						<listitem>
+							<para>From the cogwheel, select the option 'duplicate course'. This will
+								make another course with the same name and all the same content,
+								with a course code with a 1 on the end.</para>
+						</listitem>
+						<listitem>
+							<para>Courses can have the same name, but every course has to have a
+								unique code. Because the course code is what forms your URL on the
+								website, it is better for SEO purposes to change the code of the old
+								course to something different before you disable it e.g. BCDCERTV
+								could become oldBCDCERTV. Then you can change the code of the new
+								version of the course from BCDCERTV1 back to BCDCERTV.</para>
+						</listitem>
+						<listitem>
+							<para>Open the old version of the course and set the status to 'course
+								disabled'.</para>
+						</listitem>
+						<listitem>
+							<para>Open the new version of the course and make the required changes
+								to the listed units of competency by adding or deleting from the
+								current list on the VET tab. Note you will need to delete all the
+								non-required units, save the record, and then reopen it to add new
+								units.</para>
+						</listitem>
+						<listitem>
+							<para>When you are ready to save and close the new course, set the
+								course status to 'enabled and visible online' </para>
+						</listitem>
+					</orderedlist>
+					<orderedlist>
+						<title>How to duplicate a class from an old course to a new course:</title>
+						<listitem>
+							<para>Open the class list view and locate a recent class from the old
+								course. Following from the example before, this might be class
+								oldBCDCERTV-90.</para>
+						</listitem>
+						<listitem>
+							<para>Using the class cog wheel option, duplicate this class, making any
+								changes to the dates as appropriate. This new class will have the
+								code oldBCDCERTV-91 and be linked to the old course.</para>
+						</listitem>
+						<listitem>
+							<para>Double click on the new class to open it. In the course code field
+								in the top right hand corner, change the code from the old course to
+								the new course e.g. BCDCERTV. This has now linked the class to the
+								new course. Save and close.</para>
+							<para>NOTE: You can only change the course a class is linked to before
+								any enrolments are processed into the class. If a class has
+								enrolments, even if those enrolments are cancelled, you can not
+								change the course code it is linked to.</para>
+						</listitem>
+					</orderedlist>
+				</example>
+				<section>
+					<title>Courses which are complete qualifications or skill sets</title>
+					<para>When a course has the flag 'Satisfies complete qualification or skill set'
+						checked on the VET tab, this means that if the student successfully
+						completes all of the attached units, they will be eligible for a
+						Qualification or Skill Set Statement of Attainment. </para>
+					<para>Using the automatic 'create Certificates' options from the class or
+						enrolment cogwheels will look at the value of this flag and determine what
+						type of certification to create.</para>
+					<para>This flag, for AVETMISS purposes, also signifies the student's intent to
+						complete a qualification. Outcomes linked to a class with this flag checked
+						will be reported linked to the parent qualification, where courses where
+						this isn't selected will be reported as module only enrolments.</para>
+					<para>This value of this checkbox can be changed as needed after the course has
+						been created, and even after students have enrolled.</para>
 				</section>
-			<section>
-				<title>Setting individual outcomes</title>
-				<para>To set the outcome, modify the start or end date, or delivery mode, simply
-					click in the list view field you wish to change and enter the data. To modify
-					the unit/module the outcome is linked to, to change the funding source or change
-					the reportable hours, click the expansion option to open the full outcome edit
-					window.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/set_outcome_status.png" format="png"/>
-					</imageobject>
-					<caption>
-						<para>Setting the outcome status in the outcome edit view</para>
-					</caption>
-				</mediaobject>
-				<para>If you wish to add additional outcomes to a students enrolment, open the
-					enrolment record to the outcome tab, and click the plus sign to add an outcome.
-					You may need to do this if a student completes an additional unit by RPL, or if
-					the entire class complete an additional unit to what was originally planned in
-					the course.</para>
-				<note>
-					<para>When setting a given Class as <guilabel>Self Paced</guilabel>, the start
-						date and end date for the student outcomes are set as follows: </para>
-					<itemizedlist>
+				<section>
+					<title>Partial qualifications</title>
+					<para>Remember that in onCourse a course is about the product you are selling to
+						your students. Sometimes you may break a program of study e.g. full
+						qualification into lots of short courses for students to buy, complete and
+						over time, to work towards the final outcome of a qualification.</para>
+					<para>In onCourse, courses don't have to be linked to a qualification or a unit
+						of competency. They can just be a non-accredited course.</para>
+					<para>If students are working towards a unit of competency that they will
+						complete in another course, you may like to indicate this in the program
+						description that you use for marketing purposes. If the student only
+						completes this course, they will only be eligible for a non-accredited
+						Certificate of Attendance, not a Statement of Attainment.</para>
+					<para>You can set up this type of program in onCourse by attaching the
+						Qualification that the student will be working towards in the VET tab of the
+						course, but not adding any Units of Competency to the course. You do not
+						have to add the Qualification at all - this is optional, and would not be
+						appropriate if the program of study never led to any formal Qualification
+						outcome.</para>
+					<para>When students enrol in this course, they will get a dummy outcome (used
+						for reporting purposes in some states) with the name of the course. You can
+						set this dummy outcome to pass (81) or fail (82). Using this outcome, you
+						will then know when the student enrols in the next course (where the units
+						have been attached) that they have successfully completed the part one
+						component.</para>
+					<para>When you set up the second part of the course, you will add the
+						qualification and the units to the VET tab, so when the student enrols they
+						will get the appropriate units of competency added to their record. Then you
+						are able to record their final outcome result as per the standard list of
+						VET options.</para>
+					<para>In the example below, a student is working towards a cluster of units from
+						the Certificate I in IT. Only when they have completed the second course,
+						Understanding Computer Basics, are they eligible to be assessed against the
+						unit outcomes. The first course, Computing Basics, has no units attached,
+						and the second course has three units attached. </para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/computing_basics.png"/>
+						</imageobject>
+						<caption>
+							<para>1st course: The Qualification is attached to the course, but the
+								student has not completed any units of competency by completing this
+								course</para>
+						</caption>
+					</mediaobject>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/understanding_computer_basics.png"/>
+						</imageobject>
+						<caption>
+							<para>2nd course: The Qualification and Units are attached to this
+								course. After completing part 1 and 2 the student can now be
+								assessed.</para>
+						</caption>
+					</mediaobject>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/vet_student_outcomes.png"/>
+						</imageobject>
+						<caption>
+							<para>The student record shows a 'dummy' outcome for the course with no
+								units. They have completed it successfully. Now they can be assessed
+								against the other units.</para>
+						</caption>
+					</mediaobject>
+				</section>
+			
+		</section>
+		<section xml:id="rto-enrolments-classes">
+			<title>Class setup</title>
+				<para>Where a class has multiple units of competency assigned to it, you may wish to
+					create a training plan to define at which points during the class delivery each
+					unit begins and ends. </para>
+				<para>For some government funding training, is it important in the AVETMISS
+					reporting to show the sequence of the delivery of units by having varied start
+					and end dates. Training plans allow you to achieve this.</para>
+				<para>Training plans are linked to sessions and can be found in the class timetable. </para>
+				<para>By default, all units of competency are assigned to all sessions unless you
+					choose to change this in the training plan. Units can not be assigned to no
+					sessions as they would then have no start or end date, creating errors in
+					AVETMISS reporting.</para>
+				<para>The Training Plan report allows you to provide hard copy evidence of the
+					outcomes delivered in each sessions of you class and the tutors you have
+					assigned to deliver them. This report may be useful to provide to government
+					funding bodies or ASQA auditors, as well as being used for internal planning and
+					resource management.</para>
+				<example>
+					<title>How to create a class training plan</title>
+					<orderedlist>
 						<listitem>
-							<para>Start Date is the date the student enrols in the Class</para>
+							<para>For an existing VET class, open the class record and go to the
+								Timetable tab. </para>
 						</listitem>
 						<listitem>
-							<para>End Date is the start date plus the maximum days to complete that
-								has been set for the Class via the General tab.</para>
+							<para>Select a session from the list to view the Training Plan in the
+								left hand panel of the timetable. By default, all the available
+								units will be ticked. You can tick all/ untick all as needed to
+								start preparing the training plan for that session.</para>
+							<mediaobject>
+								<imageobject>
+									<imagedata scalefit="1" width="100%" contentdepth="100%"
+										fileref="images/assessment/timetable_training_plan.png"
+										format="png"/>
+								</imageobject>
+								<caption>
+									<para>Select all outcomes for delivery during a session</para>
+								</caption>
+							</mediaobject>
 						</listitem>
-					</itemizedlist>
-				</note>
-			</section>
-			<section>
-				<title>Setting outcomes in bulk</title>
-				<para>In the class or outcomes window, the outcome of one, some or all students can be selected
-					and set as a single action.</para>
-				<para>Select the outcomes you wish to set by clicking the first outcome, holding
-					down shift (to select all in the range) or control / command (to select only
-					those you click on). Then right click on any of the selected records and set the
-					outcomes to successful. This will then set all the records to 20 in a VET class,
-					or to 81 in a non-VET class.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/bulk_set_outcomes.png" format="png"/>
-					</imageobject>
-					<caption>
-						<para>Setting outcomes in bulk from the outcomes list view</para>
-					</caption>
-				</mediaobject>
-				<para>If you set an outcome to successful' in error, can always select it again individually and
-					set it to a different outcome. This means you can set a whole class group to
-					successful very quickly, then go back and change the outcomes for the 1 or 2
-					students who did not pass to <emphasis>30 - Competency not
-						achieved/fail.</emphasis></para>
-				<note>
-					<para> Only the 'successful' outcome can be set in bulk </para>
-				</note>
-			</section>
-			<section>
-				<title>
-					Exporting outcome data
-				</title>
-				<para>All RTOs are obliged to report their training activity data under the AVETMISS standard,
-					as part of their registration obligations. For more information on Total VET
-					Activity Reporting, please refer to the <link xlink:href="AVETMISS">AVETMISS
-						chapter</link> of the user handbook.</para>
-				<para>There may be other occasion when you need to export your outcome data for your own
-					recording keeping purposes. To that end, onCourse contains some CSV exports you
-					can open in excel that are a little like more user friendly, readable versions
-					of AVETMISS data.</para>
-				<para>The 'Class Outcomes CSV' or 'Extended Outcomes CSV' exports in the class
-					window show outcome data, funding sources, and useful information for audit
-					evidence trails like the name of the tutor contact who marked the outcome via
-					the portal.</para>
-				<para>Another class export called 'Class Attendance CSV' exports an electronic
-					record of the marked class roll, with any comments made for partial attendance
-					or approved absences and the details of the tutor who marked the roll.</para>			
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/reports/extended_outcomes_csv.png" format="png"/>
-					</imageobject>
-					<caption>
-						<para>A class grouped outcomes export in excel format</para>
-					</caption>
-				</mediaobject>
-				<qandaset>
-					<title>Outcomes FAQ</title>
-					<qandaentry>
-						<question>
-							<para> Why would I want to change the start and end date of an outcome?
-							</para>
-						</question>
-						<answer>
-							<para> If a class falls over a collection period (usually a calendar
-								year) and some students have been assessed and passed already, they
-								can be reported with an end date in the current year. The students
-								who have not yet been assessed, and have end dates in the following
-								year will be automatically exported with outcomes of 70. You do not
-								need to set the outcome to 70, then come back and change it when the
-								results are received. </para>
-						</answer>
-					</qandaentry>
-					<qandaentry>
-						<question>
-							<para> What is the funding source field for? </para>
-						</question>
-						<answer>
-							<para> In some types of classes, overseas fee paying students may be
-								attending, as well as Australian fee-paying students, and Australian
-								government funded students. By setting the appropriate funding
-								source at the outcome level, you report the correct student contact
-								hours to your funding body, without having to move student
-								enrolments into different class groups. If you deliver CSWE
-								programs, where this often an issue, there is more information
-								available here about how to set up your courses and outcomes.
-							</para>
-						</answer>
-					</qandaentry>
-					<qandaentry>
-						<question>
-							<para> I report my statistics to ACE and also need to report my non-accredited course
-								outcomes. How do I do this? </para>
-						</question>
-						<answer>
-							<para> 'outcomes' are also created for general enrolments and VET flagged non-accredited
-								courses. On export, they will automatically be set as type
-									<emphasis>81 - Non-assessed enrolment - Satisfactorily
-									completed</emphasis>. You still need to manually set the
-								outcomes for students who do not complete or attend the class as
-									<emphasis> 82 - Non-assessed enrolment - Withdrawn or not
-									satisfactorily completed</emphasis>
-							</para>
-						</answer>
-					</qandaentry>
-					<qandaentry>
-						<question>
-							<para> What are reportable hours? </para>
-						</question>
-						<answer>
-							<para> There is some disagreement between different state funding bodies
-								on what number should appear in this field. Generally, it is
-								understood to be the nominal hours, as defined by NCVER tables. The
-								nominal hours set for each module will be the default reportable
-								hours reported in your NAT00120 file. Non-accredited courses report
-								the classroom hours in this field. If you prefer to report the
-								classroom hours in this field, you can set this in the class VET
-								tab, however you will need to do this BEFORE enrolling students,
-								otherwise you will need to change the hours outcome by outcome. In
-								some cases, you may need to modify the nominal hours reported for
-								students being funded under particular programs, and you should do
-								this in their outcome record. </para>
-						</answer>
-					</qandaentry>
-					<qandaentry>
-						<question>
-							<para> A student who enrolled in one of our VET classes has completed
-								and passed the assessment without attending the class. How do I
-								report them? </para>
-						</question>
-						<answer>
-							<para> You can report them as <emphasis>53 - Recognition of current competency
-									granted</emphasis> and should change their outcomes delivery
-								type to <emphasis> N/A(e.g.. RPL, credit transfer)</emphasis>
-							</para>
-						</answer>
-					</qandaentry>
-					<qandaentry>
-						<question>
-							<para> A student has completed units towards the qualification they are
-								studying at our college elsewhere. How do I add them to their
-								record? </para>
-						</question>
-						<answer>
-							<para>Open the student record and go to the education tab.  In the section called 'prior
-								learning' you can add additional outcomes as needed. Units completed
-								at another training organisation should be marked as <emphasis> 60 -
-									Credit transfer</emphasis> and their nominal hours are not
-								counted towards your colleges annual delivery. On the 'documents'
-								tab of the prior learning record, you can also add attachments, and
-								it would be appropriate to scan and attach copies of their original
-								certification and any other supporting documents they have provided
-								here, for your own records. </para>
-						</answer>
-					</qandaentry>
-					<qandaentry>
-						<question>
-							<para>A student has changed their mind about an elective choice, or
-								wishes to do an additional unit. How do I add or change their
-								record?</para>
-						</question>
-						<answer>
-							<para>Find the enrolment record for the student and open the outcomes
-								tab. Here you can change, delete or add additional outcomes as
-								needed. To change an outcome from one unit to another, double click
-								on the outcome record and change the module code. Modules for which
-								you have already issued certificates for can not be edited and
-								you'll see that they are greyed out. </para>
-							<para>Using the plus or delete icon in the top right hand corner allows
-								you to add or remove modules to the student's record. You can add as
-								many units as you need, and delete all bar one unit from the record.
-								All enrolments must be linked to at least one unit of
-								competency.</para>
-						</answer>
-					</qandaentry>
-				</qandaset>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/add_unit.png" format="png"/>
-					</imageobject>
-					<caption>
-						<para>Add an additional unit to the student's enrolment record by click the
-							plus</para>
-					</caption>
-				</mediaobject>
-			</section>
-		</section>
-		<section>
-			<title>Importing and adding prior learning</title>
-			<para>If you are migrating to onCourse from another AVETMISS compliant student management system,
-				or have students who have completed training at another RTO, you can add prior
-				learning data to a student's record that can be used to create Certificate records
-				in onCourse and also be exported out as AVETMISS data.</para>
-			<section>
-				<title>Manually adding prior learning records</title>
-				<para>The education tab of a student record is comprised of four sections - enrolments, prior
-					learning, outcomes and certificates. In onCourse, both enrolments and prior
-					learning can be vocational, and linked to one or more units of competency or be
-					non-vet and linked to no formal study units.</para>
-				<para>To add prior learning to a student record, click on the + option to the right
-					of the prior learning panel.</para>
-				<para>Prior learning must have a title - this can be descriptive of the course or training
-					conducted elsewhere. Optionally, the prior learning record can be linked to a
-					Qualification or Skills Set on the general tab, contain reference to an external
-					system reference number e.g. the course code or enrolment code from the previous
-					system and optional descriptive notes.</para>
-				<para>On the second tab, outcomes, you can manually add one or more units of
-					competency or accredited modules to the prior learning record. It is important
-					you add start and end dates to the units of competency, and a valid outcome
-					status here if you want to report them for AVETMISS or use the unit to create a
-					certificate. If you are adding units completed at another RTO, you should record
-					the outcome status as 'Credit Transfer'.</para>
-				<para>If you scan any documents, such as a copy of their Certificate, you can add
-					them to the prior learning record also. You will just need to make sure you save
-					the prior learning record first, before adding documents.</para>
-				<para>Once the prior learning record has been saved, the outcomes attached to the
-					prior learning will appear in the outcomes section of the student's education
-					record, combined with any outcomes completed by the student via enrolments into
-					onCourse classes.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/manual_add_prior_learning.png" format="png"/>
-					</imageobject>
-					<caption>
-						<para>The general tab of the prior learning sheet in the Education tab of a contact</para>
-					</caption>
-				</mediaobject>
-			</section>
-			<section><title>Importing prior learning using AVETMISS files</title><para>If you are migrating
-					to onCourse and wish to bring over your student and outcome data, onCourse can
-					import standard AVETMISS files to create student contact records with prior
-					learning data.</para>
-				<para>There are four built in types of AVETMISS data imports, with different purposes depending
-					if you are importing new data to onCourse, or updating existing onCourse
-					records. If you are importing data into an active onCourse database, please
-					speak with us first to confirm what import option is the best option to avoid
-					creating duplicate student records.</para>
-				<orderedlist>
-					<listitem><para><emphasis role="bold">onCourse AVETMISS outcome import</emphasis> - This option is best for
-							colleges starting a new onCourse database who want to import AVETMISS
-							files from another system, and do not have student records in the
-							onCourse database yet. You will need NAT00060, NAT00080, NAT00085 and
-							NAT00120 files for this import. This import will create student records
-							in onCourse, and attach prior learning records to those students.</para>
-						<para>If you run this import twice, you will create duplicate student data.
-							This import does not try and check for matches.</para></listitem>
-					<listitem>
-						<para><emphasis role="bold">onCourse AVETMISS student import - </emphasis>
-							This is an alternative import option for colleges new to onCourse to
-							import student contact data only, via the AVETMISS NAT00080 and NAT00085
-							data. This will create contact records without any learning
-							history.</para>
-					</listitem>
-					<listitem><para><emphasis role="bold">onCourse AVETMISS outcome update import </emphasis>- This import option
-							is for colleges who already have student contact records in onCourse and
-							wish to update those records with data from an external source e.g. ARMS
-							data for AMEP students. This import will try to match a student to their
-							existing onCourse record based on a firstName, lastName and DoB match,
-							and will create a new student record if it can't find a match. Note that
-							any student matches found will have their contact data overridden by the
-							data from this import.</para>
-						<para>This import also tries to match importing outcome data to data already
-							recorded in onCourse, and avoid creating duplicate prior learning
-							records if the record doesn't already exist. This import will add
-							additional outcome data to existing prior learning records when it finds
-							multiple outcomes belonging to the same qualification code.</para>
-						<para>You will need NAT00060, NAT00080, NAT00085 and NAT00120 files for this
-							import.</para></listitem>
-					
-					<listitem><para><emphasis role="bold">onCourse AVTETMISS student update import</emphasis> - This import
-							updates student contact details in onCourse based on NAT00080 and
-							NAT00085 data files imported from another system. This import will try
-							to match a student to their existing onCourse record based on a
-							firstName, lastName and DoB match, and will create a new student record
-							if it can't find a match.</para>
-						<para>Note that you could potentially update onCourse student records with
-							outdated data using this import option, so use with caution when
-							importing data from a record set older than your onCourse
-							records.</para></listitem>
-				</orderedlist>
-				<para>You will need
-					validated NAT00060, NAT00080, NAT00085 and NAT00120 files first. Make sure these
-					files have been validated in the <link xlink:href="https://avs.ncver.edu.au/avs/">NCVER AVS tool</link> and are
-					reporting no errors before importing them into onCourse. </para><para>To import these files, go to File > Import/Export > Import... and select the onCourse AVETMISS
-					option required. The import process will prompt you to open each of the NAT
-					files listed above from a location on your computer.</para><para>Once you have selected all the required files, click on the import button on the bottom of the
-					window.</para><mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/import_avetmiss_files.png" format="png"/>
-					</imageobject>
-					<caption>
-						<para>Selecting AVETMISS files to import into onCourse</para>
-					</caption>
-				</mediaobject></section>
-		</section>
-	</section>
-	<section xml:id="rto-CSWECourses">
-		<title>CSWE courses, classes and outcomes</title>
-		<para>Making government reporting less of a hassle for student focused literacy programs</para>
-		<section>
-			<title>Setting up Certificate in Spoken and Written English (CSWE) courses</title>
-			<para> Some colleges who deliver CSWE courses run open English language programs at different
-				levels, aligned to the levels available in the CSWE program. Students enrol in
-				course that is of an appropriate level and when a class group is formed, the tutor
-				then assess the students and selects appropriate units from the CSWE curriculum for
-				them to work towards. Some students in a class group may be working towards a single
-				unit, while others may be working towards multiple units. Some students may be fee
-				paying, some may be funded under various government programs. Some students may
-				enrol in a class two or three times before attempting assessment against a CSWE unit
-				and some students may not wish to be assessed at all. All of these circumstances
-				combined can make headaches for the English classes coordinator who both wants to
-				make sure the students and tutors needs are met, as well as reporting accurate
-				statistics for funding purposes. Don't worry - onCourse has you covered! </para>
-			<section>
-				<title>Setting up the course</title>
-				<para>onCourse includes all the available TGA data relating to accredited courses
-					and classes. Unfortunately, TGA isn't able to provide details of accredited
-					course modules, but for both the current and recently expired CSWE, we have
-					built in all the modules to onCourse so you can select those you deliver.</para>
-				<para>If you college chooses different modules for each class, when you create a
-					CSWE course, simply add the accredited course code to the VET page but leave the
-					module list empty. If you always use the same modules, you can set up your CSWE
-					course like any other VET course, with accredited course detail and modules. </para>
-				<para>If you do not set any modules in the course, student enrolling in CSWE linked
-					classes will be given a VET-flagged but non accredited outcome, named whatever
-					your course is named. You will override these outcomes later when you have the
-					correct module information for each student.</para>
-			</section>
-			<section>
-				<title>Enrolling students in CSWE classes.</title>
-				<para>You can enrol students in CSWE classes like you would in any other program. It doesn't
-					matter if you mix AMEP, BACE and fee paying students together - the outcomes you
-					set later on will separate them for AVETMISS purposes.</para>
-				<para>We realise many students attending CSWE classes may have enrolled in English
-					classes at your college previously. Knowing the student language background,
-					what classes they have attended, and what units they have completed will assist
-					your tutors in selecting the best units for their current enrolment.</para>
-				<para>Once your students are enrolled and classes are ready to start you can print
-					the Student Details Report from the class window, which will provide the tutors
-					with the information listed above.</para>
-			</section>
-			<section>
-				<title>Setting CSWE outcomes.</title>
-				<para>Once your tutor has reported back to the college each of the outcomes
-					attempted and/or achieved by each student in the class, you can enter the data
-					into onCourse, ready for your AVETMISS exports.</para>
-				<para>Go to the enrolment window and search for all the students in the class group
-					you wish to work with by conducting and advanced search on the course code and
-					class code.</para>
-				<para>The outcome tab of each student's enrolment will show a non-VET outcome. Open
-					it and change it to the first CSWE outcome you wish to record. You can also set
-					the funding source information in this window. </para>
-				<para>You can also add additional outcomes to the enrolment if a student has
-					attempted more than one module during this class by clicking the plus
-					sign.</para>
-				<para>If a student chooses not to be assessed against any outcomes, you either leave them with
-					the VET flagged non-accredited outcome or choose a VET outcome and set it to
-						<emphasis> 30 - Competency not achieved/fail</emphasis> or if you have
-					documented evidence that they have refused assessment, yet successfully attended
-					the class, you can set a suitable module outcome to <emphasis> 81 - Non-assessed
-						enrolment - Satisfactorily completed</emphasis>
-				</para>
-			</section>
-		</section>
-	</section>
-	<section xml:id="rto-VETDeliveryHours">
-		<title>VET delivery hours</title>
-		<para>How and where onCourse records and calculates student contact hours</para>
-		<section>
-			<title>VET data in the class window</title>
-			<para>On the class window, there is a tab called VET, which contains fields that are
-				useful for RTOs and relate to AVETMISS and other delivery statistics. There are also
-				three AVETMISS specific fields 'Delivery mode', 'Funding source' and 'DET booking
-				ID'. </para>
-			<itemizedlist>
-				<listitem>
-					<para>Delivery Mode - This refers to how the class is conducted. Most programs
-						are classroom based, and this is the default value. You can also change this
-						at the outcome level if necessary, e.g. if one student completes the program
-						by distance.</para>
-				</listitem>
-				<listitem>
-					<para>Funding Source - This refers to how the class is funded. These are set
-						selection of national codes. You can also change the funding source at the
-						outcome level, e.g. for AMEP funded students. For more information, visit
-						the NCVER site </para>
-				</listitem>
-				<listitem>
-					<para>DET Booking ID - This field is specific to the NSW APL report. Visit
-						Training Market NSW for more information on reporting and lodging your data
-					</para>
-				</listitem>
-			</itemizedlist>
-			<para>Information about the qualification, accredited course, skillset, modules and units of competency delivered in your
-				class are set at the course level.</para>
-			<section>
-				<title>Nominal hours, classroom hours and Student Contact Hours</title>
-				<para>The following fields in the class relate to your delivery hours and AVETMISS
-					reporting. This section has been deliberately made complex to assist our clients
-					who are obliged to report AVETMISS for both VET delivery and non-VET
-					delivery.</para>
-				<itemizedlist>
-					<listitem>
-						<para>Qualification Hours - These are the nominal hours set by NCVER for the
-							qualification. Often, this field is left blank, which is acceptable for
-							AVETMISS. You can also add the nominal hours to the qualification
-							yourself in the Qualification table. </para>
-					</listitem>
-					<listitem>
-						<para>Nominal Hours - The nominal hours field in the class is the total of
-							the nominal hours of the units of competency assigned to the course.
-							While the nominal hours for each unit are usually set by NCVER, you can
-							override them or add them where they are missing in Module/Unit of
-							Competency record. You can edit these values when you attach units to
-							courses by double clicking on the unit record. </para>
-					</listitem>
-					<listitem>
-						<para>Classroom Hours - The total hours you have defined as scheduled activity by setting
-							sessions or by defining the minutes per sessions and number of sessions
-							on the General tab. This is not reported as part of AVETMISS for real
-							VET outcomes - it is for your information only. </para>
-					</listitem>
-					<listitem>
-						<para>Reportable Hours - These are the hours that will be reported against
-							each enrolment in the NAT00120 file. They default to the nominal hours
-							of the units attached to the course. If there are no nominal hours set
-							in the unit, i.e. in a non-VET course, the nominal and reportable hours
-							will default to the classroom hours. You can override the reportable
-							hours field to the classroom hours or any other number that you wish to
-							export in it's place for non-VET courses only. For VET courses, you can
-							also override the reportable hours in each outcome, if they differ from
-							the unit nominal hours. NOTE: If you have created a class which has
-							units of competencies assigned and not set nominal hours for these
-							units, your contact hours and reported hours for these outcomes will
-							always be zero. Reportable hours based on delivery hours only populate
-							non-VET outcomes.</para>
-					</listitem>
-					<listitem>
-						<para>Student Contact Hours - This totals the reportable hours in the
-							outcomes attached to the class. This can also be simplified to number of
-							students x total class nominal hours for most cases, but in VET classes,
-							some students may have different units assigned or different reportable
-							hours for their units. SCHs are often used by funding bodies to measure
-							delivery. If you have not set nominal hours in the units of competency,
-							your student contact hours will calculate to zero. If your classes'
-							course does not have units of competency assigned to it e.g. it is a
-							non-VET course, the student contact hours will by default equal the
-							classroom hours x number of students, unless you override the reportable
-							hours field in the class.</para>
-					</listitem>
-				</itemizedlist>
-				<para>The report Class funding will provide you with summary information, per
-					qualification, per funding code of how many student contact hours you have
-					delivered over the classes selected for the report. This can be used to check at
-					various points during the year, the number of hours you have delivered that
-					compare to your funding targets. </para>
-			</section>
-		</section>
-	</section>
-	<section xml:id="rto-coursesByCluster">
-		<title>Courses by Cluster</title>
-		<para>How to set up qualifications that are delivered by internal clusters where units of
-			competency overlap</para>
-		<para> Clusters, in this case, refers to an internal grouping of units of competency that a
-			college delivers to break up a qualification into teaching-focused groups of units.
-			Sometimes one unit from a qualification may be delivered across multiple clusters, and a
-			student must successfully complete the assessments in each cluster to achieve competency
-			in the unit. For example the Qualification Certificate IV in Training and Assessment has
-			12 units in total, but the four Environment units are assessed in each cluster. The
-			course is delivered in three clusters and each cluster has a fee that applies to it. </para>
-		<section>
-			<title>Creating the Qualification</title>
-			<para>Create a new course and attach all the units that you deliver as part of the
-				qualification. This is the formal enrolment where you will record the student's
-				completion of outcomes once assessment has been sufficiently completed across your
-				various clusters.</para>
-			<para>This is the course that you will advertise on your website, so make sure you
-				include the full course description and information about how you deliver the
-				program.</para>
-			<para>Next, create a class for this course, entering the dates, student fees and venue
-				information. Details on how to create a class is available here. Web enable this
-				class so students can enrol. </para>
-			<para>You may choose to set up this class as an 'application fee enrolment' and advise
-				the students of the full fee within this class description. Do this by setting the
-				class fee as the amount you wish them to pay to apply, and ensure your information
-				explains what the approval process involves. You will need to contact students who
-				apply and inform them of their success or otherwise, and organise payment of the
-				full course fees. </para>
-		</section>
-		<section>
-			<title>Creating the clusters</title>
-			<para>The cluster courses that you create are for your scheduling and management
-				purposes only. They will not be advertised online, as you will enrol students in
-				these classes as appropriate.</para>
-			<para>The clusters that you create are not VET courses - do not attach the qualification or units
-				of competency to these records. You can put details of the units and content covered
-				in the description if you wish.</para>
-			<para>Set up each course and class with the assigned rooms, tutors and sessions</para>
-		</section>
-		<section>
-			<title>Enrolments and Payment</title>
-			<para>As onCourse will invoice students class fees, you can allow students to make full
-				payments or part payments at the time of enrolment.</para>
-			<para>For example, you could set the full fee on the first class and track students as
-				they make payments towards this total amount. Alternatively, you could set up
-				multiple classes with fees attached, so students are only invoiced for a portion of
-				the course fee each time they are enrolled in a new cluster.</para>
-			<para>In the example below, the full qualification has an application fee of $100, paid
-				online. Once the student's enrolment has been accepted, they are invoiced $900 for
-				the first cluster, and $500 for each of the subsequent clusters, until a total of
-				$2000 has been paid.</para>
-		</section>
-	</section>
-	<section xml:id="rto-Traineeships">
-		<title>Traineeships and Custom Training</title>
-		<para>onCourse has the ability for courses and classes to be created under the traineeship model,
-			where one student is often completing a work-based course of study, managed via their
-			employer, with regular on-site visits for assessment.</para>
-		<para>The custom class function available through Quick Enrol allows users to create these
-			programs for students.</para>
-		<para>First you need to ensure you have created a course containing the expected units of
-			competency for the traineeship, <link xlink:href="courses.html#courses-VET">see here.</link> This could be
-			just the core units, or the core units and the expected electives. The actual electives
-			chosen by each trainee can either be added or changed later.</para>
-		<para>Once the course has been created, you can then create a private booking in quick
-			enrol. See the <link xlink:href="privateBookings.html">Private bookings chapter</link> You can set the assessor during this
-			process, as well as schedule the first assessment/training session, or wait until later
-			to determine this information.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="90%" contentdepth="90%" fileref="images/creating_traineeship.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>Creating a new traineeship in Quick Enrol</para>
-			</caption>
-		</mediaobject>
-		<para>It is important that you collect the employer information for the trainee enrolled in
-			the traineeship. If the employer will be paying the fee, you need to make sure this is
-			reflected during the quick enrol process so the invoice is issued to the employer
-			instead of the trainee. Use the contact relationship function to link the student to the
-			employer, <link xlink:href="contacts.html#contacts-Relationships">see here.</link>
-		</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="90%" contentdepth="90%" fileref="images/traineeship_employer_payer.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>Assigning the employer as the payer of the traineeship fees</para>
-			</caption>
-		</mediaobject>
-		<para>Once the student is linked to the employer, and assessor has been set from your RTO
-			and you have specified the start and end dates for the traineeship, you will be able to
-			print a Traineeship Training Plan. This is a useful document to provide to the trainee
-			and their employer to confirm the details of the units they have chosen for their
-			traineeship.</para>
-		<para>If you have created a single trainee enrolment in the class, you can also provide the
-			AVETMISS reporting for the traineeship for this single trainee as required. By using the
-			AVETMISS data export by class function, <link xlink:href="AVETMISS.html#AVETMISS-AVETMISSExports">see here.</link>
-		</para>
-	</section>
-	<section><title>Quality Indicator Reporting</title><para>All RTOs registered with ASQA must provide an annual summary report to ASQA of their
-			performance against the learner engagement and employer satisfaction quality indicators.
-			You are required to send a survey to every student who undertakes VET training with your
-			college (the Learner Questionnaire), and to every employer with whom you conduct
-			traineeships (the Employer Questionnaire). Read more on ASQA's requirements <link xlink:href="http://www.asqa.gov.au/vet-registration/comply-with-your-obligations/quality-indicator-reporting.html">here</link> Remember that students and employers don't have to complete these
-			surveys, but you do need to send them out.</para><para>You will need to collate the responses and complete ASQA's Quality Indicator annual summary
-			report. The template is available <link xlink:href="http://www.asqa.gov.au/vet-registration/comply-with-your-obligations/quality-indicator-reporting.html">here.</link></para>
-
-		<section>
-			<title>Using SurveyMonkey </title>
-			<para>SurveyMonkey is an online survey tool which can help you remove any paper from the
-				survey process. SurveyMonkey has some pre-existing templates for the Questionnaires
-				so you can get started very quickly. Set up a new account and then add them:</para>
-			<itemizedlist>
-				<listitem>
-					<para>Log in to <link xlink:href="https://www.surveymonkey.com">SurveyMonkey</link></para>
-				</listitem>
-				<listitem>
-					<para>While still logged into SurveyMonkey, click on links below</para>
-				</listitem>
-				<listitem>
-					<para>
-						<link xlink:href="https://www.surveymonkey.net/user/create-survey?template_id=873&amp;survey_title=Learner%20Questionnaire">Learner Questionnaire template</link>
-					</para>
-				</listitem>
-				<listitem>
-					<para><link xlink:href="https://www.surveymonkey.net/user/create-survey?template_id=874&amp;survey_title=Employer%20Questionnaire"> Employer Questionnaire template </link></para>
-				</listitem>
-			</itemizedlist>
-			<para>There is no cost for copying these templates, and SurveyMonkey has some cheap or free
-				plans, depending on your usage needs.</para>
-		</section>
-		<section><title>Other survey tools </title>
-			<para>You might also want to look at FormStack, SurveyGizmo,
-			Google Forms and wufoo forms as some other survey tools. While you might need to create
-			the survey yourself, each of these tools has some interesting strengths.</para></section>
-		<section>
-			<title>Sending survey links</title>
-			<para>There are two ways to send students a link to your survey automatically.</para>
-			<section>
-				<title>Integrated option</title>
-				<para>In this option, onCourse sends SurveyMonkey or SurveyGizmo details of each
-					student completing a VET course. The survey tool then sends out an invite to the
-					student, with a link to the questionnaire.</para>
-				<para>The advantage of this approach is they you can log into your survey tool to
-					see a list of all the students who have not yet responded. There are features
-					there which allow you to send reminders. You'll need a paid account with the
-					survey tool and this option takes a bit more work to set up.</para>
-				<para>Information on how to link your onCourse to your Survey Provider Account is in
-						<xref linkend="externalintegrations-integrationsPrefs"/>
-				</para>
-			</section>
-			<section>
-				<title>Email link to questionnaire</title>
-				<para>Alternatively you can just email the student a link to the questionnaire. This
-					will work with any third party tool, but you will not easily be able to generate
-					a list of students who have not completed the questionnaire. Mostly this doesn't
-					matter, because you only have to invite the student to complete, not ensure they
-					respond.</para>
-				<para>Instructions for getting the <link xlink:href="https://help.surveymonkey.com/articles/en_US/kb/Web-Link-Collector">SurveyMonkey</link> link.</para>
-				<para>Instructions for getting the <link xlink:href="https://help.surveygizmo.com/help/share-survey-via-link">SurveyGizmo </link>link.</para>
-				<para>These links are then added to an email template that can be sent out to all
-					completed students. The records of the emails will be stored in onCourse, while
-					the Survey results will be stored on the third party tool. </para>
-				<para>For more info, read Script <xref linkend="scripts-VETcourseCompletion"/> and
-					Email template <xref linkend="emailTemplates-VETcourseCompletion"/>. </para>
-			</section>
+						<listitem>
+							<para>Progressing through each session, select and de-select the units
+								in the left hand panel which will be delivered in that
+								session.</para>
+						</listitem>
+						<listitem>
+							<para>Note that the first session where the unit is delivered and the
+								last session where the unit is delivered will become the start and
+								end dates of the outcomes. If there are sessions in between these
+								two where the unit is not selected, this will have no impact on your
+								AVETMISS reporting, only your internal resource management.</para>
+						</listitem>
+						<listitem>
+							<para>For each session in the timetable, you can define one or more
+								tutors and one or more units. These combine to form the training
+								plan.</para>
+						</listitem>
+						<listitem>
+							<para>Once the class record has been saved, the start and end dates now
+								set for each unit are available on the class Outcomes panel, in the
+								training plan section. The lower half of the window shows the
+								outcomes assigned to student enrolled in this class.</para>
+						</listitem>
+						<listitem>
+							<para>The start dates and end dates defined by each unit must fall
+								within the sessions of the class. You can not manually set a date in
+								a training plan outside the class boundaries, but you can do this on
+								an outcome by outcome basis if required.</para>
+						</listitem>
+						<listitem>
+							<para>If a student's outcome has been modified manually e.g. the end
+								date has been extended beyond the duration of the class, the
+								Training Plan settings will not modify the manual overrides you have
+								created. </para>
+						</listitem>
+						<listitem>
+							<para>To print the training plan report for class, save and close the
+								record and ensure the class is selected in the class list view.
+								Select File > Print > Training Plan to print the report. </para>
+							<mediaobject>
+								<imageobject>
+									<imagedata scalefit="1" width="100%" contentdepth="100%"
+										fileref="images/reports/TrainingPlanPageOne.png"
+										format="png"/>
+								</imageobject>
+								<caption>
+									<para>Training Plan Report showing the unit list and their start
+										and end dates</para>
+								</caption>
+							</mediaobject>
+							<mediaobject>
+								<imageobject>
+									<imagedata scalefit="1" width="100%" contentdepth="100%"
+										fileref="images/reports/TrainingPlanPageTwo.png"
+										format="png"/>
+								</imageobject>
+								<caption>
+									<para>Training Plan Report showing the units scheduled for
+										delivery for each session and the tutors responsible for
+										their delivery</para>
+								</caption>
+							</mediaobject>
+						</listitem>
+					</orderedlist>
+				</example>
+			
 		</section>
 	</section>	
 </chapter>

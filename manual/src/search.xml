@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="editor">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="search">
     <title>Search</title>
     
     <note>
@@ -117,9 +117,9 @@
                         <listitem>
                             <para>EQUALS  returns true if the left hand side  equal to the
                                 right</para>
-                            <para>Usage:
+                            <para>
                                 <programlisting> 
-                                        createdOn = today
+createdOn = today
                                 </programlisting>
                             </para>
                         </listitem>
@@ -129,7 +129,7 @@
                         <listitem>
                             <para>NOT EQUAL returns true if the left hand side isn't equal to
                                 the right</para>
-                            <para> Usage:
+                            <para>
                                 <programlisting> 
                                         deliveryMode != ONLINE
                                     </programlisting>
@@ -143,7 +143,7 @@
                                 right.</para>
                             <para>LESS THAN can also used with EQUALS to return true if the left
                                 is less than or equal too the right</para>
-                            <para> Usage: <programlisting> 
+                            <para> <programlisting> 
                                         enrolmentCount &lt; 10
                                     </programlisting>
                                 <programlisting> 
@@ -159,7 +159,7 @@
                                 than the right.</para>
                             <para>GREATER THAN  can be used with EQUALS to return true if the
                                 left is greater than or equal to the right</para>
-                            <para> Usage: <programlisting> 
+                            <para> <programlisting> 
                                         age &gt; 17
                                     </programlisting>
                                 <programlisting> 
@@ -173,7 +173,7 @@
                         <listitem>
                             <para>BETWEEN ( .. ) is used to specify a date range. BETWEEN ( .. ) will return records that with the specified attribute that occurs
                             in the given range.</para>
-                            <para> Usage:
+                            <para> 
                                 <programlisting>
                                     createdOn 01/01/2018 .. 01/02/2018
                                 </programlisting>
@@ -195,7 +195,7 @@
                                 side set.</para>
                             <para>A set is denoted as a list of items, where each element of the set
                                 is separated by a comma.</para>
-                            <para> Usage:
+                            <para> 
                                 <programlisting> 
                                     confirmationStatus in NOT_SENT, DO_NOT_SEND
                                     </programlisting>
@@ -207,7 +207,7 @@
                         <listitem>
                             <para>BEFORE that will return true if the left hand side occurs
                                 before the right.</para>
-                            <para>Usage:
+                            <para>
                                 <programlisting> 
                                         createdOn before today
                                     </programlisting>
@@ -219,7 +219,7 @@
                         <listitem>
                             <para>AFTER will return true if the left hand side  occurs after the
                                 right.</para>
-                            <para>Usage:
+                            <para>
                                 <programlisting> 
                                         createdOn after today
                                     </programlisting>
@@ -235,7 +235,7 @@
                         <listitem>
                             <para> CONTAINS returns true if the left hand side contains the
                                 right.</para>
-                            <para> Usage:
+                            <para>
                                 <programlisting> 
                                             name contains "Gardening"
                                     </programlisting>
@@ -247,7 +247,7 @@
                         <listitem>
                             <para>STARTS WITH returns true if the left hand side starts with the
                                 right.</para>
-                            <para> Usage:
+                            <para> 
                                 <programlisting> 
                                         name starts with "Cooking"
                                     </programlisting>
@@ -259,7 +259,7 @@
                         <listitem>
                             <para> ENDS WITH returns true if the left hand side ends with the
                                 right.</para>
-                            <para> Usage:
+                            <para> 
                                 <programlisting> 
                                         name ends with "Expert"
                                     </programlisting>
@@ -273,7 +273,7 @@
                                 operations.</para>
                             <para>For example, 'code not contains "Gardening"' with return all
                                 courses that has a code that does not contain the string 'Gardening' </para>
-                            <para> Usage: 
+                            <para> 
                                 <programlisting> 
                                         name not like John
                                     </programlisting>
@@ -294,7 +294,7 @@
                         <listitem>
                             <para>The HAS TAG ( # ) operator with return records that have the
                                 specified tag in onCourse.</para>
-                            <para>Usage:
+                            <para>
                                 <programlisting>
                                     CourseClass # 'health and care'
                                 </programlisting>
@@ -365,7 +365,7 @@
                                 </varlistentry>
                             </variablelist>
                             </para>
-                            <para>Usage:
+                            <para>
                                 <programlisting> 
                                             name ~ "Gardening%"
                                     </programlisting>
@@ -486,7 +486,7 @@
                                 </varlistentry>
                             </variablelist>
                         </para>
-                        <para>Usage:
+                        <para>
                             <programlisting>
                                     createdOn today
                                     createdOn yesterday .. tomorrow
@@ -496,7 +496,7 @@
                         </para>
                         <para>Dates can be operated on using arithmetic and specifying the time unit
                             to add/subtract.</para>
-                        <para>Usage:
+                        <para>
                             <programlisting>
                                     createdOn today + 1 day
                                     createdOn yesterday..tomorrow + 2 week
@@ -510,7 +510,7 @@
                     <term>ME</term>
                     <listitem>
                         <para>ME allows for search to be constructed using the currently logged in user as a query value.</para>
-                        <para> Usage
+                        <para> 
                             <programlisting>
                                           Invoice.createdByUser = me   
                             </programlisting>

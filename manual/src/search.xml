@@ -303,6 +303,28 @@ createdOn = today
                         </listitem>
                     </varlistentry>
                     <varlistentry>
+                        <term> FILTER TAG: ( @ ) </term>
+                        <listitem>
+                            <para>The FILTER TAG ( @ ) operator is used to as shorthand to call a query save with a tag. </para>
+                            <para>For example, imagine the following query is saved with the tag <emphasis>@kids</emphasis>:
+                                <programlisting>
+                                    Age &lt;= 12
+                                </programlisting>
+                            </para>
+                            <para>
+                                <emphasis>@kid</emphasis> can then be called in the construction of
+                                other queries
+                                <programlisting>
+                                    @kid and isMale is true
+                                </programlisting>
+                                is equivalent to
+                                <programlisting>
+                                    Age &lt;= 12 and isMale is true
+                                </programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
                         <term> LIKE: ( ~ ) </term>
                         <listitem>
                             <para>The LIKE (~) operator is used to search a field for a specific

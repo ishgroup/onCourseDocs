@@ -347,9 +347,13 @@
 			<para>Embed a video on your page. You will not upload the video directly to onCourse,
 				but instead use a third party service like YouTube - their servers are optimised for
 				video delivery and the performance and tools more helpful.</para>
+			<para>You can also use this within the Marketing tab of any Course, Class or anywhere
+				else that uses this rich text format. Just copy and paste the below portion of code,
+				and replace the youtube_id with the id from the YouTube video you wish to embed. You
+				can find this after the = sign in the Video URL.</para>
 			<section>
 				<title>Usage</title>
-				<programlisting>{video type:"youtube" id:"youtube_id" height:"400" width:"600"}</programlisting>
+				<programlisting>p&lt;{height:315px}. {video type:"youtube" id:"youtube_id" height:"315" width:"560"}</programlisting>
 				<variablelist>
 					<title>Parameters</title>
 					<varlistentry>
@@ -371,8 +375,10 @@
 							<optional>height</optional>
 						</term>
 						<listitem>
-							<para>The height in pixels you want to force the video to. If you leave
-								this option out, it will default to the standard player size.</para>
+							<para>The height in pixels you want to force the video to. If you leave this option out, it
+								will default to the standard player size. You need to enter this
+								twice, as referenced in the example above. Both height parameters
+								should match.</para>
 						</listitem>
 					</varlistentry>
 					<varlistentry>

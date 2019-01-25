@@ -138,69 +138,56 @@
                         </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term>NOT EQUAL: ( != )</term>
+                        <term>NOT EQUAL or !=</term>
                         <listitem>
-                            <para>NOT EQUAL returns true if the left hand side isn't equal to the
-                                right</para>
+                            <para>NOT EQUAL finds records that do not match the input value. </para>
                             <para>
                                 <programlisting>deliveryMode != ONLINE                                    </programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term>LESS THAN: &lt;</term>
+                        <term>LESS THAN or &lt;</term>
                         <listitem>
-                            <para>LESS THAN returns true if the left hand side is less than the
-                                right.</para>
-                            <para>LESS THAN can also used with EQUALS to return true if the left is
-                                less than or equal too the right</para>
+                            <para>LESS THAN returns records where the value is less than the input
+                                value.</para>
+                            <para>LESS THAN can also be used with EQUALS to return records where the
+                                value is less than or equal to the input value.</para>
                             <para>
                                 <programlisting>enrolmentCount &lt; 10                                   </programlisting>
-                                <programlisting> 
-                                        enrolmentCount &lt;= 9
-                                    </programlisting>
+                                <programlisting>enrolmentCount &lt;= 9</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term>GREATER THAN: &gt;</term>
+                        <term>GREATER THAN or &gt;</term>
                         <listitem>
-                            <para>GREATER THAN returns true if the left hand side is greater than
-                                the right.</para>
-                            <para>GREATER THAN can be used with EQUALS to return true if the left is
-                                greater than or equal to the right</para>
+                            <para>GREATER THAN returns records where the value is greater than the
+                                input value.</para>
+                            <para>GREATER THAN can be used with EQUALS to return records where the
+                                value is greater than or equal to the input value.</para>
                             <para>
-                                <programlisting> 
-                                        age &gt; 17
-                                    </programlisting>
-                                <programlisting> 
-                                        age &gt;= 18
-                                    </programlisting>
+                                <programlisting>age &gt; 17</programlisting>
+                                <programlisting>age &gt;= 18</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term>BETWEEN: ( .. )</term>
+                        <term>BETWEEN or ..</term>
                         <listitem>
                             <para>BETWEEN ( .. ) is used to specify a date range. BETWEEN ( .. )
                                 will return records that with the specified attribute that occurs in
                                 the given range.</para>
                             <para>
-                                <programlisting>
-                                    createdOn 01/01/2018 .. 01/02/2018
-                                </programlisting>
+                                <programlisting>createdOn 01/01/2018 .. 01/02/2018</programlisting>
                             </para>
                             <para>BETWEEN can be used with a star closure ( * ).The star closure can
                                 be used to represent all dates before/ all dates after a given
                                 date.</para>
-                            <programlisting>
-                                // all dates before 01/01/2018
-                                createdOn *..01/01/2018
-                            </programlisting>
-                            <programlisting>
-                                // all dates after 01/01/2018
-                                createdOn 01/01/2018..*
-                            </programlisting>
+                            <programlisting>// all dates before 01/01/2018
+createdOn *..01/01/2018</programlisting>
+                            <programlisting>// all dates after 01/01/2018
+createdOn 01/01/2018..*</programlisting>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
@@ -211,9 +198,7 @@
                             <para>A set is denoted as a list of items, where each element of the set
                                 is separated by a comma.</para>
                             <para>
-                                <programlisting> 
-                                    confirmationStatus in NOT_SENT, DO_NOT_SEND
-                                    </programlisting>
+                                <programlisting>confirmationStatus in NOT_SENT, DO_NOT_SEND</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
@@ -223,9 +208,7 @@
                             <para>BEFORE that will return true if the left hand side occurs before
                                 the right.</para>
                             <para>
-                                <programlisting> 
-                                        createdOn before today
-                                    </programlisting>
+                                <programlisting>createdOn before today</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
@@ -235,9 +218,7 @@
                             <para>AFTER will return true if the left hand side occurs after the
                                 right.</para>
                             <para>
-                                <programlisting> 
-                                        createdOn after today
-                                    </programlisting>
+                                <programlisting>createdOn after today</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
@@ -250,9 +231,7 @@
                             <para> CONTAINS returns true if the left hand side contains the
                                 right.</para>
                             <para>
-                                <programlisting> 
-                                            name contains "Gardening"
-                                    </programlisting>
+                                <programlisting>name contains "Gardening"</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
@@ -262,9 +241,7 @@
                             <para>STARTS WITH returns true if the left hand side starts with the
                                 right.</para>
                             <para>
-                                <programlisting> 
-                                        name starts with "Cooking"
-                                    </programlisting>
+                                <programlisting>name starts with "Cooking"</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
@@ -274,9 +251,7 @@
                             <para> ENDS WITH returns true if the left hand side ends with the
                                 right.</para>
                             <para>
-                                <programlisting> 
-                                        name ends with "Expert"
-                                    </programlisting>
+                                <programlisting>name ends with "Expert"</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
@@ -288,18 +263,10 @@
                             <para>For example, 'code not contains "Gardening"' with return all
                                 courses that has a code that does not contain the string 'Gardening' </para>
                             <para>
-                                <programlisting> 
-                                        name not like John
-                                    </programlisting>
-                                <programlisting> 
-                                        name not contains "Gardening"
-                                    </programlisting>
-                                <programlisting> 
-                                        name not starts with "Cooking"
-                                    </programlisting>
-                                <programlisting> 
-                                        name not ends with "Beginners"
-                                    </programlisting>
+                                <programlisting>name not like John</programlisting>
+                                <programlisting>name not contains "Gardening"</programlisting>
+                                <programlisting>name not starts with "Cooking"</programlisting>
+                                <programlisting>name not ends with "Beginners"</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
@@ -309,9 +276,8 @@
                             <para>The HAS TAG ( # ) operator with return records that have the
                                 specified tag in onCourse.</para>
                             <para>
-                                <programlisting>
-                                    CourseClass # 'health and care'
-                                </programlisting>
+                                <programlisting>CourseClass # 'health and care'
+</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
@@ -322,20 +288,14 @@
                                 query save with a tag. </para>
                             <para>For example, imagine the following query is saved with the tag
                                     <emphasis>@kids</emphasis>:
-                                <programlisting>
-                                    Age &lt;= 12
-                                </programlisting>
+                                <programlisting>Age &lt;= 12</programlisting>
                             </para>
                             <para>
                                 <emphasis>@kid</emphasis> can then be called in the construction of
                                 other queries
-                                <programlisting>
-                                    @kid and isMale is true
-                                </programlisting>
-                                is equivalent to
-                                <programlisting>
-                                    Age &lt;= 12 and isMale is true
-                                </programlisting>
+                                <programlisting>@kid and isMale is true</programlisting> is
+                                equivalent to
+                                <programlisting>Age &lt;= 12 and isMale is true</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
@@ -403,9 +363,7 @@
                                 </variablelist>
                             </para>
                             <para>
-                                <programlisting> 
-                                            name ~ "Gardening%"
-                                    </programlisting>
+                                <programlisting>name ~ "Gardening%"</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
@@ -418,32 +376,24 @@
                 <para>
                     <variablelist>
                         <varlistentry>
-                            <term>OR</term>
-                            <listitem>
-                                <para> The OR condition will return true if either left hand side or
-                                    right hand side are true.</para>
-                                <para>
-                                    <programlisting> 
-                                            condition or condition
-                                        </programlisting>
-                                    <programlisting> 
-                                        name contains "Gardening" or code starts with "GAR"
-                                        </programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
+                        <term>OR</term>
+                        <listitem>
+                            <para> The OR condition will return true if either left hand side or
+                                right hand side are true.</para>
+                            <para>
+                                <programlisting>condition or condition</programlisting>
+                                <programlisting>name contains "Gardening" or code starts with "GAR"</programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
                         <varlistentry>
                             <term>AND</term>
                             <listitem>
                                 <para>The AND condition will return true if both the left hand and
                                     right hand sides are true.</para>
                                 <para>
-                                    <programlisting> 
-                                            condition and condition
-                                    </programlisting>
-                                    <programlisting> 
-                    startDateTime = tomorrow and successAndQueuedEnrolments >= minimumPlaces 
-                                    </programlisting>
+                                    <programlisting>condition and condition</programlisting>
+                                    <programlisting>startDateTime = tomorrow and successAndQueuedEnrolments >= minimumPlaces</programlisting>
                                 </para>
                             </listitem>
                         </varlistentry>
@@ -522,22 +472,18 @@
                             </variablelist>
                         </para>
                         <para>
-                            <programlisting>
-                                    createdOn today
-                                    createdOn yesterday .. tomorrow
-                                    startDateTime last week
-                                    endDateTime next year
-                                </programlisting>
+                            <programlisting>createdOn today
+createdOn yesterday .. tomorrow
+startDateTime last week
+endDateTime next year</programlisting>
                         </para>
                         <para>Dates can be operated on using arithmetic and specifying the time unit
                             to add/subtract.</para>
                         <para>
-                            <programlisting>
-                                    createdOn today + 1 day
-                                    createdOn yesterday..tomorrow + 2 week
-                                    createdOn * .. today + 6 month
-                                    createdOn 9:00 .. 19:00 today - 1 year
-                                </programlisting>
+                            <programlisting>createdOn today + 1 day
+createdOn yesterday..tomorrow + 2 week
+createdOn * .. today + 6 month
+createdOn 9:00 .. 19:00 today - 1 year</programlisting>
                         </para>
                     </listitem>
                 </varlistentry>
@@ -546,24 +492,19 @@
                     <listitem>
                         <para>ME allows for search to be constructed using the currently logged in user as a query value.</para>
                         <para> 
-                            <programlisting>
-                                          Invoice.createdByUser = me   
-                            </programlisting>
+                            <programlisting>Invoice.createdByUser = me</programlisting>
                         </para>
                     </listitem>
                 </varlistentry>
             </variablelist>
         </section>
         <section xml:id="search-advanced-arithmetic"> <title>Arithmetic</title>
-            <para>
-                Basic arithmetic can be performed in advanced queries.
-                <programlisting>
-                    feeHelpAmount is 100 + 50
-                    feeHelpAmount is 100 - 50
-                    feeHelpAmount is 100 / 2
-                    feeHelpAmount is 100 * 5
-                    feeHelpAmount is 100 % 3
-                </programlisting>
+            <para> Basic arithmetic can be performed in advanced queries.
+                <programlisting>feeHelpAmount is 100 + 50
+feeHelpAmount is 100 - 50
+feeHelpAmount is 100 / 2
+feeHelpAmount is 100 * 5
+feeHelpAmount is 100 % 3</programlisting>
             </para>
         </section>
     </section>

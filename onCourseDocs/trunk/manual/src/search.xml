@@ -1,82 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="search">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.0" xml:id="search">
     <title>Search</title>
-    
     <note>
         <para> IMPORTANT: This chapter is under construction and subject to change.</para>
     </note>
-    <section xml:id="search-introduction"><title>Introduction</title>
+    <section xml:id="search-introduction">
+        <title>Introduction</title>
         <para>onCourse has powerful tools for searching across every piece of data you have
             collected. You can search in lists, perform advanced searches on any attribute of the
             data and use these searches to write scripts and reports. In this chapter we'll start
             from the simplest tools and then show you more advanced possibilities.</para>
     </section>
-    
-    <section xml:id="search-listView"><title>Lists</title>
+    <section xml:id="search-listView">
+        <title>Lists</title>
         <para>Every list view has a search panel across the bottom.<mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchBasic.png" format="png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/search/searchBasic.png" format="png"/>
                 </imageobject>
             </mediaobject></para>
         <para>Typing into the Search bar will retrieve all records that match your input across
             certain fields. For example, in the Contact list, the text you enter will be found in
-            first name, last name and email address fields.  <mediaobject>
+            first name, last name and email address fields. <mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchFuzzyName.png" format="png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/search/searchFuzzyName.png" format="png"/>
                 </imageobject>
                 <caption>
                     <para>Searching units of competency</para>
                 </caption>
             </mediaobject>
-        </para>      
+        </para>
     </section>
     <section xml:id="search-findRelated">
         <title>Find related records</title>
         <para>Find related records is one of the most powerful tools inside onCourse, let you
-            quickly jump from window to window, finding records related to groups of other
-            records. This function is located next to the advanced search in each list view in
+            quickly jump from window to window, finding records related to groups of other records.
+            This function is located next to the advanced search in each list view in
             onCourse.</para>
-        <para>For example, to locate all the employers of all the students aged 18 to 25 in the
-            last three months of VET programs to send the Employer Satisfaction Survey to you
-            can start by searching for all classes with a particular tag or use the advanced
-            search on VET course flag. Once you have those classes, you can highlight those
-            delivered in the last three months, and select from the find related icon 'Enrolled
-            students'. </para>
+        <para>For example, to locate all the employers of all the students aged 18 to 25 in the last
+            three months of VET programs to send the Employer Satisfaction Survey to you can start
+            by searching for all classes with a particular tag or use the advanced search on VET
+            course flag. Once you have those classes, you can highlight those delivered in the last
+            three months, and select from the find related icon 'Enrolled students'. </para>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/find_related_records.png" format="png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/find_related_records.png" format="png"/>
             </imageobject>
             <caption>
                 <para>Finding enrolled students related to a class from the cogwheel menu</para>
             </caption>
         </mediaobject>
-        <para>Once the student list has opened, you can search that list of results for students aged 18
-            to 25. The list view that has opened is in a special mode called 'custom selection'
-            which you can see in the window header bar. This means other searches or filters you
-            run on this window are only inside the special set of results you have created as a
-            list.</para>
+        <para>Once the student list has opened, you can search that list of results for students
+            aged 18 to 25. The list view that has opened is in a special mode called 'custom
+            selection' which you can see in the window header bar. This means other searches or
+            filters you run on this window are only inside the special set of results you have
+            created as a list.</para>
         <para>With the reduced list of students, you can use the find related icon to select
-            contacts related as Employer. From this new window, you can use the cog wheel to
-            send a message to the student's employers.</para>
-        <note><para>Find related can only be run on a max of 1000 records</para></note>
+            contacts related as Employer. From this new window, you can use the cog wheel to send a
+            message to the student's employers.</para>
+        <note>
+            <para>Find related can only be run on a max of 1000 records</para>
+        </note>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="70%" contentdepth="70%" fileref="images/find_related_records_search.png" format="png"/>
+                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                    fileref="images/find_related_records_search.png" format="png"/>
             </imageobject>
             <caption>
                 <para>Finding the employers of enrolled students related to a class</para>
             </caption>
         </mediaobject>
     </section>
-    
     <section xml:id="search-advanced">
         <title>Advanced search query language</title>
         <para>You can construct more powerful Advanced Search queries using the onCourse query
             language. You can toggle between Basic and Advanced Search by clicking the magnifying
             glass icon on the left of the search panel. When you are in advanced mode, a plus symbol
-            appears next to the icon.<mediaobject>
+            appears next to the icon. It might seem intimidating at first, but understanding the
+            logic of this feature will help hone in on finding exactly the right data you need.<mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchAdvanced.png" format="png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/search/searchAdvanced.png" format="png"/>
                 </imageobject>
                 <caption>
                     <para>The advanced search query bar</para>
@@ -100,7 +107,8 @@
             returned.</para>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchOperator.png" format="png"/>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/search/searchOperator.png" format="png"/>
             </imageobject>
             <caption>
                 <para>An example of a simple query using the onCourse query language</para>
@@ -113,21 +121,24 @@
                 queries will change depending on which record type you are searching on. </para>
             <mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/advanced_query_fields.png" format="png"/>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/search/advanced_query_fields.png" format="png"/>
                 </imageobject>
                 <caption>
-                    <para>Query parameters are listed in a simple, context-sensitive drop-down box for you to choose from</para>
+                    <para>Query parameters are listed in a simple, context-sensitive drop-down box
+                        for you to choose from</para>
                 </caption>
-            </mediaobject>   
-            
+            </mediaobject>
         </section>
-        <section xml:id="search-advanced-operators"><title>Operators</title>
+        <section xml:id="search-advanced-operators">
+            <title>Operators</title>
             <para>In your query, you will want to compare the field with some value. The type of
                 comparison is defined with an <emphasis>operator</emphasis>. Each operator can be
-                written as a word in full or as the short symbol.</para><para>
+                written as a word in full or as the short symbol.</para>
+            <para>
                 <variablelist>
                     <varlistentry>
-                        <term>EQUALS or  = </term>
+                        <term>EQUALS or = </term>
                         <listitem>
                             <para>Finds records where the field matches the value exactly. This
                                 operator is not case sensitive.</para>
@@ -176,27 +187,32 @@
                         <term>BETWEEN or ..</term>
                         <listitem>
                             <para>BETWEEN ( .. ) is used to specify a date range. BETWEEN ( .. )
-                                will return records that with the specified attribute that occurs in
-                                the given range.</para>
+                                will return records where the specified attribute occurred or was
+                                created between the set dates.</para>
                             <para>
                                 <programlisting>createdOn 01/01/2018 .. 01/02/2018</programlisting>
                             </para>
-                            <para>BETWEEN can be used with a star closure ( * ).The star closure can
-                                be used to represent all dates before/ all dates after a given
-                                date.</para>
-                            <programlisting>// all dates before 01/01/2018
-createdOn *..01/01/2018</programlisting>
-                            <programlisting>// all dates after 01/01/2018
-createdOn 01/01/2018..*</programlisting>
+                            <para>BETWEEN can be used with a star closure ( * ), placed either
+                                directly before or after the date. See below for the correct syntax;
+                                placing the star and BETWEEN before the date will find all relevant
+                                data from before that date, while placing them after will find all
+                                relevant data after that date.</para>
+                            <programlisting>createdOn *..01/01/2018</programlisting>
+                            <para>The above query will find any data that was create before the 1st
+                                January 2018, while the below query finds anything created after 1st
+                                January 2018.</para>
+                            <programlisting>createdOn 01/01/2018..*</programlisting>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
                         <term>IN</term>
                         <listitem>
-                            <para>IN will return true if the left exists within the right hand side
-                                set.</para>
+                            <para>IN will display any data that fits into the input data set.</para>
                             <para>A set is denoted as a list of items, where each element of the set
-                                is separated by a comma.</para>
+                                is separated by a comma. In the below example, this query will
+                                return and display any data that has a confirmationStatus as either
+                                    <emphasis>NOT_SENT</emphasis> or
+                                    <emphasis>DO_NOT_SEND</emphasis>.</para>
                             <para>
                                 <programlisting>confirmationStatus in NOT_SENT, DO_NOT_SEND</programlisting>
                             </para>
@@ -205,8 +221,9 @@ createdOn 01/01/2018..*</programlisting>
                     <varlistentry>
                         <term>BEFORE</term>
                         <listitem>
-                            <para>BEFORE that will return true if the left hand side occurs before
-                                the right.</para>
+                            <para>BEFORE can be used in conjuction with dates (or date-specific
+                                keywords, like 'today' or 'tomorrow') to return any requested data
+                                created or set before the input date.</para>
                             <para>
                                 <programlisting>createdOn before today</programlisting>
                             </para>
@@ -215,21 +232,23 @@ createdOn 01/01/2018..*</programlisting>
                     <varlistentry>
                         <term>AFTER: after</term>
                         <listitem>
-                            <para>AFTER will return true if the left hand side occurs after the
-                                right.</para>
+                            <para>AFTER can be used in conjuction with dates (or date-specific
+                                keywords, like 'today' or 'tomorrow') to return any requested data
+                                created or set after the input date.</para>
                             <para>
                                 <programlisting>createdOn after today</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
                 </variablelist>
-            </para><para>
+            </para>
+            <para>
                 <variablelist>
                     <varlistentry>
                         <term>CONTAINS</term>
                         <listitem>
-                            <para> CONTAINS returns true if the left hand side contains the
-                                right.</para>
+                            <para> CONTAINS returns any data where the specified field
+                                contains/matches the input.</para>
                             <para>
                                 <programlisting>name contains "Gardening"</programlisting>
                             </para>
@@ -238,8 +257,8 @@ createdOn 01/01/2018..*</programlisting>
                     <varlistentry>
                         <term>STARTS WITH:</term>
                         <listitem>
-                            <para>STARTS WITH returns true if the left hand side starts with the
-                                right.</para>
+                            <para>STARTS WITH returns any data where the specified field contains
+                                data that starts with the input.</para>
                             <para>
                                 <programlisting>name starts with "Cooking"</programlisting>
                             </para>
@@ -248,8 +267,8 @@ createdOn 01/01/2018..*</programlisting>
                     <varlistentry>
                         <term>ENDS WITH: ends with</term>
                         <listitem>
-                            <para> ENDS WITH returns true if the left hand side ends with the
-                                right.</para>
+                            <para> ENDS WITH returns any data where the specified field contains
+                                data that ends with the input.</para>
                             <para>
                                 <programlisting>name ends with "Expert"</programlisting>
                             </para>
@@ -259,9 +278,9 @@ createdOn 01/01/2018..*</programlisting>
                         <term>NOT</term>
                         <listitem>
                             <para>NOT reverses the returned value of all of the previous
-                                operations.</para>
+                                operators.</para>
                             <para>For example, 'code not contains "Gardening"' with return all
-                                courses that has a code that does not contain the string 'Gardening' </para>
+                                courses that have a code that does not contain the term 'Gardening' </para>
                             <para>
                                 <programlisting>name not like John</programlisting>
                                 <programlisting>name not contains "Gardening"</programlisting>
@@ -271,143 +290,107 @@ createdOn 01/01/2018..*</programlisting>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term>HAS TAG: ( # ) </term>
+                        <term>HAS TAG or # </term>
                         <listitem>
-                            <para>The HAS TAG ( # ) operator with return records that have the
-                                specified tag in onCourse.</para>
+                            <para>The HAS TAG ( # ) operator will return records that are tagged
+                                with the specified tag in onCourse.</para>
                             <para>
-                                <programlisting>CourseClass # 'health and care'
-</programlisting>
+                                <programlisting>CourseClass # 'health and care'</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term> FILTER TAG: ( @ ) </term>
+                        <term> FILTER TAG or @ </term>
                         <listitem>
                             <para>The FILTER TAG ( @ ) operator is used to as shorthand to call a
-                                query save with a tag. </para>
+                                query that has been saved along with a tag. </para>
                             <para>For example, imagine the following query is saved with the tag
                                     <emphasis>@kids</emphasis>:
-                                <programlisting>Age &lt;= 12</programlisting>
-                            </para>
+                                <programlisting>Age &lt;= 12</programlisting></para>
                             <para>
                                 <emphasis>@kid</emphasis> can then be called in the construction of
                                 other queries
                                 <programlisting>@kid and isMale is true</programlisting> is
-                                equivalent to
-                                <programlisting>Age &lt;= 12 and isMale is true</programlisting>
-                            </para>
+                                equivalent to Age &lt;= 12 and isMale is true </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term> LIKE: ( ~ ) </term>
+                        <term> LIKE or ~ </term>
                         <listitem>
                             <para>The LIKE (~) operator is used to search a field for a specific
-                                string pattern.</para>
+                                pattern.</para>
                             <para>There are two special wild card characters used with the LIKE
                                 operator: <orderedlist>
                                     <listitem>
-                                        <para>%: the percent sign is used to represent any amount of
-                                            characters (including zero)</para>
+                                        <para><emphasis>%</emphasis>: the percent sign is used to
+                                            represent any amount of characters (including
+                                            zero)</para>
                                     </listitem>
                                     <listitem>
-                                        <para>_: the underscore is used to represent exactly one
-                                            character</para>
+                                        <para><emphasis>_</emphasis>: the underscore is used to
+                                            represent exactly one character</para>
                                     </listitem>
-                                </orderedlist>
-                            </para>
-                            <para> Examples of the LIKE operator with wild card characters <variablelist>
-                                    <varlistentry>
-                                        <term>name ~ "a%"</term>
-                                        <term>name like "a%"</term>
-                                        <listitem>
-                                            <para>finds any record that has a name starting with
-                                                "a"</para>
-                                        </listitem>
-                                    </varlistentry>
-                                    <varlistentry>
-                                        <term>name ~ "%a"</term>
-                                        <listitem>
-                                            <para>finds any record that has a name ending with
-                                                "a"</para>
-                                        </listitem>
-                                    </varlistentry>
-                                    <varlistentry>
-                                        <term>name ~ "%ab%"</term>
-                                        <listitem>
-                                            <para>finds any record that has a name containing
-                                                "ab"</para>
-                                        </listitem>
-                                    </varlistentry>
-                                    <varlistentry>
-                                        <term>name ~ "_a%"</term>
-                                        <listitem>
-                                            <para>finds any record that has a name with "a" as the
-                                                second letter</para>
-                                        </listitem>
-                                    </varlistentry>
-                                    <varlistentry>
-                                        <term>name ~ "_%_%_%"</term>
-                                        <listitem>
-                                            <para>finds any record that has a name with at least a
-                                                length of 3 characters</para>
-                                        </listitem>
-                                    </varlistentry>
-                                    <varlistentry>
-                                        <term>name ~ "a%b"</term>
-                                        <listitem>
-                                            <para>finds any record that has a name starting with "a"
-                                                and ending with "b"</para>
-                                        </listitem>
-                                    </varlistentry>
-                                </variablelist>
-                            </para>
+                                </orderedlist></para>
+                            <para>Examples of the LIKE operator with wild card characters:</para>
                             <para>
-                                <programlisting>name ~ "Gardening%"</programlisting>
-                            </para>
+                                <programlisting>name ~ "a%"
+name like "a%"</programlisting></para>
+                            <para>finds any record that has a name starting with "a"</para>
+                                <programlisting>name ~ "%a"</programlisting>
+                            <para>finds any record that has a name ending with "a"</para>
+                                <programlisting>name ~ "%ab%"</programlisting>
+                            <para>finds any record that has a name containing "ab"</para>
+                                <programlisting>name ~ "_a%"</programlisting>
+                            <para>finds any record that has a name with "a" as the second letter</para>
+                                <programlisting>name ~ "_%_%_%"</programlisting>
+                            <para>finds any record that has a name with at least a length of 3 characters</para>
+                                <programlisting>name ~ "a%b"</programlisting>
+                            <para>finds any record that has a name starting with "a" and ending with
+                                "b".</para>
                         </listitem>
                     </varlistentry>
                 </variablelist>
-            </para></section>
+            </para>
+        </section>
         <section xml:id="search-advanced-conditions">
-            <title>Conditions</title>
-                <para> Conditions can be used to chain multiple queries together to build more
-                complex searches. BRACKETS!!!</para>
-                <para>
-                    <variablelist>
-                        <varlistentry>
+            <title>Combining queries</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
                         <term>OR</term>
                         <listitem>
-                            <para> The OR condition will return true if either left hand side or
-                                right hand side are true.</para>
                             <para>
-                                <programlisting>condition or condition</programlisting>
                                 <programlisting>name contains "Gardening" or code starts with "GAR"</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
-                        <varlistentry>
-                            <term>AND</term>
-                            <listitem>
-                                <para>The AND condition will return true if both the left hand and
-                                    right hand sides are true.</para>
-                                <para>
-                                    <programlisting>condition and condition</programlisting>
-                                    <programlisting>startDateTime = tomorrow and successAndQueuedEnrolments >= minimumPlaces</programlisting>
-                                </para>
-                            </listitem>
-                        </varlistentry>
-                    </variablelist>
-                </para>
-
+                    <varlistentry>
+                        <term>AND</term>
+                        <listitem>
+                            <para>
+                                <programlisting>startDateTime = tomorrow and successAndQueuedEnrolments >= minimumPlaces</programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>( )</term>
+                        <listitem>
+                            <para> Use brackets to specify the order in which query fragments are
+                                executed.
+                                <programlisting>name contains "Gardening" or (code starts with "GAR" and startDateTime = tomorrow)</programlisting></para>
+                        </listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
         </section>
-        <section xml:id="search-advanced-keywords"> <title>Keywords</title>
-            <para>In onCourse, a keyword is a reserved word that has a predefined meaning. Keywords can assist in creating search queries. </para>
+        <section xml:id="search-advanced-keywords">
+            <title>Keywords</title>
+            <para>In onCourse, a keyword is a reserved word that has a predefined meaning.</para>
             <variablelist>
                 <varlistentry>
                     <term>DATES</term>
                     <listitem>
-                        <para>Date keywords:
+                        <para>
                             <variablelist>
                                 <varlistentry>
                                     <term>today</term>
@@ -430,7 +413,8 @@ createdOn 01/01/2018..*</programlisting>
                                 <varlistentry>
                                     <term>last year</term>
                                     <listitem>
-                                        <para>from January 1 00:00 to December 31 23:59 of the previous year</para>
+                                        <para>from January 1 00:00 to December 31 23:59 of the
+                                            previous year</para>
                                     </listitem>
                                 </varlistentry>
                                 <varlistentry>
@@ -443,14 +427,18 @@ createdOn 01/01/2018..*</programlisting>
                                 <varlistentry>
                                     <term>last week</term>
                                     <listitem>
-                                        <para>from Monday 00:00 to Sunday 23:59 of the previous week.</para>
-                                        <para>If 'today' is Thursday 13 September 2018, then 'last week' will be from Monday 3 September 2018 to 9 September 2018.</para>
+                                        <para>from Monday 00:00 to Sunday 23:59 of the previous
+                                            week.</para>
+                                        <para>If 'today' is Thursday 13 September 2018, then 'last
+                                            week' will be from Monday 3 September 2018 to 9
+                                            September 2018.</para>
                                     </listitem>
                                 </varlistentry>
                                 <varlistentry>
                                     <term>next year</term>
                                     <listitem>
-                                        <para>from January 1 00:00 to December 31 23:59 of the next year</para>
+                                        <para>from January 1 00:00 to December 31 23:59 of the next
+                                            year</para>
                                     </listitem>
                                 </varlistentry>
                                 <varlistentry>
@@ -463,7 +451,8 @@ createdOn 01/01/2018..*</programlisting>
                                 <varlistentry>
                                     <term>next week</term>
                                     <listitem>
-                                        <para>from Monday 00:00 to Sunday 23:59 of the next week.</para>
+                                        <para>from Monday 00:00 to Sunday 23:59 of the next
+                                            week.</para>
                                         <para>If 'today' is Thursday 13 September 2018, then 'next
                                             week' will be from Monday 17 September 2018 to 24
                                             September 2018.</para>
@@ -477,8 +466,8 @@ createdOn yesterday .. tomorrow
 startDateTime last week
 endDateTime next year</programlisting>
                         </para>
-                        <para>Dates can be operated on using arithmetic and specifying the time unit
-                            to add/subtract.</para>
+                        <para>Dates can be combined with basic arithmetic and a specified time unit
+                            to query over a period of time.</para>
                         <para>
                             <programlisting>createdOn today + 1 day
 createdOn yesterday..tomorrow + 2 week
@@ -490,16 +479,18 @@ createdOn 9:00 .. 19:00 today - 1 year</programlisting>
                 <varlistentry>
                     <term>ME</term>
                     <listitem>
-                        <para>ME allows for search to be constructed using the currently logged in user as a query value.</para>
-                        <para> 
+                        <para>ME allows for search to be constructed using the currently logged in
+                            user as a query value.</para>
+                        <para>
                             <programlisting>Invoice.createdByUser = me</programlisting>
                         </para>
                     </listitem>
                 </varlistentry>
             </variablelist>
         </section>
-        <section xml:id="search-advanced-arithmetic"> <title>Arithmetic</title>
-            <para> Basic arithmetic can be performed in advanced queries.
+        <section xml:id="search-advanced-arithmetic">
+            <title>Arithmetic</title>
+            <para>
                 <programlisting>feeHelpAmount is 100 + 50
 feeHelpAmount is 100 - 50
 feeHelpAmount is 100 / 2
@@ -508,19 +499,21 @@ feeHelpAmount is 100 % 3</programlisting>
             </para>
         </section>
     </section>
-    <section xml:id="search-script"><title>Searching in custom scripts</title>
+    <section xml:id="search-script">
+        <title>Searching in custom scripts</title>
         <para>Scripts often need retrieve records from your database to perform some function. For
             example, if you wanted to contact all students who are enrolled in a class starting
             tomorrow, you would need to retrieve all classes that start tomorrow from the
             database.</para>
-        
-            <para>Add a query panel to your script like this.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/search/searchScript.png" format="png"/>
-                </imageobject>
-            </mediaobject>
+        <para>Add a query panel to your script like this.</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/search/searchScript.png" format="png"/>
+            </imageobject>
+        </mediaobject>
         <para>The results of this query are then available to you in your script in the variable
             'records'. You can use this to perform additional actions in the script. </para>
+        <para>For more information on custom scripts, please visit our Scripting chapter.</para>
     </section>
 </chapter>

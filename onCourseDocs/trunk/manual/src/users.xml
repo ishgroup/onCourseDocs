@@ -4,10 +4,10 @@
     <title>Users and Authentication</title>
     <section xml:id="users-Users">
         <title>Security Settings</title>
-        <para>New to onCourse 9.7 is the Security section, found in File > Preferences > Security.
-            Along with some standard security-related preferences, here you will find a full list of
-            users with login access to your onCourse application and data, along with the different
-            user roles you have defined within onCourse. </para>
+        <para>In File > Preferences > Security, you'll find the Securty window. Along with some
+            standard security-related preferences, here you will find a full list of users with
+            login access to your onCourse application and data, along with the different user roles
+            you have defined within onCourse. </para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -42,12 +42,14 @@
                             hours</emphasis> - When enabled, this will require all users to get a
                         new authorisation via a third-party authorisation app after the set number
                         of hours. You can change the number of hours manually by editing the number
-                        in the field.</para>
+                        in the field. This only applies when the same user is using the computer. If
+                        another user signs in to their account on your computer, you will be
+                        required to enter your 2FA authorisation regardless of this setting.</para>
                 </listitem>
             </itemizedlist></para>
-    </section>   
+    </section>
     <section>
-        <title>Users</title>  
+        <title>Users</title>
         <para>You then have the abiltiy to add new users or edit existing users details such as
             their name, email address, access level or password. Only users with admin rights will
             be able to see, edit and add users, everyone else can only edit their own user settings.
@@ -90,9 +92,9 @@
                     the CMS login process).</para>
             </listitem>
             <listitem>
-                <para>Active - selecting this allows the user to login to onCourse. If active is
-                    not selected, the user will receive an "authentication failed" message at
-                    the onCourse login screen.</para>
+                <para>Active - selecting this allows the user to login to onCourse. If active is not
+                    selected, the user will receive an "authentication failed" message at the
+                    onCourse login screen.</para>
             </listitem>
             <listitem>
                 <para>Admin - Checking this will allow the user to be an admin, they will have full
@@ -124,85 +126,86 @@
         </mediaobject>
         <section>
             <title>Changing user settings and passwords</title>
-        <para>A user can change their own password by going File -> Preferences -> and click on the
-                option 'Change my password' at any time. Once they do this a window will pop up
+            <para>A user can change their own password by going File -> Preferences -> and click on
+                the option 'Change my password' at any time. Once they do this a window will pop up
                 asking them to enter what they would like their new password to be.</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/Change_password.png" format="png"/>
-            </imageobject>
-            <caption>
-                <para>Change my password window</para>
-            </caption>
-        </mediaobject>
-        <tip>
-            <para>If your College has more than one Administration Centre, it is possible to
-                switch between these centres whilst a user is logged in by selecting the
-                relevant centre from the home splash screen of the onCourse client as shown in
-                the following example. </para>
-        </tip>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/reset_admin_site_login.png" format="png"/>
-            </imageobject>
-            <caption>
-                <para>Switching the administration centre</para>
-            </caption>
-        </mediaobject>
-        <section>
-            <title>Require password change</title>    
-                    <para>An administrator can request a user change their password at their next
-                        login by hitting the 'require password change' button under 'Users'. </para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/require_password_change.png" format="png"/>
-                </imageobject>
-                <caption>When your administrator requests a new password, you'll see this
-                        screen</caption>
-            </mediaobject>
-        </section>
-        <section> 
-            <title>Require better passwords</title>
-            <para>If you have this setting enabled, the application will demand a better quality of
-                    password from your users, rejecting simple passwords e.g. a sequence of numbers
-                    or anything containing the word 'password'. If a user logs in and their password
-                    is deemed unsecure, they will see a pop up prompting them to create a new
-                    one.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/password_minimum_requirements.png" format="png"/>
+                        fileref="images/Change_password.png" format="png"/>
                 </imageobject>
                 <caption>
-                    <para>The prompt asking for a more secure password</para>
+                    <para>Change my password window</para>
                 </caption>
             </mediaobject>
-        </section>
+            <tip>
+                <para>If your College has more than one Administration Centre, it is possible to
+                    switch between these centres whilst a user is logged in by selecting the
+                    relevant centre from the home splash screen of the onCourse client as shown in
+                    the following example. </para>
+            </tip>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/reset_admin_site_login.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>Switching the administration centre</para>
+                </caption>
+            </mediaobject>
+            <section>
+                <title>Require password change</title>
+                <para>An administrator can request a user change their password at their next login
+                    by hitting the 'require password change' button under 'Users'. </para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="100%" contentdepth="100%"
+                            fileref="images/require_password_change.png" format="png"/>
+                    </imageobject>
+                    <caption>When your administrator requests a new password, you'll see this
+                        screen</caption>
+                </mediaobject>
+            </section>
+            <section>
+                <title>Require better passwords</title>
+                <para>If you have this setting enabled, the application will demand a better quality
+                    of password from your users, rejecting simple passwords e.g. a sequence of
+                    numbers or anything containing the word 'password'. If a user logs in and their
+                    password is deemed unsecure, they will see a pop up prompting them to create a
+                    new one.</para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="100%" contentdepth="100%"
+                            fileref="images/password_minimum_requirements.png" format="png"/>
+                    </imageobject>
+                    <caption>
+                        <para>The prompt asking for a more secure password</para>
+                    </caption>
+                </mediaobject>
+            </section>
             <section>
                 <title>Preventing users from logging in twice concurrently</title>
-                <para>If you try and log into onCourse with the same login credentials as a user that is
-                    already logged in, then a window will pop up asking you what you want to do. You
-                    will then have the option to quit your log in attempt, or log in and kick the other
-                    user using the same log in details out. So to prevent this from happening it's best
-                    to always have your own username and password to log in with.</para>
+                <para>If you try and log into onCourse with the same login credentials as a user
+                    that is already logged in, then a window will pop up asking you what you want to
+                    do. You will then have the option to quit your log in attempt, or log in and
+                    kick the other user using the same log in details out. So to prevent this from
+                    happening it's best to always have your own username and password to log in
+                    with.</para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" width="100%" contentdepth="100%"
                             fileref="images/user_already_logged_in.png" format="png"/>
                     </imageobject>
                     <caption>
-                        <para>Users who try and log in twice concurrently will see this screen</para>
+                        <para>Users who try and log in twice concurrently will see this
+                            screen</para>
                     </caption>
                 </mediaobject>
-            </section>    
-        </section>    
+            </section>
+        </section>
     </section>
-
-        <section>
-            <title>User Roles</title>
+    <section>
+        <title>User Roles</title>
         <para>Access rights restrict what parts of onCourse users can modify, print, view or delete.
             This is an advanced feature, available for onCourse "Professional and Enterprise"
             customers. Four pre-defined user roles are available within the system, Enrolment
@@ -210,381 +213,409 @@
             these and create new access rights groups as needed. Each user within your organisation
             can be given Admin access rights (full access) or be added to any of your access groups.
             Select the access rights when creating or editing user profiles, as above.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/security_user_roles.png" format="png"/>
-                </imageobject>
-                <caption>
-                    <para>Users who try and log in twice concurrently will see this screen</para>
-                </caption>
-            </mediaobject>
-            <section>
-			<title>Creating and Editing User Roles</title>
-			<para>To access the "Users" menu, in onCourse go to File > Preferences > Access.</para>
-			<para>Here you can create roles for users, such as "Administration Manager." Some
-				default access roles have been created in onCourse however you should edit these and
-				create roles applicable to your own organisation.</para>
-			<para>Each onCourse user should be assigned to a user role that defines their access
-				levels, by default all new users created will have full admin access to all aspects
-				of onCourse.</para>
-			<para>You can edit an existing access role by double clicking on it, or create new
-				access roles using the + button in the top right hand corner of the window.</para>
-			<itemizedlist>
-				<title>Before we delve into the specifics of the Access menu, it's important to know
-					what each option means. If an option like "create" is greyed out, it means that
-					part of onCourse can't be restricted.</title>
-				<listitem>
-					<para><emphasis role="bold">View:</emphasis> A view permission only allows the contact to see
-                        data already created, but does not allow existing records to be edited or
-                        new records to be created.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Edit: </emphasis>Allows both edit and view rights.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Create:</emphasis> Allows the creation of new records, edit and
-                        view rights.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Delete: </emphasis>Allows record deletion where permitted by
-                        onCourse validation. Linked and locked records can not be deleted just
-                        because a user has delete rights.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Print:</emphasis> Allows printing of reports associated with this
-                        record type</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Hide:</emphasis> Some processes only have one level of access -
-                        allow. If this option is not ticked, it means the ability to run the process
-                        is denied and the element is hidden from use.</para>
-				</listitem>
-			</itemizedlist>
-			<itemizedlist>
-				<title>What can you edit in the "Access" menu?</title>
-				<listitem>
-					<para><emphasis role="bold">Name: </emphasis>here you define the name of the role, e.g;
-                        "Administration Manager".</para>
-				</listitem>
-				<listitem>
-					<para>People and companies</para>
-					<itemizedlist>
-						<listitem>
-							<para>Contact: this refers to all onCourse students, tutors and companies. Full create rights
-								are recommended for any user who needs to process enrolments as new
-								contacts are often created at this time.</para>
-						</listitem>
-					</itemizedlist>
-				</listitem>
-				<listitem>
-					<para>Course Management</para>
-					<itemizedlist>
-						<listitem>
-							<para>Course: permission to work with any course type, including traineeships, Vocational and
-								non-vocational courses</para>
-						</listitem>
-						<listitem>
-							<para>VET course details: this only relates to adding or removing unit of competency details
-								from a course</para>
-						</listitem>
-						<listitem>
-							<para>Class: permission to work with any class type</para>
-						</listitem>
-						<listitem>
-							<para>Enrolment outcomes: only edit rights are editable. This allows the user to set outcome
-								results or change the outcomes linked to a student's record</para>
-						</listitem>
-						<listitem>
-							<para>Budget: viewing the class budget can be disabled</para>
-						</listitem>
-						<listitem>
-							<para>Session: this permission relates to sessions as they belong to classes</para>
-						</listitem>
-						<listitem>
-							<para>Waiting list: permission to work with all wait list records</para>
-						</listitem>
-						<listitem>
-							<para>Mailing list: permission to work within existing and create new
-								mailing lists</para>
-						</listitem>
-					</itemizedlist>
-				</listitem>
-				<listitem>
-					<para>VET Management</para>
-					<itemizedlist>
-						<listitem>
-							<para>Qualification reference data: the only permission available here is edit, allowing you
-								to add your choice of nominal hours. All reference data is centrally
-								managed by ish.</para>
-						</listitem>
-						<listitem>
-							<para>Certificate: this relates to VET Statements of Attainment and Qualifications only. All
-								contacts with class print permissions can create non-vocational
-								certificates of attendance.</para>
-						</listitem>
-						<listitem>
-							<para>Print certificate without verified USI: This allows VET certificates to be printed when
-								the student has a USI on record that has not yet been verified. A
-								warning to the user will still be shown. This only applies to
-								certificates created after 1/1/2015</para>
-						</listitem>
-						<listitem>
-							<para>Print certificate without USI: This allows VET certificates to be printed when the
-								student has no USI on record. A warning to the user will still be
-								shown. This only applies to certificates created after
-								1/1/2015</para>
-						</listitem>
-					</itemizedlist>
-				</listitem>
-				<listitem>
-					<para>Resources</para>
-					<itemizedlist>
-						<listitem>
-							<para>Site: view can not be disabled, allows user to create new and edit current
-								Sites.</para>
-						</listitem>
-						<listitem>
-							<para>Room: view can not be disabled, allows user to create new and edit current
-								Rooms.</para>
-						</listitem>
-					</itemizedlist>
-				</listitem>
-				<listitem>
-					<para>Financial</para>
-					<itemizedlist>
-						<listitem>
-							<para>Enrolment: Create permission needed for an onCourse user to use Quick Enrol</para>
-						</listitem>
-						<listitem>
-							<para>Custom enrolment discount: Allow permission gives the ability for any manual discount
-								to be added to any enrolment processed through Quick Enrol.</para>
-						</listitem>
-						<listitem>
-							<para>Applications: Lets the user access course applications from prospective students.</para>
-						</listitem>
-						<listitem>
-							<para>Discount: This permission relates to the creation of discount strategies. Discounts
-								will auto apply to any applicable enrolment regardless of permission
-								here. Also the ability to link discounts to classes, corporate
-								passes, concession types and membership types.</para>
-						</listitem>
-						<listitem>
-							<para>Tutor roles: These roles determine pay rates for teaching staff.</para>
-						</listitem>
-						<listitem>
-							<para>Tutor pay: This permission relates to the creation and editing of payslips.</para>
-						</listitem>
-						<listitem>
-							<para>Override tutor session payable time: allows user to unlock and modify a tutor's payable 
-								time manually</para>
-						</listitem>
-						<listitem>
-							<para>Bulk confirm tutor wages: allows users to click the 'confirm now' button in the Generate 
-								tutor payroll sheet that confirms all the unconfirmed paylines</para>
-						</listitem>
-						<listitem>
-							<para>Invoice: This permission relates to the creation of manual invoices (invoices not
-								created as part of the Quick Enrol process).</para>
-						</listitem>
-						<listitem>
-							<para>Credit note: Allow the creation of manual credit notes. This permission is not needed
-								for the creation of automatic credit notes during enrolment or class
-								cancellation.</para>
-						</listitem>
-						<listitem>
-							<para>Payment In: Permission relates only to manual payment in records, not those created
-								during Quick Enrol.</para>
-						</listitem>
-						<listitem>
-							<para>Payment Out: This permission is about creating refunds, usually processed in real time
-								back to payer's credit cards.</para>
-						</listitem>
-						<listitem>
-							<para>Payment Method: This allows the user to change the payment method when accepting
-								payments.</para>
-						</listitem>
-						<listitem>
-							<para>Account: Account settings for onCourse chart of accounts</para>
-						</listitem>
-						<listitem>
-							<para>Transaction: general ledger transaction records created during all financial
-								transactions. These can only be viewed, never edited or manually
-								created.</para>
-						</listitem>
-						<listitem>
-							<para>Financial preferences: The onCourse preferences that set the default accounts for
-								various transaction types</para>
-						</listitem>
-						<listitem>
-							<para>Banking: Allow permission to run the bank process</para>
-						</listitem>
-						<listitem>
-							<para>Reconciliation: Allow permission to reconcile payments</para>
-						</listitem>
-						<listitem>
-							<para>Corporate pass: Permissions relating to the creation or editing or CorporatePass. This
-								permission is not required to process a website enrolment that uses
-								a CorporatePass for payment.</para>
-						</listitem>
-						<listitem>
-							<para>Payment plan: Permissions relating to the creation or editing Payment plans.</para>
-						</listitem>
-						<listitem>
-							<para>Summary extracts: Permission that allows a user to export/print MYOB Export and Trial
-								Balance from the Financial menu.</para>
-						</listitem>
-					</itemizedlist>
-				</listitem>
-				<listitem>
-					<para>Special actions</para>
-					<itemizedlist>
-						<listitem>
-							<para>Class duplication/rollover: Allow duplication of one or more classes from existing
-								class(es)</para>
-						</listitem>
-						<listitem>
-							<para>Class cancellation: Cancellation process that prevents further enrolments and creates
-								credit notes for existing enrolments</para>
-						</listitem>
-						<listitem>
-							<para>Exporting to XML: Export of class information for brochure production</para>
-						</listitem>
-						<listitem>
-							<para>Creating certificate from class: Bulk certificate creation process for VET and non-VET
-								enrolments</para>
-						</listitem>
-						<listitem>
-							<para>Contact merging: Merge duplicate student records</para>
-						</listitem>
-						<listitem>
-							<para>Enrolment cancellation and transferring: Cancel or transfer individual enrolments and create a credit note</para>
-						</listitem>
-						<listitem>
-							<para>Export AVETMISS: Export training data for government reporting</para>
-						</listitem>
-						<listitem>
-							<para>Data import: import data into onCourse</para>
-						</listitem>
-						<listitem>
-							<para>Override tutor payrate: Allow a local override at the class level to any manually set
-								payrate</para>
-						</listitem>
-						<listitem>
-							<para>Edit/Delete Notes: Gives permission to edit and delete record note items</para>
-						</listitem>
-					</itemizedlist>
-				</listitem>
-				<listitem>
-					<para>Messaging</para>
-					<itemizedlist>
-						<listitem>
-							<para>Email up to 50 contacts: This permission is useful for admin staff who may need to
-								notify a class of students about changes.</para>
-						</listitem>
-						<listitem>
-							<para>Email over 50 contacts: This permission is most appropriate to marketing staff.</para>
-						</listitem>
-						<listitem>
-							<para>SMS up to 50 contacts: This permission is for admin staff who may need to notify a
-								class of students about changes.</para>
-						</listitem>
-						<listitem>
-							<para>SMS over 50 contacts: This permission is most appropriate to marketing staff.</para>
-						</listitem>
-					</itemizedlist>
-				</listitem>
-				<listitem>
-					<para>Web and content management</para>
-					<itemizedlist>
-						<listitem>
-							<para>Documents: Permissions relating to documents used on the public website, inside
-								onCourse and available via the portal</para>
-						</listitem>
-						<listitem>
-							<para>Private Documents: Permissions relating to documents set as
-								Private within onCourse. Can only view, edit and create. Cannot
-								delete or print.</para>
-						</listitem>
-						<listitem>
-							<para>Tag: Permission relating to all tag groups, including those that drive the website
-								navigation. This permission is not required to add tags to records,
-								only to edit tag groups.</para>
-						</listitem>
-					</itemizedlist>
-				</listitem>
-				<listitem>
-					<para>Products</para>
-					<itemizedlist>
-						<listitem>
-							<para>Product: This permission relates to the creation and editing of Products</para>
-						</listitem>
-						<listitem>
-							<para>Memberships: This permission relates to the creation and editing of Memberships</para>
-						</listitem>
-						<listitem>
-							<para>Vouchers: This permission relates to the creation and editing of Vouchers</para>
-						</listitem>
-						<listitem>
-							<para>Sales: This permission relates to the creation and editing of Sales</para>
-						</listitem>
-					</itemizedlist>
-				</listitem>
-				<listitem>
-					<para>Other</para>
-					<itemizedlist>
-						<listitem>
-							<para>Report: Permissions to view, modify and print reports.</para>
-						</listitem>
-						<listitem>
-							<para>Email Template: Permission to modify Email Templates.</para>
-						</listitem>
-						<listitem>
-							<para>Export Template: Permission to modify Export Templates.</para>
-						</listitem>
-						<listitem>
-							<para>Scripts: Permission to modify Scripts.</para>
-						</listitem>
-						<listitem>
-							<para>Funding contract: Allows user to view/modify Funding
-								Contracts</para>
-						</listitem>
-						<listitem>
-							<para>Funding upload: Allows user to access Funding Uploads</para>
-						</listitem>
-						<listitem>
-							<para>Audit logging: Allows user to access Audit Logs</para>
-						</listitem>
-						<listitem>
-							<para>Contact relation types: Permissions to view/modify contact types.</para>
-						</listitem>
-						<listitem>
-							<para>General preferences: Relates to onCourse application preferences that affects all
-								users</para>
-						</listitem>
-						<listitem>
-							<para>Change administration centre: Allows user to change administration centre
-								details</para>
-						</listitem>
-						<listitem>
-							<para>Concession type: Permission to modify available concessions. This permission is not
-								needed to add concession types to contact records.</para>
-						</listitem>
-						<listitem>
-							<para>Require two factor authentication: If this is allowed then a user who logs in without
-								two factor authentication enabled is immediately shown the "Enable
-								two factor authentication" dialog</para>
-						</listitem>
-					</itemizedlist>
-				</listitem>
-			</itemizedlist>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/security_user_roles.png" format="png"/>
+            </imageobject>
+            <caption>
+                <para>Users who try and log in twice concurrently will see this screen</para>
+            </caption>
+        </mediaobject>
+        <section>
+            <title>Creating and Editing User Roles</title>
+            <para>To access the "Users" menu, in onCourse go to File > Preferences > Access.</para>
+            <para>Here you can create roles for users, such as "Administration Manager." Some
+                default access roles have been created in onCourse however you should edit these and
+                create roles applicable to your own organisation.</para>
+            <para>Each onCourse user should be assigned to a user role that defines their access
+                levels, by default all new users created will have full admin access to all aspects
+                of onCourse.</para>
+            <para>You can edit an existing access role by double clicking on it, or create new
+                access roles using the + button in the top right hand corner of the window.</para>
+            <itemizedlist>
+                <title>Before we delve into the specifics of the Access menu, it's important to know
+                    what each option means. If an option like "create" is greyed out, it means that
+                    part of onCourse can't be restricted.</title>
+                <listitem>
+                    <para><emphasis role="bold">View:</emphasis> A view permission only allows the
+                        contact to see data already created, but does not allow existing records to
+                        be edited or new records to be created.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Edit: </emphasis>Allows both edit and view
+                        rights.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Create:</emphasis> Allows the creation of new
+                        records, edit and view rights.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Delete: </emphasis>Allows record deletion where
+                        permitted by onCourse validation. Linked and locked records can not be
+                        deleted just because a user has delete rights.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Print:</emphasis> Allows printing of reports
+                        associated with this record type</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Hide:</emphasis> Some processes only have one level
+                        of access - allow. If this option is not ticked, it means the ability to run
+                        the process is denied and the element is hidden from use.</para>
+                </listitem>
+            </itemizedlist>
+            <itemizedlist>
+                <title>What can you edit in the "Access" menu?</title>
+                <listitem>
+                    <para><emphasis role="bold">Name: </emphasis>here you define the name of the
+                        role, e.g; "Administration Manager".</para>
+                </listitem>
+                <listitem>
+                    <para>People and companies</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Contact: this refers to all onCourse students, tutors and
+                                companies. Full create rights are recommended for any user who needs
+                                to process enrolments as new contacts are often created at this
+                                time.</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Course Management</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Course: permission to work with any course type, including
+                                traineeships, Vocational and non-vocational courses</para>
+                        </listitem>
+                        <listitem>
+                            <para>VET course details: this only relates to adding or removing unit
+                                of competency details from a course</para>
+                        </listitem>
+                        <listitem>
+                            <para>Class: permission to work with any class type</para>
+                        </listitem>
+                        <listitem>
+                            <para>Enrolment outcomes: only edit rights are editable. This allows the
+                                user to set outcome results or change the outcomes linked to a
+                                student's record</para>
+                        </listitem>
+                        <listitem>
+                            <para>Budget: viewing the class budget can be disabled</para>
+                        </listitem>
+                        <listitem>
+                            <para>Session: this permission relates to sessions as they belong to
+                                classes</para>
+                        </listitem>
+                        <listitem>
+                            <para>Waiting list: permission to work with all wait list records</para>
+                        </listitem>
+                        <listitem>
+                            <para>Mailing list: permission to work within existing and create new
+                                mailing lists</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>VET Management</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Qualification reference data: the only permission available here
+                                is edit, allowing you to add your choice of nominal hours. All
+                                reference data is centrally managed by ish.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Certificate: this relates to VET Statements of Attainment and
+                                Qualifications only. All contacts with class print permissions can
+                                create non-vocational certificates of attendance.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Print certificate without verified USI: This allows VET
+                                certificates to be printed when the student has a USI on record that
+                                has not yet been verified. A warning to the user will still be
+                                shown. This only applies to certificates created after
+                                1/1/2015</para>
+                        </listitem>
+                        <listitem>
+                            <para>Print certificate without USI: This allows VET certificates to be
+                                printed when the student has no USI on record. A warning to the user
+                                will still be shown. This only applies to certificates created after
+                                1/1/2015</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Resources</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Site: view can not be disabled, allows user to create new and edit
+                                current Sites.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Room: view can not be disabled, allows user to create new and edit
+                                current Rooms.</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Financial</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Enrolment: Create permission needed for an onCourse user to use
+                                Quick Enrol</para>
+                        </listitem>
+                        <listitem>
+                            <para>Custom enrolment discount: Allow permission gives the ability for
+                                any manual discount to be added to any enrolment processed through
+                                Quick Enrol.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Applications: Lets the user access course applications from
+                                prospective students.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Discount: This permission relates to the creation of discount
+                                strategies. Discounts will auto apply to any applicable enrolment
+                                regardless of permission here. Also the ability to link discounts to
+                                classes, corporate passes, concession types and membership
+                                types.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Tutor roles: These roles determine pay rates for teaching
+                                staff.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Tutor pay: This permission relates to the creation and editing of
+                                payslips.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Override tutor session payable time: allows user to unlock and
+                                modify a tutor's payable time manually</para>
+                        </listitem>
+                        <listitem>
+                            <para>Bulk confirm tutor wages: allows users to click the 'confirm now'
+                                button in the Generate tutor payroll sheet that confirms all the
+                                unconfirmed paylines</para>
+                        </listitem>
+                        <listitem>
+                            <para>Invoice: This permission relates to the creation of manual
+                                invoices (invoices not created as part of the Quick Enrol
+                                process).</para>
+                        </listitem>
+                        <listitem>
+                            <para>Credit note: Allow the creation of manual credit notes. This
+                                permission is not needed for the creation of automatic credit notes
+                                during enrolment or class cancellation.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Payment In: Permission relates only to manual payment in records,
+                                not those created during Quick Enrol.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Payment Out: This permission is about creating refunds, usually
+                                processed in real time back to payer's credit cards.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Payment Method: This allows the user to change the payment method
+                                when accepting payments.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Account: Account settings for onCourse chart of accounts</para>
+                        </listitem>
+                        <listitem>
+                            <para>Transaction: general ledger transaction records created during all
+                                financial transactions. These can only be viewed, never edited or
+                                manually created.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Financial preferences: The onCourse preferences that set the
+                                default accounts for various transaction types</para>
+                        </listitem>
+                        <listitem>
+                            <para>Banking: Allow permission to run the bank process</para>
+                        </listitem>
+                        <listitem>
+                            <para>Reconciliation: Allow permission to reconcile payments</para>
+                        </listitem>
+                        <listitem>
+                            <para>Corporate pass: Permissions relating to the creation or editing or
+                                CorporatePass. This permission is not required to process a website
+                                enrolment that uses a CorporatePass for payment.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Payment plan: Permissions relating to the creation or editing
+                                Payment plans.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Summary extracts: Permission that allows a user to export/print
+                                MYOB Export and Trial Balance from the Financial menu.</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Special actions</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Class duplication/rollover: Allow duplication of one or more
+                                classes from existing class(es)</para>
+                        </listitem>
+                        <listitem>
+                            <para>Class cancellation: Cancellation process that prevents further
+                                enrolments and creates credit notes for existing enrolments</para>
+                        </listitem>
+                        <listitem>
+                            <para>Exporting to XML: Export of class information for brochure
+                                production</para>
+                        </listitem>
+                        <listitem>
+                            <para>Creating certificate from class: Bulk certificate creation process
+                                for VET and non-VET enrolments</para>
+                        </listitem>
+                        <listitem>
+                            <para>Contact merging: Merge duplicate student records</para>
+                        </listitem>
+                        <listitem>
+                            <para>Enrolment cancellation and transferring: Cancel or transfer
+                                individual enrolments and create a credit note</para>
+                        </listitem>
+                        <listitem>
+                            <para>Export AVETMISS: Export training data for government
+                                reporting</para>
+                        </listitem>
+                        <listitem>
+                            <para>Data import: import data into onCourse</para>
+                        </listitem>
+                        <listitem>
+                            <para>Override tutor payrate: Allow a local override at the class level
+                                to any manually set payrate</para>
+                        </listitem>
+                        <listitem>
+                            <para>Edit/Delete Notes: Gives permission to edit and delete record note
+                                items</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Messaging</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Email up to 50 contacts: This permission is useful for admin staff
+                                who may need to notify a class of students about changes.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Email over 50 contacts: This permission is most appropriate to
+                                marketing staff.</para>
+                        </listitem>
+                        <listitem>
+                            <para>SMS up to 50 contacts: This permission is for admin staff who may
+                                need to notify a class of students about changes.</para>
+                        </listitem>
+                        <listitem>
+                            <para>SMS over 50 contacts: This permission is most appropriate to
+                                marketing staff.</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Web and content management</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Documents: Permissions relating to documents used on the public
+                                website, inside onCourse and available via the portal</para>
+                        </listitem>
+                        <listitem>
+                            <para>Private Documents: Permissions relating to documents set as
+                                Private within onCourse. Can only view, edit and create. Cannot
+                                delete or print.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Tag: Permission relating to all tag groups, including those that
+                                drive the website navigation. This permission is not required to add
+                                tags to records, only to edit tag groups.</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Products</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Product: This permission relates to the creation and editing of
+                                Products</para>
+                        </listitem>
+                        <listitem>
+                            <para>Memberships: This permission relates to the creation and editing
+                                of Memberships</para>
+                        </listitem>
+                        <listitem>
+                            <para>Vouchers: This permission relates to the creation and editing of
+                                Vouchers</para>
+                        </listitem>
+                        <listitem>
+                            <para>Sales: This permission relates to the creation and editing of
+                                Sales</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Other</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Report: Permissions to view, modify and print reports.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Email Template: Permission to modify Email Templates.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Export Template: Permission to modify Export Templates.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Scripts: Permission to modify Scripts.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Funding contract: Allows user to view/modify Funding
+                                Contracts</para>
+                        </listitem>
+                        <listitem>
+                            <para>Funding upload: Allows user to access Funding Uploads</para>
+                        </listitem>
+                        <listitem>
+                            <para>Audit logging: Allows user to access Audit Logs</para>
+                        </listitem>
+                        <listitem>
+                            <para>Contact relation types: Permissions to view/modify contact
+                                types.</para>
+                        </listitem>
+                        <listitem>
+                            <para>General preferences: Relates to onCourse application preferences
+                                that affects all users</para>
+                        </listitem>
+                        <listitem>
+                            <para>Change administration centre: Allows user to change administration
+                                centre details</para>
+                        </listitem>
+                        <listitem>
+                            <para>Concession type: Permission to modify available concessions. This
+                                permission is not needed to add concession types to contact
+                                records.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Require two factor authentication: If this is allowed then a user
+                                who logs in without two factor authentication enabled is immediately
+                                shown the "Enable two factor authentication" dialog</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
         </section>
-        </section>
-    <section xml:id="users-TOTP"><title>onCourse Login with Two Factor
-            Authentication</title><para>Two factor authentication (2FA) is an added layer of security for users accessing onCourse
-            cloud instances, in particular, but also useful for locally hosted onCourse servers with
-            VPN access enabled. From onCourse 9.7 onwards, you will be encouraged at every login
-            attempt to enable 2FA. </para>
+    </section>
+    <section xml:id="users-TOTP">
+        <title>onCourse Login with Two Factor Authentication</title>
+        <para>Two factor authentication (2FA) is an added layer of security for users accessing
+            onCourse cloud instances, in particular, but also useful for locally hosted onCourse
+            servers with VPN access enabled. You will be encouraged at every login attempt to enable
+            2FA, and only once it has been enabled will this warning stop. This can be ignored by
+            clicking 'Maybe Later'. </para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -594,10 +625,10 @@
                 <para>Login window</para>
             </caption>
         </mediaobject>
-        <para>2FA means that there are two 'secrets' a user needs to know to successfully log in to your
-            onCourse application. One secret is the password set for the user account. The second
-            'secret' is a code that requires a device such as a smart phone with an application such
-            as <link
+        <para>2FA means that there are two 'secrets' a user needs to know to successfully log in to
+            your onCourse application. One secret is the password set for the user account. The
+            second 'secret' is a code that requires a device such as a smart phone with an
+            application such as <link
                 xlink:href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator"
                 >Google Authenticator</link> installed, with an account linked to the onCourse user
             account. This service generates a unique code every 30 seconds. To login successfully
@@ -605,7 +636,8 @@
         <para>When 2FA is enabled, after initial login there is a third field that asks for the 6
             digit code provided by your TOTP application. If you try to log in with the wrong Token
             or Password, then you will get an error message saying 'Authentication failed'.</para>
-        <section><title>Enabling two factor authentication</title>
+        <section>
+            <title>Enabling two factor authentication</title>
             <para>To enable 2FA, simply click 'Enable' when prompted at the login window. </para>
             <mediaobject>
                 <imageobject>
@@ -616,15 +648,17 @@
                     <para>Window you see when trying to enable your own two factor
                         authentication</para>
                 </caption>
-            </mediaobject><para>Have your mobile phone handy while you do this as you will need to
-                install the TOTP software as the first part of the process. Search for 'Google
-                Authenticator' in your phone's app store and install it. </para><para>When you first
-                run the Authenticator app and click 'Begin setup' you may also be asked to install a
-                QR code reader if you don't already have one. You do not have to do this, as you can
-                choose to manually add an account by selecting 'Enter provided key', however there
-                is less chance of data entry error if you scan the code.</para><para>The account
-                name you create in Google Authenticator can be anything you like, such as "My
-                onCourse login". It does not have to match your onCourse user name.</para><mediaobject>
+            </mediaobject>
+            <para>Have your mobile phone handy while you do this as you will need to install the
+                TOTP software as the first part of the process. Search for 'Google Authenticator' in
+                your phone's app store and install it. </para>
+            <para>When you first run the Authenticator app and click 'Begin setup' you may also be
+                asked to install a QR code reader if you don't already have one. You do not have to
+                do this, as you can choose to manually add an account by selecting 'Enter provided
+                key', however there is less chance of data entry error if you scan the code.</para>
+            <para>The account name you create in Google Authenticator can be anything you like, such
+                as "My onCourse login". It does not have to match your onCourse user name.</para>
+            <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
                         fileref="images/googleAuthenticatorApp.png" format="png"/>
@@ -632,8 +666,11 @@
                 <caption>
                     <para>Install Google Authenticator on your smart phone</para>
                 </caption>
-            </mediaobject><para>You will be shown a six-digit code hat will change every 30 seconds. Enter this code into the
-                authentication code field in onCourse and click Login.</para></section><section>
+            </mediaobject>
+            <para>You will be shown a six-digit code hat will change every 30 seconds. Enter this
+                code into the authentication code field in onCourse and click Login.</para>
+        </section>
+        <section>
             <title>Disabling or resetting two factor authentication</title>
             <para>If a user has two factor authentication enabled and they wish to disable it, in
                 the Security preferences click on the User's account name, then click 'Disable
@@ -676,7 +713,9 @@
             <para>An admin user can see a list of all users that have this feature enabled in the
                 Security window by looking at the User accounts listed under 'Users'. Any user with
                 2FA enabled will have a small icon appear next to their name.</para>
-        </section></section>
+            <para>2FA should</para>
+        </section>
+    </section>
     <section>
         <title>Emergency access</title>
         <para>Should you lock yourself out of your onCourse Server because you have lost or
@@ -685,7 +724,8 @@
         <para>You need to do the following:</para>
         <orderedlist>
             <listitem>
-                <para>Add "admin_password_reset=true" to the onCourse.cfg file on the server. </para>
+                <para>Add "admin_password_reset=true" to the onCourse.cfg file on the server.
+                </para>
             </listitem>
             <listitem>
                 <para>Restart the onCourse Server </para>
@@ -693,15 +733,16 @@
             <listitem>
                 <para>Watch for the following lines in the log file and write down the password (it
                     will be randomly generated every time)</para>
-                    <para><code>
+                <para><code>
                         *******************************************************************************************************************
                         ********** Administrator password reset command found in onCourse.cfg
-                        ********** Account with name "admin" now has password "hggd74" 
-                        ********** onCourse Server will now shut down. Remove the line starting "admin_password_reset" before restarting
+                        ********** Account with name "admin" now has password "hggd74" **********
+                        onCourse Server will now shut down. Remove the line starting
+                        "admin_password_reset" before restarting
                         ********************************************************************************************************************
                     </code></para>
             </listitem>
-                      <listitem>
+            <listitem>
                 <para>Remove "admin_password_reset=true" from onCourse.cfg </para>
             </listitem>
             <listitem>

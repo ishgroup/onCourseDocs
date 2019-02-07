@@ -345,6 +345,23 @@
 				</caption>
 			</mediaobject>
 			<programlisting linenumbering="numbered" language="xml"><xi:include href="../components/CourseClassItem.tml" parse="text" /></programlisting>
+			<para>You can add some extra detail to show the number of places left in a class by adding the
+				following piece of code to this template.</para>
+			<programlisting>&lt;t:if test="isInStock">
+     &lt;link itemprop="availability" href="http://schema.org/InStock"/>
+     &lt;p:else>
+           &lt;link itemprop="availability" href="http://schema.org/OutOfStock"/>
+     &lt;/p:else>
+&lt;/t:if></programlisting>
+			<para>When added correctly you should see the following text below your Enrol Now buttons</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/places_available.png" format="png" />
+				</imageobject>
+				<caption>
+					<para>Snapshot display of Course Class and Class Times</para>
+				</caption>
+			</mediaobject>
 		</section>
 		<section>
 			<title>Course Class Places Available</title>

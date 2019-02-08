@@ -35,7 +35,8 @@ subprojects {
     apply plugin: 'maven'
     apply plugin: 'maven-publish'
     apply plugin: 'distribution'
-
+    apply plugin: 'com.github.ben-manes.versions'
+    
     group = 'ish.oncourse.docs'
     version = project.hasProperty('releaseVersion') ? project.releaseVersion : 'SNAPSHOT'
 

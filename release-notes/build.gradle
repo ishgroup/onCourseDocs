@@ -15,7 +15,9 @@ docbookPdf.dependsOn mergeImages
 // Run the following task to create new release notes from squish
 // ./gradlew release-notes:releaseNotes -PreleaseVersion=1.1
 task releaseNotes(type: ReleaseNotes) {
-  version = releaseVersion
+  if (project.hasProperty('releaseVersion')) {
+  	version = releaseVersion
+  }
 }
 
 class ReleaseNotes extends DefaultTask {

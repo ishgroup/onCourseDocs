@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.9'>
+  <info>
+    <title>Release 9.9</title>
+    <pubdate>8 Feb. 2019</pubdate>
+  </info>
+  <section role='important'>
+    <title>Important changes</title>
+    <para> </para>
+  </section>
+  <section role='major'>
+    <title>Major features</title>
+    <para> </para>
+  </section>
+  <section role='scripts'>
+    <title>Reports and scripts</title>
+    <itemizedlist />
+    <section role='minor'>
+      <title>Minor features</title>
+      <itemizedlist>
+        <listitem>
+          <para>Additional contact fields for enrolment
+            <systemitem>OD-11275</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>New Module and Qualification fields
+            <systemitem>OD-12095</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Custom modules and qualifications
+            <systemitem>OD-12099</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Statement of Attainment Template increased outcomes on first page to 6 lines
+            <systemitem>OD-12127</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>2 columns view
+            <systemitem>OD-12219</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>build.ish.com.au issues for angel
+            <systemitem>OD-12235</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>New React List View Execute Script API
+            <systemitem>OD-12252</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Unified List View custom filter managing API
+            <systemitem>OD-12254</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Audits List Api Update
+            <systemitem>OD-12255</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Clean up client:build.gradle
+            <systemitem>OD-12267</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>angel api: list improvement: 2 or 3 column preference for opening
+            <systemitem>OD-12268</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement authorization and permissions checking for API
+            <systemitem>OD-12270</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>angel api: filter improvement: unlink implementation from swing list controllers
+            <systemitem>OD-12275</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>angel api: filter improvement: saving custom filters
+            <systemitem>OD-12276</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>angel api: filter improvement: validation aql in custom filters before save
+            <systemitem>OD-12277</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>angel api: filter improvement: update custom filters
+            <systemitem>OD-12278</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>angel api: reference: module and qualification deletion
+            <systemitem>OD-12280</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>karate tests: replication issue
+            <systemitem>OD-12281</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>List View Filters column resizing
+            <systemitem>OD-12290</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>NOT NULL Constrain for ConcessionType.createdOn/modifiedOn columns
+            <systemitem>OD-12295</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React List Table model API 
+            <systemitem>OD-12299</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Resize left filter column in list react view
+            <systemitem>OD-12306</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Printing model for API 
+            <systemitem>OD-12308</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add Karate tests for path 'module'
+            <systemitem>OD-12309</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Printing API and business logic
+            <systemitem>OD-12312</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Execute Script API: client implementation
+            <systemitem>OD-12315</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Unable to create new college: Error occurs when server starting
+            <systemitem>OD-12318</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>References update failed in 9.8 release
+            <systemitem>OD-12320</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add Karate tests for path 'qualification'
+            <systemitem>OD-12321</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Replace/update PackrBundler task with AppBundlerTask task for macOS installers
+            <systemitem>OD-12322</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Fix broken Karate tests for paths 'export/avetmiss8/settings' and 'list'
+            <systemitem>OD-12325</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Generate api-doc for angel server API
+            <systemitem>OD-12327</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Use List API to get Site entities for preferences
+            <systemitem>OD-12328</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement AQL search for Site, Room, Qualification and Module entities
+            <systemitem>OD-12329</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Create list view for Site and Room
+            <systemitem>OD-12330</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Custom qualifications/modules. Add clear errorMessage when trying to delete qualifications/modules with relations
+            <systemitem>OD-12331</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>The Buildbot has detected a failed build on builder angel-trunk-artifacts while building ish
+            <systemitem>OD-12332</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Manage Custom Filters Client logic
+            <systemitem>OD-12338</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para> API for csv and xml exports
+            <systemitem>OD-12341</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Caret following autocomplete dialog for List View Query input 
+            <systemitem>OD-12345</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>“onCourse” is damaged and can’t be opened. You should eject the disk image.
+            <systemitem>OD-12346</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Security: Remove locks for Create/Delete points in Security Settings for 'Qualification reference data'
+            <systemitem>OD-12347</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Migration cayenne-like expressions in SavedFind to AQL
+            <systemitem>OD-12348</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Filters and advanced search in conjunction
+            <systemitem>OD-12349</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>List Filter Tags AQL Autocomplete
+            <systemitem>OD-12358</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Fix broken Karate tests
+            <systemitem>OD-12359</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Refactor Karate tests
+            <systemitem>OD-12364</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add init SQL script for api-test's database
+            <systemitem>OD-12365</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add karate tests for path 'access'
+            <systemitem>OD-12367</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Room API 
+            <systemitem>OD-12370</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Auto detect keystore change in angel
+            <systemitem>OD-12374</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Date selection bug in File &gt; Preferences &gt; General &gt; Holidays
+            <systemitem>OD-12375</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add karate tests for path 'filter'
+            <systemitem>OD-12377</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Site Edit View Api and business logic 
+            <systemitem>OD-12379</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Tags Component for edit views
+            <systemitem>OD-12384</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Notes component for edit views
+            <systemitem>OD-12385</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Availability rules for edit views
+            <systemitem>OD-12387</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Rooms component for edit views
+            <systemitem>OD-12388</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Document API for creating 
+            <systemitem>OD-12389</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Two Step Authenticator still requires new authentication every log in
+            <systemitem>OD-12392</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Replication: new fields
+            <systemitem>OD-12399</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement "blob" response type in mustache template
+            <systemitem>OD-12441</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Tag Relation validation for entities
+            <systemitem>OD-12445</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Site UI validation
+            <systemitem>OD-12451</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Extend EntityApi with 'columns' params
+            <systemitem>OD-12452</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Rooms Edit View Api and business logic
+            <systemitem>OD-12453</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add isoCodeAlpha2 to onCourseDB.Country
+            <systemitem>OD-12462</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>document swagger login api
+            <systemitem>OD-12463</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS export adjustments
+            <systemitem>OD-12465</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='fixes'>
+      <title>Fixes</title>
+      <itemizedlist>
+        <listitem>
+          <para>Unauthenticated react UI shown
+            <systemitem>OD-12168</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>User Role Settings not working as expected
+            <systemitem>OD-12209</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Tags: NULL is not saved in db after creating new entity
+            <systemitem>OD-12237</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>angel server unable to run on macOS 
+            <systemitem>OD-12305</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Custom Qualifications/Modules: Wrong server validation of text fields length
+            <systemitem>OD-12310</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS Runner drop down selection incorrect
+            <systemitem>OD-12344</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Cannot connect to oncourse on 32 bit windows
+            <systemitem>OD-12352</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS export throws error
+            <systemitem>OD-12361</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Tag reordering doesn't work on the same hierarchy level
+            <systemitem>OD-12368</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Update prefetches for Tags
+            <systemitem>OD-12380</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Smart and Skilled export error 'something when wrong'
+            <systemitem>OD-12449</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Fee Help Amount field is having input values reset unexpectedly
+            <systemitem>OD-12454</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='web'>
+      <title>Web features</title>
+      <itemizedlist />
+    </section>
+    <section role='web-fixes'>
+      <title>Web fixes</title>
+      <itemizedlist />
+    </section>
+  </section>
+</chapter>

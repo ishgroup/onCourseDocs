@@ -73,11 +73,8 @@
       <title>Minor features</title>
       <itemizedlist>
         <listitem>
-          <para>Additional contact fields for enrolment <systemitem>OD-11275</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Custom modules and qualifications <systemitem>OD-12099</systemitem>
+          <para>Additional title, honorific and middle name contact fields for enrolment
+              <systemitem>OD-11275</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -93,12 +90,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>NOT NULL Constrain for ConcessionType.createdOn/modifiedOn columns
+          <para>NOT NULL constraint for ConcessionType.createdOn/modifiedOn columns
               <systemitem>OD-12295</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React List Table model API <systemitem>OD-12299</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -106,41 +99,15 @@
           </para>
         </listitem>
         <listitem>
-          <para>Printing model for API <systemitem>OD-12308</systemitem>
+          <para>Printing enabled for the new UI <systemitem>OD-12308</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Add Karate tests for path 'module' <systemitem>OD-12309</systemitem>
+          <para>Execute Script in the new UI <systemitem>OD-12315</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Printing API and business logic <systemitem>OD-12312</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Execute Script API: client implementation <systemitem>OD-12315</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Unable to create new college: Error occurs when server starting
-              <systemitem>OD-12318</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>References update failed in 9.8 release <systemitem>OD-12320</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Add Karate tests for path 'qualification' <systemitem>OD-12321</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Replace/update PackrBundler task with AppBundlerTask task for macOS installers
-              <systemitem>OD-12322</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Generate api-doc for angel server API <systemitem>OD-12327</systemitem>
+          <para>Improve documentation for onCourse server API <systemitem>OD-12327</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -157,16 +124,6 @@
           </para>
         </listitem>
         <listitem>
-          <para>Custom qualifications/modules. Add clear errorMessage when trying to delete
-            qualifications/modules with relations <systemitem>OD-12331</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>The Buildbot has detected a failed build on builder angel-trunk-artifacts while
-            building ish <systemitem>OD-12332</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Manage Custom Filters Client logic <systemitem>OD-12338</systemitem>
           </para>
         </listitem>
@@ -176,13 +133,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>“onCourse” is damaged and can’t be opened. You should eject the disk image.
-              <systemitem>OD-12346</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Security: Remove locks for Create/Delete points in Security Settings for
-            'Qualification reference data' <systemitem>OD-12347</systemitem>
+          <para>Fixed message "onCourse is damaged and can’t be opened. You should eject the disk
+            image." <systemitem>OD-12346</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -202,11 +154,6 @@
         <listitem>
           <para>Date selection bug in File > Preferences > General > Holidays
               <systemitem>OD-12375</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Two Step Authenticator still requires new authentication every log in
-              <systemitem>OD-12392</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -235,54 +182,59 @@
         </listitem>
       </itemizedlist>
     </section>
-    <section role="fixes">
-      <title>Fixes</title>
-      <itemizedlist>
-        <listitem>
-          <para>Unauthenticated react UI shown with no data <systemitem>OD-12168</systemitem>
+  </section>
+  <section role="fixes">
+    <title>Fixes</title>
+    <para>A major fix is <systemitem>OD-12380</systemitem> which corrected the way tags are fetched
+      from the database. In certain circumstances onCourse would load too much data and cause memory
+      issues on the server which could even cause the server to restart.</para>
+    <itemizedlist>
+      <listitem>
+        <para>Reference data (such as TGA modules) update failed in 9.8 release
+              <systemitem>OD-12320</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Unauthenticated react UI shown with no data <systemitem>OD-12168</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>User Role Settings not working as expected <systemitem>OD-12209</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Tags: NULL is not saved in db after creating new entity
+            <systemitem>OD-12237</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Cannot connect to onCourse on 32 bit windows <systemitem>OD-12352</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>AVETMISS export throws error <systemitem>OD-12361</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Tag reordering doesn't work on the same hierarchy level
+            <systemitem>OD-12368</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Smart and Skilled export error 'something went wrong'
+            <systemitem>OD-12449</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Fee Help Amount field input values reset unexpectedly
+            <systemitem>OD-12454</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+          <para>Two Step Authenticator still requires new authentication every log in
+              <systemitem>OD-12392</systemitem>
           </para>
-        </listitem>
-        <listitem>
-          <para>User Role Settings not working as expected <systemitem>OD-12209</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Tags: NULL is not saved in db after creating new entity
-              <systemitem>OD-12237</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>AVETMISS Runner drop down selection incorrect <systemitem>OD-12344</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Cannot connect to oncourse on 32 bit windows <systemitem>OD-12352</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>AVETMISS export throws error <systemitem>OD-12361</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Tag reordering doesn't work on the same hierarchy level
-              <systemitem>OD-12368</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Update prefetches for Tags <systemitem>OD-12380</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Smart and Skilled export error 'something when wrong'
-              <systemitem>OD-12449</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Fee Help Amount field is having input values reset unexpectedly
-              <systemitem>OD-12454</systemitem>
-          </para>
-        </listitem>
-      </itemizedlist>
-    </section>
+      </listitem>
+    </itemizedlist>
   </section>
 </chapter>

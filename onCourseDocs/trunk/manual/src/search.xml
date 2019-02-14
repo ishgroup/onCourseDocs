@@ -294,9 +294,11 @@
                         <term>HAS TAG or # </term>
                         <listitem>
                             <para>The HAS TAG ( # ) operator will return records that are tagged
-                                with the specified tag in onCourse.</para>
+                                with the specified tag in onCourse E.G. if you have a tag named
+                                Health and Care, and another named Training, and you wanted to find
+                                records that use either tag, you'd use:</para>
                             <para>
-                                <programlisting>CourseClass # 'health and care'</programlisting>
+                                <programlisting>#Health_and_Care or #Training</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>
@@ -304,14 +306,14 @@
                         <term> FILTER TAG or @ </term>
                         <listitem>
                             <para>The FILTER TAG ( @ ) operator is used to as shorthand to call a
-                                query that has been saved along with a tag. </para>
-                            <para>For example, imagine the following query is saved with the tag
-                                    <emphasis>@kids</emphasis>:
+                                custom query or other filter that has been saved. </para>
+                            <para>For example, imagine the following query is saved with the name
+                                    <emphasis>kids</emphasis>:
                                 <programlisting>Age &lt;= 12</programlisting></para>
                             <para>
-                                <emphasis>@kid</emphasis> can then be called in the construction of
+                                <emphasis>@kids</emphasis> can then be called in the construction of
                                 other queries
-                                <programlisting>@kid and isMale is true</programlisting> is
+                                <programlisting>@kids and isMale is true</programlisting> is
                                 equivalent to Age &lt;= 12 and isMale is true </para>
                         </listitem>
                     </varlistentry>

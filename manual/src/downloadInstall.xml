@@ -6,89 +6,52 @@
 			xlink:href="http://www.ish.com.au/onCourse/download"> http://www.ish.com.au/download </link>. </para>
 	<para>You will need to download two applications: onCourse Client and onCourse Server. The Server
 		application manages your data and the Client application allows you to log in, edit and view
-		your data. You will usually only need one onCourse Server application running, and onCourse
-		Client installed on every workstation which needs access. </para>
+		your data. You only need one onCourse Server application running, and onCourse Client
+		installed on every workstation which needs access. </para>
 	<tip>
 		<para>There are no limits to the number of clients you connect to your server. There is no
 			'single-user' version of onCourse, but you can run the server and client on the same
 			machine.</para>
-		<para>You should normally only run <emphasis>one</emphasis> onCourse Server on your network to
-			avoid problems that arise from having multiple databases.</para>
 	</tip>
 	<section xml:id="downloadinstall-Requirements">
 		<title>System requirements</title>
+		<section xml:id="downloadinstall-selfhosted">
+			<title>Self-hosted</title>
 		<para>One of the following operating systems is required to run onCourse Client.</para>
 		<itemizedlist>
 			<listitem>
-				<para>Windows XP or later. Windows Vista, Windows 7 and Windows 8 are supported, and all desktop
-					and server versions of Windows should work fine.</para>
+				<para>Windows 7 or later </para>
 			</listitem>
 			<listitem>
-				<para>Mac OS X 10.6 or later</para>
-			</listitem>
-			<listitem>
-				<para>Linux/BSD or any other unix running Gnome or KDE.</para>
+				<para>Mac OS X 10.7 or later</para>
 			</listitem>
 		</itemizedlist>
 		<para>One of the following operating systems is required to run onCourse Server.</para>
 		<itemizedlist>
 			<listitem>
-				<para>Windows XP or later. Windows Vista, Windows 7, Windows 8, Windows Server (all versions)
-					are supported, and all desktop and server versions of Windows should work fine.
-					You don't need Windows Server to run onCourseServer.</para>
+				<para>Windows 7 64-bit or later</para>
 			</listitem>
 			<listitem>
-				<para>Mac OS X 10.6 or later </para>
-			</listitem>
-			<listitem>
-				<para>FreeBSD/BSD/Solaris either with a desktop or headless</para>
+				<para>Mac OS X 10.7 or later </para>
 			</listitem>
 		</itemizedlist>
-		<para>Java 7 or Java 8 are required for both the client and the server. You can install the
-			latest Java from http://www.java.com at no cost. You do not need a Java plugin for your
-			browser.</para>
 		<para>The actual operating system configuration is largely irrelevant to onCourse. onCourse will
-			not run any better or worse on a 'server' operating system. Use any operating system you feel
-			comfortable in supporting.<tip>
-				<para>Although the operating system isn't that important, make sure that you are running the
-					most recent version of Java available for your system and keep it updated.</para>
-			</tip></para>
+			not run any better or worse on a 'server' operating system. Use any operating system you
+			feel comfortable in supporting.</para>
 		<para>onCourse Client requires a minimum of 512Mb of free RAM to run. onCourse Server will run
 			in 1024Mb of RAM, however we recommend 1.5Gb as a minimum and more RAM is beneficial for the
 			Server application in larger installations. Note that if you are running a 32bit operating
 			system you are limited to 1.5Gb and we recommend running onCourse Server on a 64bit operating
 			system. Note that the above RAM requirements are the RAM needed for onCourse itself; you
 			require more RAM to run other applications and the operating system itself.</para>
-		<para>onCourse will run with less RAM than the minimums above, however the performance will suffer
-			if the application has to write to swap memory on disk.</para>
-		<para>If you want to utilise more than the minimum amounts of RAM for the onCourse Server you
-			must change the server configuration to allow it to take advantage of your extra RAM.</para>
 	</section>
-	<section xml:id="downloadinstall-Network">
-		<title>Network requirements</title>
-		<para>onCourse Client makes a network connection to onCourse Server, by default on port 8181
-			(unencrypted) or 8182 (encrypted). One or both of these ports must be open on any
-			firewall you have in place. By default onCourse Server sets the Windows firewall to
-			allow those ports inbound: in other operating systems you may need to put a manual rule
-			in place if you have a server-based firewall.</para>
-		<para>onCourse will work fastest if you have a gigabit or better ethernet connection from the
-			client to the server, but it will also work acceptably over slower connections. Depending on
-			your data size you may be able to work from an onCourse Client on an ADSL connection, but you
-			need to ensure that the onCourse Server has a good <emphasis role="bold">outbound</emphasis>
-			data link. Many consumer grade ADSL connections have a slow outbound data speed so you need
-			SHDSL or at least ADSL with Annex M. Ask your ISP about these things.</para>
-		<para>onCourse Server also requires outbound access to oncourse-replicate.ish.com.au on port 443.
-			This allows the server to download the latest TGA course data, send SMS and synchronise
-			data to your website. onCourse Server will connect to LDAP or AD if you have that
-			configured and it will try to send email to a mail server on port 25. You can configure
-			that within the preferences window to point to your preferred SMTP mail server.</para>
-
-	</section>
-	<section xml:id="downloadinstall-Cloud">
-		<title>Cloud</title>
-		<para>onCourse has been optimised for the cloud and ish offer different hosting packages to run,
-			maintain, upgrade and backup the server. You can do the same within your own data centre
-			or with a virtual hosting environment such as AWS or Rackspace.</para>
+	<section>
+		<title>Cloud hosted</title>
+		<para>If ish is provided a hosted server either on your premises or in our data centre, you can
+				launch onCourse in two ways. The first is a installable client application which
+				requires Windows 7 or above, or OSX 10.7 or above. The second is a URL link which
+				will work if you have Java 8,9 or 10 installed. Java 11 and above will not work with
+				this approach.</para>
 	</section>
 	<section xml:id="downloadinstall-Virtualisation">
 		<title>Virtualisation</title>
@@ -100,40 +63,32 @@
 			if you use Terminal Services to manage your client deployment and can give you better
 			performance if your client workstations are at the other end of a slow network link.</para>
 	</section>
-	<section xml:id="downloadinstall-Database">
-		<title>Database considerations</title>
-		<para>onCourse Server can be used with its built-in database, or for larger installations with
-			an external database. You can choose between the following databases:</para>
-		<itemizedlist>
-			<listitem>
-				<para>Built-in</para>
-			</listitem>
-			<listitem>
-				<para>MySql (minimum version 5.5)</para>
-			</listitem>
-			<listitem>
-				<para>MariaDB (minimum version 10.0)</para>
-			</listitem>
-			<listitem>
-				<para>Microsoft SQL Server (minimum version 2008)</para>
-			</listitem>
-		</itemizedlist>
-		<para>Most users should choose the built-in database option as it is by far the simplest and
-			performs very well even for databases of over 100,000 students and a dozen simultaneous users.
-			The other database choices will require an Enterprise support plan from ish (see our onCourse
-			services and web site pricing guide for further information <link
-				xlink:href="http://www.ish.com.au/oncourse/features/pricing">onCourse Price Guide </link>),
-			and could be more appropriate if you already have existing database skills and infrastructure
-			and have more advanced reporting and auditing requirements.</para>
-		<para>When setting up or upgrading a database on MS SQL, the simplest approach is to create a
-			new user, which will have db owner level of security permissions. If you instead use the SA
-			user the upgrade will not work.</para>
-		<caution>
-			<para>If you use the built-in database, make sure that you put your data file on a disk
-				connected directly to the computer onCourse Server is running on. That is, do NOT put the
-				data file on a disk which is shared over the network (eg. on a NAS device or file
-				server).</para>
-		</caution>
+		<section xml:id="downloadinstall-Database">
+			<title>Database considerations</title>
+			<para>onCourse Server can be used with its built-in database, or for larger
+				installations with an external database. You can choose between the following
+				databases:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Built-in</para>
+				</listitem>
+				<listitem>
+					<para>MySql (minimum version 5.5)</para>
+				</listitem>
+				<listitem>
+					<para>MariaDB (minimum version 10.0)</para>
+				</listitem>
+			</itemizedlist>
+			<para>Most users should choose the built-in database option as it is by far the simplest
+				and performs very well even for databases of over 100,000 students and a dozen
+				simultaneous users.</para>
+			<caution>
+				<para>If you use the built-in database, make sure that you put your data file on a
+					disk connected directly to the computer onCourse Server is running on. That is,
+					do NOT put the data file on a disk which is shared over the network (eg. on a
+					NAS device or file server).</para>
+			</caution>
+		</section>
 	</section>
 	<section xml:id="downloadinstall-Installation">
 		<title>Installation</title>
@@ -148,7 +103,7 @@
 				<orderedlist>
 					<listitem>
 						<para>Download the server version for Windows: <link
-								xlink:href="http://www.ish.com.au/node/72">www.ish.com.au/oncourse/start
+							xlink:href="https://www.ish.com.au/download">https://www.ish.com.au/download
 							</link>.</para>
 					</listitem>
 					<listitem>
@@ -187,8 +142,8 @@
 				<title>onCourse Client Download and Installation</title>
 				<orderedlist arch="">
 					<listitem>
-						<para>Download the client for Windows: <link xlink:href="http://www.ish.com.au/node/72"
-								>www.ish.com.au/oncourse/start </link>. You can put it on the same computer as the
+						<para>Download the client for Windows: <link xlink:href="https://www.ish.com.au/download"
+							>https://www.ish.com.au/download </link>. You can put it on the same computer as the
 							server or a different computer. </para>
 					</listitem>
 					<listitem>
@@ -217,10 +172,10 @@
 					Windows Vista or have a firewall installed, you may need to allow traffic through that
 					port for onCouse to run. </para>
 				<para>If the login failed, you will need to manually find the host name or IP address of the
-					computer you started ish onCourse Server on. If they are running on the same computer, you
-					can use "localhost". If the Server is on another computer, it might have an IP addrress
-					which looks like "192.168.0.10". You can find the IP address in "Control Panels>Network
-					connections" under Windows. </para>
+					computer you started ish onCourse Server on. If they are running on the same
+					computer, you can use "localhost". If the Server is on another computer, it
+					might have an IP address which looks like "192.168.0.10". You can find the IP
+					address in "Control Panels>Network connections" under Windows. </para>
 				<para>If you start the onCourse client before the onCourse server has finished loading, you
 					will get an error message. If it is your first time starting the server, it may take a few
 					minutes as the data file populates. Check the status of the server, wait a few minutes and
@@ -234,7 +189,7 @@
 				<orderedlist>
 					<listitem>
 						<para> Download the server version for Mac: <link
-								xlink:href="http://www.ish.com.au/node/72">www.ish.com.au/oncourse/start
+							xlink:href="https://www.ish.com.au/download">https://www.ish.com.au/download
 							</link>.</para>
 					</listitem>
 					<listitem>
@@ -504,10 +459,10 @@ pkg_add onCourseServer.tgz
 			<title>What is an onCourse upgrade?</title>
 			<para>Periodically, ish release new versions of the onCourse client and server software. These
 				new releases may include new features, new reports or important fixes from previous version. </para>
-			<para>When we release a new version we also publish release notes outlining the changes we
-				have made in plain English. All onCourse releases or product updates are available freely to
-				download for all users on both paid and free plans. We will send a message to all users on
-				our onCourse mailing list and also publish information about the release on our blog. </para>
+			<para>When we release a new version we also publish release notes outlining the changes we have
+				made. All onCourse releases or product updates are available freely to download for
+				all users on both paid and free plans. We will send a message to all users on our
+				onCourse mailing list and also publish information about the release on our blog. </para>
 			<para>Users can choose how and when to upgrade their business software. Both the server and
 				client software will need to be upgraded, meaning that you will not be able to
 				access your onCourse database during the upgrade process. Usually this will take

@@ -265,40 +265,38 @@
 			<title>Running onCourse</title>
 			<section>
 				<title>Running the Server</title>
-				<section>
-					<title>For new users:</title>
-					<para>
-						<inlinemediaobject>
-							<imageobject>
-								<imagedata scalefit="1" width="100%" contentdepth="100%"
-									fileref="images/serverChooseDatabase.png" />
-							</imageobject>
-						</inlinemediaobject>
-					</para>
-					<para>If this is the first time that you've run onCourse server, you will be prompted to
-						choose one of the following: <simplelist>
-							<member>"New File" - for new database which will let you start adding your own data
-								for your College.</member>
-							<member>"Sample File" - pre-populated with a range of sample records to allow you to
-								get a feel for the onCourse software without needing to enter lots of data.</member>
-							<member>"Existing File" - used to locate a onCourse database you previously
-								created.</member>
-						</simplelist></para>
-					<para>We recommend you select the "Sample File" until you get the hang of OnCourse. It's
-						easy to remove the sample database when you are ready to start using your own data.
-						Which ever option you choose, will be asked to choose a location to store the database.
-						The location can be anywhere on your computer where you wish to keep the data and can be
-						changed later. onCourse will create a folder called "onCourse.iocdata" wherever you
-						choose to store your data file. </para>
-				</section>
-				<section>
-					<title>For existing users</title>
-					<para>If you already have created a data file during a previous installation of OnCourse,
-						you will not be asked to create a new data file. OnCourse will continue to use your
-						previous data file unless you have moved or deleted it. If OnCourse does not
-						automatically find your data file it will ask you to select from the three options.
-						Choose "Existing File" and point it to the storage location of your data file. </para>
-				</section>
+				<para>Double click the onCourseServer icon to start the server process. The onCourse server is a
+					'headless' application, meaning no window will be displayed when the server is
+					running. While the server is running, the onCourse icon will be visible in your
+					system dock menu. </para>
+				<para>If there is any issue initializing or running the server, the issue will be
+					logged in the <emphasis>~/Logs/</emphasis> directory. </para>
+				<para> When the onCourse server is ran for the first time, three objects will be created in the
+					users 'Home' directory:<variablelist>
+						<varlistentry>
+							<term>onCourse.iocdata</term>
+							<listitem>
+								<para>This file constitutes a database, including the files
+									necessary for database recovery. Editing or deleting this file
+									may cause database corruption and leave the data in a
+									non-recoverable state. </para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>onCourse.cfg</term>
+							<listitem>
+								<para>This file is used by the onCourse server to connect to the
+									database</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Logs</term>
+							<listitem>
+								<para>The onCourse server generates logs and stores them in this
+									directory.</para>
+							</listitem>
+						</varlistentry>
+					</variablelist></para>
 			</section>
 			<section>
 				<title>Running the Client</title>

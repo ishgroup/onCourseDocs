@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
-	version="5.0" xml:id="importExport"><title>Importing and exporting</title><para>onCourse offers
-		you a variety of ways to get data into and out of the system. The onCourse DSL (Domain
-		Specific Language) that outlines the database objects and enumerations is available at <link
-			xlink:href="https://www.ish.com.au/onCourse/doc/latest/dsl/"/> </para>
+	version="5.0" xml:id="importExport">
+	<title>Importing and exporting</title>
+	<para>onCourse offers you a variety of ways to get data into and out of the system. The onCourse
+		DSL (Domain Specific Language) that outlines the database objects and enumerations is
+		available at <link xlink:href="https://www.ish.com.au/onCourse/doc/latest/dsl/"/>
+	</para>
 	<para>This chapter is recommended for Intermediate to Advanced users of onCourse who have a good
 		general understanding of structured data and the onCourse schema.</para>
 	<section xml:id="importExport-Export">
-		<title>Exporting data</title>
+		<title>Export Templates</title>
 		<section>
 			<title>onCourse Export files</title>
-			<para>Go to File > Preferences > Export templates to see the list of export files available in
-				your onCourse application. </para>
-			<para> The list of exports available to you will include those supplied as part of the default
-				onCourse application configuration and any additional custom exports you have
-				created or have commissioned ish to create on your behalf.</para>
-			<para>Generally, export files that end with CSV (comma separated files) are designed to be
-				opened, viewed and edited in a plain text editor or spreadsheet application. These
-				are flat files containing columns and rows of data. Export files that end with XML
-				(eXtensible Markup Language) are designed to be imported into other software
+			<para>Go to File > Preferences > Export templates to see the list of export files
+				available in your onCourse application. </para>
+			<para> The list of exports available to you will include those supplied as part of the
+				default onCourse application configuration and any additional custom exports you
+				have created or have commissioned ish to create on your behalf.</para>
+			<para>Generally, export files that end with CSV (comma separated files) are designed to
+				be opened, viewed and edited in a plain text editor or spreadsheet application.
+				These are flat files containing columns and rows of data. Export files that end with
+				XML (eXtensible Markup Language) are designed to be imported into other software
 				applications and represent a relational data structure.</para>
 			<para>Each export displayed in this list has a Name, Entity, Code and Version Number. </para>
 			<para>The Name is a descriptor of the export and usually includes information about the
 				export format type. </para>
 			<para>The Entity is the object in the database that the export is joined to, and will
 				indicate which list view you will be able to find this export. </para>
-			<para>The Code is a unique identifier for the export and when supplied by ish as part of the
-				default onCourse application will begin with 'ish'. When the export is custom, is
-				should begin with an identifying acronym for the organisation. The last part of the
-				code defines the export file type, for example, CSV or XML.</para>
-			<para>The Version number allows ish to automatically update the export, for example, to add
-				additional fields as they are added to the database structure, when new versions of
-				the onCourse application are deployed.</para>
+			<para>The Code is a unique identifier for the export and when supplied by ish as part of
+				the default onCourse application will begin with 'ish'. When the export is custom,
+				is should begin with an identifying acronym for the organisation. The last part of
+				the code defines the export file type, for example, CSV or XML.</para>
+			<para>The Version number allows ish to automatically update the export, for example, to
+				add additional fields as they are added to the database structure, when new versions
+				of the onCourse application are deployed.</para>
 			<para>You can double click on the export record in the list to see the structure of the
 				export file, what fields are included and what formatting is applied. </para>
 			<mediaobject>
@@ -40,43 +42,17 @@
 						fileref="images/exports/export_template_list.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>List view showing the exports available in onCourse</para>
+					<para>List view showing the export templates available in onCourse</para>
 				</caption>
 			</mediaobject>
 		</section>
 		<section>
-			<title>Copying and pasting into a spreadsheet application</title>
-			<para>In all onCourse list views, you can highlight a range of records to copy and paste
-				into a spreadsheet application like Excel or Google sheets.</para>
-			<para>Begin by selecting a range of records in a list view, then choose copy from the
-				edit menu and paste the data into your spreadsheet application.</para>
-			<para>The data you copy and then paste will come out in the same column layout and sort
-				order as the window you copied it from.</para>
-			<para>If you have opened a very large list of data, please note that it may take some
-				time for this list to load into your onCourse client memory. This is a process that
-				runs in the background of onCourse, and not something immediately visible to you as
-				a user. If you try to copy and paste from a list before the load process has
-				completed, the copy process will not be successful. </para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/exports/export_copy_paste.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Export Icon being shown in the contacts list view</para>
-				</caption>
-			</mediaobject>
-		</section>
-		<section>
-			<title>Exporting from the list view</title>
-			<para>Like print reports, the list of available exports in the list view are those exports linked
-				to the entity, or list view, you are viewing. In the example below the Contact
-				window is open so the exports available are those linked to the Contact
-				entity.</para>
-			<para>Each list view in onCourse has the ability to export data in a variety of formats. You can
-				either highlight the records you wish to export and choose File > Import/Export >
-				Export (tablename)  or click on the Export (Share) Icon in the top right hand corner
-				of the list view.</para>
+			<title>Exporting from the list view via Share button</title>
+			<para>Like print reports, the list of available exports in the list view are those
+				exports linked to the entity, or list view, you are viewing.</para>
+			<para>Each list view in onCourse has the ability to export data in a variety of formats.
+				You can either highlight the records you wish to export and choose File >
+				Import/Export > Export (tablename) or click on the Share Icon.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -88,49 +64,50 @@
 			</mediaobject>
 			<para>A dialog will appear giving you some choices:<itemizedlist>
 					<listitem>
-						<para><emphasis role="bold">Export template:</emphasis> This list allows you to choose from
-							one of the exports joined to this entity. There will usually be at least
-							one CSV and one XML option to select from.</para>
+						<para><emphasis role="bold">Export template:</emphasis> This list allows you
+							to choose from one of the exports joined to this entity. There will
+							usually be at least one CSV and one XML option to select from.</para>
 					</listitem>
 					<listitem>
 						<para>Based on:</para>
-									<para><emphasis role="bold">Listed records:</emphasis> every record in the list you were
-							just looking at. This is the result of whatever search you had just
-							performed.</para>
-									<para><emphasis role="bold">Highlighted records:</emphasis> only those records you had
-							highlighted in the list. This is the quickest way to export a few
-							selected records, particularly when you need to choose them by hand from
-							your query results.</para>								
+						<para><emphasis role="bold">Listed records:</emphasis> every record in the
+							list you were just looking at. This is the result of whatever search you
+							had just performed.</para>
+						<para><emphasis role="bold">Highlighted records:</emphasis> only those
+							records you had highlighted in the list. This is the quickest way to
+							export a few selected records, particularly when you need to choose them
+							by hand from your query results.</para>
 					</listitem>
-			</itemizedlist>
+				</itemizedlist>
 			</para>
-</section>
+		</section>
 		<section>
 			<title>Examples of default Exports and their uses</title>
 			<example>
 				<title>Exporting class information to create a print brochure</title>
-				<para>Begin by opening the Classes window and running a query or otherwise selecting the range
-					of classes you wish to export for the brochure.</para>
-				<para>From the export options, select 'InDesign Brochure XML export' and save the resulting file
-					to a location on your computer. This default layout includes the information
-					from the course general tab 'Print brochure description' and combines it with
-					the class summary information including location, cost, start date and time and
-					tutor. The information is grouped by the Subject tag hierarchy.</para>
-<para>The XML file is designed to be imported into a publishing product such as Adobe InDesign and
-					then customised however you wish with the addition of styles and images. The XML
-					tags in the onCourse export can be mapped to styles in InDesign, allowing the
-					data to be imported and dropped into a brochure layout as many times as needed
-					during the production cycle process. The XML file created by onCourse is not
-					designed to be opened or edited in a product like Word - it is designed for
-					import into a specialist layout and design software tools. If you do not have
-					software that can work with these files installed on your machine, you should be
-					able to email the file to your design staff for them to work with
-					directly.</para>
+				<para>Begin by opening the Classes window and running a query or otherwise selecting
+					the range of classes you wish to export for the brochure.</para>
+				<para>From the export options, select 'InDesign Brochure XML export' and save the
+					resulting file to a location on your computer. This default layout includes the
+					information from the course general tab 'Print brochure description' and
+					combines it with the class summary information including location, cost, start
+					date and time and tutor. The information is grouped by the Subject tag
+					hierarchy.</para>
+				<para>The XML file is designed to be imported into a publishing product such as
+					Adobe InDesign and then customised however you wish with the addition of styles
+					and images. The XML tags in the onCourse export can be mapped to styles in
+					InDesign, allowing the data to be imported and dropped into a brochure layout as
+					many times as needed during the production cycle process. The XML file created
+					by onCourse is not designed to be opened or edited in a product like Word - it
+					is designed for import into a specialist layout and design software tools. If
+					you do not have software that can work with these files installed on your
+					machine, you should be able to email the file to your design staff for them to
+					work with directly.</para>
 			</example>
 			<example>
 				<title>Exporting from the Class - CSV data</title>
-				<para>The Class list includes a number of CSV exports, some with specific purposes. The
-					'CourseClass CSV export' is a generic export that includes most of the class
+				<para>The Class list includes a number of CSV exports, some with specific purposes.
+					The 'CourseClass CSV export' is a generic export that includes most of the class
 					fields. </para>
 				<mediaobject>
 					<imageobject>
@@ -138,7 +115,7 @@
 							fileref="images/exports/class_export_options.png" format="png"/>
 					</imageobject>
 					<caption>
-						<para>Available exports accessed via Class List</para>
+						<para>Available exports accessed via Site List</para>
 					</caption>
 				</mediaobject>
 				<para>
@@ -148,8 +125,8 @@
 								window.</para>
 						</listitem>
 						<listitem>
-							<para>Go to File > Import/Export > Export Classes or select the export icon in the top right
-								hand corner of the list window</para>
+							<para>Go to File > Import/Export > Export Classes or select the export
+								icon in the top right hand corner of the list window</para>
 						</listitem>
 						<listitem>
 							<para>You then have the following export options to select from the drop
@@ -221,7 +198,7 @@
 											</imageobject>
 											<caption>
 												<para>Excerpt of extended outcomes export viewed via
-												numbers </para>		
+												numbers </para>
 											</caption>
 										</mediaobject>
 									</listitem>
@@ -244,18 +221,20 @@
 										</mediaobject>
 									</listitem>
 									<listitem>
-										<para><emphasis role="bold">Attendance
-											CSV</emphasis> - Export for class session attendance showing who marked the roll (online or via the office) and when the attendance was last modified
-											information </para>
+										<para><emphasis role="bold">Attendance CSV</emphasis> -
+											Export for class session attendance showing who marked
+											the roll (online or via the office) and when the
+											attendance was last modified information </para>
 										<mediaobject>
 											<imageobject>
 												<imagedata scalefit="1" width="100%"
-													contentdepth="100%"
-													fileref="images/exports/attendance_export_csv.png"
-													format="png"/>
+												contentdepth="100%"
+												fileref="images/exports/attendance_export_csv.png"
+												format="png"/>
 											</imageobject>
 											<caption>
-												<para>Excerpt of Class attendance export viewed via Excel</para>
+												<para>Excerpt of Class attendance export viewed via
+												Excel</para>
 											</caption>
 										</mediaobject>
 									</listitem>
@@ -266,9 +245,10 @@
 				</para>
 			</example>
 			<tip>
-				<para>When exporting the above class exports, the resulting CSV output file will have the same
-					name in all instances: it will be labelled as 'CourseClassExport.csv'. You can
-					then re label these export files to whatever you need.</para>
+				<para>When exporting the above class exports, the resulting CSV output file will
+					have the same name in all instances: it will be labelled as
+					'CourseClassExport.csv'. You can then re label these export files to whatever
+					you need.</para>
 			</tip>
 			<example>
 				<title>Exporting Invoice Information</title>
@@ -278,8 +258,8 @@
 				<para>
 					<orderedlist>
 						<listitem>
-							<para>Highlight the invoice records you wish to export information for from within the
-								Invoice window.</para>
+							<para>Highlight the invoice records you wish to export information for
+								from within the Invoice window.</para>
 						</listitem>
 						<listitem>
 							<para>Go to File > Import/Export > Export Invoices/Credit notes or
@@ -323,12 +303,15 @@
 			</tip>
 		</section>
 	</section>
-	<section><title>Customising export templates</title>
-<para>There are a range of options for creating custom exports in onCourse. What you choose depends
-			on your familiarity with database structures, queries and the Groovy language.</para><orderedlist>
+	<section>
+		<title>Customising export templates</title>
+		<para>There are a range of options for creating custom exports in onCourse. What you choose
+			depends on your familiarity with database structures, queries and the Groovy
+			language.</para>
+		<orderedlist>
 			<listitem>
-				<para>Copy an existing export to make a new export file, and then make changes to the
-					copy</para>
+				<para>Copy an existing export to make a new export file, and then make changes to
+					the copy</para>
 			</listitem>
 			<listitem>
 				<para>Create a new export from scratch</para>
@@ -341,15 +324,17 @@
 				<para>Engage ish or Groovy developer of your choice to create a custom export for
 					your business</para>
 			</listitem>
-		</orderedlist><para>onCourse exports are powered by a groovy based scripting language. These scripts run on the
-			server and call the same groovy DSL that you'll find in the scripting chapter and
+		</orderedlist>
+		<para>onCourse exports are powered by a groovy based scripting language. These scripts run
+			on the server and call the same groovy DSL that you'll find in the scripting chapter and
 			available here: <link xlink:href="https://www.ish.com.au/onCourse/doc/latest/dsl/"/>.
 			You can use the full power and expression of the groovy language, and have access the
 			entire onCourse schema. In short, you access the data to export from the variable
-			"records" and just return from the script the formatted text to export. </para> <para>There is a built in a CSV toolkit, so exporting to CSV is the most simple export type to
-			create or edit without a great deal of prior experience. By default the delimited is a
-			comma, but you can define a different delimiter like a tab as per the example below: </para>
-			<programlisting language="groovy"><![CDATA[
+			"records" and just return from the script the formatted text to export. </para>
+		<para>There is a built in a CSV toolkit, so exporting to CSV is the most simple export type
+			to create or edit without a great deal of prior experience. By default the delimited is
+			a comma, but you can define a different delimiter like a tab as per the example below: </para>
+		<programlisting language="groovy"><![CDATA[
 csv.delimiter = '\t'
 
 records.each { AccountTransaction t ->
@@ -364,13 +349,14 @@ records.each { AccountTransaction t ->
 ]]></programlisting>
 		<section>
 			<title>Creating a new export in onCourse</title>
-			<para>The simplest way to begin this process is to find an existing export from the entity to
-				copy and use as the basis of your new export.</para>
-			<para>For example, if I wanted a new export for Tutor data that started from the Contact entity,
-				I'd choose the default 'Contact CSV export' as my starting point.</para>
+			<para>The simplest way to begin this process is to find an existing export from the
+				entity to copy and use as the basis of your new export.</para>
+			<para>For example, if I wanted a new export for Tutor data that started from the Contact
+				entity, I'd choose the default 'Contact CSV export' as my starting point.</para>
 			<orderedlist>
 				<listitem>
-					<para>Go to File > Preferences > Export templates and double click on export 'Contact CSV export'</para>
+					<para>Go to File > Preferences > Export templates and double click on export
+						'Contact CSV export'</para>
 				</listitem>
 				<listitem>
 					<para>Highlight the text in the script field and copy and paste this into a
@@ -398,18 +384,19 @@ csv &lt;&lt; [ </programlisting>
 				<listitem>
 					<para>Go to the DSL documentation for the entity so you can see the fields, or
 						instance methods names and values. For the contact entity, this information
-						is available at  <link
+						is available at <link
 							xlink:href="https://www.ish.com.au/onCourse/doc/latest/dsl/ish/oncourse/server/cayenne/Contact.html"
 						/></para>
 				</listitem>
 				<listitem>
-					<para>Each row that follows defines the column name in the CSV export and where that data comes
-						from in onCourse, and how it is formatted. For example:</para>
+					<para>Each row that follows defines the column name in the CSV export and where
+						that data comes from in onCourse, and how it is formatted. For
+						example:</para>
 					<programlisting language="groovy">"gender"     : c.isMale ? "M" : (c.isMale == null) ? "" : "F",</programlisting>
-					<para>Means create a column labelled 'gender' and from the contact record (referred to in the
-						shorthand 'c') take the value from the boolean isMale. If the value = true,
-						export the character 'M', if the value is null (not set) then export a blank
-						space, else export "F".  </para>
+					<para>Means create a column labelled 'gender' and from the contact record
+						(referred to in the shorthand 'c') take the value from the boolean isMale.
+						If the value = true, export the character 'M', if the value is null (not
+						set) then export a blank space, else export "F". </para>
 					<para>In this example, the question mark character is the ternary conditional
 						operator which allows for three arguments to be defined and is a shortcut
 						way of writing an if...else statement in Groovy.</para>
@@ -418,15 +405,15 @@ csv &lt;&lt; [ </programlisting>
 					<programlisting language="groovy">"gender"     : c.isMale ? "Male" : (c.isMale == null) ? "Not supplied" : "Female",</programlisting>
 					<para>If the code was just </para>
 					<programlisting language="groovy">"gender"     : c.isMale,</programlisting>
-					<para>Then export value would be TRUE when the contact was set to Male, FALSE when the contact
-						was set as female, and blank, or null, when no value was set in
-						onCourse.</para>
+					<para>Then export value would be TRUE when the contact was set to Male, FALSE
+						when the contact was set as female, and blank, or null, when no value was
+						set in onCourse.</para>
 				</listitem>
 				<listitem>
-					<para>You can add additional rows to the export, or delete or re-order rows. Note that each row
-						ends with the comma delimiter "," except the last row in the export file.
-						For example, the contact export ends with the resume field value, so there
-						is no comma after this row.</para>
+					<para>You can add additional rows to the export, or delete or re-order rows.
+						Note that each row ends with the comma delimiter "," except the last row in
+						the export file. For example, the contact export ends with the resume field
+						value, so there is no comma after this row.</para>
 					<programlisting language="groovy">
 			"workingWithChildrenCheckDate"	: c.tutor?.wwChildrenCheckedOn?.format("yyyy-MM-dd"),
 			"workingWithChildrenCheckRef"	 : c.tutor?.wwChildrenRef,
@@ -435,46 +422,49 @@ csv &lt;&lt; [ </programlisting>
 		]
 }
 					</programlisting>
-					<para>You can also see above that the export file ends with the bracket closure characters  "]"
-						and "}". It is important you don't remove these.</para>
+					<para>You can also see above that the export file ends with the bracket closure
+						characters "]" and "}". It is important you don't remove these.</para>
 				</listitem>
 				<listitem>
-					<para>If you want to access data from other objects than the entity defined in the export, you
-						need to add joins to the export and structure your query in a way that
-						matches the onCourse DSL and schema. For example, in the contact CSV file,
-						some of the fields are from the student or tutor object. These joins are
-						represented by the full stop character. For example, the Working With
-						Children Check Reference number is part of the tutor object, so the join
-						from the contact to the tutor is 'c.tutor.wwChildrenRef' which means the
-						same as 'contact.tutor.wwChildrenRef'.</para>
+					<para>If you want to access data from other objects than the entity defined in
+						the export, you need to add joins to the export and structure your query in
+						a way that matches the onCourse DSL and schema. For example, in the contact
+						CSV file, some of the fields are from the student or tutor object. These
+						joins are represented by the full stop character. For example, the Working
+						With Children Check Reference number is part of the tutor object, so the
+						join from the contact to the tutor is 'c.tutor.wwChildrenRef' which means
+						the same as 'contact.tutor.wwChildrenRef'.</para>
 					<programlisting language="groovy">
 			"workingWithChildrenCheckRef"	 : c.tutor?.wwChildrenRef,
 					</programlisting>
-					<para>In this example, the addition of the question mark character is a safe-navigation
-						operator to avoid the export throwing a null pointer exception. Null pointer
-						exceptions occur when the export can not follow the join you have defined
-						because it doesn't exist (i.e. not every contact selected for export will be
-						a tutor, so if there is a non-tutor contact included, adding the
-						safe-navigation operator just means the export will skip past this field for
-						that record.)</para>
+					<para>In this example, the addition of the question mark character is a
+						safe-navigation operator to avoid the export throwing a null pointer
+						exception. Null pointer exceptions occur when the export can not follow the
+						join you have defined because it doesn't exist (i.e. not every contact
+						selected for export will be a tutor, so if there is a non-tutor contact
+						included, adding the safe-navigation operator just means the export will
+						skip past this field for that record.)</para>
 				</listitem>
 				<listitem>
-					<para>If you have custom fields you wish to include in your export, you can use the custom
-						field keycode to add these fields. You won't find these fields defined in
-						the onCourse DSL documentation as they are custom to your database. For
-						example, if you have a contact custom field with the keycode
+					<para>If you have custom fields you wish to include in your export, you can use
+						the custom field keycode to add these fields. You won't find these fields
+						defined in the onCourse DSL documentation as they are custom to your
+						database. For example, if you have a contact custom field with the keycode
 						'howDidYouHearAboutUs' you could add it your export as follows:
 						<programlisting language="groovy">"How Did You Hear About Us?"  :  c.howDidYouHearAboutUs?.value</programlisting></para>
-					<para>Refer to the <link xlink:href="#generalPrefs-customFields">Custom Field documentation</link> for more information about creating custom fields in onCourse. </para>
+					<para>Refer to the <link xlink:href="#generalPrefs-customFields">Custom Field
+							documentation</link> for more information about creating custom fields
+						in onCourse. </para>
 				</listitem>
 			</orderedlist>
 			<section>
 				<title>Creating and testing your export in onCourse</title>
-				<para>When you are ready to test your new export in onCourse, you can create a new export and copy your export code.</para>
+				<para>When you are ready to test your new export in onCourse, you can create a new
+					export and copy your export code.</para>
 				<orderedlist>
 					<listitem>
-						<para>Go to File > Preferences > Export Templates and click the + in the top right hand corner
-							to create a new export.</para>
+						<para>Go to File > Preferences > Export Templates and click the + in the top
+							right hand corner to create a new export.</para>
 					</listitem>
 					<listitem>
 						<para>Name your export. This is what appears in the drop down when you run
@@ -485,8 +475,9 @@ csv &lt;&lt; [ </programlisting>
 							companyName.onCourse.exportName.exportType</para>
 					</listitem>
 					<listitem>
-						<para>Join your export to the correct entity. The name must be spelt exactly as it appears in
-							the DSL documentation with the correct capitalisation.</para>
+						<para>Join your export to the correct entity. The name must be spelt exactly
+							as it appears in the DSL documentation with the correct
+							capitalisation.</para>
 					</listitem>
 					<listitem>
 						<para>Copy and paste your code into the body 'script' and save your
@@ -502,23 +493,24 @@ csv &lt;&lt; [ </programlisting>
 						</mediaobject>
 					</listitem>
 					<listitem>
-						<para>Once you have saved your export, it will now be available for you to test in the Entity you defined.</para>
+						<para>Once you have saved your export, it will now be available for you to
+							test in the Entity you defined.</para>
 					</listitem>
 					<listitem>
-						<para>If you attempt to run the report and instead of generating the expected output, it shows
-							an error in the window, then you need to adjust your export code to
-							resolve the error, save the changes and try again. This may be a process
-							you repeat a few times if you are new to creating and editing export
-							files.</para>
+						<para>If you attempt to run the report and instead of generating the
+							expected output, it shows an error in the window, then you need to
+							adjust your export code to resolve the error, save the changes and try
+							again. This may be a process you repeat a few times if you are new to
+							creating and editing export files.</para>
 					</listitem>
 					<listitem>
-						<para>When your export runs successfully, check the output is formatted as expected, and make
-							adjustments to your export as needed. Please note: When opening CSV
-							files in a spreadsheet application like Excel, Excel may reformat some
-							of your data based on it's own rules. For example, data it thinks are
-							numbers will often be reformatted, so the leading zeros from mobile
-							phones numbers may be stripped . You should run your formatting checks
-							in a text editor like Sublime or Notepad.</para>
+						<para>When your export runs successfully, check the output is formatted as
+							expected, and make adjustments to your export as needed. Please note:
+							When opening CSV files in a spreadsheet application like Excel, Excel
+							may reformat some of your data based on it's own rules. For example,
+							data it thinks are numbers will often be reformatted, so the leading
+							zeros from mobile phones numbers may be stripped . You should run your
+							formatting checks in a text editor like Sublime or Notepad.</para>
 					</listitem>
 				</orderedlist>
 			</section>
@@ -543,7 +535,10 @@ csv &lt;&lt; [ </programlisting>
 				</imageobject>
 			</mediaobject>
 		</section>
-		<section xml:id="importExport_InDesign"><title>Exporting to Adobe InDesign</title><para>onCourse already comes with a template for exporting to Adobe InDesign.</para><para>
+		<section xml:id="importExport_InDesign">
+			<title>Exporting to Adobe InDesign</title>
+			<para>onCourse already comes with a template for exporting to Adobe InDesign.</para>
+			<para>
 				<orderedlist>
 					<listitem>
 						<para>Open the class list view</para>
@@ -553,12 +548,13 @@ csv &lt;&lt; [ </programlisting>
 							brochure. This might be one or a thousand classes.</para>
 					</listitem>
 					<listitem>
-						<para>Choose "Import/Export" from the File menu and select "Export classes". Select the
-							"InDesign Brochure" output format. Export this data and save it to disk
-							somewhere. It will be an XML file, ready for InDesign.</para>
+						<para>Choose "Import/Export" from the File menu and select "Export classes".
+							Select the "InDesign Brochure" output format. Export this data and save
+							it to disk somewhere. It will be an XML file, ready for InDesign.</para>
 					</listitem>
 				</orderedlist>
-			</para><para>Now fire up Adobe InDesign and import this file.<orderedlist>
+			</para>
+			<para>Now fire up Adobe InDesign and import this file.<orderedlist>
 					<listitem>
 						<para>
 							<menuchoice>
@@ -585,147 +581,154 @@ csv &lt;&lt; [ </programlisting>
 							mapping so that next time you create this document with fresh data all
 							the styles are linked quickly and simply.</para>
 					</listitem>
-				</orderedlist></para><para>If you now spend a bit of time tidying up your stylesheets (both character styles and
-				paragraph styles) in InDesign you can set up the whole process to be almost
+				</orderedlist></para>
+			<para>If you now spend a bit of time tidying up your stylesheets (both character styles
+				and paragraph styles) in InDesign you can set up the whole process to be almost
 				completely automated. Next time you export from onCourse, the data will flow right
 				into InDesign complete with all the formatting you need. Just paginate your
 				brochure, place in some pictures and you are done.</para>
-			<para>If you need to customise your export further, you can do this yourself if you have the
-				skills in house, or engage ish to make the changes for you.</para>
-		</section>
-			<section>
-				<title>OLGR CSV Export</title>
-				<para>onCourse has an export that allows you to export student data into OLGR for
-					the state of NSW. </para>
-				<para>Below are the steps you need to follow to do this:</para>
-				<para>
-					<orderedlist>
-						<listitem>
-							<para>Open the 'Class' window and locate the RSA class you want to
-								create the file for </para>
-						</listitem>
-						<listitem>
-							<para>Single click on the chosen class</para>
-						</listitem>
-						<listitem>
-							<para>Go to the cog wheel and select 'Find related &gt; enrolled
-								students' </para>
-						</listitem>
-						<listitem>
-							<para>This will open the students from this class in a new contact
-								window</para>
-						</listitem>
-						<listitem>
-							<para>With the contact window at the front of your onCourse view, select
-								File &gt; Import/Export &gt; Export contacts</para>
-						</listitem>
-						<listitem>
-							<para>Choose the option 'NSW OLGR CSV export' and ensure the radio
-								button listed records is shown</para>
-						</listitem>
-						<listitem>
-							<para>Click export and choose a location to save the file and give the
-								file a name that makes sense to you about which class group this
-								data belongs to</para>
-						</listitem>
-						<listitem>
-							<para>Open the CSV file in excel and use your current process to upload
-								the data into OLGR</para>
-						</listitem>
-					</orderedlist>
-				</para>
-			</section>
-	<section xml:id="importExport-MYOB">
-		<title>Exporting to MYOB</title>
-		<para> If your organisation utilizes MYOB as the key financial system, you can generate an
-			export that is specifically designed for importing data directly into MYOB. There are 2
-			different pathways within the onCourse Client to access and generate the financial data
-			export for MYOB.</para>
-		<section>
-			<title>Generating a MYOB Export via the Financial Summary Extract Menu</title>
-			<para>The steps involved in running this export are as follows:</para>
-			<orderedlist>
-				<listitem>
-					<para>Go to Financial > Summary Extracts and select MYOB Export</para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/exports/MYOB_Export_via_Summary_Extract.png" format="png"/>
-						</imageobject>
-						<caption>
-							<para>Selecting MYOB Export via Summary Extract menu</para>
-						</caption>
-					</mediaobject>
-				</listitem>
-				<listitem>
-					<para>Set the 'from' and 'to' date range for the next MYOB Export</para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/exports/MYOB_Export_set_date_range.png" format="png"/>
-						</imageobject>
-						<caption>
-							<para>Select date range for MYOB Export</para>
-						</caption>
-					</mediaobject>
-					<note>
-						<para>The benefit of utilizing the Summary Extract path when exporting
-							financial data, is that onCourse enables you to set the date range for
-							the data that is to be exported. As well as remembering the date up to
-							when the last data export was run. </para>
-					</note>
-				</listitem>
-				<listitem>
-					<para>Click on the <guilabel>Export</guilabel>button to run the export. Note
-						that the resulting file will be generated as a text file. </para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/exports/MYOB_Export_data_output.png" format="png"/>
-						</imageobject>
-						<caption>
-							<para>Extract of MYOB Export viewed via Microsoft Excel</para>
-						</caption>
-					</mediaobject>
-				</listitem>
-			</orderedlist>
+			<para>If you need to customise your export further, you can do this yourself if you have
+				the skills in house, or engage ish to make the changes for you.</para>
 		</section>
 		<section>
-			<title>Generating a MYOB Export via the Transaction Window</title>
-			<para>Unlike the approach of generating the MYOB Export via the Summary Extract menu of
-				onCourse, by running the export via the Transactions window, you can define exactly
-				which transactions you wish to export to the resulting text file. The steps involved
-				in running this export via the Transactions window are as follows: </para>
-			<orderedlist>
-				<listitem>
-					<para>Filter and highlight the transaction records you wish to export within the Transaction
+			<title>OLGR CSV Export</title>
+			<para>onCourse has an export that allows you to export student data into OLGR for the
+				state of NSW. </para>
+			<para>Below are the steps you need to follow to do this:</para>
+			<para>
+				<orderedlist>
+					<listitem>
+						<para>Open the 'Class' window and locate the RSA class you want to create
+							the file for </para>
+					</listitem>
+					<listitem>
+						<para>Single click on the chosen class</para>
+					</listitem>
+					<listitem>
+						<para>Go to the cog wheel and select 'Find related &gt; enrolled students'
+						</para>
+					</listitem>
+					<listitem>
+						<para>This will open the students from this class in a new contact
 							window</para>
-				</listitem>
-				<listitem>
-					<para>Go to File > Import/Export > Export Transactions to bring up the export
-						dialog box</para>
-				</listitem>
-				<listitem>
-					<para>Select <guilabel>MYOB</guilabel> from the drop down list of export
-						formats</para>
-				</listitem>
-				<listitem>
-					<para>Click on the <guilabel>Export</guilabel>button to run the export. Note
-						that the resulting file will be generated as a text file. </para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/exports/MYOB_Export_data_output.png" format="png"/>
-						</imageobject>
-						<caption>
-							<para>Extract of MYOB Export viewed via Microsoft Excel</para>
-						</caption>
-					</mediaobject>
-				</listitem>
-			</orderedlist>
+					</listitem>
+					<listitem>
+						<para>With the contact window at the front of your onCourse view, select
+							File &gt; Import/Export &gt; Export contacts</para>
+					</listitem>
+					<listitem>
+						<para>Choose the option 'NSW OLGR CSV export' and ensure the radio button
+							listed records is shown</para>
+					</listitem>
+					<listitem>
+						<para>Click export and choose a location to save the file and give the file
+							a name that makes sense to you about which class group this data belongs
+							to</para>
+					</listitem>
+					<listitem>
+						<para>Open the CSV file in excel and use your current process to upload the
+							data into OLGR</para>
+					</listitem>
+				</orderedlist>
+			</para>
+		</section>
+		<section xml:id="importExport-MYOB">
+			<title>Exporting to MYOB</title>
+			<para> If your organisation utilizes MYOB as the key financial system, you can generate
+				an export that is specifically designed for importing data directly into MYOB. There
+				are 2 different pathways within the onCourse Client to access and generate the
+				financial data export for MYOB.</para>
+			<section>
+				<title>Generating a MYOB Export via the Financial Summary Extract Menu</title>
+				<para>The steps involved in running this export are as follows:</para>
+				<orderedlist>
+					<listitem>
+						<para>Go to Financial > Summary Extracts and select MYOB Export</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/exports/MYOB_Export_via_Summary_Extract.png"
+									format="png"/>
+							</imageobject>
+							<caption>
+								<para>Selecting MYOB Export via Summary Extract menu</para>
+							</caption>
+						</mediaobject>
+					</listitem>
+					<listitem>
+						<para>Set the 'from' and 'to' date range for the next MYOB Export</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/exports/MYOB_Export_set_date_range.png"
+									format="png"/>
+							</imageobject>
+							<caption>
+								<para>Select date range for MYOB Export</para>
+							</caption>
+						</mediaobject>
+						<note>
+							<para>The benefit of utilizing the Summary Extract path when exporting
+								financial data, is that onCourse enables you to set the date range
+								for the data that is to be exported. As well as remembering the date
+								up to when the last data export was run. </para>
+						</note>
+					</listitem>
+					<listitem>
+						<para>Click on the <guilabel>Export</guilabel>button to run the export. Note
+							that the resulting file will be generated as a text file. </para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/exports/MYOB_Export_data_output.png"
+									format="png"/>
+							</imageobject>
+							<caption>
+								<para>Extract of MYOB Export viewed via Microsoft Excel</para>
+							</caption>
+						</mediaobject>
+					</listitem>
+				</orderedlist>
+			</section>
+			<section>
+				<title>Generating a MYOB Export via the Transaction Window</title>
+				<para>Unlike the approach of generating the MYOB Export via the Summary Extract menu
+					of onCourse, by running the export via the Transactions window, you can define
+					exactly which transactions you wish to export to the resulting text file. The
+					steps involved in running this export via the Transactions window are as
+					follows: </para>
+				<orderedlist>
+					<listitem>
+						<para>Filter and highlight the transaction records you wish to export within
+							the Transaction window</para>
+					</listitem>
+					<listitem>
+						<para>Go to File > Import/Export > Export Transactions to bring up the
+							export dialog box</para>
+					</listitem>
+					<listitem>
+						<para>Select <guilabel>MYOB</guilabel> from the drop down list of export
+							formats</para>
+					</listitem>
+					<listitem>
+						<para>Click on the <guilabel>Export</guilabel>button to run the export. Note
+							that the resulting file will be generated as a text file. </para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/exports/MYOB_Export_data_output.png"
+									format="png"/>
+							</imageobject>
+							<caption>
+								<para>Extract of MYOB Export viewed via Microsoft Excel</para>
+							</caption>
+						</mediaobject>
+					</listitem>
+				</orderedlist>
+			</section>
 		</section>
 	</section>
-	</section><section xml:id="importExport-Import">
+	<section xml:id="importExport-Import">
 		<title>Importing</title>
 		<para>Using the onCourse Groovy scripting engine, powerful import process can be created in
 			onCourse for either once off events or a regular data transfer between onCourse and a
@@ -760,29 +763,42 @@ csv &lt;&lt; [ </programlisting>
 						tool into onCourse. Running this import on the same data set twice will
 						create duplicate records for each student.</para>
 				</listitem>
-				<listitem><para><emphasis role="bold">onCourse AVETMISS outcome update import</emphasis> -
-					Using data from an import set of NAT00120, NAT00060, NAT00080 and NAT00085
-					files, <emphasis>update</emphasis> existing students in onCourse with prior
-					learning data. This process does not create new contact records, only adds prior
-					learning data to existing contacts.</para></listitem>
-				<listitem><para><emphasis role="bold">onCourse AVETMISS student import </emphasis>- Using
-					a data from an import set of NAT00080 &amp; NAT000085 files, create new student
-					contact records in onCourse. Running this import on the same data set twice will
-					create duplicate records for each student.</para></listitem>
-				<listitem><para><emphasis role="bold">onCourse AVETMISS student update import </emphasis>-
-					Using a data from an import set of NAT00080 &amp; NAT000085 files, update
-					existing student contact records in onCourse. This process does not create new
-					contact records, only adds prior learning data to existing contacts.</para></listitem>
-				<listitem><para><emphasis role="bold">onCourse contact CSV import</emphasis> - Import
-					contact data from CSV file to create new contacts, students, tutors and/or
-					companies in the database. Running this import on the same data set twice will
-					create duplicate records for each student.</para></listitem>
-				<listitem><para><emphasis role="bold">onCourse paymentIn CSV import </emphasis>- Using CSV
-					data, import paymentIn information in order to automatically match paymentIn
-					records with invoices. </para></listitem>
-				<listitem><para><emphasis role="bold">onCourse Contact Update Subscriptions CSV import</emphasis>- 
-				Search for contacts based on the provided email address and update their marketing permissions
-				in bulk.</para></listitem>
+				<listitem>
+					<para><emphasis role="bold">onCourse AVETMISS outcome update import</emphasis> -
+						Using data from an import set of NAT00120, NAT00060, NAT00080 and NAT00085
+						files, <emphasis>update</emphasis> existing students in onCourse with prior
+						learning data. This process does not create new contact records, only adds
+						prior learning data to existing contacts.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">onCourse AVETMISS student import </emphasis>- Using
+						a data from an import set of NAT00080 &amp; NAT000085 files, create new
+						student contact records in onCourse. Running this import on the same data
+						set twice will create duplicate records for each student.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">onCourse AVETMISS student update import </emphasis>-
+						Using a data from an import set of NAT00080 &amp; NAT000085 files, update
+						existing student contact records in onCourse. This process does not create
+						new contact records, only adds prior learning data to existing
+						contacts.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">onCourse contact CSV import</emphasis> - Import
+						contact data from CSV file to create new contacts, students, tutors and/or
+						companies in the database. Running this import on the same data set twice
+						will create duplicate records for each student.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">onCourse paymentIn CSV import </emphasis>- Using CSV
+						data, import paymentIn information in order to automatically match paymentIn
+						records with invoices. </para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">onCourse Contact Update Subscriptions CSV
+							import</emphasis>- Search for contacts based on the provided email
+						address and update their marketing permissions in bulk.</para>
+				</listitem>
 			</orderedlist>
 		</section>
 		<section xml:id="importExport-payentIn">
@@ -879,11 +895,10 @@ csv &lt;&lt; [ </programlisting>
 		</section>
 		<section xml:id="importExport-updateSubscriptions">
 			<title>Contact Update Subscriptions CSV import</title>
-			<para>This import will allow you to update, in bulk, the email, post and sms subscription
-				preferences of a contact record, as identified by its email address. Below is an
-				example of how your CSV file should be laid out. When you format your CSV, be sure
-				to allow the table headers otherwise the import will fail.</para>
-			
+			<para>This import will allow you to update, in bulk, the email, post and sms
+				subscription preferences of a contact record, as identified by its email address.
+				Below is an example of how your CSV file should be laid out. When you format your
+				CSV, be sure to allow the table headers otherwise the import will fail.</para>
 		</section>
 		<table frame="all">
 			<title>Contact Subscription Update CSV format</title>
@@ -921,6 +936,6 @@ csv &lt;&lt; [ </programlisting>
 					</row>
 				</tbody>
 			</tgroup>
-		</table>	
+		</table>
 	</section>
-	</chapter>
+</chapter>

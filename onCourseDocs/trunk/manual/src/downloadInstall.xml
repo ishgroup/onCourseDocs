@@ -288,46 +288,33 @@
 						</varlistentry>
 					</variablelist></para>
 			</section>
-			<section>
-				<title>Running the Client</title>
-				<mediaobject>
+			<section><title>Running the Client</title><mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/adminlogin.png"
-						 />
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/adminlogin.png"/>
 					</imageobject>
-					<caption>
-						<para>The relationship option, click "select" to choose a type of relationship between
-							contacts</para>
-					</caption>
-				</mediaobject>
-				<orderedlist arch="">
+					<caption>The onCourse login window</caption>
+				</mediaobject><orderedlist arch="">
 					<listitem>
 						<para>Username is "admin". Password is "admin". </para>
 					</listitem>
+					<listitem>On the third line enter the network IP address of the machine you're
+						running the server on (this may be the same machine you're running the
+						application on.</listitem>
 					<listitem>
-						<para>Click the on the "advanced" button to see the server details </para>
+						<para>Make sure the port number is 8182.</para>
 					</listitem>
-					<listitem>
-						<para>Click on "Find Server" button that appears, then click "login"</para>
-					</listitem>
-				</orderedlist>
-				<para> If you have a workstation firewall installed, you may need to allow traffic through
-					that port for OnCourse to run. </para>
-				<para> If the login failed, you will need to manually find the host name or IP address of
-					the computer where ish onCourse Server is running. If they are running on the same
-					computer, you can use "localhost". If the server is on another computer, it might have an
-					IP address which looks like "192.168.0.10". You can find the IP address in "Control Panels
-					> Network connections". </para>
-				<tip>
-					<para>If you see a line on the Server that says "Application service running" with a
-						twirling busy icon next to it, this means the server is busy and will be unable to
-						accept client connections. Wait until the icon goes away before connecting a client. If
-						you start the OnCourse client before the OnCourse server has finished loading, you will
-						get an error message. If this is your first time starting the server, it may take a few
-						minutes as the data file populates. Check the status of the server, wait a few minutes
-						and try again. </para>
-				</tip>
-			</section>
+				</orderedlist><para> If you have a workstation firewall installed, you may need to
+					allow traffic through that port for OnCourse to run. </para>. <tip>
+					<para>If you see a line on the Server that says "Application service running"
+						with a twirling busy icon next to it, this means the server is busy and will
+						be unable to accept client connections. Wait until the icon goes away before
+						connecting a client. If you start the OnCourse client before the OnCourse
+						server has finished loading, you will get an error message. If this is your
+						first time starting the server, it may take a few minutes as the data file
+						populates. Check the status of the server, wait a few minutes and try again.
+					</para>
+				</tip></section>
 		</section>
 		<section>
 			<title>Installing onCourse Server on other platforms</title>
@@ -537,11 +524,8 @@ pkg_add onCourseServer.tgz
 					</para>
 				</listitem>
 				<listitem>
-					<para>Run the onCourse server. Because you hid the old datafile it will
-							ask you if you want to start a new, sample or existing datafile. Choose
-							new and save the datafile in the same location as before. This will
-							create a new onCourse.iocdata file 
-					</para>
+					<para>Run the onCourse server. It will create a brand new data file for you in the same place
+						as before. </para>
 				</listitem>
 				<listitem>
 					<para>Once the server has completed the start up process, connect an

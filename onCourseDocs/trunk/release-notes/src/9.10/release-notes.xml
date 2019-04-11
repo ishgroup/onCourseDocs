@@ -4,18 +4,29 @@
     <title>Release 9.10</title>
     <pubdate>11 Apr. 2019</pubdate>
   </info>
-  <section role='important'>
-    <title>Important changes</title>
-    <para> </para>
-  </section>
-  <section role='major'>
+  <section role="important">
     <title>Major features</title>
-    <para> The following entities have been moved to the new UI design. As always "shift" while
-      opening a window will show the old UI.<itemizedlist>
-        <listitem>Accounts</listitem>
-        <listitem>Transactions</listitem>
-        <listitem>Tutor pay</listitem>
+    <para>Some more big additions are coming with this release, the most exciting of which is the
+      all-new Dashboard. You may remember we flirted with a new Dashboard some time ago; this one is
+      now much improved, containing some wonderful new features we think will help make accessing
+      different parts of onCourse easier than ever before, such as the ability to save a selection
+      of your most commonly used windows for quick access, and a new 'Find Anything' search where
+      you can find almost any record by simply typing something into the box.</para>
+    <para>As well as the Dashboard, the following list views and their entities have been moved to
+      the new UI design. <itemizedlist>
+        <listitem>
+          <para>Accounts</para>
+        </listitem>
+        <listitem>
+          <para>Transactions</para>
+        </listitem>
+        <listitem>
+          <para>Tutor pay</para>
+        </listitem>
       </itemizedlist></para>
+    <para>As always, holding down the "shift"  key while opening a window will still allow you to
+      use the old UI. While you can also go back to the old Dashboard from within the File >
+      Preferences navigation menu.</para>
     <para>A Dark Theme has been added to the application and can be accessed from the top right of
       the new dashboard.</para>
   </section>
@@ -28,8 +39,7 @@
         </para>
       </listitem>
       <listitem>
-        <para>Banking. Implement reports share functionality.
-          <systemitem>OD-12589</systemitem>
+        <para>Add Year Enrolled as a column to transcript <systemitem>OD-12664</systemitem>
         </para>
       </listitem>
     </itemizedlist>
@@ -42,18 +52,12 @@
           </para>
         </listitem>
         <listitem>
-          <para>Google analytics in react
-            <systemitem>OD-11905</systemitem>
+          <para>Implemented 'Created By' marker for Preferences Entities
+              <systemitem>OD-11919</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Implement Created By marker for Preferences Entities
-            <systemitem>OD-11919</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Module types
-            <systemitem>OD-12094</systemitem>
+          <para>Added Module types <systemitem>OD-12094</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -62,18 +66,11 @@
           </para>
         </listitem>
         <listitem>
-          <para>Dark Theme
-            <systemitem>OD-12144</systemitem>
+          <para>Added new Dark Theme <systemitem>OD-12144</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>List View documentation links
-            <systemitem>OD-12176</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Add new value to "studyReason"
-            <systemitem>OD-12182</systemitem>
+          <para>Add new value to "studyReason" in VET Tab <systemitem>OD-12182</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -82,17 +79,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>mailchimp integration improvements <systemitem>OD-12496</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React Dashboard API and business logic 
-            <systemitem>OD-12502</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Documents: some issues
-            <systemitem>OD-12504</systemitem>
+          <para>Mailchimp integration improvements <systemitem>OD-12496</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -101,33 +88,12 @@
           </para>
         </listitem>
         <listitem>
-          <para>Tutor assessment task release date notificaton
-            <systemitem>OD-12507</systemitem>
+          <para>Tutor assessment task release date notification <systemitem>OD-12507</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>Payline.dateFor as LocalDate
             <systemitem>OD-12513</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Data upgrade: missing discounts from ClassCost table
-            <systemitem>OD-12520</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React UI improvement: Records selection
-            <systemitem>OD-12521</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React UI improvement: Edit view Next/Previous buttons
-            <systemitem>OD-12522</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Add SaleOrder to replication
-            <systemitem>OD-12523</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -144,68 +110,12 @@
           </para>
         </listitem>
         <listitem>
-          <para>HTML inline CSS processor
-            <systemitem>OD-12528</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Sites - Time Zone field changes
             <systemitem>OD-12536</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>logout Icon
-            <systemitem>OD-12595</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>"Open nested edit view" link must be generic for all list views.
-            <systemitem>OD-12597</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Payslip(Tutor pay) payline items layout update
-            <systemitem>OD-12600</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Dashboard search results view
-            <systemitem>OD-12602</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Fix FilterApi
-            <systemitem>OD-12604</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Refactor global CSS nesting logic
-            <systemitem>OD-12608</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Extend routes class to allow get parameter by key
-            <systemitem>OD-12609</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Implement currency mechanism on React
-            <systemitem>OD-12629</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Dashboard Preferences API client handlers
-            <systemitem>OD-12630</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>MinifiedEntitiesList/MinifiedEntitiesRenderer: reduce rendering time with large items number 
-            <systemitem>OD-12643</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Add Year Enrolled as a column to transcript
-            <systemitem>OD-12664</systemitem>
+          <para>Added Logout Icon for new dashboard <systemitem>OD-12595</systemitem>
           </para>
         </listitem>
       </itemizedlist>
@@ -234,8 +144,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Left column of new UI does not expand and cannot be adjusted by user
-            <systemitem>OD-12396</systemitem>
+          <para>Left column of new UI does not expand and width cannot be adjusted by user
+              <systemitem>OD-12396</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -264,35 +174,23 @@
           </para>
         </listitem>
         <listitem>
-          <para>List &gt; 2-column view: Column becomes unavailable for the user
-            <systemitem>OD-12621</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Fix tests for 9.10 release
-            <systemitem>OD-12645</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Modules: 'Type' for system modules can be changed using API
-            <systemitem>OD-12654</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Preferences: Data Collection Forms. Broken style when record edit
-            <systemitem>OD-12662</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Unable to launch jnlp
-            <systemitem>OD-12678</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Web-start client: Blank login form appears on launch after force quit
             <systemitem>OD-12681</systemitem>
           </para>
         </listitem>
+        <listitem>
+          <para>Data upgrade: missing discounts from ClassCost table
+              <systemitem>OD-12520</systemitem>
+          </para>
+        </listitem>
+         
+           <listitem>
+              <para>MinifiedEntitiesList/MinifiedEntitiesRenderer: reduce rendering time with large
+                items number <systemitem>OD-12643</systemitem>
+              </para>
+           </listitem>
+          
+        
       </itemizedlist>
     </section>
   </section>

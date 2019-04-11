@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.10'>
+  <info>
+    <title>Release 9.10</title>
+    <pubdate>11 Apr. 2019</pubdate>
+  </info>
+  <section role='important'>
+    <title>Important changes</title>
+    <para> </para>
+  </section>
+  <section role='major'>
+    <title>Major features</title>
+    <para> The following entities have been moved to the new UI design. As always "shift" while
+      opening a window will show the old UI.<itemizedlist>
+        <listitem>Accounts</listitem>
+        <listitem>Transactions</listitem>
+        <listitem>Tutor pay</listitem>
+      </itemizedlist></para>
+    <para>A Dark Theme has been added to the application and can be accessed from the top right of
+      the new dashboard.</para>
+  </section>
+  <section role='scripts'>
+    <title>Reports and scripts</title>
+    <itemizedlist>
+      <listitem>
+        <para>PDF reports/other files don't open automatically when generated in onCourse
+          <systemitem>OD-12510</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Banking. Implement reports share functionality.
+          <systemitem>OD-12589</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <section role='minor'>
+      <title>Minor features</title>
+      <itemizedlist>
+        <listitem>
+          <para>Large amount of records in transactions are halting replication
+              <systemitem>OD-11896</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Google analytics in react
+            <systemitem>OD-11905</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement Created By marker for Preferences Entities
+            <systemitem>OD-11919</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Module types
+            <systemitem>OD-12094</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Client and server applications are now notarized on
+              OSX<systemitem>OD-12133</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Dark Theme
+            <systemitem>OD-12144</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>List View documentation links
+            <systemitem>OD-12176</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add new value to "studyReason"
+            <systemitem>OD-12182</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Site Countries and Timezones search and auto complete
+            <systemitem>OD-12467</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>mailchimp integration improvements <systemitem>OD-12496</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React Dashboard API and business logic 
+            <systemitem>OD-12502</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Documents: some issues
+            <systemitem>OD-12504</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Student assessment task release date notification 
+            <systemitem>OD-12506</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Tutor assessment task release date notificaton
+            <systemitem>OD-12507</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Payline.dateFor as LocalDate
+            <systemitem>OD-12513</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Data upgrade: missing discounts from ClassCost table
+            <systemitem>OD-12520</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React UI improvement: Records selection
+            <systemitem>OD-12521</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React UI improvement: Edit view Next/Previous buttons
+            <systemitem>OD-12522</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add SaleOrder to replication
+            <systemitem>OD-12523</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>New UI improvement: Save button on discard changes <systemitem>OD-12525</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>New UI improvement: Indicate field focus <systemitem>OD-12526</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Tags collapse detail
+            <systemitem>OD-12527</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>HTML inline CSS processor
+            <systemitem>OD-12528</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Sites - Time Zone field changes
+            <systemitem>OD-12536</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>logout Icon
+            <systemitem>OD-12595</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>"Open nested edit view" link must be generic for all list views.
+            <systemitem>OD-12597</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Payslip(Tutor pay) payline items layout update
+            <systemitem>OD-12600</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Dashboard search results view
+            <systemitem>OD-12602</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Fix FilterApi
+            <systemitem>OD-12604</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Refactor global CSS nesting logic
+            <systemitem>OD-12608</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Extend routes class to allow get parameter by key
+            <systemitem>OD-12609</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement currency mechanism on React
+            <systemitem>OD-12629</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Dashboard Preferences API client handlers
+            <systemitem>OD-12630</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>MinifiedEntitiesList/MinifiedEntitiesRenderer: reduce rendering time with large items number 
+            <systemitem>OD-12643</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add Year Enrolled as a column to transcript
+            <systemitem>OD-12664</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='fixes'>
+      <title>Fixes</title>
+      <itemizedlist>
+        <listitem>
+          <para>Duplicate and reverse invoice with payment plan is always invalid
+            <systemitem>OD-11922</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Attendance screen doesn't line up
+            <systemitem>OD-12042</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Payroll not generating within two hours of class end
+            <systemitem>OD-12113</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Two digit year entry should transition from 1950
+            <systemitem>OD-12214</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Left column of new UI does not expand and cannot be adjusted by user
+            <systemitem>OD-12396</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Security settings: "Default site doesn't exist" appears when creating a new user 
+            <systemitem>OD-12485</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Sites/Rooms: Unable to add tag
+            <systemitem>OD-12534</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Unnecessary check for CustomFIeldType relation to CustomField on delete
+            <systemitem>OD-12539</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>All drop down boxes in onCourse application should be in alphabetical order
+            <systemitem>OD-12549</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AQL. Wrong concatenation of  expressions 
+            <systemitem>OD-12577</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>List &gt; 2-column view: Column becomes unavailable for the user
+            <systemitem>OD-12621</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Fix tests for 9.10 release
+            <systemitem>OD-12645</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Modules: 'Type' for system modules can be changed using API
+            <systemitem>OD-12654</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Preferences: Data Collection Forms. Broken style when record edit
+            <systemitem>OD-12662</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Unable to launch jnlp
+            <systemitem>OD-12678</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Web-start client: Blank login form appears on launch after force quit
+            <systemitem>OD-12681</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </section>
+</chapter>

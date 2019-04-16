@@ -21,9 +21,10 @@
             preferences, including rules around enforcing two-factor authentication. You have the
             following preferences to switch on or off:<itemizedlist>
                 <listitem>
-                    <para><emphasis role="bold">Automatically disable inactive accounts</emphasis> -
-                        this will disable accounts that haven't logged in after a set number of
-                        days. </para>
+                    <para><emphasis role="bold">Automatically disable inactive user
+                            accounts</emphasis> - this will disable accounts that haven't logged in
+                        after a set number of days. This could be useful for disabling the accounts
+                        of past employees if you don't have the time to manage it yourself.</para>
                 </listitem>
                 <listitem>
                     <para><emphasis role="bold">Require better passwords</emphasis> - when enabled,
@@ -232,13 +233,12 @@
             <para>Each onCourse user should be assigned to a user role that defines their access
                 levels, by default all new users created will have full admin access to all aspects
                 of onCourse.</para>
-            <para>You can edit an existing access role by double clicking on it, or create new
-                access roles using the + button next to the User Roles heading in the left-hand
-                panel.</para>
-            <itemizedlist>
-                <title>Before we delve into the specifics of the Access menu, it's important to know
-                    what each option means. If an option like "create" is greyed out, it means that
-                    part of onCourse can't be restricted.</title>
+            <para>You can edit an existing user role by clicking on its heading in the left-hand
+                panel, or create new access roles using the + button next to the User Roles heading
+                in the left-hand panel.</para>
+            <section>
+                <title>User Role levels of access</title>
+            <itemizedlist>                
                 <listitem>
                     <para><emphasis role="bold">View:</emphasis> A view permission only allows the
                         contact to see data already created, but does not allow existing records to
@@ -267,10 +267,12 @@
                         the process is denied and the element is hidden from use.</para>
                 </listitem>
             </itemizedlist>
+            </section>    
+            <section>
+                <title>What can you edit in User Roles?</title>
             <itemizedlist>
-                <title>What can you edit in the "Access" menu?</title>
                 <listitem>
-                    <para><emphasis role="bold">Name: </emphasis>here you define the name of the
+                    <para>Name: here you define the name of the
                         role, e.g; "Administration Manager".</para>
                 </listitem>
                 <listitem>
@@ -288,15 +290,14 @@
                     <para>Course Management</para>
                     <itemizedlist>
                         <listitem>
-                            <para>Course: permission to work with any course type, including
-                                traineeships, Vocational and non-vocational courses</para>
+                            <para>Course: permission to work with courses</para>
                         </listitem>
                         <listitem>
                             <para>VET course details: this only relates to adding or removing unit
                                 of competency details from a course</para>
                         </listitem>
                         <listitem>
-                            <para>Class: permission to work with any class type</para>
+                            <para>Class: permission to work with classes</para>
                         </listitem>
                         <listitem>
                             <para>Enrolment outcomes: only edit rights are editable. This allows the
@@ -313,10 +314,6 @@
                         <listitem>
                             <para>Waiting list: permission to work with all wait list records</para>
                         </listitem>
-                        <listitem>
-                            <para>Mailing list: permission to work within existing and create new
-                                mailing lists</para>
-                        </listitem>
                     </itemizedlist>
                 </listitem>
                 <listitem>
@@ -324,8 +321,8 @@
                     <itemizedlist>
                         <listitem>
                             <para>Qualification reference data: the only permission available here
-                                is edit, allowing you to add your choice of nominal hours. All
-                                reference data is centrally managed by ish.</para>
+                                    is edit, allowing you to add your choice of nominal
+                                    hours.</para>
                         </listitem>
                         <listitem>
                             <para>Certificate: this relates to VET Statements of Attainment and
@@ -503,11 +500,13 @@
                     <itemizedlist>
                         <listitem>
                             <para>Email up to 50 contacts: This permission is useful for admin staff
-                                who may need to notify a class of students about changes.</para>
+                                    who may need to notify a class of students about changes at a
+                                    time.</para>
                         </listitem>
                         <listitem>
                             <para>Email over 50 contacts: This permission is most appropriate to
-                                marketing staff.</para>
+                                    marketing staff who need to bulk email large amounts of students
+                                    at the same time.</para>
                         </listitem>
                         <listitem>
                             <para>SMS up to 50 contacts: This permission is for admin staff who may
@@ -610,14 +609,15 @@
                 </listitem>
             </itemizedlist>
         </section>
-    </section>
+            </section>
+        </section>
     <section xml:id="users-TOTP">
         <title>onCourse Login with Two Factor Authentication</title>
         <para>Two factor authentication (2FA) is an added layer of security for users accessing
             onCourse cloud instances, in particular, but also useful for locally hosted onCourse
-            servers with VPN access enabled. You will be encouraged at every login attempt to enable
-            2FA, and only once it has been enabled will this warning stop. This can be ignored by
-            clicking 'Maybe Later'. </para>
+            servers with VPN access enabled. </para>
+        <para>At every login attempt you will be encouraged to enable 2FA, and only once it has been
+            enabled will this warning stop. This can be ignored by clicking 'Maybe Later'. </para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -629,15 +629,17 @@
         </mediaobject>
         <para>2FA means that there are two 'secrets' a user needs to know to successfully log in to
             your onCourse application. One secret is the password set for the user account. The
-            second 'secret' is a code that requires a device such as a smart phone with an
-            application such as <link
+            second 'secret' is a code that requires a device such as a smart phone with a TOTP
+            (time-based one time password) application such as <link
                 xlink:href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator"
                 >Google Authenticator</link> installed, with an account linked to the onCourse user
             account. This service generates a unique code every 30 seconds. To login successfully
             you will need both the user password and a current token. </para>
         <para>When 2FA is enabled, after initial login there is a third field that asks for the 6
             digit code provided by your TOTP application. If you try to log in with the wrong Token
-            or Password, then you will get an error message saying 'Authentication failed'.</para>
+            or Password, then you will get an error message saying 'Authentication failed' and you
+            should get an admin user to disable 2FA in order to regain access to your account. You
+            can re-enable 2FA once you've regained access.</para>
         <section>
             <title>Enabling two factor authentication</title>
             <para>To enable 2FA, simply click 'Enable' when prompted at the login window. </para>
@@ -715,11 +717,13 @@
             <para>An admin user can see a list of all users that have this feature enabled in the
                 Security window by looking at the User accounts listed under 'Users'. Any user with
                 2FA enabled will have a small icon appear next to their name.</para>
-            <para>2FA should</para>
         </section>
     </section>
     <section>
         <title>Emergency access</title>
+        <note>
+            <para>This section only applies to users with access to their own onCourse Server, not cloud-hosted customers.</para>
+        </note>
         <para>Should you lock yourself out of your onCourse Server because you have lost or
             forgotten the last admin login, there is a way to recreate or reset the 'admin' user
             password.</para>

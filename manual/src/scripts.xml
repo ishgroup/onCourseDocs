@@ -15,7 +15,7 @@
 	<para>Scripting allows you to write directly to the database, calling your own program code that
 		can automate almost any business practice you can imagine. Any database changes they attempt
 		are subject to similar validation as data input manually.</para>
-	<para>Scripts often work hand in hand with <link xlink:href="emailTemplates.html">onCourse
+	<para>Scripts often work hand in hand with <link xlink:href="emailTemplates.html">email 
 			templates</link>, sending automated messages to various onCourse contacts.</para>
 	<mediaobject>
 		<imageobject>
@@ -28,9 +28,9 @@
 	</mediaobject>
 	<section>
 		<title>Navigating the Scripts view</title>
-		<para>The new UI allows for Scripts to be added and/or removed, as well as customising the 
-		coulumns you wish to view on the page. You can keyword search by typing your search term into 
-		the Search bar, and it should return any script containing that word in the name.</para>
+		<para>In the scripts list view, you can  add or remove scripts, as well as customise the columns
+			you wish to view in the list. You can keyword search by typing your search term into the
+			Search bar, and it should return any script containing that word in the name.</para>
 	</section>
 	<section xml:id="scripts-whatYouCanDo">
 		<title>What can you do with scripts?</title>
@@ -454,6 +454,10 @@
 					<para><emphasis role="bold">Moodle enrol</emphasis> Create an enrolment in moodle where the
 						course has the tag defined in the moodle integration</para>
 				</listitem>
+					<listitem>
+						<para><emphasis role="bold">Coassemble enrol</emphasis> Create an enrolment
+							in Coassemble LMS.</para>
+					</listitem>
 				<listitem>
 					<para><emphasis role="bold">Mailchimp subscribe</emphasis> Subscribe contacts to mailchimp
 						mailing lists using the onCourse mailing list feature. NB The name of the
@@ -742,34 +746,133 @@
 				function.<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?></para><?oxy_custom_end?>
 		</section>
 	</section>
+	<section xml:id="basic-Scripts">
+		<title>Creating Scripts</title>
+		<para> Scripts can be constructed by via blocks that represent certain behaviours and actions in
+			onCourse. Each block has a specific function. Scripts executes the function of each
+			block starting from the 'top' block. </para>
+		<para> To add a block, click the Floating Action Button (FAB). This will give you a drop-down of the blocks available to add to your script.
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/scripts-add-block.png"/>
+				</imageobject>
+				<caption>
+					<para>Click and drag to reposition a block.</para>
+				</caption>
+			</mediaobject>
+			You can change the order of blocks within your script by clicking and dragging the reposition icon. 
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/scripts-reposition-icon.png"/>
+				</imageobject>
+				<caption>
+					<para>Click and drag to reposition a block.</para>
+				</caption>
+			</mediaobject>
+		</para>
+		
+		<section xml:id="basic-Scripts-Blocks">
+			<title>Script blocks</title>
+			<para>There are a number of different blocks that can be used to construct a script.</para>
+			<variablelist>
+				<varlistentry>
+					<term>SCHEDULE</term>
+					<listitem>
+						<para>Each script must start with a schedule block. This tells the script how/how frequently
+							it is run. The Schedule block outlines the triggers for a given
+							script.
+							<mediaobject>
+								<imageobject>
+									<imagedata scalefit="1" width="100%" contentdepth="100%"
+										fileref="images/scripts-schedule-block.png"/>
+								</imageobject>
+								<caption>
+									<para>Schedule block triggered by a CRON.</para>
+								</caption>
+							</mediaobject>
+						</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>IMPORT</term>
+					<listitem>
+						<para>The Import block allows you to import external Java and Groovy libraries to be used in
+							your script. These libraries can give you access to certain methods or
+							classes to be used in an Advanced script block. <mediaobject>
+								<imageobject>
+									<imagedata scalefit="1" width="100%" contentdepth="100%"
+										fileref="images/scripts-import-block.png"/>
+								</imageobject>
+								<caption>
+									<para>Import block importing the Apache Common StringUtils
+										library</para>
+								</caption>
+							</mediaobject>
+						</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>QUERY</term>
+					<listitem>
+						<para>The Query block allows you to retrieve records from your database. You must specify what entity type is to be returned from you query, as well as provide a name to reference the returned objects.
+							Additionally, an AQL query can be provided to further filter down the returned objects.
+							<mediaobject>
+								<imageobject>
+									<imagedata scalefit="1" width="100%" contentdepth="100%"
+										fileref="images/scripts-query-block.png"/>
+								</imageobject>
+								<caption>
+									<para>Querying a database to return all classes that are not cancelled and finish on the day of script execution.</para>
+								</caption>
+							</mediaobject>
+						</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			
+		</section>
+		
+	</section>
+	
 	<section xml:id="scripts-Content">
-		<title>Editing script content</title>
-		<para>The actual script itself is written in Groovy which gives you power to implement
-			almost anything. You have full access to the onCourse Server structure, code and data.
-			With great power comes great responsibility, so be aware that you have the power to
-			destroy data although there are layers of validation to help prevent you doing anything
-			too seriously bad unless you try hard.</para>
+		<title>Writing advanced scripts with Groovy</title>
+		<para>Advanced scripts give you power to implement almost any workflow using the onCourse Domain
+			Scripting Language (DSL). The onCourse DSL provides an interface you can use to interact
+			and edit with your onCourse data. You can interact with the onCourse DSL using  the
+			Apache Groovy scripting language. </para>
+		
+		<para>
+			To create an Advanced script block, select 'Script' from the FAB drop down.
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/script-advanced-block.png"/>
+				</imageobject>
+				<caption>
+					<para>An Advanced script block that will take in a list of classes, and send an email to each enrolment in each class.</para>
+				</caption>
+			</mediaobject>
+		</para>
+		
 		<para>Let's pull apart a sample script. This one sends an email when an invoice is
 			created.</para>
 		<para>
-			<programlisting language="groovy">def run(args) {
-	def i = args.entity
-			
-	if (i.confirmationStatus == ConfirmationStatus.NOT_SENT) {
-		def m = Email.create("Tax Invoice")
-		m.bind(invoice: i)
-		m.to(i.contact)
+		<programlisting language="groovy">
+def i = args.entity
 		
-		m.send()
-		
-		i.setConfirmationStatus(ConfirmationStatus.SENT)
-		args.context.commitChanges()
-	}  
-}</programlisting>
-		</para>
-		<para>Every script should begin with this line:</para>
-		<para>
-			<programlisting language="groovy">def run(args) {</programlisting>
+if (i.confirmationStatus == ConfirmationStatus.NOT_SENT) {
+	def m = Email.create("Tax Invoice")
+	m.bind(invoice: i)
+	m.to(i.contact)
+	
+	m.send()
+	
+	i.setConfirmationStatus(ConfirmationStatus.SENT)
+	args.context.commitChanges()
+}  
+		</programlisting>
 		</para>
 		<para>In that variable "args" you will get access to important objects to help you write
 			your script. The most important two are:</para>

@@ -46,43 +46,9 @@ subprojects {
                 from "${buildDir}/html"
             }
         }
-        pdf {
-            contents {
-                from "${buildDir}/*.pdf"
-            }
-        }
     }
     uploadArchives.dependsOn htmlDistZip
     distTar.enabled = false
-
-    publishing {
-        publications {
-            html(MavenPublication) {
-                artifact htmlDistZip
-            }
-//            pdf(MavenPublication) {
-//                artifact pdfDistZip
-//            }
-        }
-        repositories {
-            maven {
-                name "snapshots"
-                url "https://repo.ish.com.au/content/repositories/ish-snapshots"
-                credentials {
-                    username nexusUsername
-                    password nexusPassword
-                }
-            }
-            maven {
-                name "releases"
-                url "https://repo.ish.com.au/content/repositories/ish-releases"
-                credentials {
-                    username nexusUsername
-                    password nexusPassword
-                }
-            }
-        }
-    }
 
     task processCommonSrc(type: Copy, dependsOn: parent.tasks['explodeXSL']) {
         from "${rootDir}/src"
@@ -137,13 +103,45 @@ subprojects {
         fopConfFile = file("${sourceDirectory}/fonts/fop-conf.xml")
         outputFile = file("${buildDir}/${project.name}.pdf")
 	}
-    pdfDistZip.dependsOn(docbookPdf)
+
+    uploadArchives.dependsOn docbookPdf
 
     task docbook(dependsOn: [docbookHtml, docbookPdf]) {
 		group = 'Documentation'
 		description = 'Generates all HTML and PDF documentation.'
 	}
 
+    publishing {
+        publications {
+            html(MavenPublication) {
+                artifact htmlDistZip {
+                    archiveName "${project.name}.zip"
+                }
+            }
+            pdf(MavenPublication) {
+                artifact docbookPdf.outputFile
+            }
+        }
+        repositories {
+            maven {
+                name "snapshots"
+                url "https://repo.ish.com.au/content/repositories/ish-snapshots"
+                credentials {
+                    username nexusUsername
+                    password nexusPassword
+                }
+            }
+            maven {
+                name "releases"
+                url "https://repo.ish.com.au/content/repositories/ish-releases"
+                credentials {
+                    username nexusUsername
+                    password nexusPassword
+                }
+            }
+        }
+    }
+    
     // this task should be periodically run manually to optimise files in the source folders
     task optimise {
         description = "Optimise all the images"

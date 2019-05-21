@@ -4,40 +4,25 @@
     <title>Release 9.11</title>
     <pubdate>22 May 2019</pubdate>
   </info>
-  <section role='important'>
-    <title>Important changes</title>
-    <para> </para>
-  </section>
   <section role='major'>
     <title>Major features</title>
-    <para> </para>
+    <para> This release is an incremental step towards rolling out the new user interface along with
+      a number of bug fixes.</para>
+    <section>
+      <title>Funding uploads</title>
+      <para>If you are an RTO reporting AVETMISS data to your funding provider, you'll be really
+        excited by this new feature. Here you'll be able to see every historic upload so that you
+        can track which outcomes have been reported and what status was reported each time. This
+        will make it much easier to track your funding entitlements and see exactly when money is
+        due to you.</para>
+    </section>
   </section>
   <section role='scripts'>
     <title>Reports and scripts</title>
     <itemizedlist>
       <listitem>
-        <para>Banking. Implement reports share functionality.
-          <systemitem>OD-12589</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Add functionality "Print report" to DepositBanking 
-          <systemitem>OD-12749</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Extend PdfApi endpoint to implement possibility form report at creation new banking (Deposit Banking) 
-          <systemitem>OD-12858</systemitem>
-        </para>
-      </listitem>
-      <listitem>
         <para>Currency symbols other than $ in reports
           <systemitem>OD-12859</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Deposit Banking. Error occurs at creating PDF report
-          <systemitem>OD-12869</systemitem>
         </para>
       </listitem>
     </itemizedlist>
@@ -45,28 +30,11 @@
       <title>Minor features</title>
       <itemizedlist>
         <listitem>
-          <para>Coassemble integration 
-            <systemitem>OD-12108</systemitem>
+          <para>Audits list speed optimization <systemitem>OD-12274</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Upgrade jetty version to 		jettyVersion = '9.4.18.v20190429'
-            <systemitem>OD-12198</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Audits optimization
-            <systemitem>OD-12274</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Scripts List Update
-            <systemitem>OD-12286</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>DevExtreme React Grid 1.9.x migration 
-            <systemitem>OD-12287</systemitem>
+          <para>Scripts List Update to match the rest of the UI <systemitem>OD-12286</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -80,83 +48,13 @@
           </para>
         </listitem>
         <listitem>
-          <para>Query component should not inject closure into script component
-            <systemitem>OD-12354</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Finance. Corporate pass list
+          <para>Corporate pass list migrate to new UI.
             <systemitem>OD-12407</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Finance. Corporate pass edit view
-            <systemitem>OD-12408</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Finance. Banking deposits edit view
+          <para>Banking deposits migrate to new UI.
             <systemitem>OD-12414</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Corporate Pass API 
-            <systemitem>OD-12429</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Banking API
-            <systemitem>OD-12434</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Cogwheel (Banking) - reconcile
-            <systemitem>OD-12435</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Discount available online
-            <systemitem>OD-12483</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Implement money type in TableModel
-            <systemitem>OD-12546</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React 16.8 Migration
-            <systemitem>OD-12552</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Banking. Search not working in new listView
-            <systemitem>OD-12584</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Banking. BankingMixin implement methods getReconcileStatus, getTotal
-            <systemitem>OD-12585</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Banking. Find related does not work 
-            <systemitem>OD-12587</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Move logic of creating url linked to documantation to helper method
-            <systemitem>OD-12591</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Methods EntityApiImpl::get(), EntityApiImpl::getPlain() fetches more rows then required in pageSize parameter
-            <systemitem>OD-12599</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Discount List React UI
-            <systemitem>OD-12619</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -164,51 +62,15 @@
             <systemitem>OD-12631</systemitem>
           </para>
         </listitem>
-        <listitem>
-          <para>Remove old funding upload UI
-            <systemitem>OD-12637</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>AngelServer not working with mariadb connector 2.4.1
-            <systemitem>OD-12651</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>History Panel
-            <systemitem>OD-12686</systemitem>
-          </para>
-        </listitem>
+
+
+
         <listitem>
           <para>Previous Export Panel
             <systemitem>OD-12687</systemitem>
           </para>
         </listitem>
-        <listitem>
-          <para>Remove FundingUpload &lt;-&gt; FundingContract many to many relation
-            <systemitem>OD-12695</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Move date format strings to constants
-            <systemitem>OD-12710</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Audits list API updates
-            <systemitem>OD-12713</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>added Generic Full Screen Edit View link
-            <systemitem>OD-12714</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Sales with AQL in Corporate Pass
-            <systemitem>OD-12715</systemitem>
-          </para>
-        </listitem>
+
         <listitem>
           <para>Script Entity full screen Edit View
             <systemitem>OD-12717</systemitem>
@@ -220,27 +82,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Funding upload history API
-            <systemitem>OD-12721</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Nested table. introduce onAdd={} action 
-            <systemitem>OD-12722</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Nested table. Hide delete button if no records
-            <systemitem>OD-12723</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Script List API Updates
-            <systemitem>OD-12728</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Put 'question mark' on top  bar for all cases/frames
+          <para>Put 'question mark' documentation link on top  bar for all windows
             <systemitem>OD-12730</systemitem>
           </para>
         </listitem>
@@ -250,60 +92,16 @@
           </para>
         </listitem>
         <listitem>
-          <para>Unit tests for React
-            <systemitem>OD-12734</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Funding uploads - store settings
-            <systemitem>OD-12735</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>FundingUploadOutcome - status property
-            <systemitem>OD-12737</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Script cards drag and drop
             <systemitem>OD-12739</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Security: Needless permissions for Funding Contract and Funding Upload
-            <systemitem>OD-12740</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Add license checking for "create script" endpoint
+          <para>Relax licensing around scripting creation
             <systemitem>OD-12741</systemitem>
           </para>
         </listitem>
-        <listitem>
-          <para>Create correct links from preferences to audit
-            <systemitem>OD-12743</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Add new date format for EditInPlaceDateTimeField (formatDate="eee d MMM yyyy")
-            <systemitem>OD-12747</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Add admin permission for permission chain
-            <systemitem>OD-12748</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Some improvments NestedTable/List view
-            <systemitem>OD-12753</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Purging FundingUploads cron job
-            <systemitem>OD-12754</systemitem>
-          </para>
-        </listitem>
+
       </itemizedlist>
     </section>
     <section role='fixes'>
@@ -312,6 +110,10 @@
         <listitem>
           <para>Resolving stuck payments during payment session
             <systemitem>OD-11008</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Create correct links from preferences to audit <systemitem>OD-12743</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -335,16 +137,6 @@
           </para>
         </listitem>
         <listitem>
-          <para>Data upgrade and validation: duplicated DiscountCourseClass relations
-            <systemitem>OD-12712</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>license.accesscontrol not working
-            <systemitem>OD-12718</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Transactions: The list of records breaks when scrolling
             <systemitem>OD-12727</systemitem>
           </para>
@@ -355,33 +147,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Upgrade to 9.10 failed due fo SQL syntax error
-            <systemitem>OD-12736</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Server start fails with derby db: ERROR liquibase.changelog
-            <systemitem>OD-12742</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Fix Audit, Script and Preferences model in new UI
-            <systemitem>OD-12744</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>Audit Logging: Error occurs when printing PDF
             <systemitem>OD-12752</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>NestedTable does not change content on @@redux-form/INITIALIZE action
-            <systemitem>OD-12758</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Change secondary sorting order for EntityApiImpl::get
-            <systemitem>OD-12760</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -395,18 +162,12 @@
           </para>
         </listitem>
         <listitem>
-          <para>Banking Deposits: Issues
-            <systemitem>OD-12841</systemitem>
+          <para>Client application could get wedged and require a full operating system restart for
+            the application to run again<systemitem>OD-12843</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Chromium resources in temp folder
-            <systemitem>OD-12843</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Tutor Pay New UI issue
-            <systemitem>OD-12845</systemitem>
+          <para>Tutor Pay sometimes has blank section at the top <systemitem>OD-12845</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -435,21 +196,6 @@
           </para>
         </listitem>
         <listitem>
-          <para>Dashboard &gt; Deposit banking. Clicking on link opens old UI frame 
-            <systemitem>OD-12862</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Generated API errors after swagger update
-            <systemitem>OD-12866</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Banking Deposit: 'For No Value' is displayed on Activity panel
-            <systemitem>OD-12867</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>New Audits List backend issues
             <systemitem>OD-12870</systemitem>
           </para>
@@ -459,20 +205,16 @@
             <systemitem>OD-12873</systemitem>
           </para>
         </listitem>
-        <listitem>
-          <para>No audit logging on derby db
-            <systemitem>OD-12881</systemitem>
-          </para>
-        </listitem>
       </itemizedlist>
     </section>
     <section role='web'>
       <title>Web features</title>
-      <itemizedlist />
-    </section>
-    <section role='web-fixes'>
-      <title>Web fixes</title>
-      <itemizedlist />
+      <itemizedlist>
+        <listitem>
+          <para>Product sales now have a quantity. You can now sell multiple books, hats, gift
+            certificates or event bookings to one student.</para>
+        </listitem>
+      </itemizedlist>
     </section>
   </section>
 </chapter>

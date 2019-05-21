@@ -9,12 +9,13 @@ buildscript {
 }
 
 plugins {
-    id 'com.github.ben-manes.versions' version '0.20.0' // adds the task 'dependencyUpdates'
+    id 'com.github.ben-manes.versions' version '0.21.0' // adds the task 'dependencyUpdates'
     id 'distribution'
     id 'maven-publish'
 }
 
 apply plugin: 'groovy'
+apply plugin: 'com.github.ben-manes.versions'
 
 configurations {
     docbookxslt

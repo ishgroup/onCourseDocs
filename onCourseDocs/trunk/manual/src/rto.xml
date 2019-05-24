@@ -2,6 +2,14 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
 	version="5.0" xml:id="rto">
 	<title>RTO Setup</title>
+	<section>
+		<title>Overview</title>
+	<para>This chapter looks at how a RTO can prepare their courses and classes in onCourse to ensure
+			they're set up properly and can correctly report their data for funding. Included in
+			this chapter is what to do before taking enrolments, how to set up funding
+			sources/contracts, and how to set up sites, courses and classes.</para>
+	</section>
+	
 	<section xml:id="rto-enrolments">
 		<title>Before Taking Enrolments</title>
 		<para> If you're required to report AVETMISS or funded training there are a few steps you'll
@@ -20,15 +28,15 @@
 		</section>
 		<section xml:id="rto-enrolments-competency">
 			<title>Competency components</title>
-			<para>onCourse tracks VET competencies such as Qualifications, Accredited Courses, Skill
-				groups/sets, Units of Competency, and Modules. It also tracks higher education
-				Courses and Units of Study.</para>
-			<para>onCourse automatically imports all this data regularly from training.gov.au. You
-				can view these from within the Training menu in the nav bar.</para>
-			<para>For each competency on your scope, tick the 'is offered' option; this will ensure
-				that only those records can be added to your courses. You can also create your own
-				competencies for Skills groups, modules and higher education which aren't imported
-				automatically from training.gov.au.</para>
+			<para>onCourse imports information from training.gov.au such as Qualifications, Accredited
+				Courses, Skill groups/sets, Units of Competency, and Modules. It also tracks higher
+				education Courses and Units of Study.</para>
+			<para>onCourse automatically imports all this data regularly. You can view these from within the
+				Training menu in the nav bar.</para>
+			<para>You can also create your own competencies for skills groups, modules and higher education
+				which aren't imported automatically from training.gov.au. </para>
+			<para>For each competency on your scope, tick the 'is offered' option; this will ensure that only
+				those records can be added to your courses. </para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -51,8 +59,8 @@
 						fileref="images/quals_3column_view.png"/>
 				</imageobject>
 				<caption>
-					<para>The new Qualifications/Units of Competency window in three-column view
-						mode</para>
+					<para>The new Qualifications/Units of Competency window in three-column view mode. The switcher
+						is highlighted in the bottom-right</para>
 				</caption>
 			</mediaobject>
 			<mediaobject>
@@ -64,46 +72,61 @@
 					<para>The new Qualifications/Units of Competency window in list view mode</para>
 				</caption>
 			</mediaobject>
-		</section>
-		<section xml:id="rto-enrolments-funding">
-			<title>Funding source</title>
-			<para>Make sure you remember to add the correct funding contract at the Class level, and
-				then make any required changes for individual students at the Enrolment
-				level.</para>
-			<para>To learn more about <link linkend="fundingContract">Funding Contracts, click here
-				</link>.</para>
+			<example>
+				<title>How to create your own Modules and Units of Competency</title>
+				<para>You can add your own modules and units of competency to the onCourse system
+					from within the Units of Competency window (Training > Units of Competency) by
+					clicking the + button in the bottom navigation panel. It will open a new column
+					in the window where you must enter a title, the national code, the field of
+					education code, a credit points value and an expiry days value. You cannot save
+					the record without these fields being filled. After filling these fields, the
+					save icon will become enabled. Click the icon to save the record.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/new_uoc_add.png"/>
+					</imageobject>
+					<caption>
+						<para>A new unit of competency being created</para>
+					</caption>
+				</mediaobject>
+				<para>There is an additional field for specialization, however this is not mandatory
+					in order to save the record.</para>
+				<para>Type is a drop-down box where you can select whether the record is for a unit
+					of competency, a unit of study, a module, or other.</para>
+				<para>There is a check box called 'Is Module'. If checked, then the record will be
+					classed as a module for use within a qualification. If this is not checked, then
+					the record is considered a unit of competency for use within non-accredited
+					courses. There's also an 'Is Offered' check box that, when ticked, flags that
+					UoC as being offered by your college.</para>
+				<para>You can delete a custom record by highlighting it and clicking the cogwheel
+					icon, then clicking delete record. You can only delete custom records.</para>
+			</example>
 		</section>
 		<section>
 			<title xml:id="rto-enrolments-sites">Site setup</title>
-			<para>You should ensure that all of the sites you've set up have the correct address,
-				suburb and postcode. Any sites that are used for VET classes will have these details
-				included in reporting, so ensuring accuracy in this data is important.</para>
+			<para>Before creating courses or classes, you should ensure that all of the sites you've set up
+				have the correct address, suburb, postcode and timezone set. Any sites that are used
+				for VET classes will have most of these details included in reporting, so ensuring
+				accuracy in this data is important.</para>
 			<para>You can learn more about <link linkend="sitesRooms">adding Sites and Rooms by
 					clicking here</link>.</para>
 		</section>
 		<section xml:id="rto-enrolments-courses">
 			<title>Course setup</title>
-			<para>If you are an RTO who offers short accredited programs, or full qualifications,
-				you will appreciate the ease in which you can set up your courses with the right
-				unit and qualification details. This then flows through to recording outcomes,
-				creating transcripts and certifications, and generating AVETMISS compliant
-				data.</para>
 			<tip>
-				<para>In this section when we talk about Qualifications we really mean
-					"Qualifications, Accredited Courses or Skillsets". And when we say "Unit of
-					Competency" we also include "Modules". Although the words are different between
-					state and commonwealth accreditation regimes, the processes in onCourse are
-					exactly the same.</para>
+				<para>In this section when we talk about Qualifications we really mean "Qualifications,
+					Accredited Courses or Skillsets". When we say "Unit of Competency" we also
+					include "Modules". Although the words are different between state and
+					commonwealth accreditation regimes, the processes in onCourse are exactly the
+					same.</para>
 			</tip>
-			<para>You must ensure that in the File > General > Preferences > AVETMISS you have the
-				'show RTO related screens and menus' option enabled. This makes the VET tabs in the
-				course and class records and the AVETMISS tab in the student record visible for data
-				entry.</para>
-			<para>In the VET tab of the course record you can select the Qualification and the Units
-				from the built in NTIS data for your chosen course. If your course is VET, but not
-				from a training package or accredited course, you can also flag it VET here and
-				allocate its Field of Education ID. This is something you may need to do as part of
-				your government funding requirements for non accredited courses.</para>
+			<para>You can create a new course by going to Courses, then hitting the + button.</para>
+			<para>In the VET tab of the new course record you can select the Qualification and the Units from
+				the built in NTIS data for your chosen course. If your course is VET, but not from a
+				training package or accredited course, you can also flag it VET here and allocate
+				its Field of Education ID. This is something you may need to do as part of your
+				government funding requirements for non accredited courses.</para>
 			<tip>
 				<para>Do you deliver state accredited courses? You will find the course listed in
 					onCourse but not the modules that make up the course. This is because they are
@@ -147,19 +170,23 @@
 						towards your annual VET delivery.</para>
 				</listitem>
 			</orderedlist>
-			<para>In onCourse outcomes (records of undertaking and achieving a unit of competency)
-				flow down from the course to the student via an enrolment in a class. If a course
-				has 15 units attached to it, when a student is enrolled in a class for that course,
-				the student will have 15 outcomes created for them - one for each unit. You can
-				always modify the units for the student in their own enrolment, for example if they
-				change to a different elective. What this means is that you can save yourself a lot
-				of data entry work if you set your course up with all the units to begin with. </para>
+			<para>In onCourse, outcomes (records of undertaking and achieving a unit of competency) flow down
+				from the course to the student via an enrolment in a class. If a course has 15 units
+				attached to it, the students enrolled in that class will have 15 outcomes created
+				for them - one for each unit. You can always modify the units for the student in
+				their own enrolment, for example if they change to a different elective. </para>
 			<example>
 				<title>Creating a VET Course</title>
 				<orderedlist>
 					<listitem>
-						<para>Follow the instructions to create a new course. Open the course record
-							to the <guibutton>VET tab</guibutton>.</para>
+						<para>Go to Courses and hit the + button to create a new course record. For
+							a detailed view on how to create a new course in onCourse, <link
+								xlink:href="courses.xml#courses">visit our Courses chapter</link>.
+						</para>
+					</listitem>
+					<listitem>
+						<para>When you're done with the initial course setup, open the
+								<guibutton>VET tab</guibutton>.</para>
 					</listitem>
 					<listitem>
 						<para>Enter the <guilabel>National Code</guilabel>. The fields are
@@ -223,36 +250,7 @@
 					assign it to the new course to use the same timetables and teaching schedules.
 				</para>
 			</caution>
-			<example>
-				<title>How to create your own Modules and Units of Competency</title>
-				<para>You can add your own modules and units of competency to the onCourse system
-					from within the Units of Competency window (Training > Units of Competency) by
-					clicking the + button in the bottom navigation panel. It will open a new column
-					in the window where you must enter a title, the national code, the field of
-					education code, a credit points value and an expiry days value. You cannot save
-					the record without these fields being filled. After filling these fields, the
-					save icon will become enabled. Click the icon to save the record.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/new_uoc_add.png"/>
-					</imageobject>
-					<caption>
-						<para>A new unit of competency being created</para>
-					</caption>
-				</mediaobject>
-				<para>There is an additional field for specialization, however this is not mandatory
-					in order to save the record.</para>
-				<para>Type is a drop-down box where you can select whether the record is for a unit
-					of competency, a unit of study, a module, or other.</para>
-				<para>There is a check box called 'Is Module'. If checked, then the record will be
-					classed as a module for use within a qualification. If this is not checked, then
-					the record is considered a unit of competency for use within non-accredited
-					courses. There's also an 'Is Offered' check box that, when ticked, flags that
-					UoC as being offered by your college.</para>
-				<para>You can delete a custom record by highlighting it and clicking the cogwheel
-					icon, then clicking delete record. You can only delete custom records.</para>
-			</example>
+			
 			<example>
 				<title>How to "add" a unit of competency to a course</title>
 				<para>You cannot actually add a Unit of competency to a course if it already has
@@ -539,6 +537,13 @@
 					</listitem>
 				</orderedlist>
 			</example>
+		</section>
+		<section>
+			<title>Funding source</title>
+			<para>Once you've created the class, add the correct funding contract at the Class level via the
+				VET tab, and then make any required changes for individual students at the Enrolment
+				level. To learn more about <link linkend="fundingContract">Funding Contracts, click
+					here </link>. </para>
 		</section>
 	</section>
 </chapter>

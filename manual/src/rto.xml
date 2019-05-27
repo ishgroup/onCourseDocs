@@ -3,7 +3,7 @@
 	version="5.0" xml:id="rto">
 	<title>RTO Setup</title>
 	<section>
-		<title>Overview</title>
+		<title>Chapter Overview</title>
 	<para>This chapter looks at how a RTO can prepare their courses and classes in onCourse to ensure
 			they're set up properly and can correctly report their data for funding. Included in
 			this chapter is what to do before taking enrolments, how to set up funding
@@ -12,9 +12,9 @@
 	
 	<section xml:id="rto-enrolments">
 		<title>Before Taking Enrolments</title>
-		<para> If you're required to report AVETMISS or funded training there are a few steps you'll
-			need to take to ensure that reporting time goes as smoothly as possible. Do these things
-			before you accept your first enrolment into the VET classes.</para>
+		<para>If you're required to report AVETMISS or funded training there are a few steps you'll need
+			to take to ensure that reporting time goes as smoothly as possible. Do these things
+			before you accept your first enrolment into any VET classes.</para>
 		<section xml:id="rto-enrolments-general">
 			<title>Set up General Preferences</title>
 			<para>Set up your AVETMISS details within the General Preferences window. To access
@@ -34,7 +34,10 @@
 			<para>onCourse automatically imports all this data regularly. You can view these from within the
 				Training menu in the nav bar.</para>
 			<para>You can also create your own competencies for skills groups, modules and higher education
-				which aren't imported automatically from training.gov.au. </para>
+				which aren't imported automatically from training.gov.au. You can learn how to <link
+					xlink:href="#rto-createModules">create your own unit of competency here</link>,
+				or you can learn <link xlink:href="#rto-createQual">how to create your own
+					qualifications here</link>.</para>
 			<para>For each competency on your scope, tick the 'is offered' option; this will ensure that only
 				those records can be added to your courses. </para>
 			<mediaobject>
@@ -59,8 +62,8 @@
 						fileref="images/quals_3column_view.png"/>
 				</imageobject>
 				<caption>
-					<para>The new Qualifications/Units of Competency window in three-column view mode. The switcher
-						is highlighted in the bottom-right</para>
+					<para>The Qualifications/Units of Competency window in three-column view mode. The switcher is
+						highlighted in the bottom-right</para>
 				</caption>
 			</mediaobject>
 			<mediaobject>
@@ -69,19 +72,20 @@
 						fileref="images/quals_listview.png"/>
 				</imageobject>
 				<caption>
-					<para>The new Qualifications/Units of Competency window in list view mode</para>
+					<para>The Qualifications/Units of Competency window in list view mode</para>
 				</caption>
 			</mediaobject>
-			<example>
-				<title>How to create your own Modules and Units of Competency</title>
-				<para>You can add your own modules and units of competency to the onCourse system
-					from within the Units of Competency window (Training > Units of Competency) by
-					clicking the + button in the bottom navigation panel. It will open a new column
-					in the window where you must enter a title, the national code, the field of
-					education code, a credit points value and an expiry days value. You cannot save
-					the record without these fields being filled. After filling these fields, the
-					save icon will become enabled. Click the icon to save the record.</para>
-				<mediaobject>
+			<example><emphasis role="bold">
+					<title xml:id="rto-createModules">How to create your own Modules and Units of
+						Competency</title>
+				</emphasis><para>You can add your own modules and units of competency to the
+					onCourse system from within the Units of Competency window (Training > Units of
+					Competency) by clicking the + button in the bottom navigation panel. It will
+					open a new column in the window where you must enter a title, the national code,
+					the field of education code, a credit points value and an expiry days value. You
+					cannot save the record without these fields being filled. After filling these
+					fields, the save icon will become enabled. Click the icon to save the
+					record.</para><mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" width="100%" contentdepth="100%"
 							fileref="images/new_uoc_add.png"/>
@@ -89,19 +93,39 @@
 					<caption>
 						<para>A new unit of competency being created</para>
 					</caption>
-				</mediaobject>
-				<para>There is an additional field for specialization, however this is not mandatory
-					in order to save the record.</para>
-				<para>Type is a drop-down box where you can select whether the record is for a unit
-					of competency, a unit of study, a module, or other.</para>
-				<para>There is a check box called 'Is Module'. If checked, then the record will be
-					classed as a module for use within a qualification. If this is not checked, then
-					the record is considered a unit of competency for use within non-accredited
-					courses. There's also an 'Is Offered' check box that, when ticked, flags that
-					UoC as being offered by your college.</para>
-				<para>You can delete a custom record by highlighting it and clicking the cogwheel
-					icon, then clicking delete record. You can only delete custom records.</para>
-			</example>
+				</mediaobject><para>There is an additional field for specialization, however this is
+					not mandatory in order to save the record.</para><para>Type is a drop-down box
+					where you can select whether the record is for a unit of competency, a unit of
+					study, a module, or other.</para><para>There is a check box called 'Is Module'.
+					If checked, then the record will be classed as a module for use within a
+					qualification. If this is not checked, then the record is considered a unit of
+					competency for use within non-accredited courses. There's also an 'Is Offered'
+					check box that, when ticked, flags that UoC as being offered by your
+					college.</para><para>You can delete a custom record by highlighting it and
+					clicking the cogwheel icon, then clicking delete record. You can only delete
+					custom records.</para></example>
+			<example><emphasis role="bold">
+					<title xml:id="rto-createQual">How to create your own Qualifications</title>
+				</emphasis><para>From within the Qualifications window (Training > Qualifications)
+					you can create your own Qualifications and Skill Sets. There are four mandatory
+					fields that must be filled out before the record can be created: Type, Level,
+					Title and National Code.</para><para>The Type field is a drop-down box that will
+					allow you specify the type of record; a qualification, an accredited course, a
+					skill set, a local skill set, or higher education. Level, title and national
+					code are all free-text fields.</para><para>Additional fields include the ANZSCO
+					number, field of education code, specialization code and the number of nominal
+					hours. There's also an 'Is Offered' check box that, when ticked, flags that
+					qualification as being offered by your college.</para><para>You can delete a
+					custom record by highlighting it and clicking the cogwheel icon, then clicking
+					Delete Record. You can only delete custom records.</para><mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/delete_custom_qual.png"/>
+					</imageobject>
+					<caption>
+						<para>Deleting a custom qualification</para>
+					</caption>
+				</mediaobject></example>
 		</section>
 		<section>
 			<title xml:id="rto-enrolments-sites">Site setup</title>
@@ -109,8 +133,8 @@
 				have the correct address, suburb, postcode and timezone set. Any sites that are used
 				for VET classes will have most of these details included in reporting, so ensuring
 				accuracy in this data is important.</para>
-			<para>You can learn more about <link linkend="sitesRooms">adding Sites and Rooms by
-					clicking here</link>.</para>
+			<para>You can learn more details about <link linkend="sitesRooms">adding Sites and Rooms
+					here</link>.</para>
 		</section>
 		<section xml:id="rto-enrolments-courses">
 			<title>Course setup</title>
@@ -121,12 +145,15 @@
 					commonwealth accreditation regimes, the processes in onCourse are exactly the
 					same.</para>
 			</tip>
-			<para>You can create a new course by going to Courses, then hitting the + button.</para>
-			<para>In the VET tab of the new course record you can select the Qualification and the Units from
-				the built in NTIS data for your chosen course. If your course is VET, but not from a
-				training package or accredited course, you can also flag it VET here and allocate
-				its Field of Education ID. This is something you may need to do as part of your
-				government funding requirements for non accredited courses.</para>
+			<para>Before going any further, you should read the <link
+					xlink:href="courses.xml#courses">Courses chapter</link> to understand the basics
+				of what a course is in onCourse, and how to go about creating one.</para>
+			<para>Once you have a course created, in the VET tab of the new course record you can select the
+				Qualification and the Units from the built in NTIS data for your chosen course. If
+				your course is VET, but not from a training package or accredited course, you can
+				also flag it VET here and allocate its Field of Education ID. This is something you
+				may need to do as part of your government funding requirements for non accredited
+				courses.</para>
 			<tip>
 				<para>Do you deliver state accredited courses? You will find the course listed in
 					onCourse but not the modules that make up the course. This is because they are
@@ -268,32 +295,7 @@
 					all the old units from their record (provided outcomes have not yet been set),
 					and with their new enrolment, add all the new units to their record.</para>
 			</example>
-			<example>
-				<title>How to create your own Qualifications</title>
-				<para>From within the Qualifications window (Training > Qualifications) you can
-					create your own Qualifications and Skill Sets. There are four mandatory fields
-					that must be filled out before the record can be created: Type, Level, Title and
-					National Code.</para>
-				<para>The Type field is a drop-down box that will allow you specify the type of
-					record; a qualification, an accredited course, a skill set, a local skill set,
-					or higher education. Level, title and national code are all free-text
-					fields.</para>
-				<para>Additional fields include the ANZSCO number, field of education code,
-					specialization code and the number of nominal hours. There's also an 'Is
-					Offered' check box that, when ticked, flags that qualification as being offered
-					by your college.</para>
-				<para>You can delete a custom record by highlighting it and clicking the cogwheel
-					icon, then clicking Delete Record. You can only delete custom records.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/delete_custom_qual.png"/>
-					</imageobject>
-					<caption>
-						<para>Deleting a custom qualification</para>
-					</caption>
-				</mediaobject>
-			</example>
+
 			<example>
 				<orderedlist>
 					<title>How to duplicate a course:</title>

@@ -6,6 +6,9 @@ buildscript {
     repositories.maven {
         url 'https://repo.ish.com.au/content/groups/public'
     }
+    dependencies {
+        classpath 'com.atlassian.jira:jira-rest-java-client-api:5.1.2-2bd0a62e'
+    }
 }
 
 plugins {

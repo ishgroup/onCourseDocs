@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:id="timetable">
+    <title>Timetables</title>
+	<section>
+	    <title>Chapter Overview</title>
+	    <para>When scheduling classes, it can be helpful to know at a glance when a room or a site 
+	        might have some availability free to book up, or is booked out solidly for the next four weeks. 
+	        onCourse allows you to track class sessions scheduled at both the site level, and the room level, 
+	    making it easier to spot holes in their availability quickly and easily.</para>
+	</section>
+    <section xml:id="timetable-access">
+        <title>Accessing Timetable View</title>
+        <para>The Timetable view can be accessed from within either a Site or a Room record. To find
+            a timetable view for a specific site or room:</para>
+        <itemizedlist>
+            <listitem>
+                <para>Open the Sites or Rooms window, whichever is applicable</para>
+            </listitem>
+            <listitem>
+                <para>If in three-column view, click the site or room you wish to view, then click
+                    the Timetable button in the right-hand column</para>
+            </listitem>
+            <listitem>
+                <para>If in two-column view, double-click the site or room you wish to view, then
+                    click the Timetable button</para>
+            </listitem>
+        </itemizedlist>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/sites_timetable_icon.png"/>
+            </imageobject>
+            <caption>
+                <para>The Sites window in three-column view, with the Timetable icon in the
+                    right-hand column</para>
+            </caption>
+        </mediaobject>
+    </section>
+    <section xml:id="timetable-window">
+        <title>Timetable Window</title>
+        <para>The Timetable window features a mini-calendar marking today's date, the date selected and 
+            any days with sessions booked, along with three separate time of day filters;
+            before 12pm, 12pm-6pm, and after 6pm. Selecting any combination of these filters will
+            filter out results that appear outside these parameters.</para>
+        <para>You will always see a list of current sessions booked, the date, session length, 
+            session times, site and room information, and the name of the sessions tutors, if they're set.</para>
+        <para>Each class name can be clicked to open the applicable class record.</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/timetable_compact.png"/>
+            </imageobject>
+            <caption>
+                <para>The Timetable window in Compact view</para>
+            </caption>
+        </mediaobject>
+    </section>
+    <section xml:id="timetable-views">
+        <title>Timetable Views</title>
+        <para>The timetable offers three different views that each display data in a different way: Compact, Gap (Days) and Gap (Hours).</para>
+        <para><emphasis><emphasis role="bold">Compact:</emphasis></emphasis> shows all booked
+            sessions only (see above)</para>
+        <para><emphasis><emphasis role="bold">Gap (days):</emphasis></emphasis> shows any days that
+            are fully available (no bookings that day), as well as all currently booked
+            sessions</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/timetable_gap_days.png"/>
+            </imageobject>
+            <caption>
+                <para>The Timetable in Gap (days) view mode</para>
+            </caption>
+        </mediaobject>
+        <para><emphasis><emphasis role="bold">Gap (hours):</emphasis></emphasis> shows an hourly
+            breakdown of each day from 9am to 6pm. For Sites, it will group each class by the hour.
+            You can see a breakdown of each class within the hour by clicking the down chevron. For
+            Rooms, it will display the name of the class for each hour it's booked. Any available
+            times are marked 'available'</para>
+        <mediaobject>
+            <imageobject>
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                    fileref="images/timetable_gap_hours.png"/>
+            </imageobject>
+            <caption>
+                <para>Gap (hours) view mode shows classes grouped by hours of the day</para>
+            </caption>
+        </mediaobject>
+    </section>
+</chapter>

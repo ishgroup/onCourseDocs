@@ -4,20 +4,18 @@
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-9.12">
   <info>
     <title>Release 9.12</title>
-    <pubdate>26 Jun. 2019</pubdate>
+    <pubdate>1 Jul. 2019</pubdate>
   </info>
   <section role="major">
     <title>Major features</title>
-    <para>
-      <itemizedlist>
-        <listitem>
-          <para>Timetable - We've implemented a new Timetable within the Sites &amp; Rooms windows,
-            to help offer a visual guide to where you have gaps in your scheduling. You can view
-            this by going to either the Sites or Rooms window in onCourse, clicking a record, then
-            clicking the Timetable button. You can review the Timetable's current functionality in
-            the Timetable chapter of our manual <link
-              xlink:href="../../../manual/src/timetable.xml#timetable">by clicking
-            here</link>.</para>
+    <section>
+      <title>Timetable</title>
+          <para>We've implemented a new Timetable within the Sites &amp; Rooms windows, to help
+            offer a visual guide to where you have gaps in your scheduling. You can view this by
+            going to either the Sites or Rooms window in onCourse, clicking a record, then clicking
+            the Timetable button. You can review the Timetable's current functionality in the
+            <link
+              xlink:href="../../../manual/src/timetable.xml#timetable">Timetable chapter of our manual.</link></para>
           <mediaobject>
             <imageobject>
               <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -27,12 +25,13 @@
               <para>Gap (hours) view mode shows classes grouped by hours of the day</para>
             </caption>
           </mediaobject>
-        </listitem>
-        <listitem>Canvas Integration Page - We've added a Canvas integration to the onCourse
-          integrations list. The integration will allow you to automatically create classes,
-          students and enrolments in Canvas using the data created in onCourse.</listitem>
-      </itemizedlist>
-    </para>
+    </section>
+    <section>
+      <title>Canvas Integration</title>
+      <para> We've added a Canvas integration to the onCourse integrations list. The integration
+        will allow you to automatically create classes, students and enrolments in the Canvas LMS
+        using the data created in onCourse.</para>
+    </section>
   </section>
   <section role="scripts">
     <title>Reports and scripts</title>
@@ -49,13 +48,15 @@
     </itemizedlist>
     <section role="minor">
       <title>Minor features</title>
+      <para>The following API implementations are useful for developers wanting to integrate with
+        onCourse.</para>
       <itemizedlist>
         <listitem>
           <para>Discount API <systemitem>OD-12430</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Applications API <systemitem>OD-12763</systemitem>
+          <para>Applications API <systemitem>OD-12763</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -98,26 +99,6 @@
           <para>Timetable API <systemitem>OD-12930</systemitem>
           </para>
         </listitem>
-        <listitem>
-          <para>Timetable - Compact View <systemitem>OD-12933</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Timetable - Mini Calendar Filters <systemitem>OD-12948</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Timetable - Gap Days <systemitem>OD-12951</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Timetable - Gap Hours <systemitem>OD-12952</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Canvas integrations page <systemitem>OD-12976</systemitem>
-          </para>
-        </listitem>
       </itemizedlist>
     </section>
     <section role="fixes">
@@ -142,7 +123,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Overly long scripts error message <systemitem>OD-12623</systemitem>
+          <para>Overly long script error message <systemitem>OD-12623</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -150,30 +131,22 @@
           </para>
         </listitem>
         <listitem>
-          <para>onCourse demo login not working <systemitem>OD-12746</systemitem>
+          <para>onCourse demo login not auto-filling <systemitem>OD-12746</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Audits. No new records are created in db for transactions
+          <para>Audits. No new records are created for transactions
               <systemitem>OD-12872</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Banking Deposit window doesn't show payment status in new UI
+          <para>Banking Deposit window doesn't show payment status in new user interface
               <systemitem>OD-12880</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>No audit logging on derby db <systemitem>OD-12881</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>Preferences &gt; Funding Contract: Mandatory field is not highlighted in red
               <systemitem>OD-12883</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Date formats consistency <systemitem>OD-12892</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -192,7 +165,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Tutor Pay no longer fails to run in new UI <systemitem>OD-12936</systemitem>
+          <para>Tutor Pay no longer fails to run in new user interface
+              <systemitem>OD-12936</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -200,11 +174,11 @@
           </para>
         </listitem>
         <listitem>
-          <para>Corporate Passes New Interface not finding classes in system
+          <para>Corporate Passes New Interface not finding classes by name
               <systemitem>OD-12938</systemitem>
           </para>
         </listitem>
-        <listitem>Old UI lists are not updating changed records immediately
+        <listitem>Old user interface lists are not updating changed records immediately
             <systemitem>OD-12945</systemitem>
         </listitem>
         <listitem>
@@ -215,10 +189,6 @@
         <listitem>
           <para>Fixed Funding Source - National field changing values unexpectedly
               <systemitem>OD-12959</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Fixed onCourse slow queries <systemitem>OD-12960</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -233,7 +203,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>AVETMISS 66 outcomes should not appear in UI <systemitem>OD-12985</systemitem>
+          <para>AVETMISS 66 outcomes should not appear in user interface
+              <systemitem>OD-12985</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -242,7 +213,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Waiting List custom fields are saved with incorrect entityIdentifier on angel
+          <para>Waiting List custom fields sometimes don't synchronise with website
               <systemitem>OD-13008</systemitem>
           </para>
         </listitem>

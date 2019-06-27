@@ -1,368 +1,252 @@
 <?xml version='1.0' encoding='utf-8'?>
-<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.12'>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://docbook.org/ns/docbook file://../../src/docbook.xsd"
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="release-9.12">
   <info>
     <title>Release 9.12</title>
     <pubdate>26 Jun. 2019</pubdate>
   </info>
-  <section role='important'>
-    <title>Important changes</title>
-    <para> </para>
-  </section>
-  <section role='major'>
+  <section role="major">
     <title>Major features</title>
-    <para> </para>
+    <para>
+      <itemizedlist>
+        <listitem>
+          <para>Timetable - We've implemented a new Timetable within the Sites &amp; Rooms windows,
+            to help offer a visual guide to where you have gaps in your scheduling. You can view
+            this by going to either the Sites or Rooms window in onCourse, clicking a record, then
+            clicking the Timetable button. You can review the Timetable's current functionality in
+            the Timetable chapter of our manual <link
+              xlink:href="../../../manual/src/timetable.xml#timetable">by clicking
+            here</link>.</para>
+          <mediaobject>
+            <imageobject>
+              <imagedata scalefit="1" width="100%" contentdepth="100%"
+                fileref="images/timetable_gap_hours.png"/>
+            </imageobject>
+            <caption>
+              <para>Gap (hours) view mode shows classes grouped by hours of the day</para>
+            </caption>
+          </mediaobject>
+        </listitem>
+        <listitem>Canvas Integration Page - We've added a Canvas integration to the onCourse
+          integrations list. The integration will allow you to automatically create classes,
+          students and enrolments in Canvas using the data created in onCourse.</listitem>
+      </itemizedlist>
+    </para>
   </section>
-  <section role='scripts'>
+  <section role="scripts">
     <title>Reports and scripts</title>
     <itemizedlist>
       <listitem>
-        <para>Print: Add message for user when report has no data
-          <systemitem>OD-12490</systemitem>
+        <para>Print: Add message for user when report has no data <systemitem>OD-12490</systemitem>
         </para>
       </listitem>
       <listitem>
         <para>Applications &gt; Share: No templates for PDF/XML reports
-          <systemitem>OD-12953</systemitem>
+            <systemitem>OD-12953</systemitem>
         </para>
       </listitem>
     </itemizedlist>
-    <section role='minor'>
+    <section role="minor">
       <title>Minor features</title>
       <itemizedlist>
         <listitem>
-          <para>Discount API
-            <systemitem>OD-12430</systemitem>
+          <para>Discount API <systemitem>OD-12430</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Applications list view
-            <systemitem>OD-12762</systemitem>
+          <para>React migration: Applications API <systemitem>OD-12763</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Applications API
-            <systemitem>OD-12763</systemitem>
+          <para>Assessments API <systemitem>OD-12766</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Assessments API
-            <systemitem>OD-12766</systemitem>
+          <para>Certificates API <systemitem>OD-12769</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Certificates list view
-            <systemitem>OD-12768</systemitem>
+          <para>Voucher products API <systemitem>OD-12798</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Certificates API
-            <systemitem>OD-12769</systemitem>
+          <para>Membership products API <systemitem>OD-12799</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Courses list view 
-            <systemitem>OD-12781</systemitem>
+          <para>Article products API <systemitem>OD-12804</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Voucher products list view
-            <systemitem>OD-12796</systemitem>
+          <para>Outcomes API <systemitem>OD-12814</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Voucher products API
-            <systemitem>OD-12798</systemitem>
+          <para>Student Feedback API <systemitem>OD-12821</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Membership products API
-            <systemitem>OD-12799</systemitem>
+          <para>Tutor roles API <systemitem>OD-12833</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Membership products list view
-            <systemitem>OD-12800</systemitem>
+          <para>Waiting lists API <systemitem>OD-12834</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Article products list view
-            <systemitem>OD-12803</systemitem>
+          <para>Timetable API <systemitem>OD-12930</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Article products API
-            <systemitem>OD-12804</systemitem>
+          <para>Timetable - Compact View <systemitem>OD-12933</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Outcomes API
-            <systemitem>OD-12814</systemitem>
+          <para>Timetable - Mini Calendar Filters <systemitem>OD-12948</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Student Feedback list view
-            <systemitem>OD-12820</systemitem>
+          <para>Timetable - Gap Days <systemitem>OD-12951</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Student Feedback API
-            <systemitem>OD-12821</systemitem>
+          <para>Timetable - Gap Hours <systemitem>OD-12952</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>React migration: Tutor roles API
-            <systemitem>OD-12833</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React migration: Waiting lists API
-            <systemitem>OD-12834</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React migration: Waiting lists list view
-            <systemitem>OD-12835</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>LabourStatus renamed
-            <systemitem>OD-12860</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Angel React client core dependencies upgrade
-            <systemitem>OD-12922</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Approve new functionality/UI DiscountEditView
-            <systemitem>OD-12923</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Timetable API
-            <systemitem>OD-12930</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Timetable React - Compact View
-            <systemitem>OD-12933</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Timetable React - Mini Calendar Filters
-            <systemitem>OD-12948</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Timetable React - Gap Days
-            <systemitem>OD-12951</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Timetable React - Gap Hours
-            <systemitem>OD-12952</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React migration: Print Certificates revoke and validation API
-            <systemitem>OD-12973</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Canvas integrations page
-            <systemitem>OD-12976</systemitem>
+          <para>Canvas integrations page <systemitem>OD-12976</systemitem>
           </para>
         </listitem>
       </itemizedlist>
     </section>
-    <section role='fixes'>
+    <section role="fixes">
       <title>Fixes</title>
       <itemizedlist>
         <listitem>
           <para>Preferences &gt; Scripts: No audit trail record after new script creating
-            <systemitem>OD-12115</systemitem>
+              <systemitem>OD-12115</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Preference audit logs updating every 6 minutes
-            <systemitem>OD-12482</systemitem>
+          <para>Search bug on Sites window list view <systemitem>OD-12508</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Search bug on Sites window list view
-            <systemitem>OD-12508</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Sites - Map doesn't generate after adding new Site
-            <systemitem>OD-12533</systemitem>
+          <para>Sites - Map doesn't generate after adding new Site <systemitem>OD-12533</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>ClassCost.perUnitAmountExTax becomes not null when duplicating class
-            <systemitem>OD-12618</systemitem>
+              <systemitem>OD-12618</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Scripts error message
-            <systemitem>OD-12623</systemitem>
+          <para>Overly long scripts error message <systemitem>OD-12623</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Quarterly AVETMISS date range
-            <systemitem>OD-12675</systemitem>
+          <para>Quarterly AVETMISS date range fix <systemitem>OD-12675</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>onCourse demo login not working
-            <systemitem>OD-12746</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Transaction summary for specified date range
-            <systemitem>OD-12757</systemitem>
+          <para>onCourse demo login not working <systemitem>OD-12746</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>Audits. No new records are created in db for transactions
-            <systemitem>OD-12872</systemitem>
+              <systemitem>OD-12872</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>Banking Deposit window doesn't show payment status in new UI
-            <systemitem>OD-12880</systemitem>
+              <systemitem>OD-12880</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>No audit logging on derby db
-            <systemitem>OD-12881</systemitem>
+          <para>No audit logging on derby db <systemitem>OD-12881</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>Preferences &gt; Funding Contract: Mandatory field is not highlighted in red
-            <systemitem>OD-12883</systemitem>
+              <systemitem>OD-12883</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Angel test issues after cayenne update (4.1.M2 -&gt; 4.1.B2)
-            <systemitem>OD-12884</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Date formats consistency 
-            <systemitem>OD-12892</systemitem>
+          <para>Date formats consistency <systemitem>OD-12892</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>Corporate Pass &gt; PDF. Not all records are displayed in printed PDF
-            <systemitem>OD-12901</systemitem>
+              <systemitem>OD-12901</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Karate tests: problems with :startDaemon task
-            <systemitem>OD-12903</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>List: 3-column view. The right-side panel is broken when clicking on an already selected record
-            <systemitem>OD-12925</systemitem>
+          <para>List: 3-column view. The right-side panel is broken when clicking on an already
+            selected record <systemitem>OD-12925</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>Qualifications: The nominal hours field should default to 'No Value' and not '0'
-            <systemitem>OD-12934</systemitem>
+              <systemitem>OD-12934</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Tutor Pay is not working
-            <systemitem>OD-12936</systemitem>
+          <para>Tutor Pay no longer fails to run in new UI <systemitem>OD-12936</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Dashboard "Something went wrong"
-            <systemitem>OD-12937</systemitem>
+          <para>Dashboard "Something went wrong" message fixed <systemitem>OD-12937</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>Corporate Passes New Interface not finding classes in system
-            <systemitem>OD-12938</systemitem>
+              <systemitem>OD-12938</systemitem>
           </para>
         </listitem>
-        <listitem>
-          <para>Swing lists are not updating changed records immediately 
+        <listitem>Old UI lists are not updating changed records immediately
             <systemitem>OD-12945</systemitem>
+        </listitem>
+        <listitem>
+          <para>Sites/Rooms &gt; Kiosk. Link now opens in default browser
+              <systemitem>OD-12956</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>static import inject into run method in new script UI
-            <systemitem>OD-12950</systemitem>
+          <para>Fixed Funding Source - National field changing values unexpectedly
+              <systemitem>OD-12959</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Sites/Rooms &gt; Kiosk. Link is opened in jx-browser window instead of default browser
-            <systemitem>OD-12956</systemitem>
+          <para>Fixed onCourse slow queries <systemitem>OD-12960</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Funding Source field errors
-            <systemitem>OD-12959</systemitem>
+          <para>Contact merge shows error message incorrectly <systemitem>OD-12967</systemitem>
+          </para>
+        </listitem>
+        <listitem>Fixed New dashboard reliability issues <systemitem>OD-12970</systemitem>
+        </listitem>
+        <listitem>
+          <para>Transaction journal entries are no longer posted in reverse
+              <systemitem>OD-12981</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>onCourse slow queries
-            <systemitem>OD-12960</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Contact merge shows error message
-            <systemitem>OD-12967</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>onCourse new dashboard issues
-            <systemitem>OD-12970</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Timetable react: Issues
-            <systemitem>OD-12978</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Transaction journal entries are posted in reverse
-            <systemitem>OD-12981</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>AVETMISS 66 outcomes should not appear in UI
-            <systemitem>OD-12985</systemitem>
+          <para>AVETMISS 66 outcomes should not appear in UI <systemitem>OD-12985</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>Search for contact in the new Corporate Pass screen
-            <systemitem>OD-12988</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React lists: The user cannot change column width if the table does not fit in the window
-            <systemitem>OD-12996</systemitem>
+              <systemitem>OD-12988</systemitem>
           </para>
         </listitem>
         <listitem>
           <para>Waiting List custom fields are saved with incorrect entityIdentifier on angel
-            <systemitem>OD-13008</systemitem>
+              <systemitem>OD-13008</systemitem>
           </para>
         </listitem>
       </itemizedlist>
-    </section>
-    <section role='web'>
-      <title>Web features</title>
-      <itemizedlist />
-    </section>
-    <section role='web-fixes'>
-      <title>Web fixes</title>
-      <itemizedlist />
     </section>
   </section>
 </chapter>

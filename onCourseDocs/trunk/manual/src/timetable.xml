@@ -46,22 +46,27 @@
         <para>You will always see a list of current sessions booked, the date, session length, 
             session times, site and room information, and the name of the sessions tutors, if they're set.</para>
         <para>Each class name can be clicked to open the applicable class record.</para>
-        <mediaobject>
-            <imageobject>
-                <imagedata scalefit="1" width="100%" contentdepth="100%"
-                    fileref="images/timetable_compact.png"/>
-            </imageobject>
-            <caption>
-                <para>The Timetable window in Compact view</para>
-            </caption>
-        </mediaobject>
+
     </section>
     <section xml:id="timetable-views">
         <title>Timetable Views</title>
         <para>The timetable offers three different views that each display data in a different way: Compact, Gap (Days) and Gap (Hours).</para>
-        <para><emphasis><emphasis role="bold">Compact:</emphasis></emphasis> shows all booked
-            sessions only (see above)</para>
-        <para><emphasis><emphasis role="bold">Gap (days):</emphasis></emphasis> shows any days that
+        <section xml:id="timetable-compact">
+            <title>Compact View</title>
+            <para>Shows all booked sessions only. Does not show ay available spaces or timetable gaps.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/timetable_compact.png"/>
+                </imageobject>
+                <caption>
+                    <para>The Timetable window in Compact view</para>
+                </caption>
+            </mediaobject>
+        </section>
+        <section xml:id="timetable-gap-days">
+            <title>Gap (Days)</title>
+        <para>Shows any days that
             are fully available (no bookings that day), as well as all currently booked
             sessions</para>
         <mediaobject>
@@ -73,7 +78,10 @@
                 <para>The Timetable in Gap (days) view mode</para>
             </caption>
         </mediaobject>
-        <para><emphasis><emphasis role="bold">Gap (hours):</emphasis></emphasis> shows an hourly
+        </section>
+        <section xml:id="timetable-gap-hours">
+            <title>Gap (Hours)</title>
+            <para>Shows an hourly
             breakdown of each day from 9am to 6pm. For Sites, it will group each class by the hour.
             You can see a breakdown of each class within the hour by clicking the down chevron. For
             Rooms, it will display the name of the class for each hour it's booked. Any available
@@ -87,5 +95,6 @@
                 <para>Gap (hours) view mode shows classes grouped by hours of the day</para>
             </caption>
         </mediaobject>
+        </section>
     </section>
 </chapter>

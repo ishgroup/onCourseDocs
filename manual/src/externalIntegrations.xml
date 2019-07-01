@@ -12,7 +12,7 @@
             the integrations, as shown below.</para>
         <mediaobject>
             <imageobject>
-                <imagedata scalefit="1" width="70%" contentdepth="70%"
+                <imagedata scalefit="1" width="100%" contentdepth="100%"
                     fileref="images/integration_prefs.png" format="png" />
             </imageobject>
             <caption>
@@ -551,6 +551,94 @@
                     <para>Cloud Access script</para>
                 </caption>
             </mediaobject>
+        </section>
+        <section>
+            <title>Canvas</title>
+            <para>Canvas is an open-source learning management system for delivering training to
+                students. This integration allows you to automatically make enrolments, classes and
+                students using information you've already entered into onCourse. There is quite a
+                bit of setup work for this integration, so ensure you are following the instructions
+                precisely.</para>
+            <para>It's recommended that before you begin this integration, you get in touch with us
+                via Support first.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/canvas_integration.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>Canvas Integration window</para>
+                </caption>
+            </mediaobject>
+            <para>To use the onCourse integration with Canvas, you will first need to have set up a
+                developer key in Canvas itself. You can find instructions on how to do this here -
+                    <link
+                    xlink:href="https://canvas.instructure.com/doc/api/file.developer_keys.html"
+                />.</para>
+            <para>You will also need to have the relevant courses and classes set up in Canvas.
+                Canvas uses slightly different terminology here; courses are still 'courses', but
+                classes are known as 'sections'. You'll need to ensure that every course and class
+                you want captured by the integration is duplicated in both Canvas and onCourse.
+                However if you cannot set up every class, in the Canvas script there is a value
+                that, when set to true, can create new sections (classes) if one does not exist for
+                the equivalent course in onCourse.</para>
+            <para>When setting up a course in Canvas, it must use the same course code as the
+                equivalent class in onCourse. Similarly with classes, all sections in Canvas must
+                use the same code as the equivalent class in onCourse. E.G. if you set up a course
+                with the code CWC101, and it has one class (that you don't edit the code of), then
+                the course code would be CWC101 and the section/class code would be CWC101-1.</para>
+            <para>Once every course and class is created in both systems, create a tag in onCourse.
+                The tag must be set to Courses, and it must be called 'Canvas'. You must set this
+                tag on each course that's to be included in the integration.</para>
+            <para>As soon as you've got your developer key, you can continue with the integration in
+                onCourse:</para>
+            <para>
+                <orderedlist>
+                    <listitem>
+                        <para>in onCourse, go to File > Preferences > General</para>
+                    </listitem>
+                    <listitem>
+                        <para>Click the green + button next to the Integrations header in the
+                            left-hand column of the window that opens</para>
+                    </listitem>
+                    <listitem>
+                        <para>Find the Canvas integrations and select 'Add'</para>
+                    </listitem>
+                    <listitem>
+                        <para>Enter the URL of your Canvas instance. This will look like following -
+                            https://my_canvas_instance.instructure.edu.au/ - where
+                            'my_canvas_instance' would be personalised with the name you gave it
+                            during initial set up. You also need to enter your client id, and the
+                            client secret from your developer key. </para>
+                        <para>The account ID is the id number that corresponds with the account you
+                            wish to enrol students into. You can find this by logging into Canvas,
+                            then navigating to the left-hand menu bar. Select Admin > then select
+                            your account. This will open an accounts page. The account ID will be
+                            listed in the site's URL e.g. <link
+                                xlink:href="https://my_canvas_instance.instructure.edu.au/accounts/36"
+                            /></para>
+                    </listitem>
+                    <listitem>
+                        <para>Once you've completed filling in the expected fields in onCourse, a
+                            button labelled 'Configure' will appear. Click this and a pop-up window
+                            will appear, asking you to log in to Canvas and authorise onCourse to
+                            integrate with your account.</para>
+                    </listitem>
+                </orderedlist>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" width="100%" contentdepth="100%"
+                            fileref="images/canvas_login.png" format="png"/>
+                    </imageobject>
+                    <caption>
+                        <para>Canvas login window. This window can appear differently depending on
+                            the user</para>
+                    </caption>
+                </mediaobject>
+            </para>
+            <para>Lastly, you'll need to turn on the integration script. You can do this by going to
+                File > Preferences > Scripts, and enabling the 'Canvas Enrol' script. Make sure you
+                hit the Save button before closing the window.</para>
         </section>
     </section>
 </chapter>

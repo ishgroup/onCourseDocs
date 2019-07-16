@@ -92,27 +92,28 @@
                 </caption>
             </mediaobject>
             <para>On the left hand panel of the list view window are the application status filters.
-                By default, all bar expired will be ticked when you open the window. You can check
-                and uncheck these as needed to change the displayed list of applications.</para>
-            <para>In the top right hand corner of the list view are the add, delete and cog wheel
-                buttons. </para>
+                By default, all except expired will be ticked when you open the window. You can
+                check and uncheck these as needed to change the displayed list of
+                applications.</para>
+            <para>In the bottom-right hand corner of the list view are the fullscreen edit, add,
+                view mode, share (print) &amp; cogwheel buttons. </para>
             <para>The cogwheel option can be used to open in bulk related records to the
                 applications, such as the student records or course records, or used to send
-                messages to applicants.</para>
+                messages to applicants. It can also be used to delete an application record.</para>
             <para>Double clicking on an application record in the list view opens the edit view. The
-                application has three tabs, general, notes and documents.</para>
+                application has three sections: general, notes and documents.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
                         fileref="images/application_edit_view.png" format="png"/>
                 </imageobject>
                 <caption>
-                    <para>Editing an application record</para>
+                    <para>Editing an application record in full screen mode</para>
                 </caption>
             </mediaobject>
-            <para>The general tab contains fields that may be completed during the application or
-                application assessment process. The notes tab allows you add additional notes or
-                documents to the record.</para>
+            <para>The general section contains fields that may be completed during the application
+                or application assessment process. The notes section allows you add additional notes
+                or documents to the record.</para>
         </section>
         <section>
             <title>Creating applications</title>
@@ -123,9 +124,9 @@
                 by application'. You can not create an application for an open enrolment
                 course.</para>
             <para>You do not need to add any additional information at this point, however you can
-                optionally add additional notes or attach documents on the Notes tab, or assign a
-                tag to the record. Once complete, save and close the record, which you will then see
-                displayed in the list view.</para>
+                optionally add additional notes or attach documents on the Notes section, or assign
+                a tag to the record. Once complete, save and close the record, which you will then
+                see displayed in the list view.</para>
             <para>By default, all applications will be created with a 'new' status. New applications
                 mean those that have been received but not yet assessed.</para>
             <para>The date of the application and the source (office or web) will be automatically
@@ -146,7 +147,7 @@
             <title>Approving and rejecting applications</title>
             <para>The outcome status indicates what stage the application is at in the approval
                 process. </para>
-            <para>When an application has it's status changed in onCourse, this affects what actions
+            <para>When an application has its status changed in onCourse, this affects what actions
                 are available to the student. For example, only a student with an application of
                 status type 'offered' can proceed with an online enrolment in a class from the
                 course.</para>
@@ -170,6 +171,8 @@
             <para>When you are choosing to approve to reject an application, you may wish to make
                 your reason for the decision known to the student. In that case, provide some text
                 in the 'Reason for decision (student visible)' field in the application.</para>
+            <para>Any fields below the 'reason for decision' box that aren't a part of Notes or
+                Documents are custom fields that have been added in General Preferences.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -224,11 +227,11 @@
     </section>
     <section xml:id="applications-Web">
         <title>Applications on the web</title>
-        <para>Courses set to 'Enrolment by appplication' need one or more classes enabled to display
+        <para>Courses set to 'Enrolment by application' need one or more classes enabled to display
             on the web to allow students to apply.</para>
         <para>The usual 'Enrol now' button will say 'Apply now' and any information about the class
-            fee will be suppressed.  We suggest you add information to the course or class
-            description about the fees that will be applicab;le if the student's application is
+            fee will be suppressed. We suggest you add information to the course or class
+            description about the fees that will be applicable if the student's application is
             successful.</para>
         <mediaobject>
             <imageobject>
@@ -272,13 +275,13 @@
                         fileref="images/enrol_application_received.png" format="png"/>
                 </imageobject>
                 <caption>
-                    <para>The default enrolment application recevied email in HTML</para>
+                    <para>The default enrolment application received email in HTML</para>
                 </caption>
             </mediaobject>
         </section>
         <section>
             <title>Enrolling after application approval</title>
-            <para>Once a student's application documents have been received, you have detmined the
+            <para>Once a student's application documents have been received, you have determined the
                 appropriate fee for the student and set the fee override, and changed the
                 application status to success, a script called 'send application decision' (disabled
                 in onCourse by default, please enable if you wish to use it) will send the email
@@ -300,8 +303,8 @@
             <para>The application approval process is for a course. Once a student is approved, they
                 can then enrol in any class from that course, but can only use their application
                 approval to enrol in one class from the course.</para>
-            <para>Alternativly, if the student returns to the public website, locates the course and
-                clicks 'Apply now' after they have an approved application, they will be able to
+            <para>Alternatively, if the student returns to the public website, locates the course
+                and clicks 'Apply now' after they have an approved application, they will be able to
                 proceed directly to the enrolment and payment process. This only occurs if the
                 student uses the same first name, last name and email address they used for their
                 approved application.</para>

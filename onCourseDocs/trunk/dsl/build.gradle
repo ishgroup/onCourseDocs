@@ -18,7 +18,7 @@ dependencies {
     dsl 'ish.oncourse.angel:apidocs:99-SNAPSHOT:apidocs'
 }
 
-task extractAPIdocbook(type: org.gradle.api.tasks.Copy) {
+task extractAPIdocbook(type: Copy) {
     from zipTree(configurations.dsl.singleFile)
     into "${buildDir}/processed"
     filter(ReplaceTokens,tokens: [

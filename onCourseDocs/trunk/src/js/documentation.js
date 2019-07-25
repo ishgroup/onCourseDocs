@@ -1,5 +1,5 @@
-var version;
-var availableVersions = ['8.0', '9.0', '9.2', '9.3', 'latest'];
+let version;
+let availableVersions = ['8.0', '9.0', '9.12', 'latest'];
 
 $(document).ready(function() {
 	$('.chapter > .toc').prepend("<gcse:search></gcse:search>");
@@ -22,14 +22,14 @@ $(document).ready(function() {
       availableVersions.push(version);
       // and dedupe
       availableVersions = availableVersions.filter(function(item, pos) {
-        return availableVersions.indexOf(item) == pos;
+        return availableVersions.indexOf(item) === pos;
       });
     }
 
-    var versionsHtml = "";
+    let versionsHtml = "";
     availableVersions.sort().forEach(function(v) {
       versionsHtml = versionsHtml + "<a href='" + window.location.href.replace(/\/doc\/.*?\//,"/doc/" + v + "/") + "' class='btn";
-      if (v == version) {
+      if (v === version) {
         versionsHtml = versionsHtml + " active";
       }
       versionsHtml = versionsHtml + "'>" + v + "</a>";
@@ -52,12 +52,12 @@ $(document).ready(function() {
 
 // Custom search
   (function() {
-    var cx = '012973152760557279116:_k5mgzmdgpo';
-    var gcse = document.createElement('script');
+    const cx = '012973152760557279116:_k5mgzmdgpo';
+    const gcse = document.createElement('script');
     gcse.type = 'text/javascript';
     gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+    gcse.src = (document.location.protocol === 'https:' ? 'https:' : 'http:') +
         '//cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
+    const s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
   })();

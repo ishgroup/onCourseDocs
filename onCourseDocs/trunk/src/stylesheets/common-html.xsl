@@ -31,7 +31,6 @@
   </xsl:template>
   
   <xsl:template name="user.head.content">
-    <xsl:comment>[if lt IE 9]&gt;&lt;script src="js/html5shiv.js"&gt;&lt;/script>&lt;![endif]</xsl:comment>
     <meta name="viewport">
       <xsl:attribute name="content">width=device-width</xsl:attribute>
       <xsl:attribute name="initial-scale">1</xsl:attribute>
@@ -53,8 +52,8 @@
       </xsl:attribute>
     </link>
     <xsl:copy-of select="document('@buildDir@/processed/js/analytics.js',/)"/>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"/>
     <script type="text/javascript" src="js/documentation.js"/>
+    <script type="text/javascript" src="js/jquery.js"/>
     <link rel="stylesheet" type="text/css">
       <xsl:attribute name="href">
         <xsl:text>https://fonts.googleapis.com/css?family=Merriweather:300i,300,400|Port+Lligat+Slab</xsl:text>

@@ -228,7 +228,20 @@
                                     <emphasis>NOT_SENT</emphasis> or
                                     <emphasis>DO_NOT_SEND</emphasis>.</para>
                             <para>
-                                <programlisting>confirmationStatus in NOT_SENT, DO_NOT_SEND</programlisting>
+                                <programlisting>confirmationStatus in NOT_SENT, DO_NOT_SEND
+
+enrolment.student.id in (10,11,12)</programlisting>
+                            </para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>[ ]</term>
+                        <listitem>
+                            <para>Similar to IN is a shorthand to search against the record id (the
+                                primary key in the database).</para>
+                            <para>Square brackets denote this shortcut.</para>
+                            <para>
+                                <programlisting>enrolment.student[10,11,12]</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>

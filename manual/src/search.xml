@@ -507,11 +507,43 @@ createdOn 9:00 .. 19:00 today - 1 year</programlisting>
         <section xml:id="search-advanced-arithmetic">
             <title>Arithmetic</title>
             <para>
+                Basic arithmetic can be performed directly within the query language. Addition, subtraction, division, multiplication and modulus operations are all supported.
                 <programlisting>feeHelpAmount is 100 + 50
 feeHelpAmount is 100 - 50
 feeHelpAmount is 100 / 2
 feeHelpAmount is 100 * 5
 feeHelpAmount is 100 % 3</programlisting>
+            </para>
+        </section>
+        <section>
+            <title>Special attributes</title>
+            <para>Some record types have special attributes which aren't stored in the database, but
+                calculated on the fly. Some examples are:</para>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term>enrolmentCount</term>
+                        <listitem>
+                            <para>Search Class records on the current count of active
+                                enrolments.<programlisting>enrolmentCount = 3</programlisting></para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>isMinEnrolments</term>
+                        <listitem>
+                            <para>Search Class records to find those that have reached their minimum
+                                or
+                                above.<programlisting>isMinEnrolments = true</programlisting></para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>isMaxEnrolments</term>
+                        <listitem>
+                            <para>Search Class records to find those that have reached their maximum
+                                capacity.<programlisting>isMaxEnrolments = false</programlisting></para>
+                        </listitem>
+                    </varlistentry>
+                </variablelist>
             </para>
         </section>
     </section>

@@ -1,0 +1,753 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.13'>
+  <info>
+    <title>Release 9.13</title>
+    <pubdate>18 Aug 2019</pubdate>
+  </info>
+  <section role='important'>
+    <title>Important changes</title>
+    <para> </para>
+  </section>
+  <section role='major'>
+    <title>Major features</title>
+    <para> </para>
+  </section>
+  <section role='scripts'>
+    <title>Reports and scripts</title>
+    <itemizedlist>
+      <listitem>
+        <para>Banking deposit PDF report not printing
+          <systemitem>OD-13057</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Transaction report subreport to stretch with band with detail overflow
+          <systemitem>OD-13068</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <section role='minor'>
+      <title>Minor features</title>
+      <itemizedlist>
+        <listitem>
+          <para>Merge Contacts should be one transaction operation
+            <systemitem>OD-10334</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>DSL missing methods relatedFundingSource
+            <systemitem>OD-11968</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>No documetation for CertificateOutcome
+            <systemitem>OD-11983</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Adjust Query Language grammar and model 
+            <systemitem>OD-12150</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add survey link to enrolment confirmation email
+            <systemitem>OD-12164</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Finance. Invoices list 
+            <systemitem>OD-12400</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Finance. Invoices edit view
+            <systemitem>OD-12401</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Finance. Payment in edit view
+            <systemitem>OD-12403</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Invoice API
+            <systemitem>OD-12406</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Cogwheel (Invoice) - Apply payment In
+            <systemitem>OD-12410</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Cogwheel (Invoice) - duplicate and reverse invoice
+            <systemitem>OD-12415</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Cogwheel (Invoice) - apply payment out
+            <systemitem>OD-12418</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Cogwheel (Invoice) - Contra invoice API
+            <systemitem>OD-12423</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>mariadb connector readahead: Performance improvement
+            <systemitem>OD-12542</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Discount List React UI
+            <systemitem>OD-12619</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Use read only cayenne context in EntityApiImp and AntlrAqlService
+            <systemitem>OD-12661</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement `fake path` for Aql named queries with properties
+            <systemitem>OD-12665</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement aliases for plural meaning in toMany relations
+            <systemitem>OD-12666</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement new syntax `Curly brackets` - {}
+            <systemitem>OD-12667</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement new syntax `Square brackets` - []
+            <systemitem>OD-12668</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add to Aql autocompletion (lexer/UI improvment)
+            <systemitem>OD-12669</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Applications edit view
+            <systemitem>OD-12761</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Applications list view
+            <systemitem>OD-12762</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Assessments list view
+            <systemitem>OD-12765</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Certificate edit view
+            <systemitem>OD-12767</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Certificates list view
+            <systemitem>OD-12768</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Certificates API
+            <systemitem>OD-12769</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Dashboard waiting list 4 weeks
+            <systemitem>OD-12775</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Export Templates API
+            <systemitem>OD-12789</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Voucher products list view
+            <systemitem>OD-12796</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Voucher products edit view
+            <systemitem>OD-12797</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Membership products list view
+            <systemitem>OD-12800</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Membership products edit view
+            <systemitem>OD-12801</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Article products edit view
+            <systemitem>OD-12802</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Article products list view
+            <systemitem>OD-12803</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Sales (product items) list view
+            <systemitem>OD-12805</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Messages API
+            <systemitem>OD-12809</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Messages list view
+            <systemitem>OD-12810</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Messages edit view
+            <systemitem>OD-12811</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Outcomes API
+            <systemitem>OD-12814</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Student Feedback list view
+            <systemitem>OD-12820</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Student Feedback API
+            <systemitem>OD-12821</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Sort order invoices dashboard
+            <systemitem>OD-12854</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Improve AQL to work with negative numbers
+            <systemitem>OD-12871</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Corporate Pass - Minor label changes
+            <systemitem>OD-12921</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Refactor Discount swagger definitions
+            <systemitem>OD-12939</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Canvas integration
+            <systemitem>OD-12949</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove training packages
+            <systemitem>OD-12968</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contact merging API
+            <systemitem>OD-12969</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Print Certificates permissions
+            <systemitem>OD-12980</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Change behavior and validations for properties: studentAgeUnder, studentAge
+            <systemitem>OD-12984</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>User email address mandatory
+            <systemitem>OD-13010</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Certificate edit view Overflow Issue
+            <systemitem>OD-13025</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React Discount: takes a long time to opening
+            <systemitem>OD-13032</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Virtual scrolling for Nested List
+            <systemitem>OD-13034</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove document freezing feature.
+            <systemitem>OD-13038</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove AVETMISS 7
+            <systemitem>OD-13039</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove Old scripts UI
+            <systemitem>OD-13040</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Minor UI fixes. Find out possibility to use TabsListItem like menu item without rendering item label in working area.
+            <systemitem>OD-13048</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement AQL quicksearch (using ~) for Outcome entity
+            <systemitem>OD-13051</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Student Feedback edit view
+            <systemitem>OD-13059</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add corresponded title for timetable frame
+            <systemitem>OD-13060</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Updated integration logo - Cloud Assess
+            <systemitem>OD-13070</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add help button ('?') to Qualification, Module and Tutor Pay edit views
+            <systemitem>OD-13079</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>VET certificate should print with QR code enabled by default
+            <systemitem>OD-13080</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Make minor refactoring in UI for products
+            <systemitem>OD-13085</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Change UI labels (spelling and capitalization) for ArticleProduct, MembershipProduct
+            <systemitem>OD-13098</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Sales (product items) edit view
+            <systemitem>OD-13099</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>ContactMergeApi implementation
+            <systemitem>OD-13101</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Sales (product items) API
+            <systemitem>OD-13103</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>add course/class code to canvas integration closure
+            <systemitem>OD-13109</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: PaymentIn API
+            <systemitem>OD-13113</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Timetable filters React
+            <systemitem>OD-13121</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Invoice API issues
+            <systemitem>OD-13124</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Upgrade Bootique to 1.0
+            <systemitem>OD-13125</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Lists: 3-column view. Records disappear for user after horizontal scrolling in 2-column view
+            <systemitem>OD-13126</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Invoice cogwheel Contra invoice modal 
+            <systemitem>OD-13128</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Angel test server unavailable long period of time
+            <systemitem>OD-13132</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>onCourse micropower integration
+            <systemitem>OD-13134</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add disable property to NestedList
+            <systemitem>OD-13135</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Refactoring: use new Cayenne filters
+            <systemitem>OD-13138</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add validate property to NestedList like in redux-form Field
+            <systemitem>OD-13139</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Money style in Lists tables
+            <systemitem>OD-13140</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React Migration: Voucher products API. Additional validation logic.
+            <systemitem>OD-13143</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Make right alignment for heading in NestedTable for currency field
+            <systemitem>OD-13144</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Merge Contacts React
+            <systemitem>OD-13151</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Open a new UI from dashboard and main menu
+            <systemitem>OD-13153</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Money component 
+            <systemitem>OD-13159</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>add methods to flatten join between documents to entitys they are attached to
+            <systemitem>OD-13161</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>restyle timetable session component
+            <systemitem>OD-13162</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Fake paths for Timetable AQL
+            <systemitem>OD-13163</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Discounts for enrolments into same course
+            <systemitem>OD-13166</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add 'Discount.limitPreviousEnrolment' field to replication
+            <systemitem>OD-13168</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add tags for sessions on timetable
+            <systemitem>OD-13179</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Timetable layout update
+            <systemitem>OD-13183</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Colour code tags
+            <systemitem>OD-13186</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Colour picker for tag list
+            <systemitem>OD-13187</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Display tags in timetable
+            <systemitem>OD-13188</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Query for classes enrolment count
+            <systemitem>OD-6327</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Messaging engine to render from email templates
+            <systemitem>OD-9712</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>ContactDedupeController: we should have a possibility to write junits for merge contact use cases
+            <systemitem>OD-9788</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='fixes'>
+      <title>Fixes</title>
+      <itemizedlist>
+        <listitem>
+          <para>AQL search: Error 500 occurs when quotation are used in conjunction with logical operators
+            <systemitem>OD-12393</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Implement custom css scrollbars
+            <systemitem>OD-12639</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Data upgrade and validation: duplicated DiscountCourseClass relations
+            <systemitem>OD-12712</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>onCourse demo login not working
+            <systemitem>OD-12746</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Banking Deposit window doesn't show payment status in new UI
+            <systemitem>OD-12880</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Corporate Pass &gt; PDF. Not all records are displayed in printed PDF
+            <systemitem>OD-12901</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Corporate Pass: Not all list is displayed in Contact drop-down when searching
+            <systemitem>OD-12919</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Search for contact in the new Corporate Pass screen
+            <systemitem>OD-12988</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Tag UI lag
+            <systemitem>OD-12990</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Invoice AQL generated sources is broken
+            <systemitem>OD-13007</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Advanced search: Some issues
+            <systemitem>OD-13011</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Dashboard 'Last enrolment' text wraps incorrectly for courses with long names
+            <systemitem>OD-13021</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Waiting Lists: Student drop-down shows companies
+            <systemitem>OD-13036</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>WaitingList_Site relation is not replicated when made from react
+            <systemitem>OD-13045</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Banking deposit: UI shows not all records after Deposit banking
+            <systemitem>OD-13063</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>All edit views should have dropdown from help ('?') button
+            <systemitem>OD-13065</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Waiting Lists: XML export fails if Waiting List contains a site without longitude and latitude
+            <systemitem>OD-13066</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Send certificate scripts causing date issued to display as null
+            <systemitem>OD-13069</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Show spinner and don't display empty fields when action get/discount is performed in DiscountEditView
+            <systemitem>OD-13071</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Adjust quick search for Contact and Corporate Pass
+            <systemitem>OD-13077</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Corporate pass: Different Expire dates are displayed
+            <systemitem>OD-13081</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Sites/Rooms: Error occurs when searching document
+            <systemitem>OD-13084</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Audit Logging - rendering issues when scrolling
+            <systemitem>OD-13086</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>angel client webpack build failing
+            <systemitem>OD-13095</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Don't grey out uneditable fields
+            <systemitem>OD-13106</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Invoice-to should not be editable
+            <systemitem>OD-13107</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contact type-ahead should have minimum chars
+            <systemitem>OD-13108</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Deposit Banking: Some issues
+            <systemitem>OD-13118</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Course API Error
+            <systemitem>OD-13119</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Preference URL constructions
+            <systemitem>OD-13123</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Corporate pass: 'null' is displayed in Contact drop-down for companies
+            <systemitem>OD-13146</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Transactions default filtering broken after AQL changes
+            <systemitem>OD-13147</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>'Largest waiting lists' on Dasboard works incorrectly
+            <systemitem>OD-13157</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>A lot of entities throw server error 500 when deleting record
+            <systemitem>OD-13160</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Component Score uses incorrect formName in NestedEditView
+            <systemitem>OD-13169</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Timetable aql queries with 'enrolmentCount' return no sessions
+            <systemitem>OD-13173</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Discounts Edit View issues
+            <systemitem>OD-13177</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Memberships can no longer be applied across relationships
+            <systemitem>OD-13184</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Memberships - Cannot offer free ($0 fee) membership
+            <systemitem>OD-13185</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Clicking on course name in Timetable logs out user
+            <systemitem>OD-13193</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='web'>
+      <title>Web features</title>
+      <itemizedlist />
+    </section>
+    <section role='web-fixes'>
+      <title>Web fixes</title>
+      <itemizedlist />
+    </section>
+  </section>
+</chapter>

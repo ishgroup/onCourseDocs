@@ -296,11 +296,13 @@
                 in the first section.</para>
             <para>More often, discounts are restricted to people who meet certain criteria. A
                 discount may require the student to meet multiple criteria. For example, in the
-                Senior's Discount window below, the student needs to provide both a Senior's Card
-                and a date of birth that shows they are over 60. For this to work effectively, you
-                would need to ensure that the date of birth field was set to mandatory for website
-                enrolments, otherwise clients just providing the details of their seniors card would
-                not be sufficient to access the discount.</para>
+                Senior's Discount window below, the student needs to provide a Senior's Card, but
+                you may also include one that proves they must be over a certain age as well. For
+                this to work effectively, you would need to ensure that the date of birth field was
+                set to mandatory for website enrolments, otherwise clients just providing the
+                details of their seniors card would not be sufficient to access the discount.</para>
+            <para>You can limit the discount to students who have previously enrolled in the same
+                course or students with a certain membership status.</para>
             <para>To link concessions or memberships to the discount record, they need to already be
                 set up in your onCourse records. See <link xlink:href="concessions.html">the concessions
                     and memberships chapter</link> for more information about how to create a
@@ -324,44 +326,18 @@
         <section xml:id="discounts-Classes">
             <title>Defining the eligible classes</title>
             <para>The classes section of the discount window is where you define which classes can
-                access this discount during enrolment. </para>
+                access this discount during enrolment. Make sure the 'Limit to Classes' switch is
+                on, then type in the name or code of the classes you want to add. A drop-down
+                selection of the relevant classes to your search will display below, and you simply
+                need to click 'Add' to add it to the list of eligible classes.</para>
             <para>Using the checkbox option 'Add this discount when creating or duplicating classes'
-                on the bottom of the class section will automatically add this discount to every new
-                class you create from now on. This can be useful to select for a global discount
-                that applies to all your classes, like an Early Bird discount. </para>
-            <para>If you choose this option, you should also select the 'All current and pending
-                classes' to add the discount to the classes you have already created.</para>
-            <para>Alternatively, you can select a restricted set of classes by using the add classes
-                option.</para>
-            <para>Click on the + symbol and then choose from the following options when defining
-                which Classes are to be assigned to the discount:</para>
-            <itemizedlist>
-                <listitem>
-                    <para>All current and pending classes - this selects all the classes currently
-                        in onCourse. If you create a new class however (not using the class
-                        duplication process, which allows you to bring over the discounts) it will
-                        not be added to the discount.</para>
-                </listitem>
-                <listitem>
-                    <para>Classes from a course - this selects all the current classes from the
-                        course. If you create a new class however (not using the class duplication
-                        process, which allows you to bring over the discounts) it will not be added
-                        to the discount.</para>
-                </listitem>
-                <listitem>
-                    <para>A class - select a single class only</para>
-                </listitem>
-                <listitem>
-                    <para>Classes tagged with - selects the classes currently tagged with your
-                        selection. This will not add future classes you tag with this option.</para>
-                </listitem>
-            </itemizedlist>
-            <tip>
-                <para>Dependent on which option you select, onCourse will tell you how many Classes
-                    are to be added to the discount. </para>
-            </tip>
+                will automatically add this discount to every new class you create from now on. This
+                can be useful to select for a global discount that applies to all your classes, like
+                an Early Bird discount. If chosen, ensure you leave the 'Limit to Classes' switch
+                turned off, so the discount can apply to all yoru classes. </para>
             <para>Once you have added classes, you can also use the garbage icon to delete classes
-                from the list. The delete option works on one class at a time.</para>
+                from the list. The icon is hidden until you hover your mouse over a class in this
+                section. The delete option works on one class at a time.</para>
             <para>You can assign all current and pending classes to the discount multiple times - it
                 will not create duplicate records. During the class roll over process, it will also
                 select the option to apply all existing discounts to the new class record by
@@ -1045,8 +1021,8 @@
                 exclude GST from any profitability calculations.</para>
             <para>As the $100 discount is actually being given on a $272.73 class fee, reducing it
                 to $172.73, the GST now must be recalculated on the new fee. The GST of $17.27
-                (instead of the previous GST of $27.27 on the undiscounted fee) now brings the total
-                fee payable back to $190.</para>
+                (instead of the previous GST of $27.27 on the standard fee) now brings the total fee
+                payable back to $190.</para>
             <para>Obviously, the different end values of the discounts are most obvious when
                 comparing the same GST exclusive and GST inclusive total fees side by side. If,
                 instead like in the first example, your GST inclusive class of $300 was a total cost

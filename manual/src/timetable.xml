@@ -101,7 +101,7 @@
         </section>
     </section>
     <section>
-        <title>Custom Timetable filters</title>
+        <title>Creating Custom Timetable Filters</title>
         <para>You can apply custom filters to the timetable utilising the onCourse advanced query
             language, which you can learn about in more detail here, <link
                 xlink:href="search.html">in our search chapter</link>.</para>
@@ -135,11 +135,21 @@
                 </listitem>
             </itemizedlist>
         </para>
-        <para>Selections in the drop down box show which entities the data is connected across
-            within the onCourse database. E.G. the courses selection appears like so:</para>
+        <para>Selections in the drop down box show you which entities the data is connected across
+            within the onCourse database. E.G. the courses selection shows how the class session is
+            connected to the class (called CourseClass in the database), which is connected to
+            Course. It appears like so:</para>
         <para><code>session.courseClass.course.</code></para>
-        <para>Selecting this would allow you to create a filter that's quickly accessible from the
-            custom filters section in the left-hand panel for anything related to courses, like
-            which courses are on the specified date with the word "music" in its name.</para>
+        <para>One example of a simple filter would be if you wanted to see when all your courses
+            with Music in the name are on, you would select , then adding the following AQL
+            code:</para>
+        <para><code>name contains "Music"</code></para>
+        <para>AQL uses pre-selectable options to choose from, which makes creating filters like
+            this, or even far more complex ones, very simple.</para>
+        <para>You can save any custom filter you create by clicking the sliders icon at the end of
+            the search box. You can save it so it's visible for everyone, or just for you. When you
+            choose that, the filter will appear in the panel on the left with a bank name field.
+            Enter your name, then click the Save icon and the filter will be saved for you to recall
+            at any time.</para>
     </section>
 </chapter>

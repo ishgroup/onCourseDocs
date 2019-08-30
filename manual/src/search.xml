@@ -248,6 +248,22 @@ enrolment.student.id in (10,11,12)</programlisting>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
+                        <term>{ }</term>
+                        <listitem>
+                            <para>Curly brackets allow you to reference a record attribute multiple times without needing to retype the full path to that attribute.</para>
+                            <para>The following query can be simplified using curly brackets:
+                                <programlisting>outcome.enrolment.status == REFUNDED and outcome.enrolment.student.contact.lastName == 'Smith'</programlisting>
+                            </para>
+                            
+                            <para>
+                                <programlisting>outcome.enrolment{status == REFUNDED and student.contact.lastName == 'Smith'}</programlisting>
+                                Notice how the path from 'outcome' to the 'enrolment' attribute is only typed out once. The query inside the curly braces is in the scope of the 
+                                'enrolment' attribute.
+                            </para>
+                            
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
                         <term>BEFORE</term>
                         <listitem>
                             <para>BEFORE can be used in conjunction with dates (or date-specific

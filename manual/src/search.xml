@@ -228,7 +228,7 @@
                                     <emphasis>NOT_SENT</emphasis> or
                                     <emphasis>DO_NOT_SEND</emphasis>.</para>
                             <para>
-                                <programlisting>confirmationStatus in NOT_SENT, DO_NOT_SEND
+                                <programlisting>confirmationStatus in (NOT_SENT, DO_NOT_SEND)
 
 enrolment.student.id in (10,11,12)</programlisting>
                             </para>
@@ -237,11 +237,13 @@ enrolment.student.id in (10,11,12)</programlisting>
                     <varlistentry>
                         <term>[ ]</term>
                         <listitem>
-                            <para>Similar to IN is a shorthand to search against the record id (the
-                                primary key in the database).</para>
-                            <para>Square brackets denote this shortcut.</para>
+                            <para>Square brackets are a shorthand to search for the record id (the
+                                primary key in the database) in a list, denoted by [ ].</para>
                             <para>
                                 <programlisting>enrolment.student[10,11,12]</programlisting>
+                            </para>
+                            <para>This query is equivalent to:
+                                <programlisting>enrolment.student.id in (10,11,12)</programlisting>
                             </para>
                         </listitem>
                     </varlistentry>

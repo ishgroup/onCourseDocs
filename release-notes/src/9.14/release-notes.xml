@@ -2,15 +2,35 @@
 <chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.14'>
   <info>
     <title>Release 9.14</title>
-    <pubdate>30 Sep 2019</pubdate>
+    <pubdate>10 Oct 2019</pubdate>
   </info>
   <section role='important'>
     <title>Important changes</title>
-    <para> </para>
+    <para> With export templates now moved to the Automation window and the new user interface,
+      we've locked down all built-in onCourse exports so they can't be modified. Instead, you can
+      duplicate and modify your own copy of those exports whenever you need to. This means that the
+      built-in exports will automatically update with any new features or bug fixes in each release
+      of onCourse.</para>
+    <para>We've reviewed all our customer systems and for any exports you have modified, we've
+      duplicated them for you already so that your changes are not overwritten.</para>
   </section>
   <section role='major'>
     <title>Major features</title>
-    <para> </para>
+    <section>
+      <title>Contact merge</title>
+      <para>The contact merging has been redesigned to be easier to use.</para>
+    </section>
+    <section>
+      <title>Simplify access to advanced search</title>
+      <para>Instead of having to switch between advanced and simple search, the search field figures
+        out what you are trying to do and displays the records you are looking for.</para>
+    </section>
+    <section>
+      <title>Exports with variables and options</title>
+      <para>Exports can now be given variables to be entered at the time of the export. For example,
+        you might create an export for a date range and prompt the user at the time of export for
+        the date.</para>
+    </section>
   </section>
   <section role='scripts'>
     <title>Reports and scripts</title>
@@ -30,63 +50,17 @@
           <systemitem>OD-13268</systemitem>
         </para>
       </listitem>
+      <listitem>
+        <para>Historic debtors with aging <systemitem>OD-13209</systemitem>
+        </para>
+      </listitem>
     </itemizedlist>
     <section role='minor'>
       <title>Minor features</title>
       <itemizedlist>
         <listitem>
-          <para>Payment Out API
-            <systemitem>OD-12426</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React migration: Assessments API
-            <systemitem>OD-12766</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React migration: Contacts API
-            <systemitem>OD-12780</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React migration: Courses API
-            <systemitem>OD-12783</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React migration: Email Templates API
-            <systemitem>OD-12788</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React migration: Export Templates API
-            <systemitem>OD-12789</systemitem>
-          </para>
-        </listitem>
-        <listitem>
           <para>React migration: Export Templates edit view
             <systemitem>OD-12791</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React migration: Enrolments API
-            <systemitem>OD-12808</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>React migration: Tutor roles API
-            <systemitem>OD-12833</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Contact merging API
-            <systemitem>OD-12969</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Class duplicate UI
-            <systemitem>OD-12994</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -95,28 +69,11 @@
           </para>
         </listitem>
         <listitem>
-          <para>Merge Contacts React
-            <systemitem>OD-13151</systemitem>
+          <para>Add PDF/CSV/XML export for Messages <systemitem>OD-13182</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>add methods to flatten join between documents to entitys they are attached to
-            <systemitem>OD-13161</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Share: Add PDF/CSV/XML export for Messages
-            <systemitem>OD-13182</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Historic debtors with aging
-            <systemitem>OD-13209</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>add args to exports
-            <systemitem>OD-13232</systemitem>
+          <para>Add hardcoded variables to exports <systemitem>OD-13232</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -145,23 +102,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Remove run(args)
-            <systemitem>OD-13270</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>9.14 Client dependencies upgrade
-            <systemitem>OD-13271</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Simplify advanced search help
-            <systemitem>OD-13284</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Merge simple/advanced query
-            <systemitem>OD-13285</systemitem>
+          <para>Remove run(args) from scripts <systemitem>OD-13270</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -200,13 +141,23 @@
           </para>
         </listitem>
         <listitem>
-          <para>Improve share menu for exports
+          <para>Improve share dialog for exports
             <systemitem>OD-13316</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>rename onCourse exports to their keycodes
-            <systemitem>OD-13321</systemitem>
+          <para>Remove Scripts item from main menu
+            <systemitem>OD-13332</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Merge save/success search icons
+            <systemitem>OD-13333</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove 'Limit to Classes' switch from discounts
+            <systemitem>OD-13335</systemitem>
           </para>
         </listitem>
       </itemizedlist>
@@ -237,6 +188,11 @@
         <listitem>
           <para>Unit tests: angel 9.13
             <systemitem>OD-13239</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Budget/Tutor Pay issues
+            <systemitem>OD-13243</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -280,7 +236,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>New Certifictes window not showing all search results
+          <para>New Certificates window not showing all search results
             <systemitem>OD-13275</systemitem>
           </para>
         </listitem>
@@ -325,7 +281,7 @@
           </para>
         </listitem>
         <listitem>
-          <para>Add validation for setting tag as 'Mandatory' 
+          <para>Add validation for setting tag: 'Mandatory'  &amp; 'Limit to one'
             <systemitem>OD-13291</systemitem>
           </para>
         </listitem>
@@ -379,15 +335,32 @@
             <systemitem>OD-13323</systemitem>
           </para>
         </listitem>
+        <listitem>
+          <para>Search for string without quotes
+            <systemitem>OD-13324</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Failed tests on Angel
+            <systemitem>OD-13326</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Finalise period: All elements become inactive after clicking outside dialog
+            <systemitem>OD-13327</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Banking Deposits: Add button (+) does not work in 3-column view
+            <systemitem>OD-13330</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Sales 'purchased by' should sort by last name
+            <systemitem>OD-13334</systemitem>
+          </para>
+        </listitem>
       </itemizedlist>
-    </section>
-    <section role='web'>
-      <title>Web features</title>
-      <itemizedlist />
-    </section>
-    <section role='web-fixes'>
-      <title>Web fixes</title>
-      <itemizedlist />
     </section>
   </section>
 </chapter>

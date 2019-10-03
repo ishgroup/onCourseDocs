@@ -385,11 +385,12 @@
 	</section>
 	<section xml:id="cancellingEnrolments-PaymentOut">
 		<title>Refunding a student via Payment Out</title>
-		<para>If you wish to give a contact back their money, you need to create a payment out
-			record. You can return cash to the payer, write a cheque, or if they have paid by a
-			credit card through onCourse (not via an EFTPOS terminal) you can automatically reverse
-			the payment back to their card. Manual credit card reversals can also be done through an
-			EFTPOS terminal, but you will need to contact the payer to get their card details first. </para>
+		<para>If you wish to give a contact back their money, you need to create a credit note first, and
+			then a payment out record. You can return cash to the payer, write a cheque, or if they
+			have paid by a credit card through onCourse (not via an EFTPOS terminal) you can
+			automatically reverse the payment back to their card. Manual credit card reversals can
+			also be done through an EFTPOS terminal, but you will need to contact the payer to get
+			their card details first. </para>
 		<tip>
 			<para>If you refund a fee via an EFTPOS terminal, you will still need to record a payment out
 				entry within onCourse, simply select payment type 'EFTPOS', even if the reversal was
@@ -397,58 +398,37 @@
 				type.</para>
 		</tip>
 		<example>
-			<title>How to refund a student via Payment Out</title>
-			<orderedlist>
-				<listitem>
-					<para>In onCourse go to "Financial" then "Payment Out" </para>
-				</listitem>
-				<listitem>
-					<para>Click the + button to create a new payment out record</para>
-				</listitem>
-				<listitem>
-					<para>In the new payment out record, enter the name of the contact who has the credit
-						note</para>
-				</listitem>
-				<listitem>
-					<para> You will see the total balance of their credit notes available to be
-						refunded. Some contacts may have multiple credit notes. You can refund all
-						or a part of their total balance. You can not refund more than the total
-						balance.</para>
-				</listitem>
-				<listitem>
-					<para>Chose the method with which you wish to refund the contact. If you choose
-						credit card, any available transaction will be available from the list to
-						reverse. The list of available transactions is ordered by date with the most
-						recent transaction at the top of the list. As shown in the example below.
-					</para>
-				</listitem>
-				<listitem>
-					<para>Save the payment out record. The contacts credit note balance will be
-						reduced by the amount you have just refunded.</para>
-				</listitem>
-				<listitem>
-					<para>Where needed, you can adjust the 'date paid' for the payment out to a date
-						other than today, if the payment out was processed in the past (e.g. EFT)
-						and you are recording it in onCourse some days later.</para>
-				</listitem>
-			</orderedlist>
-		</example>
-		<example>
 			<title>How to create a payment out from the credit note</title>
 			<orderedlist>
 				<listitem>
-					<para>Go to "Invoice" and single click on the credit note you want to apply a
-						payment out to</para>
+					<para>Go to the Invoices window and single click on the credit note you want to apply a payment
+						out to. Clicking the + button directly on the Payments Out window will also
+						re-direct you to the Invoices window.</para>
 				</listitem>
 				<listitem>
-					<para>From the cogwheel choose 'apply payment out'</para>
+					<para>From the cogwheel choose 'apply payment out'. This will create a new Payment Out
+						record</para>
 				</listitem>
 				<listitem>
-					<para>The Payment Out window will open with the contact name pre-filled</para>
+					<para>The Payment Out window will open displaying the new record, the contact name will be
+						pre-filled</para>
 				</listitem>
 				<listitem>
-					<para>Continue with selecting the refund type and amount as per the process
-						above, 'How to refund a student via Payment Out' </para>
+					<para>Continue with selecting the refund type from the drop-down box, and type in the amount to
+						be refunded. NOTE: if the type chose is Credit Card, you must also choose
+						the payment that is being refunded from the drop down box list of previous
+						payments made by the listed contact</para>
+				</listitem>
+				<listitem>
+					<para>Select a credit note to apply the refund to. Refunds must always apply to
+						a credit note, otherwise the system will not allow it to be processed. The
+						refund amount must be less than or equal to the amount in the credit note
+						selected.</para>
+				</listitem>
+				<listitem>
+					<para>Hit Save to process the refund. If there is an error, or if the bank
+						declines the refund for whatever reason, you'll be notified via an error
+						message.</para>
 				</listitem>
 			</orderedlist>
 		</example>
@@ -469,24 +449,6 @@
 			<caption>
 				<para>Selecting the credit card transaction to be refunded from the drop down
 					list</para>
-			</caption>
-		</mediaobject>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/Card_declined.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>The message you will see if the credit card payment out was declined</para>
-			</caption>
-		</mediaobject>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/Failed.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>The message you will see if the payment out is failed</para>
 			</caption>
 		</mediaobject>
 		<section>

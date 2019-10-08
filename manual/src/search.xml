@@ -5,9 +5,9 @@
     <section xml:id="search-introduction">
         <title>Introduction</title>
         <para>onCourse has powerful tools for searching across every piece of data you have
-            collected. You can search in lists, perform advanced searches on any attribute of the
-            data and use these searches to write scripts and reports. In this chapter we'll start
-            from the simplest tools and then show you more advanced possibilities.</para>
+            collected. You can search in lists, perform basic and advanced searches on any attribute
+            of the data and use these searches to write scripts and reports. In this chapter we'll
+            start from the simplest tools and then show you more advanced possibilities.</para>
     </section>
     <section xml:id="search_findAnything">
         <title>Find Anything</title>
@@ -35,7 +35,10 @@
             </mediaobject></para>
         <para>Typing into the Search bar will retrieve all records that match your input across
             certain fields. For example, in the Contact list, the text you enter will be found in
-            first name, last name and email address fields. <mediaobject>
+            first name, last name and email address fields. Simple search terms will automatically
+            wrap in quotes. You can also type more complex queries into this field using the
+            Advanced Query Language, <link xlink:href="search.xml#search-advanced">covered
+                here</link>.<mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
                         fileref="images/search/searchFuzzyName.png" format="png"/>
@@ -76,7 +79,7 @@
             contacts related as Employer. From this new window, you can use the cog wheel to send a
             message to the student's employers.</para>
         <note>
-            <para>Find related can only be run on a max of 1000 records</para>
+            <para>Find related can only be run on a max of 1000 records at any one time</para>
         </note>
         <mediaobject>
             <imageobject>
@@ -89,12 +92,14 @@
         </mediaobject>
     </section>
     <section xml:id="search-advanced">
-        <title>Advanced search query language</title>
-        <para>You can construct more powerful Advanced Search queries using the onCourse query
-            language. You can toggle between Basic and Advanced Search by clicking the magnifying
-            glass icon on the left of the search panel. When you are in advanced mode, a plus symbol
-            appears next to the icon. It might seem intimidating at first, but understanding the
-            logic of this feature will help hone in on finding exactly the right data you need.<mediaobject>
+        <title>Advanced Query Language</title>
+        <para>You can construct more powerful search queries using the onCourse query language. The
+            search bar will toggle automatically between basic and advanced modes depending on what
+            you type into the field. For example, when searching for the name of a Site, once the
+            field recognises you're typing in a site name, it'll surround it with quotes. But when
+            it recognises you're typing a more advanced query, it'll then automatically enter
+            advanced mode. It might seem intimidating at first, but understanding the logic of this
+            feature will help hone in on finding exactly the right data you need.<mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
                         fileref="images/search/searchAdvanced.png" format="png"/>
@@ -130,7 +135,7 @@
         </mediaobject>
         <section xml:id="search-advanced-fields">
             <title>Fields</title>
-            <para>When you click into the Advanced Search box, a drop-down list of available
+            <para>When you click into the search box, a drop-down list of available
                     <emphasis>fields</emphasis> will appear. The fields that are available to use in
                 queries will change depending on which record type you are searching on. </para>
             <mediaobject>

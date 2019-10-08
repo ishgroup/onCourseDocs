@@ -8,15 +8,16 @@
 	</para>
 	<para>This chapter is recommended for Intermediate to Advanced users of onCourse who have a good
 		general understanding of structured data and the onCourse schema.</para>
+	<para>You can find Exports within the Automation section of onCourse.</para>
 	<section xml:id="importExport-Export">
 		<title>Export Templates</title>
 		<section>
 			<title>onCourse Export files</title>
-			<para>Go to File > Preferences > Export templates to see the list of export files
-				available in your onCourse application. </para>
-			<para> The list of exports available to you will include those supplied as part of the
-				default onCourse application configuration and any additional custom exports you
-				have created or have commissioned ish to create on your behalf.</para>
+			<para>Go to File > Preferences > Automation, and find the Exports section to see the list of
+				export files available in your onCourse application. </para>
+			<para>The list of exports available to you will include those supplied as part of the default
+				onCourse application configuration and any additional custom exports you have
+				created or have commissioned ish to create on your behalf.</para>
 			<para>Generally, export files that end with CSV (comma separated files) are designed to
 				be opened, viewed and edited in a plain text editor or spreadsheet application.
 				These are flat files containing columns and rows of data. Export files that end with
@@ -27,10 +28,9 @@
 				export format type. </para>
 			<para>The Entity is the object in the database that the export is joined to, and will
 				indicate which list view you will be able to find this export. </para>
-			<para>The Code is a unique identifier for the export and when supplied by ish as part of
-				the default onCourse application will begin with 'ish'. When the export is custom,
-				is should begin with an identifying acronym for the organisation. The last part of
-				the code defines the export file type, for example, CSV or XML.</para>
+			<para>The Code is a unique identifier for the export and when supplied by ish as part of the
+				default onCourse application will begin with 'ish'. When the export is custom, is
+				should begin with an identifying acronym for the organisation. </para>
 			<para>The Version number allows ish to automatically update the export, for example, to
 				add additional fields as they are added to the database structure, when new versions
 				of the onCourse application are deployed.</para>
@@ -41,9 +41,7 @@
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
 						fileref="images/exports/export_template_list.png" format="png"/>
 				</imageobject>
-				<caption>
-					<para>List view showing the export templates available in onCourse</para>
-				</caption>
+				<caption>Export templates in the Automation view</caption>
 			</mediaobject>
 		</section>
 		<section>
@@ -51,8 +49,8 @@
 			<para>Like print reports, the list of available exports in the list view are those
 				exports linked to the entity, or list view, you are viewing.</para>
 			<para>Each list view in onCourse has the ability to export data in a variety of formats. You can
-				either highlight the records you wish to export and choose File > Import/Export >
-				Export (tablename) or click on the Share Icon and select 'CSV'.</para>
+				either highlight the records you wish to export and click on the Share Icon, then
+				select 'Excel'.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -64,19 +62,16 @@
 			</mediaobject>
 			<para>A dialog will appear giving you some choices:<itemizedlist>
 					<listitem>
-						<para><emphasis role="bold">Export template:</emphasis> This list allows you
-							to choose from one of the exports joined to this entity. There will
-							usually be at least one CSV and one XML option to select from.</para>
+						<para><emphasis role="bold">Export template name:</emphasis> This list allows you to choose
+							from one of the exports joined to this entity. There will usually be at
+							least one CSV and one XML option to select from.</para>
 					</listitem>
 					<listitem>
 						<para>Based on:</para>
-						<para><emphasis role="bold">Listed records:</emphasis> every record in the
-							list you were just looking at. This is the result of whatever search you
-							had just performed.</para>
-						<para><emphasis role="bold">Highlighted records:</emphasis> only those
-							records you had highlighted in the list. This is the quickest way to
-							export a few selected records, particularly when you need to choose them
-							by hand from your query results.</para>
+						<para><emphasis role="bold">&lt;x> selected records:</emphasis> only include the highlighted
+							records you've selected.</para>
+						<para><emphasis role="bold">&lt;x> found records:</emphasis> include every record in the list
+							you're printing from in your export.</para>
 					</listitem>
 				</itemizedlist>
 			</para>
@@ -260,8 +255,7 @@
 								from within the Invoice window.</para>
 						</listitem>
 						<listitem>
-							<para>Go to File > Import/Export > Export Invoices/Credit notes or select the share icon in
-								the bottom right hand corner of the list window</para>
+							<para>Select the share icon in the bottom right hand corner of the list window</para>
 						</listitem>
 						<listitem>
 							<para>You can then export either the invoices as a standard Invoice CSV
@@ -327,9 +321,9 @@
 			You can use the full power and expression of the groovy language, and have access the
 			entire onCourse schema. In short, you access the data to export from the variable
 			"records" and just return from the script the formatted text to export. </para>
-		<para>There is a built in a CSV toolkit, so exporting to CSV is the most simple export type
-			to create or edit without a great deal of prior experience. By default the delimited is
-			a comma, but you can define a different delimiter like a tab as per the example below: </para>
+		<para>There is a built-in CSV toolkit, so exporting to CSV is the most simple export type to
+			create or edit without a great deal of prior experience. By default the delimited is a
+			comma, but you can define a different delimiter like a tab as per the example below: </para>
 		<programlisting language="groovy"><![CDATA[
 csv.delimiter = '\t'
 
@@ -345,8 +339,11 @@ records.each { AccountTransaction t ->
 ]]></programlisting>
 		<section>
 			<title>Creating a new export in onCourse</title>
-			<para>The simplest way to begin this process is to find an existing export from the
-				entity to copy and use as the basis of your new export.</para>
+			<para>The simplest place to start with a new export is by finding an already existing export
+				that's similar to what you want to make and open it. Then, simply start editing the
+				code. If it's a default ish export you're editing, the 'Save' button will change to
+				'Save As'. When you're done, clicking 'Save As' will prompt you to change the export
+				name, and to create a new key code.</para>
 			<para>For example, if I wanted a new export for Tutor data that started from the Contact
 				entity, I'd choose the default 'Contact CSV export' as my starting point.</para>
 			<orderedlist>
@@ -355,17 +352,17 @@ records.each { AccountTransaction t ->
 						'Contact CSV export'</para>
 				</listitem>
 				<listitem>
-					<para>Highlight the text in the script field and copy and paste this into a
-						plain text editor like Sublime Text (In a tool like Sublime you can specify
-						the text is Groovy, so it will add colour coding to assist with the editing
-						process).</para>
+					<para>Highlight the text in the script field and copy it all (ctrl+a on windows, cmd+a on
+						macOS), then click the + button next to Export Templates in the left column
+						of the Automation window to create a new record, then paste the code into
+						the Script section.</para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/exports/export_edit_sublime.png" format="png"/>
+								fileref="images/exports/export_edit_oncourse.png" format="png"/>
 						</imageobject>
 						<caption>
-							<para>Viewing the export text in Sublime</para>
+							<para>The new export record with the Contact CSV code copied into it</para>
 						</caption>
 					</mediaobject>
 				</listitem>

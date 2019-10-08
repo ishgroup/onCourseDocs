@@ -6,11 +6,11 @@
   </info>
   <section role='important'>
     <title>Important changes</title>
-    <para> With export templates now moved to the Automation window and the new user interface,
-      we've locked down all built-in onCourse exports so they can't be modified. Instead, you can
-      duplicate and modify your own copy of those exports whenever you need to. This means that the
-      built-in exports will automatically update with any new features or bug fixes in each release
-      of onCourse.</para>
+    <para>With export templates, integrations and scripts now moved to the new Automation window and
+      the new user interface, we've locked down all built-in onCourse exports so they can't be
+      modified. Instead, you can duplicate and modify your own copy of those exports whenever you
+      need to. This means that the built-in exports will automatically update with any new features
+      or bug fixes in each release of onCourse.</para>
     <para>We've reviewed all our customer systems and for any exports you have modified, we've
       duplicated them for you already so that your changes are not overwritten.</para>
   </section>
@@ -59,13 +59,11 @@
       <title>Minor features</title>
       <itemizedlist>
         <listitem>
-          <para>React migration: Export Templates edit view
-            <systemitem>OD-12791</systemitem>
+          <para>Moved to New UI: Export Templates edit view <systemitem>OD-12791</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Move scripts to automation window
-            <systemitem>OD-13137</systemitem>
+          <para>Moved Scripts to Automation window <systemitem>OD-13137</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -74,11 +72,6 @@
         </listitem>
         <listitem>
           <para>Add hardcoded variables to exports <systemitem>OD-13232</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Create missing mocks for all current angel endpoints
-            <systemitem>OD-13235</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -92,27 +85,15 @@
           </para>
         </listitem>
         <listitem>
-          <para>Common sidebar quick filters and collapse
-            <systemitem>OD-13262</systemitem>
+          <para>Added common sidebar quick filters and collapse <systemitem>OD-13262</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Automation bindings
-            <systemitem>OD-13269</systemitem>
+          <para>Added new Export output types <systemitem>OD-13287</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Remove run(args) from scripts <systemitem>OD-13270</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Export output type
-            <systemitem>OD-13287</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Contact Merge: Update client api handlers according to swagger scheme
-            <systemitem>OD-13289</systemitem>
+          <para>Updated Contact Merge <systemitem>OD-13289</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -121,13 +102,12 @@
           </para>
         </listitem>
         <listitem>
-          <para>Add Aql search for Nested list component
-            <systemitem>OD-13303</systemitem>
+          <para>Add AQL search for nested list component I.E. Classes within
+              Discounts<systemitem>OD-13303</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Add multi Entities option for Aql search component
-            <systemitem>OD-13304</systemitem>
+          <para>Add multi Entities option for AQL search component <systemitem>OD-13304</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -136,8 +116,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Remove full screen edit icon
-            <systemitem>OD-13312</systemitem>
+          <para>Remove full screen edit icon. Double-click to open full screen edit
+              <systemitem>OD-13312</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -151,8 +131,8 @@
           </para>
         </listitem>
         <listitem>
-          <para>Merge save/success search icons
-            <systemitem>OD-13333</systemitem>
+          <para>Merge save/success search icons in AQL search field
+              <systemitem>OD-13333</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -166,68 +146,49 @@
       <title>Fixes</title>
       <itemizedlist>
         <listitem>
-          <para>All react windows: No title if window is opened from main menu
-            <systemitem>OD-12856</systemitem>
+          <para>Fixed issue where no title displayed if window is opened from main menu
+              <systemitem>OD-12856</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Discounts: Spelling Errors
-            <systemitem>OD-13088</systemitem>
+          <para>Removed run(args) from scripts <systemitem>OD-13270</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Adding new documents to class/course record bypasses privacy settings
-            <systemitem>OD-13194</systemitem>
+          <para>Discounts: Fixed spelling errors <systemitem>OD-13088</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Preferences: Payment type. No error handling on the server
-            <systemitem>OD-13211</systemitem>
+          <para>Adding new documents to class/course record no longer bypasses privacy settings
+              <systemitem>OD-13194</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Unit tests: angel 9.13
-            <systemitem>OD-13239</systemitem>
+          <para>Fixed Budget/Tutor Pay correlation issues <systemitem>OD-13243</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Budget/Tutor Pay issues
-            <systemitem>OD-13243</systemitem>
+          <para>Transactions: using Find Related now opens new UI lists
+              <systemitem>OD-13250</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Karate tests: Issues 
-            <systemitem>OD-13249</systemitem>
+          <para>Banking - Double clicking a Payment In record no longer opens old UI
+              <systemitem>OD-13253</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Transactions list Find related should open react lists
-            <systemitem>OD-13250</systemitem>
+          <para>Broken export script no longer stops the server starting
+              <systemitem>OD-13256</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Banking - Double clicking a Payment In record in banking opens old swing UI
-            <systemitem>OD-13253</systemitem>
+          <para>Student Feedback now opens correctly from the Activity menu
+              <systemitem>OD-13260</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Broken export script stops the server starting
-            <systemitem>OD-13256</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Student Feedback uses wrong address from Activity menu
-            <systemitem>OD-13260</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Moodle Integration fails when creating new users in some situations
-            <systemitem>OD-13265</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Payment In: Unable to set 'Date banked'
-            <systemitem>OD-13272</systemitem>
+          <para>Payment In: No longer unable to set 'Date banked' <systemitem>OD-13272</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -236,13 +197,13 @@
           </para>
         </listitem>
         <listitem>
-          <para>New Certificates window not showing all search results
-            <systemitem>OD-13275</systemitem>
+          <para>New Certificates window no longer omitting some search results
+              <systemitem>OD-13275</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>List views never show more than 5 columns
-            <systemitem>OD-13278</systemitem>
+          <para>List views will show more than 5 columns when requested
+              <systemitem>OD-13278</systemitem>
           </para>
         </listitem>
         <listitem>
@@ -251,113 +212,90 @@
           </para>
         </listitem>
         <listitem>
-          <para>Share Icon should never be disabled
-            <systemitem>OD-13280</systemitem>
+          <para>Share Icon should is now never disabled <systemitem>OD-13280</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Advanced Search shouldn't hide print/cogwheel icons
-            <systemitem>OD-13281</systemitem>
+          <para>Advanced Search no longer hides print/cogwheel icons
+              <systemitem>OD-13281</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Active vouchers value remaining incorrect $0.00
-            <systemitem>OD-13282</systemitem>
+          <para>Active vouchers value remaining now shows correctly
+              <systemitem>OD-13282</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Tag re-oredering not working
-            <systemitem>OD-13283</systemitem>
+          <para>Tag re-ordering now working as expected <systemitem>OD-13283</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Cannot sort payment window by contact
-            <systemitem>OD-13288</systemitem>
+          <para>Can now sort payment window by Contact <systemitem>OD-13288</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>QE fails  when enrolled course is tagged with multiple 'Limit to one' tags
-            <systemitem>OD-13290</systemitem>
+          <para>QE no longer fails when enrolled course is tagged with multiple 'Limit to one' tags
+              <systemitem>OD-13290</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Add validation for setting tag: 'Mandatory'  &amp; 'Limit to one'
-            <systemitem>OD-13291</systemitem>
+          <para>Added validation for setting tag: 'Mandatory' &amp; 'Limit to one'
+              <systemitem>OD-13291</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Manual Invoice issues
-            <systemitem>OD-13292</systemitem>
+          <para>Manual Invoices: fixed issues where billing address wasn't populated, invoice due
+            date was wrong <systemitem>OD-13292</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Banking reconciliation issue
-            <systemitem>OD-13301</systemitem>
+          <para>fixed issue with Banking reconciliation <systemitem>OD-13301</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Invoices: Invoice line. Unable to select tax type 'N'
-            <systemitem>OD-13308</systemitem>
+          <para>Invoices: Invoice line. No longer unable to select tax type 'N'
+              <systemitem>OD-13308</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Windows with new UI don't have titles
-            <systemitem>OD-13313</systemitem>
+          <para>Windows with new UI now show titles <systemitem>OD-13313</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Valid dates for discounts not displayed on first view
-            <systemitem>OD-13314</systemitem>
+          <para>Valid dates for discounts will now displayed on first view
+              <systemitem>OD-13314</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Invoices window breaks when finding contact with brackets in name
-            <systemitem>OD-13315</systemitem>
+          <para>Invoices window no longer breaks when finding contact with brackets in name
+              <systemitem>OD-13315</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Messages list not loading
-            <systemitem>OD-13317</systemitem>
+          <para>AVETMISS 8 window wouldn't open new UI on particular date
+              <systemitem>OD-13319</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>AVETMISS 8 window not opening new UI
-            <systemitem>OD-13319</systemitem>
+          <para>Search no longer loses context when losing focus <systemitem>OD-13322</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Search loses context when losing focus
-            <systemitem>OD-13322</systemitem>
+          <para>AQL now removes quotes in search when not needed <systemitem>OD-13323</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>remove quotes in search when not needed
-            <systemitem>OD-13323</systemitem>
+          <para>Finalise period: All elements no longer become inactive after clicking outside
+            dialog <systemitem>OD-13327</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Search for string without quotes
-            <systemitem>OD-13324</systemitem>
+          <para>Banking Deposits: Add button (+) now works as expected in 3-column view
+              <systemitem>OD-13330</systemitem>
           </para>
         </listitem>
         <listitem>
-          <para>Failed tests on Angel
-            <systemitem>OD-13326</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Finalise period: All elements become inactive after clicking outside dialog
-            <systemitem>OD-13327</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Banking Deposits: Add button (+) does not work in 3-column view
-            <systemitem>OD-13330</systemitem>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Sales 'purchased by' should sort by last name
-            <systemitem>OD-13334</systemitem>
+          <para>Sales 'purchased by' now sorts by last name <systemitem>OD-13334</systemitem>
           </para>
         </listitem>
       </itemizedlist>

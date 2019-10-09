@@ -11,20 +11,21 @@
     </section>
     <section xml:id="search_findAnything">
         <title>Find Anything</title>
-        <para>The main Dashboard has a search bar called Find Anything, where you can type in
-            almost any type of data from a record, including a name, course code, class code, even
-            an invoice number, and it will be shown in the search results.</para>
+        <para>The main Dashboard has a search bar called Find Anything, where you can type in almost
+            any type of data from a record, including a name, course code, class code, even an
+            invoice number, and it will be shown in the search results.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"
                     fileref="images/find_anything.png" format="png"/>
             </imageobject>
-            <caption>Find Anything will help you find almost anything within onCourse quickly</caption>
+            <caption>Find Anything will help you find almost anything within onCourse
+                quickly</caption>
         </mediaobject>
         <note>
             <para> IMPORTANT: This is not the same as the Search function in list views.</para>
         </note>
-    </section>    
+    </section>
     <section xml:id="search-listView">
         <title>Lists</title>
         <para>Every list view has a search panel across the bottom.<mediaobject>
@@ -93,13 +94,15 @@
     </section>
     <section xml:id="search-advanced">
         <title>Advanced Query Language</title>
-        <para>You can construct more powerful search queries using the onCourse query language. The
-            search bar will toggle automatically between basic and advanced modes depending on what
-            you type into the field. For example, when searching for the name of a Site, once the
-            field recognises you're typing in a site name, it'll surround it with quotes. But when
-            it recognises you're typing a more advanced query, it'll then automatically enter
-            advanced mode. It might seem intimidating at first, but understanding the logic of this
-            feature will help hone in on finding exactly the right data you need.<mediaobject>
+        <para>You can construct more powerful search queries using the onCourse query language. When
+            clicked on, you'll notice the search bar expands and shows numerous options for you to
+            select from a drop down box. These selections are used to construct queries, which can
+            be used to find either simple or complex sets of data. It might seem intimidating at
+            first, but understanding the logic of this feature will help hone in on finding exactly
+            the right data you need, and using the drop down boxes takes a lot of the guesswork out
+            of this.</para>
+        <para>
+            <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"
                         fileref="images/search/searchAdvanced.png" format="png"/>
@@ -109,6 +112,14 @@
                 </caption>
             </mediaobject>
         </para>
+        <para>The small bookmark icon shows you whether or not your search query is valid. When the
+            search is empty it appears grey, when you're using an accepted query it'll display in
+            green, and when using an invalid query it'll display in red. When the query is good and
+            the bookmark is green, you can click the bookmark to save your search so it appears in
+            the left-hand column. Just choose if you want it visible for only you or everyone who
+            uses your system, give it a name then hit the save icon that appears next to it.</para>
+        <para>You can also use AQL in sub-lists, like when adding a set of classes to discounts, or
+            when adding a Corporate Pass to a voucher type.</para>
         <para>A simple query consists of a field, followed by an operator, followed by a
             value:</para>
         <programlisting> 
@@ -255,16 +266,16 @@ enrolment.student.id in (10,11,12)</programlisting>
                     <varlistentry>
                         <term>{ }</term>
                         <listitem>
-                            <para>Curly brackets allow you to reference a record attribute multiple times without needing to retype the full path to that attribute.</para>
+                            <para>Curly brackets allow you to reference a record attribute multiple
+                                times without needing to retype the full path to that
+                                attribute.</para>
                             <para>The following query can be simplified using curly brackets:
                                 <programlisting>outcome.enrolment.status == REFUNDED and outcome.enrolment.student.contact.lastName == 'Smith'</programlisting></para>
-                            
                             <para>Here's the simplified version:
                                 <programlisting>outcome.enrolment{status == REFUNDED and student.contact.lastName == 'Smith'}</programlisting>
                                 Notice how the path from 'outcome' to the 'enrolment' attribute is
                                 only typed out once. The query inside the curly braces is in the
                                 scope of the 'enrolment' attribute. </para>
-                            
                         </listitem>
                     </varlistentry>
                     <varlistentry>
@@ -385,17 +396,20 @@ enrolment.student.id in (10,11,12)</programlisting>
                             <para>Examples of the LIKE operator with wild card characters:</para>
                             <para>
                                 <programlisting>name ~ "a%"
-name like "a%"</programlisting></para>
+name like "a%"</programlisting>
+                            </para>
                             <para>finds any record that has a name starting with "a"</para>
-                                <programlisting>name ~ "%a"</programlisting>
+                            <programlisting>name ~ "%a"</programlisting>
                             <para>finds any record that has a name ending with "a"</para>
-                                <programlisting>name ~ "%ab%"</programlisting>
+                            <programlisting>name ~ "%ab%"</programlisting>
                             <para>finds any record that has a name containing "ab"</para>
-                                <programlisting>name ~ "_a%"</programlisting>
-                            <para>finds any record that has a name with "a" as the second letter</para>
-                                <programlisting>name ~ "_%_%_%"</programlisting>
-                            <para>finds any record that has a name with at least a length of 3 characters</para>
-                                <programlisting>name ~ "a%b"</programlisting>
+                            <programlisting>name ~ "_a%"</programlisting>
+                            <para>finds any record that has a name with "a" as the second
+                                letter</para>
+                            <programlisting>name ~ "_%_%_%"</programlisting>
+                            <para>finds any record that has a name with at least a length of 3
+                                characters</para>
+                            <programlisting>name ~ "a%b"</programlisting>
                             <para>finds any record that has a name starting with "a" and ending with
                                 "b".</para>
                         </listitem>
@@ -541,8 +555,8 @@ createdOn 9:00 .. 19:00 today - 1 year</programlisting>
         </section>
         <section xml:id="search-advanced-arithmetic">
             <title>Arithmetic</title>
-            <para>
-                Basic arithmetic can be performed directly within the query language. Addition, subtraction, division, multiplication and modulus operations are all supported.
+            <para> Basic arithmetic can be performed directly within the query language. Addition,
+                subtraction, division, multiplication and modulus operations are all supported.
                 <programlisting>feeHelpAmount is 100 + 50
 feeHelpAmount is 100 - 50
 feeHelpAmount is 100 / 2
@@ -597,6 +611,7 @@ feeHelpAmount is 100 % 3</programlisting>
         </mediaobject>
         <para>The results of this query are then available to you in your script in the variable
             'records'. You can use this to perform additional actions in the script. </para>
-        <para>For more information on custom scripts, please visit our <link xlink:href="scripts.html">Scripting chapter</link></para>
+        <para>For more information on custom scripts, please visit our <link
+                xlink:href="scripts.html">Scripting chapter</link></para>
     </section>
 </chapter>

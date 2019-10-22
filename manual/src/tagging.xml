@@ -10,39 +10,50 @@
 			categorise your data and organise the navigation of your website. </para>
 		<para>Tag groups applied to other record types can be used for internal navigation and
 			grouping, but will not affect the website.</para>
-		<para>Tags can be created and edited by navigating to "File" -> "Preferences" -> "Tags". This will
-			bring up a list of Tag groups. By default, onCourse will have a special tag group called
-			Subjects that exists in your new database, whose name can not be changed.</para>
-		<section><title>The Subjects tag group</title><para>The main tag group, used to drive your website
-				and in the export of courses and classes for print production and many standard
-				reports, is the "Subjects" tag group. You can create the categories that are
-				appropriate for your organisation, and any sub categories that are needed.
-				</para><para>Tag data is hierarchical so for example, under the category 'Computers'
-				I might find tags with names like 'Microsoft Office', 'Adobe Creative Suite',
-				'Tablets &amp; Smart phones'. There are no limit to the number of levels of
-				hierarchy you can create, but from a user and navigational perspective, generally
-				three levels are more than sufficient to represent the range of data you are
-				tagging.</para><para>Any course tagged with a sub tag like 'Microsoft office' would
-				also be visible if I clicked on the parent tag 'Computers'.</para><para>As a general
-				rule of thumb, a website visible tag should apply to a minimum 3 to 5 course
-				records, and a maximum of 10 to 15 to give the website visitor a useful and workable
-				group of courses to browse.</para><para>For each tag group, you can decide if applying a tag from the group is mandatory or optional.
-				A mandatory tag may make sense if you want to ensure your staff always tag every
-				course in your database with a website navigation tag. You can also choose whether
-				the tag can be applied an unlimited number of times, or only once. A tool tip will
-				display when hovering your mouse over these settings when changing any tag group as
-				Mandatory or Limit to One, as each setting has implications on the records they're
-				attached to.</para><para> You can also decide if records can have more
-				than one tag from the tag group. Giving courses multiple subject tags mean they can
-				be listed in multiple places on your website. For example, an MYOB course could be
-				tagged with both 'Accounting' and 'Computers'.</para><para>You can add any number of
-				tags by clicking on the "+" icon. To add a subcategory tag, first click on a tag to
-				select it and then click once again on the "+" icon.</para><para>By default, tags
-				will be sorted by alphabetical order. The tag edit view also allows you to apply
-				your own sort order to the tags. Highlight a tag in the list then drag and drop a
-				given tag item within the group to the place in the hierarchy you wish it to go.
-				</para><para>This tag display order will also be mimicked on your onCourse website
-				for tags under the "Subjects" tag group</para><mediaobject>
+		<para>Tags can be created and edited by navigating to "File" -> "Preferences" -> "Tags".
+			This will bring up a list of Tag groups. By default, onCourse will have a special tag
+			group called Subjects that exists in your new database, whose name can not be
+			changed.</para>
+		<para>Tags names can use almost any characters except the following: @ # _ , or "</para>
+		<para>However you can use any of the following: ! % ( ) = &amp; ^ + [ ] { } / . &lt; > : or
+			;</para>
+		<section>
+			<title>The Subjects tag group</title>
+			<para>The main tag group, used to drive your website and in the export of courses and
+				classes for print production and many standard reports, is the "Subjects" tag group.
+				You can create the categories that are appropriate for your organisation, and any
+				sub categories that are needed. </para>
+			<para>Tag data is hierarchical so for example, under the category 'Computers' I might
+				find tags with names like 'Microsoft Office', 'Adobe Creative Suite', 'Tablets &amp;
+				Smart phones'. There are no limit to the number of levels of hierarchy you can
+				create, but from a user and navigational perspective, generally three levels are
+				more than sufficient to represent the range of data you are tagging.</para>
+			<para>Any course tagged with a sub tag like 'Microsoft office' would also be visible if
+				I clicked on the parent tag 'Computers'.</para>
+			<para>As a general rule of thumb, a website visible tag should apply to a minimum 3 to 5
+				course records, and a maximum of 10 to 15 to give the website visitor a useful and
+				workable group of courses to browse.</para>
+			<para>For each tag group, you can decide if applying a tag from the group is mandatory
+				or optional. A mandatory tag may make sense if you want to ensure your staff always
+				tag every course in your database with a website navigation tag. You can also choose
+				whether the tag can be applied an unlimited number of times, or only once. A tool
+				tip will display when hovering your mouse over these settings when changing any tag
+				group as Mandatory or Limit to One, as each setting has implications on the records
+				they're attached to.</para>
+			<para> You can also decide if records can have more than one tag from the tag group.
+				Giving courses multiple subject tags mean they can be listed in multiple places on
+				your website. For example, an MYOB course could be tagged with both 'Accounting' and
+				'Computers'.</para>
+			<para>You can add any number of tags by clicking on the "+" icon. To add a subcategory
+				tag, first click on a tag to select it and then click once again on the "+"
+				icon.</para>
+			<para>By default, tags will be sorted by alphabetical order. The tag edit view also
+				allows you to apply your own sort order to the tags. Highlight a tag in the list
+				then drag and drop a given tag item within the group to the place in the hierarchy
+				you wish it to go. </para>
+			<para>This tag display order will also be mimicked on your onCourse website for tags
+				under the "Subjects" tag group</para>
+			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
 						fileref="images/adjustment_of_tag_weighting.png" format="png"/>
@@ -53,38 +64,41 @@
 			</mediaobject>
 			<section>
 				<title>Understanding tag hierarchies and relationships</title>
-			<para>When setting up your subject tags, it is advisable to only apply
-				these subject tags to Courses and not to classes or other types of records. The
-				reason for this relates back to the hierarchical nature of the database the
-				information that is connected back to a course.</para><para>For example, a Course
-				within the database will have classes, and within a class tutor(s) will be assigned,
-				room(s) allocated and students enrolled. From a filtering perspective, by applying a
-				subject tag to a Course, when you select the subject tag filter within any window,
-				e.g. contact, the related information such as student enrolled in a class from a
-				course with the tag, or tutor teaching a class from the course with the tag, will be
-				displayed.</para><para>If you apply the tag directly to contact records as well as Courses, the meaning of the filter
-				will change to also include the meaning above "AND show me all the contacts tagged
-				with" which can lead to a returned results list that doesn't make much sense to the
-				user. </para>
-			<para>In the following image you can see
-			in the class window. The information has been filtered by the "Business" subject tag.
-			Even though the classes listed are not tagged with the "Business" subject tag, but the
-			classes all relate to a course that has the '"Business" subject tag, they will display automatically.</para>
+				<para>When setting up your subject tags, it is advisable to only apply these subject
+					tags to Courses and not to classes or other types of records. The reason for
+					this relates back to the hierarchical nature of the database the information
+					that is connected back to a course.</para>
+				<para>For example, a Course within the database will have classes, and within a
+					class tutor(s) will be assigned, room(s) allocated and students enrolled. From a
+					filtering perspective, by applying a subject tag to a Course, when you select
+					the subject tag filter within any window, e.g. contact, the related information
+					such as student enrolled in a class from a course with the tag, or tutor
+					teaching a class from the course with the tag, will be displayed.</para>
+				<para>If you apply the tag directly to contact records as well as Courses, the
+					meaning of the filter will change to also include the meaning above "AND show me
+					all the contacts tagged with" which can lead to a returned results list that
+					doesn't make much sense to the user. </para>
+				<para>In the following image you can see in the class window. The information has
+					been filtered by the "Business" subject tag. Even though the classes listed are
+					not tagged with the "Business" subject tag, but the classes all relate to a
+					course that has the '"Business" subject tag, they will display
+					automatically.</para>
 				<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/filtering_class_by_course_subject_tag.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Filtering Classes by a Course subject tag</para>
-				</caption>
-			</mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/filtering_class_by_course_subject_tag.png" format="png"
+						/>
+					</imageobject>
+					<caption>
+						<para>Filtering Classes by a Course subject tag</para>
+					</caption>
+				</mediaobject>
+			</section>
 		</section>
 	</section>
-	</section>
-		<section>
-			<title>Tags on your onCourse website</title>
-			<para>Course tags, beginning with the Subject tag group, define your website user navigation
+	<section>
+		<title>Tags on your onCourse website</title>
+		<para>Course tags, beginning with the Subject tag group, define your website user navigation
 			experience. Any new tags you create, or changes you make to any existing tags will
 			update automatically on the website. By default, all tags within a tag group are set as
 			'show on website' by default and are assigned a random colour. If you uncheck this
@@ -92,56 +106,58 @@
 			onCourse application for your own internal filtering. This can be a better option than
 			deleting a tag and all it's relationships to historical records, if the tag is not
 			currently in use for active courses.</para>
-			<para>If you have two onCourse websites for two arms of your business, each website may
-				be driven by it's own tag group. For example, a site for open enrolments might be
-				driven by the subjects tag group, where the corporate site might be driven by a
-				different tag group called 'corporate'. If this is the case, every course that you
-				want to show on each website, must be tagged by a tag from the defined website tag
-				group, even if that tag is not currently shown on the website. In this multi site
-				situation, a course tagged with a non-visible tag will still be accessible via the
-				course URL if you wish, while not being accessible via the navigation structure.
-				Without a tag from the defined website group, the URL will return 404 not
-				found.</para>
+		<para>If you have two onCourse websites for two arms of your business, each website may be
+			driven by it's own tag group. For example, a site for open enrolments might be driven by
+			the subjects tag group, where the corporate site might be driven by a different tag
+			group called 'corporate'. If this is the case, every course that you want to show on
+			each website, must be tagged by a tag from the defined website tag group, even if that
+			tag is not currently shown on the website. In this multi site situation, a course tagged
+			with a non-visible tag will still be accessible via the course URL if you wish, while
+			not being accessible via the navigation structure. Without a tag from the defined
+			website group, the URL will return 404 not found.</para>
 		<section>
 			<title>Tagging and the website URL</title>
 			<para>The URL for the subject tag group is /courses/subjects. This URL will contain any
 				information that has been added in the 'Detail' field for the Subjects root tag. </para>
-			<para>If you set up a first level tag within the subjects tag group which is entitled "Arts", the
-				URL for that tag on your website would display as /courses/arts.</para>
-			<para>You can also display second and third level tag hierarchy within the URL, here is an
-				example of a second level tag entitled "Photography" under the Arts tag:
+			<para>If you set up a first level tag within the subjects tag group which is entitled
+				"Arts", the URL for that tag on your website would display as /courses/arts.</para>
+			<para>You can also display second and third level tag hierarchy within the URL, here is
+				an example of a second level tag entitled "Photography" under the Arts tag:
 				courses/arts/photography.</para>
 			<para>Tags have an associated colour. You can edit these colours by clicking the pencil
 				icon on the right side of the tag record. You can edit the colours on any
 				tags.</para>
-			<para>Whilst the default tag structure for website URLs are set to recognise tags under the
-				Subjects tag group, you can also show other tag groups for Courses on the web, as
-				long as you define the tag group as being <guilabel>web visible</guilabel> by
+			<para>Whilst the default tag structure for website URLs are set to recognise tags under
+				the Subjects tag group, you can also show other tag groups for Courses on the web,
+				as long as you define the tag group as being <guilabel>web visible</guilabel> by
 				clicking the Visibility field, then selecting 'Show on website'. An example of
 				utilising a different tag group within a URL would be as follows:
 				/courses/demographic/return-to-work for a tag group called 'Demographic'.</para>
 			<note>
-				<para>Within the tag group edit view window, you can change the URL path of the tag name. To
-					change the default URL path, simply click on the padlock next to the field
-					<guilabel>URL path</guilabel> then edit what you want the URL path to be. So
-					in the example below the URL is being changed from /courses/Creative+Arts to
+				<para>Within the tag group edit view window, you can change the URL path of the tag
+					name. To change the default URL path, simply click on the padlock next to the
+					field <guilabel>URL path</guilabel> then edit what you want the URL path to be.
+					So in the example below the URL is being changed from /courses/Creative+Arts to
 					/courses/Arts.</para>
 			</note>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/abbreviated_tag_name.png" format="png" />
+						fileref="images/abbreviated_tag_name.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>Example of the URL path which can be set within the tag preferences of onCourse</para>
+					<para>Example of the URL path which can be set within the tag preferences of
+						onCourse</para>
 				</caption>
 			</mediaobject>
 		</section>
-		<section><title>Adding tag web descriptions</title><para>Tags can contain rich text descriptions,
-				including images and video or other html content, which will display on your website
-				at the top of the course list results for that tag.</para>
-			<para>In order to display the
-				web description and any images you may attach, you need to do the following:</para>
+		<section>
+			<title>Adding tag web descriptions</title>
+			<para>Tags can contain rich text descriptions, including images and video or other html
+				content, which will display on your website at the top of the course list results
+				for that tag.</para>
+			<para>In order to display the web description and any images you may attach, you need to
+				do the following:</para>
 			<itemizedlist>
 				<listitem>
 					<para>Flag the tag as <guilabel>web visible</guilabel>within the tag set
@@ -164,20 +180,20 @@
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/tag_description_on_web.png" format="png" />
+						fileref="images/tag_description_on_web.png" format="png"/>
 				</imageobject>
 				<caption>
 					<para>An example tag description showing text and an image</para>
 				</caption>
 			</mediaobject>
 		</section>
-			<section>
-				<title>Using multiple tag groups for website navigation - faceted search</title>
-				<para>The special Subjects tag group is just the starting point for website navigation using
-				tags, and can be thought as the equivalent of the dewy decimal system of course
-				grouping. However, you may wish to build a website where there are multiple ways a
-				potential student can browse through your course offerings if they don't know 'what'
-				they want.</para>
+		<section>
+			<title>Using multiple tag groups for website navigation - faceted search</title>
+			<para>The special Subjects tag group is just the starting point for website navigation
+				using tags, and can be thought as the equivalent of the dewy decimal system of
+				course grouping. However, you may wish to build a website where there are multiple
+				ways a potential student can browse through your course offerings if they don't know
+				'what' they want.</para>
 			<para>Some examples of other types of course tags in use by onCourse customers include
 				'who' (or demographic) type tags, 'where' (location, term/holiday program) or 'how'
 				(delivery mode, duration or level).</para>
@@ -187,7 +203,7 @@
 				class information, or a tag - new information about a course onCourse doesn't store
 				anywhere else. The location of a class can be found via a saved search as the site
 				address details are stored in the database already. The information about a course
-				being a 'workshop', 'short course' or  'program of study' is a user defined
+				being a 'workshop', 'short course' or 'program of study' is a user defined
 				definition that is best added to the course by a new tag group.</para>
 			<para>Both tags and saved searches can be used to navigate the website on their own, or
 				in combination with other tags. This kind of navigation is called faceted search and
@@ -199,19 +215,19 @@
 				'What' combine to form a faceted search across a large data set, to allow website
 				visitors to drill down and find the course and class they are looking for as quickly
 				as possible.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/tag_faceted_search.png" format="png" />
-					</imageobject>
-					<caption>
-						<para>Configuring a tag and what it will be applied to within onCourse</para>
-					</caption>
-				</mediaobject>
-			</section>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/tag_faceted_search.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Configuring a tag and what it will be applied to within onCourse</para>
+				</caption>
+			</mediaobject>
 		</section>
+	</section>
 	<section xml:id="tagging-creatingTags">
-			<title>Creating a new tag group</title>
+		<title>Creating a new tag group</title>
 		<para>To create a new tag group, begin by going File > Preferences > Tags and clicking the +
 			button in the top right hand corner. </para>
 		<para>Begin by giving your tag group a name and deciding which part of the onCourse database
@@ -226,20 +242,20 @@
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/root_tag.png" format="png" />
+					fileref="images/root_tag.png" format="png"/>
 			</imageobject>
 			<caption>
 				<para>Configuring a tag and what it will be applied to within onCourse</para>
 			</caption>
 		</mediaobject>
-		<para>Begin building your tag structure by using the + button. The first time you click + in a new
-			tag group, that will create the parent tag. Each subsequent click of the + button will
-			add a child tag underneath the parent.</para>
+		<para>Begin building your tag structure by using the + button. The first time you click + in
+			a new tag group, that will create the parent tag. Each subsequent click of the + button
+			will add a child tag underneath the parent.</para>
 		<para>If you wish to adjust the tag structure, you can also drag and drop the ordering from
 			the default alphabetical sort order.</para>
-		<para>You also have the ability to make changes to the root tag, however you won't be able to add
-			a sibling or delete the root node. In the case of the special Subjects tag, you can not
-			change the root tag name.</para>
+		<para>You also have the ability to make changes to the root tag, however you won't be able
+			to add a sibling or delete the root node. In the case of the special Subjects tag, you
+			can not change the root tag name.</para>
 		<section>
 			<title>Editing a tag colour in edit view</title>
 			<para>Tags also have a colour associated with them. You can edit the colour of a tag by
@@ -250,19 +266,17 @@
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/tag_colours_edit.png" format="png" />
+						fileref="images/tag_colours_edit.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>A contact filter using the subjects tag to show students enrolled into classes joined to
-						courses tagged with the subject 'Creative Arts'</para>
+					<para>A contact filter using the subjects tag to show students enrolled into
+						classes joined to courses tagged with the subject 'Creative Arts'</para>
 				</caption>
 			</mediaobject>
 		</section>
-
-		</section>
-		
-		<section xml:id="tagging-filter_tool">
-			<title>Tags as a filtering tool within the onCourse application</title>
+	</section>
+	<section xml:id="tagging-filter_tool">
+		<title>Tags as a filtering tool within the onCourse application</title>
 		<para>All tags groups you create will be available as filters within the relevant onCourse
 			list views. The tag groups shown are based on the record type the tag is related to, and
 			then the records related to that record type.</para>
@@ -273,54 +287,58 @@
 			classes for the course tagged with this tag'. In the student window it displays as
 			Subjects (enrolled), and means 'show me the students enrolled in classes linked to
 			courses tagged with this tag'.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/tag_subject_enrolled.png" format="png" />
-				</imageobject>
-				<caption>
-					<para>A contact filter using the subjects tag to show students enrolled into classes joined to
-					courses tagged with the subject 'Creative Arts'</para>
-				</caption>
-			</mediaobject>
-			<para>The tags that display within the left hand pane of a given window, provide you with a
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/tag_subject_enrolled.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>A contact filter using the subjects tag to show students enrolled into classes
+					joined to courses tagged with the subject 'Creative Arts'</para>
+			</caption>
+		</mediaobject>
+		<para>The tags that display within the left hand pane of a given window, provide you with a
 			number of different options in terms of searching and sorting of information. Tag groups
 			and components of tag groups can be expanded and collapsed to create your preferred
 			window layout. You can utilise the tags within the a window in a number of ways: <itemizedlist>
 				<listitem>
-						<para>Expand and collapse a given tag group within the left hand pane by clicking on the name
-						of the tag group (show / hide will display on hover)</para>
+					<para>Expand and collapse a given tag group within the left hand pane by
+						clicking on the name of the tag group (show / hide will display on
+						hover)</para>
 				</listitem>
 				<listitem>
 					<para>Expand and collapse tags within a tag group by clicking on the arrow that
-					indicates a tag contains sub tags</para>
-				</listitem>	
-					<listitem>
-					<para>Use the tags to filter records within a given list view by checking the tick box next to
-						the tag name. Ticking a tag that contains sub tags will select all the tags
-						beneath it.</para>
+						indicates a tag contains sub tags</para>
 				</listitem>
 				<listitem>
-					<para>Selecting multiple tag check boxes within the same tag group to create an OR search. e.g.
-						selecting 'Business' and 'Writing' from the subjects tag at the same time
-						will find results tagged with Business OR Writing. </para></listitem>
-				<listitem>
-					<para> Use a tag filter in conjunction with a core filter or saved search. This will create and
-						AND search. E.g. current classes AND subject 'Writing'.</para>
+					<para>Use the tags to filter records within a given list view by checking the
+						tick box next to the tag name. Ticking a tag that contains sub tags will
+						select all the tags beneath it.</para>
 				</listitem>
 				<listitem>
-					<para> Use the advanced search parameter of "tagged with" or "tagged with (including
-						children)". This means the search will include any records which have been
-						tagged with second or third level tags within the hierarchy, also known as
-						"children".</para>
+					<para>Selecting multiple tag check boxes within the same tag group to create an
+						OR search. e.g. selecting 'Business' and 'Writing' from the subjects tag at
+						the same time will find results tagged with Business OR Writing. </para>
 				</listitem>
-
-				<listitem><para>Use a combination of advanced search, tag filter and core filters. The advanced search
-					will operate within the filtered set of results your checked options will limit
-					the list of results to.</para></listitem>
+				<listitem>
+					<para> Use a tag filter in conjunction with a core filter or saved search. This
+						will create and AND search. E.g. current classes AND subject
+						'Writing'.</para>
+				</listitem>
+				<listitem>
+					<para> Use the advanced search parameter of "tagged with" or "tagged with
+						(including children)". This means the search will include any records which
+						have been tagged with second or third level tags within the hierarchy, also
+						known as "children".</para>
+				</listitem>
+				<listitem>
+					<para>Use a combination of advanced search, tag filter and core filters. The
+						advanced search will operate within the filtered set of results your checked
+						options will limit the list of results to.</para>
+				</listitem>
 			</itemizedlist>
 		</para>
-		</section>
+	</section>
 	<section xml:id="tagging-filter">
 		<title>Creating an advanced search filter instead of a tag </title>
 		<para>Sometimes, creating a tag group to add information to a record is not the best choice
@@ -331,9 +349,9 @@
 			need to remember to change the tag.</para>
 		<para>An example that could be a tag or saved search is the class concept 'Term'. A term is
 			a date range that represents group of classes that start within that range.</para>
-		<para>You can create Tag Groups and sub-tags to achieve this, however you can also achieve the
-			same result with less work with advanced search. Both options will deliver you a check
-			box style filter in the classes window to use to locate records quickly.</para>
+		<para>You can create Tag Groups and sub-tags to achieve this, however you can also achieve
+			the same result with less work with advanced search. Both options will deliver you a
+			check box style filter in the classes window to use to locate records quickly.</para>
 		<example>
 			<title>How to create a Filter using Advanced Search: </title>
 			<orderedlist>
@@ -341,27 +359,29 @@
 					<para> Click on the magnify glass in the top left-hand corner </para>
 				</listitem>
 				<listitem>
-					<para> In the Advanced Find window; - choose to Find records matching ALL of the following -
-						Start date/time : after and on: [The first day of term 1] - then click "Add
-						Search Line" and set Start date/time : before and on : [The last day of term
-						1] </para>
+					<para> In the Advanced Find window; - choose to Find records matching ALL of the
+						following - Start date/time : after and on: [The first day of term 1] - then
+						click "Add Search Line" and set Start date/time : before and on : [The last
+						day of term 1] </para>
 				</listitem>
 				<listitem>
-					<para> Click on the Cog Wheel, then choose Save Find, name the Find to "2017 - Term 1". You can
-						choose to make this filter visible to yourself or, to all staff using
-						onCourse, then click Save.</para>
+					<para> Click on the Cog Wheel, then choose Save Find, name the Find to "2017 -
+						Term 1". You can choose to make this filter visible to yourself or, to all
+						staff using onCourse, then click Save.</para>
 				</listitem>
-				<listitem><para>When you next open the class list view, you will see your saved find as a
-					check box in the window.</para></listitem>
+				<listitem>
+					<para>When you next open the class list view, you will see your saved find as a
+						check box in the window.</para>
+				</listitem>
 			</orderedlist>
 		</example>
 	</section>
 	<section>
-		<title>
-			Adding and removing tags from records
-		</title>
-		<para>After you have created your tag groups and their structures, you need to assign these tags to your records.</para>
-		<para>This process can be done record by record in the edit view, or in bulk from the list view.</para>
+		<title> Adding and removing tags from records </title>
+		<para>After you have created your tag groups and their structures, you need to assign these
+			tags to your records.</para>
+		<para>This process can be done record by record in the edit view, or in bulk from the list
+			view.</para>
 		<para>To add a tag to a record, open the record and click on the icon which looks like a
 			luggage tag. This will show you all the tags available for that type of record.</para>
 		<para>You should always choose the tag furthest out in the tree - you don't need to add a
@@ -373,7 +393,7 @@
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/tag_adding_to_record.png" format="png" />
+					fileref="images/tag_adding_to_record.png" format="png"/>
 			</imageobject>
 			<caption>
 				<para>Adding a tag to a course record</para>
@@ -382,27 +402,27 @@
 	</section>
 	<section xml:id="tagging-bulk">
 		<title>Tagging and Untagging multiple records</title>
-		<para>A great feature in onCourse is bulk tagging. This is just like regular tagging except you
-			are applying this tag to multiple records at one time.</para>
+		<para>A great feature in onCourse is bulk tagging. This is just like regular tagging except
+			you are applying this tag to multiple records at one time.</para>
 		<example>
 			<title>How to bulk tag</title>
 			<orderedlist>
 				<listitem>
-					<para>First, make sure that you have tags created, if not go to File > Preferences > Tags and
-						set this up (see above for more on this) and ensure it is set as 'available
-						for' the correct record type e.g. tutors.</para>
+					<para>First, make sure that you have tags created, if not go to File >
+						Preferences > Tags and set this up (see above for more on this) and ensure
+						it is set as 'available for' the correct record type e.g. tutors.</para>
 				</listitem>
 				<listitem>
-					<para>Open up the list view of records where you wish to apply the tag in bulk, like
-						"Tutors"</para>
+					<para>Open up the list view of records where you wish to apply the tag in bulk,
+						like "Tutors"</para>
 				</listitem>
 				<listitem>
-					<para>Highlight the tutors records you want to apply the tag to by selecting them in the
-						list</para>
+					<para>Highlight the tutors records you want to apply the tag to by selecting
+						them in the list</para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/multiTag1.png" format="png" />
+								fileref="images/multiTag1.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Multi selecting the records to tag</para>
@@ -410,16 +430,17 @@
 					</mediaobject>
 				</listitem>
 				<listitem>
-					<para>On the left, go to the tag you want, e.g; "Subject > Baby Boomers" and right click on the
-						tag name (be careful to avoid clicking the check box)</para>
+					<para>On the left, go to the tag you want, e.g; "Subject > Baby Boomers" and
+						right click on the tag name (be careful to avoid clicking the check
+						box)</para>
 				</listitem>
 				<listitem>
-					<para>Once you right click on the tag you want you have two options: add or remove the tag from
-						the selected options.</para>
+					<para>Once you right click on the tag you want you have two options: add or
+						remove the tag from the selected options.</para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/multiTag2.png" format="png" />
+								fileref="images/multiTag2.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>The Add/Remove options when you right click on tags</para>
@@ -427,11 +448,12 @@
 					</mediaobject>
 				</listitem>
 				<listitem>
-					<para>After you select your option click on "continue" and the tags will be added.</para>
+					<para>After you select your option click on "continue" and the tags will be
+						added.</para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/multiTag3.png" format="png" />
+								fileref="images/multiTag3.png" format="png"/>
 						</imageobject>
 						<caption>
 							<para>Confirm your tagging selection</para>
@@ -439,10 +461,14 @@
 					</mediaobject>
 				</listitem>
 				<listitem>
-					<para> Once this process is finished, the records you have highlighted will be tagged. You can double click on the record to open the edit view and see this.</para>
+					<para> Once this process is finished, the records you have highlighted will be
+						tagged. You can double click on the record to open the edit view and see
+						this.</para>
 				</listitem>
-			</orderedlist>	<para>To bulk remove tags from records, simply follow the steps above but choose "Remove this
-				tag from X highlighted records " instead of "Add this tag to X highlighted records"</para>
+			</orderedlist>
+			<para>To bulk remove tags from records, simply follow the steps above but choose "Remove
+				this tag from X highlighted records " instead of "Add this tag to X highlighted
+				records"</para>
 		</example>
 	</section>
 </chapter>

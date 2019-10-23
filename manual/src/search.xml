@@ -220,18 +220,20 @@
                                 will return records where the specified attribute occurred or was
                                 created between the set dates.</para>
                             <para>
-                                <programlisting>createdOn 01/01/2018 .. 01/02/2018</programlisting>
+                                <programlisting>createdOn in 01/01/2018 .. 01/02/2018</programlisting>
                             </para>
                             <para>BETWEEN can be used with a star closure ( * ), placed either
                                 directly before or after the date. See below for the correct syntax;
                                 placing the star and BETWEEN before the date will find all relevant
                                 data from before that date, while placing them after will find all
                                 relevant data after that date.</para>
-                            <programlisting>createdOn *..01/01/2018</programlisting>
-                            <para>The above query will find any data that was create before the 1st
-                                January 2018, while the below query finds anything created after 1st
-                                January 2018.</para>
-                            <programlisting>createdOn 01/01/2018..*</programlisting>
+                            <programlisting>createdOn not * .. 01/01/2018</programlisting>
+                            <para>Both the above and below queries will show you the same data, all
+                                records created before 01/01/2018. The top query asks all records
+                                created before this date to be excluded thanks to the 'Not'
+                                operator, while the bottom query asks for all records created after
+                                this date to be shown thanks to the 'In' operator.</para>
+                            <programlisting>createdOn in 01/01/2018 .. *</programlisting>
                         </listitem>
                     </varlistentry>
                     <varlistentry>

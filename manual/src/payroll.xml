@@ -83,13 +83,14 @@
 				<title>How to create Tutor pay rates</title>
 				<orderedlist>
 					<listitem>
-						<para>To open the window go to <guimenu>File</guimenu> >
-								<guimenuitem>Preferences</guimenuitem> > <guimenuitem>Tutor roles
-							</guimenuitem>.</para>
+						<para>To open the window type <guimenuitem>Preferences</guimenuitem> into the Find Anything
+							search and click it to open the window, then scroll the left hand column
+							till you see <guimenuitem>Tutor Pay Rates</guimenuitem>.</para>
 					</listitem>
 					<listitem>
-						<para>Select one of the existing wage types to edit and modify or create a
-							new wage type by clicking the <guibutton>+</guibutton> button.<inlinemediaobject>
+						<para>Select one of the existing wage types to edit and modify or create a new wage type by
+							clicking the <guibutton>+</guibutton> button next to the Tutor Pay Rates
+							column heading.<inlinemediaobject>
 								<imageobject>
 									<imagedata scalefit="1" width="100%" contentdepth="100%"
 										fileref="images/definedTutorRolesList.png"/>
@@ -102,8 +103,8 @@
 						</para>
 					</listitem>
 					<listitem>
-						<para>Click on the <guibutton>+</guibutton> button within the Defined wage role edit view
-							window to add a pay rate for this Tutor type.<inlinemediaobject>
+						<para>Click on the <guibutton>+</guibutton> button next to Pay Rate to add a pay rate for this
+							Tutor type.<inlinemediaobject>
 								<imageobject>
 									<imagedata scalefit="1" width="100%" contentdepth="100%"
 										fileref="images/payroll_payrate_window.png"/>
@@ -111,8 +112,16 @@
 							</inlinemediaobject></para>
 					</listitem>
 					<listitem>
-						<para>In the drop down sheet, define how this type of Tutors wage is
-							calculated from the options available e.g. 'Per timetabled hour'</para>
+						<para>Set the <guilabel>start date</guilabel> for this pay rate. This allows
+							you to keep track of historical pay rate increases, and ensures that if
+							a Tutors pay calculation falls across a change in pay conditions, all
+							sessions delivered before the change will be calculated at the old rate,
+							with sessions delivered after the change in rate to be calculated at the
+							new rate. By default this field is empty. </para>
+					</listitem>
+					<listitem>
+						<para>Define how this <guilabel>type</guilabel> of Tutors wage is calculated from the options
+							available e.g. 'Per timetabled hour'</para>
 					</listitem>
 					<listitem>
 						<para>In the <guilabel>rate</guilabel> field, define the dollar amount per
@@ -120,31 +129,15 @@
 						</para>
 					</listitem>
 					<listitem>
-						<para>On-costs allows you to take into account any additional expenses
+						<para><guilabel>Oncosts</guilabel> allows you to take into account any additional expenses
 							related to employing these staff, such as superannuation, leave loading,
-							payroll tax and workers compensation costs. A common on-cost used
+							payroll tax and workers compensation costs. A common oncost used
 							calculating additional employee costs in Australia is 20%. Oncosts are
 							added to the budget to reflect the costs of employment, they are not
 							added to the payslip or payable to the tutor.</para>
 					</listitem>
 					<listitem>
-						<para>Setting the start date for this pay rate allows you to keep track of historical pay rate
-							increases, and ensures that if a Tutors pay calculation falls across a
-							change in pay conditions, all sessions delivered before the change will
-							be calculated at the old rate, with sessions delivered after the change
-							in rate to be calculated at the new rate. By default this field is set
-							to a historical date five years past for the first entry you create, but
-							you can change it to the date of you choice. </para>
-					</listitem>
-					<listitem>
-						<para>Click <guibutton>Ok</guibutton> and <guibutton>Save</guibutton> and
-							close the record. You will be returned to the list screen where you can
-							add or edit another pay rate.<inlinemediaobject>
-								<imageobject>
-									<imagedata scalefit="1" width="100%" contentdepth="100%"
-										fileref="images/definedTutorRole.png"/>
-								</imageobject>
-							</inlinemediaobject></para>
+						<para>Click <guibutton>Save</guibutton>.</para>
 					</listitem>
 				</orderedlist>
 			</example>
@@ -163,15 +156,16 @@
 				<para>If a tutor role and rate is no longer used by your college, you can make the role
 					inactive. This will stop is appearing in the list of available roles when adding
 					a tutor to a class.</para>
-				<para>To make a role inactive, open the Tutor roles list view and double click on the pay rate.
-					Uncheck the active option to deactivate it. </para>
-				<para>Inactive roles will show as greyed out in the Tutor roles list view.</para>
+				<para>To make a role inactive, in Preferences, scroll to Tutor Pay Rates, select the pay rate
+					you'd like to disable and then click the 'Enabled switch so that it appears
+					deactivated. </para>
+				<para>Inactive roles will show as greyed out in the Tutor Pay Rates list.</para>
 				<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
 						fileref="images/deactivate_tutor_role.png"/>
 				</imageobject>
-					<caption><para>The technician role has been deactivated</para></caption>
+					<caption><para>The Contractor Level 1 role has been deactivated</para></caption>
 				</mediaobject>
 			</section>
 		</section>
@@ -409,9 +403,9 @@
 			process where you confirm each session at a time. It is perfectly ok to proceed to
 			process the payroll with unconfirmed sessions. Those that aren't confirmed will not be
 			processed.</para>
-			<para>onCourse assists you to view the payslips by tutor with the <xref linkend="reports-Payslip"
-			/>. This report is a summary of the payslips by classes, session, and can be run against
-			a single tutor, a group of tutors, or all tutors.</para>
+			<para>onCourse assists you to view the payslips by tutor with the Payslip report. This report is
+			a summary of the payslips by classes, session, and can be run against a single tutor, a
+			group of tutors, or all tutors.</para>
 		<example>
 			<title>Generating, editing and finalising Tutor pay</title>
 			<orderedlist>
@@ -419,7 +413,7 @@
 					<para>Open the Tutor pay window</para>
 				</listitem>
 				<listitem>
-					<para>Select the "Generate Tutor pay..." menu item under the cogwheel icon. <inlinemediaobject>
+					<para>Click the cogwheel and select the "Generate tutor pay" <inlinemediaobject>
 							<imageobject>
 								<imagedata scalefit="1" width="80%" contentdepth="80%"
 									fileref="images/generateTutorPayStep1(new).png"/>

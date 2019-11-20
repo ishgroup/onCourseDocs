@@ -1,0 +1,573 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-9.15'>
+  <info>
+    <title>Release 9.15</title>
+    <pubdate>21 Nov. 2019</pubdate>
+  </info>
+  <section role='important'>
+    <title>Important changes</title>
+    <para> </para>
+  </section>
+  <section role='major'>
+    <title>Major features</title>
+    <para> </para>
+  </section>
+  <section role='scripts'>
+    <title>Reports and scripts</title>
+    <itemizedlist>
+      <listitem>
+        <para>Lock outcomes which have been reported
+          <systemitem>OD-12759</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Remove report version column
+          <systemitem>OD-13266</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Report background stored in report
+          <systemitem>OD-13268</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Print report preview
+          <systemitem>OD-13277</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Variables rendering for share menu PDF reports
+          <systemitem>OD-13366</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Duplicate exports/report names confuse the UI
+          <systemitem>OD-13408</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Add report preview to Share dialog
+          <systemitem>OD-13465</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <section role='minor'>
+      <title>Minor features</title>
+      <itemizedlist>
+        <listitem>
+          <para>Cogwheel (Payment In) - reverse payment 
+            <systemitem>OD-12427</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Cogwheel (Payment In) - Refund CC payment
+            <systemitem>OD-12428</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Assessments API
+            <systemitem>OD-12766</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Classes API
+            <systemitem>OD-12773</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Contacts (Companies,Students,Tutors) list view
+            <systemitem>OD-12779</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Reports API
+            <systemitem>OD-12816</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Reports edit view
+            <systemitem>OD-12818</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Tutor roles edit view
+            <systemitem>OD-12831</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React migration: Tutor roles API
+            <systemitem>OD-12833</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Merging: pick student number
+            <systemitem>OD-12876</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contact merging API
+            <systemitem>OD-12969</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove label "GENERAL" in all edit views for two and three columns views. Help icon is not needed in three column view as well
+            <systemitem>OD-13052</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>onCourse junit tests: adjustments for AQL tests
+            <systemitem>OD-13141</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AQLTag names in quotes client validation
+            <systemitem>OD-13164</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Java 11 for angel server
+            <systemitem>OD-13172</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Run angel server on Java 11
+            <systemitem>OD-13176</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Create a Christmas/new year theme
+            <systemitem>OD-13257</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Attaching classes to discounts by tag/attaching all current &amp; pending classes
+            <systemitem>OD-13264</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add sidebar list entities to Dashboard latest activity
+            <systemitem>OD-13305</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Url search param for lists should accept quick filters
+            <systemitem>OD-13331</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Make Timetable components reusable
+            <systemitem>OD-13337</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add aql search by tag for all tagable entities
+            <systemitem>OD-13360</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contra invoices link from invoice edit view.
+            <systemitem>OD-13362</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contact merge: select all should look more like buttons
+            <systemitem>OD-13374</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Remove tutor role permission from security settings
+            <systemitem>OD-13378</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Cayenne 4.1rc1
+            <systemitem>OD-13381</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Automation &gt; Scripts: Add validation for 'Cron Schedule' field
+            <systemitem>OD-13389</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Create a high contrast theme
+            <systemitem>OD-13392</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>favicon
+            <systemitem>OD-13398</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Upgrade Cayenne 4.1.RC2
+            <systemitem>OD-13401</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Improve page load by preloading resources
+            <systemitem>OD-13402</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Certificates: Make simple list to choose outcomes instead of advanced search
+            <systemitem>OD-13404</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>CourseClass list
+            <systemitem>OD-13413</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>PDF overlay API
+            <systemitem>OD-13424</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Class Timetable clash validation API
+            <systemitem>OD-13425</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Automation - make the 'Save as New Automation' text clearer
+            <systemitem>OD-13432</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Modify grammer to support aql query with path and tag
+            <systemitem>OD-13441</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>hotjar
+            <systemitem>OD-13453</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Upgrade to gradle 6.0
+            <systemitem>OD-13454</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contact react view: add find related items
+            <systemitem>OD-13457</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React contact view: add cogItems
+            <systemitem>OD-13468</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='fixes'>
+      <title>Fixes</title>
+      <itemizedlist>
+        <listitem>
+          <para>Preferences &gt; General. Remove mark of form type from custom field name
+            <systemitem>OD-12160</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Derby upgrade fails
+            <systemitem>OD-12537</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React lists in 3-column view: No data on right-side panel after opening record from dashboard latest activity and following edit
+            <systemitem>OD-13033</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>React script "+" input causes window to flash white
+            <systemitem>OD-13078</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Advanced search: No hints if using a filter with parentheses in the name
+            <systemitem>OD-13225</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Find related on Memberships
+            <systemitem>OD-13274</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AQL in Sales window
+            <systemitem>OD-13276</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Add validation for setting tag: 'Mandatory'  &amp; 'Limit to one'
+            <systemitem>OD-13291</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Cannot open script list view when script has an invalid cron schedule 
+            <systemitem>OD-13320</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Exception when launching angel server with empty schema
+            <systemitem>OD-13357</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Error when passing authentication as admin
+            <systemitem>OD-13358</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Certificate select student broken
+            <systemitem>OD-13359</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Login stuck after 2FA authentication
+            <systemitem>OD-13363</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Make permission errors more informative
+            <systemitem>OD-13364</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Non-admin users can't get account.invoice.terms from preferences
+            <systemitem>OD-13365</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Find related Applications -&gt; Contact broken
+            <systemitem>OD-13368</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contra UI - sortable list of invoices
+            <systemitem>OD-13372</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Unable to create filter using quick search
+            <systemitem>OD-13373</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>System user edit view fonts
+            <systemitem>OD-13376</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Set Account permission to View if role has Invoice and Payment permissions
+            <systemitem>OD-13377</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Search error dialog gets in the way
+            <systemitem>OD-13385</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AQL - Between functions don't work
+            <systemitem>OD-13386</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Invoices: Error creating new invoice record
+            <systemitem>OD-13388</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Server exceptions after migration to Cayenne 4.1.RC1
+            <systemitem>OD-13390</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Search typeahead problems
+            <systemitem>OD-13391</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Invoices - Find related for Payments Out links to old UI
+            <systemitem>OD-13395</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AQL: Invalid search expression error for nested lists
+            <systemitem>OD-13403</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Cannot limit banking to one site
+            <systemitem>OD-13407</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Aql query not parsed in contact view
+            <systemitem>OD-13414</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contact view: tutors are not shown.
+            <systemitem>OD-13415</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>CourseClass view: cancelled classes are included in other filters
+            <systemitem>OD-13416</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Wrong export template validation
+            <systemitem>OD-13417</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contact view: filters don't work correctly
+            <systemitem>OD-13419</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AVETMISS Smart &amp; Skilled - include outcomes from courses w/o qualification
+            <systemitem>OD-13420</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>PaymentOut: Some UI issues
+            <systemitem>OD-13435</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>AQL: Search does not work if hyphen is used in request
+            <systemitem>OD-13436</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>OnCourse client fails on re-login
+            <systemitem>OD-13438</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Find Anything results - windows should include search term when opened
+            <systemitem>OD-13439</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Certificate dates not matching between old and new UI
+            <systemitem>OD-13440</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Discount type change breaks form component
+            <systemitem>OD-13442</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Certificate dates are displayed in UTC
+            <systemitem>OD-13444</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>junit test failures
+            <systemitem>OD-13452</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>jx-browser: Dashboard does not appear after login
+            <systemitem>OD-13461</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Discounts: 'Valid to date' date increases one day after saving
+            <systemitem>OD-13464</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contacts &gt; PDF export: Some issues
+            <systemitem>OD-13469</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para> Broken angel-client-artifacts build
+            <systemitem>OD-13470</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Tutor Pay &gt; Cogwheel &gt; Generate Tutor Pay: Link to classes opens blank window
+            <systemitem>OD-13472</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Client app fails to launch
+            <systemitem>OD-13474</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Launch server and client are failing
+            <systemitem>OD-13478</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Having slash symbol in Data Collection name breaks url
+            <systemitem>OD-13479</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Missed 'client.jar' artifact for win, macOs bundles
+            <systemitem>OD-13480</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Contact Merge - cannot identify verified USI
+            <systemitem>OD-13482</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Downloaded Snapshot builds won't launch
+            <systemitem>OD-13484</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Initial transactions missed for refund invoices (QE)
+            <systemitem>OD-13485</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>COS transactions missed for refund invoices (checkout)
+            <systemitem>OD-13486</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Share: Transaction Details/Summary/Report. PDF export failed
+            <systemitem>OD-13487</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Find related links for Invoices react list
+            <systemitem>OD-13488</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>Replace Debtors and Creditors Report with new export
+            <systemitem>OD-13490</systemitem>
+          </para>
+        </listitem>
+        <listitem>
+          <para>InvoiceLine relation with Discount cos account
+            <systemitem>OD-13491</systemitem>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section role='web'>
+      <title>Web features</title>
+      <itemizedlist />
+    </section>
+    <section role='web-fixes'>
+      <title>Web fixes</title>
+      <itemizedlist />
+    </section>
+  </section>
+</chapter>

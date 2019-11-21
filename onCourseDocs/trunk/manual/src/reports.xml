@@ -48,10 +48,10 @@
 				for the one or more records you have selected in the list. </para>
 			<section>
 				<title>Managing Print Backgrounds </title>
-				<para>onCourse printed reports can be set up with a defined background or overlay
-					allowing the user to utilise different backgrounds or headers dependent upon the
-					particular report. These backgrounds can be set up as a PDF document that is
-					then imported into onCourse via the report window. </para>
+				<para>onCourse printed reports can be set up with a defined background or overlay allowing the
+                    user to utilise different backgrounds or headers dependent upon the particular
+                    report. These backgrounds must be created as a PDF document that is then
+                    imported into onCourse via the Automation window. </para>
 				<para>Generally, a college will have a standard 'letterhead' style background,
 					available in both portrait and landscape modes that can be used as the print
 					background to common reports like invoices, enrolment confirmations and class
@@ -67,22 +67,24 @@
 					design, with only the text based contents coming from the onCourse report, a
 					college can modify their backgrounds at any time,without access to sophisticated
 					software or report writing skills.</para>
-				<para>As a general rule you will have about 30mm at the top of the first reports
-					page to add you logo and any text around it. If you want the exact dimensions
-					you can go to the Reports list view, highlight the report you want to find these
-					dimensions for, then click on the cog wheel and choose the option 'Save report
-					file on disk'. Then to open the file you would have to download a tool called
-					JasperSoft Studio, more information about this can be found in the <link
-						xlink:href="reports-custom.html">Creating custom reports</link> chapter of
-					the user manual.</para>
+				<para>As a general rule you will have about 30mm at the top of the first reports page to add you
+                    logo and any text around it. If you want the exact dimensions you can go to the
+                    Automation section, scroll to PDF Reports, highlight the report you want to find
+                    these dimensions for. If it's a default ish report, you'll need to click the
+                    cogwheel, save as a new PDF report and enter a new key. Then you can highlight
+                    the new report, click the 'edit' button. If the report is a custom made one, you
+                    can simply click the 'edit' button. Then to open the file you would have to
+                    download a tool called JasperSoft Studio, more information about this can be
+                    found in the <link xlink:href="reports-custom.html">Creating custom
+                        reports</link> chapter of the user manual.</para>
 				<section>
 					<title>Setting Up New Backgrounds</title>
 					<para>The following instructions outline how you can set up your report print
 						backgrounds which will be overlaid with the report content:</para>
 					<orderedlist>
 						<listitem>
-							<para>Create a new Microsoft Word or iWork Pages document and ensure
-								that the page set up is set to Portrait.</para>
+							<para>Create a new Microsoft Word or Apple Pages document and ensure that the page set up is
+                                set to Portrait.</para>
 						</listitem>
 						<listitem>
 							<para>Open up the Header for the new document and place the required
@@ -98,6 +100,7 @@
 								as a background. Make sure that you clearly label within the name of
 								the PDF whether the document is Portrait or Landscape format.
 							</para>
+						    <tip><para>You can create a two page background by saving your PDF with a blank second page</para></tip>
 						</listitem>
 						<listitem>
 							<para>Reset the original Word or Pages document to display in Landscape
@@ -112,54 +115,38 @@
 					</orderedlist>
 				</section>
 				<section>
-					<title>Selecting a Background when Running the Report/Testing New Backgrounds</title>
-					<para>Once you have created the print backgrounds for your reports, you can now
-						import those PDF backgrounds into onCourse and attach them to the specific
-						report. You only need to import each report background once. </para>
-					<para>Selecting the relevant background is managed via the print dialogue box of
-						onCourse. The following instructions outline how you can apply the relevant
-						backgrounds to your reports:</para>
+					<title>Adding a New Background to onCourse</title>
+					<para>Once you have created the print backgrounds for your reports, you can now import those
+                        PDF backgrounds into onCourse and attach them to their relevant reports. You
+                        only need to import each report background once. </para>
+					<para>Report Backgrounds are managed within the Automation window:</para>
 					<orderedlist>
 						<listitem>
-							<para>The first option within the drop down menu of available
-								backgrounds is 'no background'. If you select this option it simply
-								means that the header of the report will be blank (no logos or text
-								will appear).</para>
+							<para>In onCourse, from the Dashboard, search for 'Automation' then click it open the window.
+                                Scroll the left-hand column until you see 'PDF Backgrounds'.</para>
 						</listitem>
 						<listitem>
-							<para>The drop down menu will also display any other backgrounds that
-								you have previously imported into onCourse. As per the following
-								example, this is where the naming convention of the backgrounds
-								becomes very important, particularly with respect to whether the
-								background is in Portrait or Landscape format. If you select a
-								Landscape template for a report which is printed in Portrait format,
-								the report will not work. </para>
-							<mediaobject>
-								<imageobject>
-									<imagedata scalefit="1" width="80%" contentdepth="80%"
-										fileref="images/PrintBackgroundOptions.png"/>
-								</imageobject>
-								<caption>
-									<para>Select the relevant print background from the drop down
-										menu</para>
-								</caption>
-							</mediaobject>
+                            <para>Click the + button next to the header, this will create a new
+                                background record that you can upload your background PDF to.</para>
 						</listitem>
 						<listitem>
-							<para>If you wish to import a new background PDF document, select 'upload from disk' from the
-								drop down menu, this will bring up a dialogue box to allow you to
-								select the background you wish to use for this report. Note also
-								that the newly imported print background will be auto selected as
-								the background for the Report you are currently running by default. </para>
+                            <para>Name your new background, then click the 'Upload New Version'
+                                button. Find where you saved your PDF file, click to highlight it,
+                                then click Open. You will now see the filename appear just below the
+                                button. Click Save.</para>
+						    <mediaobject>
+						        <imageobject>
+						            <imagedata scalefit="1" width="80%" contentdepth="80%"
+						                fileref="images/background_new.png"/>
+						        </imageobject>
+						        <caption>
+						            <para>A newly uploaded PDF background showing its preview view</para>
+						        </caption>
+						    </mediaobject>
 						</listitem>
 						<listitem>
-							<para>Once you have either selected an existing background or imported a new one from disk,
-								you simply run the report, which will generate a PDF output of the
-								report with the specified background. Check for any errors in the
-								layout that you might see, and then correct them by opening up the
-								original Word file used to create the PDF background. Once you've
-								finished making your edits, re-save the background PDF and upload it
-								to onCourse, following the same steps as above.</para>
+							<para>If you click back into your record, you will now see that it shows a preview of the
+                                background PDF (as shown above).</para>
 						</listitem>
 					</orderedlist>
 					<tip>
@@ -170,40 +157,95 @@
 					</tip>
 				</section>
 				<section>
-					<title>Managing Print Backgrounds</title>
-					<para>Once you have uploaded the PDF documents that become the print backgrounds
-						for your reports, you can then manage these backgrounds via the Report
-						window of onCourse.</para>
-					<para>To access these backgrounds go to <guimenuitem> File - Preferences -
-							Reports</guimenuitem> then select 'Manage print backgrounds' via the
-						cogwheel icon of the Report window.</para>
+					<title>Choosing a Print Background</title>
+					<para>You can choose a print background in one of two places:</para>
+                    <para>
+                        <orderedlist>
+                            <listitem>
+                                <para>You can set it globally as a default background within a PDF
+                                    report record itself, or</para>
+                            </listitem>
+                            <listitem>
+                                <para>You can set it at the time you print a report from within
+                                    onCourse. This is simple as setting the background on the print
+                                    view screen from the PDF Background drop down box</para>
+                            </listitem>
+                        </orderedlist>
+                    </para>
+                    <para>To set a global default background for a report:</para>
+                    <orderedlist>
+                        <listitem>
+                            <para>Go to the Automation window and scroll the left hand column until
+                                you see PDF Reports</para>
+                        </listitem>
+                        <listitem>
+                            <para>Click into the PDF report you wish to set a background for</para>
+                        </listitem>
+                        <listitem>
+                            <para>In the record that opens, make a selection from the PDF Background
+                                drop down box, then click Save</para>
+                        </listitem>
+                    </orderedlist>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" width="80%" contentdepth="80%"
-								fileref="images/ManagePrintBackgroundsViaCogwheel.png"/>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+							    fileref="images/select_default_background.png"/>
 						</imageobject>
 						<caption>
 							<para>Manage backgrounds via Reports window</para>
 						</caption>
 					</mediaobject>
-					<para>A new dialogue box will appear, which allows you to either rename a
-						background by double clicking on the entry, or to delete a background that
-						is no longer being utilised. </para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="80%" contentdepth="80%"
-								fileref="images/ManagePrintBackgroundsDialogueBox.png"/>
-						</imageobject>
-						<caption>
-							<para>Editing Backgrounds</para>
-						</caption>
-					</mediaobject>
-					<tip>
-						<para>You can only import new backgrounds via the Print dialogue box when
-							printing a given report. This process cannot be done via the Report
-							window of onCourse.</para>
-					</tip>
 				</section>
+                <section>
+                    <title>Background Previews</title>
+                    <para>You may notice the Preview sections within the PDF Reports records. The
+                        preview window shows you a preview of how the current PDF Report will come
+                        out with the background that's currently selected. IMPORTANT: Previews will
+                        only generate after a report has been printed at least once, and the 'create
+                        preview' tickbox was checked.</para>
+                    <para>To ensure you create a preview:</para>
+                    <para>
+                        <orderedlist>
+                            <listitem>
+                                <para>When preparing to print any report, ensure the correct
+                                    background is selected</para>
+                            </listitem>
+                            <listitem>
+                                <para>Ensure the 'Create Preview' tick box is ticked.</para>
+                            </listitem>
+                        </orderedlist>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                    fileref="images/default_background_shown.png"/>
+                            </imageobject>
+                            <caption>
+                                <para>How to ensure your report print generates a preview</para>
+                            </caption>
+                        </mediaobject>
+                    </para>
+                    <para>Once the report is generated, you will be able to see the preview both in
+                        the print view the next time you go to print that report, and also within
+                        the same record in PDF Report section.</para>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                fileref="images/share_preview.png"/>
+                        </imageobject>
+                        <caption>
+                            <para>Preview in the print view</para>
+                        </caption>
+                    </mediaobject>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                fileref="images/pdf_preview.png"/>
+                        </imageobject>
+                        <caption>
+                            <para>Preview in the PDF Report view</para>
+                        </caption>
+                    </mediaobject>
+                </section>
 				<section>
 					<title>Managing Backgrounds for Custom Reports</title>
 					<para>The ability to apply a print background to your Custom Reports provides

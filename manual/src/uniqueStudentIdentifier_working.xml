@@ -10,8 +10,8 @@
             office staff. </para>
         <para>If a student enters their USI online, or you enter it manually in onCourse the USI
             will automatically be verified against the USI Agency system. In order for this process
-            to work we will require a special authorisation key called an AUSkey that has been
-            linked to your RTO. </para>
+            to work you'll need to run through the USI Integration process, listed on our
+            Integrations page here.</para>
         <para>The verification system is not available to onCourse community edition users who don't
             have a support agreement with ish. You can still capture the USI within onCourse and
             report it for AVETMISS but you will not be able to take advantage of the online student
@@ -19,58 +19,33 @@
             their student's USIs manually using the USI Agency RTO portal.</para>
         <section>
             <title>How onCourse automates the USI process</title>
-            <para>We know that many organisations who use onCourse deliver a mix of accredited (VET)
-                and non-accredited training, and that the USI requirements will not apply to their
-                non-accredited students. We also know that some 75% of students who have ever
-                enrolled via onCourse either have enrolled online or have provided an email address
-                during the enrolment process, so can receive emails from us and access websites to
-                complete web forms. </para>
-            <para>First of all, when a student enrols in a course which is identified as a VET
-                course, their enrolment confirmation will include some additional text explaining
-                what a USI is and why they need to tell you theirs. This email directs them to a
-                special onCourse portal page (no log in required) requesting they supply their USI
-                or go through the process to create one. </para>
+            <para>When a student enrols in a course which is identified as a VET course, their
+                enrolment confirmation will include some additional text explaining what a USI is
+                and why they need to tell you theirs. This email directs them to a special onCourse
+                portal page (no log in required) requesting they supply their USI or go through the
+                process to create one. </para>
             <para>Most students will be going through the process of creating a new USI. Once they
                 complete this part of the process, we will then take that new USI and verify it
-                against their first name, last name and date of birth as supplied on enrolment. If
-                the USI doesn't validate (possibly because the student used a dummy date of birth on
-                enrolment, or a shortened version of their first name) then they will be prompted to
-                update the incorrect data in onCourse to match their USI, so we can pass the USI
-                validation process. </para>
-            <para>Every Monday morning, all recently enrolled VET students who have not supplied you
-                with their USI will be sent an automatic reminder email on how to complete this
-                process and why it is important they do so. There is a customisable and that runs
-                this process which you can edit to meet your preferred business requirements. A
-                student who doesn't complete this process or can not validate their USI will be
-                flagged in onCourse for you to follow up. </para>
+                against their first name, last name and date of birth as supplied on their
+                enrolment. If the USI doesn't validate (possibly because the student used a dummy
+                date of birth on enrolment, or a shortened version of their first name) then they
+                will be prompted to update the incorrect data in onCourse to match their USI, so we
+                can pass the USI validation process. </para>
+            <para>Provided you have the 'send usi reminder' script enabled in the Automation >
+                Scripts section, every Monday morning (this timing can be changed), all recently
+                enrolled VET students who have not supplied you with their USI will be sent an
+                automatic reminder email on how to complete this process and why it is important
+                they do so. A student who doesn't complete this process or can not validate their
+                USI will be flagged in onCourse for you to follow up. </para>
         </section>
         <section>
             <title> What you need to do enable the USI validation service in onCourse </title>
-            <orderedlist>
-                <listitem>
-                    <para>Obtain an AUSKey from the <link xlink:href="https://abr.gov.au/AUSkey/">Australian Business Registry</link>, If your organisation lodges tax
-                        electronically to the ATO you may already have an AUSKey. </para>
-                </listitem>
-                <listitem>
-                    <para>Create a device AUSKey and send it to ish to upload to your onCourse
-                        server. Step by step instructions are available at <link xlink:href="https://ish.com.au/oncourse/auskey"/>
-                    </para>
-                </listitem>
-                <listitem>
-                    <para>Register your AUSKey with the USI Agency using <link xlink:href="https://forms.business.gov.au/smartforms/servlet/SmartForm.html?formCode=USI-SysAccess">this form</link>. If you don't get an email confirmation, follow it up
-                        with the USI Agency directly. Only once your AUSKey is registered can you
-                        use the built in validation tools in onCourse.</para>
-                </listitem>
-                <listitem>
-                    <para>Customise the onCourse enrolment <link xlink:href="emailTemplates.html">template</link> and USI reminder template and <link xlink:href="scripts.html">script</link> so the wording and frequency of the
-                        reminders is suitable for your business.</para>
-                </listitem>
-                <listitem>
-                    <para>Obtain a USI for yourself and test that it validates in onCourse.</para>
-                </listitem>
-            </orderedlist>
-            <para>Please contact your onCourse account manager if you need any assistance with this
-                process.</para>
+            <para>You can enable the USI validation by following the steps laid out in the <link
+                    xlink:href="externalIntegrations.html#externalintegrations-USI">USI section of
+                    our external integrations chapter</link> of our documentation. There are a
+                handful of steps that must be completed externally to the onCourse system before
+                running the integration so ensure you follow each step closely before moving on to
+                the next one.</para>
         </section>
     </section>
     <section xml:id="usi-selfService">

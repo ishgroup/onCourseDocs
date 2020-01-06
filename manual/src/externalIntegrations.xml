@@ -691,8 +691,8 @@
                 Automation, and enabling the 'Canvas Enrol' script. Make sure you hit the Save
                 button before closing the window.</para>
         </section>
-        <section>
-            <title>Micropower Integration</title>
+        <section xml:id="externalintegrations-micropower">
+            <title>Micropower</title>
             <para>This integration allows for a connection between a Micropower (MPower MSL) based
                 system and onCourse. To use this integration, you'll need to have your own
                 Micropower instance. Each field in the integration window should map directly to a
@@ -700,6 +700,69 @@
                 Micropower system into the corresponding field within onCourse, and ensure you
                 activate the Micropower integration script in the Scripts section of the Automation
                 window.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%"
+                        fileref="images/mpower.png" format="png"/>
+                </imageobject>
+                <caption>
+                    <para>Micropower Integration window</para>
+                </caption>
+            </mediaobject>
+        </section>
+        <section xml:id="externalintegrations-USI">
+            <title>USI</title>
+            <para>This integration connects your onCourse system to the USI Agency so that you can
+                automatically verify a student's USI number. This section will detail how you can
+                activate integration. If you wish to learn more about the basics of how USI numbers
+                function in onCourse, you can read more in our dedicated <link
+                    xlink:href="uniqueStudentIdentifier.html">USI chapter</link> here. </para>
+            <para>To activate the onCourse USI integration there are a few steps that need to be
+                completed externally to onCourse first, before going through the internal onCourse
+                process. Follow the below steps to activate the integration:</para>
+            <para>
+                <orderedlist>
+                    <listitem>
+                        <para>Go to this link to request access to the USI System Registry - <link
+                                xlink:href="https://www.usi.gov.au/training-organisations/set-access-usi-registry-system"
+                            />. This is only required if you've never registered with the USI Agency
+                            before.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Once completed with step 1, you'll need to register a MyGovID. Please
+                            note that a myGovID is not the same a MyGov. <emphasis role="bold"
+                                >IMPORTANT: </emphasis>When you create a MyGovID, it is for you as
+                            an individual, not for the organisation.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Link your business with the Relationship Authorisation Manager - <link
+                                xlink:href="https://authorisationmanager.gov.au/"/>. Once logged in,
+                            choose the "Link your business" option. </para>
+                    </listitem>
+                    <listitem>
+                        <para>Log in to onCourse and go to the Automation window, then scroll the
+                            left hand column until you see the Integrations header. Click the +
+                            button next to he header, then select 'Add' under the USI integration
+                            listing. This will create a new USI integration.</para>
+                    </listitem>
+                    <listitem>
+                        <para>You will be given a number, and a link. Remember the number as you'll
+                            need to enter it at some point during the next steps. Click the link and
+                            it will take you back to the Relationship Authorisation Manager. </para>
+                    </listitem>
+                    <listitem>
+                        <para>Click on the "Entity name" which is your RTO.</para>
+                    </listitem>
+                    <listitem>
+                        <para>In the top menu, click on 'Manage Notifications', then click 'Add
+                            Notification'.</para>
+                    </listitem>
+                    <listitem>
+                        <para>In the 'Digital Service Provider ABN' field, enter the following
+                            number '74073212736', and then click the magnifying glass icon.</para>
+                    </listitem>
+                </orderedlist>
+            </para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="100%" contentdepth="100%"

@@ -48,6 +48,121 @@
                 the next one.</para>
         </section>
     </section>
+    <section xml:id="usi-Capturing">
+        <title>Capturing the USI in onCourse</title>
+        <para>The USI does not need to be captured at the time of enrolment, but typically you'll
+            want to have it entered and verified before the class is completed in order to not delay
+            issuing of certificates.</para>
+        <section>
+            <title>Creating a USI for a student</title>
+            <para>Some students will not be able to navigate the USI portal to obtain their own USI,
+                in which case you are able to do this on their behalf within the VET section of
+                their contact record, just click the cogwheel next to the USI field then select
+                'Create a USI...'</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/create_a_usi.png"/>
+                </imageobject>
+                <caption>
+                    <para> When there is no USI supplied, you can click on the link to open a web
+                        portal and create a new USI.</para>
+                </caption>
+            </mediaobject>
+            <para>Clicking on this link will open a web portal where you can complete the student
+                details and identity document information. You will need to declare that you have
+                obtained permission from the student to complete this process on their
+                behalf.</para>
+            <para>We do not recommend you copy or store the student's identity documentation in
+                their onCourse record as this is in breach of the USI legislation.</para>
+        </section>
+        <section>
+            <title>Manual entry of a USI</title>
+            <para>When you create a new student or update an existing one, you can type the USI
+                directly into the field available on the VET tab in their contact record. This can
+                also be done directly within the Quick Enrol process. The USI will be checked for
+                validity (it is the correct length and matches a checksum) and then verified against
+                the USI agency.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/invalid_usi.png"/>
+                </imageobject>
+                <caption>
+                    <para>What you will see if the USI has not been entered correctly. This USI is
+                        invalid as it doesn't meet the character length and checksum. It can't be
+                        validated and the record can't be saved.</para>
+                </caption>
+            </mediaobject>
+            <para>If you have completed the steps to set up the USI Integration successfully, then
+                the USI validation system in onCourse will be enabled.</para>
+            <para>Once a complete USI is entered in the student record, the background validation
+                process with the USI Registry System will run automatically. The validation process
+                is checking that the student's first name, last name, date of birth and USI match
+                the data held by the USI Registry System.</para>
+            <para> If it succeeds the USI will be marked as verified with a green pill next to the
+                USI field and the student's first name, last name and date of birth will become
+                locked.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/verified_usi.png"/>
+                </imageobject>
+                <caption>
+                    <para>This USI has passed verification and the record has been locked.</para>
+                </caption>
+            </mediaobject>
+            <para>If the one of the fields do not match e.g. the student's first name in onCourse is
+                a shortened version of their legal name, then the USI verification process will
+                fail. Hovering over the information icon next to the USI field label will show the
+                reason why the verification process failed. You can update the non-matching data in
+                onCourse and the verification process will run again, automatically, when you change
+                one of the first name, last name, date of birth or USI field's data.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/usi_verification_failed.png"/>
+                </imageobject>
+                <caption>
+                    <para>This USI has failed verification. The data can be corrected and the
+                        verification attempted again.</para>
+                </caption>
+            </mediaobject>
+        </section>
+        <section>
+            <title>Editing a locked student record</title>
+            <para>After successful USI validation, the data that was matched with the USI - the
+                first name, last name, date of birth and USI of the student, becomes locked. </para>
+            <para>On occasion, a student may inform you that they created their USI with the wrong
+                name details and wish to update their records. To do this, they need to contact the
+                USI Agency by logging into their own portal and completing the process to make the
+                change. Once the USI Agency has the details of the change, you can go ahead and
+                update their onCourse records to match.</para>
+            <para>Click on the padlock symbol next to one of the locked fields in their record and a
+                new sheet will open. This will allow you to edit one or more of the fields.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/usi_edit_sheet.png"/>
+                </imageobject>
+                <caption>
+                    <para>The fields have been unlocked for you to edit</para>
+                </caption>
+            </mediaobject>
+            <para>After editing, click on Verify USI and the SOAP call process will run and confirm
+                if the students details with the USI agency match with the change you wish to
+                make.</para>
+            <para>If your change matches, the student record will return to it's locked state
+                showing the new data that has been verified.</para>
+            <para>If the student has not successfully updated their USI Agency record, your attempt
+                to verify will fail and an explanation will be given when you hover over the
+                exclamation icon.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/usi_edit_name.png"/>
+                </imageobject>
+                <caption>
+                    <para>The USI details have attempted to verify with the new data, but have
+                        failed on the surname.</para>
+                </caption>
+            </mediaobject>
+        </section>
+    </section>
     <section xml:id="usi-selfService">
         <title>Student self-service</title>
         <para>On enrolment through the office or the web, onCourse will send an email enrolment
@@ -168,125 +283,7 @@
         </mediaobject>
     </section>
     </section>
-    <section xml:id="usi-Capturing">
-        <title>Capturing the USI in onCourse</title>
-        <para>The USI does not need to be captured at the time of enrolment, but typically you'll
-            want to have it entered and verified before the class is completed in order to not delay
-            issuing of certificates.</para>
-        <section>
-            <title>Creating a USI for a student</title>
-            <para>Some students will not be able to navigate the USI portal to obtain their own USI,
-                in which case you are able to do this on their behalf in the onCourse student record
-                VET tab.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/create_a_usi.png"/>
-                </imageobject>
-                <caption>
-                    <para> When there is no USI supplied, you can click on the link to open a web
-                        portal and create a new USI.</para>
-                </caption>
-            </mediaobject>
-            <para>If the USI field is blank you will see a link next to the field to create a USI.
-                Clicking on this link will open a web portal where you can complete the student
-                details and identity document information. You will need to declare that you have
-                obtained permission from the student to complete this process on their
-                behalf.</para>
-            <para>An AusKey is not required to create a USI using the web portal. After creating the
-                USI, you need to enter it into onCourse and the verification process will
-                run.</para>
-            <para>We do not recommend you copy or store the student's identity documentation in
-                their onCourse record as this is in breach of the USI legislation.</para>
-        </section>
-        <section>
-            <title>Manual entry of a USI</title>
-            <para>When you create a new student or update an existing one, you can type the USI
-                directly into the field available on the VET tab in their contact record. This can
-                also be done directly within the Quick Enrol process. The USI will be checked for
-                validity (it is the correct length and matches a checksum) and then verified against
-                the USI agency.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/invalid_usi.png"/>
-                </imageobject>
-                <caption>
-                    <para>What you will see if the USI has not been entered correctly. This USI is
-                        invalid as it doesn't meet the character length and checksum. It can't be
-                        validated and the record can't be saved.</para>
-                </caption>
-            </mediaobject>
-            <para>If you have an onCourse support contact, have supplied us with your AUSKey and
-                    <link xlink:href="https://forms.business.gov.au/smartforms/servlet/SmartForm.html?formCode=USI-SysAccess">registered your AUSKey</link> with the USI Registry System the USI validation
-                system in onCourse will be enabled.</para>
-            <para>Once a complete USI is entered in the student record, the background validation
-                process with the USI Registry System will run automatically. The validation process
-                is checking that the student's first name, last name, date of birth and USI match
-                the data held by the USI Registry System.</para>
-            <para> If it succeeds the USI will be marked as verified with a green pill next to the
-                USI field and the student's first name, last name and date of birth will become
-                locked.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/verified_usi.png"/>
-                </imageobject>
-                <caption>
-                    <para>This USI has passed verification and the record has been locked.</para>
-                </caption>
-            </mediaobject>
-            <para>If the one of the fields do not match e.g. the student's first name in onCourse is
-                a shortened version of their legal name, then the USI verification process will
-                fail. Hovering over the information icon next to the USI field label will show the
-                reason why the verification process failed. You can update the non-matching data in
-                onCourse and the verification process will run again, automatically, when you change
-                one of the first name, last name, date of birth or USI field's data.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/usi_verification_failed.png"/>
-                </imageobject>
-                <caption>
-                    <para>This USI has failed verification. The data can be corrected and the
-                        verification attempted again.</para>
-                </caption>
-            </mediaobject>
-        </section>
-        <section>
-            <title>Editing a locked student record</title>
-            <para>After successful USI validation, the data that was matched with the USI - the
-                first name, last name, date of birth and USI of the student, becomes locked. </para>
-            <para>On occasion, a student may inform you that they created their USI with the wrong
-                name details and wish to update their records. To do this, they need to contact the
-                USI Agency by logging into their own portal and completing the process to make the
-                change. Once the USI Agency has the details of the change, you can go ahead and
-                update their onCourse records to match.</para>
-            <para>Click on the padlock symbol next to one of the locked fields in their record and a
-                new sheet will open. This will allow you to edit one or more of the fields.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/usi_edit_sheet.png"/>
-                </imageobject>
-                <caption>
-                    <para>The fields have been unlocked for you to edit</para>
-                </caption>
-            </mediaobject>
-            <para>After editing, click on Verify USI and the SOAP call process will run and confirm
-                if the students details with the USI agency match with the change you wish to
-                make.</para>
-            <para>If your change matches, the student record will return to it's locked state
-                showing the new data that has been verified.</para>
-            <para>If the student has not successfully updated their USI Agency record, your attempt
-                to verify will fail and an explanation will be given when you hover over the
-                exclamation icon.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/usi/usi_edit_name.png"/>
-                </imageobject>
-                <caption>
-                    <para>The USI details have attempted to verify with the new data, but have
-                        failed on the surname.</para>
-                </caption>
-            </mediaobject>
-        </section>
-    </section>
+
     <section>
         <title>USI Exemption Process</title>
         <para>There are two types of exemption currently available for students who don't want to,
@@ -387,21 +384,6 @@
         <qandaset>
             <qandaentry>
                 <question>
-                    <para>Why are all my USIs failing to verify with the error message saying the
-                        USI agency can't be contacted?</para>
-                </question>
-                <answer>
-                    <para>For all the customers that <link xlink:href="https://forum.ish.com.au/discussion/276/preparing-your-rto-for-the-usi-implementation-in-2015#latest">followed the instructions we provided on our forum</link> about
-                        creating an AUSKey, sending it to us to upload to your server and completing
-                        the USI Agency Access request form, it seems the last step went pear shaped
-                        for some and the AUSKey wasn't linked to your RTO Id, making the whole
-                        automatic verification process fail.</para>
-                    <para>Complete the <link xlink:href="https://forms.business.gov.au/smartforms/servlet/SmartForm.html?formCode=USI-SysAccess">System Access Request Form</link> again and wait for an approval email
-                        before trying to verify USIs.</para>
-                </answer>
-            </qandaentry>
-            <qandaentry>
-                <question>
                     <para>How do I make the USI validation process run in onCourse?</para>
                 </question>
                 <answer>
@@ -425,7 +407,8 @@
                         required?</para>
                 </question>
                 <answer>
-                    <para>Go and <link xlink:href="http://usi.gov.au/create-your-USI/Pages/default.aspx">create
+                    <para>Go and <link
+                            xlink:href="http://usi.gov.au/create-your-USI/Pages/default.aspx">create
                             yourself a USI.</link> Then you can use your own details to create a new
                         student contact and test the USI verification. Try without a date of birth
                         or misspelled name to see the error responses you'll get in onCourse. You
@@ -457,7 +440,8 @@
                         it validate, but you probably don't want to do this as then their
                         certificate will be issued in the wrong name too. For the time being, leave
                         it as an invalid USI.</para>
-                    <para>In these instances you need to get the student to log into their own <link xlink:href="https://portal.usi.gov.au/student">USI Agency Portal</link>
+                    <para>In these instances you need to get the student to log into their own <link
+                            xlink:href="https://portal.usi.gov.au/student">USI Agency Portal</link>
                         and make the change there, and advise you once this has been done. Then you
                         can try the validation process again, and it should pass with the right
                         spelling.</para>
@@ -469,11 +453,13 @@
                         onCourse?</para>
                 </question>
                 <answer>
-                    <para>In the contact advanced search options, you can search for USI status =
-                        not verified. You can then work through the list of returned to results to
-                        check the error messages, contact the students and make the appropriate
-                        changes. As you change the data, the verification process will run
-                        again.</para>
+                    <para>In the contact window, you can search for students without a verified USI
+                        by using the following query:</para>
+                    
+                    <para><code>student.usiStatus is NON_VERIFIED</code></para>
+                    <para>You can then work through the list of returned to results to check the
+                        error messages, contact the students and make the appropriate changes. As
+                        you change the data, the verification process will run again.</para>
                 </answer>
             </qandaentry>
             <qandaentry>
@@ -482,17 +468,18 @@
                         onCourse?</para>
                 </question>
                 <answer>
-                    <para>Using the class window, locate all your VET classes that are running
-                        during 2015 and highlight them all. Use the cog wheel to find 'Enrolled
+                    <para>Using the class window, locate all your VET classes that are running and
+                        highlight them all. Use the find related function to find all 'Enrolled
                         students' related to the highlighted classes.</para>
-                    <para>In this new window of students, use the advanced find to search for USI
-                        status = not set. Once you have this list of students, you can then manually
-                        follow them up with phone calls or find their enrolments to send them the
-                        USI reminder email.</para>
-                    <para>To send the reminder email, select all the students and use the cogwheel
-                        to find related enrolments. When the enrolment window opens, check the
-                        filter options 'current active' and 'completed active' to remove any
-                        cancelled or failed enrolments from the list. Then highlight all the
+                    <para>In this new group of students, use the AQL to search for the
+                        following:</para>
+                    <para><code>student.usiStatus is NON_VERIFIED</code></para>
+                    <para>You can then manually follow them up with phone calls or find their
+                        enrolments to send them the USI reminder email.</para>
+                    <para>To send the reminder email, select all the students and use the find
+                        related icon to find related enrolments. When the enrolment window opens,
+                        check the filter options 'current active' and 'completed active' to remove
+                        any cancelled or failed enrolments from the list. Then highlight all the
                         enrolments and from the cog wheel choose the option 'send emails from
                         template' and select the template called 'USI reminder email'.</para>
                 </answer>

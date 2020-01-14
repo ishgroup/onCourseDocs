@@ -2,125 +2,22 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
 	version="5.0" xml:id="AVETMISS">
 	<title>AVETMISS Reporting</title>
-	<section xml:id="AVETMISS-reporting">
-		<title>Explaining the AVETMISS runner choices</title>
-		<para><emphasis role="bold">Flavour: </emphasis>This AVETMISS variation type you want to
-			export. Often these variations are based on State</para>
-		<para><emphasis role="bold">Select enrolments from: </emphasis>This directs the export
-			runner to chose certain enrolments based on their Funding Source. If you haven't set any
-			funding sources, all your courses will be Fee for service VET (non-funded) by default.
-			For 'Fee for Service', you can further refine by delivery state. You can select multiple
-			options here.</para>
-		<para><emphasis role="bold">Date range: </emphasis>The options available here are date based
-			and will collect the OUTCOMES that fall into this date range: </para>
-		<para><emphasis>commenced outcomes</emphasis> - all outcomes that have a start date in the
-			past from the chosen enrolments. Be careful choosing this with 'Fee for service VET' or
-			'Non VET' as you will export every outcome ever created in your onCourse database. It is
-			better chosen in combination with a specific Funding Source.</para>
-		<para><emphasis>Previous calendar year</emphasis> - this will show in the drop down as a
-			date range like '2017 year'</para>
-		<para><emphasis>Previous calendar quarter</emphasis> - this will show in the drop down as a
-			date range like '1 Jan 2018 - 30 April 2018'</para>
-		<para><emphasis>Custom date range</emphasis> - this will display two text fields where you
-			can enter your own start and end dates. </para>
-		<para>NOTE: AVETMISS reporting is designed to report data in the past, so your date range
-			end should be no later than today. </para>
-		<para><emphasis role="bold">Checkbox - Include all outcomes linked by enrolment:</emphasis>
-			When running a funded export, you often need to select this option as this collects the
-			additional outcomes associated with the funded enrolment that may fall outside the
-			outcome date range selected. For example. when reporting to Smart and Skilled, you must
-			always report all outcomes associated with the funding, even if they haven't yet
-			commenced, or completed in the past. This option is only available when you run the
-			AVETMISS export from File > Import/Export. It doesn't display when running from the
-			cogwheel, as all outcomes from enrolments are always included.</para>
-		<para><emphasis role="bold">History</emphasis> - This section shows you a list of the most recent
-			AVETMISS exports to be run on your system, allowing you to run them again or review the
-			outcomes exported by each. You can also set a status for each–either Success, Fail or
-			Exported–so you can tell in the future which extracts were reported successfully. You
-			must set this manually; the next time you open the AVETMISS export window after running
-			an extract you'll be asked a question about your previous export, whether it was
-			successful, failed or outcome unknown. Once you choose an answer the export will be
-			'filed' in the History section as the most recent export, and display the time of the
-			export, the number of outcomes, the user who ran it and the success/failure flag.</para>
-		<para>These records will last in the system dependant on how they're flagged. Exports
-			flagged as Success will remain forever, while those set as Exported will remain for 28
-			days. Any set as failed will only be stored for three days.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/AVETMISS_overview.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>Ensure you select the right 'AVETMISS flavour' for the export</para>
-			</caption>
-		</mediaobject>
-		<para>Other options will appear once you have made your initial query (after hitting the
-			'find' button), these are outlined below:</para>
-		<para><emphasis role="bold"># of Outcomes &amp; Enrolments</emphasis> The exact number of
-			outcomes, and their attached enrolments, will appear at the top of the new window. Check
-			this number matches the value you are expecting.</para>
-		<para><emphasis role="bold">Status Breakdowns</emphasis> Each outcome status has an
-			individual breakdown showing the number of outcomes to be exported with this status.
-			Click the 'open related' icon to the right of the number count to see a full list of
-			each outcome with this status.</para>
-		<para><emphasis role="bold">Delivery - xxx pending status. Export as continuing (70) ending
-				7 days from now:</emphasis> If the AVETMISS pre-run checks find outcomes that ended
-			in the past where you haven't set a final status, you can automatically push the outcome
-			end date forward by 7 days and report a 70. This does not change the outcome end date in
-			onCourse, only for the data in the export file. The find related icon here also allows
-			you to open the records in question and actually set a final outcome status if required.
-			Note that if you have set an export end date in the future, this setting will not make
-			much sense. e.g. If I have an outcome that was due to end next week, it would be
-			reported today as an in progress 70. If I set an outcome end date of the end of the
-			calender year, the outcome is considered to have been completed, but not properly
-			finalised. Moral to the story - don't set an export end date after today's date unless
-			you want some funky data issues.</para>
-		<para><emphasis role="bold"> Final Status</emphasis> This is a breakdown of the number of
-			different outcomes included in the final export data. This window, in fact the whole
-			screen, is a useful tool to review the data before exported before you create the file,
-			so you can visually see any possible issues before you submit to AVS. If you do spot
-			anything out of the ordinary, you can click the 'open related' icon to the right of each
-			record to see an overview of each outcome included with that status.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/AVETMISS_export_overview.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>A breakdown of your export as it appears before you create the NAT files</para>
-			</caption>
-		</mediaobject>
-	</section>
+	<para>This chapter looks at the AVETMISS reporting process in onCourse, including how to extract
+		your data and how to navigate the different choices and selections you can make from the
+		AVETMISS export window.</para>
 	<section xml:id="AVETMISS-AVETMISSExports">
 		<title>AVETMISS Exports</title>
 		<subtitle>How to get your AVETMISS data out of onCourse to submit to the government funding
 			body of your choice</subtitle>
-		<para>There are five ways to export your data:</para>
-		<orderedlist>
-			<listitem>
-				<para>Export all the total activity data using the file > import/export >
-					AVETMISS</para>
-			</listitem>
-			<listitem>
-				<para>Add the 'Export AVETMISS 8' link to your dashboard via the Quick Access links
-					then click it</para>
-			</listitem>
-			<listitem>
-				<para>Export all the data for one or more funding contracts using the file >
-					import/export > AVETMISS</para>
-			</listitem>
-			<listitem>
-				<para>Export the data related to a class or group of classes, using the
-					cogwheel</para>
-			</listitem>
-			<listitem>
-				<para>Export the data related to an enrolment or group of enrolments, using the
-					cogwheel</para>
-			</listitem>
-		</orderedlist>
+		<para>There are a number of ways to export your data in onCourse, however the easiest and best way
+			is to do so directly from the AVETMISS 8 Export window. To access this window, type
+			'avetmiss' into the 'Find Anything' search on the dashboard and then click the search
+			result. You can also add it to your list of quick access favourites by clicking 'edit'
+			next to the Favourites heading, hovering your mouse over the Export AVETMISS 8
+			selection, then clicking the heart icon so it goes highlighted.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" width="70%" contentdepth="70%"
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
 					fileref="images/AVETMISS_export_menu.png" format="png"/>
 			</imageobject>
 			<caption>
@@ -132,7 +29,7 @@
 			<orderedlist>
 				<listitem>
 					<para>On the Dashboard, type 'AVETMISS' into the search and select <guimenuitem>Export AVETMISS
-							8</guimenuitem></para>
+						8</guimenuitem></para>
 				</listitem>
 				<listitem>
 					<para>Select the AVETMISS Flavour you wish to report. Total VET Activity will be
@@ -193,7 +90,8 @@
 					fileref="images/AVETMISS_export_GUI.png" format="png"/>
 			</imageobject>
 			<caption>
-				<para>Ensure you select the right 'AVETMISS flavour' for the export</para>
+				<para>Review the numbers on this screen before exporting. It can help you find any issues
+					earlier than usual</para>
 			</caption>
 		</mediaobject>
 		<example>
@@ -203,7 +101,7 @@
 			<orderedlist>
 				<listitem>
 					<para>On the Dashboard, type 'AVETMISS' into the search and select <guimenuitem>Export AVETMISS
-							8</guimenuitem></para>
+						8</guimenuitem></para>
 				</listitem>
 				<listitem>
 					<para>Choose an export location. The location MUST be on a local drive, you can
@@ -215,10 +113,11 @@
 					<para>Select the AVETMISS Flavour for the lodgement e.g. STSOnline(NSW)</para>
 				</listitem>
 				<listitem>
-					<para>The AVETMISS export flavour chosen will auto select all Funding contract
-						enrolments from the contracts associated with that funding. You can tick
-						additional checkboxes as needed. Funding Contract types are discussed
-						further in the <xref linkend="fundingContract"/> Chapter</para>
+					<para>The AVETMISS export flavour chosen will auto select all Funding contract enrolments from
+						the contracts associated with that funding. You can tick additional
+						checkboxes as needed. Funding Contract types are discussed further <link
+							xlink:href="fundingContract.html#fundingContract">in the Funding
+							Contracts Chapter</link>.</para>
 				</listitem>
 				<listitem>
 					<para>A note on non VET data: Some training contracts, like CSO include non
@@ -330,6 +229,96 @@
 			</orderedlist>
 		</example>
 	</section>
+	<section xml:id="AVETMISS-reporting">
+		<title>Explaining the AVETMISS runner choices</title>
+		<para><emphasis role="bold">Flavour: </emphasis>This AVETMISS variation type you want to
+			export. Often these variations are based on State</para>
+		<para><emphasis role="bold">Select enrolments from: </emphasis>This directs the export
+			runner to chose certain enrolments based on their Funding Source. If you haven't set any
+			funding sources, all your courses will be Fee for service VET (non-funded) by default.
+			For 'Fee for Service', you can further refine by delivery state. You can select multiple
+			options here.</para>
+		<para><emphasis role="bold">Date range: </emphasis>The options available here are date based
+			and will collect the OUTCOMES that fall into this date range: </para>
+		<para><emphasis>commenced outcomes</emphasis> - all outcomes that have a start date in the
+			past from the chosen enrolments. Be careful choosing this with 'Fee for service VET' or
+			'Non VET' as you will export every outcome ever created in your onCourse database. It is
+			better chosen in combination with a specific Funding Source.</para>
+		<para><emphasis>Previous calendar year</emphasis> - this will show in the drop down as a
+			date range like '2017 year'</para>
+		<para><emphasis>Previous calendar quarter</emphasis> - this will show in the drop down as a
+			date range like '1 Jan 2018 - 30 April 2018'</para>
+		<para><emphasis>Custom date range</emphasis> - this will display two text fields where you
+			can enter your own start and end dates. </para>
+		<para>NOTE: AVETMISS reporting is designed to report data in the past, so your date range
+			end should be no later than today. </para>
+		<para><emphasis role="bold">Checkbox - Include all outcomes linked by enrolment:</emphasis>
+			When running a funded export, you often need to select this option as this collects the
+			additional outcomes associated with the funded enrolment that may fall outside the
+			outcome date range selected. For example. when reporting to Smart and Skilled, you must
+			always report all outcomes associated with the funding, even if they haven't yet
+			commenced, or completed in the past. This option is only available when you run the
+			AVETMISS export from File > Import/Export. It doesn't display when running from the
+			cogwheel, as all outcomes from enrolments are always included.</para>
+		<para><emphasis role="bold">History</emphasis> - This section shows you a list of the most recent
+			AVETMISS exports to be run on your system, allowing you to run them again or review the
+			outcomes exported by each. You can also set a status for each–either Success, Fail or
+			Exported–so you can tell in the future which extracts were reported successfully. You
+			must set this manually; the next time you open the AVETMISS export window after running
+			an extract you'll be asked a question about your previous export, whether it was
+			successful, failed or outcome unknown. Once you choose an answer the export will be
+			'filed' in the History section as the most recent export, and display the time of the
+			export, the number of outcomes, the user who ran it and the success/failure flag.</para>
+		<para>These records will last in the system dependant on how they're flagged. Exports
+			flagged as Success will remain forever, while those set as Exported will remain for 28
+			days. Any set as failed will only be stored for three days.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/AVETMISS_overview.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>Ensure you select the right 'AVETMISS flavour' for the export</para>
+			</caption>
+		</mediaobject>
+		<para>Other options will appear once you have made your initial query (after hitting the
+			'find' button), these are outlined below:</para>
+		<para><emphasis role="bold"># of Outcomes &amp; Enrolments</emphasis> The exact number of
+			outcomes, and their attached enrolments, will appear at the top of the new window. Check
+			this number matches the value you are expecting.</para>
+		<para><emphasis role="bold">Status Breakdowns</emphasis> Each outcome status has an
+			individual breakdown showing the number of outcomes to be exported with this status.
+			Click the 'open related' icon to the right of the number count to see a full list of
+			each outcome with this status.</para>
+		<para><emphasis role="bold">Delivery - xxx pending status. Export as continuing (70) ending
+				7 days from now:</emphasis> If the AVETMISS pre-run checks find outcomes that ended
+			in the past where you haven't set a final status, you can automatically push the outcome
+			end date forward by 7 days and report a 70. This does not change the outcome end date in
+			onCourse, only for the data in the export file. The find related icon here also allows
+			you to open the records in question and actually set a final outcome status if required.
+			Note that if you have set an export end date in the future, this setting will not make
+			much sense. e.g. If I have an outcome that was due to end next week, it would be
+			reported today as an in progress 70. If I set an outcome end date of the end of the
+			calender year, the outcome is considered to have been completed, but not properly
+			finalised. Moral to the story - don't set an export end date after today's date unless
+			you want some funky data issues.</para>
+		<para><emphasis role="bold"> Final Status</emphasis> This is a breakdown of the number of
+			different outcomes included in the final export data. This window, in fact the whole
+			screen, is a useful tool to review the data before exported before you create the file,
+			so you can visually see any possible issues before you submit to AVS. If you do spot
+			anything out of the ordinary, you can click the 'open related' icon to the right of each
+			record to see an overview of each outcome included with that status.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" width="100%" contentdepth="100%"
+					fileref="images/AVETMISS_export_overview.png" format="png"/>
+			</imageobject>
+			<caption>
+				<para>A breakdown of your export as it appears before you create the NAT files</para>
+			</caption>
+		</mediaobject>
+	</section>
+	
 	<section>
 		<title>Funding Uploads</title>
 		<para>When you run an AVETMISS export, a history of the upload is stored in the funding

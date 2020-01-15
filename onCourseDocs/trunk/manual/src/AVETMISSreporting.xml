@@ -3,8 +3,8 @@
 	version="5.0" xml:id="AVETMISS">
 	<title>AVETMISS Reporting</title>
 	<para>This chapter looks at the AVETMISS reporting process in onCourse, including how to extract
-		your data and how to navigate the different choices and selections you can make from the
-		AVETMISS export window.</para>
+		your data from the system, and how to navigate the different choices and selections you can
+		make from the AVETMISS export window.</para>
 	<section xml:id="AVETMISS-AVETMISSExports">
 		<title>AVETMISS Exports</title>
 		<subtitle>How to get your AVETMISS data out of onCourse to submit to the government funding
@@ -320,13 +320,16 @@
 	</section>
 	
 	<section>
-		<title>Funding Uploads</title>
-		<para>When you run an AVETMISS export, a history of the upload is stored in the funding
-			upload window. This history allows you to change the status of the export to record if
-			it was successfully exported (and uploaded) to NCVER or your funding provider, or if it
+		<title>History</title>
+		<para>When you run an AVETMISS export, a history of the upload is stored in the History section of
+			the AVETMISS Export window. When you open the export window after running an export,
+			you'll be asked whether the previous upload was successful or not, and will record the
+			answer. This section also allows you to change the status of the export to record if it
+			was successfully exported (and uploaded) to NCVER or your funding provider, or if it
 			failed. By adding this information to onCourse, you will have a history stored of each
-			time you export your data as is required under various contractual arrangements.</para>
-		<para>You can fund the funding upload window under Training > Funding Uploads.</para>
+			time you export your data as is required under various contractual arrangements, and can
+			access the same exports more quickly in the future by simply clicking the 'run again'
+			button next to the export you wish to run.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -337,121 +340,23 @@
 			</caption>
 		</mediaobject>
 		<para>Each funding upload record shows how many outcomes were exported. You can use the find
-			related option to look at the outcomes that were exported. Please note: the outcomes may
-			have been changed in onCourse since the export was run - when you use the find related
-			option you are looking at the outcome values as they exisit right now - not at the time
-			of the export.</para>
-		<para>By default, each AVETMISS export that successfully completes from onCourse will be set to
-			status SUCCESS. If you want to change the status to EXPORTED or FAILED, double click on
-			the record in the list view and change the value in the drop down list.</para>
+			related option to look at the outcomes that were exported. <emphasis>Please note: the
+				outcomes may have been changed in onCourse since the export was run - when you use
+				the find related option you are looking at the outcome values as they exist right
+				now - not at the time of the export.</emphasis></para>
+		<para>When opening the export window, if you've run an export in the past you'll be asked to let
+			the system know whether the upload to the reporting body was
+				<guilabel>successful</guilabel>, <guilabel>failed</guilabel> or
+				<guilabel>unknown</guilabel>. This lets you keep a centralised record of previous
+			exports and whether they were successful or not, which can be useful when needing to
+			report again in the future, letting you access them again quickly.</para>
 		<para>An access right control exists for this feature, so each user who needs permission to
 			view or edit these records must have the appropriate access right assigned.</para>
-	</section>
-	<section>
-		<title>How to give your AVETMISS data to the people who want to pay you</title>
-		<para>Either of the methods above will have created a folder on your computer with text
-			files, all with file names like NAT00080 and NAT00130. These are things you need to give
-			to the government to get paid. Often, you will need to upload them to a website where
-			they will be validated.</para>
-		<para>NCVER provide a validation tool called AVS (AVETMISS Validation Software) that is
-			often used to verify files before submission. You can find this tool at <link
-				xlink:href="https://avs.ncver.edu.au/avs/">https://avs.ncver.edu.au/avs/</link>.
-			This is also where you need to lodge your Fee For Service Training Activity each year or
-			quarter. </para>
-		<para>For some types of lodgement you will also need to supply the NAT00085 file. This is
-			essentially the same as the NAT00080 but with your students personal addresses and other
-			contact details. It will be automatically generated when you create an AVETMISS export.
-			Be aware of the privacy implications of supplying this file to third parties. We suggest
-			only supplying it when it is a requirement of your funding.</para>
-		<para>Your local friendly funding body can help you from here on in if you encounter
-			difficulties with their lodgement process. Customers with onCourse support plans can
-			also log a task in squish for additional assistance.</para>
-	</section>
-	<section>
-		<title>Validating and correcting AVETMISS errors</title>
-		<para>Prior to exporting your AVETMISS data, you may wish to run some reports inside
-			onCourse to check the values you have set. These reports can also be useful
-			organisational data for other reporting and segmenting of your VET delivery.</para>
-		<para>From the classes window, two CSV exports are available. CSV files can be opened in
-			Microsoft Excel or other spreadsheet applications. If you ever wished you could easily
-			open and read NAT00120 files in Excel, consider this the next best thing.</para>
-		<para>Begin by opening the classes window and locating the classes you wish to export,
-			through the usual sorts, searches and filters. Once you have located and highlighted the
-			classes in the list view choose File > Import/Export > Export Classes</para>
-		<para>From the export format list options, choose either 'class outcomes CSV report' or
-			'extended outcomes CSV'.</para>
-		<section>
-			<title>Class Outcomes CSV</title>
-			<para>The purpose of this export is to show you all the outcomes and the outcome status
-				of the enrolments associated with the classes you've exported. This can be a useful
-				way to locate outcomes where the end date has passed but a final result has not yet
-				been entered into onCourse.</para>
-			<para>This report contains the onCourse student number, student first and last name,
-				course-class code, unit of competency code and name, outcome start and end date and
-				outcome status.</para>
-			<para>Keep in mind this report is showing you the actual data in the onCourse records -
-				when you export actual AVETMISS data from onCourse, the export runner values will
-				set outcome status 90 for outcomes in progress, and outcome status 70 for outcomes
-				that end in future calendar years. The value inside the database will remain as not
-				set.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/exports/outcomes_export_excel_output.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Excerpt of student outcomes export viewed via excel </para>
-				</caption>
-			</mediaobject>
-		</section>
-		<section>
-			<title>Extended Outcomes CSV (like NAT00030, NAT00060 &amp; NAT00120)</title>
-			<para>This export shows additional data to that listed above, specifically, the
-				student's USI, the name of the onCourse course they are enrolled in, onCourse
-				subject tags, the qualification code and name if applicable, the course VET flag
-				status, the outcome delivery mode, National funding source, state funding source and
-				Smart &amp; Skilled Commitment ID.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="70%" contentdepth="70%"
-						fileref="images/extended_outcomes_export.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Excerpt of extended outcomes export viewed via Numbers </para>
-				</caption>
-			</mediaobject>
-		</section>
-		<section>
-			<title>Contact CSV Export (like NAT00080, NAT00085, NAT00090 &amp; NAT00100)</title>
-			<para>If you would like to view the data that comprises the student contact records
-				(NAT00080, NAT00085, NAT00090 &amp; NAT00100) in a CSV format, you can jump the
-				contact records from the class list view to see this information.</para>
-			<para>From the list of classes you commenced with in the section above, using the
-				cogwheel to Find related to xx selected classes > Enrolled students. This will open
-				a list of de-duplicated contact records showing all the students from all of the
-				classes in the original selection.</para>
-			<para>From this window, choose File > Import/Export > Export Contacts and select Contact
-				CSV from the export format list.</para>
-			<para>This CSV shows all the student contact details as supplied, as well as their
-				response to all of the AVETMISS questions on the student contact VET tab, such as
-				their country of birth, labour force status and USI. </para>
-		</section>
-		<section>
-			<title>Certificate CSV Export (like NAT00130)</title>
-			<para> As your Certificate Registrar, onCourse contains all the details of the
-				certificates you have issued, be they Statements of Attainment, Skill Set
-				Completions or complete Qualifications. The NAT00130 AVETMISS file shows the full
-				Qualifications you have created in onCourse for a particular date range.</para>
-			<para>To find your certificates in onCourse, open the Certificate window and search for
-				the certificate date awarded in the range you require.</para>
-			<para>Then with those certificates selected, go to File > Import/Export > Export
-				Certificates and choose Certificate CSV Export. </para>
-		</section>
 	</section>
 	<section xml:id="AVETMISS-FAQs">
 		<title>AVETMISS FAQ</title>
 		<section>
-			<title>Can I stop a class and all it's students being exported for AVETMISS?</title>
+			<title>Can I stop a class and all its students being exported for AVETMISS?</title>
 			<para>Yes. In the class VET tab, select the option 'Do not report for AVETMISS'.</para>
 		</section>
 		<section>
@@ -461,36 +366,21 @@
 				student in NSW.</para>
 		</section>
 		<section>
-			<title>How can I get my State Accredited Modules added to onCourse?</title>
-			<para>We add custom modules on request for customers with a commercial support contract.
-				We need to add them manually to onCourse as they are not published by
-				training.gov.au. You can send an Excel file to ish with the following information:
-				Unit code, Unit Title and the Field of Education ID (6 characters).</para>
-			<para> Once these have been added by us, your onCourse server will download the changes
-				within 48 hours, and they will be available in the Unit of Competency list with the
-				other included units. </para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/Add_manual_units.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>You can provide the list of Units to add to onCourse in an excel
-						spreadsheet</para>
-				</caption>
-			</mediaobject>
-		</section>
-		<section>
 			<title>Where do I enter the State Funding Codes in onCourse for the state where I am
 				reporting to?</title>
-			<para>There are two places where you can set your State Funding Source codes. The first
-				in on the VET tab of the class. This is a useful place to set the code when all (or
-				most) of the students in the class have the same funding source applying to
-				them.</para>
-			<para>First you will need to make sure you have an up to date list of the appropriate
-				State Funding Codes to use within your reporting state. onCourse doesn't maintain a
-				list of these codes, you will need to contact your local reporting officer to obtain
-				this information.</para>
+			<para>There are three places where you can set your state funding source codes; the Class level,
+				then the Enrolment level, and the Outcome level. This data is hierarchical, meaning
+				anything set at the Class level will be mirrored at the Enrolment and Outcome levels
+				for that class. This allows you to easily set a state funding source code at the
+				Class level and have it apply to all associated enrolments and outcomes, and then
+				apply individual codes for students with different funding codes at the individual
+				enrolment or outcome level. </para>
+			<para>To update the state funding source code at the Class level you'll need to open the Class
+				record, navigate to the VET section and then enter the code into the
+					<guilabel>Funding Source State</guilabel> field First you will need to make sure
+				you have an up to date list of the appropriate State Funding Codes to use within
+				your reporting state. onCourse doesn't maintain a list of these codes, you will need
+				to contact your local reporting officer to obtain this information.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -500,15 +390,17 @@
 					<para>Enter your State Funding Source code in the field highlighted.</para>
 				</caption>
 			</mediaobject>
-			<para>If a student has a different funding code which applies to them, you can just
-				change their enrolment funding codes to make it different to the one set at the
-				class level. If all students in the class have different funding codes, you don't
-				need to set anything at the class level, but can set each outcome separately on the
-				enrolment general tab. </para>
-			<para>Where the value populates from a record level above, you will see the value in the
-				lower level record with the lock icon. In this case, it means the enrolment is
-				inheriting the value from the level above, the class. You can click the unlock icon
-				to change the value and break the inherited linked value from the class.</para>
+			<para>If a student has a different funding code which applies to them, you can just change their
+				enrolment or outcome funding codes to make it different to the one set at the class
+				level. If all students in the class have different funding codes, you don't need to
+				set anything at the class level, but can set each enrolment or outcome separately.
+				For the Enrolment level this is done in the General section, in the Funding Source -
+				State field. At the Outcome level, this is done inside the outcome record in the
+				Funding Source State field.</para>
+			<para>When you see a padlock in one of these fields, it means its data is being inherited from a
+				higher level record. In this case, it means the enrolment is inheriting the value
+				from the class. You can click the unlock icon to change the value and break the
+				inherited linked value from the class.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="70%" contentdepth="70%"

@@ -778,49 +778,42 @@
 			<title>How to create a new class</title>
 			<orderedlist>
 				<listitem>
-					<para>Open the class list window, click on the <guibutton>+</guibutton> button in the top right
-						hand corner of the screen. A new class screen will open to the general
+					<para>Open the class list window, click on the <guibutton>+</guibutton> button in the bottom
+						right hand corner of the screen. A new class screen will open to the general
 						section. </para>
 				</listitem>
 				<listitem>
-					<para>All classes must be linked to a course you have already created. Begin
-						setting up your class by typing the course name and select it from the drop
-						down list. Once you have entered the course name you will see that the
+					<para>All classes must be linked to a course you have already created. Begin setting up your
+						class by typing the course name in the top-left field and select it from the
+						drop down list. Once you have entered the course name you will see that the
 						course code is automatically displayed in the 'Course code' field. </para>
 				</listitem>
 				<listitem>
-					<para>The next available class code will be automatically assigned, however you
-						can change it to a code of your choice. Your class code must be unique; that
-						is a code not used by any other class already created for that course.
-						Please note that the class code must not have any spaces or hyphens between
-						characters. The pink coloured field will change from invalid (pink) to valid
-						(white) once you have entered your information correctly. </para>
+					<para>The next available class code—the number that appears after the dash next to the course
+						code—will be automatically assigned, however you can change it to a code of
+						your choice. Your class code must be unique; that is a code not used by any
+						other class already created for that course. Please note that the class code
+						must not have any spaces or hyphens between characters. If you must separate
+						parts of the code, use a full stop with no spaces. The pink coloured field
+						will change from invalid (pink) to valid (white) once you have entered your
+						information correctly. </para>
 				</listitem>
 				<listitem>
-					<para>Complete any relevant fields on the General section, such as if the class is self paced,
-						has an aged based enrolment restriction or requires a message alert.</para>
+					<para>Complete any relevant fields on the General section, such as if the class has an aged
+						based enrolment restriction or requires a message alert.</para>
 				</listitem>
 				<listitem>
 					<para>By default, your class will be set to a status of 'Enrolment allowed'.
 						Change it if needed to another status.</para>
 				</listitem>
 				<listitem>
-					<para>Now go to the tutor section. This is where you can assign tutors to classes. Click on the
-							<guibutton>+</guibutton> sign on the right hand side of the screen. A
-						drop down sheet will appear. Type the tutor's name in the tutor field,
-						surname first. This is an auto complete field so once you start typing, a
-						selection of tutor's names you have previously entered will be listed.
-						Select the tutor you want from the list and complete the appropriate
-						information in the section.</para>
-				</listitem>
-				<listitem>
-					<para>Repeat these steps to enter an additional tutor or course supervisor.
-					</para>
-				</listitem>
-				<listitem>
 					<para>Go to the Budget section to set the class fee. It is important if your college has
 						multiple income accounts to select the correct account for the class during
-						the setup phase.</para>
+						the setup phase. Click the + button next to Budget and select whether you
+						want to add an Expense (any associated cost), Income (enrolment fees or
+						extra fees), or Tutor Pay. Details can be found <link
+							xlink:href="budgets.xml#budgets-addingAndEditing">in the Budgets chapter
+							of our documentation</link>.</para>
 				</listitem>
 				<listitem>
 					<para>To set a student fee for the class firstly, select whether or not to
@@ -841,6 +834,16 @@
 						numbers in the 'Projected' field.</para>
 				</listitem>
 				<listitem>
+					<para>Now go to the tutor section. This is where you can assign tutors to
+						classes. Click on the <guibutton>+</guibutton> sign on the right hand side
+						of the screen. A drop down sheet will appear. Type the tutor's name in the
+						tutor field, surname first. This is an auto complete field so once you start
+						typing, a selection of tutor's names you have previously entered will be
+						listed. Select the tutor you want from the list and complete the appropriate
+						information in the section. Repeat these steps to enter an additional tutor
+						or course supervisor. </para>
+				</listitem>
+				<listitem>
 					<para>Add any class specific information that is required to the web section or notes
 						section.</para>
 				</listitem>
@@ -853,25 +856,32 @@
 		</example>
 		<example>
 			<title>How to create sessions</title>
-			<para>The following is a detailed example of how you would add sessions for a class on
-				different days of the week. This example will use the scenario of a user wanting to
-				add 10 sessions on consecutive Mondays and Wednesdays and a final session for
-				assessment on a Saturday. </para>
+			<para>The following is a detailed example of how you would add sessions for a class on different
+				days of the week. This example will use the scenario of a user wanting to add 10
+				sessions on consecutive Saturdays and Sundays. </para>
+			<para>The idea here is to create the first session for each different day of the week
+				the sessions are being held on, and then we'll duplicate those sessions. So first
+				we'll create the first Saturday session, then we'll create the first Sunday session.
+				Then, we'll duplicate those sessions four more times each so that they take place
+				each subsequent week from the first session, making it a 10 session class. Here's
+				how:</para>
 			<orderedlist>
 				<listitem>
-					<para>On the timetable section enter the start date and time for the first Monday session. In
-						onCourse, the date and time share a field, so you need to type something
-						like 22/9/2014 9am. You can also click on the calendar icon to use the date
-						selector tool to find the start date of your choice. </para>
+					<para>On the timetable section, hit the + button to create a new session.</para>
 				</listitem>
 				<listitem>
-					<para>Enter a duration for the session in hours and minutes e.g. 8 hrs. If the
-						tutor will not be paid for the full duration for the session (e.g. an unpaid
-						lunch break) change the value in the payable time option. Note that changing
-						this value will effect all tutors attached to this session who are paid at
-						an hourly rate.</para>
-					<para>Select from the tutor list any tutor(s) you wish to assign to these
-						sessions.</para>
+					<para>First enter the start date and time, then the session's duration in hours. You can also
+						edit the payable duration, which ties to your tutor pay settings allowing
+						you to exclude times for breaks etc. If you've assigned tutors to the class,
+						you'll be able to leave a check mark next to the tutors who will be assigned
+						to this session. Lastly, you can set the location from a list of your Sites
+						and Rooms.</para>
+					<para>Below is an example of how your first class will look once filled out. This one starts on
+						the Saturday 21st March at 10am. The class goes for 4 hours though the
+						lecturer is paid for 3 hours and 30 minutes because of a 30 minute break.
+						The tutor for this session is Ivan Brown and he's being paid at the General
+						Tutor pay rate. The session will take place at Sydney Campus in the Training
+						Lab.</para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -884,39 +894,71 @@
 					</mediaobject>
 				</listitem>
 				<listitem>
-					<para>Choose how many times this session will repeat. For this example we will
-						enter 5, for the five sessions on the Monday and select the option every 1
-						week.</para>
+					<para>Next, repeat the steps above but for the Sunday session. When you're done,
+						you should have two sessions, one for Saturday and one for Sunday.</para>
 				</listitem>
 				<listitem>
-					<para>By clicking on the option 'week' you can change the repeat to hourly,
-						daily, weekly, monthly or yearly, and make the repeat every 2 weeks or 3
-						months, for example. If you choose a daily repeat you can choose to skip
-						weekends. </para>
+					<para>Now we need to create the other sessions. But rather than going through all of that
+						again, we'll simply duplicate both sessions four times each, giving us five
+						sessions on Saturday, five sessions on Sunday, and a total of ten sessions
+						altogether. In the session you wish to duplicate first, click the repeat
+						button, it's directly to the left of the delete icon inside the session
+						view.</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/class_repeat_icon.png"/>
+						</imageobject>
+						<caption>
+							<para>The Repeat Session icon</para>
+						</caption>
+					</mediaobject>
 				</listitem>
 				<listitem>
-					<para>Press the button 'create sessions'.</para>
+					<para>Set the number of times you want the session to repeat, and then how regularly you want
+						it repeated. You can select between Hours, Days (including weekends), Days
+						(excluding weekends), Weeks, Months and Years. For this example we'll set
+						this to repeating 4 times and to repeat every week.</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/duplicate_sessions.png"/>
+						</imageobject>
+						<caption>
+							<para>You can have a different value for the session duration and for
+								the sessions payable hours</para>
+						</caption>
+					</mediaobject>
 				</listitem>
 				<listitem>
-					<para>Now you need to do all of this again (from step 1 to 4) for the Wednesday sessions. Go
-						the section on the timetable labelled 'New' to add these new sessions to
-						your existing Monday sessions. </para>
+					<para>Press the button 'create sessions'. You should now see the sessions for Saturday
+						appearing like so:</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" width="100%" contentdepth="100%"
+								fileref="images/after_repeat_session.png"/>
+						</imageobject>
+						<caption>
+							<para>Adding public and private notes to sessions</para>
+						</caption>
+					</mediaobject>
 				</listitem>
 				<listitem>
-					<para>Do it all again with a single session on the Saturday and save and close
-						the record. </para>
+					<para>Now you need to do all of this again (from step 4 to 6) for the Sunday sessions. </para>
+				</listitem>
+				<listitem>
+					<para>Once completed, your timetable should appear as the example below. </para>
 				</listitem>
 			</orderedlist>
-			<para>If you create any sessions in error, save and close the record before you re-open
-				the class record and delete or edit the sessions. You can single click on a session
-				to change the date, room, duration, payable time or tutors assigned.</para>
+			<para>If you create any sessions in error, simply hit the delete button on that session and it
+				will be removed.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/timetable_sessions.png"/>
+						fileref="images/new_class_timetable_example.png"/>
 				</imageobject>
 				<caption>
-					<para>The eleven class sessions for the scenario described above.</para>
+					<para>The ten class sessions for the scenario described above.</para>
 				</caption>
 			</mediaobject>
 			<para>You can also had either public or private notes to a session. These fields can be
@@ -924,15 +966,6 @@
 				resourcing requirements. </para>
 			<para>To edit the training plan or session notes you need to click on each session to
 				see these fields.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/private_and_public_notes.png"/>
-				</imageobject>
-				<caption>
-					<para>Adding public and private notes to sessions</para>
-				</caption>
-			</mediaobject>
 		</example>
 	</section>
 	<section xml:id="classes-VETdata">
@@ -956,9 +989,10 @@
 					</para>
 				</listitem>
 				<listitem>
-					<para>Enter your "funding source state" (this field is only used by some states,
-						check with your reporting body for the appropriate codes for your state)
-					</para>
+					<para>Enter your funding source details, either in 'default funding contract', 'default funding
+						source national' or 'default funding source state' (this field is only used
+						by some states, check with your reporting body for the appropriate
+						codes/field for your state) </para>
 				</listitem>
 				<listitem>
 					<para>There are two NSW only fields here, DET booking identifier (NSW only
@@ -1126,17 +1160,16 @@
 			you need to add information to the class web section. For example, if each instance of
 			the class required students to bring different materials because they worked on new
 			projects each term, would you publish this information in the class section. </para>
-		<para>Classes can be published online by selecting the option on the general section 'enrolment
-			allowed and visible online'. You can also add or remove classes to the website in bulk
-			using the cogwheel function in the classes list view. </para>
+		<para>Classes can be published online by selecting the options on the general section 'enrolment
+			allowed' and 'visible online'. </para>
 		<para>Only current and future classes will show online. Classes that are not self paced, but
 			have no timetable set will not be published, and classes that are complete i.e. the end
 			date has passed, will be automatically removed from your onCourse website. onCourse does
 			not prevent students from enrolling once the class is commenced, but commenced classes
 			are clearly marked on the website. </para>
-		<para>You can choose to change the class status from 'Enrolment allowed and visible online'
-			back to 'Enrolment allowed' for classes which have commenced, but you no longer wish to
-			allow online enrolment for,</para>
+		<para>You can choose to change the class status from 'Enrolment allowed' and 'visible online' back
+			to 'Enrolment allowed' for classes which have commenced, but you no longer wish to allow
+			online enrolment for.</para>
 		<para>The minimum and maximum places you set in the class are also used on your onCourse
 			website to show students if there are places still available. The website will not show
 			students the maximum number of places, or how many students have already enrolled. This
@@ -1169,11 +1202,12 @@
 		<title>Working with classes that have enrolments</title>
 		<para>After you have set up your classes and taken enrolments, there is a range of
 			additional information available to you in the class record. </para>
-		<para>Visit the enrolment section to see the list of students enrolled in the class. The list will
-			be automatically updated each time a new enrolment is processed in onCourse. Where you
-			can see the student's names listed, you will see a small icon to the right of their
-			names. When you click on this icon the selected student's contact screen will be opened
-			so you can access their contact details and other history with your college. </para>
+		<para>Click the buttons under the Enrolment section to see the list of students enrolled in
+			the class. The list will be automatically updated each time a new enrolment is processed
+			in onCourse. Where you can see the student's names listed, you will see a small icon to
+			the right of their names. When you click on this icon the selected student's contact
+			screen will be opened so you can access their contact details and other history with
+			your college. </para>
 		<para>Only student's marked as Active are currently enrolled in the class and are counted
 			towards the class numbers. Students marked as credited or cancelled have been removed
 			from the class list, but their name still appears here for historical record keeping

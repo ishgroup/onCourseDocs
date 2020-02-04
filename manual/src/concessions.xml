@@ -198,11 +198,11 @@
 	<section xml:id="concessions-Searching">
 		<title>Searching for students with concessions or memberships</title>
 		<para>You can search for students with a certain concession or membership by using the our
-			advanced query language. For memberships, use:</para>
-		<para><code>productItems.product.name is "Membership"</code> where the name in quotations in
-			the name of the membership in onCourse.</para>
+			advanced query language in the Contacts window. For memberships, use:</para>
+		<para><code>productItems.product.name like "Membership"</code> where the name in quotations in the
+			name of the membership in onCourse.</para>
 		<para>To search for a certain type of concession, use:</para>
-		<para><code/></para>
+		<para><code>student.concessions.concessionType.name like "seniors"</code> where the </para>
 		<para>In conjunction with other search functions, such as enrolment history and demographic
 			data, this information can provide opportunities for you to find and promote courses to
 			particular groups of students at your college.</para>

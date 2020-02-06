@@ -729,6 +729,36 @@
 			<para>Each of these columns can be used to sort the list of data, and each record can
 				also be double clicked on to see and edit more options relating to the
 				outcome.</para>
+			<section>
+				<title>Rules for adding outcomes to existing records</title>
+				<para>There are some validation rules that dictate when an outcome can be added to a
+					particular record. These rules include:<itemizedlist>
+						<listitem>
+							<para>You can add non-VET outcomes to an enrolment</para>
+						</listitem>
+						<listitem>
+							<para>Cannot be created without a related enrolment or
+								prior-learning</para>
+						</listitem>
+						<listitem>
+							<para>Cannot mix VET and non-VET outcomes in one enrolment</para>
+						</listitem>
+						<listitem>
+							<para>Cannot remove the last outcome from an enrolment</para>
+						</listitem>
+						<listitem>
+							<para>Cannot remove an outcome with a related certificate record</para>
+						</listitem>
+						<listitem>
+							<para>Cannot change an outcome module or status for an outcome with a
+								related certificate</para>
+						</listitem>
+						<listitem>
+							<para>Can add any VET outcome (with a module) to an enrolment with other
+								VET outcomes</para>
+						</listitem>
+					</itemizedlist></para>
+			</section>
 		</section>
 	</section>
 	<section xml:id="classes-creatingClasses">

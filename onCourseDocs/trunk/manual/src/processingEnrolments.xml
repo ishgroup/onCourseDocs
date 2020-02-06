@@ -1024,14 +1024,14 @@
 		</section>
 		<section>
 			<title>Fields that can be overridden at the enrolment level</title>
-		<para>On the enrolment general tab, you can override the values inherited from other places in
-				onCourse. Fields that have inherited a specified value from a parent field will show
-				as locked. If you click on the padlock to unlock them, you can enter a different
-				value in the field. If the field has inherited no value (a null value) from the
-				parent record, and you click in the field to type in a value, it will show the
-				unlock symbol to indicate this value is not inherited.</para>
-			<para>If you lock an unlocked field, it loses its overridden value, and returns to
-				inheriting the value from the parent record, even if that value was null.</para>
+		<para>On the enrolment general tab, you can override the default values set in other places in
+				onCourse. Generally, these shared fields flow from the Class to the Enrolment, then
+				to the Outcome. <note>
+					<para>Changing a default value <emphasis role="underline">will not</emphasis>
+						have any affect on records that already exist. Instead, the new defaults
+						will only take affect in any new records created after the change, and for
+						any records specifically edited to reflect that change.</para>
+				</note></para>
 		<para><emphasis role="bold">Funding source - National</emphasis> This is inherited from the
 				college default preferences, or from the class VET tab settings and can be
 				overridden on the general tab for all outcomes attached to the enrolment, or on the
@@ -1055,17 +1055,13 @@
 						fileref="images/add_override_enrolment_fields.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>Enrolment general tabs show locked and unlocked fields with inherited and overridden
-						values</para>
+					<para>Enrolment general tabs show a number of fields that use default values</para>
 				</caption>
 			</mediaobject>
 		</section>
 		<section><title>Fields that can be set at the outcome level</title>
 		<para><emphasis role="bold">Status</emphasis> This is the Outcome Identifier - National that is
-				reported in the NAT00120 file. You can also set values for these en masse from the
-				list view in the enrolment, student or class by highlighting a number of outcomes
-				and right clicking on them, selecting the option 'mark xx VET outcomes as
-				successfully completed'</para>
+				reported in the NAT00120 file. </para>
 			<para><emphasis role="bold">Hours Attended</emphasis> reported in the NAT00120 as a below the
 				line state reporting option, only for outcomes with a status of 'withdrawn'</para>
 			<para><emphasis role="bold">Specific program identifier</emphasis> this is the Specific Funding
@@ -1083,9 +1079,8 @@
 				view of the edit view. This value is reported in the NAT00120 file.</para>
 			<para><emphasis role="bold">End Date</emphasis> This information is derived from the class, and
 				based on either the end date of the sessions for a timetabled class, or the
-				student's enrolment date plus the class duration for a self paced class. This can be
-				overridden in the list view of the edit view. This value is reported in the NAT00120
-				file.</para> 
+				student's enrolment date plus the class duration for a self paced class. This value
+				is reported in the NAT00120 file.</para> 
 			<para><emphasis role="bold">Reportable Hours</emphasis> These are the Scheduled hours as reported
 				in the NAT00120. They are derived from the nominal hours set at the unit of
 				competency level. This value is reported in the NAT00120 file.</para>

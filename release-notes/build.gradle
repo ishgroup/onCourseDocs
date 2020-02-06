@@ -27,7 +27,7 @@ class ReleaseNotes extends DefaultTask {
   @TaskAction
   def getNotes() {
 
-    def query = "?jql=resolution+in+(closed,Unresolved)+and+fixVersion=${version}&maxResults=1000"
+    def query = "resolution+in+(closed,Unresolved)+and+fixVersion=${version}"
     def issues = getJiraResponse('api/latest/search' + query)
 
     logger.debug new JsonBuilder(issues).toPrettyString()
@@ -37,30 +37,19 @@ class ReleaseNotes extends DefaultTask {
 
   }
 
-  def getJiraResponse(query, data=null, action="POST") {
+  def getJiraResponse(jql) {
     // https://developer.atlassian.com/cloud/jira/platform/rest/
     def SQUISH_URL = "https://squish.ish.com.au/rest/"
     def jiraUsername = "gradle"
     def jiraPassword = "7Am1*^X8A#ul"
     def encoded_auth = "${jiraUsername}:${jiraPassword}".getBytes().encodeBase64().toString()
 
-    def connection = (SQUISH_URL + query).toURL().openConnection()
+    def connection = (SQUISH_URL + "?jql=${jql}&maxResults=1000").toURL().openConnection()
 
     connection.addRequestProperty("Authorization", "Basic ${encoded_auth}")
     connection.addRequestProperty("Content-Type", "application/json")
     connection.addRequestProperty("Accept", "application/json")
-
-    if (data) {
-      connection.setRequestMethod(action)
-      connection.setDoOutput(true)
-
-      def writer = new OutputStreamWriter(connection.outputStream)
-      writer.write(data.toString())
-      writer.flush()
-      writer.close()
-    } else {
-      connection.setRequestMethod("GET")
-    }
+    connection.setRequestMethod("GET")
     connection.connect()
 
     def slurper = new JsonSlurper()

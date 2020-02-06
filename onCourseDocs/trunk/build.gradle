@@ -7,19 +7,16 @@ buildscript {
         url 'https://repo.ish.com.au/content/groups/public'
     }
     dependencies {
-        classpath 'com.atlassian.jira:jira-rest-java-client-api:5.1.2-2bd0a62e'
+        classpath 'com.atlassian.jira:jira-rest-java-client-api:5.1.6'
     }
 }
 
 plugins {
     id 'com.github.ben-manes.versions' version '0.27.0' // adds the task 'dependencyUpdates'
-    id 'com.dorongold.task-tree' version '1.4' // adds the task 'taskTree [some task]'
+    id 'com.dorongold.task-tree' version '1.5' // adds the task 'taskTree [some task]'
     id 'distribution'
     id 'maven-publish'
 }
-
-apply plugin: 'groovy'
-apply plugin: 'com.github.ben-manes.versions'
 
 configurations {
     docbookxslt

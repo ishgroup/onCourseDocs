@@ -15,15 +15,6 @@
 			result. You can also add it to your list of quick access favourites by clicking 'edit'
 			next to the Favourites heading, hovering your mouse over the Export AVETMISS 8
 			selection, then clicking the heart icon so it goes highlighted.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/AVETMISS_export_menu.png" format="png"/>
-			</imageobject>
-			<caption>
-				<para>Select AVETMISS export from the Favourites links on the dashboard</para>
-			</caption>
-		</mediaobject>
 		<example>
 			<title>How to export data for Total VET Activity Reporting</title>
 			<orderedlist>
@@ -263,15 +254,19 @@
 		<para><emphasis role="bold">History</emphasis> - This section shows you a list of the most recent
 			AVETMISS exports to be run on your system, allowing you to run them again or review the
 			outcomes exported by each. You can also set a status for each–either Success, Fail or
-			Exported–so you can tell in the future which extracts were reported successfully. You
+			Unknown–so you can tell in the future which extracts were reported successfully. You
 			must set this manually; the next time you open the AVETMISS export window after running
 			an extract you'll be asked a question about your previous export, whether it was
 			successful, failed or outcome unknown. Once you choose an answer the export will be
 			'filed' in the History section as the most recent export, and display the time of the
 			export, the number of outcomes, the user who ran it and the success/failure flag.</para>
-		<para>These records will last in the system dependant on how they're flagged. Exports
-			flagged as Success will remain forever, while those set as Exported will remain for 28
-			days. Any set as failed will only be stored for three days.</para>
+		<para>These records will last in the system dependant on how they're flagged. Exports flagged as
+			Success will remain forever, while those set as Unknown will remain for 28 days. Any set
+			as failed will only be stored for three days.</para>
+		<note>
+			<para>Any outcome that is reported as a part of a funding upload that is listed as
+				'Success' or 'Unknown' will be locked.</para>
+		</note>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"

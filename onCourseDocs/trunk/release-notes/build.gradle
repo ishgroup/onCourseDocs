@@ -1,7 +1,18 @@
 import groovy.json.JsonBuilder
-import groovy.json.JsonSlurper
 import groovy.xml.MarkupBuilder
-import groovy.swing.SwingBuilder
+import groovyx.net.http.ContentType
+import groovyx.net.http.HttpResponseDecorator
+import groovyx.net.http.RESTClient
+import groovyx.net.http.HttpResponseException
+
+buildscript {
+  repositories.maven {
+    url 'https://repo.ish.com.au/content/groups/public'
+  }
+  dependencies {
+    classpath 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
+  }
+}
 
 task mergeImages(type: Copy) {
     from fileTree(dir: 'src', include: '**/images/*').files
@@ -18,46 +29,45 @@ task releaseNotes(type: ReleaseNotes) {
   if (project.hasProperty('releaseVersion')) {
   	version = releaseVersion
   }
+  outputFile = new File(project.projectDir, "/src/${version}/release-notes.xml")
 }
 
 class ReleaseNotes extends DefaultTask {
   @Input
   String version
 
+  @OutputFile
+  def outputFile
+
   @TaskAction
   def getNotes() {
+    def issues = getJiraResponse("resolution in (closed,Unresolved) and fixVersion=${version}").issues as Collection
 
-    def query = "resolution+in+(closed,Unresolved)+and+fixVersion=${version}"
-    def issues = getJiraResponse('api/latest/search' + query)
+    logger.lifecycle "Found ${issues.size()} issues..."
 
-    logger.debug new JsonBuilder(issues).toPrettyString()
+    outputFile.parentFile.mkdirs()
+    new File(outputFile.parentFile, "images").mkdirs()
 
-    logger.lifecycle "Found ${issues.issues.size()} issues..."
-    buildDocBook(version, issues.issues)
-
+    buildDocBook(version, issues, outputFile)
   }
 
   def getJiraResponse(jql) {
     // https://developer.atlassian.com/cloud/jira/platform/rest/
-    def SQUISH_URL = "https://squish.ish.com.au/rest/"
-    def jiraUsername = "gradle"
-    def jiraPassword = "7Am1*^X8A#ul"
-    def encoded_auth = "${jiraUsername}:${jiraPassword}".getBytes().encodeBase64().toString()
+    def squish = new RESTClient('https://squish.ish.com.au', ContentType.JSON)
+    // The following line is needed instead of squish.auth.basic since we need to pre-emptive auth
+    squish.headers.'Authorization' = "Basic ${"gradle:7Am1*^X8A#ul".bytes.encodeBase64().toString()}"
+    try {
+      def response = squish.get(
+              path: '/rest/api/2/search',
+              query: [jql: jql, maxResults: '1000'])
+      return response.data
 
-    def connection = (SQUISH_URL + "?jql=${jql}&maxResults=1000").toURL().openConnection()
-
-    connection.addRequestProperty("Authorization", "Basic ${encoded_auth}")
-    connection.addRequestProperty("Content-Type", "application/json")
-    connection.addRequestProperty("Accept", "application/json")
-    connection.setRequestMethod("GET")
-    connection.connect()
-
-    def slurper = new JsonSlurper()
-    def response = slurper.parseText(connection.content.text)
-    return response
+    } catch(HttpResponseException e) {
+      logger.error "*** Request to squish failed with error: ${e.response.data}"
+    }
   }
 
-  def buildDocBook(version, issues) {
+  def buildDocBook(version, Collection issues, File outputFile) {
     issues.sort { issue -> issue.key }
     issues.each { issue ->
       logger.lifecycle issue.key + " " + issue.fields.summary
@@ -67,13 +77,7 @@ class ReleaseNotes extends DefaultTask {
     (issues_web, issues_angel) = issues.split { issue -> issue.fields.components.any { WEB_APPS.contains(it.name) } }
     (issues_reports, issues_angel) = issues_angel.split { issue -> issue.fields.summary.contains('report') }
 
-    def subdir = new File(project.projectDir, "/src/" + version)
-    subdir.mkdirs()
-    def imagesDir = new File(subdir, "images")
-    imagesDir.mkdirs()
-
-    def fw = new FileWriter(new File(subdir, "release-notes.xml"))
-    def xml = new MarkupBuilder(fw)
+    def xml = new MarkupBuilder(new FileWriter(outputFile))
     xml.mkp.xmlDeclaration(version: "1.0", encoding: "utf-8")
 
     xml.chapter('xmlns': 'http://docbook.org/ns/docbook', 'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',

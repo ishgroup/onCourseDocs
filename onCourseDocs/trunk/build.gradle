@@ -2,15 +2,6 @@ import org.apache.tools.ant.filters.ReplaceTokens
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-buildscript {
-    repositories.maven {
-        url 'https://repo.ish.com.au/content/groups/public'
-    }
-    dependencies {
-        classpath 'com.atlassian.jira:jira-rest-java-client-api:5.1.6'
-    }
-}
-
 plugins {
     id 'com.github.ben-manes.versions' version '0.27.0' // adds the task 'dependencyUpdates'
     id 'com.dorongold.task-tree' version '1.5' // adds the task 'taskTree [some task]'
@@ -34,11 +25,6 @@ task explodeXSL(type: Copy) {
 }
 
 subprojects {
-    apply plugin: 'maven'
-    apply plugin: 'maven-publish'
-    apply plugin: 'distribution'
-    apply plugin: 'com.github.ben-manes.versions'
-    
     group = 'ish.oncourse.docs'
     version = project.hasProperty('releaseVersion') ? project.releaseVersion : 'SNAPSHOT'
 

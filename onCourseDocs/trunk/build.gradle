@@ -25,6 +25,8 @@ task explodeXSL(type: Copy) {
 }
 
 subprojects {
+    apply plugin: 'distribution'
+    apply plugin: 'maven-publish'
     group = 'ish.oncourse.docs'
     version = project.hasProperty('releaseVersion') ? project.releaseVersion : 'SNAPSHOT'
 

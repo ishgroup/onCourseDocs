@@ -8,15 +8,12 @@ repositories {
 
 dependencies {
     // FOP (pdf generation)
-    compile 'org.apache.xmlgraphics:fop:2.2'
+    implementation 'org.apache.xmlgraphics:fop:2.2'
 
     // XSLT docbook
-    compile 'saxon:saxon:6.5.3'
-    compile 'xerces:xercesImpl:2.11.0'
-    compile 'apache-xerces:resolver:2.9.1'
-    compile 'net.sf.xslthl:xslthl:2.1.0'
-
-    compile('xml-apis:xml-apis:2.0.2') {
-        force = true
-    }
+    implementation 'saxon:saxon:6.5.3'
+    implementation 'xerces:xercesImpl:2.11.0'
+    implementation 'apache-xerces:resolver:2.9.1'
+    implementation 'net.sf.xslthl:xslthl:2.1.0'
+    implementation 'xml-apis:xml-apis:2.0.2!!'
 }

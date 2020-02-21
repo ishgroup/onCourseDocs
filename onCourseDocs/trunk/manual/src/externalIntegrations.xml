@@ -712,14 +712,12 @@
         </section>
         <section xml:id="externalintegrations-USI">
             <title>USI</title>
-            <para>This integration connects your onCourse system to the USI Agency so that you can
+            <para>This integration connects your onCourse system to the USI Agency so that onCourse can
                 automatically verify a student's USI number. This section will detail how you can
-                activate integration. If you wish to learn more about the basics of how USI numbers
-                function in onCourse, you can read more in our dedicated <link
+                activate this integration. If you wish to learn more about the basics of how the USI
+                functions in onCourse, you can read more in our dedicated <link
                     xlink:href="uniqueStudentIdentifier.html">USI chapter</link> here. </para>
-            <para>To activate the onCourse USI integration there are a few steps that need to be
-                completed externally to onCourse first, before going through the internal onCourse
-                process. Follow the below steps to activate the integration:</para>
+            <para>Follow the below steps to activate the integration:</para>
             <para>
                 <orderedlist>
                     <listitem>
@@ -729,18 +727,18 @@
                             before.</para>
                     </listitem>
                     <listitem>
-                        <para>Once completed with step 1, you'll need to register a MyGovID. Please
-                            note that a myGovID is not the same a MyGov. <emphasis role="bold"
+                        <para>Register a MyGovID. Please
+                            note that myGovID is not the same MyGov. <emphasis role="bold"
                                 >IMPORTANT: </emphasis>When you create a MyGovID, it is for you as
                             an individual, not for the organisation.</para>
                     </listitem>
                     <listitem>
-                        <para>Link your business with the Relationship Authorisation Manager - <link
+                        <para>Link your RTO to your myGovID with the Relationship Authorisation Manager - <link
                                 xlink:href="https://authorisationmanager.gov.au/"/>. Once logged in,
                             choose the "Link your business" option. </para>
                     </listitem>
                     <listitem>
-                        <para>Log in to onCourse and go to the Automation window, then scroll the
+                        <para>Log into onCourse and go to the Automation window, then scroll the
                             left hand column until you see the Integrations header. Click the +
                             button next to he header, then select 'Add' under the USI integration
                             listing. This will create a new USI integration.</para>
@@ -749,10 +747,10 @@
                         <para>In the new Integration screen you'll see two numbers; a Digital
                             Software Provider number and a Software ID number, as well as some text
                             with an embedded link. The Software ID number will be unique to your
-                            system. You'll need to enter these at some point during the next steps.
+                            system. Make a note of these two numbers.
                             Click the link and it will take you back to the Relationship
                             Authorisation Manager. <note>
-                                <para>DO NOT use the Software ID from the image below anywhere as it
+                                <para>DO NOT use the Software ID from the image below as it
                                     is only an example and will not work. </para>
                             </note></para>
                     </listitem>
@@ -764,8 +762,15 @@
                             Notification'.</para>
                     </listitem>
                     <listitem>
-                        <para>In the 'Digital Service Provider ABN' field, enter the following
-                            number '74073212736', and then click the magnifying glass icon.</para>
+                        <para>In the 'Digital Service Provider ABN' field, enter the following Digital
+                            Software Provider number '74073212736', and then click the magnifying glass icon. You will
+                        see the company ISH GROUP PTY LTD. Confirm this.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Enter the Software ID from above and confirm.</para>
+                    </listitem>
+                    <listitem>
+                        <para>The entry you just added should now diplay as "Active".</para>
                     </listitem>
                 </orderedlist>
             </para>

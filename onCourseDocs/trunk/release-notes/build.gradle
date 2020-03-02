@@ -105,54 +105,54 @@ class ReleaseNotes extends DefaultTask {
             }
           }
         }
-        section(role: 'minor') {
-          title("Minor features")
-          itemizedlist {
-            issues_angel.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
-              listitem {
-                para {
-                  mkp.yield(issue.fields.summary)
-                  systemitem(issue.key)
-                }
+      }
+      section(role: 'minor') {
+        title("Minor features")
+        itemizedlist {
+          issues_angel.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
+            listitem {
+              para {
+                mkp.yield(issue.fields.summary)
+                systemitem(issue.key)
               }
             }
           }
         }
-        section(role: 'fixes') {
-          title("Fixes")
-          itemizedlist {
-            issues_angel.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
-              listitem {
-                para {
-                  mkp.yield(issue.fields.summary)
-                  systemitem(issue.key)
-                }
+      }
+      section(role: 'fixes') {
+        title("Fixes")
+        itemizedlist {
+          issues_angel.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
+            listitem {
+              para {
+                mkp.yield(issue.fields.summary)
+                systemitem(issue.key)
               }
             }
           }
         }
-        section(role: 'web') {
-          title("Web features")
-          itemizedlist {
-            issues_web.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
-              listitem {
-                para {
-                  mkp.yield(issue.fields.summary)
-                  systemitem(issue.key)
-                }
+      }
+      section(role: 'web') {
+        title("Web features")
+        itemizedlist {
+          issues_web.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
+            listitem {
+              para {
+                mkp.yield(issue.fields.summary)
+                systemitem(issue.key)
               }
             }
           }
         }
-        section(role: 'web-fixes') {
-          title("Web fixes")
-          itemizedlist {
-            issues_web.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
-              listitem {
-                para {
-                  mkp.yield(issue.fields.summary)
-                  systemitem(issue.key)
-                }
+      }
+      section(role: 'web-fixes') {
+        title("Web fixes")
+        itemizedlist {
+          issues_web.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
+            listitem {
+              para {
+                mkp.yield(issue.fields.summary)
+                systemitem(issue.key)
               }
             }
           }

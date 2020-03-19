@@ -1053,7 +1053,7 @@
 								fileref="images/after_repeat_session.png"/>
 						</imageobject>
 						<caption>
-							<para>Adding public and private notes to sessions</para>
+							<para>Newly repeated sessions appear like this until you save the class</para>
 						</caption>
 					</mediaobject>
 				</listitem>
@@ -1082,6 +1082,116 @@
 			<para>To edit the training plan or session notes you need to click on each session to
 				see these fields.</para>
 		</example>
+		<section xml:id="classes-bulk-change-sessions">
+			<title>Editing sessions in bulk</title>
+			<para>If you make a mistake in setting up a class and happen to duplicate that mistake across all
+				your sessions, the easiest and fastest way to resolve it will be to use the bulk
+				editing tool. You can select all sessions, or individual sessions, to edit or delete
+				entirely either by clicking the checkbox next to each record, or clicking the
+				checkbox next to the Timetable heading in the class edit view to select all sessions
+				for this class.</para>
+			<para>
+				<orderedlist>
+					<listitem>
+						<para>Select your sessions using the checkbox, as shown in the screenshot below</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/bulk_edit_select_sessions.png"/>
+							</imageobject>
+							<caption>
+								<para>The checkbox next to the Timetable heading will select all sessions</para>
+							</caption>
+						</mediaobject>
+					</listitem>
+					<listitem>
+						<para>Click the Cogwheel next to this checkbox. Here you can choose whether you want to delete
+							all the selected sessions, or edit them</para>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/sessions_edit_cogwheel.png"/>
+							</imageobject>
+							<caption>
+								<para>Your two choices when bulk editing sessions; delete or edit</para>
+							</caption>
+						</mediaobject>
+					</listitem>
+					<listitem>
+						<para>Selecting 'Bulk change...' will open up a pop-over window where you
+							can select what aspects of the sessions you want to edit. Tick the
+							checkboxes to mark what you want to change. Here's what you can edit in
+							bulk:</para>
+						<orderedlist>
+							<listitem>
+								<para>Tutors - Allows you to select which tutors to assign to the
+									selected sessions. <emphasis role="bold">REMEMBER:</emphasis>
+									Tutors must be added to the Class before then can be added to
+									the sessions</para>
+							</listitem>
+							<listitem>
+								<para>Location - Allows you to change the Site and Room setting for
+									the selected sessions</para>
+							</listitem>
+							<listitem>
+								<para>Payable Duration - Allows you to set a new payable duration
+									amount in hours and minutes e.g. 3 hours and 30 minutes would be
+									expressed as 3h 30m</para>
+							</listitem>
+							<listitem>
+								<para>Start Time - Allows you to set a new start time for the
+									selected sessions. Click the clock icon in the field to select a
+									new time, or type it out e.g. 12:45 pm is simply 12:45, while
+									5:45pm would be written as 17:45.</para>
+							</listitem>
+							<listitem>
+								<para>Duration - Allows you to set the duration of the class e.g. 3
+									hours and 30 minutes would be expressed as 3h 30m</para>
+							</listitem>
+							<listitem>
+								<para>Move Forward - Allows you to move the sessions forward a set
+									number of days. </para>
+							</listitem>
+							<listitem>
+								<para>Move Backward - Allows you to move the sessions backwards a
+									number of days.</para>
+							</listitem>
+						</orderedlist>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" width="100%" contentdepth="100%"
+									fileref="images/bulk_change_sessions_popover.png"/>
+							</imageobject>
+							<caption>
+								<para>The bulk change po-over. Both Payable Duration and Move
+									Forward have been selected here</para>
+							</caption>
+						</mediaobject>
+					</listitem>
+					<listitem>
+						<para>Click the Update button. This confirms the changes and updates the
+							selected sessions.</para>
+					</listitem>
+				</orderedlist>
+			</para>
+		</section>
+		<section xml:id="classes-collision-detection">
+			<title>Session collision detection</title>
+			<para>If you create sessions with tutors, rooms or timetables that clash in any way,
+				you'll be notified within the Timetable of the class edit view. Clashes appear in
+				red, but will not stop you from creating a session. They are only provided as a
+				guide, not a hard-stop form of validation.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/session_collision.png"/>
+				</imageobject>
+				<caption>
+					<para>Multiple clashes have been detected. Clashes also take into account
+						holidays set in General Preferences</para>
+				</caption>
+			</mediaobject>
+		</section>
 	</section>
 	<section xml:id="classes-VETdata">
 		<title>Adding RTO and VET data to class records</title>

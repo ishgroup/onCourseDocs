@@ -2,15 +2,14 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
 	version="5.0" xml:id="messages">
 	<title>Sending messages</title>
-	<para>onCourse can send a mix of email, SMS or postal mail messages to the contacts you have
-		collected contact details for. Contacts can also manage their subscriptions to your public
-		tag groups via their onCourse web portal.</para>
-	<para>Whenever you create a message using the onCourse interface, the collected list of contacts
-		is automatically de-duplicated so you don't send someone the same message twice, and the
-		list can be sent a combination of email, SMS and postal mail depending on the contact
-		details you have available. Selected contacts without the chosen method or methods or
-		communication available can be exported into a separate list so you can manually contact
-		them.</para>
+	<para>onCourse can send a mix of email or SMS messages to the contacts you have collected contact
+		details for. Contacts can also manage their subscriptions to your public tag groups via
+		their onCourse web portal.</para>
+	<para>Whenever you create a message using the onCourse interface, the collected list of contacts is
+		automatically de-duplicated so you don't send someone the same message twice, and the list
+		can be sent a combination of email &amp; SMS depending on the contact details you have
+		available. Selected contacts without the chosen method or methods or communication available
+		can be exported into a separate list so you can manually contact them.</para>
 	<para>Contacts who have asked not to be contacted via particular methods e.g. SMS are
 		automatically suppressed from messaging lists. You can override this suppression in the case
 		of emergency contact e.g. a message to advise students that their tutor is sick and a
@@ -23,38 +22,43 @@
 			<title>From contact, tutor or student lists</title>
 			<para>If you wish to find a group of contacts who have a particular history of interactions with
 				your college, onCourse will allow you to perform advanced search functions, then use
-				the combined email, SMS and mail messaging tool to contact these clients. For
-				example, you can search for all students who enrolled in a course containing the
-				word "french" in the last 365 days and then send them all an invitation to enrol in
-				your new class, Provence Study Tour, prior to its public release. Any of the
-				standard and advanced search mechanisms in the contact list view can be used to
-				choose people to send a message to.</para>
+				the combined email &amp; SMS messaging tool to contact these clients. For example,
+				you can search for all students who enrolled in a course containing the word
+				"french" in the last 365 days and then send them all an invitation to enrol in your
+				new class, Provence Study Tour, prior to its public release. Any of the standard and
+				advanced search mechanisms in the contact list view can be used to choose people to
+				send a message to.</para>
 			<para>Once you have made your selection, highlight the people you wish to contact and choose
-				"send message..." from the cog wheel in the bottom right. You can send a message in
+				"send message..." from the cogwheel in the bottom right. You can send a message in
 				this way to 1 person or 20,000 people, and onCourse has special code to optimise
 				delivery to very large lists.</para>
 		</section>
 		<section>
 			<title>From classes</title>
-			<para>Highlight one or more classes from the class list view and choose "send message to
-				tutors from..." or "send message to student from..." from the cog wheel in the top right.
-				Every tutor or student from those classes will be sent a message.</para>
+			<para>Highlight one or more classes from the class list view and choose "send message to tutors
+				from..." or "send message to student from..." from the cogwheel. Every tutor or
+				student from those classes will be sent a message.</para>
 		</section>
 		<section>
 			<title>From waiting lists</title>
 			<para>Highlight one or more records in the waiting list view and choose "send message..." from
-				the cog wheel in the top right. Every potential student will be sent a message of
-				your creation. A good way to use this is to search for all waiting list records for
-				a particular course or group of courses. Then send them a message to let them know a
-				new class has just been scheduled and let them know to enrol online or call the
-				office. Read <link xlink:href="waitingLists.html">here</link> for more information about waiting lists.</para>
+				the cogwheel. Every potential student will be sent a message of your creation. A
+				good way to use this is to search for all waiting list records for a particular
+				course or group of courses. Then send them a message to let them know a new class
+				has just been scheduled and let them know to enrol online or call the office. Read
+					<link xlink:href="waitingLists.html">here</link> for more information about
+				waiting lists.</para>
 		</section>
 	</section>
 	<section xml:id="messages-intergratedMail">
 		<title>Sending an integrated mail message</title>
-		<para>ish onCourse integrates email, SMS and postal export functionality within the database.
-			This means that not only can you quickly contact all students who studied with you last term,
-			or quickly reschedule a class when the tutor calls in sick, but that a full history of all
+		<para>The type of message you want to send depends on the Template you select in the Send
+			Message window. If you select an email template, you will send an email. If you select
+			an SMS template, you will send an SMS. The window heading will update with either Email
+			or SMS to confirm your selection.</para>
+		<para>ish onCourse integrates email &amp; SMS export functionality within the database. This means
+			that not only can you quickly contact all students who studied with you last term, or
+			quickly reschedule a class when the tutor calls in sick, but that a full history of all
 			these messages are stored right in the students' records.</para>
 		<para>Sophisticated bounce processing is in place for email, notifying you if a message is
 			undeliverable.</para>
@@ -75,17 +79,19 @@
 						fileref="images/messagingStudents.png" />
 				</imageobject>
 				<caption>
-					<para>In this example the user is sending an email using the template 'New
-						Simple Email' to a single student.</para>
+					<para>In this example the user is sending an email using the template 'Simple Email' to 13
+						students. 19 are selected, but 2 are suppressed while 4 are classed as
+						unreachable or do not have an email address.</para>
 				</caption>
 			</mediaobject>
 		</para>
 		<section>
 			<title>Understanding email messaging</title>
-			<para>Email messaging in onCourse is managed by your own mail server. In the Preferences >
-				General > Messaging window you can set up the email server address and account
-				details. You can also set up how bounced emails are processed. More information is
-				available in the <link xlink:href="generalPrefs.html">General Preferences chapter</link></para>
+			<para>Email messaging in onCourse is managed by your own mail server. In the Messaging section of
+				the Preferences window, you can set up the email server address and account details.
+				You can also set up how bounced emails are processed. More information is available
+				in the <link xlink:href="generalPrefs.html">General Preferences
+				chapter</link></para>
 			<para>Not every email you send from onCourse will reach the intended contact. There are many
 				reasons for this and they include:</para>
 			<orderedlist>
@@ -134,34 +140,26 @@
 			</orderedlist>
 			<section>
 				<title>Plain text and HTML messages</title>
-				<para>When sending an email, you can choose to send either a plain text or HTML email message.
+				<para>Messages sent manually through onCourse use Message Templates which contain two types of
+					email formats - plain and HTML, each contained within a single message template.
 					HTML messages are formatted and usually include images, hyperlinks and styled
 					font and content. A plain text email message is just that - it contains only
 					plain text without any additional styling.</para>
-				<para>You may be familiar with the experience of your own email browser blocking the
-					images or content of HTML emails. In most instances, the user can choose to show
-					these blocked images once they have confirmed that the message is from a trusted
-					source. Alternatively, many HTML emails include a link such as 'view this email
-					in a browser' for people whose email clients do not allow them to easily view
-					HTML.</para>
-				<para>It also takes a little more work to layout and format an HTML message, so
-					sometimes sending a plain text message when you have a simple and
-					straightforward message to convey is all that is required e.g. remember to bring
-					your assignments to class tonight. For an email message with a broader reach,
-					say a marketing campaign that is aiming to remind clients of your brand, educate
-					them about new products you offer and entice them to click through and make a
-					purchase, HTML is a more sophisticated choice.</para>
-				<para>By default, the onCourse messaging system will open in the plain text message
-					mode. If you are sending an HTML message, you will need to prepare the HTML, and then copy and
-					paste the HTML into the onCourse message window, or the URL of the HTML message
-					into the 'Web URL for HTML Message field'.</para>
+				<para>Message Templates can be edited in the Automation window, under the Message Templates
+					heading. You can create both Email and SMS templates.</para>
+				<para>
+					<note>
+						<para>Messages sent via the cogwheel <emphasis role="bold">do not</emphasis>
+							use Email Templates. They use Message Templates.</para>
+					</note>
+				</para>
 				<mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/HTML_message.png" />
+							fileref="images/messageTemplates.png" />
 					</imageobject>
 					<caption>
-						<para>An email message with HTML content.</para>
+						<para>An example email template showing the plain text and HTML templates within it</para>
 					</caption>
 				</mediaobject>
 			</section>
@@ -289,19 +287,6 @@
 		<para>Using the advanced search function, you can search for contacts who have undeliverable
 			methods of contact and make an effort to follow them up to obtain up to date contact
 			details.</para>
-		<para>When an enrolment is cancelled an automatic message template for email and/or SMS is
-			generated to advise the student. You can choose to edit, send as is or discard this
-			message. By default, it will also be sent to people who have opted out of email or SMS
-			marketing as it is an informational message.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/message_cancelled.png" />
-			</imageobject>
-			<caption>
-				<para>A template email and SMS notification for a student whose enrolment has been cancelled.</para>
-			</caption>
-		</mediaobject>
 	</section>
 	<section xml:id="messages-Permissions">
 		<title>Message permissions and message history</title>

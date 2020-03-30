@@ -247,6 +247,43 @@
 					</orderedlist>
 				</section>
 			</section>
+			<section>
+				<title>Certificate generation logic</title>
+				<para>Here is a quick explainer of the logic onCourse uses to determine whether a
+					statement of attainment, full qualification or certificate of attendance should
+					be generated:</para>
+				<para>
+					<itemizedlist>
+						<listitem>
+							<para><emphasis role="bold">Full Qualification</emphasis> is created
+								when the course modules are marked as sufficient for a full
+								qualification, and that the outcomes have either of the following
+								statuses - competency achieved, RPL granted, credit transfer or RCC
+								granted.</para>
+						</listitem>
+						<listitem>
+							<para><emphasis role="bold">Statement of Attainment</emphasis> is
+								created if the course modules are marked as sufficient for for a
+								full qualification but at least one of the outcomes is not marked as
+								complete. This will show a dialog box asking if you'd like to create
+								a statement of attainment which a checkbox in it. Mark the checkbox
+								to create a statement of attainment. If the check mark is not
+								checked, nothing is created.</para>
+						</listitem>
+						<listitem>
+							<para><emphasis role="bold">Statement of Attainment</emphasis> is also
+								created if the course modules are not sufficient for qualification,
+								regardless of outcome status.</para>
+						</listitem>
+						<listitem>
+							<para><emphasis role="bold">Certificate of Attendance</emphasis> is a
+								non-VET certificate, awarded when a course has no VET modules
+								attached. These can be awarded regardless of attendance marked
+								during the class.</para>
+						</listitem>
+					</itemizedlist>
+				</para>
+			</section>
 		</section>
 		<section xml:id="verify-Certificates">
 			<title>Step 2 - Verifying the Certificate</title>

@@ -396,13 +396,12 @@ please visit ${waitingList.student.getPortalLink("subscriptions")}</programlisti
 					include:</para>
 				<programlisting language="groovy-template">${enrolment.student.portalLink(courseClass)} -> link to class page
 ${enrolment.student.getPortalLink(enrolment)}  -> link to class page
-${enrolment.student.getPortalLink(document)}  -> link to download file directly
 ${enrolment.student.getPortalLink(invoice)}  -> link to one invoice
 ${enrolment.student.getPortalLink("USI")}  -> link to USI portal page
 ${enrolment.student.getPortalLink("timetable")}  -> link to the timetable portal page
 ${enrolment.student.getPortalLink("results")}  -> link to results portal page
 ${enrolment.student.getPortalLink("subscriptions")}  -> link to the subscriptions portal page
-</programlisting>
+${enrolment.student.getPortalLink('/class/' + enrolment.courseClass.willowId + '/resources')} → link to the resources page of the class</programlisting>
 			</section>
 		</section>
 		<section>

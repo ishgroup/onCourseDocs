@@ -2,6 +2,7 @@ import groovy.xml.MarkupBuilder
 import groovyx.net.http.ContentType
 import groovyx.net.http.RESTClient
 import groovyx.net.http.HttpResponseException
+import org.apache.tools.ant.filters.ReplaceTokens
 
 buildscript {
   repositories.maven {
@@ -11,6 +12,35 @@ buildscript {
     classpath 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.2'
   }
 }
+
+task createIndex(type: Copy, dependsOn: processSrc) {
+  def versions = file('src').listFiles().collect{it.name}.findAll{ it[0].isNumber() }
+  versions.sort() { a, b ->
+
+    List verA = a.tokenize('.')
+    List verB = b.tokenize('.')
+
+    def commonIndices = Math.min(verA.size(), verB.size())
+
+    for (int i = 0; i < commonIndices; ++i) {
+      def numA = verA[i] as int
+      def numB = verB[i] as int
+      if (numA != numB) {
+        return numA <=> numB
+      }
+    }
+    // If we got this far then all the common indices are identical, so whichever version is longer must be more recent
+    verA.size() <=> verB.size()
+  }
+
+  from "src/index.xml"
+  into "${buildDir}/processed"
+  filter(ReplaceTokens,tokens: [
+          versions: versions.reverse().collect { "<xi:include href='${it}/release-notes.xml'/>" }.join('\n\t\t\t\t')
+  ])
+}
+docbookHtml.dependsOn createIndex
+docbookPdf.dependsOn createIndex
 
 task mergeImages(type: Copy) {
     from fileTree(dir: 'src', include: '**/images/*').files

@@ -351,6 +351,28 @@
 			report again in the future, letting you access them again quickly.</para>
 		<para>An access right control exists for this feature, so each user who needs permission to
 			view or edit these records must have the appropriate access right assigned.</para>
+		<section>
+			<title>Outcome funding history</title>
+			<para>From within an individual outcome record, you can review which funding uploads
+				this outcome has been included in by looking under the Funding Uploads heading. It
+				will show you a list of AVETMISS 8 Exports this outcome was included in, when the
+				export was run, who it was run by, the number of other outcoimes included, and the
+				success flag of the export. </para>
+			<note>
+				<para>If the outcome is included in a funding upload that is flagged as 'Success',
+					you will not be able to edit that outcome any further as it is considered
+					reported and therefore unchangeable.</para>
+			</note>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/outcome_funding_uploads.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Enter your State Funding Source code in the field highlighted.</para>
+				</caption>
+			</mediaobject>
+		</section>
 	</section>
 	<section xml:id="AVETMISS-FAQs">
 		<title>AVETMISS FAQ</title>
@@ -367,19 +389,19 @@
 		<section>
 			<title>Where do I enter the State Funding Codes in onCourse for the state where I am
 				reporting to?</title>
-			<para>There are three places where you can set your state funding source codes; the
-				Class level, then the Enrolment level, and the Outcome level. This data is
-				hierarchical, meaning anything set at the Class level will be mirrored at the
-				Enrolment and Outcome levels for that class. This allows you to easily set a state
-				funding source code at the Class level and have it apply to all associated
-				enrolments and outcomes, and then apply individual codes for students with different
-				funding codes at the individual enrolment or outcome level. </para>
-			<para>To update the state funding source code at the Class level you'll need to open the
-				Class record, navigate to the VET section and then enter the code into the
-					<guilabel>Funding Source State</guilabel> field First you will need to make sure
-				you have an up to date list of the appropriate State Funding Codes to use within
-				your reporting state. onCourse doesn't maintain a list of these codes, you will need
-				to contact your local reporting officer to obtain this information.</para>
+			<para>There are three places where you can set your state funding source codes; the Class level,
+				then the Enrolment level, and the Outcome level. This data is semi0heirarchical,
+				meaning anything set at the Class level will be mirrored at the Enrolment and
+				Outcome levels for any new enrolments taken for that class, but won't change any
+				previously taken enrolments. When you set a funding source at the Class level, this
+				makes it the default code for all associated enrolments and outcomes moving forward,
+				but does not change any existing enrolments.</para>
+			<para>To update the state funding source code at the Class level you'll need to open the Class
+				record, navigate to the VET section and then enter the code into the
+					<guilabel>Default funding source state</guilabel> field. You will need to make
+				sure you have an up to date list of the appropriate State Funding Codes to use
+				within your reporting state. onCourse doesn't maintain a list of these codes, you
+				will need to contact your local reporting officer to obtain this information.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -389,39 +411,35 @@
 					<para>Enter your State Funding Source code in the field highlighted.</para>
 				</caption>
 			</mediaobject>
-			<para>If a student has a different funding code which applies to them, you can just
-				change their enrolment or outcome funding codes to make it different to the one set
-				at the class level. If all students in the class have different funding codes, you
-				don't need to set anything at the class level, but can set each enrolment or outcome
-				separately. For the Enrolment level this is done in the General section, in the
-				Funding Source - State field. At the Outcome level, this is done inside the outcome
-				record in the Funding Source State field.</para>
-			<para>When you see a padlock in one of these fields, it means its data is being
-				inherited from a higher level record. In this case, it means the enrolment is
-				inheriting the value from the class. You can click the unlock icon to change the
-				value and break the inherited linked value from the class.</para>
+			<para>If a student has a different funding code which applies to them, you can just change their
+				enrolment or outcome funding codes to make it different to the one set at the class
+				level. If all students in the class have different funding codes, you don't need to
+				set anything at the class level, but can set each enrolment or outcome separately. </para>
+			<para><emphasis role="bold">For the Enrolment level</emphasis> - Find and open the
+				enrolment record, then add the code to the 'Default funding source - state' field. </para>
+			<para><emphasis role="bold">At the Outcome level</emphasis> - Find and open the outcome,
+				then add the code to the 'funding source state' field.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="70%" contentdepth="70%"
 						fileref="images/state_field_override_enrolment.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>The value of some fields have been inherited from the values set in the
-						class, while the Funding Source - State value has been overridden in the
-						enrolment</para>
+					<para>Where to set the funding source state field at the Enrolment level. Set
+						this if it is different for this student from the class default.</para>
 				</caption>
 			</mediaobject>
-			<para>You can also override these values in the outcome, where needed, for example if
-				the student had funding to complete some outcomes but not others, by going to the
-				outcome tab and double clicking on an outcome.</para>
+			<para>You can also override these values in the outcome, where needed, for example if the student
+				had funding to complete some outcomes but not others, by going to the outcome record
+				and double-clikcing to open it. You can add it to the </para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" width="70%" contentdepth="70%"
 						fileref="images/outcome_state_funding.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>The Funding Source State value for this outcome has been inherited from
-						the value set at the enrolment level</para>
+					<para>The Funding Source State value for this outcome has been changed from the default by
+						adding data to this field shown</para>
 				</caption>
 			</mediaobject>
 		</section>

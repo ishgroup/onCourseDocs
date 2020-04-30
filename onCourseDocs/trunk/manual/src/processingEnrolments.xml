@@ -170,7 +170,17 @@
 	<section xml:id="processingEnrolments-Creating">
 		<title>Creating an enrolment with Checkout</title>
 		<para>This section will provide you with clear and concise instructions on how to achieve certain
-			things within onCourse Checkout, like enrolling a student.</para>
+			things within Checkout, like enrolling a student.</para>
+		<para>Every Checkout process generates an invoice, even if there is no payment involved.
+			Sometimes, this invoice will be for $0.00, for example if there is no cost to enrol in
+			the selected class. Sometimes the invoice will be paid in full on enrolment, and also be
+			a receipt of payment. Sometimes the invoice will be partially paid or not paid at all.
+			The default setting for Checkout to default payments to full payment or no payment is
+			set in the Financial Preferences window.</para>
+		<para>When processing an enrolment via the onCourse client, it is possible to issue an
+			invoice to the customer who won't be paying the course fee at the time of enrolment,
+			even if your usual preference is set to pay in full. This is done by changing the
+			payment method to 'no payment' from the default option 'credit card'.</para>
 		<itemizedlist>
 			<title>A few things to consider first</title>
 			<listitem>
@@ -223,35 +233,30 @@
 			</listitem>
 		</itemizedlist>
 		<section>
-			<title>Simple enrolments</title>
-			<para>The most important thing to remember about Checkout is that all enrolments processed in a
-				single onCourse Checkout process generate one invoice to a single payer. This could
-				be for one student enrolling and paying for themselves in one or more classes, or
-				another contact enrolling and paying for one or more students to enrol in one or
-				more classes. If two friends are enrolling in a class together and paying
-				separately, you would process their enrolments as two separate Checkout
-				processes.</para>
-			<para>Every Checkout process generates an invoice, even if there is no payment involved.
-				Sometimes, this invoice will be for $0.00, for example if there is no cost to enrol
-				in the selected class. Sometimes the invoice will be paid in full on enrolment, and
-				also be a receipt of payment. Sometimes the invoice will be partially paid or not
-				paid at all. The default setting for Checkout to default payments to full payment or
-				no payment is set in the Financial Preferences window.</para>
-			<para>When processing an enrolment via the onCourse client, it is possible to issue an
-				invoice to the customer who won't be paying the course fee at the time of enrolment,
-				even if your usual preference is set to pay in full. This is done by changing the
-				payment method to 'no payment' from the default option 'credit card'.</para>
+			<title>How to create an enrolment</title>
+			<para>
+				<note>
+					<para>The most important thing to remember about Checkout is that all enrolments
+						processed in a single onCourse Checkout process generate one invoice to a
+						single payer. This could be for one student enrolling and paying for
+						themselves in one or more classes, or another contact enrolling and paying
+						for one or more students to enrol in one or more classes. <emphasis
+							role="bold">If two friends are enrolling in a class together and paying
+							separately, you would process their enrolments as two separate Checkout
+							processes.</emphasis></para>
+				</note>
+			</para>
 			<orderedlist>
 				<listitem>
 					<para>Open "Checkout"</para>
 				</listitem>
 				<listitem>
-					<para>In the "Enter contact..." field, type in a name of the contact you are
-						trying to enrol. If the correct contact populates on the right hand window,
-						then select them, if the person you need is not in the system, you can
-						create their profile by clicking on the 'Select' button on the right hand
-						side on the window next to the text 'New contact' and then complete their
-						contact detail information.</para>
+					<para>In the "Enter contact..." field, type in a name of the contact you are trying to enrol.
+						If the correct contact populates on the right hand window, then select them
+						and they will be added to the cart. If the person you need is not in the
+						system, you can create their profile by clicking on the 'Create New Student'
+						button on the right hand side on the window. Complete their contact detail
+						information, then click Save.</para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -263,83 +268,103 @@
 					</mediaobject>
 				</listitem>
 				<listitem>
-					<para>After the contact is selected, click on the "Enter course or item" field
-						on the left hand side.</para>
+					<para>After the contact is selected, click on the "Find course or item" field on the left hand
+						side.</para>
 				</listitem>
 				<listitem>
-					<para>From here input either a course code or course name, again these fields
-						are auto complete so if you were to type e.g. "Comp", courses that begin with
-						those letters, e.g. 'Computers for Beginners', 'Computers for Seniors' will
-						be available to select. </para>
+					<para>Here you enter the items you're selling; either a course, product, membership or voucher.
+						You can type the name or the code of any product and it will appear in the
+						search result in section to the right.</para>
 				</listitem>
 				<listitem>
-					<para>Once the course is located then selected, the classes will be presented to
-						you in the "Choose a class" list view, highlight the class you want. By
-						default, only current and future classes will be shown.</para>
-					<para>The "Show finished classes" checkbox can be selected to include classes
-						that are now past their end date, e.g. "Computers - Beginners ABC-123" is
-						scheduled to end on 24/11/13, and the date is 25/11/13, selecting "Show
-						finished classes" ensures that "Computers - Beginners ACBC-123" is shown in
-						the class list view and can be selected for enrolment.</para>
+					<para>If searching for a course, once the course is located then selected, a list of the
+						upcoming classes for this course will be shown, click a date to add it to
+						the cart. By default, only current and future classes will be shown however
+						you can also show and select old classes by clicking the 'Show Finished
+						Classes' link at the top of the window. Similarly, if you want add an old
+						class to the cart, you can do so by clicking it.</para>
 				</listitem>
 				<listitem>
-					<para>You can now add a MEMBERSHIP, VOUCHER, or PRODUCT, if other purchases are
-						being made with this enrolment. This can be done by either searching for a
-						membership number or name; voucher code; or a product name, or alternatively
-						clicking on one of the 'Show all' buttons on the right hand side of the
-						page.</para>
+					<para>If adding a MEMBERSHIP, VOUCHER, or PRODUCT, search for a name or SKU
+						code, and then click on the choice to add it to the cart. Repeat this as
+						many times as you need to until everything is added. You'll set Product
+						quantity in the next steps.</para>
 				</listitem>
 				<listitem>
-					<para>If you wish to review the invoice, you can so this by clicking on the
-						'ITEMS' button</para>
+					<para>Once the cart has all the contacts and items added, next we need to review the invoice,
+						so click Summary in the left column.</para>
 				</listitem>
 				<listitem>
-					<para>If you have either a voucher or promotion code you can input this into the
-						'Enter voucher or promotion...' field, then click on the + symbol to
-						apply</para>
+					<para>If you have either a voucher or promotion code you can input this into the 'Find
+						promotions' field under the Discounts header. Enter the promo code, it will
+						validate automatically. If nothing appears, the code was incorrect. If the
+						code is correct, a discount will appear underneath the Discounts header. You
+						can click the discount to review the record.</para>
 				</listitem>
 				<listitem>
-					<para>You can now review the invoice/s the payment will apply to by clicking on
-						the PAYMENTS button on the left hand side of the page. This only is
-						necessary if the student has previous invoices with balances outstanding.
-					</para>
+					<para>Click 'This Invoice' to see the details of the current transaction being
+						performed. Here you can set the payer, set who's being enrolled in what
+						course, and set the quantity of any products that were added to the cart.
+						Review everything here before moving on to the final step by clicking
+						'Payment'. If 'Payment' doesn't appear below the Summary, then you haven't
+						assigned all cart items to contacts and will need to do so before
+						advancing.</para>
 				</listitem>
 				<listitem>
-					<para>Next, select the Credit card button from the left hand side to select the chosen payment
-						method; the payment amount; and who the payer will be. Please note that the
-						payer does not have to be the student, it can be any other contact added to
-						the Checkout process, including a company.</para>
+					<para>The Payment window is the final step in the checkout. Here you can finalise the payment,
+						including whether or not to apply any previous credits or debts to the
+						current transaction. To review any credits on their peyers account, click
+						'Previous Credit', and then click the checkbox next to any credit note you'd
+						like to apply to the current transaction. Similarly, to apply any
+						additionally owed invoices to the current transaction, click 'Previous
+						owing' and click the checkbox next to any owing invoices. This will all be
+						collated in the payment plan.</para>
 				</listitem>
 				<listitem>
-					<para>Finally, select save from the bottom of the window, a confirmation box
-						will appear, form here select your methods of receiving the invoice and
-						enrolment confirmation. That's it!</para>
+					<para>The Payment Plan appears below the previous credit/owing sections. Pay Now
+						is the amount expected to be paid in this current transaction, with any
+						additional credits or invoices applied. If you aren't accepting full payment
+						straight away, you can edit the amount in this field and it will add a
+						second field with a date and the remaining amount. You can change this date
+						and amount and add as many additional payments as you like, until the
+						invoice is paid in full. Anything listed under Pay Later is an amount owing
+						in the future that does yet require payment.</para>
+				</listitem>
+				<listitem>
+					<para>Lastly, select your payment type. Credit Card will open the credit card
+						payment portal in the section to the right. Enter the details and click
+						Finalise Checkout. Any other payment method will simply show the amount to
+						be paid, and a Finalise Checkout button. Complete your transaction and then
+						click the Finslise Checkout button.</para>
+				</listitem>
+				<listitem>
+					<para>You will see a Transaction Successful screen along with a snapshot of the invoice just
+						paid. You can now close the tab.</para>
 				</listitem>
 			</orderedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/checkout_successful.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>The transaction successful screen</para>
+				</caption>
+			</mediaobject>
 		</section>
 		<section>
 			<title>Discounting the enrolment fee</title>
-			<itemizedlist>
-				<title>When processing an enrolment through Checkout, you can discount course fees by
-					using:</title>
-				<listitem>
-					<para>Automatic discount - a discount automatically offered to people who meet pre-defined
-						criteria, e.g. seniors, people who hold a certain membership, students
-						re-enrolling within a defined time period or students enrolling in a defined
-						date range</para>
-				</listitem>
-				<listitem>
-					<para>Promotion - a special offer accessed through a one-time code, used as a marketing
-						tool.</para>
-				</listitem>
-				<listitem>
-					<para>Manual discount - a once off discount that isn't part of a standard
-						promotion or concession</para>
-				</listitem>
-			</itemizedlist>
-			<para> More about concessions and promotions can be found in the <link xlink:href="concessions.html#concessions-whatIsAConcession">Concessions and Memberships chapter</link></para>
-			<para> If an automatic discount has been created, the student meets the requirements of
-				the discount and the class they are enrolling in has been set to allow that type of
+			<para>When processing an enrolment through Checkout, you can discount course fees by using a
+				pre-created discount. When a discount is applied to a class, it can be automatically
+				offered to people who meet pre-defined criteria, e.g. seniors, people who hold a
+				certain membership, students re-enrolling within a defined time period or students
+				enrolling in a defined date range. You can also apply one manually by checking the
+				Discount drop down box within the class invoice line of the Summary.</para>
+			<para>More about concessions and promotions can be found in the <link
+					xlink:href="concessions.html#concessions-whatIsAConcession">Concessions and
+					Memberships chapter</link></para>
+			<para>If an automatic discount has been created, the student meets the requirements of the
+				discount and the class they are enrolling in has been set to allow that type of
 				discount, then the discount will automatically be applied when they enrol. </para>
 			<para>If a student is automatically eligible for more than one type of discount, the
 				higher discount will be applied.</para>
@@ -378,48 +403,35 @@
 						fileref="images/Prom_code2.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>After entering the code, the system will automatically apply any discount
-						matching the code and add it to the Summary</para>
+					<para>After entering the code, the system will automatically apply any discount matching the
+						code and add it to the Summary. Here the promotion was called Combo 1</para>
 				</caption>
 			</mediaobject>
 		</section>
 		<section>
-			<title>Adding information to invoices</title>
-			<para>To review the tax invoice, you must click on the ITEMS button on the left hand side of the
-				page. There are also a number of additional functions that you can do in this
-				section of Checkout</para>
+			<title>Reviewing the invoice in the Summary</title>
+			<para>To review the tax invoice, you must click on the Summary section below the cart. Here you
+				can set who is being enrolled into what, who is paying for what, and who is getting
+				what.</para>
 			<para>
 				<orderedlist>
 					<listitem>
-						<para>If you have more than one contact you can choose who is being invoiced
-							to, therefore who the payer is going to be in the drop box under the
-							ITEMS (TAX INVOICE) text.</para>
-					</listitem>
-					<listitem>
-						<para>If you wish to create a reference for the invoice, such as a purchase
-							order, this can be recorded in the 'Customer reference' field.</para>
-					</listitem>
-					<listitem>
-						<para>The invoice date can be changed however changing this date will change
-							when the income(liability) is posted to the general ledger.</para>
-					</listitem>
-					<listitem>
-						<para>You can also change the date that the invoice is due by change the
-							date in the calender in the 'Due date' field.</para>
+						<para>If you have more than one contact added, you can choose who the payer is by hovering
+							thew mouse over their name and clicking the 'Set as Payer' button. The
+							payer is identified by the 'Payer' label next to their name.</para>
 					</listitem>
 					<listitem>
 						<para>Any enrolments or products you have already added to this Checkout will be itemised
-							automatically on the invoice, with any discount or tax applied.</para>
+							automatically on the invoice, with any discount or tax applied. You can
+							review this by clicking the invoice line to expand it.</para>
 					</listitem>
 					<listitem>
-						<para>To add any additional charges you can do this by entering what they
-							will be in the 'Additional charge...' field; then enter what fee this
-							will incur; select what account; chose whether or not GST is added; then
-							click on the "Add' button to include this in the invoice.</para>
+						<para>You can set the quanitity of any product in this screen</para>
 					</listitem>
 					<listitem>
-						<para>Any additional notes can be added in the 'Public notes' field at the
-							bottom of the page. Text in the public notes field will print on the
+						<para>Set who will receive confirmation emails. In the example below, both James and James'
+							employer, who is paying for the enrolment in two classes, will receive
+							confirmation emails. As the payer, only James' employer will receive an
 							invoice.</para>
 					</listitem>
 				</orderedlist>
@@ -429,7 +441,7 @@
 							fileref="images/Tax_invoice_image.png"/>
 					</imageobject>
 					<caption>
-						<para>An example of the tax invoice window in onCourse</para>
+						<para>An example of the Summary section of Checkout</para>
 					</caption>
 				</mediaobject>
 			</para>
@@ -447,17 +459,17 @@
 		</section>
 		<section>
 			<title>Adding a 3rd party payer</title>
-			<para>This part of the 3rd party payer topic only covers the steps to follow to add a
-				3rd party payer. For more, read on to the section "3rd Party Payments". </para>
+			<para>To add a 3rd party payer to a transaction:</para>
 			<para>
 				<orderedlist>
 					<listitem>
-						<para>Add the student to the enrolment as per the usual process. </para>
+						<para>Add the student contact to the cart </para>
 					</listitem>
 					<listitem>
-						<para>If the third party is already related to the student you have added,
-							you can find them quickly by clicking on the down arrow next to the
-							'Enter contact...' field and selecting them.</para>
+						<para>If the third party is already related to the student you have added, you can find them
+							quickly by clicking Find contact field after already adding the related
+							contact - they will appear already in the right without any searching
+							required.</para>
 						<para>
 							<mediaobject>
 								<imageobject>
@@ -465,9 +477,8 @@
 										fileref="images/QE_related_contact.png"/>
 								</imageobject>
 								<caption>
-									<para>There are two contacts already added to this Checkout. From the related contacts list
-										I can select any other contacts already related to either of
-										these contacts.</para>
+									<para>Jim's Company appears as his employer because the relationship has already been
+										defined in each contact record.</para>
 								</caption>
 							</mediaobject>
 						</para>
@@ -480,10 +491,10 @@
 							enrolling and paying. </para>
 					</listitem>
 					<listitem>
-						<para>You can create a relationship between contacts at this point, e.g.
-							contact 1 (Jenny Smith) is the staff member of contact 2 (Computer
-							Trainers of Hobart) by scrolling to the bottom of the student's general
-							tab.</para>
+						<para>You can create a relationship between contacts at this point within the newly created
+							contact by scrolling to 'Relation' inside the new record, clicking the +
+							button then searching for and adding the contact and relationship. When
+							done, hit Save.</para>
 						<para>
 							<mediaobject>
 								<imageobject>
@@ -491,24 +502,23 @@
 										fileref="images/3rd_party_payer.png"/>
 								</imageobject>
 								<caption>
-									<para>The relationship option, click "select" to choose a type
-										of relationship between contacts</para>
+									<para>Setting up a contact relation</para>
 								</caption>
 							</mediaobject>
 						</para>
 					</listitem>
 					<listitem>
-						<para>Set the classes for the student(s) as per the usual process.</para>
+						<para>Set the classes for the student(s) as per the usual process, then go to the Summary
+							section</para>
 					</listitem>
 					<listitem>
-						<para>Ensure you select the correct payer, the name of the payer will change next to the ITEMS
-							button. Enter the payment details (zero payments are allowed - an
-							invoice with an unpaid, partial or fully paid balance will be sent). </para>
+						<para>In the Summary, hover your mouse over the payer's contact name and
+							click 'Set as Payer'. That will set this contact as the payer for this
+							invoice.</para>
 					</listitem>
 					<listitem>
-						<para>Select 'Email' and/or 'Print enrolment confirmation and tax invoice'
-							as appropriate. The invoice will only go to the payer. The enrolment
-							confirmation will go to the student(s) enrolling. </para>
+						<para>When finalised, the invoice will only go to the payer. The enrolment confirmation will
+							go to the student(s) enrolling.</para>
 					</listitem>
 				</orderedlist>
 			</para>

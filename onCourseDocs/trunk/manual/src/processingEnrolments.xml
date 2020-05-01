@@ -233,7 +233,7 @@
 			</listitem>
 		</itemizedlist>
 		<section>
-			<title>How to create an enrolment</title>
+			<title>How to create an enrolment - Checkout Basics</title>
 			<para>
 				<note>
 					<para>The most important thing to remember about Checkout is that all enrolments
@@ -535,64 +535,33 @@
 					<para>Add the students and their company to Checkout</para>
 				</listitem>
 				<listitem>
-					<para>Select the first class that the students are both attending. The first class that is not
-						full or cancelled is selected by default. Also, by default, both students
-						are ticked as attending this class.</para>
+					<para>Add the classes that each student will attend, even if both aren't attending all the
+						added classes, you can assign them in the later step. When you're done, go
+						to Summary.</para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" width="100%" contentdepth="100%"
 								fileref="images/QE_multiple_class.png"/>
 						</imageobject>
 						<caption>
-							<para>Both students are selected to attend this class</para>
+							<para>Both students are selected to attend these classes, with the company selected as
+								Payer</para>
 						</caption>
 					</mediaobject>
 				</listitem>
 				<listitem>
-					<para>Select the second class one of the students is going to attend. Unselect
-						the student who is not attending. Note that on the summary panels on the
-						left, it shows that Jenny Smith is attending two classes, while Kieran Smith
-						is only attending one, and in the Items list summary, two students are
-						attending Accounting with MYOB and only one is attending Computers
-						Beginners.</para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/QE_second_class.png"/>
-						</imageobject>
-						<caption>
-							<para>Only Jenny Smith is selected to attend this class.</para>
-						</caption>
-					</mediaobject>
+					<para>In Summary, each class added to the cart will be shown under each student. Make sure
+						there's a checkmark next to each class the student will be enrolled
+						into.</para>
 				</listitem>
 				<listitem>
-					<para>Repeat this process, selecting the second choice of class for the other
-						student.</para>
+					<para>Hover your mouse over the name of the company. You'll see a 'Set as Payer'
+						button appear, click it to set the company as the payer.</para>
 				</listitem>
 				<listitem>
-					<para>Click on the ITEMS button to show the invoice summary, and change the
-						payer from the first student to the company. The invoice summary shows four
-						lines, with two enrolments for each student.</para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" width="100%" contentdepth="100%"
-								fileref="images/QE_invoice_summary.png"/>
-						</imageobject>
-						<caption>
-							<para>The invoice that will be generated for the company, based on this Checkout
-								process.</para>
-						</caption>
-					</mediaobject>
-				</listitem>
-				<listitem>
-					<para>Click on the 'credit card' default payment selection, and complete the
-						payment process as requested by the company e.g. no payment for an invoice,
-						or take a payment now</para>
-				</listitem>
-				<listitem>
-					<para>Save and complete the enrolment. The tax invoice will be sent to the
-						company, and two enrolment confirmations will be sent to each of the
-						students. </para>
+					<para>When everything is set, move on to Payments. You can accept payment as you
+						normally would. The invoice will go to the company contact, while the
+						confirmation emails will go to the students.</para>
 				</listitem>
 			</orderedlist>
 		</section>
@@ -612,8 +581,8 @@
 						previous engagements with your organisation.</para>
 				</listitem>
 				<listitem>
-					<para>Once trying to enrol the student, you will notice the amount either in
-						"Previous owing" or "Balance outstanding". </para>
+					<para>Once trying to enrol the student, you will notice the amount either in "Previous credit"
+						or "Previous owing" in the Payments step of Checkout. </para>
 				</listitem>
 				<listitem>
 					<para>If the student has credit to their name, then the balance outstanding will
@@ -641,21 +610,19 @@
 	<section xml:id="processingEnrolments-paymentOptions">
 		<title>Checkout payment options</title>
 		<para>By default the first contact is nominated as the payer. If you wish to switch this to
-			another contact, click on the payment button on the left and change the name of the
-			payer in the field provided. You can also change who the payer is by clicking on the
-			ITEMS button on the left side of the page.</para>
+			another contact, in the Summary hover your mouse over the name of the contact you want
+			to set as the payer and click 'Set as Payer' button that appears.</para>
 		<para>If a third party, such as an employer or agency are paying the fee, and if the payer
 			has any amount outstanding, that information will be added to the total fee. You can
 			choose to pay the full amount owing, zero, or a portion of the amount owing. </para>
 		<para>If a voucher is being used to pay for an enrolment, you need to add the voucher before
 			choosing how to pay any balance outstanding by an alternate method.</para>
-		<para>If your financial preferences are set to pay in full, but you are taking a partial
-			payment now, you can edit the amount the contact wants to pay at this time by clicking
-			on the pen icon, changing to edit mode, and change the amount in the field.</para>
-		<para>If you click the pen icon a second time, the payment amount will default back to the
-			full amount payable. In the image below, you can see payment amount is in default full
-			payment amount, as the value is slightly greyed out. When you are in edit mode, the text
-			is in black and you can type into this field.</para>
+		<para>If your financial preferences for the class are set to pay in full, but you are taking a
+			partial payment now, you can edit the amount the contact wants to pay at this time by
+			clicking on the pen icon above Pay Now and editing the amount. This will add a new
+			payment to the payment chedule where you can set the amount and the due date. You can
+			add as many additional payments as you like, but the amount must add up to the invoice
+			total.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -665,9 +632,10 @@
 				<para>Payment options available via Checkout</para>
 			</caption>
 		</mediaobject>
-		<para>By default, the payment type will be set to credit card. You can change this to
-			another payment type of your choice (or no payment, if the student is not paying right
-			now). Anything you record as a payment at this point should only be a payment you have
+		<para>There is no default payment type, you must always select one. Select or change the payment
+			type by clicking on the drop down box under the Payment Method header and clicking a
+			selection. </para>
+		<para>Anything you record as a payment at this point should only be a payment you have
 			received right now - this is not the place to record the way the student is intending to
 			pay at some point in the future.</para>
 		<para>You can only select Credit Card in onCourse if you have a merchant account linked to
@@ -679,20 +647,19 @@
 			The enrolment save process will not complete until the bank validates the card number
 			(see below for more details on how this works).</para>
 		<section>
-			<title>Reviewing the invoice</title>
-			<para>By clicking on the "PAYMENTS' button you can review any other unpaid invoice(s) that are
-				connected the Checkout invoice payer. The invoice being created as part of this
-				Checkout process is labelled 'This Invoice'. You can select or unselect any of the
-				invoices the contact wants to make a payment against at this time, by clicking on
-				the related check box. By default any invoices that have a due date in the future
-				will be suppressed.<mediaobject>
+			<title>Applying previous credit or debt to a payment</title>
+			<para>In the Payments section you can review any other unpaid invoice(s) that are connected the
+				Checkout invoice payer by clicking on 'Previous owing'. You can select or unselect
+				any of the invoices the contact wants to make a payment against at this time by
+				clicking on the related check box. By default any invoices that have a due date in
+				the future will be suppressed.<mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" width="100%" contentdepth="100%"
 							fileref="images/Reviewing_invoice_image.png"/>
 					</imageobject>
 					<caption>
-						<para>An example of the window you see when you wish to review a contacts
-							invoice(s)</para>
+						<para>An example of the window you see when you wish to review a contact's
+							previous owing invoices</para>
 					</caption>
 				</mediaobject></para>
 			<para>If you are enrolling a student in more than one class, with one being a payment plan then
@@ -722,8 +689,8 @@
 		</section>
 		<section>
 			<title>Recording a cash payment</title>
-			<para>To record a cash payment simply select 'cash' from the payment type drop down
-				menu, once you have confirmed the payment amount is correct, just click save to
+			<para>To record a cash payment simply select 'cash' from the payment type drop down menu, once
+				you have confirmed the payment amount is correct, just click finalise checkout to
 				complete the enrolment.</para>
 			<para>Any cash payments you make will be linked to your user location for your banking
 				process. These cash payments will be need to be reconciled when you run 'Deposit
@@ -738,26 +705,12 @@
 						refresh to update the payment type</para>
 				</listitem>
 				<listitem>
-					<para>Enter the cheque bank, cheque branch and cheque drawer in the fields that appear. Note
-						that these are required fields within Checkout and you will be unable to
-						complete the enrolment unless you enter the cheque details. </para>
-				</listitem>
-				<listitem>
-					<para>Once you have confirmed the payment amount matches the cheque amount, just
-						click save to complete the enrolment</para>
+					<para>Once you have confirmed the payment amount matches the cheque amount, just click finalise
+						checkout to complete the enrolment</para>
 					<para>Like cash, cheque payments are linked to your user location for
 						banking.</para>
 				</listitem>
 			</orderedlist>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/QE_cheque_payments.png"/>
-				</imageobject>
-				<caption>
-					<para>Cheque payment required fields within Checkout</para>
-				</caption>
-			</mediaobject>
 		</section>
 		<section>
 			<title> Recording an EFTPOS payment </title>
@@ -770,8 +723,8 @@
 					<para>Select EFT from the payment type drop down menu</para>
 				</listitem>
 				<listitem>
-					<para>Once you have confirmed the payment amount, just click save to complete
-						the enrolment</para>
+					<para>Once you have confirmed the payment amount, just click finalise checkout to complete the
+						enrolment</para>
 				</listitem>
 			</orderedlist>
 		</section>
@@ -796,9 +749,8 @@
 				<para>Select Credit Card from the payment type drop down menu within Checkout</para>
 			</listitem>
 			<listitem>
-				<para>Click on <guilabel>Save</guilabel> within the Checkout window. Your OS default browser
-					will open a new window will open to enable you to enter the credit card details
-					directly into the secure payment gateway.</para>
+				<para>The credit card secure payment gateway will open in the section to the right
+					of the Payments column.</para>
 			</listitem>
 			<listitem>
 				<para>Enter the credit card details into the secure payment window and then click
@@ -813,8 +765,8 @@
 			</listitem>
 			<listitem>
 				<para>The Checkout window will also update to show that the transaction was successful, you can
-					then click OK and then send the enrolment confirmation as per the standard
-					process. </para>
+					then click finalise transaction and then send the enrolment confirmation as per
+					the standard process. </para>
 			</listitem>
 		</orderedlist>
 		<mediaobject>

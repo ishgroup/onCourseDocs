@@ -445,17 +445,6 @@
 					</caption>
 				</mediaobject>
 			</para>
-				<para>If you are enrolling a student into multiple classes with one class having a payment plan,
-				then you will end up with two tax invoices.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/Tax_invoice_multiple.png"/>
-					</imageobject>
-					<caption>
-						<para>An example of the tax invoice window with multiple invoices</para>
-					</caption>
-				</mediaobject>
 		</section>
 		<section>
 			<title>Adding a 3rd party payer</title>
@@ -662,20 +651,15 @@
 							previous owing invoices</para>
 					</caption>
 				</mediaobject></para>
-			<para>If you are enrolling a student in more than one class, with one being a payment plan then
-				you will end up with two invoices. Every payment plan class will get it's own
-				invoice so if you enrolling a student into five classes, with two having payment
-				plan and with the other three not, then there will be three invoices created.<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/Reviewing_payment_plan_invoice.png"/>
-					</imageobject>
-					<caption>
-						<para>An example of the window you see when you wish to review a contacts
-							invoices when they have enrolled in multiple classes, with one being a
-							payment plan class</para>
-					</caption>
-				</mediaobject></para>
+			<para>If you are enrolling a student in more than one class, with one or both containing two
+				different payment plans, the system will select one and apply it to the whole
+				invoice. This is because invoices can only have one assigned payment plan. </para>
+			<para>
+				<note>
+					<para>If you absolutely must have two different payment plans, then you'll need
+						to run through two separate transactions.</para>
+				</note>
+			</para>
 		</section>
 		<section>
 			<title>Using a voucher for payment</title>
@@ -813,13 +797,8 @@
 						</para>
 					</listitem>
 					<listitem>
-						<para>The payment window will update to show the message <emphasis
-								role="bold">this payment was cancelled</emphasis>. You can then
-							close the browser window</para>
-					</listitem>
-					<listitem>
 						<para>The Checkout window will display the message <emphasis role="bold">Payment attempt was
-								unsuccessful. The enrolment and unpaid invoice have been
+								cancelled. The enrolment and unpaid invoice have been
 								saved</emphasis>. Click Ok to proceed</para>
 					</listitem>
 					<listitem>
@@ -904,75 +883,45 @@
 			<title>Processing a Payment In</title>
 			<example>
 				<title>How to process a payment in</title>
-				<para>Payments In can be accessed from the Dashboard by searching for 'Payments In' or from the
-						<emphasis role="bold">Financial</emphasis> menu tab the top of your screen.
-					To process a Payment In, follow these steps (assuming student has debt with
-					you):</para>
+				<para>Payments In must be processed from the owing invoice. To accept a payment in on an
+					invoice:</para>
 				<orderedlist>
 					<listitem>
-						<para>Go the Payment In page either through the onCourse home screen Accounts > Payment In, or
-							by selecting "Financial" from the top menu, then "Payments In"</para>
+						<para>Go the Invoices window</para>
 					</listitem>
 					<listitem>
-						<para>From here click on the + (Add) symbol in the bottom right hand side of the
-							window.</para>
+						<para>Search for the invoice you wish to add a payment against, click it to
+							highlight it</para>
 					</listitem>
 					<listitem>
-						<para>This will open a customised version of the Checkout window with the only thing being
-							able to be done is to take a payment from a contact who owes you money. </para>
+						<para>Click the cogwheel in the bottom-right of the window and select 'Apply payment
+							in'</para>
 					</listitem>
 					<listitem>
-						<para>Search for the name of the contact who is making this payment by typing their name in
-							the 'Enter contact...' field.</para>
+						<para>This will open the Checkout to the Payment window. The owing amount
+							will appear in the Pay Now section. You can review any additional owing
+							invoices on this contact's record. Click the checkbox next to them to
+							add them to the current payment.If the debtor has more than one invoice
+							with a balance outstanding, by default the payment will apply to the
+							oldest invoice(s)</para>
 					</listitem>
 					<listitem>
-						<para>If the debtor has more than one invoice with a balance outstanding, by default the
-							payment will apply to the oldest invoice(s). The list of all the
-							Invoices can be found by clicking on the text 'PAYMENTS' on the left
-							side of the window. The invoice(s) this payment is to apply to are
-							ticked in the list. You can change the choice of invoice(s) as
-							required.</para>
+						<para>Once the invoices are selected, select a payment type and apply the
+							payment. Click Finalise Checkout to finalise the transaction.</para>
 						<mediaobject>
 							<imageobject>
 								<imagedata scalefit="1" width="100%" contentdepth="100%"
 									fileref="images/List_of_outstanding_invoices.png" format="png"/>
 							</imageobject>
 							<caption>
-								<para>List of outstanding invoices</para>
+								<para>List of outstanding invoices and the Pay Now amount showing the amount to be
+									paid</para>
 							</caption>
 						</mediaobject>
 					</listitem>
 					<listitem>
-						<para>You can then choose the payment method by clicking on the text 'Credit card' as shown
-							below. There is also a payment date field, so payments received in the
-							past e.g. direct deposit into your bank account, can be recorded with
-							the actual date of payment. This field would only usually be set to a
-							date other than today for payment types like EFT (direct deposit) where
-							the payment is received in your bank account prior to it being recorded
-							in onCourse. By default this field is set to todays date.</para>
-						<mediaobject>
-							<imageobject>
-								<imagedata scalefit="1" width="100%" contentdepth="100%"
-									fileref="images/Payment_In.png" format="png"/>
-							</imageobject>
-							<caption>
-								<para>Choosing the payment method being used</para>
-							</caption>
-						</mediaobject>
-					</listitem>
-					<listitem>
-						<para>After you have saved the payment you will be taken to a window where you have the option
-							to send the payer the payment receipt email. By default this check box
-							is not checked.</para>
-						<mediaobject>
-							<imageobject>
-								<imagedata scalefit="1" width="100%" contentdepth="100%"
-									fileref="images/payment_receipt_payment_out.png" format="png"/>
-							</imageobject>
-							<caption>
-								<para>Sending the payment receipt email</para>
-							</caption>
-						</mediaobject>
+						<para>After the transaction is deemed successful, you'll be shown a review of the created
+							invoice.</para>
 					</listitem>
 					<listitem>
 						<para>After you complete this process an email will be sent to the payer with the payment
@@ -985,16 +934,16 @@
 	</section>
 	<section xml:id="processingEnrolments-invoicesAndEnrolmentConfirmations">
 		<title>Sending invoices and confirmations</title>
-		<para>At the end of the Checkout process you can send email and/or printed tax invoices and
-			enrolment confirmations.</para>
-		<para>If the student(s) have provided email addresses, this option will be selected by
-			default, and printing not selected. Select for each student if you would like this
-			information emailed and/or mailed. </para>
-		<para>The enrolment confirmation goes to each student who has enrolled in a class. The tax
-			invoice only goes to the payer. For example, if two friends were attending a class
-			together, paid for by one of them as a gift to the other, only the payer would receive
-			information about the fees charged. The person receiving the enrolment as a gift would
-			simply receive an enrolment confirmation with no information regarding the cost. </para>
+		<para>While reviewing the Summary in the Checkout is where you set who will be sent what in terms
+			of confirmations and invoice notifications.</para>
+		<para>By default, the payer will receive the invoice, and everyone will receive confirmation
+			emails. However these can be switched off per contact in the summary by unticking the
+			checkbo next to each option.</para>
+		<para>The enrolment confirmation goes to each student who has enrolled in a class. The tax invoice
+			only goes to the payer. For example, if three friends were attending a class together,
+			paid for by one of them as a gift to the others, you can set it so that the invoice and
+			confirmation goes to the payer, and the others get nothing to retain the
+			surprise.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -1010,12 +959,12 @@
 		<para>Some additional information you need to record for your AVETMISS, traineeship, CRICOS or VET
 			Fee-Help reporting can be added to the enrolment record after it has been created. This
 			information can not be added in Checkout at the time you create the enrolment.</para>
-		<para>To locate an enrolment, go to People > Enrolments and search for the enrolment you
-			have created. Double click on your enrolment to open it in edit mode.</para>
+		<para>To locate an enrolment, go to Enrolments and search for the enrolment you have created.
+			Double click on your enrolment to open it in edit mode.</para>
 		<section> 
 			<title>Fields to set at the enrolment level</title>
-		<para>On the enrolment general tab, you can set a value for the following fields. Most of these
-				field only affect AVETMISS reporting.</para>
+		<para>In the VET section of the enrolment, you can set a value for the following fields. Most of
+				these field only affect AVETMISS reporting.</para>
 		<para><emphasis role="bold">Study Reason</emphasis> reported in the NAT00120 for students
 			enrolling in a qualification or skills set. If you don't set a value here, the default
 			'11 - other reasons' will be exported</para>

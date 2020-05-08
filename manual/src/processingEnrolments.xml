@@ -715,22 +715,22 @@
 	</section>
 		<section xml:id="processingEnrolments-creditCards">
 		<title>Processing a credit card payment</title>
-		<para>onCourse processes credit card payments via a secure web browser and verifies the
-			credit card details in real time with the bank.</para>
+		<para>onCourse processes credit card payments via a secure payment gateway within onCourse and
+			verifies the credit card details in real time with the bank.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
 					fileref="images/QE_credit_card_payment_window.png"/>
 			</imageobject>
 			<caption>
-				<para>Secure online payment window to process credit card payments</para>
+				<para>Secure credit card payment window to process credit card payments</para>
 			</caption>
 		</mediaobject>
-		<para> To process a credit card payment via the secure payment gateway, you need to do the
-			following steps:</para>
+		<para> To process a credit card payment you need to do the following steps:</para>
 		<orderedlist>
 			<listitem>
-				<para>Select Credit Card from the payment type drop down menu within Checkout</para>
+				<para>Select Credit Card from the payment type drop down menu during the Payment step of
+					Checkout</para>
 			</listitem>
 			<listitem>
 				<para>The credit card secure payment gateway will open in the section to the right
@@ -759,17 +759,7 @@
 					fileref="images/Successful_CC_Payment_Message.png"/>
 			</imageobject>
 			<caption>
-				<para>Secure payment browser window updates once transaction is successful</para>
-			</caption>
-		</mediaobject>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/QE_Successful_CC_Payment_Message.png"/>
-			</imageobject>
-			<caption>
-				<para>Checkout window updates with the following message once the payment has been
-					approved</para>
+				<para>Transaction successful screen in the Checkout</para>
 			</caption>
 		</mediaobject>
 		<note>
@@ -788,50 +778,14 @@
 				reconciles those cancelled transactions</para>
 			<section>
 				<title>How to cancel a credit card transaction</title>
-				<para>To cancel a credit card transaction that you have commenced, you need to take
-					the following steps:</para>
+				<para>You don't technically need to cancel credit card payments in onCourse. You can
+					simply change the Payment Method.</para>
 				<orderedlist>
 					<listitem>
-						<para>To cancel a transaction that is underway, click on the
-								<guilabel>Cancel</guilabel> button within the secure payment window.
-						</para>
-					</listitem>
-					<listitem>
-						<para>The Checkout window will display the message <emphasis role="bold">Payment attempt was
-								cancelled. The enrolment and unpaid invoice have been
-								saved</emphasis>. Click Ok to proceed</para>
-					</listitem>
-					<listitem>
-						<para>Checkout will proceed to the confirmation window. You can choose to send or not send the
-							standard invoice and enrolment confirmation. The invoice will show it is
-							unpaid if you choose to send it at this time. The Checkout window will
-							close after you click finish.</para>
-					</listitem>
-					<listitem>
-						<para>To try a new payment type, open Checkout again and type in the payer name. The balance
-							outstanding of their invoice will be visible, and you can proceed to
-							processing a new type of payment.</para>
+						<para>With the credit card gateway open, simply click the 'Payment Method'
+							field and make another selection.</para>
 					</listitem>
 				</orderedlist>
-				<tip>
-					<para>If you choose Credit Card as the payment type, which opens a browser window to enter the
-						credit card details, then find you need to cancel that transaction, always
-						make sure that you click the <guilabel>Cancel</guilabel> button within the
-						secure payment browser window.</para>
-					<para>If you close the browser window by clicking on the close button, the QE
-						window will lock and you will not be able to use QE until the transaction is
-						timed out after 20 minutes.</para>
-				</tip>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/Cancelled_CC_Payment_Message.png"/>
-					</imageobject>
-					<caption>
-						<para>Secure payment browser window message showing a payment attempt has been
-							cancelled</para>
-					</caption>
-				</mediaobject>
 			</section>
 			<section>
 				<title>How to manage transactions where the payment has failed</title>
@@ -1208,10 +1162,12 @@
 	<section>
 		<title>How do I check to see if a student has been enrolled?</title>
 		<para>You can go to the Enrolment list view window and type the student's name into the basic
-				search. Double-click on the record to open it and view it in more detail.</para>
+				search. Double-click on the record to open it and view it in more detail. You can
+				also check within the Class record itself by scrolling down to the Enrolments
+				section, then clicking the 'Successful and Queued' button to open the ENrolments
+				window with all that classes current successful enrolments displayed.</para>
 		<para>If you require more information about an individual enrolment you can double click on an
-				record; this will open a new window with additional information broken down into 4
-				tabs. These tabs are General, Outcomes, VET FEE-HELP and Attachments</para>
+				record; this will open the enrolment record to show it in more detail.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -1224,9 +1180,9 @@
 	</section>
 		<section>
 			<title>What happens if a student doesn't meet the class age restrictions?</title>
-			<para>If a class has a minimum, maximum or age range set for enrolment in the class general tab,
-				then during Checkout, each student attempting to enrol in the class will have their
-				date of birth checked.</para>
+			<para>If a class has a minimum, maximum or age range set for enrolment in the General section of
+				the class, then during Checkout, each student attempting to enrol in the class will
+				have their date of birth checked.</para>
 			<para>If the student doesn't have a date of birth at all, then they will not be allowed
 				to enrol until a valid date of birth is provided.</para>
 			<para>If the student has a date of birth that means they do not meet the age
@@ -1242,7 +1198,16 @@
 						fileref="images/QE_age_restriction_error_message.png" format="png"/>
 				</imageobject>
 				<caption>
-					<para>Checkout showing both types of age restriction error message</para>
+					<para>Checkout showing age restriction message</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/age-restrict-checkout.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Checkout showing missing DOB message when enrolling in a class with age restrictions</para>
 				</caption>
 			</mediaobject>
 		</section>

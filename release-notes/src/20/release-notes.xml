@@ -6,23 +6,26 @@
   </info>
   <section role='important'>
     <title>Important changes</title>
-    <para> </para>
+    <para>With this release we are finally ready, after many years of work, to encourage all
+      onCourse users to begin using the web browser version of onCourse. There are still some small
+      parts of the application left to port over, like the Trial Balance and some other finance
+      related exports, but onCourse is now 98% completed in the web browser. We're very proud of our
+      work up to this point, and would also like to thank those of you who helped shape this new
+      onCourse with your excellent feedback and suggestions.</para>
   </section>
   <section role='major'>
     <title>Major features</title>
-    <para> </para>
-  </section>
-  <section role='scripts'>
-    <title>Reports and scripts</title>
-    <itemizedlist />
+    <para>Checkout has now been added to onCourse, replacing the old Quick Enrol with something that
+      is faster, better and easier to use. We've covered the four main steps of the Checkout process
+      on our <link xlink:href="https://www.youtube.com/ishau">YouTube Channel</link>, you can <link
+        xlink:href="https://www.youtube.com/playlist?list=PLMUUqiowAJZeO70mfaEIz6xiA3x2n8uFC">watch
+        the whole Checkout playlist here</link>.</para>
   </section>
   <section role='minor'>
     <title>Minor features</title>
     <itemizedlist>
-      <listitem>
-        <para>USI - show error message from USI agency
+      <listitem>Show error message from USI agency if there's an integration error
           <systemitem>OD-14443</systemitem>
-        </para>
       </listitem>
     </itemizedlist>
   </section>
@@ -30,68 +33,52 @@
     <title>Fixes</title>
     <itemizedlist>
       <listitem>
-        <para>User Roles - Print Certificate without USI permissions checkboxes don't function
-          <systemitem>OD-13593</systemitem>
+        <para>Fixed an error where Print Certificate without USI permissions checkboxes in User
+          Roles didn't function <systemitem>OD-13593</systemitem>
         </para>
       </listitem>
-      <listitem>
-        <para>Tutor Session Removed from Past Classes
+      <listitem>Added UI warning if user tries to unlink tutor from session where payline already exists<para>
           <systemitem>OD-14157</systemitem>
-        </para>
-      </listitem>
+        </para></listitem>
       <listitem>
         <para>Recovering a deleted document
           <systemitem>OD-14352</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Contacts - VET &gt; Achieved In Year validation
-          <systemitem>OD-14354</systemitem>
+        <para>Fixed an error in Contacts - VET &gt; Achieved In Year validation
+            <systemitem>OD-14354</systemitem>
+        </para>
+      </listitem>
+      <listitem>Fixed flickering scroll bar problem <systemitem>OD-14366</systemitem>
+      </listitem>
+      <listitem>
+        <para>Fixed an error where Contact relations appeared broken
+            <systemitem>OD-14420</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Flickering scroll bar problem
-          <systemitem>OD-14366</systemitem>
+        <para>Fixed an error that occurred when email template had no html or plain body
+            <systemitem>OD-14421</systemitem>
         </para>
       </listitem>
-      <listitem>
-        <para>Contact relations is broken
-          <systemitem>OD-14420</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Error when email template has no html or plain body
-          <systemitem>OD-14421</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Classes - Issue adding payment plan to class with already defined enrolment fee
+      <listitem>Fixed issue around adding payment plan to class with already defined enrolment fee
           <systemitem>OD-14423</systemitem>
+      </listitem>
+      <listitem>
+        <para>Fixed and issue where Module Name and Code weren't updating when scrolling in 3 column
+          view <systemitem>OD-14424</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Outcomes - Module Name and Code not updating in 3 column view
-          <systemitem>OD-14424</systemitem>
+        <para>Fixed error where couldnt save Query script block <systemitem>OD-14431</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Automation: Can't save Query script block
-          <systemitem>OD-14431</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Outcome list fails to open class outcomes
-          <systemitem>OD-14444</systemitem>
+        <para>Fixed an error where outcome list fails to open class outcomes
+            <systemitem>OD-14444</systemitem>
         </para>
       </listitem>
     </itemizedlist>
-  </section>
-  <section role='web'>
-    <title>Web features</title>
-    <itemizedlist />
-  </section>
-  <section role='web-fixes'>
-    <title>Web fixes</title>
-    <itemizedlist />
   </section>
 </chapter>

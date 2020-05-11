@@ -25,14 +25,14 @@
 					<para>Highlight the enrolment by clicking on it</para>
 				</listitem>
 				<listitem>
-					<para>Click on the cogwheel option in the top right hand corner and choose "Cancel 1
-						enrolment". This will bring up a dialog with a checkbox offering to also
-						credit the enrolment fee charged. If you keep this ticked, you will create a
-						create note as part of this process. If you uncheck it, you will retain all
-						the student's fees as part of your business income. 99% of the time you want
-						to create a credit note. If the student's enrolment is unpaid, the credit
-						note will pay their unpaid invoice, rather than leaving it as an unpaid debt
-						on your books.</para>
+					<para>Click on the cogwheel in the bttom right hand corner and choose "Cancel 1 enrolment".
+						This will bring up a dialog with a checkbox offering to also credit the
+						enrolment fee charged - it is unticked by default. If you tick this, you
+						will create a create note as part of this process. If you keep it unticked,
+						you will retain all the student's fees as part of your business income. 99%
+						of the time you want to create a credit note. If the student's enrolment is
+						unpaid, the credit note will pay their unpaid invoice, rather than leaving
+						it as an unpaid debt on your books.</para>
 				</listitem>
 				<listitem>
 					<para>In the cancellation window, choose if you want to send the student a
@@ -54,9 +54,9 @@
 			<para>If the invoice originally issued for this enrolment remains unpaid, the credit note created
 				will create an automatic contra payment against that invoice, in effect 'cancelling'
 				it from requiring payment.</para>
-			<para>If the originating invoice was paid in full, the credit note can be used to contra
-				pay another outstanding invoice from that debtor, if you choose. You can manually
-				select this option from the invoice list window in the cog wheel options.</para>
+			<para>If the originating invoice was paid in full, the credit note can be used to contra pay
+				another outstanding invoice from that debtor, if you choose. You can manually select
+				this option from the invoice list window in the cogwheel options.</para>
 		</example>
 		<tip>
 			<para>Please note that a payment back to the student will not be automatically created after
@@ -74,7 +74,9 @@
 				a status yet, this will mean all the outcomes attached to the enrolment will be
 				deleted. This will be desirable for most types of enrolments, where you do not want
 				to report the student as having enrolled in this program at all for AVETMISS
-				purposes.</para>
+				purposes. You cannot delete outcome associated with 'success' or 'unknown' tagged
+				AVETMISS exports, and you also cannot delete outcomes associated with unrevoked
+				certificates.</para>
 			<para>If the student needs to be reported as a withdrawn student for AVETMISS purposes,
 				you have two options. Either set the value of the outcomes before the cancellation
 				process, and they will be retained by default. Alternatively, you can untick the
@@ -82,12 +84,12 @@
 				outcomes, both set and not set, will be retained. To avoid AVETMISS errors, you will
 				need to make sure that any unset outcomes that are retained are given a valid
 				outcomes status, such as 60 - Withdrawn after processing the cancellation. </para>
-			<para>Retained outcomes attached to cancelled enrolments are reported like all other
-				outcomes. If you want to suppress them from all reporting, set the enrolment to 'Do
-				not report for AVETMISS' on the enrolment general tab.</para>
+			<para>Retained outcomes attached to cancelled enrolments are reported like all other outcomes. If
+				you want to suppress them from all reporting, set the enrolment to 'Do not report
+				for AVETMISS' within the VET section of the enrolment record.</para>
 		</section>
 		<section>
-			<title>Changing a cancellation fee</title>
+			<title>Charging a cancellation fee</title>
 			
 		<para>You can also elect to charge a cancellation fee (with or without tax) as per your college
 				policies. The difference between the fee paid, and the cancellation fee charged will
@@ -139,11 +141,11 @@
 			<title>Transferring an enrolment</title>
 			<para>If you are planning of transferring an enrolment, you can do this from the enrolment list
 			view. This is similar to the 'cancel enrolment' process with the addition of opening
-			Quick Enrol at the end of the process, pre loaded with the student, payer and course
+			Checkout at the end of the process, pre loaded with the student, payer and course
 			details, allowing you to make a speedy transfer of the student to another class. </para>
-		<para>Highlight the enrolment you want to transfer, then go to the cogwheel and select the
-			option 'Transfer an enrolment'. Once you have done this a sheet will appear advising you
-			what is going to happen. You then have the ability to delete outcomes linked to this
+		<para>Highlight the enrolment you want to transfer, then go to the cogwheel and select the option
+			'Transfer an enrolment'. Once you have done this a popup will appear advising you what
+			is going to happen. You then have the ability to delete outcomes linked to this
 			enrolment with the status "not set", this option is marked as default. You also have the
 			ability to do the following things related to the invoice or invoices attached to this
 			enrolment:</para>
@@ -169,7 +171,7 @@
 					<para>Transferring an enrolment</para>
 				</caption>
 			</mediaobject>
-			<para>Once you have filled out the sheet and pressed 'Proceed', a pre-populated Quick Enrol
+			<para>Once you have checked what you need to and pressed 'Proceed', a pre-populated checkout
 			window will then open with the student's and payer's contact details along with the
 			course from the 'transferred' enrolment. </para>
 			<mediaobject>
@@ -178,7 +180,7 @@
 						fileref="images/transfer_enrolment_QE.png" format="png" />
 				</imageobject>
 				<caption>
-					<para>Transferring an enrolment in Quick Enrol</para>
+					<para>Transferring an enrolment in checkout</para>
 				</caption>
 			</mediaobject>
 			<para>IMPORTANT: Check the correct credit note is being applied to the transferred enrolment by
@@ -190,7 +192,7 @@
 					<imagedata scalefit="1" width="80%" contentdepth="80%"
 						fileref="images/transferring_enrolment_cn.png" format="png" />
 				</imageobject>
-				<caption>Applying credit notes from previous invoices in Quick Enrol</caption>
+				<caption>Applying credit notes from previous invoices in checkout</caption>
 			</mediaobject>
 	</section>
 	<section xml:id="cancellingEnrolments-creditNote">
@@ -223,8 +225,8 @@
 				</listitem>
 				<listitem>
 					<para>To adjust the value of a remaining invoice line or charge the reversal to a different
-						income account, double click on it. You can make changes to any of the
-						fields available in the sheet. </para>
+						income account, click to expand it. You can make changes to any of the
+						fields available in the box. </para>
 				</listitem>
 				<listitem>
 					<para>Optionally link the reversal back to it's original course-class code to
@@ -232,8 +234,7 @@
 						show in the class budget tab.</para>
 				</listitem>
 				<listitem>
-					<para>Click OK to save the adjustment to the invoice line, and repeat the process for each
-						additional invoice line you want to reverse. </para>
+					<para>Repeat the process for each additional invoice line you want to reverse. </para>
 				</listitem>
 				<listitem>
 					<para>Remove the check box from the 'send email' option if you do not want a
@@ -312,8 +313,8 @@
 		<para>Contacts with credit will appear in the invoices window as 'unbalanced' invoices, showing
 			with a negative balance. The next time the contact enrols, or pays for another student's
 			enrolment, they will automatically be offered their credit to use towards their fee
-			payment in the Quick Enrol process.</para>
-		<para>This information will show in the bottom of the quick enrol window next to previous
+			payment in the checkout process.</para>
+		<para>This information will show in the Payments section of the checkout window next to previous
 			owing as a minus amount. The amount due for payment will automatically adjust. </para>
 		<mediaobject>
 			<imageobject>
@@ -495,8 +496,8 @@
 			it will contact the students at the end of this process and there is no option to
 			prevent the message from sending on a class by class basis. See below for more
 			information regarding enabling and disabling the script.</para>
-		<para>To cancel the class, select the class in the classes window and from the cogwheel option at
-			the top right, select "cancel class". There are a couple choices to make in this
+		<para>To cancel the class, select the class in the classes window and from the cogwheel option in
+			the bottom right, select "cancel class". There are a couple choices to make in this
 			window:</para>
 		<orderedlist>
 			<listitem><para>Create credit note to reverse the enrolment fee - this is always checked and cannot be
@@ -520,15 +521,9 @@
 				<para>Options available when cancelling a class</para>
 			</caption>
 		</mediaobject>
-		<para>Once a class is cancelled it will appear in the class list view with an icon with a cross
-			through it and the text greyed out, and be available in the core filter 'cancelled
-			classes'. Cancelled classes that were visible on the web will have their 'enrol now'
-			button changed immediately to 'cancelled', and will not allow any more enrolments either
-			through the web or via Quick Enrol. </para>
-		<para>It can be beneficial to leave cancelled classes displaying on the web, particularly if you
-			have published the class details elsewhere in a brochure. You may also choose to
-			manually unpublish the class by single clicking on it and choosing the from the cogwheel
-			'Remove class from website'.</para>
+		<para>Once a class is cancelled it will appear greyed out the class list view, and be available in
+			the core filter 'cancelled classes'. Cancelled classes that were visible on the web will
+			be removed. </para>
 		<para>A cancelled class can not be 'un-cancelled'. However, should you need to reinstate the
 			class, highlight your cancelled class and from the cogwheel option choose 'Duplicate 1
 			class' moving the class forward by zero days (essentially making another copy of the
@@ -575,8 +570,8 @@
 				class list of reports.</para>
 			<para>Begin by selecting the core filter 'cancelled classes' to show only your cancelled classes
 				in the list view. Then search or highlight the classes in the range you wish to
-				report on. Once you have selected the classes, choose File > Print > Cancelled
-				classes count, or use the share icon.</para>
+				report on. Once you have selected the classes, click the Share button > PDF >
+				Cancelled classes count.</para>
 			<para>This report will show you the enrolments that were in the class prior to the
 				cancellation and the income that had been collected.</para>
 			<mediaobject>
@@ -594,9 +589,9 @@
 		<title>Student Transfer Questions</title>
 		<para>If you wish to transfer a student, first you need to cancel their existing enrolment,
 			then enrol them into a new class.</para>
-		<para>Student transfers need to be done one student at a time. Using the transfer wizard
-			option outlined above will make this process fairly quick, ensuring the previous payer
-			and class are pre-selected for you in Quick Enrol,</para>
+		<para>Student transfers need to be done one student at a time. Using the transfer wizard option
+			outlined above will make this process fairly quick, ensuring the previous payer and
+			class are pre-selected for you in checkout,</para>
 		<section>
 			<title>What if the value of the new enrolment is more expensive than the old class or
 				less expensive?</title>
@@ -605,12 +600,11 @@
 				enrolment for $100, but the class you are transferring them into costs $120 you can
 				either:</para>
 			<orderedlist>
-				<listitem><para>Do nothing and Quick Enrol will request payment for the additional $20, which you can collect
-						via all the usual payment methods available including credit card</para></listitem>
+				<listitem><para>Do nothing and checkout will request payment for the additional $20, which you can collect via
+						all the usual payment methods available including credit card</para></listitem>
 				<listitem>
-					<para>Choose to manually discount the enrolment in Quick Enrol by $20, allowing
-						their credit of $100 to cover to apply leaving the account with a balance of
-						$0.</para>
+					<para>Choose to manually discount the enrolment in checkout by $20, allowing their credit of
+						$100 to cover to apply leaving the account with a balance of $0.</para>
 				</listitem>
 			</orderedlist>
 			<para>If their new enrolment is less expensive than their previous class, you can choose to keep
@@ -624,8 +618,8 @@
 				every student, including enrolments they have withdrawn from. This is very important
 				for financial auditing and system security reasons which especially when several
 				staff might be making changes or looking at the history in the system. </para>
-			<para>Furthermore the refund/Quick Enrol process makes the work flow clearer when the new class
-				has a different cost to the old. The operator is explicitly prompted to collect an
+			<para>Furthermore the refund/checkout process makes the work flow clearer when the new class has
+				a different cost to the old. The operator is explicitly prompted to collect an
 				additional payment or retain part of the credit note. By then applying an additional
 				charge or discount, general ledger adjustments are kept accurate and clear. </para>
 		</section>

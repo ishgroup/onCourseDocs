@@ -119,8 +119,8 @@
                         possible price. For example, if a student is eligible for a $10 discount and
                         a 10% discount on a $50 enrolment, the $10 discount will be selected by
                         default.</para>
-                    <para>In Quick Enrol, you can change the discount applied to another discount
-                        the student is eligible for if that is the business process you wish to
+                    <para>In checkout, you can change the discount applied to another discount the
+                        student is eligible for if that is the business process you wish to
                         follow.</para>
                     <para>Conversely, when one or more negative discounts apply (a surcharge fee for
                         using a corporatePass, for example) the highest fee for the student will be
@@ -214,7 +214,7 @@
                 <title>Web</title>
                 <para>A discount which is 'available via online enrolment' means students enrolling
                     using your onCourse website have access to this discount. If it is unticked,
-                    only students who are enrolled via the office, in Quick Enrol have access to the
+                    only students who are enrolled via the office, in checkout have access to the
                     discount. You may have chosen to stop a concession card type being added online,
                     but can make the discount still available online for existing students with the
                     concession type on record.</para><para>From the
@@ -564,7 +564,7 @@
             enrolling through the web and office, or just for students enrolling through the
             office.</para>
         <section>
-            <title>Accessing discounts through Quick Enrol</title>
+            <title>Accessing discounts through checkout</title>
             <para>If the student and their chosen class meet the requirements of the discount, it
                 will be applied by default on enrolment. If the student is eligible for multiple
                 discount types, the discount that provides the lowest cost to the student will be
@@ -596,13 +596,13 @@
             </mediaobject>
         </section>
         <section>
-            <title>Accessing negative discounts through Quick Enrol</title>
+            <title>Accessing negative discounts through checkout</title>
             <para>If you have attached a negative discount to a class then the total fee is
                 increased by the amount of the surcharge. In the example below enrolling Jenny Smith
                 in the class Woodwork (WDWK-41) incurs a surcharge to pay an admin fee. This fee
                 could be charged because you are trying to encourage students to enrol online rather
                 than taking up a staff members time on the phone to manually enrol them through
-                Quick Enrol.</para>
+                checkout.</para>
                        <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -612,41 +612,23 @@
                     <para>This student has a negative discount applied to the class fee</para>
                 </caption>
             </mediaobject>
-            <para>If a class has two discounts, one negative and one positive, the negative discount
-                always takes precedence over a positive one. This is the case for the class below
-                which has a negative for -$5 and a positive discount for $6.82, and as you can see
-                by default the negative discount gets applied.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="80%" contentdepth="80%"
-                        fileref="images/qenegativediscount1.png"/>
-                </imageobject>
-                <caption>
-                    <para>This class has two discount applied to it with the negative one always
-                        selected by default</para>
-                </caption>
-            </mediaobject>
+            <note>
+                <para>If a class has two discounts, one negative and one positive, the negative
+                    discount always takes precedence over a positive one. This is the case for the
+                    class below which has a negative for -$5 and a positive discount for $6.82, and
+                    as you can see by default the negative discount gets applied.</para>
+            </note>
         </section>
         <section>
-            <title>Accessing promotional code discounts in onCourse through Quick Enrol</title>
+            <title>Accessing promotional code discounts in onCourse through checkout</title>
             <para>During the enrolment process, if a student supplies a promotional code this needs
-                to be entered in the payment panel, in the field 'Enter voucher or promotion
-                code...'.</para>
+                to be entered in the payment panel, in the field 'Find promotions' in the Summary of
+                checkout.</para>
             <para>Any applicable classes and students in the enrolment process will have their
                 enrolment fee's updated to meet the promotional code conditions.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="80%" contentdepth="80%"
-                        fileref="images/qe_promo.png"/>
-                </imageobject>
-                <caption>
-                    <para>You can enter a promotional code in the field 'Enter voucher or promotion
-                        code...'.</para>
-                </caption>
-            </mediaobject>
         </section>
         <section>
-            <title>Membership discounts during Quick Enrol</title>
+            <title>Membership discounts during checkout</title>
             <para>If a student holds a valid membership, is related to a contact with a membership
                 where discounts apply, or purchases a membership during the enrolment process, the
                 best applicable discount will automatically apply.</para>
@@ -654,25 +636,16 @@
                 access two different class prices - members with a 30% discount and friends of
                 members with a 10% discount, members who are friends with other members will always
                 be given the higher of the two discounts.</para>
-            <para>Memberships can be purchased during the Quick Enrol process, with these
-                memberships providing discount benefits immediately.</para>
-            <para>To purchase a membership, click on the 'Enter course or item...' field in the
-                Quick Enrol window and either start typing the membership code or select the option
-                'MEMBERSHIPS' on the right side of the window. Look up the membership by name and
-                make any changes as necessary to the membership start date, end date and cost.
+            <para>Memberships can be purchased during the checkout process, with these memberships
+                providing discount benefits immediately providing the class being enrolled in is
+                taking place while the membership is valid.</para>
+            <para>To purchase a membership, click on the 'Find course or item...' field in the
+                checkout shopping cart and either start typing the membership code or select the
+                option 'MEMBERSHIPS' on the right side of the window. Look up the membership by name
+                and make any changes as necessary to the membership start date, end date and cost.
                 Continue with the enrolment process as usual.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="80%" contentdepth="80%"
-                        fileref="images/club_membership_QE.png"/>
-                </imageobject>
-                <caption>
-                    <para>You can enter a promotional code in the field 'Enter course or item...'. </para>
-                </caption>
-            </mediaobject>
             <para>If a student already has a membership purchased, you can see the details of that
-                membership in the general tab of their contact record. This is also the tab that
-                loads by default when you add a contact to the Quick Enrol process.</para>
+                membership in their contact record.</para>
             <para>If your discount policy so allows, and a student is related to a contact who holds
                 a membership, you will not see a membership recorded in the relation's record. You
                 can see the details of their relationships, however.</para>
@@ -685,47 +658,10 @@
                 discount will automatically apply.</para>
         </section>
         <section>
-            <title>Manual discounts in Quick Enrol</title>
-            <para>If you need to provide an 'on the fly' discount to an enrolment fee during the
-                enrolment process, then you can adjust the class price on the enrolment. This
-                discount will be visible in the class budget, recorded in the class income and
-                linked to the enrolment, so if the enrolment is cancelled and the payer credited,
-                the credit will only be for the amount charged.</para>
-            <para>Tax amounts will automatically recalculate based on class fee adjustments made
-                during Quick Enrol.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="80%" contentdepth="80%"
-                        fileref="images/manual_discount.png"/>
-                </imageobject>
-                <caption>
-                    <para>The pre tax class fee of $250 has been overridden to $200, and the tax
-                        recalculated</para>
-                </caption>
-            </mediaobject>
-            <para>We do not recommend using the 'Other charge' option to provide a discount. An
-                'other charge' is not linked to a class or enrolment and will not be automatically
-                credited if the enrolment is cancelled and credited. The 'other charge' option is
-                designed to add, on the fly additional line items to the invoice like a phone
-                booking charge.</para>
-            <para>You also have the ability to apply negative discount to an enrolment by increasing
-                the class fee. This could be used if you want to charge a student a small booking
-                fee for you to enrol them through the office, rather than for them to enrol
-                themselves online. This means the increased fee is part of the enrolment invoice
-                line, so the full fee charged will be reversed should the enrolment be
-                cancelled.</para>
-            <para>Unlock the class fee and type in the new, increased fee. The tax amount will
-                automatically recalculate based on the new fee.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="80%" contentdepth="80%"
-                        fileref="images/negative_discount.png"/>
-                </imageobject>
-                <caption>
-                    <para>The class fee has been increased by $5 from the original fee of $250, and
-                        the tax recalculated </para>
-                </caption>
-            </mediaobject>
+            <title>Manual discounts in checkout</title>
+            <para>You can no longer alter the price of a class manually without a discount. In order
+                to change the price, you must have a discount created to apply within the summary of
+                the checkout.</para>
         </section>
         <section>
             <title>Accessing discounts on the web</title>
@@ -920,19 +856,8 @@
             cost of doing business.</para>
         <section>
             <title>Discounts in the class budget</title>
-            <para>When you view the general tab of a class record, you can see in the Budget
-                Summary, all available class fees. These are the fees that are payable for students
-                meeting any of the discount requirements.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" width="100%" contentdepth="100%"
-                        fileref="images/class_budget_summary.png"/>
-                </imageobject>
-                <caption>
-                    <para>This class has a full fee, plus three discount price points
-                        available</para>
-                </caption>
-            </mediaobject>
+            <para>You can see a summary of all the discounts attached to a class within the Budget
+                section of the class, by expanding the Discounts line.</para>
             <para>In each discount you create, you can define a 'Default forecast take-up'. What
                 this means, is that across all the classes this discount applies to, you expect,
                 say, 5% of all students to use this discount on enrolment.</para>
@@ -1246,11 +1171,11 @@
                         then the discount applied will be $15.</para>
                 </listitem>
                 <listitem>
-                    <para>When a Quick Enrol process is created that includes at least two
-                        enrolments from this list, each eligible enrolment added will have the $5
-                        discount applied. If you remove enrolments from the window, and the set of
-                        enrolments are no longer eligible, the discount will be automatically
-                        removed from all enrolments.</para>
+                    <para>When a checkout process is created that includes at least two enrolments
+                        from this list, each eligible enrolment added will have the $5 discount
+                        applied. If you remove enrolments from the window, and the set of enrolments
+                        are no longer eligible, the discount will be automatically removed from all
+                        enrolments.</para>
                 </listitem>
             </orderedlist>
             <mediaobject>
@@ -1259,8 +1184,8 @@
                         fileref="images/buyTwoEnrolmentsDiscount.png"/>
                 </imageobject>
                 <caption>
-                    <para>Group enrolment discount in Quick Enrol, showing a total $10 discount
-                        across the two enrolments</para>
+                    <para>Group enrolment discount in checkout, showing a total $10 discount across
+                        the two enrolments</para>
                 </caption>
             </mediaobject>
             <mediaobject>

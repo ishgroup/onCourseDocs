@@ -979,11 +979,11 @@
             <title>Creating a 10% discount for seniors card holders</title>
             <orderedlist>
                 <listitem>
-                    <para>Select <guilabel>Discounts</guilabel> from the splash screen or
-                            <guimenu>Courses</guimenu> menu.</para>
+                    <para>Select <guilabel>Discounts</guilabel> from the dashboard by searching or
+                        using your favourites</para>
                 </listitem>
                 <listitem>
-                    <para>Select <guibutton>+</guibutton> button from the bottom left of the
+                    <para>Select <guibutton>+</guibutton> button from the bottom right of the
                         window</para>
                 </listitem>
                 <listitem>
@@ -992,7 +992,7 @@
                 </listitem>
                 <listitem>
                     <para>To set a 10% discount, select the <guilabel>Discount Percent</guilabel>
-                        option and type 10 into the discount value field.</para>
+                        under Value Type and type 10 into the discount value field.</para>
                 </listitem>
                 <listitem>
                     <para>You can also set a minimum and maximum amount for the concession e.g. min
@@ -1020,9 +1020,9 @@
                 </listitem>
                 <listitem>
                     <para>If you would like students to see the discounted fee that may be eligible
-                        for when browsing the web, ensure you have not ticked 'Do not show
-                        discounted price in advertising'. This will suppress the display of the
-                        price on your onCourse website.</para>
+                        for when browsing the web, ensure you have not ticked 'Hide discounted price
+                        on web'. This will suppress the display of the price on your onCourse
+                        website.</para>
                 </listitem>
                 <listitem>
                     <para>The last section allows you to assign this discount to certain available
@@ -1097,7 +1097,9 @@
                 </listitem>
                 <listitem>
                     <para>Go to the classes section on the discount window and add all your current
-                        and pending computer classes. </para>
+                        and pending computer classes. For example you could use a query like
+                            <code>code contains "computer"</code> to show all your classes with the
+                        word computer in its class code.</para>
                 </listitem>
                 <listitem>
                     <para>Save and close the record. The membership is now ready for purchase and
@@ -1112,11 +1114,11 @@
                 selected on the website</para>
             <orderedlist>
                 <listitem>
-                    <para>Create a new concession type called 'Staff' and de-select the option
-                        'Allow students to self select on website'. This is because we only want
-                        college staff to determine who is a staff member (and entitled to the
-                        discount). This concession will not require a concession card number or
-                        expiry date either.</para>
+                    <para>Create a new concession type in Preferences > Concession Types called
+                        'Staff' and de-select the option 'Allow students to self-select on the
+                        website'. This is because we only want college staff to determine who is a
+                        staff member (and entitled to the discount). This concession will not
+                        require a concession card number or expiry date either.</para>
                 </listitem>
                 <listitem>
                     <para>Ensure all college staff whom you want to access this discount have
@@ -1130,10 +1132,11 @@
                         desired. </para>
                 </listitem>
                 <listitem>
-                    <para>Apply the discount to students with the following concession types -
-                        staff. Ensure the option is ticked 'Do not show discounted price in
-                        advertising'. This way the general public visiting the website will not be
-                        privy to the discount available to staff members.</para>
+                    <para>Tick the 'Restrict this discount to certain students' checkbox then apply
+                        the discount to students with the following concession types - staff. Ensure
+                        the option is ticked 'Hide discounted price on web'. This way the general
+                        public visiting the website will not be privy to the discount available to
+                        staff members.</para>
                 </listitem>
                 <listitem>
                     <para>On the classes section, add all the applicable classes for this
@@ -1159,10 +1162,11 @@
                         nearest dollar)</para>
                 </listitem>
                 <listitem>
-                    <para>On the students section, leave the value as the default 'anyone'. </para>
+                    <para>In the students section, make sure 'restrict this discount to certain
+                        students' is unchecked. </para>
                 </listitem>
                 <listitem>
-                    <para>On the classes section, add your classes when the discount applies (in
+                    <para>In the classes section, add your classes when the discount applies (in
                         this case, I can choose all classes tagged with...). In the bottom of the
                         panel, enter the option 'Require at least [2] enrolments on one invoice from
                         the classes above. Save and close the record. </para>
@@ -1203,9 +1207,10 @@
     </section>
     <section xml:id="discounts-Reporting">
         <title>Reporting on discount use</title>
-        <para>The Discounts by Class report is available from the classes menu. This report shows
-            you for each class selected, how many enrolments you have processed at full fee and any
-            applicable discount, and the total value of any discounts applied.</para>
+        <para>The Discounts by Class pdf report is available from the classes menu by clicking the
+            Share icon > PDF. This report shows you for each class selected, how many enrolments you
+            have processed at full fee and any applicable discount, and the total value of any
+            discounts applied.</para>
         <mediaobject>
             <imageobject>
                 <imagedata scalefit="1" width="100%" contentdepth="100%"

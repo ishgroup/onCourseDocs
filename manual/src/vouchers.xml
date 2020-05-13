@@ -3,9 +3,9 @@
     version="5.0" xml:id="vouchers">
     <title>Vouchers</title>
     <para>Voucher products can be created in onCourse, and then offered for sale either via the
-        College website or through the office via Quick Enrol. These vouchers can be gift
-        certificates, a way to sell a bundle of enrolments as a set fee, or as a method of issuing a
-        student with a credit, allowing them to apply that credit to an open or restricted range of
+        College website or through the office via checkout. These vouchers can be gift certificates,
+        a way to sell a bundle of enrolments as a set fee, or as a method of issuing a student with
+        a credit, allowing them to apply that credit to an open or restricted range of
         courses.</para>
     <example>
         <title>Voucher Use Cases</title>
@@ -56,9 +56,9 @@
                 <term>Voucher</term>
                 <listitem>
                     <para>Vouchers are the list of purchased voucher type products. Vouchers can be
-                        purchased and redeemed through Quick Enrol. This list shows who purchased
-                        the voucher, who it is redeemable by and what the remaining value of the
-                        voucher includes. Every voucher has a unique code that must be quoted for
+                        purchased and redeemed through checkout. This list shows who purchased the
+                        voucher, who it is redeemable by and what the remaining value of the voucher
+                        includes. Every voucher has a unique code that must be quoted for
                         redemption.</para>
                 </listitem>
             </varlistentry>
@@ -201,30 +201,31 @@
                         </caption>
                     </mediaobject>
                 </para>
+                <para>The last lot of fields on a voucher record let you set the rules of where the voucher can be
+                    purchased. The choices allow for purchasing to be disabled entirely, purchased in
+                    the office, or purchased both in the office and online. You can also add a more in
+                    depth description that will be displayed on the website (as long as both check boxes
+                    are selected) in the Web description field.</para><mediaobject>
+                        <imageobject>
+                            <imagedata scalefit="1" width="100%" contentdepth="100%"
+                                fileref="images/vouchers/voucher_description.png"/>
+                        </imageobject>
+                        <caption>
+                            <para>View of the web tab in a new voucher type record</para>
+                        </caption>
+                    </mediaobject>
+                
             </section>
-<para>The last lot of fields on a voucher record let you set the rules of where the voucher can be
-                purchased. The choices allow for purchasing to be disabled entirely, purchased in
-                the office, or purchased both in the office and online. You can also add a more in
-                depth description that will be displayed on the website (as long as both check boxes
-                are selected) in the Web description field.</para><mediaobject>
-                    <imageobject>
-                        <imagedata scalefit="1" width="100%" contentdepth="100%"
-                            fileref="images/vouchers/voucher_description.png"/>
-                    </imageobject>
-                    <caption>
-                        <para>View of the web tab in a new voucher type record</para>
-                    </caption>
-                </mediaobject></section>
-        
+        </section>
     </section>
     <section xml:id="vouchers-Purchasing">
         <title>Purchasing a voucher</title>
-        <para>Purchasing a voucher in onCourse is done through Quick Enrol window. You can search
-            for a voucher by either start typing in the Vouchers name or SKU in the 'Enter course or
-            item' field on the left side of the page. Alternatively you can click in the 'Enter
-            course or item' field, then click on the 'Show all' button next to the word 'VOUCHERS'
-            on the right side of the page. Once you have found the voucher you want click the
-            'Select' button next to it.</para>
+        <para>Purchasing a voucher in onCourse is done through checkout window. You can search for a
+            voucher by either start typing in the Vouchers name or SKU in the 'Enter course or item'
+            field on the left side of the page. Alternatively you can click in the 'Enter course or
+            item' field, then click on the 'Show all' button next to the word 'VOUCHERS' on the
+            right side of the page. Once you have found the voucher you want click the 'Select'
+            button next to it.</para>
         <note>
             <para>When a voucher is purchased it always gets sent to the payer just like the invoice
                 does.</para>
@@ -235,7 +236,7 @@
                     fileref="images/vouchers/QE_Finding_A_Voucher.png"/>
             </imageobject>
             <caption>
-                <para>How to find a voucher you want to purchase through Quick Enrol</para>
+                <para>How to find a voucher you want to purchase through checkout</para>
             </caption>
         </mediaobject>
         <para>Once you have found the voucher you want to add you have a few editable areas in the
@@ -290,7 +291,7 @@
             when a voucher is bought and sold, refer to the <link xlink:href="accounting.html"
                 >accounting chapter.</link></para>
         <para>A voucher is a payment method against an invoice.</para>
-        <para>When you are trying to redeem a voucher in Quick Enrol</para>
+        <para>When you are trying to redeem a voucher in quick enrol</para>
         <orderedlist>
             <listitem>
                 <para>You have to firstly add the student/s, class/es or product/s as normal when
@@ -306,7 +307,7 @@
                             fileref="images/vouchers/Adding_voucher_code.png"/>
                     </imageobject>
                     <caption>
-                        <para>Entering a voucher code during quick enrol</para>
+                        <para>Entering a voucher code during checkout</para>
                     </caption>
                 </mediaobject>
             </listitem>
@@ -337,11 +338,11 @@
             </listitem>
             <listitem>
                 <para>Continue the process as you normally would when enrolling someone through
-                    Quick Enrol</para>
+                    checkout</para>
             </listitem>
         </orderedlist>
         <note>
-            <para>A voucher can only be redeemed in onCourse through the Quick Enrol window. If the
+            <para>A voucher can only be redeemed in onCourse through the checkout window. If the
                 voucher is set for redemption for a specific number of courses, it must be used when
                 the enrolment is created and can't be used to pay for an enrolment post creation. A
                 voucher for a monetary value can be used to make a payment against an invoice
@@ -366,13 +367,13 @@
                 </mediaobject>
             </section>
             <section>
-                <title>Redeeming a voucher in Quick Enrol when the 'Send the invoice when the
-                voucher is redeemed to x' is checked.</title>
+                <title>Redeeming a voucher in checkout when the 'Send the invoice when the voucher
+                is redeemed to x' is checked.</title>
                 <para>If a user is trying to redeem a voucher when the 'Send the invoice when the
                 voucher is redeemed to x' is checked it will automatically add the defined voucher
-                invoice contact to Quick Enrol as the payer. There is also a message in red saying
-                the 'payer is locked due the voucher being redeemed' in the items and payments tab
-                under the payer name.</para>
+                invoice contact to checkout as the payer. There is also a message in red saying the
+                'payer is locked due the voucher being redeemed' in the items and payments tab under
+                the payer name.</para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -383,7 +384,8 @@
                 </caption>
                 </mediaobject>
                 <note>
-                    <para>A second voucher cannot be added to the Quick Enrol process unless the second voucher is also locked to the same payer.</para>
+                    <para>A second voucher cannot be added to the checkout process unless the second
+                    voucher is also locked to the same payer.</para>
                 </note>
             </section>
         <section>
@@ -455,98 +457,63 @@
         </note>
         <section>
             <title>Using a vouchers in place of credit notes</title>
-            <para>You may want to use vouchers in place of credit notes for a variety reasons:</para>
+            <para>You may want to use vouchers in place of credit notes for a variety
+                reasons:</para>
             <orderedlist>
                 <listitem>
                     <para>They remove credit note balances from your trade debtors account</para>
                 </listitem>
                 <listitem>
-                    <para>If unused by the student, they automatically expire after a fixed period of time to become income for your business, instead of remaining as a liability indefinitely</para>
+                    <para>If unused by the student, they automatically expire after a fixed period
+                        of time to become income for your business, instead of remaining as a
+                        liability indefinitely</para>
                 </listitem>
                 <listitem>
-                    <para>They can be used to enrol online by anyone who has the voucher code e.g. the student can gift their credit to a friend by giving them the voucher code</para>
+                    <para>They can be used to enrol online by anyone who has the voucher code e.g.
+                        the student can gift their credit to a friend by giving them the voucher
+                        code</para>
                 </listitem>
             </orderedlist>
-            <para>To convert credit notes into gift vouchers, you first need to ensure you have a voucher type set up that can be purchased for a variable amount.</para>
- <example>
-     <title>How to create a voucher type that can be purchased and redeemed for an amount of any value</title>
-<orderedlist>
-    <listitem>
-        <para>Go to the menu Products > Voucher Types to open the list view</para>
-    </listitem>
-    <listitem>
-        <para>Click on the + to create a new type of voucher</para>
-    </listitem>
-                    <listitem>
-                        <para>Enter a SKU and voucher name. Commonly, this type of voucher is called a 'Gift Voucher'</para>
-                    </listitem>
-    <listitem>
-        <para>By default, your vouchers will be set to expire a year after purchase (365 days). Change this value if you wish.</para>
-    </listitem>
-    <listitem>
-        <para>Select Can be redeemed for... 'Purchase Price'. This will make all the other options
-                            on the general tab disappear.</para>
-    </listitem>
-    <listitem>
-        <para>If you wish to sell this voucher on your website, go to the tab Web and check the option 'Can be purchased online'. You may also wish to add a product description on this tab also</para></listitem>
-    <listitem>
-        <para>Save and close your new voucher type</para>
-    </listitem>
-</orderedlist>
-     <mediaobject>
-         <imageobject>
-             <imagedata scalefit="1" width="100%" contentdepth="100%"
-                 fileref="images/vouchers/Voucher_Type_General_Price.png"/>
-         </imageobject>
-         <caption>
-             <para>Settings to create a gift voucher type</para>
-         </caption>
-     </mediaobject>
- </example>
+            <para>To convert credit notes into gift vouchers, you first need to ensure you have a
+                voucher type set up that can be purchased for a variable amount.</para>
             <example>
-                <title>Using a credit note to purchase a gift voucher</title>
-                <para>If a customer has a credit on their record, this credit can be used to
-                    purchase a gift voucher, provided the credit they have exceeds any amount
-                    outstanding in relation to unpaid invoice. Their total debtors position must be
-                    one of credit.</para>
-                <para>To see the credit available to a customer, open Quick Enrol and type their
-                    name in. Their Balance Outstanding needs to be negative (shown in brackets) to
-                    have credit available for the purchase of a voucher as per this process.</para>
-                <para>In most instances, you are going to sell the customer a voucher that is equal
-                    to the value of their Balance outstanding. You can also sell a voucher for less
-                    than or more than this amount if needed, but will also need to collect payment
-                    for the difference.</para>
+                <title>How to create a voucher type that can be purchased and redeemed for an amount
+                    of any value</title>
                 <orderedlist>
                     <listitem>
-                        <para>Open Quick Enrol and type in the customer name</para>
+                        <para>Go to the menu Products > Voucher Types to open the list view</para>
                     </listitem>
                     <listitem>
-                        <para>Under items, type in the name of your voucher type e.g. Gift
-                            Voucher</para>
+                        <para>Click on the + to create a new type of voucher</para>
                     </listitem>
                     <listitem>
-                        <para>In the 'Price each' field, enter the value of the voucher you wish to
-                            sell e.g. the value of their Balance outstanding.</para>
+                        <para>Enter a SKU and voucher name. Commonly, this type of voucher is called
+                            a 'Gift Voucher'</para>
                     </listitem>
                     <listitem>
-                        <para>If you want the students whose credit is being used to purchase the
-                            voucher to be notified when the voucher is redeemed, check the option
-                            'send the invoice when the voucher is redeemed to xxx'. Optionally
-                            override the expiry date of the voucher in this window also.</para>
+                        <para>By default, your vouchers will be set to expire a year after purchase
+                            (365 days). Change this value if you wish.</para>
                     </listitem>
                     <listitem>
-                        <para>If the sale price of the voucher is equal to the Balance outstanding,
-                            there should be no amount payable. Select save to create the voucher and
-                            send the redemption instructions to the student.</para>
+                        <para>Select Can be redeemed for... 'Purchase Price'. This will make all the
+                            other options on the general tab disappear.</para>
+                    </listitem>
+                    <listitem>
+                        <para>If you wish to sell this voucher on your website, go to the tab Web
+                            and check the option 'Can be purchased online'. You may also wish to add
+                            a product description on this tab also</para>
+                    </listitem>
+                    <listitem>
+                        <para>Save and close your new voucher type</para>
                     </listitem>
                 </orderedlist>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" width="100%" contentdepth="100%"
-                            fileref="images/vouchers/sell_gift_voucher.png"/>
+                            fileref="images/vouchers/Voucher_Type_General_Price.png"/>
                     </imageobject>
                     <caption>
-                        <para>Selling a gift voucher equal to the amount a student has in credit</para>
+                        <para>Settings to create a gift voucher type</para>
                     </caption>
                 </mediaobject>
             </example>

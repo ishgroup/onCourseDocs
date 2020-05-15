@@ -800,7 +800,7 @@
             
         </section>
         <section>
-            <title>VET Student Loans</title>
+            <title xml:id="externalIntegrations-vetloans">VET Student Loans</title>
             <para>This integration feeds data from onCourse directly into the HEIMS data collection
                 system (sometimes called TCSI).</para>
             <mediaobject>
@@ -814,7 +814,7 @@
             </mediaobject>
         </section>
         <section>
-            <title>Google Classroom</title>
+            <title xml:id="externalintegrations-googleClassroom">Google Classroom</title>
             <para>Google Classroom is mission control for your classes. As a free service for
                 teachers and students, you can create classes, distribute assignments, send
                 feedback, and see everything in one place. Instant. Paperless. Easy.</para>
@@ -848,6 +848,99 @@
                     </listitem>
                     <listitem>
                         <para>Click 'Get Activation Code' to get your activation code</para>
+                    </listitem>
+                </orderedlist>
+            </para>
+        </section>
+        <section>
+            <title xml:id="externalintegrations-Zoom">Zoom Integration</title>
+            <para>This integration is a little different from others in that we haven't formalised
+                it within the onCourse application. We have, however, built a framework and process
+                around sending Zoom Session links to students when they enrol in classes with Zoom
+                Session ID's associated with them. We do this through a combination of scripting,
+                message templates and custom fields. This guide will step you through the process in
+                setting this up in your system.</para>
+            <para>This is a relatively simple version of this integration that doesn't involve using
+                passwords, or alerting tutors etc. This focuses solely on emailing students an email
+                containing a specialised link that gives them access to their online class. For
+                anything more advanced, please get in touch with us at support. </para>
+            <para>You'll need to know the Zoom Meeting ID's for each class before students enrol for
+                this integration to work. Here's how to set it up:</para>
+            <para>
+                <orderedlist>
+                    <listitem>
+                        <para>You'll first need to create a custom field. Go to Preferences > Custom
+                            Fields and click the + button at the top of the window in the panel on
+                            the right.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Enter the name "ZoomID" without quotes. Record type is 'CourseClass'.
+                            The custom field key must be unique, so enter something like
+                            "zoomIDkey". Click Save.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Now we'll need to create the message template. Go to Automation >
+                            Message Templates and click the + button next to the Message Templates
+                            heading in the left column.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Enter the name 'Zoom Link Email'. Choose the type 'CourseClass', and
+                            choose message type 'Email'. Enter a unique keycode, eg
+                            "zoom.link.email". Next we'll need to add both the text and html
+                            versions of the email. In the links below there is an example text and
+                            html template, feel free to copy and paste them in. You can also edit
+                            this text to read how you'd like, although be careful not to erase any
+                            of the code used when editing. </para>
+                        <para><emphasis role="bold">Text</emphasis> - <link
+                                xlink:href="https://gist.github.com/swinbanks/70225365d1dd9352fa4548855a07f799"
+                            /></para>
+                        <para><emphasis role="bold">HTML</emphasis> - <link
+                                xlink:href="https://gist.github.com/swinbanks/7176c1bfcd6fff645ead80f0cea074ee"
+                            /></para>
+                    </listitem>
+                    <listitem>
+                        <para>In the Message Template, click the + button next to Options > select
+                            'Text' > Enter the name 'subjectTxt' (enter it using that exact
+                            capitalisation) and then, below the field that is created, enter 'Zoom
+                            Invitation'.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Click the 'Enable' swtich then click Save.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Next, add the Zoom Meeting ID for each zoom session to the ZoomID
+                            field in each class. How you manage this is up to you, but you should
+                            only do the final few steps once you are certain this is complete. If
+                            you get this step wrong, then students could be emailed incorrect links,
+                            or not get link emails at all.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Now we need to add the script. Still in Automation, go to Scripts and
+                            click the + button next to the heading to create a new script.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Give it the name 'Send Enrolment with Zoom'. It will replace your
+                            current default 'send enrolment' script, so once we're done creating it
+                            we'll need to activate it, and then disable the old one. Set the trigger
+                            type to 'On create and edit' and enter the entity name as
+                            'Enrolment'.</para>
+                        <para>Next, hit the black + button just next to the name of the new script,
+                            and select 'Script'. Copy and paste the script from the following link
+                            into this field.</para>
+                        <para><emphasis role="bold">Script</emphasis> - <link
+                                xlink:href="https://gist.github.com/swinbanks/2059bbaedb84f9c47fe4e3a29fc4aab6"
+                            /></para>
+                    </listitem>
+                    <listitem>
+                        <para>After pasting the script, click the 'Enable' switch and then click
+                            Save. Then, scroll to your active 'send enrolment' script and disable
+                            it, then click Save. You only want one enrolment script active at a
+                            time. That should be all you need to do to activate this integration.
+                            You can run a test enrolment through the system to ensure you get each
+                            email as expected. You can also send the Zoom Link email to an enrolment
+                            any time you like by highlighting the enrolment/s, going to the cogwheel
+                            and clicking 'Send Message'. Select the Zoom Link template and you'll
+                            see a preview on the right, then clicking 'Send'.</para>
                     </listitem>
                 </orderedlist>
             </para>

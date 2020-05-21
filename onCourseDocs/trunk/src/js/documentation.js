@@ -16,7 +16,7 @@ $(document).ready(function() {
   let host = readCookie('oncourse_host');
   $('a[href^="https://demo.cloud.oncourse.cc"]').each(function () {
     $(this).attr('href', $(this).attr('href').replace('demo.cloud.oncourse.cc', host));
-    $(this).text( $(this).text().replace('demo.cloud.onncourse.cc', host));
+    $(this).text( $(this).text().replace('demo.cloud.oncourse.cc', host));
   });
 
 

@@ -39,8 +39,12 @@ $(document).ready(function() {
 
   } catch(e) {}
 
-
-
+  // set college host if we have a cookie for it
+  let host = readCookie('oncourse_host');
+  $('a[href^="http://demo.cloud.onncourse.cc"]').each(function () {
+    $(this).attr('href', $(this).attr('href').replace('demo.cloud.onncourse.cc', host));
+    $(this).text( $(this).text().replace('demo.cloud.onncourse.cc', host));
+  });
 
 
   // need to wait until Google draws the search box
@@ -49,6 +53,17 @@ $(document).ready(function() {
 	} , 1000);
 
 });
+
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
 
 // Custom search
   (function() {

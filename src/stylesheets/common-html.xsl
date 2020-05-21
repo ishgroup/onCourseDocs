@@ -53,7 +53,7 @@
     </link>
     <xsl:copy-of select="document('@buildDir@/processed/js/analytics.js',/)"/>
     <script type="text/javascript" src="js/jquery.js"/>
-    <script type="text/javascript" src="js/documentation.js"/>
+    <script type="text/javascript" src="js/documentation.js" defer="defer"/>
     <link rel="stylesheet" type="text/css">
       <xsl:attribute name="href">
         <xsl:text>https://fonts.googleapis.com/css?family=Merriweather:300i,300,400|Port+Lligat+Slab</xsl:text>

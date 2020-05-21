@@ -1,6 +1,3 @@
-let version;
-let availableVersions = ['8.0', '9.0', '9.12', 'latest'];
-
 $(document).ready(function() {
 	$('.chapter > .toc').prepend("<gcse:search></gcse:search>");
 
@@ -14,30 +11,6 @@ $(document).ready(function() {
   });
 
   $('.toc > dl.toc > dd > dl > dd').hide();
-
-  try {
-    version = window.location.href.match(/doc\/(.*?)\//)[1];
-
-    if ( $.isNumeric(version) ) {
-      availableVersions.push(version);
-      // and dedupe
-      availableVersions = availableVersions.filter(function(item, pos) {
-        return availableVersions.indexOf(item) === pos;
-      });
-    }
-
-    let versionsHtml = "";
-    availableVersions.sort().forEach(function(v) {
-      versionsHtml = versionsHtml + "<a href='" + window.location.href.replace(/\/doc\/.*?\//,"/doc/" + v + "/") + "' class='btn";
-      if (v === version) {
-        versionsHtml = versionsHtml + " active";
-      }
-      versionsHtml = versionsHtml + "'>" + v + "</a>";
-    });
-
-    $('.navheader').prepend("<div class='versions'>Documentation version " + versionsHtml + "</div>");
-
-  } catch(e) {}
 
   // set college host if we have a cookie for it
   let host = readCookie('oncourse_host');

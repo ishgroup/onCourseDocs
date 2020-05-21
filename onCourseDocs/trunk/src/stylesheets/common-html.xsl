@@ -1,4 +1,4 @@
-<?xml version='1.0'?> 
+<?xml version='1.0'?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
       xmlns:xslthl="http://xslthl.sf.net"
       xmlns:date="http://exslt.org/dates-and-times"
@@ -10,7 +10,7 @@
   <xsl:import href="@rootDir@/build/xslt/docbook/html/highlight.xsl"/>
 
   <xsl:include href="common-customizations.xsl"/>
-    
+
   <xsl:param name="chunker.output.encoding">UTF-8</xsl:param>
   <xsl:output doctype-system="about:legacy-compat"/>
 
@@ -19,7 +19,7 @@
 
   <!-- Don't add any embedded styles -->
   <xsl:param name="css.decoration">0</xsl:param>
-  
+
   <xsl:param name="ignore.image.scaling">1</xsl:param>
 
   <xsl:param name="use.id.as.filename">1</xsl:param>
@@ -29,7 +29,7 @@
       <xsl:apply-templates mode="xslthl"/>
     </strong>
   </xsl:template>
-  
+
   <xsl:template name="user.head.content">
     <meta name="viewport">
       <xsl:attribute name="content">width=device-width</xsl:attribute>
@@ -52,8 +52,8 @@
       </xsl:attribute>
     </link>
     <xsl:copy-of select="document('@buildDir@/processed/js/analytics.js',/)"/>
-    <script type="text/javascript" src="js/documentation.js"/>
     <script type="text/javascript" src="js/jquery.js"/>
+    <script type="text/javascript" src="js/documentation.js"/>
     <link rel="stylesheet" type="text/css">
       <xsl:attribute name="href">
         <xsl:text>https://fonts.googleapis.com/css?family=Merriweather:300i,300,400|Port+Lligat+Slab</xsl:text>

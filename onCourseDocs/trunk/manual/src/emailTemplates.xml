@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
 	version="5.0" xml:id="emailTemplates">
-	<title>Email Templates</title>
+	<title>Message Templates</title>
 	<section xml:id="emailTemplates-emailTemplates">
 		<title>Email Templates</title>
 		<para>The best way to define a message template is that it is a predefined and pre-constructed
@@ -10,244 +10,29 @@
 			>script</link>. An example would be that a student has just enrolled into a class via
 			the website or through the office, so the 'send enrolment script' will email the
 			'Enrolment Confirmation' template to the enrolling student. </para>
-		<para>Inside the email template, fields like ${enrolment.student.contact.firstName} in the
+		<para>Inside the message template, fields like ${enrolment.student.contact.firstName} in the
 			template will insert the relevant data from onCourse into the message.</para>
-		<para>onCourse makes it easy to access and update your templated messages by keeping them in the one place. You can use the templates as
-			they are or you can personalise them to your specific needs and requirements. You can also create additional templates, and where
-			necessary, accompanying scripts, specific to your business requirements.</para>
+		<para>onCourse makes it easy to access and update your templated messages by keeping them in the
+			one place, in the Automation window under Message Templates. You can use the templates
+			as they are or you can personalise them to your specific needs and requirements. You can
+			also create additional templates, and where necessary, accompanying scripts, specific to
+			your business requirements.</para>
 		<para>onCourse default templates include both a plain text and HTML version of the template. If make changes to the template wording you
 			should change both versions of the template for consistency. The receiver's mail client preferences will determine if they receive the
 			plain or HTML version of the message.</para>
 		<para>The content of the plain text and HTML templates should be the same, the HTML template
 			just includes additional information for the styling of the message so it renders inside
 			email clients.</para>
-		<para>Be careful when changing the names of the email templates. If the template is used by
-			a script, you will need to change the reference to the template name in the script
+		<para>Be careful when changing the names of the message templates. If the template is used by a
+			script, you will need to change the reference to the template name in the script
 			also.</para>
 		<para>The default templates included in onCourse are listed in the sections below.</para>
-		<section>
-			<title>Enrolment cog wheel templates</title>
-			<orderedlist>
-				<listitem>
-					<para><emphasis role="bold">Class cancellation</emphasis> - triggered by the script
-						'Send class cancellation' to advise students their class was cancelled, send
-						them a link to the website showing other options for the class, and requesting
-						they contact you to request a transfer or refund. This email template can be
-						sent manually from the enrolment list view.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Enrolment Confirmation</emphasis> - triggered by the
-						script 'Send enrolment' to advise students their enrolment was successful, and
-						of the details of their class sessions. This email template can be sent manually
-						from the enrolment list view.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Enrolment notification</emphasis> - triggered by the
-						script 'Send enrolment notice for tutors' to advise a tutor or third party each
-						time an enrolment is received into their class. This email template can be sent
-						manually from the enrolment list view.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Student notice of class commencement</emphasis> - triggered by the
-						script 'Send student class commencement notice' and the script 'send student
-						class commencement notice 7 days' 'to remind students their class is commencing
-						soon. This email template can be sent manually from the enrolment list
-						view.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">USI reminder email</emphasis> - triggered by the script
-						'Send USI reminder' to remind VET enrolled students to provide their USI before
-						their class completes. This email template can be sent manually from the
-						enrolment list view.</para>
-				</listitem>
-				<listitem xml:id="emailTemplates-VETcourseCompletion">
-					<para><emphasis role="bold">VET course completion Survey </emphasis>-
-						triggered by the script 'VET course completion Survey' to advise VET
-						learners of the Learner Questionnaire.  </para>
-				</listitem>	
-				<listitem>
-					<para><emphasis role="bold">Course completion survey </emphasis>- triggered by the script 'Send
-						class completion survey' to send an email to each student requesting they complete
-						the skillsOnCourse survey. This email can also be sent manually from the enrolment
-						window.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Schedule Change</emphasis> - Can only be triggered
-						manually via the cogwheel. Sends an email worded very similarly to the
-						Enrolment Confirmation except details the subject of a schedule
-						change.</para>
-				</listitem>
-			</orderedlist>
-		</section>
-		<section>
-			<title>Classes cog wheel templates</title>
-			<orderedlist>
-				<listitem>
-					<para><emphasis role="bold">Alert student of related class</emphasis> - triggered by the script
-						'alert students of related class' to send an email to notify students of a
-						class they may be interested in completing, based on their previous
-						enrolment history. Relates to classes being taught by a tutor the identified
-						students have had in the past.</para>
-				</listitem>
-			</orderedlist>
-		</section>
-		<section>
-			<title>Invoice cog wheel templates</title>
-			<orderedlist>
-				<listitem>
-					<para><emphasis role="bold">Tax invoice</emphasis> - triggered by the script 'Send
-						invoice' to the invoice payer on enrolment, or via checkbox on manual invoice
-						creation. This email template can be sent manually from the invoice list
-						view.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Payment reminder</emphasis> - triggered by the script
-						'Send payment plan reminder' to advise debtors their payment is due and send
-						them a link to make payment. This email template can be sent manually from the
-						invoice list view.</para>
-				</listitem>
-			</orderedlist>
-		</section>
-				<section>
-					<title>Payment In cog wheel templates</title>
-					<orderedlist>
-						<listitem>
-							<para><emphasis role="bold">Payment receipt</emphasis> - triggered by the script
-								'Send payment receipt' to advise debtors their payment has been received. This
-								email template can be sent manually from the payment in list view</para>
-						</listitem>
-					</orderedlist>
-				</section>
-		<section>
-			<title>Payment Out cog wheel templates</title>
-			<orderedlist>
-		<listitem>
-			<para><emphasis role="bold">Refund advice</emphasis> - triggered by the script 'Send
-				refund advice' to advise contacts a refund has been processed for them.</para>
-		</listitem>
-			</orderedlist>
-		</section>
-		<section>
-			<title>Application cog wheel templates</title>
-			<orderedlist>
-				<listitem>
-					<para><emphasis role="bold">Enrolment application received</emphasis> - triggered by
-						the script 'Send application received notification' to advise students their
-						application has been received and if send them a link to complete additional
-						application questions, or complete the USI portal process if they are applying
-						for a VET course. This email template can be sent manually from the application
-						list view. </para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Enrolment application accepted</emphasis> - triggered by
-						the script 'Send application decision' to advise students their application has
-						been accepted and include a link so they can proceed to enrol and pay. This
-						email template can be sent manually from the application list view.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Enrolment application rejected</emphasis> - triggered by
-						the script 'Send application decision' to advise student their application has
-						been rejected and why. This email template can be sent manually from the
-						application list view.</para>
-				</listitem>
-			</orderedlist>
-		</section>
-		<section>
-			<title>Sales cog wheel templates</title>
-			<orderedlist>
-				<listitem xml:id="emailTemplates-Voucheremail">
-					<para><emphasis role="bold">Voucher email</emphasis> - triggered by the script 'Send voucher' to
-						send the voucher code for redemption. This email template can be sent manually
-						from the voucher or Sales list view</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Membership Notification Renewal </emphasis>- triggered by the script
-						'Membership Notification Renewal' to advise current members to renew before
-						their membership expires. This email can also be sent manually from the Sales
-						window.</para>
-				</listitem>
-			</orderedlist>
-		</section>
-		<section>
-			<title>Waitlist cog wheel templates</title>
-			<orderedlist>
-				<listitem>
-					<para><emphasis role="bold">Waiting list notification </emphasis>- This template is not linked
-						to a script. It is designed to be sent manually to students on a waiting list to
-						suggest they enrol in a class that may have limited vacancies available.</para>
-				</listitem>
-			</orderedlist>
-		</section>
-		<section>
-			<title>System Templates</title>
-			<para>These templates are either embedded within other templates, or can only be triggered from scripts. They can not be sent manually.</para>
-			<orderedlist>
-				<listitem>
-					<para><emphasis role="bold">Header</emphasis> - this email template is embedded into
-						all other email templates, to include your college name and optionally, the
-						logo.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Footer</emphasis> this email template is embedded into
-						all other email templates to include your college contact details.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Certificate available</emphasis> - triggered by the script 'Send
-						certificate VET created notification' and 'Send certificate created
-						notification' to advise students certificates are available in the portal and
-						include a link to complete the class survey and download their certificate. This
-						email template can not be run manually and should not be linked to an
-						entity.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Tutor notice of class commencement </emphasis>-
-						triggered by the script 'Send tutor class commencement notice' to remind tutors
-						their class is commencing. This email template can not be run manually.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Waiting list reminder </emphasis>- triggered by the
-						script 'Send waiting list reminder' to advise students of classes available,
-						when a student has subscribed to a waiting list. This email template can not be
-						run manually.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Payment reminder </emphasis>- triggered by the script
-						'Send payment plan reminder' to advise debtors of unpaid invoices, or students
-						on payment plans that their payment is overdue, or due within the next 7 days.
-						Included in the email is a link where the debtor can click to make a credit card
-						payment via the onCourse portal.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Survey invitation</emphasis> - triggered by the
-						integration scripts 'SurveyMonkey send invite on enrolment', 'SurveyMonkey send
-						invite on enrolment completion', 'SurveyGizmo send invite on enrolment' and
-						'SurveyGizmo send invite on completion'. This email template can not be run
-						manually.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Tutor notice of unmarked attendance</emphasis> - triggered by the
-						script 'Notify tutor of unmarked attendance' to advise tutors of classes
-						where the attendance has not been marked that had sessions run in the past 7
-						days. The email contains a link to the class in the portal that can be
-						clicked on to mark the roll. The tutor does not need to log in, if they
-						click on the link within 7 days of receiving the email. After 7 days, the
-						link will make them log in via the usual process. This email template can
-						not be run manually.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Alert students of related class</emphasis> - triggered by script
-						'alert students of related class' that is manually run on a class by class
-						basis for marketing. The email suggests the student has completed a previous
-						class with this tutor and may like to enrol in this class, and includes a
-						link to the website so they can enrol.</para>
-				</listitem>
-			</orderedlist>
-		</section>
 		<section>
 			<title>Editing an existing message template</title>
 			<orderedlist>
 				<listitem>
-					<para>Go to File > Preferences > Email templates</para>
+					<para>Go to the Automation window and click the Message Templates heading to expand the
+						section.</para>
 				</listitem>
 				<listitem>
 					<para>Double click on a message from list to open it in edit view. The top half of the window is the plain text version of the
@@ -259,11 +44,7 @@
 				</listitem>
 				<listitem>
 					<para>Make your change to both the plain text and HTML version of the message then save and
-						close. We suggest copying and pasting the text from the HTML portion of the
-						template into an HTML editor like <link xlink:href="https://www.sublimetext.com/download"
-							>Sublime Text</link>. Sublime will colour code the
-						HTML and content making it simpler for you to make the changes you wish
-						without breaking the HTML.</para>
+						close. </para>
 				</listitem>
 			</orderedlist>
 			<mediaobject>
@@ -271,23 +52,15 @@
 					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/email_template.png" format="png" />
 				</imageobject>
 				<caption>
-					<para>The "Enrolment Confirmation" template window</para>
-				</caption>
-			</mediaobject>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/sublime_email_template.png" format="png" />
-				</imageobject>
-				<caption>
-					<para>Editing HTML content in sublime. Note the email body text in white font</para>
+					<para>The "course completion survey" template window</para>
 				</caption>
 			</mediaobject>
 		</section>
 		<section>
 			<title>Email headers and footers</title>
-			<para>The default template list includes a header and footer template, which contains both a
-				plain text and HTML layout.</para>
-			<para>These templates are used inside every other email template.</para>
+			<para>The default ressage template list includes a header and footer template, which contains
+				both a plain text and HTML layout.</para>
+			<para>These templates are used inside every other default email template.</para>
 			<para>If you look at the template text you'll see that most of the data used to create
 				these templates is drawn from the AVETMISS preferences tab settings. Even if you
 				don't report AVETMISS you should complete these fields so the data used in your
@@ -299,8 +72,8 @@
 		</section>
 		<section>
 			<title>Creating new templates</title>
-			<para>New templates can be created at your convenience. Click on the + in the top right hand corner of the template window to create a
-				new template.</para>
+			<para>New templates can be created at your convenience. Click on the + next to the Message
+				Template heading in the left-hand column to create a new template.</para>
 			<para>If your organisation has the appropriate IT skills in house, you can create your own custom templates or you can request an ish
 				developer create them for you. The development of custom templates is quoted on request.</para>
 			<para>To understand the entities, objects and attributes available to use in building a template, we recommend you download Cayenne
@@ -449,7 +222,7 @@ ${enrolment.student.getPortalLink('/class/' + enrolment.courseClass.willowId + '
 					<imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/send_custom_email.png" format="png" />
 				</imageobject>
 				<caption>
-					<para>Email templates available to send from the enrolment window</para>
+					<para>Select 'Send Message' to send a template message</para>
 				</caption>
 			</mediaobject>
 		</section>

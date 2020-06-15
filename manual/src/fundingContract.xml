@@ -59,13 +59,15 @@
 		<section>
 			<title>Adding the default Funding Contract to a class</title>
 			<para>Once a Funding Contract is active, you can add it as a default funding type to the class.
-				If you add the funding contract at the class level all enrolments in the class will
-				have the funding contract added to their enrolment. You can remove the Funding
-				Contract from individual enrolments if needed, for example, if a fee for service
-				student joins a class that which is funded under CSO.</para>
+				If you add the funding contract at the class level all new enrolments in the class
+				will have the funding contract added to their enrolment, but any existing enrolments
+				will need to have their changes confirmed. A pop up will ask you if you want to
+				change any associated enrolments. You can remove the Funding Contract from
+				individual enrolments if needed, for example, if a fee for service student joins a
+				class that which is funded under CSO.</para>
 			<para>The funding contract drop down on the class will only let you select from active contracts. </para>
 			<para>If you tick 'Assign the same value to the VET Fields' when you duplicate a class, the funding contract will be duplicated to the new class.</para>
-			<para>Changing the funding contract on a class will not changing the funding contract applied to
+			<para>Changing the funding contract on a class will not change the funding contract applied to
 				any enrolments already processed. It will only apply to enrolments created after the
 				change is made.</para>
 			<para>The default funding contract setting for all new classes is 'Fee for service
@@ -112,14 +114,10 @@
 		</section>
 		<section>
 			<title>Searching for Funding Contracts</title>
-			<para>In the enrolments and classes list view, Funding Contract is available as an
-				advanced find option.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/advanced_search_funding_contract.png" format="png"/>
-				</imageobject>
-			</mediaobject>
+			<para>In the enrolments and classes list view, you can use a search query to find any records
+				with the associated funding contract. For enrolments you'd use:
+				'relatedFundingSource.flavour is ' and then select a flavour drom the drop down list
+				that will appear when entering this into the search.</para>
 		</section>
 	</section>
 	<section>

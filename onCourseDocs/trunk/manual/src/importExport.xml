@@ -659,7 +659,11 @@ csv &lt;&lt; [ </programlisting>
 				<para>The steps involved in running this export are as follows:</para>
 				<orderedlist>
 					<listitem>
-						<para>Go to Financial > Summary Extracts and select MYOB Export</para>
+						<para>You must be an admin user</para>
+					</listitem>
+					<listitem>
+						<para>Type 'MYOB' into the find anything search, or click on 'All' in the
+							left navigation column, and select 'MYOB export'</para>
 						<mediaobject>
 							<imageobject>
 								<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -808,33 +812,8 @@ csv &lt;&lt; [ </programlisting>
 				</listitem>
 			</orderedlist>
 		</section>
-		<section xml:id="importExport-payentIn">
-			<title>Payment In Import</title>
-			<para>If you receive bulk payment data from an outside source, you can use the Payment
-				In import process to automatically create payment ins against the appropriate
-				invoices. You will just need to ensure the import file is correctly formatted and
-				onCourse will do the rest for you. The import process relies on the onCourse invoice
-				number being associated with the payments, and if your onCourse invoice number is
-				not included in the information then the payment in import will not work.</para>
-			<para>If the invoice number is included in the data, then your next step is to determine
-				how you will create the import file. If your data is being sent from a supplier,
-				internal department other businesses you are working with, you may be able to get
-				them to format the data when they export from their system. If you are not able to
-				get the export form changed, such as with internet banking, you many need download
-				the data, edit it in a spreadsheet program, and save it as a CSV format. </para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" width="100%" contentdepth="100%"
-						fileref="images/exports/paymentInImportWindow.png" format="png"/>
-				</imageobject>
-				<caption>
-					<para>Selecting the Payment In Import from Import/Export dialog box</para>
-				</caption>
-			</mediaobject>
-			<para>To import the CSV, go to <guimenuitem>File</guimenuitem>,
-					<guimenuitem>Import/Export</guimenuitem>, <guimenuitem>Import...</guimenuitem>
-				and select 'onCourse payment in csv import' as the import type.</para>
-			<section>
+
+			<section xml:id="importExport-payentIn">
 				<title>Payment In Import file set up</title>
 				<para>Please see below for the import file specification. You will need to ensure
 					that each line in the CSV relates to an invoice, or the import will fail. To
@@ -899,7 +878,7 @@ csv &lt;&lt; [ </programlisting>
 					</tgroup>
 				</table>
 			</section>
-		</section>
+		
 		<section xml:id="importExport-updateSubscriptions">
 			<title>Contact Update Subscriptions CSV import</title>
 			<para>This import will allow you to update, in bulk, the email, post and sms

@@ -282,8 +282,8 @@
     </section>
         <section xml:id="vouchers-Redemption">
         <title>Redeeming a voucher</title>
-        <para>A student can redeem a voucher either via an office based enrolment in Quick Enrol or
-            by enrolling online themselves. They will have to supply their voucher code which can be
+        <para>A student can redeem a voucher either via an office based enrolment in Checkout or by
+            enrolling online themselves. They will have to supply their voucher code which can be
             found in their voucher confirmation email. A student can type in the voucher code in the
             payment window during an online enrolment or your staff can redeem the voucher for them
             during an office based enrolment.</para>
@@ -291,7 +291,7 @@
             when a voucher is bought and sold, refer to the <link xlink:href="accounting.html"
                 >accounting chapter.</link></para>
         <para>A voucher is a payment method against an invoice.</para>
-        <para>When you are trying to redeem a voucher in quick enrol</para>
+        <para>When you are trying to redeem a voucher in checkout:</para>
         <orderedlist>
             <listitem>
                 <para>You have to firstly add the student/s, class/es or product/s as normal when
@@ -299,33 +299,31 @@
             </listitem>
             <listitem>
                 <para>In the bottom field on the left hand side, 'Enter voucher or promotion..',
-                    enter the voucher code that the student would have received by email (as seen in
-                    the screen shot below)</para>
+                    enter the voucher code that the student would have received by email.</para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" width="80%" contentdepth="80%"
                             fileref="images/vouchers/Adding_voucher_code.png"/>
                     </imageobject>
                     <caption>
-                        <para>Entering a voucher code during checkout</para>
+                        <para>Where to enter a voucher code during checkout</para>
                     </caption>
                 </mediaobject>
             </listitem>
             <listitem>
-                <para>Click on the '+' symbol next the field or press return on the keyboard</para>
+                <para>The voucher will attempt to validate automatically. If valid, it will apply to
+                    the current checkout. If not, an error will show.</para>
             </listitem>
             <listitem>
-                <para>This in turn will apply amount available on the voucher as a payment towards
-                    this invoice (as seen in the screen shot below)</para>
-            </listitem>
-            <listitem>
-                <para>If the voucher used is for a monetary value then you have the ability to
-                    choose how much of the voucher you want to apply towards the class or
-                    product</para>
+                <para>The voucher will apply as much credit as possible to the invoice. If there is
+                    a remainder then that credit will remain on the voucher for later use. You
+                    cannot edit how much of the voucher to apply.</para>
             </listitem>
             <listitem>
                 <para>Additional payments can be added if there is a difference between the voucher
-                    balance and the invoice balance, such as a credit card payment.</para>
+                    balance and the invoice balance, such as a credit card payment. If the voucher
+                    is paying the amount in full, then the payment type will read 'No Payment' and
+                    the Pay Now amount will be $0.</para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" width="80%" contentdepth="80%"
@@ -341,13 +339,6 @@
                     checkout</para>
             </listitem>
         </orderedlist>
-        <note>
-            <para>A voucher can only be redeemed in onCourse through the checkout window. If the
-                voucher is set for redemption for a specific number of courses, it must be used when
-                the enrolment is created and can't be used to pay for an enrolment post creation. A
-                voucher for a monetary value can be used to make a payment against an invoice
-                post-enrolment if needed. </para>
-        </note>
             <section>
                 <title>Investigating voucher redemption</title>
                 <para>On occasion, you may need to find a voucher that was redeemed in a sales process. From either the Invoice, Enrolment or Payment In window, you can use the 'find related' function to go back to the voucher that was used during the sale.</para>
@@ -365,28 +356,6 @@
                         process for an invoice</para>
                     </caption>
                 </mediaobject>
-            </section>
-            <section>
-                <title>Redeeming a voucher in checkout when the 'Send the invoice when the voucher
-                is redeemed to x' is checked.</title>
-                <para>If a user is trying to redeem a voucher when the 'Send the invoice when the
-                voucher is redeemed to x' is checked it will automatically add the defined voucher
-                invoice contact to checkout as the payer. There is also a message in red saying the
-                'payer is locked due the voucher being redeemed' in the items and payments tab under
-                the payer name.</para>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata scalefit="1" width="100%" contentdepth="100%"
-                            fileref="images/vouchers/voucher_redeemed_payer_locked.png"/>
-                    </imageobject>
-                    <caption>
-                    <para>The payer is locked due the voucher being redeemed message</para>
-                </caption>
-                </mediaobject>
-                <note>
-                    <para>A second voucher cannot be added to the checkout process unless the second
-                    voucher is also locked to the same payer.</para>
-                </note>
             </section>
         <section>
             <title>Redeeming a voucher on the web</title>

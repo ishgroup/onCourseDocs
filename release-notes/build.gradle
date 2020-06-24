@@ -4,6 +4,9 @@ import groovyx.net.http.RESTClient
 import groovyx.net.http.HttpResponseException
 import org.apache.tools.ant.filters.ReplaceTokens
 
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+
 buildscript {
   repositories.maven {
     url 'https://repo.ish.com.au/content/groups/public'
@@ -36,7 +39,9 @@ task createIndex(type: Copy, dependsOn: processSrc) {
   from "src/index.xml"
   into "${buildDir}/processed"
   filter(ReplaceTokens,tokens: [
-          versions: versions.reverse().collect { "<xi:include href='${it}/release-notes.xml'/>" }.join('\n\t\t\t\t')
+          versions: versions.reverse().collect { "<xi:include href='${it}/release-notes.xml'/>" }.join('\n\t\t\t\t'),
+          publishedDate: LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy")),
+          copyrightYear : LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))
   ])
 }
 docbookHtml.dependsOn createIndex

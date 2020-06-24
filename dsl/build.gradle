@@ -23,7 +23,6 @@ task extractAPIdocbook(type: Copy) {
     into "${buildDir}/processed"
     filter(ReplaceTokens,tokens: [
             projectName: project.name,
-            version: version,
             publishedDate: LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy")),
             copyrightYear : LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))
     ])

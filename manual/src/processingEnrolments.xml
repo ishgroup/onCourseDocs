@@ -823,27 +823,32 @@
 			<section>
 				<title>How to manage transactions where the payment has failed</title>
 				<para>When a credit card payment has failed, the secure payment window will display the message
-						<emphasis role="bold">This payment failed because the card was expired,
-						invalid or does not have sufficient funds</emphasis> You will then be
-					presented with two different options to complete the transaction. You can hover
-					your mouse over these options to view an explanation of each option, before
-					making your selection. </para>
-				<section>
-					<title>Option 1: Abandon the Transaction - Keep the Invoice</title>
-					<para>The payment will be marked as failed, but the invoice and enrolments kept.
-						The debtor will be kept, owing you money for later payment</para>
-					<para>When you return to Checkout you will see the message "The credit card payment was
-						declined. The enrolment and unpaid invoice have been saved."</para>
-					<para>You can then proceed to send the enrolment confirmation and/or the unpaid tax invoice. If
-						you wish to attempt another payment, open Checkout again and enter the
-						payers name.</para>
-				</section>
-				<section>
-					<title>Option 2: Try another card</title>
-					<para>If the first card entered is declined, by clicking on <emphasis role="bold">Try another
-							card</emphasis>, the payment window is refreshed and you can then enter
-						different card details to complete the transaction. </para>
-				</section>
+						<emphasis role="bold">Payment Failed</emphasis> and a reason for the
+					failure. You can either: </para>
+				<para>
+					<orderedlist>
+						<listitem>
+							<para>click 'Try Again' to try a new card </para>
+						</listitem>
+						<listitem>
+							<para>change the payment type and accept another type of payment, or
+							</para>
+						</listitem>
+						<listitem>
+							<para>change the Pay Now price to $0 to create the invoice and enrolment
+								only, and accept payment at a later date.</para>
+						</listitem>
+					</orderedlist>
+				</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" width="100%" contentdepth="100%"
+							fileref="images/checkout_failed_payment.png"/>
+					</imageobject>
+					<caption>
+						<para>A failed payment in the Checkout</para>
+					</caption>
+				</mediaobject>
 			</section>
 		</section>
 	</section>

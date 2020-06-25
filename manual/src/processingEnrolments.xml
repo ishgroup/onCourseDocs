@@ -624,9 +624,10 @@
 		<para>By default the first contact is nominated as the payer. If you wish to switch this to
 			another contact, in the Summary hover your mouse over the name of the contact you want
 			to set as the payer and click 'Set as Payer' button that appears.</para>
-		<para>If a third party, such as an employer or agency are paying the fee, and if the payer
-			has any amount outstanding, that information will be added to the total fee. You can
-			choose to pay the full amount owing, zero, or a portion of the amount owing. </para>
+		<para>If a third party, such as an employer or agency are paying the fee, and if the payer has any
+			amount outstanding, that information will be added to the total fee. You can choose to
+			pay the full amount owing, zero, or a portion of the amount owing by editing the 'Pay
+			Now' price that appears in the payment section of the checkout. </para>
 		<para>If a voucher is being used to pay for an enrolment, you need to add the voucher before
 			choosing how to pay any balance outstanding by an alternate method.</para>
 		<para>If your financial preferences for the class are set to pay in full, but you are taking a
@@ -654,10 +655,11 @@
 			onCourse for taking direct payments. If you do not have a merchant account linked, and
 			you take a credit card payment via your EFTPOS terminal or another online gateway
 			service, you will need to record that payment type as EFTPOS or other.</para>
-		<para>If you do have a merchant account linked to onCourse and you select credit card, a
-			browser window will open and the details will be validated as you enter the information.
-			The enrolment save process will not complete until the bank validates the card number
-			(see below for more details on how this works).</para>
+		<para>If you do have a merchant account linked to onCourse and you select credit card, the secure
+			payment gateway will appear. The enrolment save process will not complete until the bank
+			validates the card number (see below for more details on how this works).</para>
+		<para>If the payer has a saved credit card on their contact record, you can select 'Saved
+			credit card' to attempt payment against that saved card.</para>
 		<section>
 			<title>Applying previous credit or debt to a payment</title>
 			<para>In the Payments section you can review any other unpaid invoice(s) that are connected the
@@ -738,8 +740,8 @@
 	</section>
 		<section xml:id="processingEnrolments-creditCards">
 		<title>Processing a credit card payment</title>
-		<para>onCourse processes credit card payments via a secure payment gateway within onCourse and
-			verifies the credit card details in real time with the bank.</para>
+		<para>onCourse processes credit card payments via a secure payment gateway within onCourse
+			and verifies the credit card details in real time with the bank.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" width="100%" contentdepth="100%"
@@ -749,107 +751,117 @@
 				<para>Secure credit card payment window to process credit card payments</para>
 			</caption>
 		</mediaobject>
-		<para> To process a credit card payment you need to do the following steps:</para>
-		<orderedlist>
-			<listitem>
-				<para>Select Credit Card from the payment type drop down menu during the Payment step of
-					Checkout</para>
-			</listitem>
-			<listitem>
-				<para>The credit card secure payment gateway will open in the section to the right
-					of the Payments column.</para>
-			</listitem>
-			<listitem>
-				<para>Enter the credit card details into the secure payment window and then click
-					the <guilabel>Submit</guilabel> button to process the payment</para>
-				<para>Whilst the secure payment is being processed, the Checkout window will remain open with a
-					processing enrolment message being displayed. </para>
-			</listitem>
-			<listitem>
-				<para>The payment will be processed and if successful, the payment gateway window
-					will display the message <emphasis role="bold">payment was successful</emphasis>
-					you can then close the payment browser window</para>
-			</listitem>
-			<listitem>
-				<para>The Checkout window will also update to show that the transaction was successful, you can
-					then click finalise transaction and then send the enrolment confirmation as per
-					the standard process. </para>
-			</listitem>
-			<listitem>
-				<para>Click the 'Share' icon next to the invoice on the Transaction Succesul window to open the
-					Share menu on that invoice record in order to generate and print the Invoice.
-					You can also click the go to shorcut icons to go directly to either the payment
-					record or the invoice.</para>
-			</listitem>
-			<listitem>
-				<para>You can either close the tab or click 'Start New Checkout' to start a new
-					transaction in a fresh checkout window.</para>
-			</listitem>
-		</orderedlist>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" width="100%" contentdepth="100%"
-					fileref="images/Successful_CC_Payment_Message.png"/>
-			</imageobject>
-			<caption>
-				<para>Transaction successful screen in the Checkout</para>
-			</caption>
-		</mediaobject>
-		<note>
-			<para>In the event that there is an outage with your internet connection whilst a credit card
-				transaction is being processed, or you close the browser window without cancelling
-				the payment attempt in the window, the payment will time out in 20 minutes. During
-				this timeout period, the Checkout window will remain locked. An error message will
-				appear notifying you "Payment was expired by timeout. The enrolment and unpaid
-				invoice have been saved." Checkout will then allow you to save and close the
-				enrolment with or without sending the normal notifications to the contacts. You can
-				then reopen Checkout and attempt to process the payment again.</para>
-		</note>
+			<section xml:id="processingEnrolments-newcreditCards">
+			<title>Using a new credit card</title>
+			<para> To process a new credit card payment you need to do the following steps:</para>
+			<orderedlist>
+				<listitem>
+					<para>Select Credit Card from the payment type drop down menu during the Payment
+						step of Checkout. </para>
+				</listitem>
+				<listitem>
+					<para>The credit card secure payment gateway will open in the section to the right
+						of the Payments column.</para>
+				</listitem>
+				<listitem>
+					<para>Enter the credit card details into the secure payment window and then click
+						the <guilabel>Submit</guilabel> button to process the payment</para>
+					<para>Whilst the secure payment is being processed, the Checkout window will remain
+						open with a processing enrolment message being displayed. </para>
+				</listitem>
+				<listitem>
+					<para>The payment will be processed and if successful, the payment gateway window
+						will display the message <emphasis role="bold">payment was successful</emphasis>
+						you can then close the payment browser window</para>
+				</listitem>
+				<listitem>
+					<para>The Checkout window will also update to show that the transaction was
+						successful, you can then click finalise transaction and then send the enrolment
+						confirmation as per the standard process. </para>
+				</listitem>
+				<listitem>
+					<para>Click the 'Share' icon next to the invoice on the Transaction Succesul window
+						to open the Share menu on that invoice record in order to generate and print the
+						Invoice. You can also click the go to shorcut icons to go directly to either the
+						payment record or the invoice.</para>
+				</listitem>
+				<listitem>
+					<para>You can either close the tab or click 'Start New Checkout' to start a new
+						transaction in a fresh checkout window.</para>
+				</listitem>
+			</orderedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/Successful_CC_Payment_Message.png"/>
+				</imageobject>
+				<caption>
+					<para>Transaction successful screen in the Checkout</para>
+				</caption>
+			</mediaobject>
+			<note>
+				<para>In the event that there is an outage with your internet connection whilst a credit
+					card transaction is being processed, or you close the browser window without
+					cancelling the payment attempt in the window, the payment will time out in 20
+					minutes. During this timeout period, the Checkout window will remain locked. An
+					error message will appear notifying you "Payment was expired by timeout. The
+					enrolment and unpaid invoice have been saved." Checkout will then allow you to save
+					and close the enrolment with or without sending the normal notifications to the
+					contacts. You can then reopen Checkout and attempt to process the payment
+					again.</para>
+			</note>
+		</section>
+			<section xml:id="processingEnrolments-savedcreditCards">
+			<title>Using a saved credit card</title>
+			<para>To process a payment using a saved credit card, the payer must have a credit card
+				saved to their contact record. You can see this in their contact record, under
+				'Financial'. To select this option in Checkout, choose 'Saved Credit Card', then
+				click Finalise Transaction.</para>
+		</section>
+	</section>
+	<section xml:id="processingEnrolments-failedcreditCards">
+		<title>Managing cancelled and failed credit card transactions</title>
+		<para>This section outlines how you manage the payment cancellation process and how onCourse
+			reconciles those cancelled transactions</para>
 		<section>
-			<title>Managing cancelled and failed credit card transactions</title>
-			<para>This section outlines how you manage the payment cancellation process and how onCourse
-				reconciles those cancelled transactions</para>
-			<section>
-				<title>How to cancel a credit card transaction</title>
-				<para>You don't technically need to cancel credit card payments in onCourse. You can
-					simply change the Payment Method.</para>
+			<title>How to cancel a credit card transaction</title>
+			<para>You don't technically need to cancel credit card payments in onCourse. You can
+				simply change the Payment Method.</para>
+			<orderedlist>
+				<listitem>
+					<para>With the credit card gateway open, simply click the 'Payment Method' field
+						and make another selection.</para>
+				</listitem>
+			</orderedlist>
+		</section>
+		<section>
+			<title>How to manage transactions where the payment has failed</title>
+			<para>When a credit card payment has failed, the secure payment window will display the
+				message <emphasis role="bold">Payment Failed</emphasis> and a reason for the
+				failure. You can either: </para>
+			<para>
 				<orderedlist>
 					<listitem>
-						<para>With the credit card gateway open, simply click the 'Payment Method'
-							field and make another selection.</para>
+						<para>click 'Try Again' to try a new card </para>
+					</listitem>
+					<listitem>
+						<para>change the payment type and accept another type of payment, or </para>
+					</listitem>
+					<listitem>
+						<para>change the Pay Now price to $0 to create the invoice and enrolment
+							only, and accept payment at a later date.</para>
 					</listitem>
 				</orderedlist>
-			</section>
-			<section>
-				<title>How to manage transactions where the payment has failed</title>
-				<para>When a credit card payment has failed, the secure payment window will display the message
-						<emphasis role="bold">Payment Failed</emphasis> and a reason for the
-					failure. You can either: </para>
-				<para>
-					<orderedlist>
-						<listitem>
-							<para>click 'Try Again' to try a new card </para>
-						</listitem>
-						<listitem>
-							<para>change the payment type and accept another type of payment, or
-							</para>
-						</listitem>
-						<listitem>
-							<para>change the Pay Now price to $0 to create the invoice and enrolment
-								only, and accept payment at a later date.</para>
-						</listitem>
-					</orderedlist>
-				</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" width="100%" contentdepth="100%"
-							fileref="images/checkout_failed_payment.png"/>
-					</imageobject>
-					<caption>
-						<para>A failed payment in the Checkout</para>
-					</caption>
-				</mediaobject>
-			</section>
+			</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/checkout_failed_payment.png"/>
+				</imageobject>
+				<caption>
+					<para>A failed payment in the Checkout</para>
+				</caption>
+			</mediaobject>
 		</section>
 	</section>
 		<section xml:id="processingEnrolments-paymentIn">

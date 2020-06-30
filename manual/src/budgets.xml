@@ -2,9 +2,6 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
   version="5.0" xml:id="budgets">
   <title>Budgets</title>
-  <para>The budget feature is enabled with some paid onCourse support contracts. Check your
-    college's support agreement to see if this feature has been enabled for your
-    organization.</para>
   <para>Use the Class budget feature to determine whether Classes are profitable, predict how many
     more enrolments they need to break even and create projected budgets across groups of Classes.
     You can compare actuals against projected income and expenses to determine whether your
@@ -51,22 +48,24 @@
       <title>How to create a Class budget</title>
       <orderedlist>
         <listitem>
-          <para>Go to the Budget tab in the Class window. Here you can see a list of income and
-            expenses for the Class, plus a summary of the Actual and Projected income and expenses.
-          </para>
+          <para>Go to the Budget section in the Class window. Here you can see a list of income and
+            expenses for the Class, plus a summary of the Actual and Projected income and expenses. </para>
         </listitem>
         <listitem>
           <para>If you have already added a tutor and added a payroll amount, you may already have a
-            cost assigned for the tutor wage. </para>
+            cost assigned for the tutor wage.</para>
         </listitem>
         <listitem>
-          <para>To add a tutor wage, you need to have already assigned the tutor to the Class. You
-            can then define the rate and any associated oncosts. Note that for the tutor wage to be
+          <para>If you've added the tutor but don't see their wage, add their tutor wage manually.
+            Click the + button next to the Budget heading, then click Tutor pay and select the tutor
+            you wish to add, you need to have already assigned the tutor to the Class. You can then
+            define the rate and any associated oncosts. Note that for the tutor wage to be
             automatically calculated, the tutors name has to be ticked for the sessions they are
             teaching in the Class timetable.</para>
         </listitem>
         <listitem>
-          <para>Expenses can also be added. These may include items like room hire, student
+          <para>Additional expenses and income can also be added by clicking the + button and
+            selecting the option you're after. Expenses may include items like room hire, student
             textbooks and advertising charges. Some expenses may be considered 'sunk', that is, they
             are incurred even if the Class is cancelled. </para>
         </listitem>
@@ -80,7 +79,8 @@
           <para>From the Class list window, a range of budget reports are available to assist you
             with evaluating your program profitability. The Budget Details report shows line by line
             detail of the budget you have created. The Budgets report will show a summary of the
-            actual and projected income and expense for a selection of Classes. </para>
+            actual and projected income and expense for a selection of Classes. Access them by
+            clicking the Share button.</para>
         </listitem>
       </orderedlist>
     </example>
@@ -90,7 +90,7 @@
           fileref="images/class_budget_tab.png"/>
       </imageobject>
       <caption>
-        <para>The budget tab of the Class displays a summary view of the budget, including
+        <para>The budget section of the Class displays a summary view of the budget, including
           projections and break even information</para>
       </caption>
     </mediaobject>
@@ -145,37 +145,27 @@
       <para>An important part of the budget calculations are the projected enrolment numbers you
         have estimated. This number is an estimate of how many students you believe will enrol in
         the Class and is used to calculate the figures under the 'Projected' column in the budget
-        tab.</para>
+        section.</para>
       <para>The budget will then calculate the enrolment number required to go ahead (meet your
         refundable costs) and the enrolments required to profit (meet your refundable and sunk
-        costs). This information is displayed both on the general and budget tabs of a given Class. </para>
+        costs). This information is displayed in the budget section of a given Class. </para>
       <tip>
         <para>If you do not enter any expense items for a given Class budget, the information on the
-          number of enrolments required to make a profit that is found on the general and budget
-          tabs will be suppressed. </para>
+          number of enrolments required to make a profit that is found in the budget section will be
+          hidden. </para>
       </tip>
-      <mediaobject>
-        <imageobject>
-          <imagedata scalefit="1" width="100%" contentdepth="100%"
-            fileref="images/class_budget_calculation_general_tab.png"/>
-        </imageobject>
-        <caption>
-          <para>The general tab of the Class provides a top level budget summary and the required
-            number of enrolments to cover running costs</para>
-        </caption>
-      </mediaobject>
     </section>
     <section>
-      <title>Tracking Discounts via the Budget tab</title>
-      <para>As well as reflecting all fee income within a given Class, the budget tab allows you to
-        track discounts. With each discount type listed as a line item within the budget.</para>
+      <title>Tracking Discounts via the Budget</title>
+      <para>As well as reflecting all fee income within a given Class, the budget section allows you
+        to track discounts. With each discount type listed as a line item within the budget.</para>
       <para>When defining the paramaters of a given discount, you can also enter an estimated
         percentage of students within a given Class who are likely to take up this discount. This
-        figure is set within the value tab of the discount and is identified as the default forecast
-        take up. </para>
+        figure is set within the general section of the discount and is identified as the default
+        forecast take up. </para>
       <para>The default forecast take up of a given discount will be applied to all Classes that
         have that discount, but if you wish to adjust the take up percent figure on one Class, you
-        can do this by double clicking on the discount line item within the budget tab of that
+        can do this by double clicking on the discount line item within the budget section of that
         Class. </para>
       <mediaobject>
         <imageobject>
@@ -189,13 +179,13 @@
       </mediaobject>
       <para>Once a discount has been assigned to the Class and you have entered a figure for the
         projected number of enrolments that are likely to be received for a given Class via the
-        budget tab, the budget will calculate the discount amount based upon the percentage of
+        budget section, the budget will calculate the discount amount based upon the percentage of
         projected enrolments that are likely to take up that discount. </para>
       <para>The dollar value of discounts given during the enrolment process will be visible in the
-        budget tab against their corresponding discount strategy.</para>
+        budget section against their corresponding discount strategy.</para>
       <para>If you give a manual discount during enrolment, the balance will be deducted from the
-        total income field, but not visible in the discounts section of the budget tab as it is not
-        linked to a pre-exisiting discount strategy.</para>
+        total income field, but not visible in the discounts section of the budget section as it is
+        not linked to a pre-exisiting discount strategy.</para>
     </section>
   </section>
   <section xml:id="budgets-manualInvoices">
@@ -209,7 +199,7 @@
     <para>Once you have the invoice list view window open, do the following:</para>
     <itemizedlist>
       <listitem>
-        <para>Click on the '+' symbol at the top right side of the window</para>
+        <para>Click on the '+' symbol at the bottom right side of the window</para>
       </listitem>
       <listitem>
         <para>Add information such as who the invoice is being sent to, whether you want the invoice
@@ -217,13 +207,13 @@
           reference</para>
       </listitem>
       <listitem>
-        <para>Once these details have been filled in, click in the '+' symbol at the top right side
-          of the table called invoice lines</para>
+        <para>Once these details have been filled in, click in the '+' symbol next to invoice
+          lines</para>
       </listitem>
       <listitem>
         <para>A sheet will appear that will let you link this invoice to a class. You will have to
-          fill in information such as Title, Quantity, Price, Income account and what course and
-          class code it's linked to.</para>
+          fill in information such as Title, Quantity, Price, Income account and, under 'Assign to
+          Budget' what course and class code it's linked to.</para>
         <mediaobject>
           <imageobject>
             <imagedata scalefit="1" width="90%" contentdepth="90%"
@@ -246,15 +236,15 @@
         <para>Adding a manual invoice</para>
       </caption>
     </mediaobject>
-    <para>You will be able to see this manual invoice in the Budgets tab of the selected class. It
-      will appear under the table that says 'x custom invoice(s)' above it.</para>
+    <para>You will be able to see this manual invoice in the Budgets section of the selected class.
+      It will appear under the table that says 'x custom invoice(s)' above it.</para>
     <mediaobject>
       <imageobject>
         <imagedata scalefit="1" width="80%" contentdepth="80%"
           fileref="images/budgets_manual_invoices.png"/>
       </imageobject>
       <caption>
-        <para>What a manual invoice looks like in the Budget tab of a Class</para>
+        <para>What a manual invoice looks like in the Budget section of a Class</para>
       </caption>
     </mediaobject>
   </section>

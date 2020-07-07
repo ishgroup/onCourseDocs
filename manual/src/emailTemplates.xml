@@ -57,10 +57,10 @@
 			</mediaobject>
 		</section>
 		<section>
-			<title>Email headers and footers</title>
+			<title>Message headers and footers</title>
 			<para>The default ressage template list includes a header and footer template, which contains
 				both a plain text and HTML layout.</para>
-			<para>These templates are used inside every other default email template.</para>
+			<para>These templates are used inside every other default message template.</para>
 			<para>If you look at the template text you'll see that most of the data used to create
 				these templates is drawn from the AVETMISS preferences tab settings. Even if you
 				don't report AVETMISS you should complete these fields so the data used in your
@@ -80,7 +80,7 @@
 				Modeler and read the section about <link xlink:href="#dataModel">using the onCourse data model</link>. </para>
 		</section>
 		<section>
-			<title>Writing Groovy in email templates</title>
+			<title>Writing Groovy in message templates</title>
 			<para>The templates are written in a programming language called Groovy which is a Java based language that can run inside the
 				onCourse application. An overview of the language can be found at <link xlink:href="http://groovy.codehaus.org"
 					>http://groovy.codehaus.org</link>. </para>
@@ -89,8 +89,9 @@
 					support page</link></para>
 			<section>
 				<title>Examples of Groovy in the templates</title>
-				<para>Both onCourse email templates and scripts are written in Groovy. onCourse templates are created using the <link
-						xlink:href="http://groovy.codehaus.org/Groovy+Templates">GStringTemplateEngine</link>, storing the template files within the
+				<para>Both onCourse message templates and scripts are written in Groovy. onCourse templates are
+					created using the <link xlink:href="http://groovy.codehaus.org/Groovy+Templates"
+						>GStringTemplateEngine</link>, storing the template files within the
 					onCourse database.</para>
 				<para>The key to creating a successful template is to ensure you begin with the most appropriate onCourse entity for the task. This
 					will make the process of locating and joining other data from the database straightforward.</para>
@@ -138,14 +139,14 @@ End: ${enrolment.courseClass.endDateTime.format("h:mm a EEEE d MMMM yyyy zzzz")}
 ${it.title}    ${it.priceTotalIncTax}
 ${it.description}
 &lt;% } %></programlisting>
-				<para>To display an image in a email template you can first of all add the image to the onCourse
-					document management system then add the following syntax to the email templates
-					html body:</para>
+				<para>To display an image in a message template you can first of all add the image to the
+					onCourse document management system then add the following syntax to the message
+					templates html body:</para>
 				<programlisting language="groovy-template">${image "imagename"}</programlisting>
 			</section>
 			<section xml:id="emailTemplates-portallinks">
 				<title>Adding links to portal pages in the templates</title>
-				<para>Inside email templates, you may wish to include direct links to parts of the student
+				<para>Inside message templates, you may wish to include direct links to parts of the student
 					portal, for example to allow students to access their class resources without
 					having to log in using the format</para>
 				<programlisting language="groovy-template">portalLink(target, timeout)</programlisting>
@@ -165,28 +166,33 @@ please visit ${waitingList.student.getPortalLink("subscriptions")}</programlisti
 					will be returned to the login screen. In this way, the security of the portal is
 					maintained, and the documents or timed links sent can't easily be distributed to
 					others or exponse potentially confidental information.</para>
-				<para>If sending from an email template linked to an enrolment, example options available
+				<para>If sending from a message template linked to an enrolment, example options available
 					include:</para>
 				<programlisting language="groovy-template">${enrolment.student.portalLink(courseClass)} -> link to class page
 ${enrolment.student.getPortalLink(enrolment)}  -> link to class page
 ${enrolment.student.getPortalLink(invoice)}  -> link to one invoice
+${enrolment.student.getPortalLink(document)}  -> link to one document
 ${enrolment.student.getPortalLink("USI")}  -> link to USI portal page
 ${enrolment.student.getPortalLink("timetable")}  -> link to the timetable portal page
 ${enrolment.student.getPortalLink("results")}  -> link to results portal page
-${enrolment.student.getPortalLink("subscriptions")}  -> link to the subscriptions portal page
-${enrolment.student.getPortalLink('/class/' + enrolment.courseClass.willowId + '/resources')} → link to the resources page of the class</programlisting>
+${enrolment.student.getPortalLink("subscriptions")}  -> link to the subscriptions portal page</programlisting>
 			</section>
 		</section>
 		<section>
 			<title>Sending a manual message using a template</title>
-			<para>While many emails may be sent automatically based on their associated <link xlink:href="scripts.hmtl">scripts</link>, template emails
-				may also be sent manually, or new templated created just to send manual messages. This allows you to resend important information
-				like a Tax Invoice that may have been misplaced by the student or filtered as junk mail. The send option will use the contacts
-				current email address, so this tool can also be used to resend messages that bounced due to an incorrectly entered email.</para>
-			<para>Template emails can be sent using the appropriate cogwheel option 'send custom email'. The custom emails available are those
-				linked to the same entity. For example, in the Enrolment Confirmation screenshot above you can see it is linked to the entity called
-				Enrolment. This makes the template available in the enrolment window cogwheel list. </para>
-			<para>You can send a email template from the following list views</para>
+			<para>While many emails may be sent automatically based on their associated <link
+					xlink:href="scripts.hmtl">scripts</link>, message templates may also be sent
+				manually, or new templated created just to send manual messages. This allows you to
+				resend important information like a Tax Invoice that may have been misplaced by the
+				student or filtered as junk mail. The send option will use the contacts current
+				email address, so this tool can also be used to resend messages that bounced due to
+				an incorrectly entered email.</para>
+			<para>Message templates can be sent using the appropriate cogwheel option 'send message'. The
+				custom emails available are those linked to the same entity. For example, in the
+				Course Completion survey script screenshot above you can see it is linked to the
+				entity called Enrolment. This makes the template available in the enrolment window
+				cogwheel list. </para>
+			<para>You can send a message template from the following list views</para>
 			<itemizedlist>
 				<listitem>
 					<para>Enrolment</para>

@@ -515,17 +515,77 @@
 				</caption>
 			</mediaobject>
 		</section>
-		<section>
-			<title>Funding source</title>
+		<section xml:id="rto_funding-contract">
+			<title>Funding source/contract</title>
 			<para>Once you've created the class, add the correct funding contract at the Class level
 				via the VET tab, and then make any required changes for individual students at the
-				Enrolment level. To learn more about <link linkend="fundingContract">Funding
-					Contracts, click here </link>. </para>
+				Enrolment level. To learn more about <link xlink:href="fundingContract.html">Funding Contracts, click here</link>. </para>
 			<para>When you make any changes to funding source fields in the VET tab after you've
 				already created the class, if there are already enrolments and outcomes associated
 				with the fields you've just edited, you'll be prompted via pop-up whether you want
 				to copy that change to all associated enrolment and outcome records. You can push
 				the changes to enrolment records only, outcome records only, or both types.</para>
+		</section>
+		<section xml:id="rto_funding-invoices">
+			<title>Funding invoices</title>
+			<para>You can create funding-specific invoices in onCourse for any funded VET class. There is a
+				very specific process to creating this special invoices, which can be used to track
+				payments from any funding body for any funded enrolment.</para>
+			<para>Funding Invoices appear as an extra step within the Checkout process, after the Summary.
+				They will only appear for new enrolments if the class being enrolled in to has a
+				'default funding contract' that <emphasis role="underline">isn't</emphasis> 'fee for
+				service (non-funded)'.</para>
+			<para>If you don't require a funding invoice, or don't wish to use one, you can simply
+				disable the tracking switch and move on to Payments.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="100%" contentdepth="100%"
+						fileref="images/reports/funding_invoice.png" format="png"/>
+				</imageobject>
+				<caption>
+					<para>Funding invoice in the Checkout</para>
+				</caption>
+			</mediaobject>
+			<para>The Summary is the invoice going to the student, where as the Funding Invoice
+				isn't sent to anyone, but used to track the funded payments internally for each
+				enrolment. To correctly set up a funding invoice you must:</para>
+			<para>
+				<orderedlist>
+					<listitem>
+						<para>Ensure the 'Track the amount owing' switch is turned on - you can
+							change the funding contract this is recorded against here as well by
+							selecting a new option from the drop down box.</para>
+					</listitem>
+					<listitem>
+						<para>Set the Funding Provider contact record - generally this would be the
+							Department of Education or another similar contact you keep in your
+							system. If you don't have one, create one.</para>
+					</listitem>
+					<listitem>
+						<para>Set the purchasing contract ID (NSW Commitment ID) - this will appear
+							as a customer reference in the invoice record.</para>
+					</listitem>
+					<listitem>
+						<para>Set the Price - this is the full amount of money you're expecting to be paid in funding,
+							NOT from the student. Student invoices are all controlled via the
+							summary in Checkout</para>
+					</listitem>
+					<listitem>
+						<para>Set the Payment Plan estimates - The payment plan will show a date
+							entry for each day a session is held in this class. You will also see a
+							breakdown of the class training plan, which will show you the number of
+							units commenced by that date and the number of units completed by that
+							date. These are intended as a guide to help you work out your payment
+							estimates. </para>
+						<para>Just like in other <link xlink:href="batchPayments.html">payment plans</link>, you can
+							click a payment plan entry (not the first entry), and set an amount. As
+							with other payment plans, the total amount put into the payment plans
+							must equal the amount you entered into the Price field above.</para>
+					</listitem>
+				</orderedlist>
+			</para>
+			<para>These invoices are all traceable within onCourse, just like a normal invoice, from the
+				invoices window.</para>
 		</section>
 	</section>
 </chapter>

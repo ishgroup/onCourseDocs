@@ -2,23 +2,31 @@ import org.apache.tools.ant.filters.ReplaceTokens
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
 plugins {
     id 'com.github.ben-manes.versions' version '0.28.0' // adds the task 'dependencyUpdates'
     id 'com.dorongold.task-tree' version '1.5' // adds the task 'taskTree [some task]'
     id 'distribution'
     id 'maven-publish'
+    id 'org.asciidoctor.jvm.convert' version '3.2.0'
+}
+
+repositories {
+    jcenter()
 }
 
 configurations {
     docbookxslt
 }
-repositories.maven {
-    url 'https://repo.ish.com.au/content/groups/public'
-}
-
 dependencies {
     docbookxslt 'net.sf.docbook:docbook-xsl:1.79.1:resources@zip'
 }
+
 task explodeXSL(type: Copy) {
     from zipTree(configurations.docbookxslt.singleFile)
     into "${buildDir}/xslt"
@@ -27,6 +35,14 @@ task explodeXSL(type: Copy) {
 subprojects {
     apply plugin: 'distribution'
     apply plugin: 'maven-publish'
+    apply plugin: 'org.asciidoctor.jvm.convert'
+
+    asciidoctor {
+        sourceDir file('src')
+        outputDir file('build')
+    }
+
+
     group = 'ish.oncourse.docs'
     version = project.hasProperty('releaseVersion') ? project.releaseVersion : 'SNAPSHOT'
 
@@ -131,7 +147,7 @@ subprojects {
             }
         }
     }
-    
+
     // this task should be periodically run manually to optimise files in the source folders
     task optimise {
         description = "Optimise all the images"
@@ -139,7 +155,7 @@ subprojects {
         // both ImageMagick and optipng need to be installed
         doLast {
             fileTree("src").matching{ include '**/*.png' }.each{ f ->
-                new ByteArrayOutputStream().withStream { resolution -> 
+                new ByteArrayOutputStream().withStream { resolution ->
                     exec {
                         commandLine = 'magick'
                         standardOutput = resolution

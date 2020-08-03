@@ -98,12 +98,14 @@
 				<para>Adding thumbnail images to courses</para>
 			</caption>
 		</mediaobject>
-		<para>To enable this feature you will have to add the following code to the CourseItem.tml file
-			&lt;div t:type="ui/image" name="${courseItemModel.course.code}_1" width="pixel width"
-			height="pixel height"&gt;&lt;/div&gt;, just substituting the words pixel width and pixel
-			height for the correct dimensions. So assuming the image you are adding is 200px x 200px
-			then the code will be &lt;div t:type="ui/image" name="${courseItemModel.course.code}_1"
-			width="200" height="200"&gt;&lt;/div&gt;.</para>
+		<para>To enable this feature you will have to add the following code to the CourseItem.tml
+			file:</para>
+		<para>
+			<programlisting>&lt;div t:type="ui/image" name="${courseItemModel.course.code}_1" width="pixel width" height="pixel height"&gt;&lt;/div&gt;</programlisting>
+		</para>
+		<para>substituting the words 'pixel width' and 'pixel height' for the correct dimensions. So
+			assuming the image you are adding is 200px x 200px then the code will be: </para>
+		<programlisting>&lt;div t:type="ui/image" name="${courseItemModel.course.code}_1" width="200" height="200"&gt;&lt;/div&gt;</programlisting>
 		<note>
 			<para>The CourseItem.tml file can be found in WebDAV by going to templates -> default -> CourseItem.tml. </para>
 		</note>

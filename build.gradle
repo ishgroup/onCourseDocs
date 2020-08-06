@@ -51,22 +51,24 @@ subprojects {
 
 
     asciidoctor {
-        sourceDir 'src'
+        baseDir "${projectDir}/src"
+        sourceDir baseDir
         sources {
-            include '*.adoc'
+            include 'index.adoc'
         }
         outputDir "${buildDir}/html"
 
         options doctype: 'book'
         attributes  'source-highlighter': 'coderay',
-                    'linkcss': ''
+                    'linkcss': '',
+                    'stylesheet': 'oncourse.css'
 
         resources {
             from(sourceDir) {
                 include 'images/**'
             }
-            from "${rootDir}/src/css/ish.css"
-           // into "${buildDir}/html"
+            from "${rootDir}/src/css/oncourse.css"
+            from "${rootDir}/src/js"
         }
     }
 

@@ -6,11 +6,23 @@
   </info>
   <section role='important'>
     <title>Important changes</title>
-    <para> </para>
-  </section>
-  <section role='major'>
-    <title>Major features</title>
-    <para> </para>
+    <para>
+      <para>We recently informed all onCourse users via an update on the onCourse dashboard that we
+        would be periodically updating scripts in the system with newer versions of these scripts.
+        This work is now completed in version 37, so you'll notice in your system now several 'new'
+        scripts. If you had the default scripts turned off in your system, then the old ones have
+        been simply updated with the new ones, and there's nothing for you to do. if you had any
+        default scripts turned on and they hadn't had their name changed from their default name,
+        these will now appear with the word 'old' in the title. This denotes that you are still
+        using an old script.</para>
+      <para>The newer scripts are much more user-friendly in that they allow all users the ability
+        to edit the variables within the script. These variables change per script, but typically
+        they are used to set the message templates referenced by the script. This, as well as
+        re-factoring the script code to make them run more efficiently, was the main goal of these
+        script changes.</para>
+      <para>We've also implemented some nice new usability features like the drag and drop UI for
+        uploading new documents to onCourse.</para>
+    </para>
   </section>
   <section role='scripts'>
     <title>Reports and scripts</title>
@@ -216,39 +228,24 @@
     <title>Minor features</title>
     <itemizedlist>
     
-      <listitem>
-        <para>Show discounted prices in class edit view
+      <listitem>Display discounted prices in right-hand column of class edit view
           <systemitem>OD-14807</systemitem>
+      </listitem>
+      <listitem>
+        <para>Implementation of drag and drop feature in Documents UI
+            <systemitem>OD-14826</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>UI implementation of drag and drop feature
-          <systemitem>OD-14826</systemitem>
+        <para>Extend custom field types with new data types <systemitem>OD-14827</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Extend custom field types with data type angel
-          <systemitem>OD-14827</systemitem>
+        <para>Reviewed and improved AVETMISS export code <systemitem>OD-14875</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Review and improve AVETMISS export code
-          <systemitem>OD-14875</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>CourseClass/Traineeship clash validation works incorrectly
-          <systemitem>OD-14878</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Run data upgrades with liquibase
-          <systemitem>OD-14889</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Message template variable type
-          <systemitem>OD-14890</systemitem>
+        <para>Added Message template variable type <systemitem>OD-14890</systemitem>
         </para>
       </listitem>
       <listitem>
@@ -257,23 +254,21 @@
         </para>
       </listitem>
       <listitem>
-        <para>Script trigger entity dropdown
-          <systemitem>OD-14920</systemitem>
+        <para>Made script trigger entity a dropdown box <systemitem>OD-14920</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>query closure use context variable by default
-          <systemitem>OD-14921</systemitem>
+        <para>Query closures now use context variable by default <systemitem>OD-14921</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Messages: alert students of assessment release
-          <systemitem>OD-14930</systemitem>
+        <para>New message template: alert students of assessment release
+            <systemitem>OD-14930</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Messages: alert tutors of assessment release
-          <systemitem>OD-14931</systemitem>
+        <para>New message template: alert tutors of assessment release
+            <systemitem>OD-14931</systemitem>
         </para>
       </listitem>
     </itemizedlist>
@@ -282,63 +277,52 @@
     <title>Fixes</title>
     <itemizedlist>
       <listitem>
-        <para>Redundant sidebar horizontal scrolling
-          <systemitem>OD-14882</systemitem>
+        <para>Removed a redundant horizontal scrolling sidebar from the Dashboard
+            <systemitem>OD-14882</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Error when moving between related sites and rooms
-          <systemitem>OD-14888</systemitem>
+        <para>Fixed error where CourseClass/Traineeship clash validation worked incorrectly
+            <systemitem>OD-14878</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Import error
-          <systemitem>OD-14894</systemitem>
+        <para>Fixed error when navigating between related sites and rooms
+            <systemitem>OD-14888</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Allow last outcome to be deleted if enrolment is cancelled
-          <systemitem>OD-14897</systemitem>
+        <para>Fixed Import error <systemitem>OD-14894</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Latest Activity clears on Dashboard refresh
-          <systemitem>OD-14901</systemitem>
+        <para>Now allow last outcome to be deleted if enrolment is cancelled
+            <systemitem>OD-14897</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Money fields allow more than 2 digits after dot
-          <systemitem>OD-14902</systemitem>
+        <para>Fixed error where Latest Activity cleared on Dashboard refresh. No longer clears on
+          refresh, only logout <systemitem>OD-14901</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>"Entity is required" message when saving message template
-          <systemitem>OD-14903</systemitem>
+        <para>Fixed an error where money fields allowed more than 2 digits after dot
+            <systemitem>OD-14902</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Custom fields map and list values loose focus
-          <systemitem>OD-14908</systemitem>
+        <para>Removed validation of Entity field in message templates
+            <systemitem>OD-14903</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>update 'List ID' field label in Mailchimp integration
-          <systemitem>OD-14910</systemitem>
+        <para>Updated 'List ID' field label in Mailchimp integration to 'Audience ID'
+            <systemitem>OD-14910</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Daylight saving time not shown in date entry helper
-          <systemitem>OD-14919</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>Application created with wrong confirmationStatus
-          <systemitem>OD-14923</systemitem>
-        </para>
-      </listitem>
-      <listitem>
-        <para>EditInPlace inline formatting errors
-          <systemitem>OD-14926</systemitem>
+        <para>Fixed error where Daylight saving time was not shown in date entry helper in onCourse
+            <systemitem>OD-14919</systemitem>
         </para>
       </listitem>
     </itemizedlist>

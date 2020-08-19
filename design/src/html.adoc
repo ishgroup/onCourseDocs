@@ -1,7 +1,7 @@
 [[templates]]
-== HTML Templates
+= HTML Templates
 
-=== Editing templates
+== Editing templates
 
 Once you have exhausted the capabilities of styling your site purely
 through modifying css, you may want to customise the html which is
@@ -31,14 +31,14 @@ folder within resources/layouts.
 image:images/templateStructure.png[ The hierarchy of the templates is
 quite complex ,scaledwidth=100.0%]
 
-=== Page wrappers
+== Page wrappers
 
 All pages on the site are wrapped in one of two main templates. Most
 pages will have PageStructure.tml wrapped around them to render menus,
 headers, blocks, etc. Other web requests might be drawn inside a
 'lightbox' effect and so should not have all this extra content.
 
-==== Page Structure
+=== Page Structure
 
 Page structure is one of the few templates that is not editable. You
 cannot override this particular template since it controls how the CMS
@@ -48,22 +48,22 @@ not need to worry about this template.
 [source,xml]
 ----
 <!DOCTYPE html>
-                    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
-                    xmlns:p="tapestry:parameter" lang="en">
-                    <head>
-                    <head t:type="ui/pagehead" title="${title}"/>
-                    </head>
-                    
-                    <body t:type="any" class="prop:agentAwareBodyClass" id="prop:bodyId">
-                    <div  t:type="ui/BodyStructure" webNodeType="webNodeType">
-                    <t:body/>
-                    </div>
-                    <span t:type="ui/googleAnalytics"></span>
-                    </body>
-                    </html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+xmlns:p="tapestry:parameter" lang="en">
+<head>
+  <head t:type="ui/pagehead" title="${title}"/>
+</head>
+
+<body t:type="any" class="prop:agentAwareBodyClass" id="prop:bodyId">
+  <div  t:type="ui/BodyStructure" webNodeType="webNodeType">
+    <t:body/>
+  </div>
+  <span t:type="ui/googleAnalytics"></span>
+</body>
+</html>
 ----
 
-==== Body Structure
+=== Body Structure
 
 Filename::
   BodyStructure.tml
@@ -77,7 +77,7 @@ you reach `<t:body/>` in the template below, Courses.tml is inserted.
 ----
 ----
 
-==== Dialog Structure
+=== Dialog Structure
 
 Filename::
   DialogStructure.tml
@@ -90,7 +90,7 @@ javascript references, but does include the main site.css stylesheet.
 ----
 ----
 
-=== Page templates
+== Page templates
 
 Some of the templates you can edit are reached by a particular URL. For
 example, the /course/ABC renders CourseDetails.tml. All of these top
@@ -104,7 +104,7 @@ This will render the template, wrapped with the PageStructure.tml
 template (to draw the main page design and layout), and give you the
 opportunity to override the page title and body css id.
 
-==== Courses
+=== Courses
 
 Filename::
   Courses.tml
@@ -124,7 +124,7 @@ bookmarking.
 ----
 ----
 
-==== Course Details
+=== Course Details
 
 Filename::
   CourseDetails.tml
@@ -137,7 +137,7 @@ Renders a single course description page.
 ----
 ----
 
-==== Class Details
+=== Class Details
 
 Filename::
   CourseClassDetails.tml
@@ -151,7 +151,7 @@ is called "CourseClass" within the internals of onCourse.
 ----
 ----
 
-==== Tutor Details
+=== Tutor Details
 
 Filename::
   TutorDetails.tml
@@ -164,7 +164,7 @@ Renders a tutor profile in a lightbox.
 ----
 ----
 
-==== Sites
+=== Sites
 
 Filename::
   Sites.tml
@@ -178,7 +178,7 @@ maps.
 ----
 ----
 
-==== Site Details
+=== Site Details
 
 Filename::
   SiteDetails.tml
@@ -191,7 +191,7 @@ Displays the details of the site including the map and site information.
 ----
 ----
 
-==== Page Not Found
+=== Page Not Found
 
 Filename::
   PageNotFound.tml
@@ -204,7 +204,7 @@ Renders a page when the URL can not be found.
 ----
 ----
 
-==== Promo Codes Page
+=== Promo Codes Page
 
 Filename::
   PromoCodesPage.tml
@@ -217,7 +217,7 @@ Allows the user to enter a promotional code within a lightbox.
 ----
 ----
 
-==== Room Details
+=== Room Details
 
 Filename::
   RoomDetails.tml
@@ -230,7 +230,7 @@ Displays details about the room, including the site details.
 ----
 ----
 
-==== Add Discount
+=== Add Discount
 
 Filename::
   AddDiscount.tml
@@ -245,7 +245,7 @@ Discount Redemption
 ----
 ----
 
-==== Sitemap XML
+=== Sitemap XML
 
 Filename::
   SitemapXML.tml
@@ -258,12 +258,12 @@ Google, Bing, Yahoo and other search engines love this.
 ----
 ----
 
-=== Component templates
+== Component templates
 
 These templates can never be called directly from an URL. Instead they
 are used by other templates to build up a page.
 
-==== Block Display
+=== Block Display
 
 Filename::
   BlockDisplay.tml
@@ -274,7 +274,7 @@ Builds the parameters to include content - copy, images, components
 ----
 ----
 
-==== Body Footer
+=== Body Footer
 
 Filename::
   BodyFooter.tml
@@ -286,7 +286,7 @@ foot of the page
 ----
 ----
 
-==== Body Header
+=== Body Header
 
 Filename::
   BodyHeader.tml
@@ -298,7 +298,7 @@ the top of the page.
 ----
 ----
 
-==== Class Item
+=== Class Item
 
 Filename::
   CourseClassItem.tml
@@ -330,7 +330,7 @@ Now buttons
 image:images/places_available.png[ Snapshot display of Course Class and
 Class Times ,scaledwidth=100.0%]
 
-==== Course Class Places Available
+=== Course Class Places Available
 
 Filename::
   CourseClassPlacesAvailable.tml
@@ -341,7 +341,7 @@ Produces a Class enrolment status display. Called by "CourseClassItem".
 ----
 ----
 
-==== Course Class Price
+=== Course Class Price
 
 Filename::
   CourseClassPrice.tml
@@ -352,7 +352,7 @@ Produces a class pricing display. Called by "CourseClassItem".
 ----
 ----
 
-==== Course item
+=== Course item
 
 Filename::
   CourseItem.tml
@@ -376,7 +376,7 @@ course and have 'image/jpeg' mimeType
 ----
 ----
 
-==== Course Search Form
+=== Course Search Form
 
 Filename::
   CourseSearchForm.tml
@@ -389,7 +389,7 @@ Called by "BodyHeader" and in turn calls "Search Inputs"
 ----
 ----
 
-==== Global Navi
+=== Global Navi
 
 Filename::
   GlobalNavi.tml
@@ -402,7 +402,7 @@ Called by "BodyStructure"
 ----
 ----
 
-==== Google Analytics
+=== Google Analytics
 
 Filename::
   GoogleAnalytics.tml
@@ -415,7 +415,7 @@ Called by "CourseClassItem" in "CourseClassDetails"
 ----
 ----
 
-==== Google Map Sites
+=== Google Map Sites
 
 Filename::
   GoogleMapSites.tml
@@ -428,7 +428,7 @@ Called by "Courses" and "Sites" and in turn calls "GoogleDirections"
 ----
 ----
 
-==== Google Directions
+=== Google Directions
 
 Filename::
   GoogleDirections.tml
@@ -441,7 +441,7 @@ Called by "GoogleMapSites" and "SiteDetailsComponent"
 ----
 ----
 
-==== Hint Component
+=== Hint Component
 
 Filename::
   HintComponent.tml
@@ -454,7 +454,7 @@ process.
 ----
 ----
 
-==== Menu
+=== Menu
 
 Filename::
   Menu.tml
@@ -467,7 +467,7 @@ image:images/menuBase.png[ Course Class ,scaledwidth=100.0%]
 ----
 ----
 
-==== Menu Item
+=== Menu Item
 
 Filename::
   MenuItem.tml
@@ -478,7 +478,7 @@ Renders a specific menu. Called by "Menu"
 ----
 ----
 
-==== Page Head
+=== Page Head
 
 Filename::
   PageHead.tml
@@ -487,7 +487,7 @@ Filename::
 ----
 ----
 
-==== Payment Agreement
+=== Payment Agreement
 
 Filename::
   PaymentAgreement.tml
@@ -496,7 +496,7 @@ Filename::
 ----
 ----
 
-==== Promo Codes View
+=== Promo Codes View
 
 Filename::
   PromoCodesView.tml
@@ -505,7 +505,7 @@ Filename::
 ----
 ----
 
-==== Quick Search View
+=== Quick Search View
 
 Filename::
   QuickSearchView.tml
@@ -518,7 +518,7 @@ Called by "PageStructure"
 ----
 ----
 
-==== Room Location
+=== Room Location
 
 Filename::
   RoomLocation.tml
@@ -527,7 +527,7 @@ Filename::
 ----
 ----
 
-==== Room Location Text
+=== Room Location Text
 
 Filename::
   RoomLocationText.tml
@@ -540,7 +540,7 @@ Called by "PageStructure"
 ----
 ----
 
-==== Search Criteria
+=== Search Criteria
 
 Filename::
   SearchCriteria.tml
@@ -559,7 +559,7 @@ Called by "PageStructure"
 ----
 ----
 
-==== Search Inputs
+=== Search Inputs
 
 Filename::
   SearchInputs.tml
@@ -568,7 +568,7 @@ Filename::
 ----
 ----
 
-==== Search Terms Clarification
+=== Search Terms Clarification
 
 Filename::
   SearchTermsClarification.tml
@@ -577,7 +577,7 @@ Filename::
 ----
 ----
 
-==== Shortlist
+=== Shortlist
 
 Filename::
   ShortList.tml
@@ -588,7 +588,7 @@ Short List Manager
 ----
 ----
 
-==== Site Details Component
+=== Site Details Component
 
 Filename::
   SiteDetailsComponent.tml
@@ -597,7 +597,7 @@ Filename::
 ----
 ----
 
-==== Timeline Event Detail
+=== Timeline Event Detail
 
 Filename::
   TimelineEventDetail.tml
@@ -606,7 +606,7 @@ Filename::
 ----
 ----
 
-==== Timetable Events
+=== Timetable Events
 
 Filename::
   TimetableEvents.tml
@@ -615,7 +615,7 @@ Filename::
 ----
 ----
 
-==== Social Media
+=== Social Media
 
 Filename::
   SocialMedia.tml

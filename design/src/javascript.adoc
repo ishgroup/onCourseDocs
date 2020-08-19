@@ -1,7 +1,7 @@
-== Javascript
+[[javascript]]
+= Javascript
 
-[[js]]
-=== File structure
+== File structure
 
 Log into webDAV and look at this folder:
 
@@ -28,7 +28,7 @@ syntax to SCSS so don't get them confused. The combined output file is
 called all.js and the files which are merged don't need to start with an
 underscore.
 
-==== Minification
+=== Minification
 
 Unlike CSS, the javascript is not automatically minified. This is
 because sometimes javascript minification can actually break your
@@ -42,13 +42,13 @@ pushing it to live.
 
 We use the Google Closure compiler to verify and minify the output.
 
-==== Compression
+=== Compression
 
 all.js.gz is automatically created and used by browsers. This is another
 reason minification may not be quite so important: compression often
 does a pretty good job of reducing the file sizes.
 
-=== Core libraries
+== Core libraries
 
 We supply a number of third party javascript libraries with your site by
 default. The following list are bundled together as dynamic.js and
@@ -72,7 +72,7 @@ building sites:
 
 You may wish to remove or add more libraries for your particular design
 
-=== config.js
+== config.js
 
 config.js controls the behaviour of the browser application parts of
 onCourse. In particular, the checkout application that drives the

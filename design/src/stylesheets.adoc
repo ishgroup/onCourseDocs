@@ -1,4 +1,4 @@
-== Stylesheets
+= Stylesheets
 
 One of the first ways you'll want to modify the look of your site is by
 changing css stylesheets. onCourse comes with a set of default
@@ -10,7 +10,7 @@ Because you are building on existing stylesheets, lots of things are
 already taken care of for you. Your html/css developer can save weeks of
 work with our existing responsive layouts, grid and basic styling.
 
-=== File structure
+== File structure
 
 First let's see where all the files are. To make it easier to navigate,
 all the CSS is broken up into lots of files within a set of folders.
@@ -39,7 +39,7 @@ listings, enrolment templates and much more. Override them however you
 want, but they will save you a lot of work rather than starting from
 scratch.
 
-=== SCSS
+== SCSS
 
 If you didn't recognise the `@import` command above as CSS, that's
 because onCourse uses a variation of CSS called
@@ -77,7 +77,7 @@ modify to change your site. For example, override `$bodyFontFamily` in
 order to change the font right through your site. Or change
 `$primaryColor`, `$secondaryColor` and `$containerWidth`.
 
-==== Bourbon
+=== Bourbon
 
 By default your stylesheets include Bourbon. This css library gives you
 lots of useful functionality that you'd otherwise have to write by hand.
@@ -108,7 +108,7 @@ time with common css blocks.
 
 Read the http://bourbon.io/docs/[docs for Bourbon].
 
-==== Compression
+=== Compression
 
 No matter how many separate files you break up your stylestyles into,
 the output will be compressed into one file and minified. This means
@@ -125,7 +125,7 @@ as fast as possible. You'll see these output files as:
 * `/s/stylesheets/css/site.css`
 * `/s/stylesheets/css/site.css.gz`
 
-==== Map
+=== Map
 
 Because it can be hard to review minified and combined CSS in your
 browser, we also output a map file. This allows Chrome and Firefox
@@ -137,7 +137,7 @@ searching. The map can be seen as:
 
 Your browser will automatically find and use that file if it knows how.
 
-=== Responsive design
+== Responsive design
 
 It is extremely important in a modern world filled with tablets and
 smart phones that your site is built to make life easy for those users.
@@ -153,7 +153,7 @@ onCourse has media sizes of $small-screen, $tablet-screen and
 $desktop-screen throughout the base stylesheets and a grid based on
 bootstrap 3.
 
-=== Bootstrap
+== Bootstrap
 
 Because we bring in http://getbootstrap.com/[bootstrap] 3 by default,
 you get not only a nice grid but also a lot of common component styles

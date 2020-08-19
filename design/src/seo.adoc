@@ -1,8 +1,8 @@
 [[seo]]
-== SEO and analysis
+= SEO and analysis
 
 [[seo-overview]]
-=== Overview
+== Overview
 
 onCourse is pre-configured with a whole range of SEO features to make
 your life easier and get good search ranking with minimal effort.
@@ -15,7 +15,7 @@ correct search terms that people will search for, you are well on your
 way to a successful website.
 
 [[seo-tagmanager]]
-=== Tag Manager
+== Tag Manager
 
 Every site we build is created with Google Tag Manager integrated. This
 service drives the injection of javascript and tracking pixels or html
@@ -37,7 +37,7 @@ will continue to need access to tag manager so that we can debug
 problems and update core code as needed.
 
 [[seo-analytics]]
-=== Google analytics
+== Google analytics
 
 onCourse injects some additional data into your analytics beyond the
 standard page views:
@@ -60,7 +60,7 @@ through to the end.
 through a Google Analytics acquisition funnel. See where and why people
 are dropping off.
 
-==== Google Analytics Setup
+=== Google Analytics Setup
 
 In order to get data into your Google Analytics account you'll need to
 complete the following steps:
@@ -93,7 +93,7 @@ image:images/google_analytics_settings.png[image,scaledwidth=100.0%]
 When you have some time, explore the Analytics "goals" setup for ways to
 get useful information such as dropoff in your checkout rates.
 
-===== Events
+==== Events
 
 Events are sent to Google Analytics at various points in the checkout
 process. Along with the event, onCourse sends a rich data structure
@@ -202,7 +202,7 @@ dataLayer.push({
 ....
 
 [[seo-webmaster]]
-=== Webmaster tools
+== Webmaster tools
 
 https://www.google.com/webmasters/tools[Google webmaster tools] is a
 useful resource for to you review aspects of your website. Here you are
@@ -216,7 +216,7 @@ site. Just log into webDAV and put that file just inside the 's' folder.
 Publish your site for Google to be able to see this file.
 
 [[seo-sitemap]]
-=== Sitemap
+== Sitemap
 
 We generate a /sitemap.xml file automatically which you can add to
 Google's webmaster tools. This allows Google to quickly find all the
@@ -225,12 +225,12 @@ also gives Google hints about when those pages are updates so that they
 are crawled more quickly.
 
 [[seo-markup]]
-=== HTML markup
+== HTML markup
 
 The html markup of your site is customisable throughout, but by default
 you get some robust templates that Google will love.
 
-==== Semantic HTML
+=== Semantic HTML
 
 By building the html of your onCourse site with a clear structure and
 meaning, search engines such as Google are able to make sense of the
@@ -238,7 +238,7 @@ structure and meaning. onCourse comes with good html that gives you a
 good starting point. For example, each page should only have a single h1
 element, sections, footer and other modern html elements.
 
-==== Accessibility
+=== Accessibility
 
 Although this is not strictly an SEO benefit, adhering to
 https://www.w3.org/TR/WCAG20/[accessibility standards] means that
@@ -248,7 +248,7 @@ and also means that Google and other search engines will properly index
 your site and understand the content structure rather than just index a
 mass of words.
 
-==== Schema.org
+=== Schema.org
 
 Schema.org is a set of markup rules endorsed by Google and other search
 engines. It specifies ways to annotate the html to give it specific
@@ -258,12 +258,12 @@ dates, prices and other information right in their search
 results.image:images/schema-results.png[image,scaledwidth=100.0%]
 
 [[seo-nav]]
-=== Navigation
+== Navigation
 
 The navigation and structure of the site's page are important to good
 search results.
 
-==== Canonical links
+=== Canonical links
 
 Some pages in your onCourse site don't last very long. In particular,
 the class pages with a URL like `/class/ABC-123` will be irrelevant as
@@ -272,7 +272,7 @@ on these pages, only for that to evaporate. onCourse automatically adds
 a canonical link to the correct course page, transferring any page rank
 and inbound links to somewhere it will do good.
 
-==== URLs
+=== URLs
 
 onCourse has clean URLs which are easy for users and contribute to your
 SEO. All course detail and list pages contain the word "course" and you
@@ -281,7 +281,7 @@ And your tag structure can be structured however you want.. For example,
 a URL like "/courses/business/communication" picks up several important
 keywords.
 
-==== Redirects
+=== Redirects
 
 If you ever change URLs it is vital that you don't lose page rank on
 those old pages. While you don't need to worry about classes, tags and
@@ -289,7 +289,7 @@ course pages can accumulate valuable scores and you should implement
 redirects to the closest new page.
 
 [[seo-meta]]
-=== Meta headers
+== Meta headers
 
 onCourse does not implement meta-keyword headers since it is well
 documented that no search engines use them for indexing. However we do
@@ -317,7 +317,7 @@ headers you can do this in PageHead.tml. You can customise the page
 title in Title.tml
 
 [[seo-tls]]
-=== SSL/TLS encryption
+== SSL/TLS encryption
 
 Google has indicated that sites with end-to-end encryption will get
 higher search rankings since they are more likely to be ligitimate sites
@@ -325,7 +325,7 @@ which care about the privacy of their users. All onCourse sites redirect
 immediately to HTTPS for even the non-payment gateway parts of the site.
 
 [[seo-speed]]
-=== Page speed
+== Page speed
 
 A lot of effort goes into making onCourse really fast, even when
 displaying faceted search results from thousands of courses. We use

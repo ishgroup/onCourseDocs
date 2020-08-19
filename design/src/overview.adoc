@@ -1,7 +1,7 @@
 [[overview]]
-== An overview
+= An overview
 
-=== Customising onCourse Web
+== Customising onCourse Web
 
 onCourse Web is designed to be extremely flexible, allowing you to
 implement almost any concept you create for your site. When you engage
@@ -27,7 +27,7 @@ using the online CMS without understanding anything here. Your designer,
 or ish, will be able to work on the page design and create something
 into which you can drop your content.
 
-==== Editing your site via WebDAV
+=== Editing your site via WebDAV
 
 While you can log into your CMS to edit content, to make more granular
 changes to the code or design of your website you'll need to use WebDAV.
@@ -62,7 +62,7 @@ connection and you'll be asked to enter your password, which will be the
 same as the one you use to access the CMS. Once you have access you'll
 see your site's folder structure.
 
-=== Draft site
+== Draft site
 
 All onCourse websites have both draft site and a live website. The draft
 site will be visible to you only when you are logged into the Editor. If
@@ -86,7 +86,7 @@ image:images/Publishing_your_site.png[ How to publish your site
 ,scaledwidth=100.0%]
 
 [[specialPages]]
-=== Special URLs
+== Special URLs
 
 Some URLs in your site are reserved for special pages. These pages are
 delivered by the onCourse software itself. To customise them, consult
@@ -122,7 +122,7 @@ information which drives them. These pages include:
 /editor/webdav::
   All pages under this path are reserved for webdav access.
 
-=== Building Editor pages
+== Building Editor pages
 
 Pages which are not 'special' are delivered from the Editor. That is,
 you are able to create pages and assign them to any URL you choose. Each
@@ -135,7 +135,7 @@ themes and layouts.
 
 Object hierarchy
 
-==== The database
+=== The database
 
 Starting from the top of the diagram we have the onCourse database
 itself. This is the application which contains courses, classes, tags,
@@ -143,7 +143,7 @@ students, tutors, and so on. The data in the onCourse database is
 entered completely within the onCourse client/server applications and is
 automatically synchronised with the website.
 
-==== The website
+=== The website
 
 Each onCourse database can drive one or many websites. Each website will
 have one or more domains which are used to access them. So Acme Training
@@ -153,14 +153,14 @@ http://www.acme-corporate.com. The leisure and corporate sites can have
 completely different content (pages), different graphic design (layouts)
 and even display different sets of courses.
 
-==== The pages
+=== The pages
 
 The website is made up of pages entered through the Editor. For full
 details on how to write and build web pages, consult the onCourse
 website and Editor handbook. Each page has content (text, pictures, etc)
 and will be linked to a theme.
 
-==== The theme
+=== The theme
 
 Themes are a way of grouping pages and giving them their own character.
 You can place blocks on a theme, so you might create a theme for
@@ -174,7 +174,7 @@ other blocks of special offers.
 
 Theme Editor
 
-==== The layout
+=== The layout
 
 The final piece of this structure is the layout. This is where you as a
 designer will weave your magic. The layout is represented by a folder in
@@ -188,7 +188,7 @@ There is always a layout called 'default' which is used by the system
 for the special pages outlined above. You can create as many layouts you
 like and link them to themes you create in the Editor.
 
-=== WebDAV files
+== WebDAV files
 
 When you login into WebDAV you will see folders like this:
 
@@ -214,7 +214,7 @@ provided for you called **default**which you cannot delete.
 You can edit pages and blocks directly from within WebDAV. The result is
 the same as if you had edited those same items from within the CMS.
 
-=== Editing redirects in WebDAV
+== Editing redirects in WebDAV
 
 Any 301 redirects added to your site can be seen in plaintext format in
 the *redirects.txt* file, located in your sites root directory. These
@@ -255,7 +255,7 @@ Examples of valid redirects:
 If an invalid redirect is entered into the redirects.txt file, the file
 will not be able to be saved.
 
-=== Video
+== Video
 
 Although it is possible to load video files directly into the static
 folder, the onCourse servers are not optimised for serving video. You
@@ -270,7 +270,7 @@ system and deliver it from there, however you'll have to create your own
 video player and tie them all together so we still recommend one of the
 third party video delivery systems like YouTube or Vimeo.
 
-=== Favicon
+== Favicon
 
 Some websites show a tiny icon in the URL bar and in bookmarks. This is
 called a favicon. To add a favicon to your onCourse website, you need an
@@ -293,5 +293,5 @@ the favicon images
 ----
 <link href="/s/images/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
 <link href="/s/images/favicon.ico" rel="shortcut icon" type="images/x-icon"/>
-<link rel="apple-touch-icon-precomposed" href="/s/images/apple-touch-icon-precomposed.png"/>         
+<link rel="apple-touch-icon-precomposed" href="/s/images/apple-touch-icon-precomposed.png"/>
 ----

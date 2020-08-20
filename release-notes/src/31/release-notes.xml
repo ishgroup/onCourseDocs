@@ -6,18 +6,21 @@
   </info>
   <section role='major'>
     <title>Major features</title>
-    <para>We've introduced a new feature called Funding Invoice. This is a secondary invoice that
-      you create during the Checkout process for enrolments into classes that have a default funding
-      contract that isn't 'fee for service (non-funded)', to help track when you expect funding
-      payments will come in. It ties in closely with the training plan that is set in the class
-      window.</para>
-    <para>You can learn more about it <link
-        xlink:href="https://www.ish.com.au/onCourse/doc/manual/rto.html#rto_funding-invoices">in
-        our documentation, here</link>.</para>
+    <para>We're introducing Funding Invoices, a new feature that will help you to track any monies
+      owed to you via additional funding, separately from the student invoice. For single enrolments
+      where the class has a funding contract (that isn't fee for service), an additional window is
+      now available in the Checkout called Funding invoice. Set the provider contact, set the
+      purchasing contract ID, set the amount you're expecting to receive in funding, and then set
+      the expected payment dates. </para>
+    <para>Of course, if you don't want to use this feature, simply flick the switch at the top of
+      the window and it will go away, allowing you to move on to accepting the student
+      payment.</para>
+    <para>These invoices are created in onCourse and not sent to the contact, as a way for you to
+      track your funded payments internally.</para>
     <mediaobject>
       <imageobject>
         <imagedata scalefit="1" width="100%" contentdepth="100%"
-          fileref="images/funding_invoice.png" format="png"/>
+          fileref="funding_invoice.png" format="png"/>
       </imageobject>
       <caption>
         <para>Funding invoice in the Checkout</para>
@@ -32,12 +35,12 @@
         </para>
       </listitem>
       <listitem>
-        <para>Added ability to set Customer reference and invoice notes in checkout
+        <para>Added customer reference and invoice notes in checkout
             <systemitem>OD-14810</systemitem>
         </para>
       </listitem>
       <listitem>
-        <para>Credit Notes from Enrolment cancellation now linking to Enrolment record
+        <para>Credit Notes from Enrolment cancellation are now linking to Enrolment record
             <systemitem>OD-14808</systemitem>
         </para>
       </listitem>

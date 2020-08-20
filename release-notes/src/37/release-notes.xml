@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xmlns='http://docbook.org/ns/docbook' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://docbook.org/ns/docbook file://../../src/docbook.xsd' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0' xml:id='release-37'>
+  <info>
+    <title>Release 37</title>
+    <pubdate>18 Aug. 2020</pubdate>
+  </info>
+  <section role='important'>
+    <title>Important changes</title>
+    <para>
+      <para>We recently informed all onCourse users via an update on the onCourse dashboard that we
+        would be periodically updating scripts in the system with newer versions of these scripts.
+        This work is now completed in version 37, so you'll notice in your system now several 'new'
+        scripts. If you had the default scripts turned off in your system, then the old ones have
+        been simply updated with the new ones, and there's nothing for you to do. if you had any
+        default scripts turned on and they hadn't had their name changed from their default name,
+        these will now appear with the word 'old' in the title. This denotes that you are still
+        using an old script.</para>
+      <para>The newer scripts are much more user-friendly in that they allow all users the ability
+        to edit the variables within the script. These variables change per script, but typically
+        they are used to set the message templates referenced by the script. This, as well as
+        re-factoring the script code to make them run more efficiently, was the main goal of these
+        script changes.</para>
+      <para>We've also implemented some nice new usability features like the drag and drop UI for
+        uploading new documents to onCourse.</para>
+    </para>
+  </section>
+  <section role='scripts'>
+    <title>Reports and scripts</title>
+    <itemizedlist>
+      <listitem>
+        <para>script: send-weekly-finance-summary-report
+          <systemitem>OD-14410</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: alert-students-of-assessment-release
+          <systemitem>OD-14368</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: alert-students-of-related-class
+          <systemitem>OD-14369</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: alert-tutors-of-assessment-release
+          <systemitem>OD-14370</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: canvas-enrol
+          <systemitem>OD-14371</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: mailchimp-subscribe-on-enrolment
+          <systemitem>OD-14376</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: mailchimp-subscribe
+          <systemitem>OD-14377</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: mailchimp-unsubscribe
+          <systemitem>OD-14378</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: membership-notification-renewal
+          <systemitem>OD-14379</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: micropower-update-members
+          <systemitem>OD-14380</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: moodle-enrol
+          <systemitem>OD-14381</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: notification-of-unmarked-attendance
+          <systemitem>OD-14383</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: notify-tutor-of-unmarked-attendance
+          <systemitem>OD-14384</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-account-statement
+          <systemitem>OD-14386</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-application-decision
+          <systemitem>OD-14387</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-application-received-notification
+          <systemitem>OD-14388</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-birthday-voucher
+          <systemitem>OD-14389</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-certificate-created-notification
+          <systemitem>OD-14390</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-certificate-vet-created-notification
+          <systemitem>OD-14392</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-class-cancellation
+          <systemitem>OD-14394</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-class-confirmed
+          <systemitem>OD-14395</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-enrolment-notice-for-tutors
+          <systemitem>OD-14396</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-enrolment
+          <systemitem>OD-14397</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-invoice
+          <systemitem>OD-14398</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-payment-plan-reminder
+          <systemitem>OD-14399</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-payment-receipt
+          <systemitem>OD-14400</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-refund-advice
+          <systemitem>OD-14401</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-student-class-commencement-notice-7-days
+          <systemitem>OD-14402</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-student-class-commencement-notice
+          <systemitem>OD-14403</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-tutor-class-cancellation-notice
+          <systemitem>OD-14405</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-voucher
+          <systemitem>OD-14408</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: send-waiting-list-reminder
+          <systemitem>OD-14409</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: surveygizmo-send-invite-on-completion
+          <systemitem>OD-14411</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: surveygizmo-send-invite-on-enrolment
+          <systemitem>OD-14412</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: surveymonkey-send-invite-on-completion
+          <systemitem>OD-14413</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: surveymonkey-send-invite-on-enrolment
+          <systemitem>OD-14414</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: sync-availability-cancellation
+          <systemitem>OD-14415</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: sync-availability-enrolment
+          <systemitem>OD-14416</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>script: xero-journal
+          <systemitem>OD-14417</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section role='minor'>
+    <title>Minor features</title>
+    <itemizedlist>
+    
+      <listitem>Display discounted prices in right-hand column of class edit view
+          <systemitem>OD-14807</systemitem>
+      </listitem>
+      <listitem>
+        <para>Implementation of drag and drop feature in Documents UI
+            <systemitem>OD-14826</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Extend custom field types with new data types <systemitem>OD-14827</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Reviewed and improved AVETMISS export code <systemitem>OD-14875</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Added Message template variable type <systemitem>OD-14890</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Integration closure, name is no longer mandatory
+          <systemitem>OD-14905</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Made script trigger entity a dropdown box <systemitem>OD-14920</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Query closures now use context variable by default <systemitem>OD-14921</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>New message template: alert students of assessment release
+            <systemitem>OD-14930</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>New message template: alert tutors of assessment release
+            <systemitem>OD-14931</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section role='fixes'>
+    <title>Fixes</title>
+    <itemizedlist>
+      <listitem>
+        <para>Removed a redundant horizontal scrolling sidebar from the Dashboard
+            <systemitem>OD-14882</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Fixed error where CourseClass/Traineeship clash validation worked incorrectly
+            <systemitem>OD-14878</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Fixed error when navigating between related sites and rooms
+            <systemitem>OD-14888</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Fixed Import error <systemitem>OD-14894</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Now allow last outcome to be deleted if enrolment is cancelled
+            <systemitem>OD-14897</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Fixed error where Latest Activity cleared on Dashboard refresh. No longer clears on
+          refresh, only logout <systemitem>OD-14901</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Fixed an error where money fields allowed more than 2 digits after dot
+            <systemitem>OD-14902</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Removed validation of Entity field in message templates
+            <systemitem>OD-14903</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Updated 'List ID' field label in Mailchimp integration to 'Audience ID'
+            <systemitem>OD-14910</systemitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Fixed error where Daylight saving time was not shown in date entry helper in onCourse
+            <systemitem>OD-14919</systemitem>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+</chapter>

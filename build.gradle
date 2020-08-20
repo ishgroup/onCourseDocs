@@ -56,16 +56,16 @@ subprojects {
         baseDir "${projectDir}/src"
         sourceDir baseDir
         sources {
-            include '*.adoc'
+            include 'index.adoc'
         }
         outputDir "${buildDir}/html"
-        outputOptions {
-            backends = ["multipage_html5"]
-        }
-        asciidoctorj {
-            logLevel 'info'
-            requires file("${rootDir}/src/lib/asciidoctor-multipage.rb")
-        }
+//        outputOptions {
+//            backends = ["multipage_html5"]
+//        }
+//        asciidoctorj {
+//            logLevel 'info'
+//            requires file("${rootDir}/src/lib/asciidoctor-multipage.rb")
+//        }
         options doctype: 'book'
         attributes  'source-highlighter': 'coderay',
                     'linkcss': '',

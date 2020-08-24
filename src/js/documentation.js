@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('.chapter > .toc').prepend("<gcse:search></gcse:search>");
+	$('.book #header > #toc').prepend("<gcse:search></gcse:search>");
 
   $('head').append('<style type="text/css">.gsc-adBlock, .gsc-resultsHeader, .gcsc-branding {display: none !important;}</style>');
 

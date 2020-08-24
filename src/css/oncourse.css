@@ -170,7 +170,6 @@ body {
     color: rgba(0, 0, 0, .8);
     padding: 0;
     margin: 0;
-    font-family: "Noto Serif", "DejaVu Serif", serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1;
@@ -758,7 +757,8 @@ p a > code:hover {
 }
 
 #toc ul.sectlevel0 ul.sectlevel1 {
-    margin: .5em 0
+    margin: .5em 0;
+    padding-left: 12px;
 }
 
 #toc ul {
@@ -771,7 +771,8 @@ p a > code:hover {
 }
 
 #toc a {
-    text-decoration: none
+    text-decoration: none;
+    font-weight: lighter;
 }
 
 #toc a:active {
@@ -780,7 +781,8 @@ p a > code:hover {
 
 #toctitle {
     color: #7a2518;
-    font-size: 1.2em
+    font-size: 1.2em;
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -795,7 +797,7 @@ p a > code:hover {
 
     #toc.toc2 {
         margin-top: 0 !important;
-        background: #f8f8f7;
+        background: #ffffff;
         position: fixed;
         width: 15em;
         left: 0;
@@ -806,7 +808,8 @@ p a > code:hover {
         z-index: 1000;
         padding: 1.25em 1em;
         height: 100%;
-        overflow: auto
+        overflow: auto;
+        display: block;
     }
 
     #toc.toc2 #toctitle {
@@ -816,7 +819,7 @@ p a > code:hover {
     }
 
     #toc.toc2 > ul {
-        font-size: .9em;
+        font-size: .85em;
         margin-bottom: 0
     }
 
@@ -826,7 +829,7 @@ p a > code:hover {
     }
 
     #toc.toc2 ul.sectlevel0 ul.sectlevel1 {
-        padding-left: 0;
+        /*padding-left: 0;*/
         margin-top: .5em;
         margin-bottom: .5em
     }
@@ -856,10 +859,6 @@ p a > code:hover {
 
     #toc.toc2 #toctitle {
         font-size: 1.375em
-    }
-
-    #toc.toc2 > ul {
-        font-size: .95em
     }
 
     #toc.toc2 ul ul {
@@ -2002,7 +2001,8 @@ p {
 
     #toc {
         border-bottom: 1px solid #dddddf !important;
-        padding-bottom: 0 !important
+        padding-bottom: 0 !important;
+        display: none;
     }
 
     body.book #header {
@@ -2108,6 +2108,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     outline: 0;
     vertical-align: baseline;
     border-collapse: collapse;
+    font-weight: normal;
 }
 
 table {
@@ -2450,6 +2451,10 @@ div.list-of-examples dl {
 	padding-top: 0;
 }*/
 
+.book h2, .book h3, .book h4, .book h5, .book h6 {
+	margin-bottom: 0.25em;
+} 
+
 .book h2 {
     font-family: 'Port Lligat Slab', sans-serif;
     font-size: 2em;
@@ -2659,6 +2664,16 @@ pre.programlisting {
     display: none;
 }
 
+.book #content h1.sect0 {
+	border-bottom: 1px solid #f0f0f0;
+	padding: 0.8em 0 0.2em;
+	margin-bottom: 0.2em;
+}
+
+.book #content h1.sect0 + .sect1 {
+	padding-top: 0em;
+}
+
 /* Authorgroup */
 .authorgroup {
     text-align: right;
@@ -2735,6 +2750,9 @@ div.navfooter > table > tbody > tr > td[align="right"], div.navfooter > table > 
     padding: 0 !important;
 }
 
+.gsc-search-button {
+	padding: 0;
+}
 input.gsc-search-button.gsc-search-button-v2 {
     padding: 6px 6px !important;
     background-color: #4C3B35 !important;
@@ -2747,11 +2765,12 @@ input.gsc-input {
 }
 
 .gsc-input-box {
-    border-radius: 4px;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
 }
-
-.gsc-search-box-tools .gsc-search-box .gsc-input {
-    padding-right: 1px !important;
+.gsc-input-box > table {
+	border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .gscb_a {

@@ -72,10 +72,10 @@ subprojects {
                     'toc': 'left',
                     'icons': 'font',
                     'docinfo': 'shared',
+                    'docinfodir': "${rootDir}/src",
                     'stylesheet': 'css/oncourse.css',
                     'version': project.version,
-                    'publishedDate': LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy")),
-                    'copyrightYear' : LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))
+                    'revdate': LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy"))
         resources {
             from(sourceDir) {
                 include 'images/**'

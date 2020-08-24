@@ -3,14 +3,14 @@ $(document).ready(function() {
 
   $('head').append('<style type="text/css">.gsc-adBlock, .gsc-resultsHeader, .gcsc-branding {display: none !important;}</style>');
 
-  $('.toc > dl.toc > dd > dl > dt').click(function(e) {
+  $('#toc .sectlevel2').click(function(e) {
     if (e.offsetX < 15) {  /* only detect clicks on the triangle icon */
       $(this).toggleClass('expand').next().toggle();
       return false;
     }
   });
 
-  $('.toc > dl.toc > dd > dl > dd').hide();
+  $('#toc .sectlevel2').hide();
 
   // set college host if we have a cookie for it
   let host = readCookie('oncourse_host');

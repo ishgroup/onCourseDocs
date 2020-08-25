@@ -3,97 +3,72 @@
 
 === Adding files
 
-onCourse provides an effortless way to display images and documents (for
-example JPG, PNG, GIF and PDF files) with your website. Within onCourse
-you can add documents directly to the Documents section by navigating to
-the window and clicking the + button.
+onCourse provides an effortless way to display images and documents (for example JPG, PNG, GIF and PDF files) with your website.
+Within onCourse you can add documents directly to the Documents section by navigating to the window and clicking the + button.
 
-Alternatively, you can upload or link attachments directly from the edit
-view inside Course, Class, Tutor, Student, Site or many other places
-within onCourse. This links the attachment directly to that resource.
+Alternatively, you can upload or link attachments directly from the edit view inside Course, Class, Tutor, Student, Site or many other places within onCourse.
+This links the attachment directly to that resource.
 
 [NOTE]
 ====
-Once an attachment is uploaded via the Resources menu of onCourse, you
-can preview an image file by double clicking on any attachment entry in
-the list view. PDF documents are not able to be previewed via this
-method.
+Once an attachment is uploaded via the Resources menu of onCourse, you can preview an image file by double clicking on any attachment entry in the list view.
+PDF documents are not able to be previewed via this method.
 ====
 
 ==== Duplicate files
 
-onCourse is clever enough to de-duplicate files when you upload them. So
-if you add a 1Mb PDF to the system and then sometime later upload the
-same file again to onCourse, only one copy will be stored and linked to
-both places. This reduces the size of your database. In order for this
-to work, the two files must be absolutely identical. The slightest
-difference and the two files will be both stored.
+onCourse is clever enough to de-duplicate files when you upload them.
+So if you add a 1Mb PDF to the system and then sometime later upload the same file again to onCourse, only one copy will be stored and linked to both places.
+This reduces the size of your database.
+In order for this to work, the two files must be absolutely identical.
+The slightest difference and the two files will be both stored.
 
 === Displaying media online
 
-If you wish to display attachments and images on your website, firstly
-make sure that you have the Security level set as Public in the document
-record inside onCourse. Then you have several ways of showing content
-online, depending on where you want to display it.
+If you wish to display attachments and images on your website, firstly make sure that you have the Security level set as Public in the document record inside onCourse.
+Then you have several ways of showing content online, depending on where you want to display it.
 
 ==== Linked to specific pages
 
-If you attach a document to a course and mark it as 'public' that
-attachment will be shown on the course description page. This makes it
-very simple to add pictures or perhaps a PDF with further course
-information. Remember that Google and other search engines will not do a
-good job with indexing content in Word, PDF or other formats. So if you
-want the best exposure online and the best search engine results, put
-your course descriptions as text directly into the course description.
+If you attach a document to a course and mark it as 'public' that attachment will be shown on the course description page.
+This makes it very simple to add pictures or perhaps a PDF with further course information.
+Remember that Google and other search engines will not do a good job with indexing content in Word, PDF or other formats.
+So if you want the best exposure online and the best search engine results, put your course descriptions as text directly into the course description.
 
-Attaching a PDF to the course can be useful for specific files such as a
-pre-enrolment questionnaire, additional information about course
-requirements, software exercise files, and so on. Including these files
-is achieved exactly the same way as including an image on your page...
-open the Course, click the Web tab and then the Plus sign to browse the
-files. We recommend documents are uploaded as PDF as they can be
-universally accessed no matter what computer the student is running.
+Attaching a PDF to the course can be useful for specific files such as a pre-enrolment questionnaire, additional information about course requirements, software exercise files, and so on.
+Including these files is achieved exactly the same way as including an image on your page...
+open the Course, click the Web tab and then the Plus sign to browse the files.
+We recommend documents are uploaded as PDF as they can be universally accessed no matter what computer the student is running.
 
 
-. Open the Course to which you wish to add the document to and scroll to
-the Documents section.
-. Now simply click on the + button next to the Documents heading and
-type the name of the existing image or upload a new one by clicking the
-Browse button.
-. Once the data updates online, the course detail page ( /course/ABC )
-will now have your new document at the bottom.
+. Open the Course to which you wish to add the document to and scroll to the Documents section.
+. Now simply click on the + button next to the Documents heading and type the name of the existing image or upload a new one by clicking the Browse button.
+. Once the data updates online, the course detail page ( /course/ABC ) will now have your new document at the bottom.
 
-image:images/upload_image_to_course.png[ Upload a document to your
-course via the web page of the given course ,scaledwidth=100.0%]
+image:images/upload_image_to_course.png[ Upload a document to your course via the web page of the given course,scaledwidth=100.0%]
 
 
 . In onCourse open the Tutor record you wish to attach the image of.
-. In the tutor record, click the blank head image in the top left of the
-window and select the image from your computer. Click Save. The image
-will now appear where the blank head image used to be.
-. Provided there is text in the Resume field on their tutor record, the
-image will display on their tutor profile.
+. In the tutor record, click the blank head image in the top left of the window and select the image from your computer.
+Click Save.
+The image will now appear where the blank head image used to be.
+. Provided there is text in the Resume field on their tutor record, the image will display on their tutor profile.
 
 === Adding thumbnail images
 
-You have the ability to add thumbnail images to all your courses. These
-will appear on your website on any courses list view page, so that's any
-URL that contains /courses after your domain name e.g.
-www.acme.com.au/courses or www.acme.com.au/courses/business/computing.
+You have the ability to add thumbnail images to all your courses.
+These will appear on your website on any courses list view page, so that's any URL that contains /courses after your domain name e.g. www.acme.com.au/courses or www.acme.com.au/courses/business/computing.
 
-image:images/thumbnail_image.png[ Adding thumbnail images to courses
-,scaledwidth=100.0%]
+image:images/thumbnail_image.png[ Adding thumbnail images to courses,scaledwidth=100.0%]
 
-To enable this feature you will have to add the following code to the
-CourseItem.tml file:
+To enable this feature you will have to add the following code to the CourseItem.tml file:
 
 ....
 <div t:type="ui/image" name="${courseItemModel.course.code}_1" width="pixel width" height="pixel height"></div>
 ....
 
-substituting the words 'pixel width' and 'pixel height' for the correct
-dimensions. So assuming the image you are adding is 200px x 200px then
-the code will be:
+substituting the words 'pixel width' and 'pixel height' for the correct dimensions.
+So assuming the image you are adding is 200px x 200px then the code will be:
 
 ....
 <div t:type="ui/image" name="${courseItemModel.course.code}_1" width="200" height="200"></div>
@@ -105,15 +80,12 @@ The CourseItem.tml file can be found in WebDAV by going to templates ->
 default -> CourseItem.tml.
 ====
 
-You would then store the attached image you want to the course and
-making sure the pixel width and height is the same as the code in the
-CourseItem.tml and name them 'coursecode_1' e.g. ActingBeg_1.
+You would then store the attached image you want to the course and making sure the pixel width and height is the same as the code in the CourseItem.tml and name them 'coursecode_1' e.g. ActingBeg_1.
 
 === Editing Course Hero Images in onCourse
 
-You can use images you have uploaded into onCourse as hero images for a
-specific course. To do so, you first need to add a snippet of code to
-your site's CourseItem.tml file.
+You can use images you have uploaded into onCourse as hero images for a specific course.
+To do so, you first need to add a snippet of code to your site's CourseItem.tml file.
 
 [NOTE]
 ====
@@ -131,41 +103,28 @@ This snippet is pasted below:
 
 ....
 
-Open the CourseItem.tml in a text editing tool, like NotePad++ or
-Sublime, then copy and paste this code into the file somewhere out of
-the way. Ensure that you set the name of the uploaded hero image in
-onCourse to x_hero, where 'x' is the course code of the course the image
-is intended for - e.g. for a Pottery course with the course code POT001,
-in onCourse you'd want to name the image POT001_hero.
+Open the CourseItem.tml in a text editing tool, like NotePad++ or Sublime, then copy and paste this code into the file somewhere out of the way.
+Ensure that you set the name of the uploaded hero image in onCourse to x_hero, where 'x' is the course code of the course the image is intended for - e.g. for a Pottery course with the course code POT001, in onCourse you'd want to name the image POT001_hero.
 
-You can edit the height and width values, but be aware that this may
-result in inconsistent results if the images you upload are all
-different szes to begin with.
+You can edit the height and width values, but be aware that this may result in inconsistent results if the images you upload are all different szes to begin with.
 
 === Tagging images
 
-You have the ability to display a different hero image on each course
-detail page. These will appear on your website on any course detail
-pages e.g www.acme.com.au/course/accounting.
+You have the ability to display a different hero image on each course detail page.
+These will appear on your website on any course detail pages e.g www.acme.com.au/course/accounting.
 
-image:images/tagged_image_course_details.png[ Tagged image displayed at
-the top of the Accounting course detail page ,scaledwidth=100.0%]
+image:images/tagged_image_course_details.png[ Tagged image displayed at the top of the Accounting course detail page,scaledwidth=100.0%]
 
-You would then create a new tag group called 'image' and a tag inside
-that called 'hero'
+You would then create a new tag group called 'image' and a tag inside that called 'hero'
 
-image:images/taggingheroimage.png[ Creating a new tag group called
-'image' and a child tag called 'hero' ,scaledwidth=100.0%]
+image:images/taggingheroimage.png[ Creating a new tag group called 'image' and a child tag called 'hero',scaledwidth=100.0%]
 
-Once you have created this tag group and tag the next step would be to
-upload the images you want to tag to the document management system.
+Once you have created this tag group and tag the next step would be to upload the images you want to tag to the document management system.
 More information about how you do this can be found
 http://www.ish.com.au/s/onCourse/doc/latest/manual/documentManagement.html[here.]
-Once you have done this you will have to tag each of these images with
-the 'hero' tag.
+Once you have done this you will have to tag each of these images with the 'hero' tag.
 
-To enable this feature you will have to add the following code to the
-CourseItem.tml file :
+To enable this feature you will have to add the following code to the CourseItem.tml file :
 
 ....
 <t:loop source="getAttachments(courseItemModel.course)" value="attachment">
@@ -175,43 +134,28 @@ CourseItem.tml file :
 </t:loop>
 ....
 
-Lastly you would go into each course you want these images to be
-displayed and add the document to the course record. You do this by
-clicking the + button next to Documents heading and typing in the name
-of the image you've already added. If the image isn't uploaded to
-oncourse yet, click Browse and search your local computer for it.
-Remember to make sure the pixel width and height is the same as the code
-in the CourseItem.tml then tag them to the tag 'hero' in the tag group
-'image'.
+Lastly you would go into each course you want these images to be displayed and add the document to the course record.
+You do this by clicking the + button next to Documents heading and typing in the name of the image you've already added.
+If the image isn't uploaded to oncourse yet, click Browse and search your local computer for it.
+Remember to make sure the pixel width and height is the same as the code in the CourseItem.tml then tag them to the tag 'hero' in the tag group 'image'.
 
-image:images/tagged_image_course.png[ Added the image 'dart' to the
-course 'Accounting' ,scaledwidth=100.0%]
+image:images/tagged_image_course.png[ Added the image 'dart' to the course 'Accounting',scaledwidth=100.0%]
 
 === Rich text
 
-Sometimes you want to position images and attachments not just at the
-end of the course description, but on other pages withint your site. You
-may want to display an image on a regular CMS page or link to a course
-handbook pdf download within a block in the side margin on your site.
-Any rich text enabled text field within onCourse can display this
-content, such as:pages, blocks, course description, tutor resume, class
-description, site description
+Sometimes you want to position images and attachments not just at the end of the course description, but on other pages withint your site.
+You may want to display an image on a regular CMS page or link to a course handbook pdf download within a block in the side margin on your site.
+Any rich text enabled text field within onCourse can display this content, such as:pages, blocks, course description, tutor resume, class description, site description
 
 [[images_and_attachments-image]]
 ==== \{image}
 
-You may want to attach images and other files to courses, classes,
-sites, rooms and tutors and have them appear on the website. Just attach
-the file you want in onCourse via the Training > Documents menu item,
-click the '+' button and upload the file or image, mark it as 'Public'
-via the Access dropdown box and that file will be automatically
-transferred and attached to your site. These files will appear by
-default at the bottom of the relevant page. So for instance, just attach
-a PDF to a course to have that document appear as a link at the bottom
-of the course description. Likewise, pictures will appear at the bottom
-of the page. If however you would like to position the image somewhere
-else (say, next to the relevant paragraph of text) you can do so with a
-special rich text entry called \{image}.
+You may want to attach images and other files to courses, classes, sites, rooms and tutors and have them appear on the website.
+Just attach the file you want in onCourse via the Training > Documents menu item, click the '+' button and upload the file or image, mark it as 'Public' via the Access dropdown box and that file will be automatically transferred and attached to your site.
+These files will appear by default at the bottom of the relevant page.
+So for instance, just attach a PDF to a course to have that document appear as a link at the bottom of the course description.
+Likewise, pictures will appear at the bottom of the page.
+If however you would like to position the image somewhere else (say, next to the relevant paragraph of text) you can do so with a special rich text entry called \{image}.
 
 ===== Usage
 
@@ -220,48 +164,45 @@ special rich text entry called \{image}.
 ....
 
 [name]::
-  Optional. The name of the image. If this is not given and the id is
-  also not given, then a random image is displayed from those linked to
-  the relevant database object. For example, if the rich text is a
-  course description, then the random image will be one of the images
-  linked to that course; if the rich text is a tutor profile, then the
-  random image will be chosen from those attached to the tutor.
+Optional.
+The name of the image.
+If this is not given and the id is also not given, then a random image is displayed from those linked to the relevant database object.
+For example, if the rich text is a course description, then the random image will be one of the images linked to that course; if the rich text is a tutor profile, then the random image will be chosen from those attached to the tutor.
 [id]::
-  Optional. If you know the internal reference of the binary image
-  object, you can use that here instead of the name. If both id and name
-  are passed, then the name will be ignored.
+Optional.
+If you know the internal reference of the binary image object, you can use that here instead of the name.
+If both id and name are passed, then the name will be ignored.
 [align]::
-  [left, right, center, centre] Optional. By default, images are left
-  aligned.
+[left, right, center, centre] Optional.
+By default, images are left aligned.
 [alt]::
-  Optional. If supplied, the image will be given this 'alt' tag which is
-  mainly useful for accessibility purposes. That is, people with vision
-  difficulties may have a screen reader which can read out the names of
-  images. If this value is not supplied, the alt tag is set to the image
-  name.
+Optional.
+If supplied, the image will be given this 'alt' tag which is mainly useful for accessibility purposes.
+That is, people with vision difficulties may have a screen reader which can read out the names of images.
+If this value is not supplied, the alt tag is set to the image name.
 [caption]::
-  Optional. A caption to display under the image.
+Optional.
+A caption to display under the image.
 [width]::
-  Optional. Specify the width of the image in pixels as it will display
-  on the webpage. If not supplied, the image will display at its full
-  size.
+Optional.
+Specify the width of the image in pixels as it will display on the webpage.
+If not supplied, the image will display at its full size.
 [height]::
-  Optional. Specify the height of the image in pixels as it will display
-  on the webpage. If not supplied, the image will display at its full
-  size.
+Optional.
+Specify the height of the image in pixels as it will display on the webpage.
+If not supplied, the image will display at its full size.
 [class]::
-  Optional. A CSS class will be added to this image for styling
-  purposes.
+Optional.
+A CSS class will be added to this image for styling purposes.
 [link]::
-  Optional. If supplied, this image will be made an href link to the
-  destination you specify.
+Optional.
+If supplied, this image will be made an href link to the destination you specify.
 
 [[images_and_attachments-attachment]]
 ==== \{attachment}
 
-Link to an attachment. When you user clicks on the link, the file will
-be downloaded so you will want to use well accepted file formats such as
-PDF.
+Link to an attachment.
+When you user clicks on the link, the file will be downloaded so you will want to use well accepted file formats such as PDF.
 
 ===== Usage
 
@@ -270,22 +211,17 @@ PDF.
 ....
 
 name::
-  The name of the attachment as you specified it in the onCourse
-  attachment entry screen.
+The name of the attachment as you specified it in the onCourse attachment entry screen.
 
 [[images_and_attachments-video]]
 ==== \{video}
 
-Embed a video on your page. You will not upload the video directly to
-onCourse, but instead use a third party service like YouTube - their
-servers are optimised for video delivery and the performance and tools
-more helpful.
+Embed a video on your page.
+You will not upload the video directly to onCourse, but instead use a third party service like YouTube - their servers are optimised for video delivery and the performance and tools more helpful.
 
-You can also use this within the Marketing tab of any Course, Class or
-anywhere else that uses this rich text format. Just copy and paste the
-below portion of code, and replace the youtube_id with the id from the
-YouTube video you wish to embed. You can find this after the = sign in
-the Video URL.
+You can also use this within the Marketing tab of any Course, Class or anywhere else that uses this rich text format.
+Just copy and paste the below portion of code, and replace the youtube_id with the id from the YouTube video you wish to embed.
+You can find this after the = sign in the Video URL.
 
 ===== Usage
 
@@ -294,16 +230,15 @@ p<{height:315px}. {video type:"youtube" id:"youtube_id" height:"315" width:"560"
 ....
 
 type::
-  Currently only "youtube" is supported.
+Currently only "youtube" is supported.
 id::
-  This is the remote id of the video. For example, a youtube video which
-  has a URL of http://www.youtube.com/watch?v=YGwtEzZPb7M would have an
-  id of 'YGwtEzZPb7M'
+This is the remote id of the video.
+For example, a youtube video which has a URL of http://www.youtube.com/watch?v=YGwtEzZPb7M would have an id of 'YGwtEzZPb7M'
 [height]::
-  The height in pixels you want to force the video to. If you leave this
-  option out, it will default to the standard player size. You need to
-  enter this twice, as referenced in the example above. Both height
-  parameters should match.
+The height in pixels you want to force the video to.
+If you leave this option out, it will default to the standard player size.
+You need to enter this twice, as referenced in the example above.
+Both height parameters should match.
 [width]::
-  The width in pixels you want to force the video to. If you leave this
-  option out, it will default to the standard player size.
+The width in pixels you want to force the video to.
+If you leave this option out, it will default to the standard player size.

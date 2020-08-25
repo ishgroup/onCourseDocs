@@ -1,29 +1,24 @@
 [[reports-custom]]
 == Creating custom reports
 
-onCourse takes advantage of a powerful reporting tool called
-JasperReports. This open source library costs you nothing to use and can
-be extended to add new features. We've extended it to understand
-onCourse data, tied it into a PDF generation system and allowed to you
-add your own reports right into onCourse for all users to easily run.
+onCourse takes advantage of a powerful reporting tool called JasperReports.
+This open source library costs you nothing to use and can be extended to add new features.
+We've extended it to understand onCourse data, tied it into a PDF generation system and allowed to you add your own reports right into onCourse for all users to easily run.
 
 [[reports-customReports]]
 === Getting started with custom reports
 
-Custom reports can be developed for onCourse by any user, or by ish on
-request, and then imported into onCourse via your client.
+Custom reports can be developed for onCourse by any user, or by ish on request, and then imported into onCourse via your client.
 
-onCourse uses JasperReports, an open source tool to create reports. You
-can add your own custom reports to onCourse at any time by creating them
-with link:JasperSoft Studio[JasperSoft Studio]. This is a free tool you
-can download and install on your system. It runs on Linux, Windows and
-OSX.
+onCourse uses JasperReports, an open source tool to create reports.
+You can add your own custom reports to onCourse at any time by creating them with link:JasperSoft Studio[JasperSoft Studio].
+This is a free tool you can download and install on your system.
+It runs on Linux, Windows and OSX.
 
 The basic workflow of editing a report is this:
 
 
-. Export a report template from onCourse (it is usually easier to start
-with something close to what you want)
+. Export a report template from onCourse (it is usually easier to start with something close to what you want)
 . Edit the report using JasperSoft Studio
 . Import the report to onCourse
 . Test
@@ -31,104 +26,73 @@ with something close to what you want)
 
 ==== Exporting report templates from onCourse
 
-You can export existing onCourse reports to modify by going to the
-Automation window and looking under PDF Reports and clicking the report
-you wish to edit. If the report is an ish default, you'll need to click
-the 'Save as new PDF Report' icon in the top right of the window to
-create a copy in order to edit it. Then click 'Edit' and it will
-download a jrxml version of the report to edit.
+You can export existing onCourse reports to modify by going to the Automation window and looking under PDF Reports and clicking the report you wish to edit.
+If the report is an ish default, you'll need to click the 'Save as new PDF Report' icon in the top right of the window to create a copy in order to edit it.
+Then click 'Edit' and it will download a jrxml version of the report to edit.
 
-Alternatively (and easier) you can access all the current onCourse
-reports link:in our github
-                        repository.[in our github
-                        repository.] We encourage you to fork that
-repository and make your modifications public for other users where
-appropriate.
+Alternatively (and easier) you can access all the current onCourse reports link:in our github repository.[in our github repository.] We encourage you to fork that repository and make your modifications public for other users where appropriate.
 
 ==== Editing reports in JasperSoft Studio
 
 [TIP]
 ====
-Simple changes to the XML can be made using a text editor if you know
-what to look for. For more complex changes you will want to use
-JasperSoft Studio.
+Simple changes to the XML can be made using a text editor if you know what to look for.
+For more complex changes you will want to use JasperSoft Studio.
 ====
 
-JasperSoft Studio cannot be summarised in few words and there are many
-online resources which will help you learn using it. A good starting
-point is link:the official documentation.[the official documentation.]
-You are certainly best trying to modify an existing report before
-creating one from scratch. For now, take an existing report and make a
-small change to it such as changing the colour of some text. Save the
-report.
+JasperSoft Studio cannot be summarised in few words and there are many online resources which will help you learn using it.
+A good starting point is link:the official documentation.[the official documentation.]
+You are certainly best trying to modify an existing report before creating one from scratch.
+For now, take an existing report and make a small change to it such as changing the colour of some text.
+Save the report.
 
-You also have the ability for images uploaded to the onCourse document
-management system can be embedded into onCourse reports. This might be
-used if you want to embed an image or logo to a specific report, however
-we would always recommend adding an image to a print background if it's
-used in more than one report.
+You also have the ability for images uploaded to the onCourse document management system can be embedded into onCourse reports.
+This might be used if you want to embed an image or logo to a specific report, however we would always recommend adding an image to a print background if it's used in more than one report.
 
 ==== Importing a report
 
-onCourse utilises a Java Bean data source which means that you cannot
-directly test a report inside JasperSoft Studio. You must first import
-it into onCourse in order to run it.
+onCourse utilises a Java Bean data source which means that you cannot directly test a report inside JasperSoft Studio.
+You must first import it into onCourse in order to run it.
 
-Navigate to File > Preferences > Reports. From here you may click the +
+Navigate to File > Preferences > Reports.
+From here you may click the +
 sign on the top right hand side and select "folder" or "single report".
-If you have more than one report to import, you can select "folder" is
-to import all the reports in a folder reports while the "single report"
-is to import just the one report.
+If you have more than one report to import, you can select "folder" is to import all the reports in a folder reports while the "single report" is to import just the one report.
 
-You can then be to select your report (.jrxml) from the location where
-it is saved on your computer. Select "open" button after highlighting
-the file (or folder) you want to import.
+You can then be to select your report (.jrxml) from the location where it is saved on your computer.
+Select "open" button after highlighting the file (or folder) you want to import.
 
-You will then either get a message advising you that the import has been
-successful, or unsuccessful. If the import was unsuccessful, the most
-common reason is that the version number was not updated or the keycode
-was not made unique. onCourse will only recognise the report as a new
-report if it has a unique keycode, and will only update an existing
-report if the version number is higher than the version already in the
-product. You can check the values for these entries in the reports
-window inside onCourse.
+You will then either get a message advising you that the import has been successful, or unsuccessful.
+If the import was unsuccessful, the most common reason is that the version number was not updated or the keycode was not made unique. onCourse will only recognise the report as a new report if it has a unique keycode, and will only update an existing report if the version number is higher than the version already in the product.
+You can check the values for these entries in the reports window inside onCourse.
 
 Selecting a custom report file for import into onCourse
 
 === The structure of a report
 
-Reports access objects (records in the database) and attributes from
-those objects. If you look at an existing report, you'll see references
-such as `$F{contact}.firstName`. This is a reference to the contact
-object which was passed to the report and will draw on the page the
-first name attribute of that contact.
+Reports access objects (records in the database) and attributes from those objects.
+If you look at an existing report, you'll see references such as `$F{contact}.firstName`.
+This is a reference to the contact object which was passed to the report and will draw on the page the first name attribute of that contact.
 
 You may also see joins between entities like this
-`$F{application}.course.name`. You can traverse across joins between
-entities in this way.
+`$F{application}.course.name`.
+You can traverse across joins between entities in this way.
 
-The onCourse entities and all their attributes can be found in our
-link:API
-                documentation.[API
-                documentation.]
+The onCourse entities and all their attributes can be found in our link:API documentation.[API documentation.]
 
-Reports are all able to take advantage of the entire Groovy language
-within all report fields. This can be extremely powerful since you can
-write any code you want to execute within the report engine. A simple
-example might be
-`$F{enrolment}.courseClass.expectedHours ?: "not specified"` which would
-print "not specified" if the class has no timetable. More sophisticated
-code can control the repeating sections on a page, sorting of data and
-much more.
+Reports are all able to take advantage of the entire Groovy language within all report fields.
+This can be extremely powerful since you can write any code you want to execute within the report engine.
+A simple example might be
+`$F{enrolment}.courseClass.expectedHours ?: "not specified"` which would print "not specified" if the class has no timetable.
+More sophisticated code can control the repeating sections on a page, sorting of data and much more.
 
 ==== Report Properties
 
-onCourse expects to see certain properties added to each report. The
-properties can be edited in JasperSoft Studio using by choosing from the
-menu Edit->Custom properties or by just editing the XML by hand. If you
-look at the example above, you'll see all the common properties visible.
-At a minimum you need "keycode", "versionNumber" and "entity". Without
-these, your report will not be accepted by onCourse.
+onCourse expects to see certain properties added to each report.
+The properties can be edited in JasperSoft Studio using by choosing from the menu Edit->Custom properties or by just editing the XML by hand.
+If you look at the example above, you'll see all the common properties visible.
+At a minimum you need "keycode", "versionNumber" and "entity".
+Without these, your report will not be accepted by onCourse.
 
 An example of the parameters found in a report files is:
 
@@ -146,60 +110,43 @@ An example of the parameters found in a report files is:
 ----
 
 name::
-  A name to display in the user interface to users wanting to print a
-  report.
+A name to display in the user interface to users wanting to print a report.
 keyCode::
-  Each report has to be identified in the system, therefore it is given
-  an unique property called 'keyCode'. We strongly recommend that for
-  any reports you customise, you use a different code. This will avoid
-  an update of onCourse software overriding your report with new version
-  from our developers. If you copy an onCourse report, you should
-  definitely change this to your own code.
+Each report has to be identified in the system, therefore it is given an unique property called 'keyCode'.
+We strongly recommend that for any reports you customise, you use a different code.
+This will avoid an update of onCourse software overriding your report with new version from our developers.
+If you copy an onCourse report, you should definitely change this to your own code.
 versionNumber::
-  A whole number, has to be increased every time a report is changed
-  otherwise your modifications may not be visible.
+A whole number, has to be increased every time a report is changed otherwise your modifications may not be visible.
 entity::
-  Identifies which is the starting point for the report, ie. report with
-  value 'Certificate' will be available in print menu for list of
-  certificates.
+Identifies which is the starting point for the report, ie. report with value 'Certificate' will be available in print menu for list of certificates.
 isVisible::
-  - can only take value of 'true' or 'false', indicates whether the
-  report is visible in the print dialog
+- can only take value of 'true' or 'false', indicates whether the report is visible in the print dialog
 isSubreport::
-  - some reports are just injected inside others, this allows to specify
-  this fact and hide this report from the user choice
+- some reports are just injected inside others, this allows to specify this fact and hide this report from the user choice
 ish.oncourse.reports.following::
-  Use this property if you need print many reports as one, just add to
-  this property a report's key (or keys). If you need put more then one
-  key - separate keys with ";". Any reports in here will be
-  automatically printed after the initial report. This is particularly
-  useful for certificates.
+Use this property if you need print many reports as one, just add to this property a report's key (or keys).
+If you need put more then one key - separate keys with ";".
+Any reports in here will be automatically printed after the initial report.
+This is particularly useful for certificates.
 ish.oncourse.reports.isObjectOnSeparatePage::
-  If this property is set to true, then each record is printed on a
-  separate page. This is useful for invoices (for example) which should
-  start a new page after every invoice record.
+If this property is set to true, then each record is printed on a separate page.
+This is useful for invoices (for example) which should start a new page after every invoice record.
 ish.oncourse.reports.description::
-  A description to show to users in the onCourse user interface. Put
-  some text in here to describe what the report does.
+A description to show to users in the onCourse user interface.
+Put some text in here to describe what the report does.
 
 ==== Data fields
 
-Attributes from any onCourse data object can be added as fields to your
-report. So if the report has an entity of "Room" then you can access its
-attributes directly like this `$F{name}`. You can find all the onCourse
-attributes in our https://www.ish.com.au/s/onCourse/doc/latest/api/[API
+Attributes from any onCourse data object can be added as fields to your report.
+So if the report has an entity of "Room" then you can access its attributes directly like this `$F{name}`.
+You can find all the onCourse attributes in our https://www.ish.com.au/s/onCourse/doc/latest/api/[API
 documentation].
 
-You can also directly access relations in this way `$F{site}.name` and
-use the full power of the Groovy language in these expressions. So for a
-report rooted in the Enrolment entity you might use
-`${courseClass}.course.modules?.nationalCode` This expression will find
-the course linked to the current class, get a list of modules, take the
-first one (using a null safe operator so that nothing bad happens if
-there isn't any modules liked at all), then display the national code.
+You can also directly access relations in this way `$F{site}.name` and use the full power of the Groovy language in these expressions.
+So for a report rooted in the Enrolment entity you might use
+`${courseClass}.course.modules?.nationalCode` This expression will find the course linked to the current class, get a list of modules, take the first one (using a null safe operator so that nothing bad happens if there isn't any modules liked at all), then display the national code.
 
-Custom attributes can be accessed by passing the custom field name to
-the customField() method. For example, if a contact had a custom field
-called 'how did you hear', the data stored in this field could be
-referenced by: `$F{contact}.customField("how
-                    did you hear")`.
+Custom attributes can be accessed by passing the custom field name to the customField() method.
+For example, if a contact had a custom field called 'how did you hear', the data stored in this field could be referenced by: `$F{contact}.customField("how
+did you hear")`.

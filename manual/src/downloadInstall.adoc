@@ -3,8 +3,7 @@
 
 onCourse is free to download and use and is available at
 http://www.ish.com.au/onCourse/download[http://www.ish.com.au/download]
-or as a cloud hosted SaaS from ish group complete with support and
-additional functionalty, including:
+or as a cloud hosted SaaS from ish group complete with support and additional functionalty, including:
 
 * Tutor portal
 * Student portal
@@ -16,37 +15,29 @@ additional functionalty, including:
 * ecommerce credit card integration
 * Support
 
-Using the hosted onCourse solution also supports development of the
-onCourse product.
+Using the hosted onCourse solution also supports development of the onCourse product.
 
 [[downloadinstall-selfhosted]]
 === Self-hosted
 
-onCourse Server can run on any platform with a JVM of version 11 or
-higher. This includes Windows, OSX, Linux, BSD and many more. You can
-run the Oracle supported JVM or one of the free open source options like
-Adoptium.
+onCourse Server can run on any platform with a JVM of version 11 or higher.
+This includes Windows, OSX, Linux, BSD and many more.
+You can run the Oracle supported JVM or one of the free open source options like Adoptium.
 
-You'll also need a database, and onCourse has been run with Derby, MS
-SQL, Oracle, AWS RDS and MySQL in the past. Current testing focus is
-against MariaDB 10.3, so that will give you best results.
+You'll also need a database, and onCourse has been run with Derby, MS SQL, Oracle, AWS RDS and MySQL in the past.
+Current testing focus is against MariaDB 10.3, so that will give you best results.
 
 [[downloadinstall-Virtualisation]]
 ==== Virtualisation
 
-onCourse is happy in a virtualised environment such as VMWare Xen, or
-AWS EC2. Ensure that you have sufficient RAM and CPU allocated. onCourse
-Server only writes log files to disk so memory and CPU are more
-important than disk performance.
+onCourse is happy in a virtualised environment such as VMWare Xen, or AWS EC2. Ensure that you have sufficient RAM and CPU allocated. onCourse Server only writes log files to disk so memory and CPU are more important than disk performance.
 
 [[downloadinstall-Installation]]
 ==== Installation
 
-http://www.ish.com.au/onCourse/download[Download onCourse Server] and
-unzip the package.
+http://www.ish.com.au/onCourse/download[Download onCourse Server] and unzip the package.
 
-You'll need to create a configuration file named "onCourse.yml" with the
-following contents:
+You'll need to create a configuration file named "onCourse.yml" with the following contents:
 
 [source,yaml]
 ----
@@ -57,9 +48,9 @@ following contents:
 
     db:
         uri: jdbc:mariadb:sequential://127.0.0.1/onCourse?user=onCourse&password=higr7ehfgf3FFG&useLegacyDatetimeCode=false
-            
+
 ----
 
-The options there are self-explanatory. Port to listen on, base path of
-the application and IP address to listen on. Then the database
-connection string.
+The options there are self-explanatory.
+Port to listen on, base path of the application and IP address to listen on.
+Then the database connection string.

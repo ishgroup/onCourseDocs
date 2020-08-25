@@ -65,7 +65,7 @@ are dropping off.
 In order to get data into your Google Analytics account you'll need to
 complete the following steps:
 
-[arabic]
+
 . Create a new https://analytics.google.com/analytics/web/[Google
 Analytics] account (or use an existing one). Under `Admin
                                 > Property > Tracking code` look for the
@@ -80,7 +80,7 @@ bit of traffic.
 . Enable enhanced ecommerce reporting in the Google Analytics under
 `Admin > View > E-commerce settings`
 . Select names for your checkout steps
-[arabic]
+
 .. Empty Cart
 .. Add Contact
 .. Edit Contact
@@ -147,12 +147,12 @@ dataLayer.push({
           'step': {{ 1 | 2 | 3 | 4 | 5 }},
           'option': "Init Checkout Process" | "Add Payer" | "Edit Contact Details" | "Summary Page" | "Payment Page"
         },
-        'products': [{ 
-         'name':{{item.name}}, 
-         'id': {{item.id}}, 
-         'price': {{item.price}}, 
-         'category': 'Course Class' | 'Product',  
-         'quantity': 1, 
+        'products': [{
+         'name':{{item.name}},
+         'id': {{item.id}},
+         'price': {{item.price}},
+         'category': 'Course Class' | 'Product',
+         'quantity': 1,
         }],
       },
     },
@@ -189,12 +189,12 @@ dataLayer.push({
           'affiliation': 'credit card' | 'corporate pass',
           'revenue': {{ amount.total }}, // includes tax
         },
-        'products': [{ 
-         'name':{{ item.name }}, 
-         'id': {{ item.id }}, 
-         'price': {{ item.price }}, 
+        'products': [{
+         'name':{{ item.name }},
+         'id': {{ item.id }},
+         'price': {{ item.price }},
          'category': 'Course Class' | 'Product',
-         'quantity': 1, 
+         'quantity': 1,
         }],
       },
     },

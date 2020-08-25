@@ -101,9 +101,9 @@ A simple query consists of a field, followed by an operator, followed by
 a value:
 
 ....
- 
-                title starts with "Apply"             
-            
+
+                title starts with "Apply"
+
 ....
 
 In the above example, the field is 'title', the operator is 'starts
@@ -114,9 +114,9 @@ will show you records beginning with 'Apply'.
 Two or more queries can be linked together with conditional operators.
 
 ....
- 
-                title starts with 'Apply' and nationalCode starts with "B"                  
-            
+
+                title starts with 'Apply' and nationalCode starts with "B"
+
 ....
 
 In this example, 'and' is the conditional operator that combines the two
@@ -155,13 +155,13 @@ createdOn = today
 ....
   +
 ....
-nationalCode EQUALS "ABC"         
+nationalCode EQUALS "ABC"
 ....
 NOT EQUAL or !=::
   NOT EQUAL finds records that do not match the input value.
   +
 ....
-deliveryMode != ONLINE                                    
+deliveryMode != ONLINE
 ....
 LESS THAN or <::
   LESS THAN returns records where the value is less than the input
@@ -171,7 +171,7 @@ LESS THAN or <::
   value is less than or equal to the input value.
   +
 ....
-enrolmentCount < 10                                   
+enrolmentCount < 10
 ....
   +
 ....
@@ -357,7 +357,7 @@ LIKE or ~::
   There are two special wild card characters used with the LIKE
   operator:
   +
-  [arabic]
+
   . _%_: the percent sign is used to represent any amount of characters
   (including zero)
   . ___: the underscore is used to represent exactly one character

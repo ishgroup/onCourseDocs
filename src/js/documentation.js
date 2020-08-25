@@ -1,16 +1,28 @@
 $(document).ready(function() {
-	$('.book #header > #toc').prepend("<gcse:search></gcse:search>");
+	// $('.book #header > #toc').prepend("<gcse:search></gcse:search>");
+
+  $('#toc ul').addClass('nav');
+  $('#toc ul li a').addClass('nav-link');
+
+  $('body').scrollspy({ target: "#toc" });
+
+  $(window).on('scroll', function() {
+    $('#toc .hasChildren').removeClass('toc-open');
+    $($('#toc .hasChildren .nav-link.active').parents('li.hasChildren:not(.toc-open)').find('.toc-expand')).trigger('click');
+  });
 
   $('head').append('<style type="text/css">.gsc-adBlock, .gsc-resultsHeader, .gcsc-branding {display: none !important;}</style>');
 
-  $('#toc .sectlevel2').click(function(e) {
-    if (e.offsetX < 15) {  /* only detect clicks on the triangle icon */
-      $(this).toggleClass('expand').next().toggle();
-      return false;
+  $('#toc ul.sectlevel0 ul.sectlevel1 > li').each(function(i, v) {
+    if($(v).find('.sectlevel2').length) {
+      $(v).find('.sectlevel2').parent().addClass('hasChildren');
+      $(v).find('.sectlevel2').parent().find('>a').after('<span class="toc-expand"></span>');
     }
   });
 
-  $('#toc .sectlevel2').hide();
+  $(document).on("click", '#toc .toc-expand', function(e) {
+    $(this).parent().toggleClass('toc-open');
+  });
 
   // set college host if we have a cookie for it
   let host = readCookie('oncourse_host');

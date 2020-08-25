@@ -785,6 +785,48 @@ p a > code:hover {
     display: none;
 }
 
+#toc ul.sectlevel0 ul.sectlevel1 > li {
+    position: relative;
+    padding-right: 20px;
+}
+
+#toc ul.sectlevel0 ul.sectlevel2 {
+    display: none;
+}
+
+#toc ul.sectlevel0 ul.sectlevel1 > li.hasChildren .toc-expand {
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    cursor: pointer;
+    padding: 0px;
+    font-size: 22px;
+    font-style: normal;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 1;
+    color: #8A1C16;
+}
+#toc ul.sectlevel0 ul.sectlevel1 > li.hasChildren.toc-open >ul.sectlevel2 {
+    display: block;
+}
+#toc ul.sectlevel0 ul.sectlevel1 > li.hasChildren .toc-expand:hover {
+    color: #FF8A00;
+}
+#toc ul.sectlevel0 ul.sectlevel1 > li.hasChildren .toc-expand::after {
+    content: "+";
+    display: block;
+}
+#toc ul.sectlevel0 ul.sectlevel1 > li.hasChildren.toc-open .toc-expand::after {
+    content: "-";
+}
+
+#toc .nav-link.active {
+    color: #FF8A00;
+    font-weight: bold;
+}
+
 @media screen and (min-width: 768px) {
     #toctitle {
         font-size: 1.375em
@@ -2132,6 +2174,7 @@ body {
     font-family: 'Merriweather', serif;
     line-height: 1.9em;
     font-weight: 300;
+    position: relative;
 }
 
 ol, ul {
@@ -2444,15 +2487,15 @@ div.list-of-examples dl {
 
 /* Main content pages */
 /*.book {
-	border-left: 1px solid #DB7430;
-	margin-left: 200px;
-	padding-bottom: 5px;
-	padding-left: 30px;
-	padding-top: 0;
+    border-left: 1px solid #DB7430;
+    margin-left: 200px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-top: 0;
 }*/
 
 .book h2, .book h3, .book h4, .book h5, .book h6 {
-	margin-bottom: 0.25em;
+    margin-bottom: 0.25em;
 } 
 
 .book h2 {
@@ -2665,13 +2708,13 @@ pre.programlisting {
 }
 
 .book #content h1.sect0 {
-	border-bottom: 1px solid #f0f0f0;
-	padding: 0.8em 0 0.2em;
-	margin-bottom: 0.2em;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0.8em 0 0.2em;
+    margin-bottom: 0.2em;
 }
 
 .book #content h1.sect0 + .sect1 {
-	padding-top: 0em;
+    padding-top: 0em;
 }
 
 /* Authorgroup */
@@ -2751,11 +2794,16 @@ div.navfooter > table > tbody > tr > td[align="right"], div.navfooter > table > 
 }
 
 .gsc-search-button {
-	padding: 0;
+    padding: 0;
 }
 input.gsc-search-button.gsc-search-button-v2 {
     padding: 6px 6px !important;
     background-color: #4C3B35 !important;
+}
+
+button.gsc-search-button.gsc-search-button-v2 {
+    padding: 13px !important;
+    margin-left: 0 !important;
 }
 
 input.gsc-input {
@@ -2763,13 +2811,16 @@ input.gsc-input {
     font-family: 'Merriweather', serif !important;
     font-weight: 100;
 }
+td.gsc-input {
+    padding: 0 !important;
+}
 
 .gsc-input-box {
     padding-top: 2px !important;
     padding-bottom: 2px !important;
 }
 .gsc-input-box > table {
-	border-top-left-radius: 8px;
+    border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
 

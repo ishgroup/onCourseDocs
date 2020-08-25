@@ -133,7 +133,7 @@ These scripts are enabled by default in all onCourse databases. Please
 contact us before you disable them as they have implications for the
 enrolment and sales processes:
 
-[arabic]
+
 . *Send enrolment* - send the email (template - Enrolment Confirmation)
 to the enrolling student on successful creation of an enrolment, through
 the office or the website.
@@ -161,7 +161,7 @@ and make modifications as desired if your licence level allows.
 
 ===== Student notifications
 
-[arabic]
+
 . *Send student class commencement notice* - automatically send a
 reminder email (template - Student notice of class commencement) to
 active enrolled students one day before their class commences
@@ -204,7 +204,7 @@ released.
 
 ===== Tutor notifications
 
-[arabic]
+
 . *Send tutor class commencement notice* - automatically send a reminder
 email (template - Tutor notice of class commencement) to all class
 tutors two days before their class commences
@@ -230,7 +230,7 @@ released.
 
 ===== VET specific scripts
 
-[arabic]
+
 . *Send USI reminder* - automatically send a reminder email (template -
 USI reminder email) to VET students every 7 days for the next month if
 they haven't supplied their USI on or shortly after enrolment
@@ -256,7 +256,7 @@ after to the completion of the course.
 
 ===== Financial scripts
 
-[arabic]
+
 . *Send refund advice* - When a successful payment out is created e.g.
 credit card refund, send an email (template - Refund advice) to the
 payee
@@ -286,7 +286,7 @@ message stored in onCourse against the contact record.
 
 ===== Marketing and sales scripts
 
-[arabic]
+
 . *Synchronise availability (enrolment)* - This script finds all single
 session classes taught by the same tutor in the same room with
 overlapping times and keeps the places available in sync. For each
@@ -326,7 +326,7 @@ in this class.
 
 ===== Administrative scripts
 
-[arabic]
+
 . *Send product purchased email* - Each time a product is purchased on
 the website, and email is sent to the admin email address to notify them
 of the purchase, using the same admin email as the 'From' address.
@@ -350,7 +350,7 @@ you to fine tune how the integration works. For more information about
 3rd party application integrations refer to the chapter
 link:externalintegrations.html[external integrations]
 
-[arabic]
+
 . *CloudAssess course enrolment create* Creates an enrolment in cloud
 assess where the onCourse course code and cloudAssess course code are
 the same
@@ -620,18 +620,18 @@ invoice is created.
 [source,groovy]
 ----
 def i = args.entity
-        
+
 if (i.confirmationStatus == ConfirmationStatus.NOT_SENT) {
     def m = Email.create("Tax Invoice")
     m.bind(invoice: i)
     m.to(i.contact)
-    
+
     m.send()
-    
+
     i.setConfirmationStatus(ConfirmationStatus.SENT)
     args.context.commitChanges()
-}  
-        
+}
+
 ----
 
 In that variable "args" you will get access to important objects to help

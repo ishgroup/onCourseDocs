@@ -42,7 +42,7 @@ below.
 
 ==== Editing an existing message template
 
-[arabic]
+
 . Go to the Automation window and click the Message Templates heading to
 expand the section.
 . Double click on a message from list to open it in edit view. The top
@@ -189,7 +189,7 @@ Expected duration: ${enrolment.courseClass.expectedHours ?: "not specified"} hou
 <% } else { %>
 Start: ${enrolment.courseClass.startDateTime.format("h:mm a EEEE d MMMM yyyy zzzz")}
 End: ${enrolment.courseClass.endDateTime.format("h:mm a EEEE d MMMM yyyy zzzz")}
-<% } %>                
+<% } %>
 ----
 
 You can also create a loop inside a template to iterate through a list
@@ -244,7 +244,7 @@ unsubscribe link in your emails like:
 
 [source,groovy-template]
 ----
-To remove yourself from the waiting list and unsubscribe to these notices, 
+To remove yourself from the waiting list and unsubscribe to these notices,
 please visit ${waitingList.student.getPortalLink("subscriptions")}
 ----
 

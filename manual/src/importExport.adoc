@@ -110,7 +110,7 @@ useful for when you're compiling spreadsheets in excel, creating an
 email or or word processing document. Copy items to the clipboard by
 doing the following:
 
-[arabic]
+
 . Highlight the rows of data you want to copy to the clipboard
 . Click the Share button
 . Select 'Excel' then click 'Copy to Clipboard'
@@ -152,7 +152,7 @@ most of the class fields.
 image:images/exports/class_export_options.png[ Available exports
 accessed via Site List ,scaledwidth=100.0%]
 
-[arabic]
+
 . Highlight the Class records you wish to export within the Class
 window.
 . Go to File > Import/Export > Export Classes or select the share icon
@@ -204,7 +204,7 @@ onCourse enables users to export not only the invoice information, with
 each invoice reflected as one line within the resulting output file, you
 can also export the invoice line detail.
 
-[arabic]
+
 . Highlight the invoice records you wish to export information for from
 within the Invoice window.
 . Select the share icon in the bottom right hand corner of the list
@@ -237,7 +237,7 @@ There are a range of options for creating custom exports in onCourse.
 What you choose depends on your familiarity with database structures,
 queries and the Groovy language.
 
-[arabic]
+
 . Copy an existing export to make a new export file, and then make
 changes to the copy
 . Create a new export from scratch
@@ -288,7 +288,7 @@ For example, if I wanted a new export for Tutor data that started from
 the Contact entity, I'd choose the default 'Contact CSV export' as my
 starting point.
 
-[arabic]
+
 . Go to the Automation window, find the export 'Contact CSV export'
 under Export Templates and click it to open it.
 . Click the Save as new export template button in the top right, you'll
@@ -303,8 +303,8 @@ template with the 'Save As New Export Template' button highlighted
 +
 [source,groovy]
 ----
-records.each { Contact c ->  
-csv << [ 
+records.each { Contact c ->
+csv << [
 ----
 +
 means that in this file, the letter 'c' will be used as shorthand for
@@ -363,7 +363,7 @@ field value, so there is no comma after this row.
             "tutorResume"                    : c.tutor?.resume
         ]
 }
-                    
+
 ----
 +
 You can also see above that the export file ends with the bracket
@@ -381,7 +381,7 @@ tutor object, so the join from the contact to the tutor is
 [source,groovy]
 ----
             "workingWithChildrenCheckRef"    : c.tutor?.wwChildrenRef,
-                    
+
 ----
 +
 In this example, the addition of the question mark character is a
@@ -409,7 +409,7 @@ for more information about creating custom fields in onCourse.
 
 When you are ready to test your new export in onCourse:
 
-[arabic]
+
 . Go to any of the windows listed under the Available From section
 . Select a record from the window and hit the Share button.
 . Choose the output type from the left most column, and then select the
@@ -447,7 +447,7 @@ image:images/exports/export_avetmiss.png[image,scaledwidth=100.0%]
 
 onCourse already comes with a template for exporting to Adobe InDesign.
 
-[arabic]
+
 . Open the class list view
 . Use the searching feature to find the classes you want in your
 brochure. This might be one or a thousand classes.
@@ -457,7 +457,7 @@ disk somewhere. It will be an XML file, ready for InDesign.
 
 Now fire up Adobe InDesign and import this file.
 
-[arabic]
+
 . [.menuchoice]#File > Import XML#
 . Choose your XML file which you just exported from onCourse.
 . Ticking "Link" will keep the InDesign document linked to your source
@@ -488,7 +488,7 @@ for the state of NSW.
 
 Below are the steps you need to follow to do this:
 
-[arabic]
+
 . Open the 'Class' window and locate the RSA class you want to create
 the file for
 . Single click on the chosen class
@@ -516,7 +516,7 @@ Client to access and generate the financial data export for MYOB.
 
 The steps involved in running this export are as follows:
 
-[arabic]
+
 . You must be an admin user
 . Type 'MYOB' into the find anything search, or click on 'All' in the
 left navigation column, and select 'MYOB export'
@@ -549,7 +549,7 @@ window, you can define exactly which transactions you wish to export to
 the resulting text file. The steps involved in running this export via
 the Transactions window are as follows:
 
-[arabic]
+
 . Filter and highlight the transaction records you wish to export within
 the Transaction window
 . Go to File > Import/Export > Export Transactions to bring up the
@@ -579,7 +579,7 @@ request. Please send your request to support@ish.com.au for a proposal.
 
 ==== Standard Imports available
 
-[arabic]
+
 . *onCourse AVETMISS outcome import* - Using data from an import set of
 NAT00120, NAT00060, NAT00080 and NAT00085 file, create _new_ students in
 onCourse with their existing AVETMISS file student number. Import their

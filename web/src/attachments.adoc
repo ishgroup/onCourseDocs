@@ -115,13 +115,12 @@ These will appear on your website on any course detail pages e.g www.acme.com.au
 
 image:images/tagged_image_course_details.png[ Tagged image displayed at the top of the Accounting course detail page,scaledwidth=100.0%]
 
-You would then create a new tag group called 'image' and a tag inside that called 'hero'
+You would then create a new tag group called 'image' and a tag inside that group. Call that tag 'hero'.
 
 image:images/taggingheroimage.png[ Creating a new tag group called 'image' and a child tag called 'hero',scaledwidth=100.0%]
 
 Once you have created this tag group and tag the next step would be to upload the images you want to tag to the document management system.
-More information about how you do this can be found
-http://www.ish.com.au/s/onCourse/doc/latest/manual/documentManagement.html[here.]
+
 Once you have done this you will have to tag each of these images with the 'hero' tag.
 
 To enable this feature you will have to add the following code to the CourseItem.tml file :
@@ -136,16 +135,16 @@ To enable this feature you will have to add the following code to the CourseItem
 
 Lastly you would go into each course you want these images to be displayed and add the document to the course record.
 You do this by clicking the + button next to Documents heading and typing in the name of the image you've already added.
-If the image isn't uploaded to oncourse yet, click Browse and search your local computer for it.
+If the image isn't uploaded to onCourse yet, click Browse and search your local computer for it.
 Remember to make sure the pixel width and height is the same as the code in the CourseItem.tml then tag them to the tag 'hero' in the tag group 'image'.
 
 image:images/tagged_image_course.png[ Added the image 'dart' to the course 'Accounting',scaledwidth=100.0%]
 
 === Rich text
 
-Sometimes you want to position images and attachments not just at the end of the course description, but on other pages withint your site.
+Sometimes you want to position images and attachments not just at the end of the course description, but on other pages within your site.
 You may want to display an image on a regular CMS page or link to a course handbook pdf download within a block in the side margin on your site.
-Any rich text enabled text field within onCourse can display this content, such as:pages, blocks, course description, tutor resume, class description, site description
+Any rich text enabled text field within onCourse can display this content, such as:pages, blocks, course description, tutor resume, class description, site description.
 
 [[images_and_attachments-image]]
 ==== \{image}
@@ -202,7 +201,7 @@ If supplied, this image will be made an href link to the destination you specify
 ==== \{attachment}
 
 Link to an attachment.
-When you user clicks on the link, the file will be downloaded so you will want to use well accepted file formats such as PDF.
+When your user clicks on the link, the file will be downloaded. You will want to use well accepted file formats such as PDF.
 
 ===== Usage
 

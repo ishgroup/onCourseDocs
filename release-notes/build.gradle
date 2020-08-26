@@ -1,11 +1,7 @@
-import groovy.xml.MarkupBuilder
 import groovyx.net.http.ContentType
 import groovyx.net.http.RESTClient
 import groovyx.net.http.HttpResponseException
 import org.apache.tools.ant.filters.ReplaceTokens
-
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
 buildscript {
   repositories.maven {
@@ -39,22 +35,17 @@ task createIndex(type: Copy, dependsOn: processSrc) {
   from "src/index.xml"
   into "${buildDir}/processed"
   filter(ReplaceTokens,tokens: [
-          versions: versions.reverse().collect { "<xi:include href='${it}/release-notes.xml'/>" }.join('\n\t\t\t\t'),
-          publishedDate: LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy")),
-          copyrightYear : LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))
+          versions: versions.reverse().collect { "link::./${it}[${it}]" }.join('\n'),
   ])
 }
-docbookHtml.dependsOn createIndex
-docbookPdf.dependsOn createIndex
+asciidoctor.dependsOn createIndex
 
 task mergeImages(type: Copy) {
     from fileTree(dir: 'src', include: '**/images/*').files
     into "${buildDir}/html/images"
     includeEmptyDirs = false
 }
-docbookHtml.dependsOn mergeImages
-docbookPdf.dependsOn mergeImages
-
+asciidoctor.dependsOn mergeImages
 
 // Run the following task to create new release notes from squish
 // ./gradlew release-notes:releaseNotes -PreleaseVersion=1.1
@@ -62,7 +53,7 @@ task releaseNotes(type: ReleaseNotes) {
   if (project.hasProperty('releaseVersion')) {
   	version = releaseVersion
   }
-  outputFile = new File(project.projectDir, "/src/${version}/release-notes.xml")
+  outputFile = new File(project.projectDir, "/src/${version}/release-notes.adoc")
 }
 
 class ReleaseNotes extends DefaultTask {
@@ -81,7 +72,7 @@ class ReleaseNotes extends DefaultTask {
     outputFile.parentFile.mkdirs()
     new File(outputFile.parentFile, "images").mkdirs()
 
-    buildDocBook(version, issues, outputFile)
+    outputFile.append(createRelease(version, issues))
   }
 
   def getJiraResponse(jql) {
@@ -95,12 +86,12 @@ class ReleaseNotes extends DefaultTask {
               query: [jql: jql, maxResults: '1000'])
       return response.data
 
-    } catch(HttpResponseException e) {
+    } catch (HttpResponseException e) {
       logger.error "*** Request to squish failed with error: ${e.response.data}"
     }
   }
 
-  def buildDocBook(version, Collection issues, File outputFile) {
+  String createRelease(version, Collection issues) {
     issues.sort { issue -> issue.key }
     issues.each { issue ->
       logger.lifecycle issue.key + " " + issue.fields.summary
@@ -110,89 +101,45 @@ class ReleaseNotes extends DefaultTask {
     (issues_web, issues_angel) = issues.split { issue -> issue.fields.components.any { WEB_APPS.contains(it.name) } }
     (issues_reports, issues_angel) = issues_angel.split { issue -> issue.fields.summary.contains('report') }
 
-    def xml = new MarkupBuilder(new FileWriter(outputFile))
-    xml.mkp.xmlDeclaration(version: "1.0", encoding: "utf-8")
+    def output = "= Release ${version}" + "\n"
+    output += new Date().format('d MMM yyyy') + "\n"
+    output += "\n"
+    output += "==Important changes" + "\n"
+    output += "\n"
 
-    xml.chapter('xmlns': 'http://docbook.org/ns/docbook', 'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
-            'xsi:schemaLocation': 'http://docbook.org/ns/docbook file://../../src/docbook.xsd',
-            'xmlns:xlink': 'http://www.w3.org/1999/xlink', version: '5.0', 'xml:id': "release-${version}") {
-      info {
-        title("Release ${version}")
-        pubdate(new Date().format('d MMM yyyy'))
-      }
-      section(role: 'important') {
-        title("Important changes")
-        para(' ')
-      }
-      section(role: 'major') {
-        title("Major features")
-        para(' ')
-      }
-      section(role: 'scripts') {
-        title("Reports and scripts")
-        itemizedlist {
-          issues_reports.each { issue ->
-            listitem {
-              para {
-                mkp.yield(issue.fields.summary)
-                systemitem(issue.key)
-              }
-            }
-          }
-        }
-      }
-      section(role: 'minor') {
-        title("Minor features")
-        itemizedlist {
-          issues_angel.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
-            listitem {
-              para {
-                mkp.yield(issue.fields.summary)
-                systemitem(issue.key)
-              }
-            }
-          }
-        }
-      }
-      section(role: 'fixes') {
-        title("Fixes")
-        itemizedlist {
-          issues_angel.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
-            listitem {
-              para {
-                mkp.yield(issue.fields.summary)
-                systemitem(issue.key)
-              }
-            }
-          }
-        }
-      }
-      section(role: 'web') {
-        title("Web features")
-        itemizedlist {
-          issues_web.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
-            listitem {
-              para {
-                mkp.yield(issue.fields.summary)
-                systemitem(issue.key)
-              }
-            }
-          }
-        }
-      }
-      section(role: 'web-fixes') {
-        title("Web fixes")
-        itemizedlist {
-          issues_web.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
-            listitem {
-              para {
-                mkp.yield(issue.fields.summary)
-                systemitem(issue.key)
-              }
-            }
-          }
-        }
-      }
+    output += "==Major features" + "\n"
+    output += "\n"
+
+    output += "==Reports and scripts" + "\n"
+    issues_reports.each { issue ->
+      output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
     }
+    output += "\n"
+
+    output += "==Minor features" + "\n"
+    issues_angel.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
+      output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
+    }
+    output += "\n"
+
+    output += "==Fixes" + "\n"
+    issues_angel.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
+      output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
+    }
+    output += "\n"
+
+    output += "==Web" + "\n"
+    issues_web.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
+      output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
+    }
+    output += "\n"
+
+    output += "==Web fixes" + "\n"
+    issues_web.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
+      output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
+    }
+    output += "\n"
+
+    return output
   }
 }

@@ -1017,7 +1017,6 @@ details > summary:first-of-type {
 .admonitionblock td.content > .title, .audioblock > .title, .exampleblock > .title, .imageblock > .title, .listingblock > .title, .literalblock > .title, .stemblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, table.tableblock > .title, .verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title {
     text-rendering: optimizeLegibility;
     text-align: left;
-    font-family: "Noto Serif", "DejaVu Serif", serif;
     font-size: 1rem;
     font-style: italic
 }
@@ -1041,7 +1040,7 @@ table.tableblock #preamble > .sectionbody > [class="paragraph"]:first-of-type p 
     border-collapse: separate;
     border: 0;
     background: none;
-    width: 100%
+    width: 100%;
 }
 
 .admonitionblock > table td.icon {
@@ -1062,7 +1061,10 @@ table.tableblock #preamble > .sectionbody > [class="paragraph"]:first-of-type p 
     padding-left: 1.125em;
     padding-right: 1.25em;
     border-left: 1px solid #dddddf;
-    color: rgba(0, 0, 0, .6)
+}
+
+.admonitionblock.tip > table td.content {
+    color: white;
 }
 
 .admonitionblock > table td.content > :last-child > :last-child {
@@ -1885,38 +1887,6 @@ a span.icon > .fa {
     cursor: inherit
 }
 
-.admonitionblock td.icon [class^="fa icon-"] {
-    font-size: 2.5em;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
-    cursor: default
-}
-
-.admonitionblock td.icon .icon-note::before {
-    content: "\f05a";
-    color: #19407c
-}
-
-.admonitionblock td.icon .icon-tip::before {
-    content: "\f0eb";
-    text-shadow: 1px 1px 2px rgba(155, 155, 0, .8);
-    color: #111
-}
-
-.admonitionblock td.icon .icon-warning::before {
-    content: "\f071";
-    color: #bf6900
-}
-
-.admonitionblock td.icon .icon-caution::before {
-    content: "\f06d";
-    color: #bf3400
-}
-
-.admonitionblock td.icon .icon-important::before {
-    content: "\f06a";
-    color: #bf0000
-}
-
 .conum[data-value] {
     display: inline-block;
     color: #fff !important;
@@ -2496,7 +2466,7 @@ div.list-of-examples dl {
 
 .book h2, .book h3, .book h4, .book h5, .book h6 {
     margin-bottom: 0.25em;
-} 
+}
 
 .book h2 {
     font-family: 'Port Lligat Slab', sans-serif;
@@ -2625,7 +2595,7 @@ div.caution {
 /* Tip boxes */
 div.tip {
     background: none repeat scroll 0 0 #006D7F;
-    color: #D6E6E6;
+    color: white;
 }
 
 div.caution, div.tip {
@@ -2635,7 +2605,7 @@ div.caution, div.tip {
     margin: 20px 10px !important;
     padding: 16px 12px 16px 18px;
     position: relative;
-    width: 220px;
+    width: 50%;
 }
 
 div.caution h3, div.tip h3 {

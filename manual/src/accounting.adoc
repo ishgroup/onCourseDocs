@@ -1,3 +1,4 @@
+[[accounting]]
 == Accounting
 
 The following chapter provides an overview of the principles of the onCourse financial process, as well as clear explanations as to how you get the information you need from onCourse in order to obtain your monthly / weekly reports.
@@ -356,20 +357,22 @@ You can make the following changes in the script to meet your requirements:
 *Change the email address receiving the report* The default system administrator email address is the one you have set in General Preferences > Messaging.
 If this is not the email address you want to use, change the reference in the script that says
 
-[source,groovy]
+[source]
 ----
 smtp {
-            from preference.email.from
-            to preference.email.admin
+    from preference.email.from
+    to preference.email.admin
+}F
 ----
 
 to say:
 
-[source,groovy]
+[source]
 ----
 smtp {
-            from preference.email.from
-            to "accounts@mycollege.com.au"
+    from preference.email.from
+    to "accounts@mycollege.com.au"
+}
 ----
 
 Where "accounts@mycollege.com.au" is the email address of the person who should receive the report, being sure to include the speech marks.
@@ -377,14 +380,14 @@ Where "accounts@mycollege.com.au" is the email address of the person who should 
 *Change from weekly to monthly automated reports* To make this change you need to make some changes to the code in the script, and also the CRON. The CRON is the scheduler that defines how often the script runs.
 By default the CRON is 3am every Monday morning:
 
-[source,groovy]
+[source]
 ----
 0 0 3 ? * MON
 ----
 
 Change it to 3am the 1st of every month:
 
-[source,groovy]
+[source]
 ----
 0 0 3 1 1/1 ? *
 ----

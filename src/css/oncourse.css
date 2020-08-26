@@ -881,11 +881,11 @@ p a > code:hover {
 #toc .nav-link::before {
     content: "";
     position: absolute;
-    width: 40px;
+    width: 2px;
     height: 1px;
     background: none;
     bottom: -1px;
-    left: 0;
+    left: -4px;
 }
 #toc .nav-link:hover::before {
     background: #FF8A00;
@@ -893,12 +893,11 @@ p a > code:hover {
 
 #toc .nav-link.active {
     color: #FF8A00;
-    font-weight: bold;
 }
 
 #toc .nav-link.active::before {
     background: #FF8A00;
-    height: 2px;
+    height: 1.2em;
 }
 
 @media screen and (min-width: 768px) {

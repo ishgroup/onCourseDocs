@@ -1,0 +1,244 @@
+= Release 5.0
+
+== Release 5.0
+
+=== Major features
+
+==== Quick Enrol user interface
+
+Months in the making, a sophisticated new design for Quick Enrol has
+been built so your staff can process enrolments, sell products, create
+invoices and record payments at lightning speed.
+
+Some of the improvements include:
+
+* Improved contact look-up selection: See a full list of possible
+contact matches, with more data shown
+* Simpler class and product selection: search, show all, or choose for
+the quick list of recently sold items
+* Sell products and vouchers: Two new types of products, which can be
+bought along with the existing enrolment and memberships
+* More flexible invoicing: easily add custom invoice lines on the fly,
+and set the invoice due date into the future
+* Your choice of payment delegation: Manually select which historical
+invoices you wish the payment to apply to, or use our auto-calculate
+feature to disperse the value of this payment against the invoices
+outstanding
+* Redeem vouchers for payment: a new feature for this release, allowing
+vouchers to be redeemed during Quick Enrol
+* Choice of confirmation method: after enrolment, send emails, print
+confirmations or both
+
+==== Vouchers
+
+Vouchers are a new way to sell training to your customers. Vouchers can
+be used in the traditional sense of a gift voucher, where the price of
+purchase is the dollar value available for redemption, for example, a
+voucher bought for $120 can be redeemed for $120 worth of training or
+product. In addition, a voucher can be sold for a different value to
+it's redemption value, for example, you can sell for $90 a voucher with
+can be redeemed for $100, or give away free $20 gift vouchers as part of
+a promotion you are running.
+
+But more exciting than traditional style gift vouchers is the new
+concept of vouchers as a way to bundle together the purchase of a group
+of enrolments at a special price. For example, if you want to sell a
+qualification as both a series of short courses and a full
+qualification, you can bundle together the short courses and sell the
+qualification as a voucher. The voucher will entitle the student to an
+enrolment in each of the short courses.
+
+Another way to use a voucher could be to sell one to a company for 20
+enrolments in a particular course, as they know they have 20 staff they
+wish to send along over the course of the year. As the staff enrol, they
+redeem an enrolment from the voucher one by one, giving them the freedom
+of selecting an advertised class from your schedule that fits around
+their commitments (but not the freedom to use the voucher to enrol in
+any other type of course). Or perhaps they all enrol in a custom class
+you have created just for them, but are responsible for completing the
+online enrolment process and filling out their contact details and
+AVETMISS responses, so you don't need to do the data entry from paper
+forms.
+
+Each voucher has a unique identifying code and an expiry period (set by
+you) and can be used in multiple transactions until it's total value has
+been redeemed or it has expired. Vouchers can also been locked to send
+the redemption invoice to a nominated individual and can be edited to
+change the 'invoice to' and expiry date after sale.
+
+A new chapter in the user handbook is available.
+
+==== Products
+
+Products, like textbooks, mugs, Certificate re-prints, and other fixed
+charge items can now be created in onCourse and sold during the
+enrolment process in the office or online.
+
+See the user handbook for more information.
+
+==== Selling memberships
+
+Memberships can now be sold during the online enrolment process, along
+with products and vouchers.
+
+=== Minor features
+
+==== Western Australia specific reporting
+
+The West Australian RAPT and CQR exports are now implemented.
+
+Additional WA only options have been added to the class delivery mode
+options, enrolment concession options and outcome status options to meet
+this requirement.
+
+The RAPT export format is available in the list of AVETMISS 7 options in
+the File > Import/Export window, class cogwheel or enrolment cogwheel.
+
+The CQR export format is available from the Certificate list cogwheel.
+
+==== VET FEE HELP
+
+The first round of User Interface features for VET FEE HELP
+functionality has been added to onCourse. In the student AVETMISS
+record, class VET tab, and enrolment FEE-HELP tab additional fields have
+be added to record information that relates to VET FEE HELP reporting.
+
+In following versions of onCourse, HEPCAT and CHESSN integration will be
+added.
+
+==== Performance
+
+In this release we continue our work on improving performance over slow
+networks. A high speed NBN may now never happen, so every bit helps. In
+particular we compress network streams to get a 30% reduction (roughly)
+in bandwidth needed. There is a new option in onCourse.cfg to tweak the
+compression setting.
+
+We have also moved the AVETMISS reporting system onto the server, so
+performance of this export will be dramatically improved (in some cases
+by a factor of 10).
+
+=== Fixes
+
+==== Quick Enrol
+
+* Improvement to contact name clairvoyant look up to improve search
+behaviour on company names
+* Allow new concessions to be added to existing contacts in Quick Enrol
+
+==== Messaging
+
+* Improvement to the send message window, to allow contacts to be
+manually added to or deleted from the send list
+
+==== Contacts
+
+* New attachment types: tutors only, and tutors and enrolled students
+for attachments available via the onCourse portals
+* Fix to ensure attachments linked to contacts can be opened and viewed
+from within the contact window
+
+==== Discounts
+
+* Improvements to the membership discount relationship window to allow
+relationships to be edited and viewed
+* Allow classes to be added and deleted to the discount classes tab in a
+single action (previously, a record save was required between add and
+delete actions)
+
+==== Course and class records
+
+* Increased the field length for the course code from 10 to 32
+characters. The course code creates the default URL for a course e.g.
+www.sttrinians.com.au/course/BCFS. With up to 32 characters now
+available you can create more SEO relevant URLs e.g.
+www.sttrinians.com.au/course/computerclassseniors
+* Fix to the display of the class attendance tab, where the final
+student's sessions sometimes couldn't be edited as they were hidden
+under the scroll bar
+* Fix to the timetable repeating session function so repeating every 2
+or 3 days each week, skipping weekends, recreates the first session on
+the same day of the week as the original session
+* Improvement to class timetable sessions to allow session times of less
+than 15 minutes
+* Corrected an error in the onCourse calendar tool that in a mySQL
+database sometimes incorrectly rounded the session time to a few minutes
+past the selected time
+* Ensure self-paced cancelled classes are included in the cancelled
+classes filter
+
+==== AVETMISS
+
+* Improvement to AVETMISS to better comply with the new or continuing
+enrolment specifications in the NAT000120. When the course is marked as
+a full qualification, and the enrolment commenced before the 'outcomes
+after' date specified when running the AVETMISS export, then the value
+'4 – continuing enrolment in the qualification or course from a previous
+year' is exported. When the course is marked as a full qualification and
+the enrolment commenced after the 'outcomes after' date then the value
+'3 – commencing enrolment in the qualification or course' is exported.
+For all other enrolments, where the course is not marked as a full
+qualification, the value '8 – units of competency or module only
+enrolment' is exported. This fix is for both AVETMISS 6.1 & 7.
+* Fix to the NSW DET version of the AVETMISS 7 export to change the fill
+character for the Booking ID and Course Site ID are zeros instead of
+spaces.
+* Change to the AVETMISS 7 export to export all non-VET courses with an
+ISH123 or similar code, to prevent code duplication errors now onCourse
+allows 32 characters in this field, and AVETMISS allows only 12.
+* Update to the NSW DET Export to meet the March 2014 ePayments Data
+Extract File Technical Specifications. Changes include always including
+a qualification reference in the NAT00120 record, even for a short
+course and recalculating the NAT00130 export to export "Y" to indicate
+that training in the full qualification was completed successfully but
+"N" to indicate that the training was successfully completed in a
+partial qualification, or unsuccessfully completed for a full or partial
+qualification; or not completed in all UoCs enrolled.
+
+==== Finance
+
+* Improvement to the payslips 'add custom line' process to allow a
+description
+* Added payroll reference number to the payslip list view and made the
+contact name column in the payslip window sortable
+* Credit notes which automatically contra pay invoices, contra the
+originating invoice in the first instance, an improvement from
+defaulting to the oldest unpaid invoice
+* Ensure automatically reversed web payments for failed enrolment
+attempts reverse the originating income account, instead of the default
+income account
+* Add 'reverse payment' cog wheel feature to the payment in window
+
+==== Email templates
+
+* 'Invoice due date' and 'Customer reference number' now an available
+field to insert into the email template for the Tax Invoice
+* A new XML email template has been added to send the voucher code and
+redemption information on purchase
+
+==== Reports
+
+* Change record sorting for Class Contact List to be alphabetical
+* Sort order for invoice lines now grouped by class code
+* Invoice report now grouped into taxable items i.e. enrolment and
+product purchases and non-taxable items i.e. gift vouchers and enrolment
+vouchers
+* Bank process Banking report only shows cash and cheque payment type
+items
+* Fix to the Class Sign report to print the first session site and room
+information, rather than the default class site and room info
+* Fix for Statements of Attainment reports to ensure long unit of
+competency names on the certificate face wrap instead of truncate
+* Ensure rich text such as \{blocks} and \{image} textile in the course
+marketing copy is not printed in the Enrolment Confirmation report
+* Fix to the exception that could occur when printing the Trial Balance
+report, where onCourse gave an error 'could not materialise value for
+key 'accountOpeningCredit'
+* Fix to a range of printed Budget reports to ensure wage expense lines
+are itemized and included in totals
+* Improvement to the Payslip export to include the fields for the
+Course-Class code and the tutors payroll number
+* Fix to the Class Hours report to ensure the Student Contact Hours are
+correctly calculating
+* Ensure the Transaction Summary and Detail reports print the selected
+date range used to run the report, on the report

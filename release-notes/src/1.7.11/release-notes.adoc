@@ -1,0 +1,83 @@
+= Release 1.7.11
+
+== Release 1.7.11
+
+=== Important changes
+
+There have been no public releases between 1.7.6 and this version. The
+versions in between have been issued privately to beta testers and to
+fix specific issues at certain sites. All fixes and improvements have
+been rolled into 1.7.11.
+
+=== Fixes
+
+* Fixed a bug introduced in 1.7.5 with discounts that were set to fee
+override. This discount did not save correctly and only affect the
+discount percentage.
+
+* Prevented an exception that arose when adding an additional contact to
+QE when the original contact did not have a class selected
+
+* Resolved the issue where financial preferences could not be opened
+more than once in the same session.
+
+* Fixed a bug with relating to access control. For users with limited
+access to class edit view, the information displayed did not refresh
+correctly and appeared as if blank.
+
+* In the class by subject report, the reported value of maximum places
+in class was not always correct
+
+* The merging process no longer exposes the password field for either
+contact.
+
+* Improved the quick search field in invoice, enrolment, payments and
+contact list. This now follows the same rules as when used in Quick
+Enrol and contact names can be entered as either "John Smith" or "Smith,
+John".
+
+* Allowed arbitrary GL account codes to be set by the user. Previously
+they were restricted to starting with a first digit designating the
+type: asset, expense, etc.
+
+* Mandatory tags that are missing now correctly display a warning when
+editing a record.
+
+* Resolved the issue where tutor names and class codes were displaying
+incorrectly on the class contact and details report.
+
+* When entering a complete course-class code in Quick Enrol, if class
+corresponding to the code was full, would auto select a different class
+that was empty instead of a non-selection. Now an error is shown and the
+user required to make another choice.
+
+* Resolved issue where private booking was failing if the end date was
+not specified.
+
+* Tags are now sorted according to weight & name, which prevents tag
+groups appearing in random order.
+
+* When a credit card payment is declined it now displays the following
+clearer text to the user:
+** "keep the invoice, charges and enrolments for later payment", or
+** "cancel the enrolments and create a credit note so that this
+transaction is reversed from onCourse"
+
+* The special needs field has been re-added to the Contact edit views.
+
+* The disability report now includes information from the special needs
+field.
+
+* Merging contacts now merge tags correctly.
+
+* Introduced sort order in contact screen to include sort by lastname,
+then firstname, rather than only on lastname with firstnames being
+arbitrary.
+
+* Fixed validation issue for course field of education.
+
+* Resolved issue where if a qualification was chosen, it was not
+possible to enter a field of education that differs from qualification
+
+* Sometimes NTIS course/qualification data would take a very long time
+to download. This problem should be resolved.

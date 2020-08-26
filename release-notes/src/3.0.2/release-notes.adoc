@@ -1,0 +1,73 @@
+= Release 3.0.2
+
+== Release 3.0.2
+
+=== Important changes
+
+Please note that the upgrade from a previous version may take a little
+while; larger databases could take 10-15 minutes to upgrade. Please
+don't stop the upgrade while it is in progress.
+
+=== Major features
+
+==== User interface improvements
+
+* Remove empty tutor wage record from budget when class is duplicated
+and "assign the same tutors.." option is not selected
+* Improvement to the visual layout of the Quick Enrol window to ensure
+the delete record icon doesn't get hidden behind the scroll bar
+* Class budget now deduct manual discounts from the total income
+* After removing the entire class timetable, the class start and end
+dates would be retained. Now they are removed.
+* Added ability to query on enrolment or invoice source fields
+* Increased default server permgen memory from 64 Mb to 256 Mb to
+prevent out of memory errors when running complex data exports
+
+==== Report improvements
+
+* Sales Report fixed to print all records on a single page
+* The class CSV export has been fixed to only count active enrolments
+* Improve the Transaction Detail report to show the account name on
+every page, the contact reference name for every invoice and payment in
+record and correct the page by page account totals to always show the
+account total.
+* Fix the transaction detail and summary report to show the data of
+transactions to the COS Discounts given account
+* Added new Transaction CSV and XML export options
+* Fixed Discounts by Class and Total Discount reports to exclude GST for
+discount fee income reported
+
+==== Transaction record improvements
+
+* Display the deferred income journal method in cases where the college
+had not explicitly chosen a setting. If you have not selected a Post
+prepaid fees option in the financial preferences, the applicable income
+for each class will be posted every session to your chosen income
+accounts. See the Deferred Income chapter in the user manual.
+* Fix to transaction record details to balance GL transaction account
+debits and credits where default account options had not been selected
+by the college
+* Invoice transactions in the general ledger would sometimes be posted
+at midnight instead of the correct time of day
+* Added server start up trigger to transfer pre-paid fees in advance
+liability to the designated income account, for college who shut down
+their server overnight. The standard process is for this job to run at
+12.30am.
+
+==== Tagging improvements
+
+* Improvements to tagging and filter results when multiple entity types
+are tagged with the same tag
+* Removed advanced search options "Not tagged with" and "Not tagged with
+(or parent of this tag)" and added "tagged with (including children)" as
+part of the re-factoring to tag filters and searches to improve the
+return of accurate cross table results
+* Improvement to the filter user interface in the sidebar options of
+every window. Now tag filter groups can be collapsed and hidden from
+view.
+* New feature: Tag groups for courses and classes are shown twice as
+filter options in the contact window, once for filtering students
+enrolled in, and a second time to filter for tutors teaching classes
+that are tagged with that tag option.
+* Show tag long name inside onCourse user interface list views. Only use
+short name for URL generation.

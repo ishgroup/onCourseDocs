@@ -1,0 +1,42 @@
+= Release 23
+
+== Release 23
+
+=== Important changes
+
+On demand scripts are now mixed in with other navigation items in the
+main menu. You can add them to favourites or just type to search for
+them.
+
+=== Major features
+
+=== Reports and scripts
+
+* Statement report displays same payment out twice `OD-14562`
+
+=== Minor features
+
+* Store session in DB. The server can now be restarted without logging
+out users. `OD-13111`
+* Bulk update of default fields when editing at enrolment level
+`OD-14263`
+* Preview for SMS `OD-14325`
+* Warning when user closed window with unsaved changes `OD-14528`
+* Merge on demand scripts with other navigation `OD-14570`
+* Checkout: 'purchase' cc transaction intead of auth/confirm `OD-14586`
+* Checkout - Show Payer name on the top of the credit card payment panel
+`OD-14591`
+* Message Alert for Operator `OD-14585`
+
+=== Fixes
+
+* Checkout - Showing more reasons for payment failure `OD-14477`
+* Payment In with payment plans apply to the correct items automatically
+`OD-14535`
+* Checkout: Printing Invoice after finishing checkout shouldn't use core
+filter `OD-14573`
+* 2FA failing `OD-14581`
+* Show All Outcomes only shows in progress outcomes `OD-14583`
+* Webapp opens links outside webapp `OD-14588`
+* Checkout applying payment in payment to all invoices, not selected
+invoice `OD-14596`

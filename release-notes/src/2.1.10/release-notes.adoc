@@ -1,0 +1,26 @@
+= Release 2.1.10
+
+== Release 2.1.10
+
+=== Fixes
+
+This release has a relatively minor set of bug fixes, mainly focused on
+VET and AVETMISS reporting. We strongly recommend this upgrade to any
+RTO since the issues here are quite important. For other users, it is a
+low priority upgrade.
+
+* Since onCourse 2.1.0 the Qualification selected in Course could change
+to a different qualification. In reality, this did not happen often
+which is why it hasn't been seen until now. The only real impact is
+typically related to AVETMISS exports.
+* Allowed creating Courses with Unit of Competency but no Qualification
+* Invoices created in Quick Enrol should be linked to the Account
+derived from Class. Fixed problem where this Account could change to the
+default account defined in preferences.
+* Added field 'Country' in the Site user interface
+* In NAT0020 export default country is Australia
+* 'Credit note' heading appeared in overpaid Invoice, when printed.
+'Invoice' heading appeared on overpaid Credit Note, when printed.
+* Tutors were missing when upgrading onCourse. This only affects
+customers upgrading from 1.7 to 2.x who are using an MS-SQL database
+* Reduced onCourse memory footprint during upgrade process from 1.7

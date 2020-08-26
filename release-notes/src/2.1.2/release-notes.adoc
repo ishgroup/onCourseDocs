@@ -1,0 +1,105 @@
+= Release 2.1.2
+
+== Release 2.1.2
+
+=== Reports and scripts
+
+==== Reports
+
+* Fixed all financial reports where $ displayed as ?
+* Added new report 'Class Information', like enrolment confirmation but
+without student particulars
+* Added new report 'Sales by Course Location', groups enrolments within
+data range by class site and shows number of enrolments and total fees
+paid for each class
+* Added discount column to 'Class Invoice Report'
+* Fixed printing options for 'Deposit Banking Report' and added totals
+to the footer of the report
+* Enabled printing of the 'Transaction Summary and Detail Reports' from
+the transaction window
+* Suppress printing of tutor details in 'Enrolment Confirmation Report'
+when the tutor is not marked as being in publicity
+* Added the student name and invoice number to Transaction Detail report
+to improve reconciliation
+* Suppress display of cancelled class sessions in Room Details report
+* Display website label and enrolment count for Sales Report where
+enrolments are processed online
+* Fixed wrapping for long Unit of Competency names in Certificate
+Transcripts
+* Improved layout of 'class roll – contact no' report
+* Suppress printing of unsuccessful units on Statement of Attainment,
+but ensure they print on student transcripts with results (for standard
+and customised reports)
+* Fixed sorting of the 'Budgets' report and added a new report 'Budget
+Summary' to only show totals by subject tag grouping
+
+===== Important notes
+
+* Searching on tags in advanced search has been removed for this
+release. It has a number of problems which are still unresolved and need
+extensive work. They will return in a future release.
+
+=== Minor features
+
+* Speed and responsiveness of the client and server application improved
+* Exporting AVETMISS from classes now allows you to filter outcomes by
+date range
+* Server startup is now much faster
+* Added AVETMISS field: "Still at school" to student window
+* Added new contact fields: title and honorific (eg. "Dr" and "B.Sc")
+* Added 'Do not report for AVETMISS' field to classes to always suppress
+all related records from any type of AVETMISS export
+* Added choice about assigning same classes and rooms during class
+duplication process
+* Added additional fields to Certificate window list view and advanced
+search options to improve user interface, including full qualification
+identifier, certificate number, date created and date printed
+
+=== Fixes
+
+==== Important fixes
+
+* Certain dollar amounts for classes would not be rounded correctly,
+meaning they could be several cents away from the desired amount
+* Budget tab calculations would sometimes not update onscreen in
+response to other changes even when the values in the database were
+correct
+* Many improvements to the timetabling feature: visual display,
+behaviour of entry fields, speed improvements
+* Server startup, upgrade and reference data import has been made more
+reliable
+* Printed report templates are now properly updating when new versions
+of reports are released by ish
+* Sometimes reference data was not updating properly. This has been
+fixed.
+* Incorrect class venue was shown on website where class venue was
+different to the Course venue
+
+==== Minor fixes
+
+* College name and administration site now always visible on the client
+dashboard
+* Outcome can now be edited from student screen
+* Improved messaging (email, sms, post) interface
+* Reduced size of data file by detecting and avoiding duplicate
+attachment files
+* Innodb is now the default for mysql. This only affects users creating
+new databases.
+* fixed AVETMISS export issues, mainly for QLD
+* fixed NSW DET AVETMISS export length to meet the change in standard
+requirements
+* minor adjustments to user interface layout and size
+* Fixed ability to revoke incorrectly issued VET Certificates
+* Re-enabled ability to create new concession types
+* Re-enabled ability to delete attachments from records
+* Allow sales of $0 memberships
+* Automatically assign the outcome of 81 to VET flagged courses during
+AVETMISS export, if not set to another value by the user
+* Allow edit of global unavailability rules
+* Improved implementation of access rights with timetable editor
+interface
+* Allow sort by student name in enrolment window
+* Allow creation of a private booking as the first 'class' for a new
+course
+* Improve private booking interface to auto select the private booking
+class for enrolment

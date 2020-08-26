@@ -1,0 +1,149 @@
+= Release 9.2
+
+== Release 9.2
+
+=== Major features
+
+==== Assessment tasks and Training Plans
+
+A new feature for onCourse has been added to allow you to create
+assessment tasks. Assessment tasks have a name, description, due date,
+release date and attached documents. This is the beginning of a series
+of development work scheduled for assessment tasks.
+
+The Attendance tab layout has been updated to show more information,
+including the training plan information mapping the units of competency
+to the scheduled sessions, assessment and their due dates.
+
+For more information about the new features and changes to this tab,
+refer to
+https://www.ish.com.au/s/onCourse/doc/latest/manual/assessment.html[The
+Assessment tasks chapter] of the user documentation.
+
+==== Time and Attendance (payroll) updates
+
+A number of visual changes have been made to the attendance marking tab,
+including the marking of tutor attendance for payroll purposes.
+
+New tutor attendance/payroll status for scheduled sessions are
+Confirmed' (green), 'Rejected' (red), 'Not confirmed' (grey). Tutor
+payable time for each session can be modified as needed to be either
+more than or less than the scheduled payable time from the class
+timetable.
+
+Payroll can now only be generated for sessions with confirmed
+attendance, and a new 'confirm all' option has been added to the
+generate tutor pay window if you wish to always process payroll as per
+the timetable schedule.
+
+For colleges who confirm attendance prior to processing payroll, the UI
+has changed, but your process remains the same.
+
+For more information about the new features and changes to this tab,
+refer to
+https://www.ish.com.au/s/onCourse/doc/latest/manual/payroll.html#payroll-attendance[the
+Payroll chapter] of the user manual.
+
+=== Reports and scripts
+
+* The AVETMISS data checking export 'Extended outcomes CSV' has been
+added to the enrolment window, and includes the additional field 'Do no
+report for AVETMISS' `OD-9894`
+* A new email template 'waiting list notification' has been added to the
+waiting list cogwheel option to allow you to manually notify students
+when a last minute place becomes available in a class `OD-9895`
+* A new script and email template set have been added for 'Send VET
+course completion survey' 14 days after completion of training
+`OD-10041 and
+          OD-10042`
+* Payslip Report updated to sort printed results by tutor last name,
+sort pay lines per tutor by date, and include a report total sum
+`OD-10077`
+* Student detail report updated to show time stamp and user for each
+note record printed in the report `OD-10045`
+* Invoice reports (both print and email templates) now sort invoiceLines
+in alphabetical order `OD-9935`
+
+=== Minor features
+
+* Addition of a new Outcomes list view, available from the find related
+option in contacts, classes and enrolments `OD-9474`
+* Site columns added to class list view, to allow by simple sorting by
+class location `OD-9891`
+* Check all units/ uncheck all units option added to session training
+plan view `OD-9890`
+* A new status of 'in progress' has been added to applications, to
+differentiate between new and un-actioned items, and those that have
+been followed up `OD-9892`
+* A new core filter has been added to the course window to, by default,
+hide disabled courses from the list view when it opens `OD-10031`
+* Invoice window quick search now allows for search on invoice number or
+debtor name `OD-9841`
+* Update to merge student default message to include the student number
+of the record that was merged `OD-9844`
+* Using the AVETMISS reporting code '66 - Did not start' will export two
+blank spaces for NSW Smart and Skilled enrolments. This is of particular
+use for Training Not Complete (TNC) student records. `OD-9864`
+* Add the following automatic data export rules to AVETMISS to assist
+with managing CSO enrolments: When 'Funding source – state training
+authority' state begins with CS or TSS then Fee exemption/concession
+type identifier = Y, Funding source – national = 11, When 'Funding
+source – state training authority' is equal to CSO, then export CSD
+`OD-9945`
+* VET Fee Help Provider code added to the AVETMISS general preferences
+tab, to export this code during the VFH export file process `OD-9584`
+* Vouchers with a dollar value for redemption can now be used as payment
+method after the enrolment has been processed in Payment In / Quick
+Enrol `OD-9877`
+* Improvements to tutor records with 'date finished' in their record, to
+show their record in a greyed out font in the tutor list view and stop
+them from being looked up by the clairvoyance when adding tutors to
+classes `OD-8336`
+* Addition of 'active' flag to tutor roles, to allow old roles to be
+disabled and not available to select in the drop down list when adding a
+tutor to a class `OD-9941`
+* Allow tutor payable time to be edited for all attendance time, so
+payable time can be increased or decreased per tutor per session
+`OD-9944`
+* Document all the preference keys `OD-10014`
+
+=== Fixes
+
+* Scrolling added to Quick Enrol related contact record list `OD-9847`
+* Outcomes not editable in the contact edit view `OD-9983`
+* Delivery mode would show "not set" when in fact they were inherited
+from the class. This was a cosmetic bug only. `OD-9984`
+* Financial record sorting in the contact financial tab adjusted to
+allow for modified invoice dates, to ensure running totals by date
+remain accurate `OD-9789`
+* Improved AVETMISS calculation of '3 - New Enrolment' or '4 -
+Continuing enrolment' to take into consideration students enrolling in
+pathway programs that require the completion of multiple short courses
+`OD-9903`
+* Fix typo in payment in process `OD-9990`
+* Fix to the validation process for the contact state field data to
+allow up to 20 characters to handle overseas customer data `OD-10058`
+* Fix to the invoice creation process where in some instances the
+student name was missing from the invoiceLine detail `OD-10043`
+* Improvement to the layout of the duplicate class sheet. 'Remove class
+notes' is now ticked by default `OD-10028`
+* LDAP SSL setting incorrect changes Bind user DN `OD-9880`
+* Ensure all email addresses sent to Moodle are converted to lower case
+as Moodle doesn't accept uppercase characters in email addresses
+`OD-10039`
+
+=== Web fixes
+
+* Hide the 'USI required' portal dashboard widget for students who have
+not enrolled in a vocational courses `OD-1993`
+* Improve the layout of the portal dashboard resources display `OD-1987`
+* Improve the layout of the portal dashboard next class block display
+`OD-1988 and OD-1989`
+* Auto complete Country of Birth country name in the portal and USI
+portal process `OD-9959`
+* Improvement to the layout of portal related contacts UI to allow
+better scrolling and navigation `OD-9988 and OD-1961`
+* Fix to delete the class web tab copy from the class web block when it
+is deleted from the onCourse class record `OD-10013`
+* Fix to display discounts correctly on the web for search result
+classes `OD-10061`

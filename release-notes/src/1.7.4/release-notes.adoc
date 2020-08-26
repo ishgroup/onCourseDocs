@@ -1,0 +1,25 @@
+= Release 1.7.4
+
+== Release 1.7.4
+
+=== Fixes
+
+* Our calendaring plugin is the only closed source library we use and an
+unfortunate error with the license keys has caused it to expire on
+midnight of 24 May 2009. This problem is now resolved and an automated
+test implemented in our system to ensure this cannot happen again. At
+ish we tend to avoid closed source libraries whenever possible for
+exactly this reason: we were eventually able to diagnose the problem by
+decompiling the library and discovering exactly what it was doing,
+something that is far easier when dealing with open source code
+libraries. On the other hand, this calendaring plugin is very reliable
+and gives us the gorgeous interface you see in the calendaring parts of
+onCourse.
+* Fixed a bug where stepping through a list of elements in clairvoyance
+would lose the highlight on the typed text
+* Don't highlight a class when the class is full in QE
+* Fix problem which prevented the removal of concession card types
+related to discounts for the web site
+* Fix population of invoice line amounts from web site when a discount
+was applied. The amount would be out by the value of tax on the
+concession. This only applies to web payments.

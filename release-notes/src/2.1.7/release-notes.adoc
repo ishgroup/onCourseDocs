@@ -1,0 +1,97 @@
+= Release 2.1.7
+
+== Release 2.1.7
+
+=== Reports and scripts
+
+* Date and time selectors have been added to financial reports for
+Transaction Summary, Transaction Detail, Payment In, Banking Report &
+Reconcile Report to allow for more accurate and specific ranges to be
+selected on report generation
+* New Report: Cancelled Classes Count, available from the class window.
+This report sums all the enrolments that existed prior to cancelling the
+class and the income that was received. This report will assist with the
+management of future class scheduling and accountability of programming
+staff.
+* Statement report corrected to show all entries sorted by date order
+* Traineeship Training plan report fixed and will print successfully
+* Print invoice balances have been corrected to show negative balances
+for credit notes
+* Improved layouts and summary data of the Sales Report and Sales by
+Course Location reports
+* Improved layouts and added tutors to the Classes Report
+* Added printed date range information to Transaction Summary report to
+meet financial audit requirements
+* Allow printing of Transaction Summary and Detail reports from both the
+Accounts and Transactions windows
+* Improvements to Invoice and Credit Note layout with better headings
+and suppression of payment advice information where there is a $0
+balance outstanding
+* Fixed word wrapping in Enrolment Confirmation for long site and room
+names
+* Added tutor name to Classes List report
+* Correct data for start and end dates in Class Tutor List report
+
+=== Minor features
+
+* For the NAT00085 AVETMISS exports we previously added a field to
+onCourse called "title", so this will now export any data you have
+entered in the title field in the NAT00085 file. We have also added a
+rule that will export Mr where gender = male and Ms where gender =
+female if no title has been entered. Only students without a gender or
+title will still export blank titles for AVETMISS purposes. This is
+particularly important in Tasmania where they have a special validation
+rule for this which no other state does.
+* Changed the VET course validation rules to allow courses to be created
+with units of competency but no reference to a qualification. This will
+allow the creation of Skill Set courses. In addition, the new style
+templates for Statements of Attainment allow you to reference a skills
+set by adding 'public notes' to the certificate face. Customers with
+custom templates may want to review their certificate options in light
+of this new AQF requirement.
+* Release of 64bit Windows Service Application, to take full advantage
+of RAM availabilities in high intensity environments
+* Show only classes currently running or running in the future by
+default in Quick Enrol
+* Display cancelled classes scheduled currently or in the future by
+default in Quick Enrol
+
+=== Fixes
+
+==== Major fixes
+
+* Errors relating to tutor wages and tax amounts, preventing class
+duplication, adding new wage lines to budgets and merging contacts have
+been resolved
+* Data upgrade to amount owing for invoices to resolve problems with
+user interface showing an incorrect balance that may conflict with
+printed report amounts
+* Fixed a race condition that stops large message lists from building in
+a timely manner. This was preventing high volume messages from being
+created.
+* Fixed an issue with the display not updating when email messages had
+been sent successfully, resulting in messages showing queued status even
+after successful sending
+* Exporting to CSV would sometimes fail due with problematic data.
+* Fixed validation problems where units could be deleted or changed in a
+student record, but changes would revert on save and record re-open.
+Units can again be successfully deleted or modified from the student
+enrolment record as required.
+
+==== Minor fixes
+
+* Corrected use of class core filters running in combination with tag
+record filters, to show expected results. Selecting cancelled classes
+was not correctly populating results.
+* Fixed results for subject filters in tutors list to mean 'tutors
+teaching classes linked to courses tagged with…'
+* Fixed bug that allowed you to open a dialog within a dialog (class >
+enrolment > outcome > add) but not let you save changes. Dialog within
+dialog opening is now prevented, records can be accessed and modified
+via other methods.
+* Postcodes in the North Territory would export to AVETMISS 85 as three
+digits rather than four.
+* Enabled ability for users to deleted unprinted certificate records.
+Printed certificates can not be deleted for auditing purposes.
+* Ensure file extensions are correctly rendered even when user
+preferences have disabled system wide file extension display

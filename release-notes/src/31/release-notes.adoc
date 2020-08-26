@@ -1,0 +1,40 @@
+= Release 31
+
+== Release 31
+
+=== Major features
+
+We're introducing Funding Invoices, a new feature that will help you to
+track any monies owed to you via additional funding, separately from the
+student invoice. For single enrolments where the class has a funding
+contract (that isn't fee for service), an additional window is now
+available in the Checkout called Funding invoice. Set the provider
+contact, set the purchasing contract ID, set the amount you're expecting
+to receive in funding, and then set the expected payment dates.
+
+Of course, if you don't want to use this feature, simply flick the
+switch at the top of the window and it will go away, allowing you to
+move on to accepting the student payment.
+
+These invoices are created in onCourse and not sent to the contact, as a
+way for you to track your funded payments internally.
+
+image:funding_invoice.png[ Funding invoice in the Checkout
+,scaledwidth=100.0%]
+
+=== Minor features
+
+* Added new 31/32 international student funding codes `OD-14791`
+* Added customer reference and invoice notes in checkout `OD-14810`
+* Credit Notes from Enrolment cancellation are now linking to Enrolment
+record `OD-14808`
+* Upgrade mariadb connector `OD-14820`
+
+=== Fixes
+
+* Import parses variables incorrectly `OD-14814`
+* Import scripts should wait for server to return result `OD-14815`
+* updating document with new version error `OD-14723`
+* Error When Opening Document: version doesn't exist `OD-14738`
+* Issue applying payment by voucher with related contact `OD-14801`
+* "Process Failed" error message when generating tutor pay `OD-14809`

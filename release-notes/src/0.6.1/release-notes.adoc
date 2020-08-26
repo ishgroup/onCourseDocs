@@ -1,0 +1,57 @@
+= Release 0.6.1
+
+== Release 0.6.1
+
+=== Major features
+
+* Waiting lists are now implemented. This is for students you cannot
+offer a place to immediately but you want to keep track of their needs.
+We still need to hook this into the web site, but for now we have
+implemented the onCourse side of this.
+* When the server starts up for the first time, you can now choose to
+create a new data file with sample data included. This makes it easier
+to people to begin testing onCourse.
+* Speed improvements. We have threaded many parts of the user interface
+drawing code so now much of it happens in parallel. This means that
+windows will now open much more quickly and the application as a whole
+is more responsive to mouse clicks and key presses.
+
+=== Minor features
+
+* Financial transaction report (a list of transactions suitable for
+opening in Excel)
+* Better clarity in creating new students in the 'clairvoyance' data
+entry within Quick Enrol. There is now a "create new…" option at the
+bottom of the list of student choices.
+* Multiple enrolments may now be refunded in one go rather than one at a
+time as before
+* Improved progress bars for tasks which take a long time (eg. printing,
+duplicating classes, etc). Yes, it is only cosmetic, but it looks nice.
+* Duplicating courses now gives better and clearer options to move the
+classes forward a certain number of days, along with all included
+sessions.
+* More drag and drop events throughout the application, allowing you to
+drag items from a list window (eg. a student or class) onto another
+window (eg. the Quick Enrol window)
+* Student message field extended from 50 characters to 500.
+* Discount rounding (eg. to nearest dollar, 10 cents or 50 cents) is now
+possible.
+* Outcome list now shows the name of non-VET courses so that a user can
+quickly see which course the outcome refers to when there is no AVTEMISS
+module linked.
+* Dates can now be entered in the format 010207 or 01022007, both of
+which mean 01-02-2007.
+
+=== Fixes
+
+Many GUI quirks have been cleaned up now, particular in clairvoyance
+(type-ahead).
+
+Windows users were not able to print if they did not have write
+permissions to the location where the onCourse application was located.
+We now save temporary print files to a better location.
+
+The application did not prevent you from over-enrolling a class. It now
+still allows you to do so, but gives you a warning. We will be looking
+at whether we want to completely prevent this, or allow users to proceed
+with a warning.

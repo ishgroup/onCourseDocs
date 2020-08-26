@@ -1,0 +1,383 @@
+= Release 0.8
+
+== Release 0.8
+
+=== Important changes
+
+Because this is a major update, it is very important that you take a
+backup before performing this upgrade. It will then take up to 10
+minutes (on a slow server) to upgrade your data once you start the new
+onCourse server before you are able to log in again.
+
+=== Major features
+
+==== New Dashboard
+
+We've added a new way to navigate around onCourse and learn about how
+the various parts fit together.
+
+==== Clairvoyance reworked
+
+Clairvoyance (also called autocomplete or type-ahead) has been rewritten
+from scratch and now allows for faster more streamlined searching on
+students.
+
+The search works by searching for a last name and then bring a list of
+matches. You can search for somebody's full name by adding a space after
+the last name.
+
+ie. "Smith" by itself will be searching for all people with last name
+"Smith". Typing "Smith J" will be searching for people with "Smith" as a
+first name and last name starting with "J", and will bring a list of
+matches.
+
+==== Contacts
+
+Students and tutors are now unified within the concept of contacts. This
+now allows for contacts who are neither tutors nor students, and tutors
+who are also students. Companies are also now supported, as are contacts
+who might just be a lead or other contact and not a student.
+
+==== Webpages and Subjects
+
+Webpages and Subjects can now appear on your site in an order that you
+decide with a weighting system. Lower weighted webpages sit higher than
+heavier weighted pages. Webpages are much more flexible now and can be
+assigned a short name which is used for menus and links.
+
+==== Attachments
+
+Images and other attachments have been enhanced in how they can be
+linked to a web page or to a course. This makes it easier to attach a
+pdf to a course displayed online for instance.
+
+==== Concessions and promotional codes
+
+More flexibility has been adding in allowing students of a certain age,
+with discount cards or who have enrolled recently to be limited to
+certain discounts.
+
+==== Web site integration
+
+Substantial work has taken place on how onCourse communicates with the
+web site, making it even more reliable and faster. Updates to the web
+site now run in the background every 5 minutes. Quick Enrol shows more
+feedback about payments which succeed or fail and it provides more
+choices about what to do with (say) a rejected credit card. The web site
+rich text syntax has become more powerful, allowing randomly chosen
+embedded images, linked pdfs, email forms and much more.
+
+The onCourse web site itself now supports a host of new concepts:
+
+* promotional codes may be accepted online
+* student login to see past history and edit contact details
+* tutor login to see upcoming classes and enrolment counts, as well as
+editing contact details
+* pretty urls (/about/contact rather than /tag?id=123)
+* interactive calendars of courses and sessions
+* email a friend
+* reworked enrolment checkout process taking advantage of Web 2.0
+concepts to make it easier and less confusing to add multiple students,
+enrolments and (soon) other products
+
+==== User interface
+
+Although the major user interface improvements have been around
+clairvoyance, other improvements have also been made: such as list views
+can now have their columns resizes and moved around. These new sizes and
+positions are saved for that user, along with the window position. Some
+other work has been required for OSX 10.5 which caused some changes in
+the layouts.
+
+Sorting on multiple columns has been put in onCourse (hold down shift,
+and click on another column). This allows a number of useful things, for
+example: by surname, then by suburb.
+
+==== Technology
+
+Significant changes have taken place behind the scenes. Updates to the
+database engine, a move to Java 5 and more minor updates to most
+libraries we use to improve speed and reliability. Major enhancements to
+the replication technology were also included at this time. We also
+performed testing against Windows Vista.
+
+==== Course search
+
+Replaced "Course code" and "Class code" search. Functionality has now
+been combined in the "Code" search. Searching on "begins with" will
+search on the Course code. Searching with "ends with" will search on the
+class code. Note: As an example "ARC134B-0023" is the full course-class
+code where "ARC134B" is the course code, and "0023" is the class code.
+
+==== Reports
+
+We have enhanced and added new reports such as:
+
+* Statement
+* Class by Subject
+* Class rolls
+* Reconcile
+* Banking
+* Qualifications
+* Enrolment confirmation
+* Profit and Loss for classes, Profit and Loss for courses
+
+==== Messaging
+
+We've now included the ability to untick message recipients from a list
+of contacts.
+
+==== XML exporting
+
+Significant enhancements to the Indesign and XML export.
+
+=== Reports and scripts
+
+We have enhanced and added new reports such as:
+
+* Statement
+* Class by Subject
+* Class rolls
+* Reconcile
+* Banking
+* Qualifications
+* Enrolment confirmation
+* Profit and Loss for classes, Profit and Loss for courses
+
+=== Minor features
+
+* Save column sizes and positions from session to session
+* Fix: on new enrolment screen can add same student twice
+* Cal: cell highlighting
+* SOAP SSL/Encryption fixed
+* Login screen - find server did nt work in some situations
+* Concessions - inclusions/exclusions
+* Room/site selection
+* Duplicate classes screen --> earliest start date
+* Cancel & refund enhancements
+* printing dialog on windows has fields poking through from underlying
+window
+* Send message to tutor(s) from class(es)
+* Tutor: classes filtering
+* Class rollover - clear tutor/date confirmed
+* Promotion add course name as option for input.
+* Tutor unconfirmed list
+* Dates: Day of week
+* Updated to use Java5
+* Server - logged in stats incorrectly displayed
+* Tutor confirmed field redundant
+* Embedded Derby connector - speed improved
+* Enrolments - default list view should be current and future classes
+* Improved error reporting dialog
+* Move to Jetty 6
+* Improved timezone handling
+* Fixed problem when choosing 'save as pdf' from print filenames are
+blank, and need to be manually entered
+* Fixed custom report not printing from mac
+* Class edit: cancelled checkbox
+* Add tags doesn't mark record for updating
+* Website validates from email address
+* Add student tags for enrolment confirmation email
+* Web page name uniqueness
+* client disconnect session screen
+* Welcome page renamed to home page, now undeletable
+* Subject tag group is now undeletable
+* Weighting system for webpages/Nodes in onCourse
+* Nodes/Webpages now allow images to be attached in a more graceful
+manner
+* Class - resize web tab stretches contents correctly
+* Invoice customer reference
+* Course: isShownOnWeb --> gui checkbox
+* Layout issues
+* Merging students both enrolled in the same class, one active, one
+cancelled fail
+* Allow sorting on multiple columns hold down shift to sort on secondary
+columns
+* Reorder columns
+* Layout problem in class view
+* All contacts page missing entries in name column
+* Payment/Enrolment statuses lockdown
+* Webpages missing ability to attach images fixed
+* Sessions created can be set to overlap timewise
+* Sessions dragged from one day to another have their times changed
+* Double click on message in tutor view is safely disabled
+* Prevent database directories with : or space from being created
+* Validation for changes to is mandatory, allow one and removing tag
+group relation
+* Dealing with $0 payments in QE, so the enrolments are processed
+against website.
+* Classes find on code broken
+* Ensure that onCourse does not start unless java 1.5 is detected
+* The opening of the list view failed
+* Column auto-resizing broken
+* QE enrol student popup
+* isCompany warning
+* Set gender not working
+* Icons to help distinguish students, tutors and companies
+* Zeroconf deadlock
+* Indesign export fails
+* AVETMISS export class selection
+* Notes not printed on invoices
+* QE: showing tutor
+* Deposit banking: choose account
+* Deposit banking headings
+* Banked view, reconciliation view should not be opened twice.
+* List view buttons (New, Find) key accelerators stopped working
+* Fix printing preferences problems
+* Actions (print, find etc) invoked multiple times
+* Discount update - new gui, new fields
+* Promotion/discount allows to set negative discount values
+* New database not created properly on remote file server
+* onCourse server sometimes does not quit on windows
+* The toggle button background on windows gets displayed when the button
+is select
+* QE class list shows past classes
+* QE student alert spacing
+* Prevent downgrade
+* Zeroconf broken
+* Fixed Welcome Screen: Session button does nothing
+* Waiting List clarity.
+* Duplicate class operation never completes after creation of an
+discount
+* Welcome screen enable/disable option
+* Tags: weight popup removal
+* TagGroup 'Show on the website' checkbox removal
+* Tag groups broken / find not happening.
+* Web pages: abbreviated name
+* deDuplicate student broken for payment relationships
+* Student list action button bug
+* Det export does not work.
+* Opening list view fails
+* Mail preference bug with screenshot
+* Tutor - messages bug
+* Finds on tags - error fetching records
+* Promocodes/discounts allow saving even validation had been failed
+* ABN for college added, this is required for tax invoices
+* Backup preference tab layout
+* Find popup drawing issue
+* List window checkboxes galore -
+* Concessions in class edit fail
+* Tutor edit on class view fails
+* Sheets inside sheets
+* QE promotion code entry validation
+* Fixed sorting throwing exception if null encountered
+* Waiting list site sheet
+* Attachment can not be added.
+* Room can not be added
+* Web Pages not showing
+* onCourse client performance improved
+* Could not create quick enrol.
+* Fixed a problem with contact deduping
+* Deduplicate fails for some classes
+* QE clairvoyance throws Exception
+* The company can now be added to the class as a tutor in a nicer way
+* Sessions from cancelled class should not be visible on timetables
+* Add the date of cancelation to the class notes
+* New report: Enrolment confirmation
+* Sheet drawing issues
+* onCourse 0.8 Web pages: Abbreviated name
+* Quick enrol icon added
+* Binary infos for sites and rooms
+* Duplicate class date bug
+* Printing student details fixed
+* QE bug with screenshot
+* dragging pictures over QE
+* Problems entering data
+* Tag group assigned to record
+* PDF attachment preview
+* Start/end times not populated for classes
+* Merging Students after class finished
+* Password issue
+* Clairvoyance tab twice
+* A cancel button on db create splash screen
+* Replicated de-queueing debug de-duplicate queued records.
+* SSL problems
+* icon added for Companies
+* Lifecycle callback error
+* Student list shows companies
+* Server user list GUI
+* Concession list columns
+* Validation for VET courses
+* Tutor replication
+* Classes on web site
+* Fixed tag bug - show abbreviated name, replaces the short name each
+time it's opened
+* Sort on classes count
+* Concession not showing in QE
+* Clairvoyance not allowing removal
+* Failed to perform action
+* New user cannot login fixed
+* Site dragging problem
+* Windows XP - When clicking on the tool bar default window sizes are
+very large
+* Resume - actually change the label text!
+* Contacts - change logic of hide to show
+* Backup preferences bug
+* Tried to open Student list threw exception
+* Timetable problem - site filled in, room not selected
+* Contact edit first name field size
+* Find contacts are now missing fields relevant for tutor
+* QE clairvoyance problem
+* Student replication - password set in web enrolment does not come
+across
+* Clairvoyance completion Class-> tutor bug
+* Deletion sheet drawing issue
+* Contact missing for student
+* Daylight Savings
+* Copy and paste email addresses
+* Clairvoyance backspace highlight
+* QE: enrolments invalid class assignment
+* QE: the student clairvoyance fields can not set student record
+properly
+* Sort on student number broken
+* starting a new sample data file
+* Duplicate class with mandatory tag groups
+* Class cast error in Discounts
+* Discount value field
+* QE creates new student
+* Waiting list error
+* Enrolment Fields
+* Mailing list errors
+* Find student using student number
+* No transaction incomplete msg when didn't include credit card number
+in quick enrolment
+* Cannot open reconcile statement
+* Enrolments against Contacts
+* No field 'anzsic' is defined in class Qualification
+* Find students based on the date of enrolment
+* Places available incorrect.
+* Added phone field to 'Class Roll' report
+* 'Enrolment Confirmation' report now consistently displays the web
+description added fields to reports to meet AQF standards - set field
+blank when RTO code is null in title subreport
+* Allowing search on course web visible
+* Export classes now saves output as UTF-8 rather than just pretending
+it is UTF-8.
+* Enrolment confirmations are now only sent once to each one student
+enrolling.
+* Payment types and statuses in Payment view once again display as
+strings instead of numbers.
+* Server icon should have server cog wheel in dock (MAC OS X fix)
+* Fixed the issue where if the payment (in or out) was $0 and not
+matching two (or more) invoices which added up to zero would not be
+accepted by validation
+* Fixed minimum size of the sheet when editing/creating Certificate
+which prevented it from being usable
+* When a contact is a company, the full name is derived from the company
+name, not first/last name. This change fixes a bug in the Indesign
+export.
+* Fixed problem with node short name when upgrading from onCourse 0.7
+* Newly created taxonomies are allowing multiple tags and are not
+required.
+* Fixed enrolment confirmation report header showing 'null' when address
+line1 is empty in Avetmiss Preferences
+* Tag groups: "Next" and "Previous" button now work correctly
+* Allowing search on invoice customer reference in Invoice list
+* PaymentIn and PaymentOut validation added: the assigned amount must
+equal to the payment amount.
+* Fixed a problem which preventing printing class rolls when the site's
+suburb was not set.
+* Updated calendar to deal with daylight savings information.
+* Fixed a bug which was causing newly created or updated records to not
+display correctly, until client was restarted.
+* Fixed a problem which prevent contacts from being merged.

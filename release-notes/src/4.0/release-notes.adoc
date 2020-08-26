@@ -1,0 +1,265 @@
+= Release 4.0
+
+== Release 4.0
+
+=== Major features
+
+==== Self paced delivery
+
+Flexible delivery classes can now be defined. This is useful for online
+classes where students might have a maximum time to complete the class
+(say 6 months) but there is no start or end date. These classes can be
+assigned to virtual sites, but do not have a timetable i.e. no fixed
+meeting pattern.
+
+Instead, the start date is taken as the time of enrolment and the end
+date is start date plus time to complete. These classes also display on
+the website available for online enrolment in a slightly different
+format, showing the words 'self paced' and the approximate hours of
+duration. These classes can also be assigned to the new 'virtual sites'
+which are sites without a physical location. You could define multiple
+virtual sites like online, Recognition of Prior Learning (RPL) or
+correspondence to assign classes to.
+
+For more information about self paced delivery, refer to the updated
+Classes documentation
+
+==== Training plans
+
+The addition of training plans at the class level allows onCourse VET
+program managers to schedule the delivery of the embedded course units
+over the delivery period of the class. This allows outcome based
+reporting to funding bodies which shows accurate commencement and
+completion dates for each unit of competency, and improved AQTF evidence
+collection showing which trainers/assessors are responsible for the
+delivery of which units across a clustered unit or whole qualification
+class.
+
+In the class timetable, for each session, each unit of competency that
+is applied from the parent course can be checked or unchecked for
+delivery. The mapping of the tutors and units for each session can be
+printed in a comprehensive Training Plan report that can be provided to
+class participants, employers and teaching staff to ensure all
+stakeholders have access to detailed information about their scheduled
+class sessions.
+
+For AVETMISS reporting purposes, the start and end date for each
+student's outcome will be inherited from the training plan rather than
+just the start and end date of the class period.
+
+For more information about Training Plans, refer to the updated RTO
+Guide documentation
+
+==== Java 7, OSX 10.8 and Windows 8
+
+We have now certified these platforms for general use. The client and
+server applications are now cryptographically signed for both OSX
+(Gatekeeper) and Windows, removing some warning dialogs that used to
+appear. We've also done some work to ensure Java 7 behaves itself and
+onCourse looks good in Windows 8. Well, as good as it is ever going to
+look given that Microsoft has achieved new levels of ugly for all the
+bits outside our onCourse windows. :-)
+
+==== Performance
+
+We've tweaked knobs and introduced new threads (internal parallel
+processes) to make the whole application more responsive. This is
+especially noticeable if you have several millions records in your
+database or are running over slow links between the client and server.
+More improvements will be coming in future releases, but this release
+has improved things in quite a number of areas.
+
+=== Reports and scripts
+
+* Print preview. All reports open first in preview mode using your PDF
+reader. If you are on Windows, make sure you have Acrobat Reader
+installed. OSX users already have a PDF viewer as part of their
+operating system. Once the PDF opens you have the choice of printing to
+a printer, sending by email, uploading, and more. Plus you get more
+control over printing: colour, black and white, double sided, resizing,
+etc.
+* Reporting printing windows have been updated to an improved layout.
+Each report now includes a descriptive summary of the reports purpose
+and content, visible in the window when you have clicked on the report
+name in the print dialog.
+* New liability report available from the enrolments menu, showing the
+breakdown of the outstanding liability held on each enrolment (enrolment
+fee component not yet posted to the defined income account), grouped by
+class and sorted by start date.
+* Class start and end date added to 'Budget Summary by Class' report
+* Reports listed within print dialogue box of a given window now display
+in alphabetical order.
+* Banking report now includes payments out in addition to the payment in
+data
+* Fix to the layout of the class sign report to allow for very long
+class names and printing of absolute dates instead of relative dates
+
+=== Minor features
+
+==== Certificate and VET record management improvements
+
+* Improve Certificate editing rules, so unprinted certificates can be
+edited e.g. units added or removed, while printed certificates are
+immutable.
+* Display revoked Certificates in a light grey font, like cancelled
+classes
+* Added a 'Create Certificates' option to the enrolment window to create
+certificate records based on the outcomes linked to a particular
+enrolment
+* Improve display of Qualification and Module data by showing additional
+Name/Code data from the record when using clairvoyance searching
+* Make all columns in outcomes list sortable
+
+==== AVETMISS improvements
+
+* Changed the way the NAT00120 commencing course identifier is
+calculated. Now, enrolments will only be set as commencing (3) if the
+course they are linked to is flagged as a full qualification. All other
+enrolments will be set as module only (8). Previously, commencing
+enrolments were set on any course linked to a qualification record. For
+most clients, this will result in reporting less commencing students and
+improve subsequent completion rates.
+* Altered the AVETMISS standard export to include the NSW outcome of 66
+Did Not Start, instead of converting it to a nationally valid 40
+Withdrawn. This change is specifically for Community Colleges reporting
+though OLiV.
+* Improved the export of the NAT00130 data to ensure that record end
+dates exported to not exceed the exporting period (if set)
+
+==== Finance improvements
+
+* Major change to the layout of the contact Financial tab. All invoices
+and payments are now shown in a single panel, fixed into date order and
+showing a running balance total in the final column. This improves
+clarity of the debtors balance outstanding and also prevents any failed
+transactions being added into the contact totals.
+* Use a credit note to contra pay another outstanding invoice for the
+same contact via the invoice cog wheel function. This will balance a
+credit note against an outstanding invoice to reduce the balance
+outstanding
+* Display credit card payer name in the payment in window
+* New CSV export option for class budgets from the classes table
+* Allow tutor wage rate to be set to $0.00
+* Allow payable time to be set to greater than the session duration
+* Sort payslip window records by created date by default, so the newest
+records show at the top of the list
+* Improvement to the invoice CSV export file to include additional
+fields and more useful data for manual reporting options
+* Add Business Number field to company contacts
+
+==== Waiting list improvements
+
+* Enrol students on waiting list directly into the next available class
+using the cogwheel function. This also removes them from the waiting
+list.
+* New CSV export option from wait list table
+
+==== Discount improvements
+
+* Added active and inactive filters to discount window to automatically
+hide discounts which have expired
+* Improvement to the wording in the concession window to differentiate
+between concession types available for self service online, and those
+that are only visible online to students whose records already have the
+concession details populated
+* Add function to allow discounts to be accessed via the website or only
+via enrolments processed through the office
+* Add ability to suppress the display of discount fees in the online
+advertising to hide 'internal' discounts like staff pricing
+* Add core filters for active and inactive to membership products
+* Added validation to discounts so all discounts must be linked to 1 or
+more classes
+* Added display information to discounts with expiry dates, to display
+expiry date in hover on website
+
+For more information about Discounts, refer to the updated Discounts
+documentation and the updated Concessions and Memberships documentation
+
+==== Other improvements
+
+* Allow course lookup in class by code or name
+* Added link to onCourse EULA from splash screen (About onCourse)
+* Allow attachments to be set as public, private or students. Public
+attachments appear in the marketing content of the website, student
+attachments will only appear via the student portal (to be implemented)
+and private attachments never are visible on the web.
+* Show disabled courses in list view in light grey font, enabled but not
+visible on web in mid grey font, and enabled and visible online in
+normal black font
+* Improved filters in enrolment window to now show under core filters,
+current, cancelled, completed and other enrolments
+* Moved the File > Preferences > General Preferences > Export tab list
+to it's own window, like reports, now available via File > Preferences >
+Exports
+* Allow keyboard arrow keys to be used to scroll between list items e.g.
+timetable sessions
+* Improvement to the re-send email process for enrolment confirmations
+and invoices to notify the user when the email sending fails because the
+contact does not have a valid email address on file
+* When a class or enrolment is cancelled, a template email and SMS
+message is generated and opened in a new window for the list of affected
+students, to notify them that their class is not proceeding as
+scheduled. You can modify the message contents or remove people from the
+list before proceeding to send it.
+* Unsubscribe option for emails sent using the mailing list feature. If
+the contact clicks the unsubscribe link in the bottom of the email, they
+will have the mailing list tag removed from their contact record.
+* Improved error message for course deletion which is not allowed due to
+related records (classes or waiting lists)
+* Ability to edit the CMS has been added as a checkbox within the User
+edit view of onCourse. This will mean that Colleges are no longer
+reliant on ish to grant CMS access to staff, as they can now manage this
+themselves. Login credentials for CMS and onCourse will be the same.
+* Automatic detection of mismatched onCourse client and server versions
+with a prompt to download the correct client version automatically.
+* Added 'VET Course' query option to class advanced query list
+
+=== Fixes
+
+* Fix for Assessment Outcome Report to prevent duplicate columns
+printing for each unit code
+* Improved validation for the manual addition of units of competency to
+an outcome
+* Fixed student details report to show the concession type and
+concession number details
+* Improved user interface messages for AVETMISS exporting exceptions
+* Ensure XML and brochure exports round GST amounts to the nearest 5
+cents
+* Merge note fields from both records in the 'merge contacts' process
+* 'Is offered' option in the unit of competency and qualification had
+been disabled for selection. These fields are now enabled again for
+users to restrict onCourse to their scope of qualifications and units.
+* Improve the user interface in the private booking option to
+auto-create the next available class code and to calculate class fees
+either GST inclusive or exclusive
+* Enforce unique names for tags with a tag group
+* Improvements to timetable resource collision detection performance to
+confirm new allocation availability before record is saved. This has
+improved the speed of opening the class page and adding new sessions.
+* xls and docx file extensions were not being recognised for attachments
+added to onCourse for download on the web. This is now fixed along with
+many other file extensions.
+* Fixed issue whereby fixed income budget line item would initially
+reset to show per enrolment calculation if you adjusted the projected
+and maximum enrolment numbers within the budget tab of the Class. Fixed
+income budget line item now remains as entered when you adjust enrolment
+numbers.
+* Closed loophole whereby you could record a payment in entry despite
+initial payment attempt being 'in_transaction'. System now prevents
+operator from recording a payment in entry until the 'in_transaction'
+status is resolved.
+* Adjustment made to which date is shown for CC payment within the
+context of a Payment Out refund via Credit Card. Whereas previously the
+system would display the originating CC payment date as the date of
+settlement, this has now been adjusted to show date paid.
+* Improved validation in Qualification Certificate record, so any
+certificate marked as a Qualification has to be linked to a nationally
+recognised qualification to save, where a Statement of Attainment can be
+optionally linked to a nationally recognised qualification
+* Improved validation for deleting or removing mandatory tags from
+records and show better user messages when a tag has been set as
+mandatory
+* Fix to the onCourse preferences set print logo setting which was not
+allowing some images to be assigned
+* Prevent non-enrolment process failed payment attempts from creating an
+automatic credit note to reverse the invoice

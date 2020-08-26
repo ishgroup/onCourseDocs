@@ -1,0 +1,181 @@
+= Release 7.4
+
+== Release 7.4
+
+=== Major features
+
+==== Documentation links added to all onCourse edit window views
+
+In the bottom left hand corner of each window you will now see a
+question mark icon. Clicking on this icon will take you directly to the
+page of the onCourse user documentation that explains how to use that
+part of onCourse. The link to the top level of the documentation is
+still available in the Help menu.
+
+==== Retaining outcomes on enrolment cancellation
+
+Previously, when cancelling an enrolment in onCourse, all the outcomes
+associated with the enrolment were deleted as part of the cancellation
+process (unless those outcomes had been used to create a Statement of
+Attainment or Qualification record in onCourse, in which case they were
+kept). This meant that for funded courses, withdrawn students needed to
+be kept as active enrolments in the class to be reported.
+
+Now when you cancel an enrolment, by default all outcomes with a status
+set will be retained. This allows you to cancel the enrolment for a
+funded student, making the place in the class available for another,
+while retaining their outcomes for reporting.
+
+During the the enrolment cancellation a checkbox is ticked by default
+that says 'Delete outcomes linked to this enrolment with status "not
+set"'. If you have not given any outcomes a status yet, this may mean
+all the outcomes attached to the enrolment. This will be desirable for
+most types of enrolments, where you do not want to report the student as
+having enrolled in this program at all for AVETMISS purposes.
+
+If the student needs to be reported as a withdrawn student for AVETMISS
+purposes, you have two options. Either set the value of the outcomes
+before the cancellation process, and they will be retained by default.
+Alternatively, you can untick the option 'Delete outcomes linked to this
+enrolment with status "not set"' so all outcomes, both set and not set,
+will be retained. To avoid AVETMISS errors, you will need to make sure
+that any unset outcomes that are retained are given a valid outcomes
+status, such as 60 – Withdrawn after processing the cancellation.
+
+There is no change to the cancellation process when cancelling a class.
+All outcomes will always be deleted, unless they have been used to to
+create a Statement of Attainment or Qualification record in onCourse
+before you cancel the class.
+
+==== Addition of 'Certificate Awarded' and 'Certificate Issued' fields
+
+By default, the date the certificate was created on is added to the
+'Certificate Awarded' and the date the certificate was printed is added
+to the 'Certificate issued' field. For both these new fields, you can
+manually edit the date to any date you want.
+
+The default onCourse Statement of Attainment, Qualification and
+Transcript certificates now show these fields instead of the 'Created
+on' and 'Printed on' fields. If you have a custom certificate template
+and need assistance in updating it, please contact us
+
+==== Addition of Skills Sets to the Qualification table
+
+You can now create courses in onCourse linked to Skill Sets rather than
+full Qualifications. This data is updated weekly from training.gov.au.
+The wording in various parts of the user interface has been changed to
+reference Qualification or Skill sets. From a course set up and AVETMISS
+reporting perspective, a skill set is treated similarly to a
+qualification. It is only during the certificate issuing process that a
+special type of Statement of Attainment will be issued, rather than an
+actual AQF Qualification.
+
+=== Reports and scripts
+
+* Improvements have been made to the script edit view to allow you to
+check if you have the latest copy of the script and upgrade it with a
+single click `#24611`
+* A description has been added to each script to explain what it does
+* A link has been added to a CRON helper tool to enable you to change
+the script schedule to your choice of date(s)
+
+* A new report has been added to the discount window called 'Discount
+take up summary'. This report shows during the date range specified, and
+for each discount chosen, how many enrolments for each class have used
+that particular discount. This report is for marketing purposes, so show
+you the take-up success of a particular discount during a campaign date
+range. `#24468`
+* The standard Statement of Attainment, Qualification and Transcript
+reports were updated to include the student middle name field. If we
+have created a custom certificate report for you, this change was also
+made to your custom report. If you have created your own custom report
+and need assistance in updating it, please contact us. `#24195`
+* A new report was added to show the projected pre-paid fee liabilty to
+income journals for each of the next 7 months from the date the report
+is run, for each class. This report can be found in the classes menu and
+is called 'Income journal projection' `#24109`
+* A fix was implemented for the trial balance report. Any accounts of
+type expense were displayed on the credit side, and they have now been
+correctly moved to the debit side `#24943`
+
+=== Minor features
+
+* Checkbox added to class duplication to retain or discard payable time
+`#24323`
+* Allow promotional discounts and other discounts set to apply to all
+new classes as default, to apply to private classes being created in
+Quick Enrol `#24721`
+* Allow voucher payment in Quick Enrol to apply to payer's previous
+unpaid invoices `#24732`
+* Search option 'created by' added to applications advanced search
+options `#23985`
+* New checkbox added to class and enrolment cancellation to send credit
+note email. This option is checked by default. `#24053`
+* Prevent users from logging in with the same user name credentials
+concurrently. Second login attempt will allow the user to kick out the
+first user `#24500`
+* Auto log out settings in the general preferences are now mandatory.
+Maximum time that can be set is 6 hours. `#24256`
+* Two factor authentication will be enabled for your users during their
+next log in if you select the option in their access role to 'require
+two factor authentication'. If the user cancels this window, it will be
+shown to them again on every log in until it is enabled. `#23898`
+* New access control permission has been added to for editing and
+deleting record note items `#24277`
+* Show/Hide filter preferences persists when you close and reopen the
+window `#23042`
+* Enrolments are now taggable. This allows you to create new tag groups
+to assign to the enrolment level, such as a funding type, so you can
+easily locate a group of enrolments for AVETMISS exporting `#24258`
+* Enrolments now have notes. This allows you to record ad hoc notes
+against a particular enrolment that will be automatically time and date
+stamped with the user name of the person making the note `#24258`
+* Added the VET FEE Help Census date field to the class advanced search
+options `#24667`
+* Added a checkbox to the class cancellation process to automatically
+create credit note reversals of any manual invoices joined to the class
+`#24785`
+* A new field has been added to the AVETMISS preferences panel for QLD
+reporting RTOs to record their QLD RTO ID. For AVETMISS exporting
+purposes, when choosing the export flavour QLD, this value will export,
+instead of the standard national Identifier. It is important you retain
+your national RTO ID in the 'Identifier' field to allow for the USI SOAP
+Validation process to work `#25047`
+* All icons and images inside the onCourse application have been updated
+or otherwise adjusted to provide better visual support for retina
+displays `#23708`
+* A new checkbox has been added to the class cancellation process to
+automatically create a credit note for any manual invoice linked to the
+class `#24785`
+
+=== Fixes
+
+* Significant performance improvements were made to the loading of list
+windows in onCourse so they will open noticeably faster `#24489`
+* Emails that are unable to be sent due to mail configuration errors
+will stay in the mail queue rather than be marked as failed on the
+sending attempt `#24149`
+* Fix to user account permission 'override tutor payrate' to allow this
+to be enabled and disabled for different user roles `#24509`
+* Quick Enrol will now select the class starting next by default
+`#24749`
+* Fix to advanced search results when you are searching for date type
+data 'on' a specific date. Previously a from and to date range was
+required to return valid results `#25094`
+
+==== AVETMISS improvements and fixes
+
+* Improvement to the AVETMISS export rules for all states to set the At
+School Flag to N when Labour Force Status Identifier equal to 01
+`#24977`
+* Fix for the Victorian AVETMISS export: where course commencement date
+is earlier than the enrolment date then export the course commencement
+date in the enrolment date field `#24633`
+* Unicode characters are automatically replaced with ASCII characters in
+AVETMISS export files during the export process e.g. Zoë will be
+converted to Zoe for AVETMISS, but the student's preferred spelling will
+be stored in onCourse and can be printed on their certificate `#24397`
+* Added additional validation to the AVETMISS export process to prevent
+outcomes with start and end dates different to their class dates from
+exporting if their date range doesn't match those set in the export
+runner `#25004`

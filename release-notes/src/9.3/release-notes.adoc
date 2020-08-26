@@ -1,0 +1,146 @@
+= Release 9.3
+
+== Release 9.3
+
+=== Major features
+
+==== Data collection rules
+
+Since the beginning of onCourse you have been able to select which
+fields are visible and which are mandatory for online enrolments. You
+can also specify the rules for mailing lists and waiting lists.
+
+Now Data Collection rules take this idea to the next level. You are able
+to define rule sets for which fields are visible and mandatory, then
+link those rule sets back to specific courses. So your VET courses might
+have one set of data fields and your leisure courses a smaller set. Your
+seminar programme might then collect data about meal choices and
+streams.
+
+The Data Collection rules can be very detailed. Each field can be
+re-ordered, you can separate them with headings and text of your choice.
+You can rename the labels and help text.
+
+We think you'll love the flexibility that comes with Data Collection
+rules and you'll be able to collection just the data you need without
+overwhelming students with too many choices.
+
+For more information about the new features, refer to
+https://www.ish.com.au/s/onCourse/doc/latest/manual/dataCollection.html[The
+Data Collection chapter] of the user documentation.
+
+==== Custom fields
+
+Custom fields have been available for Contact records for a long time
+now. In this release we now make the custom field concept extend to
+enrolments, courses, applications and waiting lists. This allows for a
+range of interesting possibilities.
+
+* Menu choice on enrolments: vegetarian/chicken/fish
+* Funding data collection on applications (eg. citizenship, healthcare
+card)
+* External reference codes for linking courses to an LMS or other system
+* Anything you can think of!
+
+=== Reports and scripts
+
+* New script - Course completion survey script `OD-10570`
+* New email template - 'Class completion survey' `OD-10572`
+* New print reports - Course completion survey reports to display data
+collection in skillsOnCourse surveys `OD-10522`
+* New script - Membership Renewal script `OD-10010`
+* New email template - Membership notification renewal `OD-10010`
+* New print report - Commonwealth Assistance Notice `OD-10232`
+* New script - Student reminder 7 days before class starts `OD-10414`
+* New export - Smart & Skilled Bulk Upload template export from
+application window `OD-10507`
+* Rename existing report 'Statement' to 'Transaction report' as it can
+be run for a date range period `OD-10501`
+* Create new 'Statement' report without date range entry option
+`OD-10502`
+* Fix to Transcript template alignment `OD-10401`
+* Certificate of Attendance - Allow longer course names in template
+`OD-10523`
+* Fix error in Trial Balance Report calculations when starting with an
+opening balance of $0 `OD-10629`
+* Change Trial Balance report parameters to enter date without time
+`OD-10085`
+* Allow Unicode characters to print in reports `OD-10111`
+* Allow more wrapping for title and description lines in Invoice report
+`OD-10366`
+
+==== Minor features
+
+* Increase maximum length for state in contact record to 20 characters
+`OD-10058`
+* Improve the performance of the new payroll window `OD-10141`
+* Fix daylight saving time difference during class duplication
+`OD-10257`
+* Remove auto contra payment of credit available to the oldest invoice,
+and allow users to select which invoice to contra pay `OD-10565`
+* Change validation: Allow class status to be 'enrolment disabled' when
+it has enrolments `OD-6763`
+
+==== Fixes
+
+* Update onCourse integration to new Survey Monkey API `OD-10116`
+* Fix to conditions where a valid payment was not validating in QE and
+was treated as an overpayment `OD-10135`
+* Allow sorting by student name and other columns in outcome list view
+in the class `OD-10208`
+* Fix transaction posting when voucher purchased online posts to default
+income account instead of liability `OD-10224`
+* Could not set tutor role in contact after using Next/Back to navigate
+between records `OD-10227`
+* Fix QE error when discount applied to a $0 class fee `OD-10266`
+* Improve validation when creating new import scripts`OD-10274`
+* Allow sorting of list records where the value is null or empty
+`OD-10290`
+* API documentation hasTag() updated `OD-10293`
+* Access right 'General Preferences' didn't prevent preference changing
+`OD-10326`
+* Allow class with payment plan where payment on enrolment = $0
+`OD-10337`
+* Allow merging of students that previously failed when both have the
+same attendance marked `OD-10352`
+* Allow duplication of course with mandatory tag which was previously
+failing `OD-10368`
+* Extend CreditCard name from 40 to 64 characters `OD-10369`
+* Update labels - journal function is posting in reverse to UI
+expectation `OD-10400`
+* Fix issue on merging multiple copies of a contact in one batch
+`OD-10404`
+* Allow all sessions to be unticked for a unit of competency in the
+class training plan`OD-10547`
+* Custom field type delete action was not replicated to website
+`OD-10557`
+* Payment in detail view performance improvement `OD-10573`
+* Contra payments should not link for $0 payment joins since this slows
+performance a lot `OD-10575`
+* Adjust Applications edit window minimal height `OD-10605`
+* Fix exception where sometimes Preferences are not visible `OD-10610`
+* Add tooltips to FieldEditor labels if the text is very long and
+truncated `OD-10632`
+* Allow tag name with spaces `OD-10634`
+* Contact record opens displaying no data in fields when some invalid
+data was present `OD-10731`
+
+==== Web features
+
+* Tag manager split into two tags for improved performance `OD-10223`
+* Implement og:image tag for Facebook where there is a course image
+`OD-10302`
+* Ensure website metaDescription should always have a value `OD-10308`
+
+==== Web fixes
+
+* Fix to Kiosk classes displayed in wrong order `OD-10055`
+* Fix where tagged course was not displaying on the website when the
+parent tag was hidden `OD-10221`
+* Fix issue where user can't add blocks to themes `OD-10354`
+* SkillsOnCourse payment date field didn't accept two digit years
+`OD-10407`
+* In checkout if amount is added for pay now, allow the user to change
+it back to $0 `OD-10376`
+* Fix condition where discounts could sometimes be displayed against the
+wrong class on website `OD-10061`

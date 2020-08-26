@@ -1,0 +1,55 @@
+= Release 26
+
+== Release 26
+
+=== Important changes
+
+Note that the onCourse client application and jnlp application are going
+away after the next release. Make sure you are logging in with a URL
+like https://acme.cloud.oncourse.cc
+
+=== Major features
+
+We've added a new Batch Payments feature to onCourse. This is a brand
+new screen that will show you a list of contacts with saved credit card
+data and unpaid invoices where the due date is in the past. You can run
+the batch payment and the system will attempt to process each payment
+one by one. You'll be shown each successful and each failed transaction
+as they're processed, and each successful payment will trigger a payment
+successful email to the contact.
+
+=== Minor features
+
+* React migration: Imports API `OD-12795`
+* Web app manifest improvements `OD-13422`
+* Increase dark theme contrast `OD-14228`
+* script: cloudassess-enrolment-create `OD-14372`
+* script: course-completion-survey `OD-14373`
+* Checkout: credit card auto payment `OD-14440`
+* Batch payment `OD-14641`
+* Remove CC stored in system for user `OD-14656`
+* Remove enrolments and outcomes `OD-14680`
+* New button in Checkout - 'Start New Checkout' `OD-14700`
+* Checkout - Change to Summary heading to show count `OD-14702`
+* Batch payment open from payment list `OD-14709`
+
+=== Fixes
+
+* Add filters to audit list `OD-14206`
+* Can't add virtual site to self-paced class `OD-14670`
+* Checkout - Invoice not automatically selected when applying payment in
+`OD-14673`
+* Long previous owing list is missing scrollbar `OD-14674`
+* Discount Expiry relative to class start `OD-14681`
+* Checkout - Transaction Failed window not rendering `OD-14683`
+* Credit notes for cancelled enrolments - name of creator not showing
+`OD-14685`
+* Can't manually add outcome to enrolment `OD-14686`
+* Script pop-up UI issue when typing into field `OD-14687`
+* Script Query - quotes not working `OD-14695`
+* Checkout: no loading indicator when opening checkout from invoices
+list `OD-14696`
+* Checkout: $0 payments are broken on Firefox `OD-14698`
+* Checkout label isn't displayed properly on Firefox `OD-14706`
+* Custom fields are not presented in aql autocomplete on first load
+`OD-14708`

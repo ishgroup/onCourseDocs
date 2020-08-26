@@ -1,0 +1,42 @@
+= Release 1.7.13
+
+== Release 1.7.13
+
+=== Fixes
+
+* Fixed a problem with downloading AVETMISS related modules, and
+qualifications where the records downloaded would reach a certain number
+and refuse to download more.
+* Fixed a number of server shutdown issues
+** for Windows: the window would go away but it required opening up Task
+Manager to actually quit the onCourseServer.exe process
+** for Mac OS X: the server window would not go away and requires a
+Force Quit in order to quit onCourseServer
+* Fixed a rare bug in QE where setting the discount value manually in
+the class selection pane equal to the total value of enrolments would
+credit the payer 10% of the total when the enrolment was saved.
+* Fixed a problem when trying to import XML import files.
+* Fixed not being able to share saved finds.
+* Enrolment confirmations now correctly display all lines in the address
+block, instead of just the first line.
+
+==== Known Issues
+
+===== Problem saving a session
+
+If you:
+
+[arabic]
+. add a new tutor to an existing class which already has sessions,
+. tick the "Add the selected new tutor to class sessions" check box
+. without saving the class, edit an existing session and tick the tutor
+you added in step 1
+
+then, you will not be able to save the class.
+
+The workaround is to save the class after step 2.
+
+===== Saved find
+
+Deleting a saved find does not refresh until a new list window is
+opened.

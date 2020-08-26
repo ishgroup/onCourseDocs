@@ -1,0 +1,57 @@
+= Release 6.0.1
+
+== Release 6.0.1
+
+=== Important changes
+
+This is a minor onCourse release with only three bug fixes and one new
+feature.
+
+=== Major features
+
+==== Proxies and document management
+
+For users who have no direct connection to the internet, this will allow
+the new document management feature to work through their proxy server.
+
+=== Fixes
+
+==== Prepaid fees
+
+When you create an invoice in onCourse, the general ledger is not
+immediately credited with the income from training delivery. Instead, a
+liability is created called "prepaid fees". onCourse then journals that
+liability to income as the class delivery takes place. Some onCourse
+users don't use our general ledger or worry about pre-paid fees. In
+that, case this issue will not affect you.
+
+A defect was discovered that has existed since onCourse 4.0. The issue
+is triggered when a student had only partially paid for one invoice,
+then enrolled in another class, creating a another invoice. The
+remaining fee liability component from the first unpaid invoice (or
+invoices) was reset to be the full balance of the original income,
+resulting in a potential over allocation of income from the liability
+account for that invoice. On upgrade to 6.0.1, the over allocated
+invoice's income will be debited against the appropriate income account
+and credited to the fee liability account to bring all account balance
+back to the correct position. You will see these paired transaction
+lines posted on the date the upgrade takes place.
+
+This is a once off adjustment which will bring your general ledger back
+into the correct position. For most users this means you will see a
+decrease in your income that corresponds with a decrease in your
+liability. This fix also prevents this error from occurring on any
+future invoices.
+
+==== Web enrolments: parent/child relationships
+
+If you are using the new parent/child relationships for online
+enrolments, this fix will allow those relationships to flow back from
+the website to your onCourse system. All historic data will
+automatically be synchronised.
+
+==== Locking issue
+
+We found and fixed a particular locking issue which would sometimes
+cause the contact window to freeze on trying to open a contact record.
+Mostly this was very rare, but annoying when it did happen.

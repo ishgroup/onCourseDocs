@@ -1,0 +1,159 @@
+= Release 6.0
+
+== Release 6.0
+
+=== Important changes
+
+==== JAVA 7 update required
+
+onCourse 6.0 now requires a minimum of Java Version 7 to run. If you are
+running Java 6 at the moment, download Java for free at
+http://www.java.com/en/[www.java.com] Most users will already be running
+Java 7 or even Java 8.
+
+=== Major features
+
+==== Document management
+
+Document Management in onCourse has just become bigger and better. With
+the recently launched document delivery system in the onCourse portal,
+you now have the opportunity to easily provide resources to tutors and
+students via their portal login. Remember, the skillsOnCourse portal is
+available to all onCourse licensed users, even if you don't have an
+onCourse website.
+
+Documents can also now be attached directly to enrolments, so completed
+student assessment tasks can be stored in an easy to find way in
+onCourse. Public, private, tutor only and tutor and student resources
+can be centrally managed and controlled for greater transparency and
+compliance with AQTF and NVR document record keeping standards.
+
+For documents like policies and procedures, assessment tasks and
+learning resources, you can choose to lock previous class instances to
+previous versions, while new classes will have access to more recent
+versions. With versioning, historic documents can never be deleted, even
+in error. Compliance is now made even easier with a complete audit trail
+always available.
+
+Users of onCourse with a support contract have been given cloud storage
+for their documents. This gives you:
+
+* better performance for large files
+* version controlled history for every file
+* unlimited storage (costs apply)
+
+==== Portal user switching
+
+For employers, HR managers, client managers or even parents who manage a
+group of students attending training at your college, you can now assign
+portal switching permissions based on contact relationships in onCourse.
+This allows approved users to login to the SkillsOnCourse portal and
+then switch the view to see the portal records for any of their related
+contacts.
+
+==== Capture Parent/Guardian contact details for under 18's during online enrolment
+
+The online enrolment process will now detect any enrolling student under
+18 years of age, and request that emergency contact details are provided
+for their parent or guardian. This will create a new contact record in
+onCourse with a fixed relationship to the student. By default, the
+Parent/Guardian will be set as the payer for the enrolment and therefore
+be sent the invoice, but this can be switched back to the student or
+another contact at payment.
+
+==== Add custom fields to online enrolment
+
+Custom fields that have been added to onCourse contact records can now
+be added to the online enrolment process. In the onCourse CMS you will
+see your custom fields and can make them shown, hidden or mandatory for
+enrolling students.
+
+==== Define age restrictions for enrolment in a class
+
+All classes in onCourse now have two new fields to allow you define a
+minimum and/or a maximum age of enrolment. Some classes may be set to
+have, for example, a minimum age of 16 for enrolment while classes for
+children may have an age range set i.e. 6 to 9 years. For these rules to
+be enforced in the online enrolment process, you must have set the date
+of birth field as mandatory in the CMS settings.
+
+If you do not wish to set varying enrolment age permissions at the class
+level, you still have the ability to set a global age minimum for
+enrolment in the CMS. If you choose to set an age restriction at the
+class level, this will override the CMS global preference for minimum
+enrolment age for that class only. For example, you could have your CMS
+global age minimum set to 18, and then have some specific children's
+classes with lower minimum ages. Note there is no global preference for
+minimum age for taking enrolments through the office – the CMS setting
+only applies for student enrolling online.
+
+Students who have previously provided a date of birth that doesn't meet
+the class enrolment rules can not change their age during the online
+enrolment process and will be prompted to contact the college to
+complete the enrolment process.
+
+During an office based enrolment, users will be prompted to complete the
+date of birth fields for customers enrolling in an age restricted class,
+and will also be notified of (and have the opportunity to correct) the
+date of birth of a student enrolling who is outside the set age range.
+
+For more information, see the Quick Enrol FAQ
+
+=== Minor features
+
+* Include the Special Needs fields to the online enrolment process. This
+field can be shown, hidden or made mandatory in the onCourse CMS.
+* Two new fields were added to the timetable sessions – Public Notes and
+Private Notes. Public notes can be used to add information you want the
+potential students to see about what content will be delivered in the
+session, or any special resources they should bring. Public notes will
+be shown in the timetable on the class page on the website, and in the
+student's portal. Private notes is for internal notes about resourcing
+or room configuration that may be required to deliver the session and is
+not publicly visible on the website, but printable in timetable reports.
+* Change in publishing rules to the course and class URL pages to ensure
+links sent via enrolment confirmation emails are always available, even
+once the class is no longer displayed on the public website for
+enrolments.
+* Improvements to the Victorian AVETMISS 7 to ensure enrolment fees are
+reported per hour, instead of per unit as per other states
+* Addition of Victorian only AVETMISS 7 fields to the NAT00010, NAT00020
+and NAT000130 files
+* Improvements in AVETMISS 7 to the auto setting of outcomes after the
+reporting period to 70. Previously, outcomes with an end date after the
+export end date were automatically set to 70. Now, outcomes with an end
+date in the year after the year of the export end date are set to 70.
+This means that for partial year data exports, only outcomes ending in
+the following calendar year will be set to 70. Where unset outcomes
+ending in the export range calendar year will be exported as 00, 81 or
+90 depending which override outcome is chosen in the export window.
+* Added payment type of EFTPOS. All transactions processed as type
+EFTPOS are automatically marked with a date banked of the day they were
+created so they can be immediately reconciled. We recommend type EFT is
+now used for direct bank deposits, rather then EFTPOS
+
+=== Fixes
+
+* Performance improvements for the class cancellation process `#21186`
+* Performance improvements for contact merging `#21181`
+* Fix to an AVETMISS export exception that occurs when the site postcode
+is non-numeric `#21611`
+* Fix to an exception that occurs when a tutor has multiple payroll
+lines for $0.00 `#21784`
+* Fix to search options in the Certificate table that were failing to
+return results when searching on the contact name `#21831`
+* Fix to the tabbed display of classes for non-admin users which
+sometimes hid the VET tab in self paced classes `#21918`
+* Correct line break types in the AQTF Competency Completion export
+`#21900`
+* Remove AQTF Competency Completion export from the AVETMISS 7 menu.
+This export remains available to all users from the AVETMISS 6.1 menu
+`#21987`
+* Improvements to the address parsing for the AVETMISS 7 NAT0080/85
+files `#21838`
+* Improvement to the calculation of the Commencing Course Identifier to
+ensure all outcome records for a student have the same identifier
+`#22318`
+* Fix to the tutor class relationship to prevent the tutor relationship
+from being edited and causing an exception. The tutor relationship to a
+class can be deleted, and a new tutor can be added `#21791`

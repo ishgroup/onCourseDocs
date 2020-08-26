@@ -1,0 +1,36 @@
+= Release 36
+
+== Release 36
+
+=== Major features
+
+==== ASQA audit delivery reports
+
+ASQA requires RTOs to produce customised spreadsheets before an audit,
+similar to but different to the AVTEMISS exports. To save you time
+converting your existing exports to ASQA requirements we've produced a
+set of reports you can use for this purpose.
+
+==== Bulk tagging and tagging
+
+A new add/remove tag UI comes along with a way to use "bulk edit" from
+the cog wheel to apply tags to lots of records at once. Be careful,
+there is no undo!
+
+=== Reports and scripts
+
+* ASQA audit delivery reports `OD-13924`
+* script: product_purchased_web_script `OD-14385`
+* Modernise script: send-enrolment `OD-14397`
+* Modernise script: send-invoice `OD-14398`
+* Modernise script: send-payment-receipt `OD-14400`
+* Modernise script: send-voucher `OD-14408`
+
+=== Fixes
+
+* Traineeship class: Unable to change tutor for existing session
+`OD-13801`
+* Query autocomplete - Outcomes.status returns list of payment statuses
+`OD-14824`
+* Credit Card Payment missing details which allows refunds to work
+`OD-14881`

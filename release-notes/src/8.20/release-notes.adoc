@@ -1,0 +1,291 @@
+= Release 8.20
+
+== Release 8.20
+
+=== Important changes
+
+Hello and welcome to your latest onCourse upgrade! From this release
+onwards, each time a new onCourse version is released, the release notes
+will be displayed to each onCourse user when they log in, inside the
+application.
+
+Take a moment to read through this screen to understand what has changed
+since the last time you logged in. When you are done here, just close
+the window. Once you've closed the window, you won't see this alert
+again until the next upgrade is deployed.
+
+Release notes are also published on our website, so you can always visit
+http://www.ish.com.au/s/onCourse/doc/release-notes/ to refer to this
+release again, or any previous release notes.
+
+==== DateTime format changes for custom reports
+
+All onCourse system reports and exports have been updated, however if
+you have created your own custom reports or exports, you may encounter
+some exceptions when running them where we have upgraded some dateTime
+fields to localDate. Changing date formats from
+"yyyy-MM-dd'T'HH:mm:ssXXX" to "yyyy-MM-dd" should resolve your problems.
+Refer to the onCourse API documentation or contact us for assistance as
+needed.
+
+=== Major features
+
+==== Improved record loading speed over high latency internet links
+
+The performance of communication between onCourse Client and Server has
+been dramatically improved. Opening and saving windows is improved
+throughout the whole application, but most noticeably if you are
+connecting over the internet (such as our cloud hosted solution).
+Improvements range from 20-30% in some cases to reducing the delay by a
+factor of 10 in other cases.
+
+==== Allow Discounts to change fee charged instead of charge to expenses
+
+Previously, all discounts processed within onCourse processed the value
+of the discount to the default COS (cost of sale) account as defined by
+the financial preferences, called 'discounts given'. For example, if
+your class fee was $100, with a $20 discount, so the student was charged
+$80, then $100 income would be earnt by the transaction, with $20 of COS
+expense posted.
+
+Substantial changes have been made to the way discounts can be created
+in the system so they can be either be a:
+
+[arabic]
+. *Discount linked to your choice of COS Account from those created in
+the accounts list in general ledger.* You can now post each discount
+type to it's own COS account or create a COS account for each
+department. This type of setup is recommended for discounts like
+senior's card discounts or promotional activities.
+. *Discount linked to no COS account.* These types of discounts are
+treated as an adjustment to the income earnt e.g. if the class fee was
+$100, with a $20 discount posted to no COS account, so the student fee
+is $80, then $80 income would be earnt by the transaction, with no
+expense posted. For 'change of fee' type discounts, like Smart and
+Skilled student fees, using the no COS discount type is recommended.
+
+Changes to existing discount COS allocations will not change
+transactions created in the past; it will only affect transactions
+created after the change.
+
+All manual discounts in Quick Enrol, and discounts in manual invoices
+will post as a reduction of income, rather than to the COS expense.
+
+The
+http://ish.com.au/s/onCourse/doc/latest/manual/discounts.html[Discounts
+chapter] of the user documentation has been revised to document in
+detail all of these changes
+
+==== Allow transaction dates to be edited before period finalised
+
+To allow for end of month Financial reporting adjustments, transaction
+effective dates prior to the date the record was created can now be set
+in onCourse. This will allow finance users to move transactions that
+occur early in a new month to be pushed back into the month prior, for
+invoices, payments in and payments out, and for the same types of
+transactions to be moved forward in time as needed. Journals can also be
+posted into the past.
+
+Once a month end's movements are complete, the period should be
+finalised, to avoid further movements during that date range. A new UI
+has been added to the Financial menu options to Finalise Period.
+
+Reports printed that include transactions in unlocked period include a
+red warning on the last page ""This report includes unposted transaction
+periods which are subject to change."
+
+==== New account - Undeposited funds
+
+A new default asset account has been created called 'undeposited funds'.
+This accounts holds the balance of all unbanked payment in and payment
+out transactions. When the payment is banked, it is transferred to the
+'deposited funds' asset account. Payment methods that are marked as bank
+automatically will always be deposited directly into the 'deposited
+funds' accounts. Only payment methods that are banked manually are first
+created in the 'undeposited funds' account. Payments that have their
+banking date removed are deducted from the 'deposited funds' account and
+returned to the 'undeposited funds' account.
+
+==== Bank reconciliation redesign
+
+The Bank Reconciliation process inside onCourse has been redesigned to
+work from within the Banking Deposit list, rather than in a separate
+window. Whole banking deposit records can be reconciled with a single
+click, or balanced transaction by transaction.
+
+In concert with this change, the associated reconciliation reports have
+also been renamed 'Cash movements reports'.
+
+The
+http://ish.com.au/s/onCourse/doc/latest/manual/accounting.html#accounting-Deposit[Banking
+and Reconciliation] chapter of the user handbook has been revised to
+document in detail all of these changes
+
+==== Default tax setting per income account
+
+Each income account now has the option to set a default tax value. This
+will automatically apply the selected tax option when the income account
+is chosen during the class set up process, or when a manual invoice is
+generated. The user can still choose to change the tax to another option
+available as needed.
+
+We recommend all finance managers review the default tax status of each
+account after the upgrade and ensure the default option for each income
+account is the more commonly used value i.e. does GST apply to most
+transactions in this account or not. Changing these values do not change
+any previous transactions in the system or any existing account/tax
+combinations, but will ensure less user errors in tax selection are made
+going forward.
+
+==== New duplicate course option
+
+This feature is of particular interest to RTO onCourse users, who may
+need to re-create courses regularly as training packages change or
+internally unit clustering changes. In the course cogwheel, a 'duplicate
+course' option will copy all the marketing and attached VET unit
+information from an existing course and automatically add a '1' to the
+end of the course code. This new course can then have units quickly
+added, deleted or otherwise adjusted. By default, all duplicated courses
+are set to be enabled on creation, but will not display on the web until
+you set that value. NOTE: attached documents and related
+courses/products do not duplicate with the course. This additional
+function will be added as part of the next onCourse release.
+
+=== Reports and scripts
+
+* A new version of the debtors report has been added to the contact
+window that can be run to a specified date range, so you can determine
+your debtors as of a particular date in time `#9508`
+* A new report has been added to the contact window to calculate monthly
+student attendance averages, of particular use to CRICOS providers
+`#27095`
+* A new script has been added to send an email notification to your
+default admin email address when a product purchase is made on the web.
+The script is called 'send product purchased email' and is disabled by
+default `#25716`
+* A new export has been added to the classes window called 'CourseClass
+Sessions CSV export' to export class session data to excel `#28680`
+* A new export has been added to the transaction window called 'Account
+Transaction Segmentation CSV export' to show the Discount, GST or
+Liability joins back to the invoiceLine income account `#28683`
+* The default certificate report that prints Statements of Attainments
+has had the second page Transcript report removed. Now, if the Statement
+of Attainment contains more units than will fit on a single page, the
+certificate will break into multiple pages, with the correct formatting
+for each page. The certificate number will be appended with /1, /2 ect
+as additional pages are created. If you use the default Certificate
+template and print with a two page background, you should change the
+background to a single page and re-test the print process. `#28313`
+* The Transcript report can be printed as required from the Certificate
+window for all types of certificate records `#28844`
+* Reconciliation print reports renamed 'Cash Movements Detail Report'
+and 'Cash Movements Summary Report' `#28264`
+* Fix to Statement Report to only include payments with a successful and
+non-reversed status `#28006`
+* Addition of new report 'Payment Out', available from the payment out
+window `#28646`
+* The contact import and contact export CSV layouts have been aligned
+`#27449`
+* A new column has been added to the scripts list view to show the next
+run date or event, and grey out the scripts that are disabled `#28315`
+* Change the script edit permissions to allow the script CRON schedule
+to be adjusted by all users `#27997`
+* Fix to the calculation of isActive flag to ensure cancelled classes
+are not included as active for reporting or scripting`#28689`
+* A new option has been added to the export template cogwheel to
+'duplicate export template'. This will assist users when creating their
+own custom templates, using an onCourse template as the starting point.
+The key code will be left blank in the duplicate process for you to
+create your own unique code. `#28063`
+* Improvement to the 'send certificate vet created notification' script
+to set the issued on date to the day the certificate was automatically
+printed and distributed to the student. If you are using this script,
+you should open the script record and click 'update to latest version'.
+`#28724 and #28579`
+* Improvement to the 'send weekly finance summary report' script with
+the addition of a send monthly option. If you are using this script and
+want to enable the monthly option, first open the script record and
+click 'update to the latest version'. Then, comment out the weekly time
+range, and uncomment the monthly time range`#27107`
+* Additional CRON times have been added to a drop down list, so rather
+than having to write a custom schedule for each script, you can select a
+pre-written option`#28500`
+
+=== Minor features
+
+* Default name of the asset account where payments are deposited changed
+from 'Cheque account' to 'Deposited funds', in preparation for new
+'undeposited funds' account creation `#28229`
+* Allow payment in and payment out banking dates to be edited for all
+types of payments `#28005`
+* Add to enrolment window advanced search options 'NSW Commitment ID',
+'Funding source - State' and 'Outcome Identifier - Training
+Organisation' `#28142`
+* AMEX payment types will now bank into a their own daily banking
+deposit record, so they can be reconciled as their own group instead of
+included with other credit card payment types `#28232`
+* Open payment in/payment out record on double click from within the
+Banking Deposit record to allow for the date banked record to be changed
+as needed `#28575`
+* Update the layout of the payment out edit window to show the same
+information as payment in, including the addition to both windows of the
+'create by' user name`#11537`
+* Simple and advanced search options have been added to the Banking
+Deposits window `#28263`
+* All advanced search options are listed in alphabetical order `#28399`
+* Ensure credit card payment types are always, and can only be, set to
+bank automatically `#28565`
+* Allow course with modules attached to be unflagged as VET to meet some
+NSW AVETMISS reporting requirements `#28515`
+* AVETMISS outcome '61 - Superseded subject' added to list of outcome
+status options available `#27959`
+* Store user preferences for all edit view windows, so that after
+closing, the window will reopen in your preferred layout and
+size`#26877`
+* Improve layout of the enrolment cancellation/transfer administrative
+fee display to auto select the income account from the class and show
+the total admin fee charged inclusive of GST`#27549`
+* Implementation of OS native file browser for simpler location of files
+on disk and uploading of documents into onCourse`#27914`
+* Improvements to the messaging window to search on message status, find
+related message contact, and open queued email and SMS records from the
+general messaging preferences`#28585`
+* Improvement to discount in class override UI, to show the new class
+fee inclusive/exclusive of tax, depending on the class tax
+settings`#27252`
+* An upgrade to convert some dateTime fields to date only has been
+implemented. In a number of places in onCourse, where date and time
+fields were used, but only date fields make sense, particularly in
+relation to finance and reporting, you'll notice there is now no
+requirement to add 12.00 am to the report runners.`#28231`
+
+=== Fixes
+
+* Fix to simple search in certificate window to allow for standard
+'surname, firstname' or firstname surname' style searching of records
+`#28312`
+* Invoice number correctly displays on class roll `#28526`
+* Improvement to the contact merge feature to reduce duplicates between
+onCourse and web databases `#28235`
+* Improvement to the attendance percentage calculations inside the class
+attendance view to ensure partial attendance and absent with reason
+attendances count towards valid attendance counts `#28474`
+* Fix to the Fee Help Requested field in the enrolment record to ensure
+the value is not set until the enrolment status is finalised in the
+database `#28106`
+* VET Fee Help - VEN File name exports with a full stop in the file
+name, like the other export files `#28510`
+* VET Fee Help - VEN will now only export each contact once to avoid
+duplicates when enrolling in multiple courses `#28511`
+* VET Fee Help - Update 'unit of study code' to export as standard
+courseCode-classCode format `#28512`
+* Improve onCourse contact merge function when custom fields are present
+`#28545`
+* Prevent the preference window from opening more than one instance at a
+time for each user`#28586`
+* Display contact financial records sorted by date and time inside the
+contact record`#28781`
+* Fix to wait list tagging function to correctly delete related tags
+when the waiting list entry is deleted`#28959`
+* Improvement to EULA checking preference to retain check when the user
+name is modified`#27475`

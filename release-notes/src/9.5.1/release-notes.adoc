@@ -1,0 +1,152 @@
+= Release 9.5.1
+
+== Release 9.5.1
+
+*PLEASE NOTE:* If you would like to receive release note notifications
+_prior_ to scheduled onCourse upgrades, please ensure your onCourse user
+account includes your email address. Go to File > Preferences > Users to
+locate and update your account settings.
+
+=== Major features
+
+==== Student feedback
+
+Student feedback has gone from being a minor feature in the portal to a
+first class part of onCourse.
+
+onCourse now includes the ability to view, edit and approve for
+publication student testimonials captured through the onCourse portal
+student feedback process. These testimonials will then become part of
+the marketing copy of your course pages.
+
+More more information on this feature, please review the
+https://www.ish.com.au/s/onCourse/doc/latest/manual/feedback.html[Feedback
+and Surveys] chapter in the user handbook.
+
+==== New editor
+
+Our new editor has now replaced the old CMS. It is more powerful and
+much easier to use. Built on a modern React framework it allows us to
+more quickly add new functionality to your site. You now have the
+ability to roll back to previous site versions as well as suppress
+certain pages from your sitemap, and you can now edit the 301 redirects
+in WebDav.
+
+To access the new editor, add #editor to the end of your website URL
+e.g. www.mycollege.com#editor. You then can log in using the email
+account associated with your onCourse user account, and password. You
+must have 'can edit CMS' access rights in your onCourse user account to
+access the #editor.
+
+==== Editor API
+
+The new editor https://www.ish.com.au/s/onCourse/doc/editor-api/v1/[now
+also has an API]. This is a very important step forward in the refresh
+of our technology stack. You can script actions to do anything that the
+editor UI itself can do, right through to publishing your site.
+
+=== Reports and scripts
+
+* Course completion survey report calculation was incorrectly including
+zero (unmarked) star rating in calculation `OD-10955`
+* Allow QR code to be applied to all custom certificate keycodes
+`OD-11126`
+* Class roll - Do not suppress second student with identical name from
+roll `OD-11007`
+
+=== Minor features
+
+* Add additional find related functions to the user list view -
+messages, invoices, payments in, payments out and audit log `OD-11122`
+* Add Find related - 'voucher redeemed' to invoice, enrolment and
+payment in list views `OD-11166`
+* Add 'data collection rule' to course advanced search `OD-11179`
+* Add 'Enrolment type' to course advanced search `OD-11181`
+* Add Funding Contract to Enrolment advanced search `OD-11199`
+* Add Funding Contract to Class advanced search `OD-11200`
+* Add advanced search to Audits on Action (created, updated, deleted,
+email collision, script failure) `OD-11287`
+* Add Audit logs on script failure `OD-9780`
+* Audit logs linked to entities via find related `OD-9991`
+* Update DeliveryMode descriptions for AVETMISS 8 to remove numerical
+descriptor `OD-11478`
+* Rename AVETMISS Flavours to make them clearer `OD-10248`
+* Tutor payable time sheet UI improvement `OD-10494`
+
+=== Fixes
+
+* In-app links in onCourse release notes should render destination page
+correctly `OD-10759`
+* Reversed payments in status display needs to be consistent throughout
+onCourse `OD-10794`
+* Payment out was posting to the 'default' asset account instead of
+payment method asset account `OD-10795`
+* Add scroll to top of contact details page when there's an error
+`OD-10799`
+* VCU File outcome export incorrect when outcome in not set or 82
+`OD-11084`
+* Remove message tab from user record and add to find related function
+`OD-11121`
+* Fix: Enrolment outcome delivery mode cannot be changed from edit sheet
+when unlocked `OD-11209`
+* Fix: Payroll sheet fails to render when class contains a per
+timetabled hour sunk cost `OD-11289`
+* Field receives incorrect field order when added to existing Data
+Collection form `OD-11371`
+* Prevent another payment out from being processed for contact when it
+has a payment out 'in transaction' status `OD-11549`
+* Fix inability to edit fields in attendance dialog `OD-11614`
+* Advanced search Save Find breaks text fields in client when accessed
+from new dashboard `OD-11633`
+
+=== onCourse Web
+
+onCourse websites are automatically updated via a continuous deployment
+model. These release notes summarise website changes deployed recently.
+
+==== Web features
+
+* Portal Class Surveys: Add net promoter score and adjust feedback label
+based on response `OD-10902`
+* Web: Add testimonials Component to course page `OD-10903`
+* Portal: Feedback star colours improvement for visual clarity
+`OD-10945`
+* Show system 'invisible' pages in editor `OD-11301`
+* Remove /class in robots.txt file to improve SEO `OD-11524`
+* Auto suppress 'add concession' from checkout when the college has no
+concession options available for self selection on the web `OD-11290`
+* Auto suppress credit card payment option from checkout when willow
+admin preferences have not enabled online payment with credit card
+`OD-11293`
+* Improve wording of label in Gift voucher sale in checkout to encourage
+the user to insert their voucher price choice `OD-11321`
+
+==== Web fixes
+
+* Update summary shopping card state after deleting items from cart
+`OD-11565`
+* $0 Courses showing with price 'TBA' on website `OD-11495`
+* Website- Enrol Button greyed out and not functioning `OD-11569`
+* Remove extra symbols within web prices `OD-11377`
+* Wrong money format on web `OD-11379`
+* CMS > Settings > Website: Missed scroll in days amount field
+`OD-11407`
+* editor - 'Menus' list doesn't fill page when expanded `OD-11489`
+* editor - redirect list doesn't scroll `OD-11490`
+* End User online enrolment - intermittent error message in checkout
+`OD-11501`
+* Waiting list checkout response inconsistent `OD-11505`
+* Intermittent blank payment gateway response `OD-11546`
+* Multi purchase discounts not applying as expected in checkout
+`OD-11300`
+* Custom Field in Checkout - ensure 'other' options works as expected
+`OD-11309`
+* Still at School displaying incorrectly in new checkout `OD-11255`
+* Special Needs help text on /checkout not rendering `OD-11256`
+* Class status "enrolment disabled" shouldn't hide session from kiosk
+display `OD-10959`
+* Kiosk fix: Only show tutors ticked for the class session `OD-11075`
+* Display room name instead of site name in Kiosk view `OD-11400`
+* QR Code validation broken in some circumstances `OD-11308`
+* Final '0' gets truncated in negative currency sums on portal
+`OD-11510`

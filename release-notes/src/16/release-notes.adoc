@@ -1,0 +1,159 @@
+= Release 16
+
+== Release 16
+
+=== Important changes and updates
+
+==== AVETMISS data no longer inherits
+
+Class, Enrolment and Outcome AVETMISS fields no longer inherit values.
+For example, 'funding source state' could be entered in the Class and if
+you didn't override that field in the Enrolment or in the Outcome, the
+Class value would be used. The value would display with a padlock to
+show the value that was used came from the Class.
+
+Now in release 16, this doesn't happen. Instead, when you create an
+Enrolment or an Outcome, the value is copied from the Class, rather than
+inherited. This happens once so that if you then change the value in the
+Class, the Enrolments and Outcomes that already exist are not updated,
+but new enrolments and outcomes will reflect the change. We made this
+change since it causes less confusion for new users.
+
+It is important to note that this change means that changes to the class
+timetable after enrolments are created will not automatically update the
+start and end dates for outcomes.
+
+==== Old AVETMISS export gone
+
+The old AVETMISS export window had a number of bugs and has now been
+completely removed. There is nothing you could do in the old window that
+you cannot do in the new.
+
+==== Dashboard search
+
+The search panel on the dashboard has been moved to the left and is now
+collapsible. Given that we're moving to a browser-based application
+later in 2020, we needed to re-think our approach to navigation as it
+won't be possible to use the standard navigation menus like we do in the
+current java version of onCourse. This small but noticeable addition is
+the first step towards introducing this change.
+
+==== Missing features
+
+In version 16 there are some features missing from the new Class user
+interface. They will be returned in version 17. In the meantime you can
+hold SHIFT while opening the window to access the old UI. These features
+are:
+
+* clash detection on timetable
+* bulk updating classes to publish them online
+* bulk updating timetables
+* bulk updating outcome statuses
+
+=== Major features
+
+The following windows have been migrated to the new user interface:
+
+* Courses
+* Classes
+* Contacts
+* Enrolments
+* Outcomes
+
+There are significant changes particularly in the class edit view
+including a new places available projection graph and a new timetable
+editor.
+
+=== Reports and scripts
+
+* Outcomes which have been reported are now locked `OD-12759`
+* Class UI: Reportable hours field now populates with data from Course
+by default `OD-13659`
+* 'Default reportable hours' label in Classes is now simply called
+'Reportable Hours' `OD-13668`
+* Added Historic projected pre-paid fee export `OD-13511`
+
+==== Minor features
+
+* Added new Class duplicate UI `OD-12994`
+* Removed inheritance functionality from some fields `OD-13042`
+* Contact Merge: Added a merge success pop-up. `OD-13289`
+* Added new UI for class cancellation. `OD-13423`
+* Added new UI to generate tutor pay for class `OD-13427`
+* Contacts: added find related items to new UI `OD-13457`
+* Added merge contacts to new UI `OD-13466`
+* Contacts: Added generate tutor pay for tutor `OD-13467`
+* Added Traineeship Courses to Courses list `OD-13517`
+* Added new USI integration `OD-13533`
+* Removed list view counts to improve performance `OD-13538`
+* Animation on attendance scrolling `OD-13613`
+* Contacts: Can now select Gender > Other `OD-13616`
+* Tutor Pay generation from cogwheel generates for all classes when non
+are selected `OD-13619`
+* Added help icon for prior learning `OD-13637`
+* Added vetPurchasingContractScheduleID field to Outcome edit UI
+`OD-13640`
+* Dashboard: Added keyboard control for search results `OD-13658`
+* Added custom field keys to search query autocomplete `OD-13680`
+* Courses: Add sorting by code for modules at searching `OD-13681`
+* Added Contact image editable indicator `OD-13706`
+
+==== Fixes
+
+* AVETMISS Export - funding contract outcomes mixed with fee for service
+`OD-13678`
+* Fixed a pagination issue when list updated between pages `OD-13086`
+* Removed extra scroll bar that appears on OSX `OD-13562`
+* Improved audit table query performance `OD-13545`
+* Made easier to edit label, help text of custom fields within Data
+Collection Form `OD-13530`
+* Security: Set Account permission to View if role has Invoice and
+Payment permissions `OD-13377`
+* Find Anything results - windows should include search term when opened
+`OD-13439`
+* Improved performance when opening Scripts in Automation section
+`OD-13498`
+* Fixed an error where vouchers were created with expiry type NULL
+`OD-13502`
+* Fixed an error where wrong 'Due Date' was displayed for invoices with
+payment plan `OD-13516`
+* Fixed instances of old UI windows opening when using Find Related
+instead of new ones `OD-13519`
+* Fixed an error where users could not reconcile banking deposits
+manually `OD-13522`
+* Fixed an error where Waiting Lists window went white when creating new
+record
+* Fixed an error that could occur when re-ordering multiple tags
+`OD-13528`
+* Fixed an error where 'Course' drop-down shows all courses instead of
+checked as 'Allows Waiting lists' in Waiting Lists `OD-13542`
+* Fixed an error where root tag without child is displayed in edit view
+`OD-13543`
+* Fixed the 'Unauthorised' error that occasionally appears before login
+`OD-13546`
+* Timetable: fixed an error that occurred if start date time and end
+date time were different years `OD-13549`
+* Fixed an error where Custom Field would let you save in incorrect
+circumstance `OD-13556`
+* Added a warning message on edit view about mandatory tags `OD-13557`
+* Fixed an error where font weights didn't display in Firefox `OD-13560`
+* Fixed an error where courses list was not updated after duplication
+`OD-13578`
+* Fixed a Sales search query not working `OD-13596`
+* Fixed incorrect validation when changing Payment Out banked date
+`OD-13600`
+* Preferences > Tutor Pay Rates. Fixed an endless spinner after updating
+record `OD-13601`
+* Fixed an error where some dashboard latest activity records contained
+invalid urls `OD-13635`
+* AVETMISS Export - Fixed rare error where NT was not exporting with
+correct state identifier in NAT00080 and NAT00085 `OD-13677`
+* Invoice line: fixed an error where course related link is always
+disabled `OD-13691`
+* Enrolments: Full time flag (QLD). Fixed an error where unable to set
+'No' or 'Not set' values `OD-13723`
+* 2-column view: Fixed an error where list could break when there were
+few records `OD-13736`
+* Certificate - Find Related - fixed an error where enrolments showed
+incorrect results `OD-13762`
+* Don't show '0 enrolments already have certificates' `OD-13763`

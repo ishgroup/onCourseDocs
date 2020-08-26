@@ -59,13 +59,6 @@ subprojects {
             include 'index.adoc'
         }
         outputDir "${buildDir}/html"
-//        outputOptions {
-//            backends = ["multipage_html5"]
-//        }
-//        asciidoctorj {
-//            logLevel 'info'
-//            requires file("${rootDir}/src/lib/asciidoctor-multipage.rb")
-//        }
         options doctype: 'book'
         attributes  'source-highlighter': 'coderay',
                     'linkcss': '',
@@ -73,8 +66,8 @@ subprojects {
                     'icons': 'font',
                     'docinfo': 'shared',
                     'docinfodir': "${rootDir}/src",
-                    'stylesheet': 'css/oncourse.css',
-                    'version': project.version,
+                    'stylesheet': "${rootDir}/src/css/oncourse.css",
+                    'revnumber': project.version,
                     'revdate': LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy"))
         resources {
             from(sourceDir) {

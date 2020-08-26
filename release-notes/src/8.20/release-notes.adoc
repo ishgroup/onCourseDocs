@@ -1,8 +1,8 @@
 = Release 8.20
 
-== Release 8.20
 
-=== Important changes
+
+== Important changes
 
 Hello and welcome to your latest onCourse upgrade! From this release
 onwards, each time a new onCourse version is released, the release notes
@@ -18,7 +18,7 @@ Release notes are also published on our website, so you can always visit
 http://www.ish.com.au/s/onCourse/doc/release-notes/ to refer to this
 release again, or any previous release notes.
 
-==== DateTime format changes for custom reports
+=== DateTime format changes for custom reports
 
 All onCourse system reports and exports have been updated, however if
 you have created your own custom reports or exports, you may encounter
@@ -28,9 +28,9 @@ fields to localDate. Changing date formats from
 Refer to the onCourse API documentation or contact us for assistance as
 needed.
 
-=== Major features
+== Major features
 
-==== Improved record loading speed over high latency internet links
+=== Improved record loading speed over high latency internet links
 
 The performance of communication between onCourse Client and Server has
 been dramatically improved. Opening and saving windows is improved
@@ -39,7 +39,7 @@ connecting over the internet (such as our cloud hosted solution).
 Improvements range from 20-30% in some cases to reducing the delay by a
 factor of 10 in other cases.
 
-==== Allow Discounts to change fee charged instead of charge to expenses
+=== Allow Discounts to change fee charged instead of charge to expenses
 
 Previously, all discounts processed within onCourse processed the value
 of the discount to the default COS (cost of sale) account as defined by
@@ -76,7 +76,7 @@ http://ish.com.au/s/onCourse/doc/latest/manual/discounts.html[Discounts
 chapter] of the user documentation has been revised to document in
 detail all of these changes
 
-==== Allow transaction dates to be edited before period finalised
+=== Allow transaction dates to be edited before period finalised
 
 To allow for end of month Financial reporting adjustments, transaction
 effective dates prior to the date the record was created can now be set
@@ -94,7 +94,7 @@ Reports printed that include transactions in unlocked period include a
 red warning on the last page ""This report includes unposted transaction
 periods which are subject to change."
 
-==== New account - Undeposited funds
+=== New account - Undeposited funds
 
 A new default asset account has been created called 'undeposited funds'.
 This accounts holds the balance of all unbanked payment in and payment
@@ -106,7 +106,7 @@ created in the 'undeposited funds' account. Payments that have their
 banking date removed are deducted from the 'deposited funds' account and
 returned to the 'undeposited funds' account.
 
-==== Bank reconciliation redesign
+=== Bank reconciliation redesign
 
 The Bank Reconciliation process inside onCourse has been redesigned to
 work from within the Banking Deposit list, rather than in a separate
@@ -121,7 +121,7 @@ http://ish.com.au/s/onCourse/doc/latest/manual/accounting.html#accounting-Deposi
 and Reconciliation] chapter of the user handbook has been revised to
 document in detail all of these changes
 
-==== Default tax setting per income account
+=== Default tax setting per income account
 
 Each income account now has the option to set a default tax value. This
 will automatically apply the selected tax option when the income account
@@ -137,7 +137,7 @@ any previous transactions in the system or any existing account/tax
 combinations, but will ensure less user errors in tax selection are made
 going forward.
 
-==== New duplicate course option
+=== New duplicate course option
 
 This feature is of particular interest to RTO onCourse users, who may
 need to re-create courses regularly as training packages change or
@@ -151,7 +151,7 @@ you set that value. NOTE: attached documents and related
 courses/products do not duplicate with the course. This additional
 function will be added as part of the next onCourse release.
 
-=== Reports and scripts
+== Reports and scripts
 
 * A new version of the debtors report has been added to the contact
 window that can be run to a specified date range, so you can determine
@@ -211,7 +211,7 @@ range, and uncomment the monthly time range`#27107`
 than having to write a custom schedule for each script, you can select a
 pre-written option`#28500`
 
-=== Minor features
+== Minor features
 
 * Default name of the asset account where payments are deposited changed
 from 'Cheque account' to 'Deposited funds', in preparation for new
@@ -259,7 +259,7 @@ fields were used, but only date fields make sense, particularly in
 relation to finance and reporting, you'll notice there is now no
 requirement to add 12.00 am to the report runners.`#28231`
 
-=== Fixes
+== Fixes
 
 * Fix to simple search in certificate window to allow for standard
 'surname, firstname' or firstname surname' style searching of records

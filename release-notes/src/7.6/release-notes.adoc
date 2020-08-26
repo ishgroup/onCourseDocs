@@ -1,8 +1,8 @@
 = Release 7.6
 
-== Release 7.6
 
-=== Important changes
+
+== Important changes
 
 The "timetables" view has been removed from this release. This view was
 not well optimised for speed and the way it displayed all sessions from
@@ -12,9 +12,9 @@ better ways to show a timetable from site, room, class, course, student
 or tutor views. We'll restore this view once we have a more useful
 interface designed.
 
-=== Major features
+== Major features
 
-==== User defined payment types
+=== User defined payment types
 
 onCourse now allows you to add your own type of payment methods, for
 example, VET FEE HELP, B-Pay or PayPal. You can also edit any existing
@@ -22,7 +22,7 @@ payment type that is included in onCourse, or remove a payment type that
 you don't allow at your organisation e.g. cheque, provided you have
 never taken any payments by that method.
 
-==== Banking window restructure
+=== Banking window restructure
 
 The new banking window allows you to see all payment in and out
 transactions grouped together on their banking date, including those
@@ -35,7 +35,7 @@ Banking. You can manually bank money from this window by clicking on the
 banking' window can still be accessed in the 'Accounts' tab of the
 dashboard.
 
-==== Transfer enrolment wizard
+=== Transfer enrolment wizard
 
 A transfer enrolment process has been added to the enrolment window cog
 wheel function. This is similar to the 'cancel enrolment' process with
@@ -43,7 +43,7 @@ the addition of opening Quick Enrol at the end of the process, pre
 loaded with the student, payer and course details, allowing you to make
 a speedy transfer of the student to another class.
 
-==== Reports and scripts
+=== Reports and scripts
 
 * Update all class roll reports that include the tutor names to use a
 consistent layout so tutor names display correctly. Custom rolls have
@@ -65,10 +65,9 @@ onCourse, or manually by adding to the end:
     from preference.email.admin
     subject 'USI reminder email notification'
     to preference.email.admin
-    content "A USI reminder was sent to ${enrolmentsWithoutUsi.size()} students enrolled in 
-    VET classes who have not supplied their USI."
+    content "A USI reminder was sent to ${enrolmentsWithoutUsi.size()} students enrolled in VET classes who have not supplied their USI."
   }
-        
+
 ----
 +
 You can manually change your script from preference.email.admin to the
@@ -77,7 +76,7 @@ actual email address of your choice.`#24396`
 this: `$F{contact}.passportNumber` or if the field name contains spaces
 like this `$F{contact}.customFieldValuehow did you hear")`.
 
-=== Minor features
+== Minor features
 
 * Membership expiry date is now editable during the Quick Enrol sales
 process for the membership. This allows you to override the
@@ -95,7 +94,7 @@ window`#25114`
 list', and the course status was set to 'disabled', the status will now
 be changed to 'enabled and visible online' `#25359`
 
-=== Fixes
+== Fixes
 
 * Allow private classes and traineeships to be marked as self paced on
 creation `#25008`

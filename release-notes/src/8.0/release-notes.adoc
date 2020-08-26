@@ -1,8 +1,8 @@
 = Release 8.0
 
-== Release 8.0
 
-=== Important changes
+
+== Important changes
 
 Java 8 is now a minimum requirement to run onCourse. If your
 organisation is not able to upgrade to Java 8, please contact us before
@@ -24,9 +24,9 @@ release program and have already received these improvements via:
 Scroll to the end for a summary of the improvements between onCourse
 version 7.10 and 8.0
 
-=== Major features
+== Major features
 
-==== Payment plans
+=== Payment plans
 
 A new concept for enrolment fee payments has been developed to allow for
 online enrolments by paying a deposit, and regular payments thereafter.
@@ -72,7 +72,7 @@ Payment Plans
 image:images/class_payment_plan.png[ The new onCourse menu structure
 ,scaledwidth=100.0%]
 
-==== 3rd Party Integration preferences
+=== 3rd Party Integration preferences
 
 A new window to create integration preferences has been added to
 onCourse for the following popular commercial tools:
@@ -100,7 +100,7 @@ handbook
 image:images/integrations.png[ The new onCourse menu structure
 ,scaledwidth=100.0%]
 
-==== Custom field drop down boxes for onCourse and the web
+=== Custom field drop down boxes for onCourse and the web
 
 Custom fields for contact records can now be made into drop down
 selections of choices for use inside both the onCourse application and
@@ -114,7 +114,7 @@ response. You can also log into your onCourse CMS to make these custom
 fields, show or be a mandatory question as part of the online enrolment,
 waitlist or mailing list process.
 
-==== Retaining outcomes on enrolment cancellation
+=== Retaining outcomes on enrolment cancellation
 
 Previously, when cancelling an enrolment in onCourse, all the outcomes
 associated with the enrolment were deleted as part of the cancellation
@@ -149,7 +149,7 @@ All outcomes will always be deleted, unless they have been used to to
 create a Statement of Attainment or Qualification record in onCourse
 before you cancel the class.
 
-==== Addition of 'Certificate Awarded' and 'Certificate Issued' fields
+=== Addition of 'Certificate Awarded' and 'Certificate Issued' fields
 
 By default, the date the certificate was created on is added to the
 'Certificate Awarded' and the date the certificate was printed is added
@@ -161,7 +161,7 @@ Transcript certificates now show these fields instead of the 'Created
 on' and 'Printed on' fields. If you have a custom certificate template
 and need assistance in updating it, please contact us
 
-==== Addition of Skills Sets to the Qualification table
+=== Addition of Skills Sets to the Qualification table
 
 You can now create courses in onCourse linked to Skill Sets rather than
 full Qualifications. This data is updated weekly from training.gov.au.
@@ -172,7 +172,7 @@ qualification. It is only during the certificate issuing process that a
 special type of Statement of Attainment will be issued, rather than an
 actual AQF Qualification.
 
-==== Documentation links added to all onCourse edit window views
+=== Documentation links added to all onCourse edit window views
 
 In the bottom left hand corner of each window you will now see a
 question mark icon. Clicking on this icon will take you directly to the
@@ -180,7 +180,7 @@ page of the onCourse user documentation that explains how to use that
 part of onCourse. The link to the top level of the documentation is
 still available in the Help menu.
 
-==== User defined payment types
+=== User defined payment types
 
 onCourse now allows you to add your own type of payment methods, for
 example, VET FEE HELP, B-Pay or PayPal. You can also edit any existing
@@ -188,7 +188,7 @@ payment type that is included in onCourse, or remove a payment type that
 you don't allow at your organisation e.g. cheque, provided you have
 never taken any payments by that method.
 
-==== Banking window restructure
+=== Banking window restructure
 
 The new banking window allows you to see all payment in and out
 transactions grouped together on their banking date, including those
@@ -201,7 +201,7 @@ Banking. You can manually bank money from this window by clicking on the
 banking' window can still be accessed in the 'Accounts' tab of the
 dashboard.
 
-==== Transfer enrolment wizard
+=== Transfer enrolment wizard
 
 A transfer enrolment process has been added to the enrolment window cog
 wheel function. This is similar to the 'cancel enrolment' process with
@@ -209,19 +209,19 @@ the addition of opening Quick Enrol at the end of the process, pre
 loaded with the student, payer and course details, allowing you to make
 a speedy transfer of the student to another class.
 
-==== Re-style of all reports
+=== Re-style of all reports
 
 All standard reports have been reformatted for a more consistent look
 and feel, and to simplify the templates for custom changes.
 
-==== Rebuild of all onCourse exports
+=== Rebuild of all onCourse exports
 
 All export CSV, XML and other custom templates have been migrated to
 Groovy. This significantly reduces the load on your server when running
 large data sets for export, and allows for much simpler custom export
 editing.
 
-==== New preferences windows
+=== New preferences windows
 
 All onCourse preferences settings have been moved into a single window
 with a more intuitive layout. Under File > Preferences > General… you'll
@@ -232,9 +232,9 @@ Financial general preferences has been merged into this window and a new
 preference has been created for adding Holidays (unavailabilities) for
 your whole of business timetable and scheduling availability.
 
-=== Minor features
+== Minor features
 
-==== AVETMISS features and improvements
+=== AVETMISS features and improvements
 
 * A new field has been added to the AVETMISS preferences panel for QLD
 reporting RTOs to record their QLD RTO ID. For AVETMISS exporting
@@ -260,7 +260,7 @@ runner `#25004`
 66' from AVETMISS exporting except in NSW Department of Education and
 NSW Smart and Skilled export flavours `#25549`
 
-==== Find related and search features
+=== Find related and search features
 
 * 'empty' and 'is not empty' search options have been added to all
 onCourse advanced search fields, allowing you to search for example for
@@ -282,7 +282,7 @@ window `#25114`
 * Find related contacts, invoices, membership product and enrolments has
 been added to the memberships window `#25247`
 
-==== Finance features
+=== Finance features
 
 * Overdue column has been added to the invoice list view window to show
 the amount of the invoice that is currently overdue for payment. This is
@@ -296,7 +296,7 @@ for a credit note `#17723`
 * Payment out credit card reversal options only show payments that are
 valid to reverse `#13396`
 
-==== User and login features
+=== User and login features
 
 * Add 'last login' date to users list view, to assist with finding users
 who no longer log in to onCourse regularly `#24475`
@@ -317,7 +317,7 @@ window `#23042`
 size, until they adjust their own layout and preference settings
 `#25704`
 
-==== Discount and voucher features
+=== Discount and voucher features
 
 * Change the discount default option to 'classes tagged with' to avoid
 users accidentally selecting all classes `#24319`
@@ -330,7 +330,7 @@ Quick Enrol `#24721`
 * Allow voucher payment in Quick Enrol to apply to payer's previous
 unpaid invoices `#24732`
 
-==== Course, class and enrolment features
+=== Course, class and enrolment features
 
 * If you use the cogwheel to 'Show courses on web site' in the course
 list', and the course status was set to 'disabled', the status will now
@@ -361,7 +361,7 @@ message option when using the enrolment transfer wizard `#25398`
 * Pre-populate Quick Enrol with the course from the transferred
 enrolment, along with the payer and student details `#25398`
 
-==== Sales features
+=== Sales features
 
 * People > Purchased memberships list view has had additional columns
 and core filters added to the window to make it more readable and
@@ -374,7 +374,7 @@ enrolments it has been used for `#25249`
 * 'Delivered' status and cog wheel function to set status to delivered
 added to product sales and products filter in Sales window `#25788`
 
-==== Other features
+=== Other features
 
 * A new messages list view has been added to the 'People' menu option,
 showing all messages sent from onCourse. This is the same information
@@ -388,9 +388,9 @@ contact window `#17391`
 * Add onCourse student number to user choice of retention/replacement
 options in the contact merge feature `#22694`
 
-=== Reports and scripts
+== Reports and scripts
 
-==== Reports
+=== Reports
 
 * A new report has been added to the discount window called 'Discount
 take up summary'. This report shows during the date range specified, and
@@ -429,7 +429,7 @@ to create, customise and issue Skill Set Statements of Attainment
 `#24920`
 * Class details report sorts in chronological order by default `#25624`
 
-==== Scripts and templates
+=== Scripts and templates
 
 When a change has been made to a script or template, onCourse will not
 automatically overwrite your files as you may have added your own
@@ -498,9 +498,9 @@ requirements
 +
 `} `
 
-=== Fixes
+== Fixes
 
-==== Seach and find related fixes
+=== Seach and find related fixes
 
 * For find related 'contacts purchased' from product find contacts with
 successful purchases, and exclude contacts with failed purchase attempts
@@ -519,7 +519,7 @@ voucher was used as a payment method `#25237`
 * A range of advanced search fixes to remove any instances of case
 sensitivity `#25674`
 
-==== Course, class and enrolment fixes
+=== Course, class and enrolment fixes
 
 * Quick Enrol window layout was adjusted so relationships window was
 better accessible as it was sometimes drawn off screen `#22983`
@@ -529,7 +529,7 @@ be changed for a class once the class has enrolments `#23570`
 * Quick Enrol will now select the class starting next by default
 `#24749`
 
-==== Finance fixes
+=== Finance fixes
 
 * Display payment out amounts in banking with a negative symbol in front
 of the the amount `#24015`
@@ -557,7 +557,7 @@ calculate the correct totals when a payment is reversed `#25526`
 * Time limitations on credit card payments out have been removed
 `#13396`
 
-==== VET and Certification fixes
+=== VET and Certification fixes
 
 * Improvement to the certification creation logic from the class cog
 wheel. In summary: When a course is 'sufficient for qualification' a
@@ -571,7 +571,7 @@ are unsuccessful `#24223`
 * Allow private classes and traineeships to be marked as self paced on
 creation `#25008`
 
-===== General fixes
+==== General fixes
 
 * Significant performance improvements were made to the loading of list
 windows in onCourse so they will open noticeably faster `#24489`
@@ -610,7 +610,7 @@ better ways to show a timetable from site, room, class, course, student
 or tutor views. We'll restore this view once we have a more useful
 interface designed.
 
-=== Improvements and fixes added since 7.10 release
+== Improvements and fixes added since 7.10 release
 
 * Fix to 'Course details report' to correctly display nominal hours and
 reportable hours`##26106`

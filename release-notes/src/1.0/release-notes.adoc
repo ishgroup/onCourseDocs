@@ -1,17 +1,17 @@
 = Release 1.0
 
-== Release 1.0
 
-=== Important changes
+
+== Important changes
 
 Because this is a major update, it is very important that you take a
 backup before performing this upgrade. It will then take up to 10
 minutes (on a slow server) to upgrade your data once you start the new
 onCourse server before you are able to log in again.
 
-=== Major features
+== Major features
 
-==== Access control
+=== Access control
 
 Want to lock certain users out of parts of onCourse? Now you can control
 users' rights to almost every part of the application, down to 'view',
@@ -22,7 +22,7 @@ can blast your entire customer base with many more..
 Access control sounds simple to describe, but it has been a big effort
 to implement and test throughout the whole application.
 
-==== Quick find in lists
+=== Quick find in lists
 
 It has always been possible to search for records in classes, tutors,
 courses, rooms, and in fact in any list view within onCourse. That
@@ -30,7 +30,7 @@ search functionality is still there and even improved, but there is now
 a quick way to search directly in the list view, select tagged items and
 restore saved searches.
 
-==== Quicker ways to view related records
+=== Quicker ways to view related records
 
 We've added our goto icon
 (image:images/link-rollover.png[image,width=14,height=9]) in more places
@@ -41,7 +41,7 @@ As an example, in the following image, if you click on on the
 icon(image:images/link-rollover.png[image,width=14,height=9]), this will
 open the student record in a new window.
 
-==== Tagging and Untagging more than one record at once
+=== Tagging and Untagging more than one record at once
 
 One of the features that was requested was a means to manage tags in
 bulk, we've included this feature now in our latest release.
@@ -51,7 +51,7 @@ that you'd like to tag and right click the tag on the left. This should
 give you the option to either add the tag to the highlighted records or
 remove the tag from the highlighted records.
 
-==== Class budgets
+=== Class budgets
 
 Each class can be allocated a set of costs: fixed, per session, per hour
 or per enrolment. This allows you to define costs such as room rental
@@ -60,7 +60,7 @@ target enrolments, enter funding arrangements (eg. government
 contributions) calculate minimum break-even, report on target vs actuals
 over any period and produce budgets.
 
-==== External backend database choices
+=== External backend database choices
 
 MySQL, Microsoft SQL and Oracle are now additional choices for backend
 database in addition to the existing built-in Derby engine. These new
@@ -68,13 +68,13 @@ choices allow the system to scale effectively to enterprise level
 customers, allow for clustered databases and improve server speed,
 reporting and backup options.
 
-==== AQTF 2007 Competency Completion Quality Indicator export
+=== AQTF 2007 Competency Completion Quality Indicator export
 
 A new AQTF requirement has been imposed on all RTOs in Australia.
 onCourse is the first enrolment package to support this new export and
 does it without requiring any additional work from you.
 
-==== Flexible outcome creation
+=== Flexible outcome creation
 
 99% of the time, an accredited course is built in advance with a
 qualification and the appropriate units of competency/modules linked.
@@ -96,7 +96,7 @@ Start and end date and delivery mode can also be modified on a per
 enrolment basis, so RPL outcomes can be assigned and the enrolment can
 stay with the rest of the class group.
 
-==== Nominal hours, classroom hours and Student Contact Hours
+=== Nominal hours, classroom hours and Student Contact Hours
 
 On the class window, there is a new tab called VET, which contains
 fields that are useful for RTOs and relate to AVETMISS and other
@@ -130,7 +130,7 @@ the classroom hours. You can override the reportable hours field to the
 classroom hours or any other number that you wish to export in it's
 place.
 
-==== Custom Fields for Contacts
+=== Custom Fields for Contacts
 
 You can create custom fields for contacts which will be searchable. This
 allows you to create fields for, and record information that is
@@ -139,14 +139,14 @@ are payroll numbers, licence numbers, student numbers that stay with the
 student between training organisations and date of initial contact. You
 can add as many additional fields as you need to contact.
 
-==== Relationships for Contacts
+=== Relationships for Contacts
 
 You can define how contacts relate to each other, such as siblings,
 spouse and parents and make contacts employees of companies. This is
 especially useful for tutors who work as contractors and may have
 separate business and personal contact details.
 
-==== Installer changes
+=== Installer changes
 
 * We now have installers for onCourse Client, onCourse Server for
 Windows and a brand new option to install onCourse Server as a service
@@ -154,7 +154,7 @@ for Windows.
 * Removed separated Linux and Solaris packages, they are being replaced
 by a single Unix package which will work across platforms.
 
-=== Minor features
+== Minor features
 
 * Adding validation to ensure mailing lists tag group can't be deleted.
 * Reinstating ValidationResult separation of real failures from
@@ -293,9 +293,9 @@ operation
 minutes, but the commit speed is constant and does not decrease with
 number of messages to save
 
-=== Fixes
+== Fixes
 
-==== Known Issues
+=== Known Issues
 
 * When duplicating classes a problem might occur if there are new
 mandatory tags added.

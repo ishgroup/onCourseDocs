@@ -1,10 +1,10 @@
 = Release 9.0
 
-== Release 9.0
 
-=== Important changes
 
-==== Release notes will be displayed for each onCourse user at login
+== Important changes
+
+=== Release notes will be displayed for each onCourse user at login
 
 Hello and welcome to your latest onCourse upgrade! Each time a new
 onCourse version is released, the release notes will be displayed to
@@ -15,7 +15,237 @@ since the last time you logged in. When you are done here, just close
 the window. Once you've closed the window, you won't see this alert
 again until the next upgrade is deployed.
 
-=== Major features
+== Major features
+
+=== onCourse Certificate Verification Portal
+
+The onCourse Certificate Verification Portal has now been deployed for
+all customers who have implemented the QR code printing function on
+their onCourse Qualification and Statement of Attainment certificates.
+
+The Certificate Verification Portal will allow employers or other RTOs
+to confirm the certificate was issued to the student named without
+requiring them phone, or otherwise contact the RTO to request look up of
+the Certificate number in the register.
+
+By taking a snapshot of the QR code printed on your certificates,
+clicking in the code from a PDF certificate of visiting
+http://www.skills.courses and typing in the unique certificate code, a
+verification page will be displayed with an electronic record of the
+units successfully completed, student name and date of issue. Revoked or
+otherwise invalid certificates will display 'no certificate found'.
+
+image:images/mobile_portal_verify.png[ Welcome to the certificate
+verification portal ,scaledwidth=80.0%]
+
+image:images/verified_soa.png[ A verified Statement of Attainment
+,scaledwidth=80.0%]
+
+If you are not yet printing the QR code on your certificates and you
+would like some assistance to do so, please get in contact with us at
+support@ish.com.au
+
+=== AVETMISS 8
+
+The new AVETMISS export has been added to this release of onCourse which
+includes the additional delivery modes.
+
+image:images/AVETMISS_8.png[ AVETMISS 8 Export window
+,scaledwidth=80.0%]
+
+=== User interface changes
+
+==== onCourse Menu Restructure
+
+To improve clarity and ensure all new onCourse features have a home in
+the menu system, we have restructured the top level menus to better
+group related items.
+
+A new menu option called 'Products' includes all the items you can sell
+via onCourse, including Courses, Gift Vouchers and Memberships.
+
+The menu item 'Training' contains the features related to setting up and
+scheduling training, including items such as Classes, Sites and
+Documents.
+
+The previous menu 'People' has been split into two menus: The new
+'People' menu contains the options to access contacts and their
+communication history via mailing lists and messages, while the new
+'Activity' menu is where you will find Quick Enrol and all the results
+of contact engagement with onCourse including Applications, Enrolments,
+Certificates and Sales.
+
+All options related to fees and payments, including CorporatePasses and
+Discounts can be found under the 'Financial' menu.
+
+The File, Edit, Windows and Help menu options are unchanged.
+
+==== Find related record icon relocation
+
+The find related records function in onCourse is such a regularly used
+and powerful function of the onCourse application, that we have moved
+this feature out of the cogwheel list and in to its very own own action
+icon to make it more prominant. You can now access the 'Find related'
+feature to the right of the search box in all onCourse list views. It's
+icon looks like a magnifying glass hovering over a stack of papers.
+
+==== Payment In & Quick Enrol redesign for payment processing
+
+Creating a payment separately from an enrolment process used to open a
+'payment in' window. The window that opens now is Quick Enrol.
+Validation has been removed from inside Quick Enrol requiring the
+transaction to contain at least one purchase.
+
+Now, you can use Quick Enrol to process payments against invoices with
+outstanding balances. You can do this via the normal Quick Enrol window,
+or when clicking on the plus option inside the payment in list view.
+This change in user interface also introduces the opportunity for
+vouchers to be used as payment method after the enrolment process.
+
+==== onCourse font change
+
+The onCourse system font has been changed to SourceSansPro to allow for
+clearer display on Retina and other high resolution screens.
+
+==== Preference user interface updates
+
+The preference settings for payment types, custom fields, contact
+relations and concession types have been moved from being their own menu
+item and windows, to being added to the list of preference options in
+the File > Preferences > General list view.
+
+==== Class cancellation notifications moved to script and email templates
+
+When a class was cancelled in previous versions of onCourse, a window
+opened asking if the user wanted to send a message to the students to
+notify them, using a template that couldn't be easily customised. To
+make this process consistant with other automated notifications, a new
+script and email template set have been developed to replace this manual
+message. Please review the new template called 'Enrolment cancellation'
+and make the appropriate changes for your college before enabling this
+script.
+
+The new script 'Send enrolment cancellation' is disabled by default. If
+you wish to use it at your college you will need to enable it. Please
+note that enabling this script will automatically send the 'Enrolment
+cancellation' email message to all enrolled students each time you
+cancel a class. If this script is enabled this process will happen in
+the background without the opportunity to review or disable the sending
+of the message.
+
+Another new script and email template pair have been added to notify
+tutors when a class is cancelled, in the same way students are notified.
+Review the script called 'Send tutor class cancellation' which is
+disabled by default, and 'Tutor notice of class cancellation' email
+template for any adjustments you wish to make before enabling this
+script.
+
+Note these scripts do not trigger when an enrolment is cancelled - only
+when a class is cancelled.
+
+==== Improved record loading speed over high latency internet links
+
+The performance of communication between onCourse Client and Server has
+been dramatically improved. Opening and saving windows is improved
+throughout the whole application, but most noticeably if you are
+connecting over the internet (such as our cloud hosted solution).
+Improvements range from 20-30% in some cases to reducing the delay by a
+factor of 10 in other cases.
+
+==== Improved performance across the application
+
+Improve performance across the application, and especially in the class
+edit view. Over slow internet links the performance can be up to 10
+times faster for certain actions.
+
+=== RTO Features
+
+==== onCourse portal refresh
+
+A major refresh of the onCourse portal application has signficantly
+improved the functionality for students, tutors, employers, agents and
+parents.
+
+The new group timetable view, scrolling schedule timetable view,
+improved class roll attendance marking and payment gateway has been
+deployed. A brand new dashboard, outcome marking module and certificate
+verification service are also available.
+
+==== Automated creation of VET Certificates
+
+Unlike non-VET Certificates of Attendance, formal VET certifications
+like Statements of Attainment and Qualifications can only be issued when
+a student achieves outcome results for the units that make up their
+course.
+
+A new script in onCourse checks daily for any outcome results which have
+been updated during the previous 24 hours, and if all the outcomes
+attached to the enrolment have be set to have an outcome status, a VET
+certification will be created if at least one of those outcomes was
+successful.
+
+Where the student has successfully achieved all outcomes linked to a
+course which 'satisfies complete qualification or skill set', then they
+will be issued a Qualification or Skill Set Certificate on completion.
+If all outcomes have been marked, and some are unsuccessful, they will
+be issued a Statement of Attainment instead.
+
+For students undertaking a short course, who have successfully, or a mix
+of successfully and unsuccessfully, completed their outcomes, a
+Statement of Attainment will also be created for their successful units.
+
+Deatiled documentation for enabling this feature is available in the
+user handbook:
+https://www.ish.com.au/s/onCourse/doc/latest/manual/rto.html#rto-Certificates[VET
+Qualifications and other Certificates]
+
+==== Distribution of VET Certificates through the portal
+
+A new script has been added to automatically print and distribute VET
+Certificates through the skillsOnCourse portal called 'send certificate
+vet created notification'. Like all new scripts, it is disabled by
+default and you will need to enable it if you wish to use it.
+
+Each day, all unprinted VET Certificates for student who have a
+validated USI will be printed to PDF and saved to the student's
+enrolment record.
+
+You will need to make sure you have created and uploaded the following
+three two page background documents to onCourse before enabling this
+script: vet_qualification_background.pdf, vet_skillset_background.pdf,
+and vet_soa_background.pdf. The script will overlay the certificate
+template on the correct background type during the print process.
+
+The Certificate will then be uploaded to the student portal, and the
+student sent an email notifying them is available for download.
+
+The same email template, 'Certificate available', also called on by the
+non-VET Certificate of Attendance distribution script is sent. Ensure
+any modifications you make to the template suit the recipient of both
+VET and non-VET certificates, or create a copy of the template to send a
+different email to VET certified students.
+
+==== Automatically generate verification QR code for certificates
+
+In preparation for the deployment of the onCourse Certificate
+Verification service, Statements of Attainment and Qualifications can
+now be printed with a unique QR (Quick Response) code and manual URL
+verification code.
+
+The Certificate Verification service will allow employers or other RTOs
+to confirm the certificate was issued to the student named without
+requiring them phone, or otherwise contact the RTO to request look up of
+the Certificate number in the register. This web portal feature is
+currently in testing and will be deployed shortly.
+
+Printing the built in certificate template will allow you to print
+Statement of Attainment and Qualification certificates with or without a
+QR code. All RTOs wishing to use the verification portal should check
+the default location of the QR code on their onCourse certificate report
+and make adjustments to the background report elements or location of
+the QR code in the report as necessary. If you wish to add the QR code
+to existing custom certificate reports, you can contact ish for
+assistance.
 
 ==== onCourse Certificate Verification Portal
 
@@ -53,247 +283,7 @@ includes the additional delivery modes.
 image:images/AVETMISS_8.png[ AVETMISS 8 Export window
 ,scaledwidth=80.0%]
 
-==== User interface changes
-
-===== onCourse Menu Restructure
-
-To improve clarity and ensure all new onCourse features have a home in
-the menu system, we have restructured the top level menus to better
-group related items.
-
-A new menu option called 'Products' includes all the items you can sell
-via onCourse, including Courses, Gift Vouchers and Memberships.
-
-The menu item 'Training' contains the features related to setting up and
-scheduling training, including items such as Classes, Sites and
-Documents.
-
-The previous menu 'People' has been split into two menus: The new
-'People' menu contains the options to access contacts and their
-communication history via mailing lists and messages, while the new
-'Activity' menu is where you will find Quick Enrol and all the results
-of contact engagement with onCourse including Applications, Enrolments,
-Certificates and Sales.
-
-All options related to fees and payments, including CorporatePasses and
-Discounts can be found under the 'Financial' menu.
-
-The File, Edit, Windows and Help menu options are unchanged.
-
-image:images/new_menu_structure.png[ The new onCourse menu structure
-,scaledwidth=100.0%]
-
-===== Find related record icon relocation
-
-The find related records function in onCourse is such a regularly used
-and powerful function of the onCourse application, that we have moved
-this feature out of the cogwheel list and in to its very own own action
-icon to make it more prominant. You can now access the 'Find related'
-feature to the right of the search box in all onCourse list views. It's
-icon looks like a magnifying glass hovering over a stack of papers.
-
-image:images/find_related_on_left_side.png[ The Find Related icon can
-now be found to the right of the search field in all onCourse list views
-,scaledwidth=100.0%]
-
-===== Payment In & Quick Enrol redesign for payment processing
-
-Creating a payment separately from an enrolment process used to open a
-'payment in' window. The window that opens now is Quick Enrol.
-Validation has been removed from inside Quick Enrol requiring the
-transaction to contain at least one purchase.
-
-Now, you can use Quick Enrol to process payments against invoices with
-outstanding balances. You can do this via the normal Quick Enrol window,
-or when clicking on the plus option inside the payment in list view.
-This change in user interface also introduces the opportunity for
-vouchers to be used as payment method after the enrolment process.
-
-===== onCourse font change
-
-The onCourse system font has been changed to SourceSansPro to allow for
-clearer display on Retina and other high resolution screens.
-
-===== Preference user interface updates
-
-The preference settings for payment types, custom fields, contact
-relations and concession types have been moved from being their own menu
-item and windows, to being added to the list of preference options in
-the File > Preferences > General list view.
-
-===== Class cancellation notifications moved to script and email templates
-
-When a class was cancelled in previous versions of onCourse, a window
-opened asking if the user wanted to send a message to the students to
-notify them, using a template that couldn't be easily customised. To
-make this process consistant with other automated notifications, a new
-script and email template set have been developed to replace this manual
-message. Please review the new template called 'Enrolment cancellation'
-and make the appropriate changes for your college before enabling this
-script.
-
-The new script 'Send enrolment cancellation' is disabled by default. If
-you wish to use it at your college you will need to enable it. Please
-note that enabling this script will automatically send the 'Enrolment
-cancellation' email message to all enrolled students each time you
-cancel a class. If this script is enabled this process will happen in
-the background without the opportunity to review or disable the sending
-of the message.
-
-Another new script and email template pair have been added to notify
-tutors when a class is cancelled, in the same way students are notified.
-Review the script called 'Send tutor class cancellation' which is
-disabled by default, and 'Tutor notice of class cancellation' email
-template for any adjustments you wish to make before enabling this
-script.
-
-Note these scripts do not trigger when an enrolment is cancelled - only
-when a class is cancelled.
-
-===== Improved record loading speed over high latency internet links
-
-The performance of communication between onCourse Client and Server has
-been dramatically improved. Opening and saving windows is improved
-throughout the whole application, but most noticeably if you are
-connecting over the internet (such as our cloud hosted solution).
-Improvements range from 20-30% in some cases to reducing the delay by a
-factor of 10 in other cases.
-
-===== Improved performance across the application
-
-Improve performance across the application, and especially in the class
-edit view. Over slow internet links the performance can be up to 10
-times faster for certain actions.
-
-==== RTO Features
-
-===== onCourse portal refresh
-
-A major refresh of the onCourse portal application has signficantly
-improved the functionality for students, tutors, employers, agents and
-parents.
-
-The new group timetable view, scrolling schedule timetable view,
-improved class roll attendance marking and payment gateway has been
-deployed. A brand new dashboard, outcome marking module and certificate
-verification service are also available.
-
-===== Automated creation of VET Certificates
-
-Unlike non-VET Certificates of Attendance, formal VET certifications
-like Statements of Attainment and Qualifications can only be issued when
-a student achieves outcome results for the units that make up their
-course.
-
-A new script in onCourse checks daily for any outcome results which have
-been updated during the previous 24 hours, and if all the outcomes
-attached to the enrolment have be set to have an outcome status, a VET
-certification will be created if at least one of those outcomes was
-successful.
-
-Where the student has successfully achieved all outcomes linked to a
-course which 'satisfies complete qualification or skill set', then they
-will be issued a Qualification or Skill Set Certificate on completion.
-If all outcomes have been marked, and some are unsuccessful, they will
-be issued a Statement of Attainment instead.
-
-For students undertaking a short course, who have successfully, or a mix
-of successfully and unsuccessfully, completed their outcomes, a
-Statement of Attainment will also be created for their successful units.
-
-Deatiled documentation for enabling this feature is available in the
-user handbook:
-https://www.ish.com.au/s/onCourse/doc/latest/manual/rto.html#rto-Certificates[VET
-Qualifications and other Certificates]
-
-===== Distribution of VET Certificates through the portal
-
-A new script has been added to automatically print and distribute VET
-Certificates through the skillsOnCourse portal called 'send certificate
-vet created notification'. Like all new scripts, it is disabled by
-default and you will need to enable it if you wish to use it.
-
-Each day, all unprinted VET Certificates for student who have a
-validated USI will be printed to PDF and saved to the student's
-enrolment record.
-
-You will need to make sure you have created and uploaded the following
-three two page background documents to onCourse before enabling this
-script: vet_qualification_background.pdf, vet_skillset_background.pdf,
-and vet_soa_background.pdf. The script will overlay the certificate
-template on the correct background type during the print process.
-
-The Certificate will then be uploaded to the student portal, and the
-student sent an email notifying them is available for download.
-
-The same email template, 'Certificate available', also called on by the
-non-VET Certificate of Attendance distribution script is sent. Ensure
-any modifications you make to the template suit the recipient of both
-VET and non-VET certificates, or create a copy of the template to send a
-different email to VET certified students.
-
-===== Automatically generate verification QR code for certificates
-
-In preparation for the deployment of the onCourse Certificate
-Verification service, Statements of Attainment and Qualifications can
-now be printed with a unique QR (Quick Response) code and manual URL
-verification code.
-
-The Certificate Verification service will allow employers or other RTOs
-to confirm the certificate was issued to the student named without
-requiring them phone, or otherwise contact the RTO to request look up of
-the Certificate number in the register. This web portal feature is
-currently in testing and will be deployed shortly.
-
-Printing the built in certificate template will allow you to print
-Statement of Attainment and Qualification certificates with or without a
-QR code. All RTOs wishing to use the verification portal should check
-the default location of the QR code on their onCourse certificate report
-and make adjustments to the background report elements or location of
-the QR code in the report as necessary. If you wish to add the QR code
-to existing custom certificate reports, you can contact ish for
-assistance.
-
-image:images/soa_with_qr_code.png[ Example Statement of Attainment with
-a QR code in the bottom right hand corner ,scaledwidth=60.0%]
-
-===== onCourse Certificate Verification Portal
-
-The onCourse Certificate Verification Portal has now been deployed for
-all customers who have implemented the QR code printing function on
-their onCourse Qualification and Statement of Attainment certificates.
-
-The Certificate Verification Portal will allow employers or other RTOs
-to confirm the certificate was issued to the student named without
-requiring them phone, or otherwise contact the RTO to request look up of
-the Certificate number in the register.
-
-By taking a snapshot of the QR code printed on your certificates,
-clicking in the code from a PDF certificate of visiting
-http://www.skills.courses and typing in the unique certificate code, a
-verification page will be displayed with an electronic record of the
-units successfully completed, student name and date of issue. Revoked or
-otherwise invalid certificates will display 'no certificate found'.
-
-image:images/mobile_portal_verify.png[ Welcome to the certificate
-verification portal ,scaledwidth=80.0%]
-
-image:images/verified_soa.png[ A verified Statement of Attainment
-,scaledwidth=80.0%]
-
-If you are not yet printing the QR code on your certificates and you
-would like some assistance to do so, please get in contact with us at
-support@ish.com.au
-
-===== AVETMISS 8
-
-The new AVETMISS export has been added to this release of onCourse which
-includes the additional delivery modes.
-
-image:images/AVETMISS_8.png[ AVETMISS 8 Export window
-,scaledwidth=80.0%]
-
-===== AVETMISS improvements
+==== AVETMISS improvements
 
 A new 'suppress for AVETMISS' field has been added to the enrolment
 record. This will let users met the NSW Smart & Skilled reporting
@@ -309,7 +299,7 @@ and won't affect the rules that govern the export of two blank spaces
 for NSW Smart & Skilled or 70 for outcomes completing in the following
 calendar year.
 
-===== New duplicate course option
+==== New duplicate course option
 
 This feature is of particular interest to RTO onCourse users, who may
 need to re-create courses regularly as training packages change or
@@ -322,7 +312,7 @@ are set to be enabled on creation, but will not display on the web until
 you set that value. NOTE: attached documents and related
 courses/products do not duplicate with the course.
 
-===== Import AVETMISS outcome data from NAT00080, NAT00085 & NAT00120 files
+==== Import AVETMISS outcome data from NAT00080, NAT00085 & NAT00120 files
 
 Of particular use to customers new to onCourse transitioning from
 another AVETMISS enabled student management system, onCourse will now
@@ -332,14 +322,14 @@ contact records in onCourse, and any enrolment data in the NAT00120
 (whether VET or non-VET) will be added as prior learning records to the
 student files created.
 
-===== Rewrite of the import feature
+==== Rewrite of the import feature
 
 onCourse imports have been re-written in a groovy syntax, making them
 easier for users to edit and extend. The most commonly used import, the
 AVETMISS 80 & 85 allows you to customise the student contact data import
 using AVETMISS files generated by another student management system.
 
-===== Prior Learning data
+==== Prior Learning data
 
 To extend upon the exisiting AVETMISS data import option in onCourse
 that was used to create student records, the NAT0060 and NAT00120 files
@@ -352,7 +342,7 @@ learning has taken place externally to the onCourse system.
 These records are visible in the contact enrolment tab 'outcomes' list,
 like other outcomes the student obtains via onCourse enrolments.
 
-===== Prior learning edit and export
+==== Prior learning edit and export
 
 Prior learning data imported into onCourse now has its own view in the
 contact education tab. These records can be double clicked to edit, and
@@ -360,9 +350,9 @@ new records can be added manually. All prior learning data added
 manually or via import will also be collected and exported in whole of
 college date range AVETMISS reporting.
 
-==== Financial Features
+=== Financial Features
 
-===== Default invoice terms per contact
+==== Default invoice terms per contact
 
 A new field has been added to the general preferences to allow for a
 default due date for all invoices to be set. Previously, the default due
@@ -373,7 +363,7 @@ to auto calculate an invoice due date for your corporate clients. This
 features ties in with the new invoice payment due reminder script and
 portal payment gateway also included in this release.
 
-===== Allow transaction dates to be edited before period finalised
+==== Allow transaction dates to be edited before period finalised
 
 To allow for end of month Financial reporting adjustments, transaction
 effective dates prior to the date the record was created can now be set
@@ -391,7 +381,7 @@ Reports printed that include transactions in unlocked period include a
 red warning on the last page ""This report includes unposted transaction
 periods which are subject to change."
 
-===== New account - Undeposited funds
+==== New account - Undeposited funds
 
 A new default asset account has been created called 'undeposited funds'.
 This accounts holds the balance of all unbanked payment in and payment
@@ -403,7 +393,7 @@ created in the 'undeposited funds' account. Payments that have their
 banking date removed are deducted from the 'deposited funds' account and
 returned to the 'undeposited funds' account.
 
-===== Bank reconciliation redesign
+==== Bank reconciliation redesign
 
 The Bank Reconciliation process inside onCourse has been redesigned to
 work from within the Banking Deposit list, rather than in a separate
@@ -418,7 +408,7 @@ http://ish.com.au/s/onCourse/doc/latest/manual/accounting.html#accounting-Deposi
 and Reconciliation] chapter of the user handbook has been revised to
 document in detail all of these changes
 
-===== Default tax setting per income account
+==== Default tax setting per income account
 
 Each income account now has the option to set a default tax value. This
 will automatically apply the selected tax option when the income account
@@ -434,7 +424,7 @@ any previous transactions in the system or any existing account/tax
 combinations, but will ensure less user errors in tax selection are made
 going forward.
 
-===== Allow Discounts to change fee charged instead of charge to expenses
+==== Allow Discounts to change fee charged instead of charge to expenses
 
 Previously, all discounts processed within onCourse processed the value
 of the discount to the default COS (cost of sale) account as defined by
@@ -471,7 +461,7 @@ http://ish.com.au/s/onCourse/doc/latest/manual/discounts.html[Discounts
 chapter] of the user documentation has been revised to document in
 detail all of these changes
 
-===== New types of discounts
+==== New types of discounts
 
 Two new bulk purchase discount types were added to onCourse. One option
 allows you to define discounts based on the number of enrolments in the
@@ -498,7 +488,7 @@ enrolling student will be selected by default.
 With the new addition of these more complicated types of discounts, the
 option to 'combine discounts' has now been removed from onCourse.
 
-===== Discount override at the class level
+==== Discount override at the class level
 
 This new feature allows you to override the discount value at the class
 level, to assign varying class fees sharing the same discount name. This
@@ -508,7 +498,7 @@ discount 'First Qualification rate' but each class can have it's own
 discounted price. Double click on the discount in the class budget tab
 to edit it.
 
-===== Discount offset from class start date
+==== Discount offset from class start date
 
 In addition to discounts running for a set date period, discounts can
 now be set to be valid as an offset from the class start date. The
@@ -516,7 +506,7 @@ offset can allow the discount to run prior to the start date, or after
 the start date. This will allow the creation of both early bird style
 pricing and discounts for in-term enrolments.
 
-===== Payroll Improvements
+==== Payroll Improvements
 
 Tutors can now be attached to classes with multiple roles and payrates,
 allowing you to assign the same contact, for example, as both a tutor
@@ -538,9 +528,9 @@ slip total for the current period, but when the payroll is generated for
 the following pay period, it will appear again on that payslip. This
 will continue until the pay line is processed via a pay slip.
 
-=== 
+===
 
-==== Reports and scripts
+=== Reports and scripts
 
 Please read this information carefully and decide if you wish to update
 the default script 'Send USI reminder'.
@@ -627,7 +617,7 @@ price the student paid inclusive of any discounts. Change the line
 Fee Paid:
             ${enrolment.invoiceLine.priceEachExTax.add(enrolment.invoiceLine.taxEach)} GST
             ${enrolment.invoiceLine.taxEach.isZero() ? 'free' : 'inc'}
-          
+
 ....
 +
 to
@@ -635,7 +625,7 @@ to
 ....
 Fee Paid: ${enrolment.invoiceLine.discountedPriceTotalIncTax} GST
             ${enrolment.invoiceLine.taxEach.isZero() ? 'free' : 'inc'}
-          
+
 ....
 +
 in both the plain and HTML copy of the template, or update the whole
@@ -810,14 +800,14 @@ and in the HTML version replace
 +
 ....
 ${invoice.createdOn.format("EEEEE d MMMMM yyyy")}
-        
+
 ....
 +
 with
 +
 ....
 ${invoice.invoiceDate.format("EEEEE d MMMMM yyyy")}
-        
+
 ....
 * A new export called 'Extended outcome CSV export' was added to the
 class window. It creates an excel file that looks similar to an AVETMISS
@@ -832,7 +822,7 @@ class cancelled `#26272`
 * Improvement to the Outcome Assessment Report to sort by student last
 name `#26404`
 
-=== Minor features
+== Minor features
 
 * Additional advanced search options for the Enrolment general and VET
 Fee Help tabs have been added `#28696`
@@ -1103,7 +1093,7 @@ students enrolled in the class `#25034`
 * Remember and return by default to the last browsed location when
 uploading a new document to onCourse `#25465`
 
-==== Fixes
+=== Fixes
 
 * Fix to the display of the contact financial tab so the balance
 calculates correctly `#29558`
@@ -1464,7 +1454,7 @@ option selected `#24264`
 date formats appear the same way in the pasted data as they did the
 onCourse window `#25918`
 
-==== Web features
+=== Web features
 
 * A new option to the CMS has been added to enable tutor outcome marking
 in the portal. This option is disabled by default. `#28870`
@@ -1577,7 +1567,7 @@ message is also shown to the user when trying to send to more people
 `#29730`
 * LDAP SSL setting incorrect changes Bind user DN `#30193`
 
-==== Web fixes
+=== Web fixes
 
 * A new option to the CMS has been added to enable tutor outcome marking
 in the portal. This option is disabled by default. `#28870`

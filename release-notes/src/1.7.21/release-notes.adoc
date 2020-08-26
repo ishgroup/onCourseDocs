@@ -1,8 +1,8 @@
 = Release 1.7.21
 
-== Release 1.7.21
 
-=== The Bug Fix
+
+== The Bug Fix
 
 We resolved a bug where failed and declined payments in and payments out
 were being recorded against the Trade Debtors account (by default code
@@ -12,14 +12,14 @@ were being recorded against the Trade Debtors account (by default code
 1.7.21.
 * The amount owing on invoices is not affected by this bug.
 
-=== What does this affect?
+== What does this affect?
 
 On the Profit and Loss report, the Trade Debtors and Cheque account
 values would have been incorrect if there were Failed or Declined
 payments. This situation is only possible for customers using the
 onCourse credit card gateway.
 
-=== Who should upgrade?
+== Who should upgrade?
 
 All customers who use onCourse payment gateway services.
 
@@ -30,7 +30,7 @@ login. Once the progress twirler, on the onCourse Server interface, has
 stopped, clients will be able to connect again. We recommend that the
 upgrade be done out of hours.
 
-=== Known issues
+== Known issues
 
 * Merging does not currently work. It gives an error message: The
 merging process failed to initialise, please report the problem to

@@ -1,10 +1,10 @@
 = Release 8.10
 
-== Release 8.10
 
-=== Important changes
 
-==== Optional USI script change
+== Important changes
+
+=== Optional USI script change
 
 Please read this information carefully and decide if you wish to update
 the default script 'Send USI reminder'.
@@ -26,18 +26,18 @@ In both the plain text and HTML email, before the USI request text is a
 string that says:
 
 ....
- <% if (enrolment.courseClass.course.isVET == true) { %> 
+ <% if (enrolment.courseClass.course.isVET == true) { %>
 ....
 
 Replace it with:
 
 ....
- <% if (enrolment.courseClass.course.modules.size() > 0) { %> 
+ <% if (enrolment.courseClass.course.modules.size() > 0) { %>
 ....
 
-=== Major features
+== Major features
 
-==== Import AVETMISS outcome data from NAT00080, NAT00085 & NAT00120 files
+=== Import AVETMISS outcome data from NAT00080, NAT00085 & NAT00120 files
 
 Of particular use to customers new to onCourse transitioning from
 another AVETMISS enabled student management system, onCourse will now
@@ -47,7 +47,7 @@ contact records in onCourse, and any enrolment data in the NAT00120
 (whether VET or non-VET) will be added as prior learning records to the
 student files created.
 
-=== Reports and scripts
+== Reports and scripts
 
 * Standard certificate CSV export updated to include all relevant data
 for use in providing details of your onCourse certificate registrar to
@@ -62,7 +62,7 @@ class detail `#26982`
 messages `#27028`
 * Descriptions have been added for all onCourse default scripts `#26637`
 
-=== Minor features
+== Minor features
 
 * A new field has been added to the financial preferences tab called
 'invoice remittance instructions'. Enter your custom instructions for
@@ -87,7 +87,7 @@ as part of the AVETMISS standard `#27121`
 * The Discount edit layout has been refreshed to improve the usability
 and grouping of related discount options`#27300`
 
-=== Fixes
+== Fixes
 
 * Increased size of company name field in contact record view `#26836`
 * Fix bug where contact address was missing from invoices where a class
@@ -134,7 +134,7 @@ website`#27300`
 * Performance improvements to the send email process when large batches
 of emails are sent together`#27328`
 
-=== Web features
+== Web features
 
 * Removed rollover and hover text from portal to improve user experience
 on touch screen devices `#25991`
@@ -150,7 +150,7 @@ take priority over other discounts available `#26540`
 is always mandatory, regardless of the CMS settings for the enrol app
 `#26605`
 
-=== Web fixes
+== Web fixes
 
 * Fix to contact merge process to retain relationships for portal logins
 `#26014`

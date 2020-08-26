@@ -3,6 +3,9 @@ import groovyx.net.http.RESTClient
 import groovyx.net.http.HttpResponseException
 import org.apache.tools.ant.filters.ReplaceTokens
 
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+
 buildscript {
   repositories.maven {
     url 'https://repo.ish.com.au/content/groups/public'
@@ -10,6 +13,17 @@ buildscript {
   dependencies {
     classpath 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.2'
   }
+}
+
+asciidoctor {
+  baseDir "${projectDir}/build/processed"
+  sourceDir baseDir
+  sources {
+    include '**/*.adoc'
+  }
+  attributes 'toc': null,
+          'revnumber': null,
+          'revdate': null
 }
 
 task createIndex(type: Copy, dependsOn: processSrc) {
@@ -32,10 +46,10 @@ task createIndex(type: Copy, dependsOn: processSrc) {
     verA.size() <=> verB.size()
   }
 
-  from "src/index.xml"
+  from "src/index.adoc"
   into "${buildDir}/processed"
   filter(ReplaceTokens,tokens: [
-          versions: versions.reverse().collect { "link::./${it}[${it}]" }.join('\n'),
+          versions: versions.reverse().collect { "* link:./${it}[Release ${it}]" }.join('\n'),
   ])
 }
 asciidoctor.dependsOn createIndex

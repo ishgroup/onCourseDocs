@@ -1,10 +1,10 @@
 = Release 16
 
-== Release 16
 
-=== Important changes and updates
 
-==== AVETMISS data no longer inherits
+== Important changes and updates
+
+=== AVETMISS data no longer inherits
 
 Class, Enrolment and Outcome AVETMISS fields no longer inherit values.
 For example, 'funding source state' could be entered in the Class and if
@@ -23,13 +23,13 @@ It is important to note that this change means that changes to the class
 timetable after enrolments are created will not automatically update the
 start and end dates for outcomes.
 
-==== Old AVETMISS export gone
+=== Old AVETMISS export gone
 
 The old AVETMISS export window had a number of bugs and has now been
 completely removed. There is nothing you could do in the old window that
 you cannot do in the new.
 
-==== Dashboard search
+=== Dashboard search
 
 The search panel on the dashboard has been moved to the left and is now
 collapsible. Given that we're moving to a browser-based application
@@ -38,7 +38,7 @@ won't be possible to use the standard navigation menus like we do in the
 current java version of onCourse. This small but noticeable addition is
 the first step towards introducing this change.
 
-==== Missing features
+=== Missing features
 
 In version 16 there are some features missing from the new Class user
 interface. They will be returned in version 17. In the meantime you can
@@ -50,7 +50,7 @@ are:
 * bulk updating timetables
 * bulk updating outcome statuses
 
-=== Major features
+== Major features
 
 The following windows have been migrated to the new user interface:
 
@@ -64,7 +64,7 @@ There are significant changes particularly in the class edit view
 including a new places available projection graph and a new timetable
 editor.
 
-=== Reports and scripts
+== Reports and scripts
 
 * Outcomes which have been reported are now locked `OD-12759`
 * Class UI: Reportable hours field now populates with data from Course
@@ -73,7 +73,7 @@ by default `OD-13659`
 'Reportable Hours' `OD-13668`
 * Added Historic projected pre-paid fee export `OD-13511`
 
-==== Minor features
+=== Minor features
 
 * Added new Class duplicate UI `OD-12994`
 * Removed inheritance functionality from some fields `OD-13042`
@@ -98,7 +98,7 @@ are selected `OD-13619`
 * Courses: Add sorting by code for modules at searching `OD-13681`
 * Added Contact image editable indicator `OD-13706`
 
-==== Fixes
+=== Fixes
 
 * AVETMISS Export - funding contract outcomes mixed with fee for service
 `OD-13678`

@@ -26,10 +26,12 @@ $(document).ready(function() {
 
   // set college host if we have a cookie for it
   let host = readCookie('oncourse_host');
-  $('a[href^="https://demo.cloud.oncourse.cc"]').each(function () {
-    $(this).attr('href', $(this).attr('href').replace('demo.cloud.oncourse.cc', host));
-    $(this).text( $(this).text().replace('demo.cloud.oncourse.cc', host));
-  });
+  if (host) {
+    $('a[href^="https://demo.cloud.oncourse.cc"]').each(function () {
+      $(this).attr('href', $(this).attr('href').replace('demo.cloud.oncourse.cc', host));
+      $(this).text( $(this).text().replace('demo.cloud.oncourse.cc', host));
+    });
+  }
 
 
   // need to wait until Google draws the search box

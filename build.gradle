@@ -14,19 +14,6 @@ repositories {
     jcenter()
 }
 
-configurations {
-    docbookxslt
-}
-
-dependencies {
-    docbookxslt 'net.sf.docbook:docbook-xsl:1.79.1:resources@zip'
-}
-
-task explodeXSL(type: Copy) {
-    from zipTree(configurations.docbookxslt.singleFile)
-    into "${buildDir}/xslt"
-}
-
 subprojects {
     apply plugin: 'distribution'
     apply plugin: 'maven-publish'
@@ -39,17 +26,6 @@ subprojects {
     repositories {
         jcenter()
     }
-
-    distributions {
-        html {
-            contents {
-                from "${buildDir}/html"
-            }
-        }
-    }
-    uploadArchives.dependsOn htmlDistZip
-    distTar.enabled = false
-
 
     asciidoctor {
         logDocuments true
@@ -85,66 +61,15 @@ subprojects {
         }
     }
 
-    task processCommonSrc(type: Copy, dependsOn: parent.tasks['explodeXSL']) {
-        from "${rootDir}/src"
-        into "${buildDir}/processed"
-        filter(ReplaceTokens,tokens: [
-            canonicalLink: canonicalLink,
-            rootDir: rootDir.absolutePath,
-            buildDir: buildDir.absolutePath
-        ])
-    }
-
-    task processSrc(type: Copy, dependsOn: processCommonSrc) {
-        from "src"
-        into "${buildDir}/processed"
-        filter(ReplaceTokens,tokens: [
-                projectName: project.name,
-                version: version,
-                publishedDate: LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy")),
-                copyrightYear : LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))
-        ])
-    }
-
-    task docbookHtml(type: Docbook, dependsOn: processSrc) {
-		description = 'Generates chunked docbook html output.'
-        outputDirectory = file("${buildDir}/html")
-        sourceDirectory = file("${buildDir}/processed")
-        if (project.path == ":dsl") {
-            stylesheet = file("${buildDir}/processed/stylesheets/api-html.xsl")
-        } else if (project.path == ":release-notes") {
-            stylesheet = file("${buildDir}/processed/stylesheets/release-html.xsl")
-        } else {
-            stylesheet = file("${buildDir}/processed/stylesheets/standard-html.xsl")
+    distributions {
+        html {
+            contents {
+                from "${buildDir}/html"
+            }
         }
-        sourceImages = file("${projectDir}/src/images")
-        sourceCss = file("${buildDir}/processed/css")
-        sourceJs = file("${buildDir}/processed/js")
-	}
-    htmlDistZip.dependsOn(docbookHtml)
-
-    task docbookPdfPrepare(type: Docbook, dependsOn: processSrc) {
-        type = 'fo'
-        description = 'Generates PDF fo output ready to be converted to pdf.'
-        outputDirectory = file("${buildDir}/processed")
-        stylesheet = file("${buildDir}/processed/stylesheets/pdf.xsl")
-        sourceDirectory = file("${buildDir}/processed")
     }
-
-	task docbookPdf(type: DocbookPdf, dependsOn: 'docbookPdfPrepare') {
-		description = 'Generates PDF final output.'
-        sourceDirectory = file("${buildDir}/processed")
-        foFile = file("${sourceDirectory}/index.fo")
-        fopConfFile = file("${sourceDirectory}/fonts/fop-conf.xml")
-        outputFile = file("${buildDir}/${project.name}.pdf")
-	}
-
-    uploadArchives.dependsOn docbookPdf
-
-    task docbook(dependsOn: [docbookHtml, docbookPdf]) {
-		group = 'Documentation'
-		description = 'Generates all HTML and PDF documentation.'
-	}
+    distTar.enabled = false
+    htmlDistZip.dependsOn asciidoctor
 
     publishing {
         publications {
@@ -152,9 +77,6 @@ subprojects {
                 artifact htmlDistZip {
                     archiveName "${project.name}.zip"
                 }
-            }
-            pdf(MavenPublication) {
-                artifact docbookPdf.outputFile
             }
         }
         repositories {

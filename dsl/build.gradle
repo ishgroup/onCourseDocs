@@ -28,4 +28,4 @@ task extractAPIdocbook(type: Copy) {
     ])
 }
 
-processSrc.dependsOn(extractAPIdocbook)
+asciidoctor.dependsOn extractAPIdocbook

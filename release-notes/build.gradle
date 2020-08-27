@@ -3,9 +3,6 @@ import groovyx.net.http.RESTClient
 import groovyx.net.http.HttpResponseException
 import org.apache.tools.ant.filters.ReplaceTokens
 
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-
 buildscript {
   repositories.maven {
     url 'https://repo.ish.com.au/content/groups/public'
@@ -26,7 +23,7 @@ asciidoctor {
           'revdate': null
 }
 
-task createIndex(type: Copy, dependsOn: processSrc) {
+task createIndex(type: Copy) {
   def versions = file('src').listFiles().collect{it.name}.findAll{ it[0].isNumber() }
   versions.sort() { a, b ->
 

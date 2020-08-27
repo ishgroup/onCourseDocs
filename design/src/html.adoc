@@ -14,7 +14,7 @@ For example to customise the body structure on the default template, create a fi
 /resources/layouts/default/BodyStructure.tml
 ....
 
-In onCourse templates are *well formed XML documents*.
+In onCourse templates are *well-formed XML documents*.
 That means that every open tag must have a matching close tag, every attribute must be quoted, and so forth.
 You can override any of the templates in this handbook by simply creating a file with the appropriate name in the resources/layouts/default folder.
 Naturally if you are using more than one layout, you can have multiple sets of templates, each in their own folder within resources/layouts.
@@ -60,9 +60,6 @@ The important thing about the body structure is that it is called by other page 
 So when Courses.tml wants to render itself, PageStructure is used to provide the main structure of the page.
 When you reach `<t:body/>` in the template below, Courses.tml is inserted.
 
-[source,xml]
-----
-----
 
 === Dialog Structure
 
@@ -72,9 +69,6 @@ DialogStructure.tml
 This is a more minimalist page layout which is used for things that display in a 'lightbox' style dialog within the page.
 It contains no javascript references, but does include the main site.css stylesheet.
 
-[source,xml]
-----
-----
 
 == Page templates
 
@@ -92,116 +86,102 @@ This will render the template, wrapped with the PageStructure.tml template (to d
 Filename::
 Courses.tml
 
-URL: /courses/[tag]/[tag]/*
+URL::
+/courses/[tag]/[tag]/*
 
-URL: /courses?s=[search terms]
+URL::
+/courses?s=[search terms]
 
 Renders the course list after a user performs a search or browses the subject tags.
 The parameters in the URL define the position in the subject tag tree the user is looking at, or the search parameters they used.
 The first form of URL showing the list for a particular subject tag is deliberately designed to be Google friendly and encourage bookmarking.
 
-[source,xml]
-----
-----
 
 === Course Details
 
 Filename::
 CourseDetails.tml
 
-URL: /course/[course code]
+URL::
+/course/[course code]
 
 Renders a single course description page.
 
-[source,xml]
-----
-----
 
 === Class Details
 
 Filename::
 CourseClassDetails.tml
 
-URL: /class/[class code]
+URL::
+/class/[class code]
 
 Renders a single class description page.
 For technical reasons a class is called "CourseClass" within the internals of onCourse.
 
-[source,xml]
-----
-----
 
 === Tutor Details
 
 Filename::
 TutorDetails.tml
 
-URL: not public (ajax only)
+URL::
+not public (ajax only)
 
 Renders a tutor profile in a lightbox.
 
-[source,xml]
-----
-----
 
 === Sites
 
 Filename::
 Sites.tml
 
-URL: /sites
+URL::
+/sites
 
 When called, renders a listing of Course sites (venues) and appropriate maps.
 
-[source,xml]
-----
-----
 
 === Site Details
 
 Filename::
 SiteDetails.tml
 
-URL: /site/[id]
+URL::
+/site/[id]
 
 Displays the details of the site including the map and site information.
 
-[source,xml]
-----
-----
 
 === Page Not Found
 
 Filename::
 PageNotFound.tml
 
-URL: undefined
+URL::
+undefined
 
-Renders a page when the URL can not be found.
+Renders a page when the URL cannot be found.
 
-[source,xml]
-----
-----
 
 === Promo Codes Page
 
 Filename::
 PromoCodesPage.tml
 
-URL: not public (ajax only)
+URL::
+not public (ajax only)
 
 Allows the user to enter a promotional code within a lightbox.
 
-[source,xml]
-----
-----
 
 === Room Details
 
 Filename::
 RoomDetails.tml
 
-URL: /room/[id]
+URL::
+/room/[id]
 
 Displays details about the room, including the site details.
 
@@ -214,32 +194,26 @@ Displays details about the room, including the site details.
 Filename::
 AddDiscount.tml
 
-URL: not public (ajax only)
+URL::
+not public (ajax only)
 
 Allows the user to enter a promotional code within a lightbox.
 
-Discount Redemption
-
-[source,xml]
-----
-----
 
 === Sitemap XML
 
 Filename::
 SitemapXML.tml
 
-URL: /sitemap.xml
+URL::
+/sitemap.xml
 
 Google, Bing, Yahoo and other search engines love this.
 
-[source,xml]
-----
-----
 
 == Component templates
 
-These templates can never be called directly from an URL. Instead they are used by other templates to build up a page.
+These templates can never be called directly from a URL. Instead they are used by other templates to build up a page.
 
 === Block Display
 
@@ -248,9 +222,6 @@ BlockDisplay.tml
 
 Builds the parameters to include content - copy, images, components
 
-[source,xml]
-----
-----
 
 === Body Footer
 
@@ -259,9 +230,6 @@ BodyFooter.tml
 
 Builds the parameters for the Copyright, Disclaimer info, etc at the foot of the page
 
-[source,xml]
-----
-----
 
 === Body Header
 
@@ -270,9 +238,6 @@ BodyHeader.tml
 
 Builds the Header area for the mast - logo, navigation, search, etc at the top of the page.
 
-[source,xml]
-----
-----
 
 === Class Item
 
@@ -282,10 +247,6 @@ CourseClassItem.tml
 Produces the brief, panelled class descriptions.
 
 image:images/classPanel.png[ Snapshot display of Course Class and Class Times,scaledwidth=100.0%]
-
-[source,xml]
-----
-----
 
 You can add some extra detail to show the number of places left in a class by adding the following piece of code to this template.
 
@@ -310,9 +271,6 @@ CourseClassPlacesAvailable.tml
 Produces a Class enrolment status display.
 Called by "CourseClassItem".
 
-[source,xml]
-----
-----
 
 === Course Class Price
 
@@ -322,9 +280,6 @@ CourseClassPrice.tml
 Produces a class pricing display.
 Called by "CourseClassItem".
 
-[source,xml]
-----
-----
 
 === Course item
 
@@ -345,9 +300,6 @@ getImages(courseItemModel.course) retrieves all images related to this course an
 
 ----
 
-[source,xml]
-----
-----
 
 === Course Search Form
 
@@ -358,9 +310,6 @@ Produces a Course Class specific search
 
 Called by "BodyHeader" and in turn calls "Search Inputs"
 
-[source,xml]
-----
-----
 
 === Global Navi
 
@@ -371,9 +320,6 @@ Defines the parameters for global menus
 
 Called by "BodyStructure"
 
-[source,xml]
-----
-----
 
 === Google Analytics
 
@@ -384,9 +330,6 @@ Places the appropriate Google Analytics code on the page
 
 Called by "CourseClassItem" in "CourseClassDetails"
 
-[source,xml]
-----
-----
 
 === Google Map Sites
 
@@ -397,9 +340,6 @@ Produces a Google map of the predefined site/sites/venue
 
 Called by "Courses" and "Sites" and in turn calls "GoogleDirections"
 
-[source,xml]
-----
-----
 
 === Google Directions
 
@@ -410,9 +350,6 @@ Produces directions - written and verbal for site directions
 
 Called by "GoogleMapSites" and "SiteDetailsComponent"
 
-[source,xml]
-----
-----
 
 === Hint Component
 
@@ -421,9 +358,6 @@ HintComponent.tml
 
 Provides validation text (showing data entry errors) for forms throughout the application, but particularly within the enrolment process.
 
-[source,xml]
-----
-----
 
 === Menu
 
@@ -435,9 +369,6 @@ Called by "BodyStructure".
 
 image:images/menuBase.png[ Course Class,scaledwidth=100.0%]
 
-[source,xml]
-----
-----
 
 === Menu Item
 
@@ -447,36 +378,26 @@ MenuItem.tml
 Renders a specific menu.
 Called by "Menu"
 
-[source,xml]
-----
-----
 
 === Page Head
 
 Filename::
 PageHead.tml
 
-[source,xml]
-----
-----
 
 === Payment Agreement
 
 Filename::
 PaymentAgreement.tml
 
-[source,xml]
-----
-----
+
 
 === Promo Codes View
 
 Filename::
 PromoCodesView.tml
 
-[source,xml]
-----
-----
+
 
 === Quick Search View
 
@@ -487,18 +408,12 @@ Produces specific parameters for the display of the page masthead
 
 Called by "PageStructure"
 
-[source,xml]
-----
-----
 
 === Room Location
 
 Filename::
 RoomLocation.tml
 
-[source,xml]
-----
-----
 
 === Room Location Text
 
@@ -509,9 +424,6 @@ Produces specific parameters for the display of the page masthead
 
 Called by "PageStructure"
 
-[source,xml]
-----
-----
 
 === Search Criteria
 
@@ -528,27 +440,18 @@ Produces specific parameters for the display of the page masthead
 
 Called by "PageStructure"
 
-[source,xml]
-----
-----
 
 === Search Inputs
 
 Filename::
 SearchInputs.tml
 
-[source,xml]
-----
-----
 
 === Search Terms Clarification
 
 Filename::
 SearchTermsClarification.tml
 
-[source,xml]
-----
-----
 
 === Shortlist
 
@@ -557,36 +460,24 @@ ShortList.tml
 
 Short List Manager
 
-[source,xml]
-----
-----
 
 === Site Details Component
 
 Filename::
 SiteDetailsComponent.tml
 
-[source,xml]
-----
-----
 
 === Timeline Event Detail
 
 Filename::
 TimelineEventDetail.tml
 
-[source,xml]
-----
-----
 
 === Timetable Events
 
 Filename::
 TimetableEvents.tml
 
-[source,xml]
-----
-----
 
 === Social Media
 
@@ -595,6 +486,3 @@ SocialMedia.tml
 
 Allows the user to order the preferred buttons for the Add This social media links which are placed against course and static pages.
 
-[source,xml]
-----
-----

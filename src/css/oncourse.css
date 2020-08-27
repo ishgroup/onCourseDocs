@@ -1934,6 +1934,38 @@ a span.icon > .fa {
     cursor: inherit
 }
 
+.admonitionblock td.icon [class^="fa icon-"] {
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    cursor: default
+}
+
+.admonitionblock td.icon .icon-note::before {
+    content: "\f05a";
+    color: #19407c
+}
+
+.admonitionblock td.icon .icon-tip::before {
+    content: "\f0eb";
+    text-shadow: 1px 1px 2px rgba(155,155,0,.8);
+    color: #fff
+}
+
+.admonitionblock td.icon .icon-warning::before {
+    content: "\f071";
+    color: #bf6900
+}
+
+.admonitionblock td.icon .icon-caution::before {
+    content: "\f06d";
+    color: #bf3400
+}
+
+.admonitionblock td.icon .icon-important::before {
+    content: "\f06a";
+    color: #bf0000
+}
+
 .conum[data-value] {
     display: inline-block;
     color: #fff !important;
@@ -2165,7 +2197,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     border: 0;
     border-spacing: 0;
     outline: 0;
-    vertical-align: baseline;
     border-collapse: collapse;
     font-weight: normal;
 }

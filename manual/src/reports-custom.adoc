@@ -11,7 +11,7 @@ We've extended it to understand onCourse data, tied it into a PDF generation sys
 Custom reports can be developed for onCourse by any user, or by ish on request, and then imported into onCourse via your client.
 
 onCourse uses JasperReports, an open source tool to create reports.
-You can add your own custom reports to onCourse at any time by creating them with link:JasperSoft Studio[JasperSoft Studio].
+You can add your own custom reports to onCourse at any time by creating them with https://community.jaspersoft.com/release/jaspersoft-studio-631[JasperSoft Studio].
 This is a free tool you can download and install on your system.
 It runs on Linux, Windows and OSX.
 
@@ -30,8 +30,6 @@ You can export existing onCourse reports to modify by going to the Automation wi
 If the report is an ish default, you'll need to click the 'Save as new PDF Report' icon in the top right of the window to create a copy in order to edit it.
 Then click 'Edit' and it will download a jrxml version of the report to edit.
 
-Alternatively (and easier) you can access all the current onCourse reports link:in our github repository.[in our github repository.] We encourage you to fork that repository and make your modifications public for other users where appropriate.
-
 ==== Editing reports in JasperSoft Studio
 
 [TIP]
@@ -40,8 +38,8 @@ Simple changes to the XML can be made using a text editor if you know what to lo
 For more complex changes you will want to use JasperSoft Studio.
 ====
 
-JasperSoft Studio cannot be summarised in few words and there are many online resources which will help you learn using it.
-A good starting point is link:the official documentation.[the official documentation.]
+JasperSoft Studio cannot be summarised in few words and there are many online resources which will help you learn how to use it.
+A good starting point is https://community.jaspersoft.com/documentation[the official documentation].
 You are certainly best trying to modify an existing report before creating one from scratch.
 For now, take an existing report and make a small change to it such as changing the colour of some text.
 Save the report.
@@ -56,7 +54,7 @@ You must first import it into onCourse in order to run it.
 
 Navigate to File > Preferences > Reports.
 From here you may click the +
-sign on the top right hand side and select "folder" or "single report".
+sign on the top right-hand side and select "folder" or "single report".
 If you have more than one report to import, you can select "folder" is to import all the reports in a folder reports while the "single report" is to import just the one report.
 
 You can then be to select your report (.jrxml) from the location where it is saved on your computer.
@@ -77,8 +75,6 @@ This is a reference to the contact object which was passed to the report and wil
 You may also see joins between entities like this
 `$F{application}.course.name`.
 You can traverse across joins between entities in this way.
-
-The onCourse entities and all their attributes can be found in our link:API documentation.[API documentation.]
 
 Reports are all able to take advantage of the entire Groovy language within all report fields.
 This can be extremely powerful since you can write any code you want to execute within the report engine.

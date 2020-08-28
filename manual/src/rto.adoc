@@ -18,7 +18,7 @@ Do these things before you accept your first enrolment into any VET classes.
 Set up your AVETMISS details within the General Preferences window.
 To access this, in the navigation menu click File > Preferences > General, then find the AVETMISS tab in the left-hand column on the window.
 'Show RTO related screens and menus' should be enabled.
-Then fill out the rest of the page and be especially certain that both your Training organisation name and RTO Identifier field match the details recorded on training.gov.au.
+Then fill out the rest of the page and be especially certain both your Training organisation name and RTO Identifier field match the details recorded on training.gov.au.
 
 When you've finished, hit the 'Save' button in the top-corner of the window, then close it.
 
@@ -38,7 +38,7 @@ You can learn how to create your own Modules, Units of Competency and Qualificat
 ===== How to create your own Modules and Units of Competency
 
 You can add your own modules and units of competency to the onCourse system from within the Units of Competency window (Training > Units of Competency) by clicking the + button in the bottom navigation panel.
-It will open a new column in the window where you must enter a title, the national code, the field of education code, a credit points value and an expiry days value.
+It will open a new column in the window where you must enter a title, the national code, the field of education code, a credit points value, and an expiry days value.
 You cannot save the record without these fields being filled.
 After filling these fields, the save icon will become enabled.
 Click the icon to save the record.
@@ -63,10 +63,12 @@ You can only delete custom records.
 From within the Qualifications window you can create your own Qualifications and Skill Sets.
 There are four mandatory fields that must be filled out before the record can be created: Type, Level, Title and National Code.
 
-The Type field is a drop-down box that will allow you specify the type of record; a qualification, an accredited course, a skill set, a local skill set, or higher education.
+The Type field is a drop-down box that will allow you to specify the type of record; a qualification, an accredited course, a skill set, a local skill set, or higher education.
 Level, title and national code are all free-text fields.
 
-Additional fields include the ANZSCO number, field of education code, specialization code and the number of nominal hours.
+NOTE: For AVETMISS purposes, the presence of a Local Skill Set during the reporting period will create a NAT00030A file in your AVETMISS 8 export.
+
+Additional fields include the ANZSCO number, field of education code, specialization code, and the number of nominal hours.
 There's also an 'Is Offered' check box that, when ticked, flags that qualification as being offered by your college.
 
 You can delete a custom record by highlighting it and clicking the cogwheel icon, then clicking Delete Record.
@@ -76,7 +78,7 @@ image:images/delete_custom_qual.png[ Deleting a custom qualification,scaledwidth
 
 ==== Site setup
 
-Before creating courses or classes, you should ensure that all of the sites you've set up have the correct address, suburb, postcode and timezone set.
+Before creating courses or classes, you should ensure that all the sites you've set up have the correct address, suburb, postcode and timezone set.
 Any sites that are used for VET classes will have most of these details included in reporting, so ensuring accuracy in this data is important.
 
 You can learn more details about <<sitesRooms>>.
@@ -93,7 +95,7 @@ Although the words are different between state and commonwealth accreditation re
 
 Before going any further, you should read <<courses>> to understand the basics of what a course is in onCourse, and how to go about creating one.
 
-Once you have a course created, in the VET tab of the new course record you can select the Qualification and the Units from the built in NTIS data for your chosen course.
+Once you have a course created, in the VET tab of the new course record you can select the Qualification, and the Units from the built in NTIS data for your chosen course.
 If your course is VET, but not from a training package or accredited course, you can also flag it VET here and allocate its Field of Education ID. This is something you may need to do as part of your government funding requirements for non accredited courses.
 
 [TIP]
@@ -104,7 +106,7 @@ This is because they are not publicly available on training.gov.au.
 You can add your own by hitting the + button on either the Qualifications or Units of Competency windows.
 ====
 
-onCourse does not contain the qualification packaging rules, so it is up to you as the RTO to ensure that you are compliant with your own scope of registration and the requirements of the training packages you are authorised to deliver.
+onCourse does not contain the qualification packaging rules, so it is up to you as the RTO to ensure that you are compliant with your own scope of registration, and the requirements of the training packages you are authorised to deliver.
 You should refer to these requirements when creating your courses and only select those units which are allowed to contribute towards that particular qualification.
 
 
@@ -135,8 +137,8 @@ Select the qualification by clicking on it.
 You can also search for qualification by name in Qualification.
 Omit the words Certificate in or Diploma of in your search.
 For example, search for the Certificate IV in Aged Care by typing 'Aged Care'.
-. The qualification information is broken into different fields so the Certificate IV Training and Assessment would read National code - TAA40104 Qualification - Training and Assessment Level - Certificate IV
-. You can then add modules and the units by clicking the +icon on the right hand side of the screen.
+. The qualification information is broken into different fields, so the Certificate IV Training and Assessment would read National code - TAA40104 Qualification - Training and Assessment Level - Certificate IV
+. You can then add modules, and the units by clicking the +icon on the right-hand side of the screen.
 This will open a drop down screen.
 . Enter the National Code or Title These fields are also clairvoyant so make your selection and press ok.
 You will then be returned to the course screen where you will see the modules and units listed.
@@ -150,7 +152,7 @@ image:images/vet_course_tab.png[ The VET tab of the course,showing a full qualif
 ===== How to "add" a unit of competency to a course
 
 You cannot actually add a Unit of competency to a course if it already has enrolments (see the caution above), you can only cancel the old course and then create a new course with the additional unit of competency you want included.
-This is because changing the units of competency changes the very nature of the course, but the history of the old course and it's previous students need to be retained.
+This is because changing the units of competency changes the very nature of the course, but the history of the old course and its previous students need to be retained.
 
 If needed, you can also add units directly to student enrolments.
 This will not change the course units for new students enrolling, but can be used to correct or update the records of existing students.
@@ -189,7 +191,7 @@ Following from the example before, this might be class oldBCDCERTV-90.
 . Using the class cog wheel option, duplicate this class, making any changes to the dates as appropriate.
 This new class will have the code oldBCDCERTV-91 and be linked to the old course.
 . Double click on the new class to open it.
-In the course code field in the top right hand corner, change the code from the old course to the new course e.g. BCDCERTV. This has now linked the class to the new course.
+In the course code field in the top right-hand corner, change the code from the old course to the new course e.g. BCDCERTV. This has now linked the class to the new course.
 Save and close.
 +
 NOTE: You can only change the course a class is linked to before any enrolments are processed into the class.
@@ -197,7 +199,7 @@ If a class has enrolments, even if those enrolments are cancelled, you can not c
 
 ===== Courses which are complete qualifications or skill sets
 
-When a course has the flag 'Satisfies complete qualification or skill set' checked on the VET tab, this means that if the student successfully completes all of the attached units, they will be eligible for a Qualification or Skill Set Statement of Attainment.
+When a course has the flag 'Satisfies complete qualification or skill set' checked on the VET tab, this means that if the student successfully completes all the attached units, they will be eligible for a Qualification or Skill Set Statement of Attainment.
 
 Using the automatic 'create Certificates' options from the class or enrolment cogwheels will look at the value of this flag and determine what type of certification to create.
 
@@ -243,7 +245,7 @@ First, you should be familiar with creating a <<classes>> in onCourse.
 
 Where a class has multiple units of competency assigned to it, you may wish to create a training plan to define at which points during the class delivery each unit begins and ends.
 
-For some government funding training, is it important in the AVETMISS reporting to show the sequence of the delivery of units by having varied start and end dates.
+For some government funding training, is it important to show in the AVETMISS reporting the sequence of the delivery of units by having varied start and end dates.
 Training plans allow you to achieve this.
 
 [[rto_training_plans]]
@@ -252,9 +254,9 @@ Training plans allow you to achieve this.
 Training plans are linked to sessions and can be found in the class timetable.
 
 By default, all units of competency are assigned to all sessions unless you choose to change this in the training plan.
-Units can not be assigned to no sessions as they would then have no start or end date, creating errors in AVETMISS reporting.
+Units can't be assigned to no sessions as they would then have no start or end date, creating errors in AVETMISS reporting.
 
-The Training Plan report allows you to provide hard copy evidence of the outcomes delivered in each sessions of you class and the tutors you have assigned to deliver them.
+The Training Plan report allows you to provide hard copy evidence of the outcomes delivered in each session of the class, and the tutors you have assigned to deliver them.
 This report may be useful to provide to government funding bodies or ASQA auditors, as well as being used for internal planning and resource management.
 
 [NOTE]
@@ -286,7 +288,7 @@ Out come dates may have a padlock next to them, you can click this to unlock it 
 . To print the training plan report for all class enrolments, save and close the record and ensure the class is selected in the class list view.
 Click the Share icon > PDF > *Individual Training and Assessment Plan*.
 You can also print training plans for individuals from the Enrolments window.
-Go to Enrolments, highlight the enrolment you wish to create the Training Plan for then select the Share icon > PDF > Individual Training and Assessment Plan
+Go to Enrolments, highlight the enrolment you wish to create the Training Plan for then select the Share icon > PDF > Individual Training and Assessment Plan.
 
 image:images/reports/TrainingPlanPageOne.png[ The 3rd page of the Training Plan starts the list of outcomes with visible start and end dates.,scaledwidth=100.0%]
 
@@ -294,8 +296,8 @@ image:images/reports/TrainingPlanPageOne.png[ The 3rd page of the Training Plan 
 ==== Funding source/contract
 
 Once you've created the class, add the correct funding contract at the Class level via the VET tab, and then make any required changes for individual students at the Enrolment level.
-To learn more about
-link:fundingContract.html[Funding Contracts, click here].
+You can go here to learn more about
+<<fundingContract, Funding Contracts>>.
 
 When you make any changes to funding source fields in the VET tab after you've already created the class, if there are already enrolments and outcomes associated with the fields you've just edited, you'll be prompted via pop-up whether you want to copy that change to all associated enrolment and outcome records.
 You can push the changes to enrolment records only, outcome records only, or both types.
@@ -313,7 +315,7 @@ If you don't require a funding invoice, or don't wish to use one, you can simply
 
 image:images/reports/funding_invoice.png[ Funding invoice in the Checkout,scaledwidth=100.0%]
 
-The Summary is the invoice going to the student, where as the Funding Invoice isn't sent to anyone, but used to track the funded payments internally for each enrolment.
+The Summary is the invoice going to the student, whereas the Funding Invoice isn't sent to anyone, but used to track the funded payments internally for each enrolment.
 To correctly set up a funding invoice you must:
 
 
@@ -324,7 +326,7 @@ If you don't have one, create one.
 . Set the Price - this is the full amount of money you're expecting to be paid in funding, NOT from the student.
 Student invoices are all controlled via the summary in Checkout.
 . Set the Payment Plan estimates - The payment plan will show a date entry for each day a session is held in this class.
-You will also see a breakdown of the class training plan, which will show you the number of units commenced by that date and the number of units completed by that date.
+You will also see a breakdown of the class training plan, which will show you the number of units commenced by that date, and the number of units completed by that date.
 These are intended as a guide to help you work out your payment estimates and are taken directly from the settings in the class attendance/training plan section.
 +
 Just like in other <<batchpayments>>, you can click a payment plan entry (not the first entry), and set an amount.

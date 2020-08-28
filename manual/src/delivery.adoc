@@ -11,7 +11,7 @@ All you need to worry about from this point is what to do while you're deliverin
 
 You are required to validate each student's USI against their first name, last name and date of birth with the USI Registry System.
 If you have an onCourse support plan and have correctly set up your USI Integration in onCourse, onCourse will do this automatically for each USI supplied.
-For more information on creating and validating USIs, please refer to the link:uniqueStudentIdentifier.html#usi[USI Chapter].
+For more information on creating and validating USIs, please refer to the <<usi, USI Chpater>>.
 
 Students who are exempt the USI requirement will need the report the value 'INTOFF' or 'INDIV' in the USI field to demonstrate that they are exempt and their exemption type. onCourse will assist you with complying with the requirements by automatically exporting 'INTOFF' for students with residential address in a country other than Australia.
 
@@ -227,8 +227,7 @@ Depending on the field you can either make a selection from the drop down box, o
 ===== Exporting outcome data
 
 All RTOs are obliged to report their training activity data under the AVETMISS standard, as part of their registration obligations.
-For more information on Total VET Activity Reporting, please refer to the
-link:#AVETMISS[AVETMISS chapter] of the user handbook.
+For more information on Total VET Activity Reporting, please refer to the <<AVETMISS, AVETMISS chapter>> of the user handbook.
 
 There may be other occasion when you need to export your outcome data for your own recording keeping purposes.
 To that end, onCourse contains some CSV exports you can open in excel that are a little like more user friendly, readable versions of AVETMISS data.
@@ -246,17 +245,14 @@ If you are migrating to onCourse from another AVETMISS compliant student managem
 
 ===== Manually adding prior learning records
 
-The education tab of a student record is comprised of four sections - enrolments, prior learning, outcomes and certificates.
-In onCourse, both enrolments and prior learning can be vocational, and linked to one or more units of competency or be non-vet and linked to no formal study units.
+The education tab of a student record is comprised of four sections - enrolments, prior learning, outcomes and certificates. In onCourse, both enrolments and prior learning can be vocational, and linked to one or more units of competency or be non-vet and linked to no formal study units.
 
 To add prior learning to a student record, click on the + option to the right of the prior learning panel.
 
 Prior learning must have a title - this can be descriptive of the course or training conducted elsewhere.
 Optionally, the prior learning record can be linked to a Qualification or Skills Set on the general tab, contain reference to an external system reference number e.g. the course code or enrolment code from the previous system and optional descriptive notes.
 
-On the second tab, outcomes, you can manually add one or more units of competency or accredited modules to the prior learning record.
-It is important you add start and end dates to the units of competency, and a valid outcome status here if you want to report them for AVETMISS or use the unit to create a certificate.
-If you are adding units completed at another RTO, you should record the outcome status as 'Credit Transfer'.
+On the second tab, outcomes, you can manually add one or more units of competency or accredited modules to the prior learning record. It is important you add start and end dates to the units of competency, and a valid outcome status here if you want to report them for AVETMISS or use the unit to create a certificate. If you are adding units completed at another RTO, you should record the outcome status as 'Credit Transfer'.
 
 If you scan any documents, such as a copy of their Certificate, you can add them to the prior learning record also.
 You will just need to make sure you save the prior learning record first, before adding documents.
@@ -269,13 +265,11 @@ image:images/manual_add_prior_learning.png[ The general tab of the prior learnin
 
 If you are migrating to onCourse and wish to bring over your student and outcome data, onCourse can import standard AVETMISS files to create student contact records with prior learning data.
 
-There are four built in types of AVETMISS data imports, with different purposes depending if you are importing new data to onCourse, or updating existing onCourse records.
-If you are importing data into an active onCourse database, please speak with us first to confirm what import option is the best option to avoid creating duplicate student records.
+There are four built in types of AVETMISS data imports, with different purposes depending if you are importing new data to onCourse, or updating existing onCourse records. If you are importing data into an active onCourse database, please speak with us first to confirm what import option is the best option to avoid creating duplicate student records.
 
 
 . *onCourse AVETMISS outcome import* - This option is best for colleges starting a new onCourse database who want to import AVETMISS files from another system, and do not have student records in the onCourse database yet.
-You will need NAT00060, NAT00080, NAT00085 and NAT00120 files for this import.
-This import will create student records in onCourse, and attach prior learning records to those students.
+You will need NAT00060, NAT00080, NAT00085 and NAT00120 files for this import. This import will create student records in onCourse, and attach prior learning records to those students.
 +
 If you run this import twice, you will create duplicate student data.
 This import does not try and check for matches.
@@ -285,12 +279,10 @@ This will create contact records without any learning history.
 This import will try to match a student to their existing onCourse record based on a firstName, lastName and DoB match, and will create a new student record if it can't find a match.
 Note that any student matches found will have their contact data overridden by the data from this import.
 +
-This import also tries to match importing outcome data to data already recorded in onCourse, and avoid creating duplicate prior learning records if the record doesn't already exist.
-This import will add additional outcome data to existing prior learning records when it finds multiple outcomes belonging to the same qualification code.
+This import also tries to match importing outcome data to data already recorded in onCourse, and avoid creating duplicate prior learning records if the record doesn't already exist. This import will add additional outcome data to existing prior learning records when it finds multiple outcomes belonging to the same qualification code.
 +
 You will need NAT00060, NAT00080, NAT00085 and NAT00120 files for this import.
-. *onCourse AVTETMISS student update import* - This import updates student contact details in onCourse based on NAT00080 and NAT00085 data files imported from another system.
-This import will try to match a student to their existing onCourse record based on a firstName, lastName and DoB match, and will create a new student record if it can't find a match.
+. *onCourse AVTETMISS student update import* - This import updates student contact details in onCourse based on NAT00080 and NAT00085 data files imported from another system. This import will try to match a student to their existing onCourse record based on a firstName, lastName and DoB match, and will create a new student record if it can't find a match.
 +
 Note that you could potentially update onCourse student records with outdated data using this import option, so use with caution when importing data from a record set older than your onCourse records.
 
@@ -307,41 +299,31 @@ Once you have selected all the required files, click on the import button on the
 === Understanding how outcomes are attached to enrolments
 
 When a VET course is created, qualifications, accredited courses, skillsets, modules and units of competency are set at the course level.
-More information about setting up VET courses is available in the
-link:courses.html#courses-VET[Courses chapter of our documentation].
-Classes for the course inherit the units set at the course level.
-You can see these units by clicking the button under Outcomes in the class record.
+More information about setting up VET courses is available in the <<courses-VET, Courses chapter>> of our documentation. Classes for the course inherit the units set at the course level. You can see these units by clicking the button under Outcomes in the class record.
 
-When a student enrols in the class, the units of competency attached to the course become the outcomes attached to the student's enrolment.
-The start and end date of class become the start and end date of the outcomes, unless you choose to define different dates in the training plan.
-The settings in the class VET section become the default settings for each outcome for that class, but can be changed on an outcome by outcome basis.
-Within the class level outcomes can be changed or set, but can not be deleted and new outcomes can not be added here.
+When a student enrols in the class, the units of competency attached to the course become the outcomes attached to the student's enrolment. The start and end date of class become the start and end date of the outcomes, unless you choose to define different dates in the training plan. The settings in the class VET section become the default settings for each outcome for that class, but can be changed on an outcome by outcome basis. Within the class level outcomes can be changed or set, but can not be deleted and new outcomes can not be added here.
 
 You can see the outcomes that have been assigned to each student in the class in the outcomes section, in the student's record in the enrolment section, and in the enrolment record in the outcomes section.
 
-Via the student's enrolment record, outcomes added in error can be deleted from the enrolment record and additional outcomes can be added.
-Adding or deleting outcomes needs to be done per enrolment where training and assessment is taking place at your RTO. For outcomes gained in learning outside of onCourse, prior learning records can be imported, or manually added to the student's education section.
+Via the student's enrolment record, outcomes added in error can be deleted from the enrolment record and additional outcomes can be added. Adding or deleting outcomes needs to be done per enrolment where training and assessment is taking place at your RTO. For outcomes gained in learning outside of onCourse, prior learning records can be imported, or manually added to the student's education section.
 
-Once outcomes are linked to certificates and the certificate is printed and issued, the outcomes become locked in the system and greyed out so they can't be edited.
-If the certificate is later revoked, the outcomes can be edited again.
+Once outcomes are linked to certificates and the certificate is printed and issued, the outcomes become locked in the system and greyed out so they can't be edited. If the certificate is later revoked, the outcomes can be edited again.
 
 image:images/Training_Plan_outcomes.png[A student's education section showing outcomes linked to certificates,via enrolments and prior learning.,scaledwidth=100.0%]
 
 ==== Cancelling VET enrolments
 
-Sometimes when you cancel a VET enrolment, it is because it was created in error and you want to delete all the outcomes.
-At other times, often when the training is funded, you want the enrolment cancelled to make another position available in the class, but have the outcomes retained for reporting purposes.
+Sometimes when you cancel a VET enrolment, it is because it was created in error and you want to delete all the outcomes. At other times, often when the training is funded, you want the enrolment cancelled to make another position available in the class, but have the outcomes retained for reporting purposes.
 
 When you cancel an enrolment, by default the checkbox option retains any outcomes that have had a status set, and deletes any outcomes with a status of 'not set'.
 
-If, at this point, no outcomes have had their status set (for example, the student was enrolled into the wrong class) then all outcomes will be deleted.
-However, if this was a funded enrolment and you wanted to retain all the outcomes to later mark as 'withdrawn' then you can uncheck this option.
+If, at this point, no outcomes have had their status set (for example, the student was enrolled into the wrong class) then all outcomes will be deleted. However, if this was a funded enrolment and you wanted to retain all the outcomes to later mark as 'withdrawn' then you can uncheck this option.
 
 If you are cancelling an enrolment where you have already set all the outcomes, e.g. all set to withdrawn already, leaving this option checked will delete nothing.
 
 If you have set outcomes on an enrolment record and want them deleted, and not retained, then you will need to either set them back to 'not set' before cancelling the enrolment, or you can manually delete them from the enrolment record after processing the cancellation.
 
-If you have created a certificate that includes outcomes from the enrolment, they will always be retained on the student's outcome and can not be deleted manually, even if the certificate has been revoked.
+If you have created a certificate that includes outcomes from the enrolment, they will always be retained on the student's outcome and cannot be deleted manually, even if the certificate has been revoked.
 
 image:images/cancel_enrolment.png[ Cancelling an enrolment and deleting all unset outcomes,scaledwidth=100.0%]
 
@@ -535,9 +517,7 @@ The advantage of this approach is they you can log into your survey tool to see 
 There are features there which allow you to send reminders.
 You'll need a paid account with the survey tool and this option takes a bit more work to set up.
 
-Information on how to link your onCourse to your Survey Provider Account
-https://www.ish.com.au/s/onCourse/doc/latest/manual/externalintegrations.html#gsc.tab=0[can
-be found here]
+Information on how to link your onCourse to your Survey Provider Account <<externalintegrations, in our External Integration chapter>>.
 
 ===== Email link to questionnaire
 

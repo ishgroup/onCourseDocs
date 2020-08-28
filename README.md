@@ -14,20 +14,14 @@ This is the source code for the documentation which can be found here:
 
 The documenation is built using gradle, so all you need to have installed on your machine is Java 11 or higher. Then run:
 
-    ./gradlew docbookHtml
-
-or
-
-    ./gradlew docbookPdf
+    ./gradlew asciidoctor
 
 You can also build individual documentation projects with something like
 
-    ./gradlew design:docbookHtml
+    ./gradlew design:asciidoctor
 
 ## Proprietary parts
 
-The artwork folder contains documents created using the Omnigraffle application which has been 
-used to create most of the diagrams within the manuals. Ideally we'd like to migrate this to an open source tool.
+The artwork folder contains documents created using the Omnigraffle application which has been used to create most of the diagrams within the manuals. Ideally we'd like to migrate this to an open source tool.
 
-The DSL documentation also has a dependency on some swagger API files which are not available under an open source 
-license yet. We are working on making that available.
+The DSL documentation also has a dependency on some swagger API files which are not available under an open source license yet. We are working on making that available.

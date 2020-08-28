@@ -15,7 +15,7 @@ repositories {
     }
 }
 dependencies {
-    dsl 'ish.oncourse.angel:apidocs:99-SNAPSHOT:documentation@zip'
+    dsl 'ish.oncourse.angel:dsldocs:99-SNAPSHOT:documentation@zip'
 }
 
 task extractAPIdocbook(type: Copy) {
@@ -26,6 +26,13 @@ task extractAPIdocbook(type: Copy) {
             publishedDate: LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy")),
             copyrightYear : LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))
     ])
+}
+
+asciidoctor {
+    baseDir "${projectDir}/build/processed"
+    sourceDir baseDir
+    attributes  'sectnumlevels': 0,
+                'toclevels': 1
 }
 
 asciidoctor.dependsOn extractAPIdocbook

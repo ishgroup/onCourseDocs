@@ -10,7 +10,7 @@ Along with some standard security-related preferences, here you will find a full
 If you know the name of the record you're looking for, type it into the Filter Items search at the top of the left-hand column.
 Otherwise just scroll the list until you find what you're after.
 
-image:images/security_settings.png[ The Security window,scaledwidth=100.0%]
+image::images/security_settings.png[ The Security window]
 
 The first section is called 'Settings', containing onCourse's main security related preferences, including rules around enforcing two-factor authentication.
 You have the following preferences to switch on or off:
@@ -57,14 +57,14 @@ If active is not selected, the user will receive an "authentication failed" mess
 You do not need this permission to edit website content like courses, classes and products via onCourse.
 * 2FA status - displays whether this user has two-factor authentication enabled or not.
 
-image:images/users_screenshot.png[ Viewing a user account,scaledwidth=100.0%]
+image::images/users_screenshot.png[ Viewing a user account]
 
 ==== Changing user settings and passwords
 
 A user can change their own password by going File -> Preferences -> and click on the option 'Change my password' at any time.
 Once they do this a window will pop up asking them to enter what they would like their new password to be.
 
-image:images/Change_password.png[ Change my password window,scaledwidth=100.0%]
+image::images/Change_password.png[ Change my password window]
 
 [TIP]
 ====
@@ -72,20 +72,20 @@ If your College has more than one Administration Centre, it is possible to switc
 Simply select the user from the list on the left, and select a choice from under the 'bank cash/cheques to site' heading.
 ====
 
-image:images/reset_admin_site_login.png[ Switching the administration centre,scaledwidth=100.0%]
+image::images/reset_admin_site_login.png[ Switching the administration centre]
 
 ===== Require password change
 
 An administrator can request a user change their password at their next login by hitting the 'require password change' button under 'Users'.
 
-image:images/require_password_change.png[When your administrator requests a new password,you'll see this screen,scaledwidth=100.0%]
+image::images/require_password_change.png[When your administrator requests a new password,you'll see this screen]
 
 ===== Require better passwords
 
 If you have this setting enabled, the application will demand a better quality of password from your users, rejecting simple passwords e.g. a sequence of numbers or anything containing the word 'password'.
 If a user logs in and their password is deemed insecure, they will see a pop up prompting them to create a new one.
 
-image:images/password_minimum_requirements.png[ The prompt asking for a more secure password,scaledwidth=100.0%]
+image::images/password_minimum_requirements.png[ The prompt asking for a more secure password]
 
 ===== Preventing users from logging in twice concurrently
 
@@ -93,7 +93,7 @@ If you try and log into onCourse with the same login credentials as a user that 
 You will then have the option to quit your log in attempt, or log in and kick the other user using the same log in details out.
 So to prevent this from happening it's best to always have your own user name and password to log in with.
 
-image:images/user_already_logged_in.png[ Users who try and log in twice concurrently will see this screen,scaledwidth=100.0%]
+image::images/user_already_logged_in.png[ Users who try and log in twice concurrently will see this screen]
 
 [[users-roles]]
 === User Roles
@@ -105,7 +105,7 @@ You can modify these and create new access rights groups as needed.
 Each user within your organisation can be given Admin access rights (full access) or be added to any of your access groups.
 Select the access rights when creating or editing user profiles, as above.
 
-image:images/security_user_roles.png[Access rights can be set individually for each user role,scaledwidth=100.0%]
+image::images/security_user_roles.png[Access rights can be set individually for each user role]
 
 ==== Creating and Editing User Roles
 
@@ -240,7 +240,7 @@ Two factor authentication (2FA) is an added layer of security for users accessin
 At every login attempt you will be encouraged to enable 2FA, and only once it has been enabled will this warning stop.
 This can be ignored by clicking 'Maybe Later'.
 
-image:images/2fa_notification.png[ Login window,scaledwidth=100.0%]
+image::images/2fa_notification.png[ Login window]
 
 2FA means that there are two 'secrets' a user needs to know to successfully log in to your onCourse application.
 One secret is the password set for the user account.
@@ -258,7 +258,7 @@ You can re-enable 2FA once you've regained access.
 
 To enable 2FA, simply click 'Enable' when prompted at the login window.
 
-image:images/enter_2fa_code.png[ Window you see when trying to enable your own two factor authentication,scaledwidth=100.0%]
+image::images/enter_2fa_code.png[ Window you see when trying to enable your own two factor authentication]
 
 Have your mobile phone handy while you do this as you will need to install the TOTP software as the first part of the process.
 Search for 'Google Authenticator' in your phone's app store and install it.
@@ -269,7 +269,7 @@ You do not have to do this, as you can choose to manually add an account by sele
 The account name you create in Google Authenticator can be anything you like, such as "My onCourse login".
 It does not have to match your onCourse user name.
 
-image:images/googleAuthenticatorApp.png[ Install Google Authenticator on your smart phone,scaledwidth=100.0%]
+image::images/googleAuthenticatorApp.png[ Install Google Authenticator on your smart phone]
 
 You will be shown a six-digit code hat will change every 30 seconds.
 Enter this code into the authentication code field in onCourse and click Login.
@@ -283,12 +283,12 @@ To confirm, click on the 'Disable' button.
 
 You should follow this process if you have bought a new smart phone and need to set up Google Authenticator again.
 
-image:images/Disable_two_factor_authentication_message.png[ Message window you see when trying to disable your own two factor authentication,scaledwidth=100.0%]
+image::images/Disable_two_factor_authentication_message.png[ Message window you see when trying to disable your own two factor authentication]
 
 An admin user has the power to change a users password or disable a users two factor authentication, for example, if they have forgotten their mobile phone.
 You can do this by going to the Security window, double-clicking on the user you want to change, then clicking on the 'Reset Password' button.
 
-image:images/users_screenshot.png[ User edit view window,scaledwidth=100.0%]
+image::images/users_screenshot.png[ User edit view window]
 
 Once you click on the button 'Reset authentication' and the user has their two factor authentication disabled then the sheet that appears, as shown below, will only allow the admin user to reset their password.
 

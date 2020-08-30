@@ -10,7 +10,7 @@ These integrations allow you to create your own links to external services and p
 You can find all the current built in integrations by going to the Automation window.
 Then click on the '+' button next to the heading 'Integrations' to see all the integrations, as shown below.
 
-image:images/integration_prefs.png[ Integration preferences window,scaledwidth=100.0%]
+image::images/integration_prefs.png[ Integration preferences window]
 
 [[externalintegrations-moodle]]
 ==== Moodle
@@ -31,12 +31,12 @@ All courses tagged with this tag will be included in the integration
 *IMPORTANT:* For this to work, courses to be integrated with Moodle are required to have a specific user-created tag associated with them that must be created separately in the Preferences > Tags screen. <<tagging-creatingTags, You can see how to do that here>>.
 The bottom field 'Only activate for enrolments in courses tagged with' is where the name of this tag is defined, so you must make sure the name you put in here matches the name of the tag you created precisely.
 
-image:images/moodle_prefs.png[ Moodle integration preferences,scaledwidth=70.0%]
+image::images/moodle_prefs.png[ Moodle integration preferences,scaledwidth=70.0%]
 
 Once these preferences have been defined you will need to enable the 'moodle enrol' script to automatic the process.
 The Moodle script can be found by going to Automation, doubling clicking on 'moodle enrol' under Scripts, clicking on the checkbox 'Enabled' and saving the script.
 
-image:images/moodle_script.png[ Moodle enrol script,scaledwidth=70.0%]
+image::images/moodle_script.png[ Moodle enrol script,scaledwidth=70.0%]
 
 ===== Where to find the preferences in Moodle
 
@@ -46,32 +46,32 @@ Below are the steps that are needed to be done to enable the Moodle integration.
 . The Base URL is the site url (e.g. http://localhost:8888/moodle29/).
 . To create a user go to Site administration -> Users -> Accounts -> Add a new user
 +
-image:images/Moodle_1._Create_user.png[ Creating a user,scaledwidth=70.0%]
+image::images/Moodle_1._Create_user.png[ Creating a user,scaledwidth=70.0%]
 . To assign user to a role go to Site administration -> Users ->
 Permissions -> Assign system roles
 . To add a service go to Site administration -> Plugins -> Web services
 -> External services.
 When you are on the page click on 'Add' and fill in the Service Name and Short Name, then click on 'Add service'
 +
-image:images/Moodle_3.1_External_Services_screen.png[ External services screen,scaledwidth=70.0%]
+image::images/Moodle_3.1_External_Services_screen.png[ External services screen,scaledwidth=70.0%]
 +
 When you are on this page click on 'Add' and fill in the Service Name and Short Name, then click on 'Add service'
 +
-image:images/Moodle_3.2_Create_Service.png[ Adding the service,scaledwidth=70.0%]
+image::images/Moodle_3.2_Create_Service.png[ Adding the service,scaledwidth=70.0%]
 . Once the Service is created click on 'Add functions'
 +
-image:images/Moodle_4.1_Functions_screen.png[ Functions page,scaledwidth=70.0%]
+image::images/Moodle_4.1_Functions_screen.png[ Functions page,scaledwidth=70.0%]
 +
 Add following functions: core_user_create_users, core_user_get_users, core_course_get_courses, enrol_manual_enrol_users
 +
-image:images/Moodle_4.2_Add_Functions.png[ Adding the functions to the service,scaledwidth=70.0%]
+image::images/Moodle_4.2_Add_Functions.png[ Adding the functions to the service,scaledwidth=70.0%]
 . The next step is to generate the token, you can do this by going to Site administration -> Plugins -> Web services -> Manage tokens then click on 'Add'.
 +
-image:images/Moodle_5.1_Token_screen.png[ Manage tokens page,scaledwidth=70.0%]
+image::images/Moodle_5.1_Token_screen.png[ Manage tokens page,scaledwidth=70.0%]
 +
 Then select the created user and service, and if needed Enable and Set 'Valid Until' date
 +
-image:images/Moodle_5.2_Create_token.png[ Create token page,scaledwidth=70.0%]
+image::images/Moodle_5.2_Create_token.png[ Create token page,scaledwidth=70.0%]
 . The last step is to create a course, you can do this by going to Site administration -> Courses -> Manage courses and categories, then Create new course.
 The ID should be the same as course code in onCourse.
 
@@ -111,7 +111,7 @@ Name your tag, then click 'Save'
 _The name of the integration must be the same as the name of the onCourse mailing list_.
 Insert your API key and Audience (List) ID from MailChimp, then save and close this window.
 +
-image:images/mailchimp_prefs.png[ MailChimp integration for a Mailing List integration,scaledwidth=70.0%]
+image::images/mailchimp_prefs.png[ MailChimp integration for a Mailing List integration,scaledwidth=70.0%]
 . Once the integration has been defined you will need to enable the MailChimp scripts to automate the process.
 These scripts can be found in the Automation window.
 . Double click on the script called 'mailchimp subscribe', click on the checkbox 'Enabled' and save the script.
@@ -124,7 +124,7 @@ You can also tag an individual contact by opening their record and adding the ta
 . If you wish to add additional mailing list integrations, you can repeat steps 1 to 6 as needed, adding multiple mailing list integrations to onCourse.
 Once the scripts are enabled, you do not need to repeat steps 7 to 9 again.
 
-image:images/mailchimp_script.png[ MailChimp mailing list subscribe script,scaledwidth=70.0%]
+image::images/mailchimp_script.png[ MailChimp mailing list subscribe script,scaledwidth=70.0%]
 
 ====== Creating an 'on enrolment' integration
 
@@ -157,12 +157,12 @@ To add a SurveyMonkey integration you will need to click on the 'Add' button bel
 You will then see a number of fields that are needed to enable the integration.
 The 'Name' field is what ever you want to call this integration.
 
-image:images/surveymonkey_prefs.png[ SurveyMonkey integration preferences,scaledwidth=80.0%]
+image::images/surveymonkey_prefs.png[ SurveyMonkey integration preferences,scaledwidth=80.0%]
 
 Once these preferences have been defined you will need to enable at least one of the SurveyMonkey scripts to automate the process.
 These scripts can be found by going to Automation, doubling clicking on either 'SurveyMonkey send invite on enrolment', 'SurveyMonkey send invite on enrolment completion', or 'VET Course completion survey' clicking on the checkbox 'Enabled' and saving the script.
 
-image:images/surveymonkey_script.png[ SurveyMonkey scripts,scaledwidth=70.0%]
+image::images/surveymonkey_script.png[ SurveyMonkey scripts,scaledwidth=70.0%]
 
 ===== Access Tokens and Creating a developer account
 
@@ -189,18 +189,18 @@ You can choose the name of App i.e. 'onCourse'
 +
 Without these Scopes being activated, the integration will fail to work.
 +
-image:images/surveymonkeyScopes.png[ Scopes in SurveyMonkey,scaledwidth=80.0%]
+image::images/surveymonkeyScopes.png[ Scopes in SurveyMonkey,scaledwidth=80.0%]
 . Once you've activated the required Scopes, scroll up to the Credentials section and locate the 'Access Token' field.
 The Access token is the large string of numbers and letters in the field.
 Copy all the text in this field and paste it into the 'OAuth token' field within the Integration you're setting up in onCourse, found in the Automations window.
 +
-image:images/surveymonkeyCredientials.png[ SurveyMonkey Access Token Location,scaledwidth=80.0%]
+image::images/surveymonkeyCredientials.png[ SurveyMonkey Access Token Location,scaledwidth=80.0%]
 
 The Survey Name you need to enter in onCourse is the name listed in the 'Title' field on Survey Monkey, in the example below it's simply called 'Test'.
 This can be found by logging into your account in
 https://www.surveymonkey.com then clicking on the top menu option 'My Surveys'
 
-image:images/SurveyMonkey_name.png[ All your surveys inSurveyMonkey will be listed in 'My Surveys',scaledwidth=80.0%]
+image::images/SurveyMonkey_name.png[ All your surveys inSurveyMonkey will be listed in 'My Surveys',scaledwidth=80.0%]
 
 Survey Monkey uses the term 'Collectors' to describe ways you can send out your survey and collect responses.
 https://help.surveymonkey.com/articles/en_US/kb/How-to-collect-responses[You
@@ -213,11 +213,11 @@ We highly recommend naming the Collector 'onCourse'.
 If you haven't used SurveyMonkey before you will need to verify the collectors email address.
 This is done by clicking on the name of the Survey followed by on the tab 'Collect Responses' and then on the Survey name under the heading 'NICKNAME' and continuing until this email gets sent.
 
-image:images/survey_collector.png[A view of some Collectors,one has yet to be configured,scaledwidth=80.0%]
+image::images/survey_collector.png[A view of some Collectors,one has yet to be configured,scaledwidth=80.0%]
 
 The 'Sender email address' that survey responses are sent to is the same one that you should have stored in the field 'Email from address' in the Messaging tab of the onCourse preferences window.
 
-image:images/Preferences_messaging.png[ Messaging tab of the Preferences window,scaledwidth=70.0%]
+image::images/Preferences_messaging.png[ Messaging tab of the Preferences window,scaledwidth=70.0%]
 
 [[externalintegrations-surveygizmo]]
 ==== SurveyGizmo
@@ -227,12 +227,12 @@ SurveyGizmo is a powerful survey tool designed to make even the most advanced su
 To add a SurveyGizmo integration you will need to click on the 'Add' button below the SurveyGizmo icon.
 You will then see a number of fields that are needed to enable the integration.
 
-image:images/surveygizmo_prefs.png[ SurveyGizmo integration preferences,scaledwidth=70.0%]
+image::images/surveygizmo_prefs.png[ SurveyGizmo integration preferences,scaledwidth=70.0%]
 
 Once these preferences have been defined you will need to enable at least one of the SurveyGizmo scripts to automatic the process.
 These scripts can be found by going to Automation, doubling clicking on either 'SurveyGizmo send invite on enrolment' or 'SurveyGizmo send invite on enrolment completion', clicking on the checkbox 'Enabled' and saving the script.
 
-image:images/surveygizmo_script.png[ SurveyGizmo scripts,scaledwidth=70.0%]
+image::images/surveygizmo_script.png[ SurveyGizmo scripts,scaledwidth=70.0%]
 
 ===== Where to find the preferences in SurveyGizmo
 
@@ -243,7 +243,7 @@ Below is the information that is needed to enable the integration that can be fo
 . The Survey ID is taken from survey address, so in the example below the Survey ID is 2290616. Please visit
 http://help.surveygizmo.com/help/article/link/how-to-find-ids[here] for more information.
 +
-image:images/SurveyGizmo_Survey_ID.png[ Where to find the SurveyGizmo Survey ID,scaledwidth=70.0%]
+image::images/SurveyGizmo_Survey_ID.png[ Where to find the SurveyGizmo Survey ID,scaledwidth=70.0%]
 
 [[externalintegrations-cloudassess]]
 ==== Cloud Assess
@@ -258,12 +258,12 @@ If there is no matching course in Cloud Assess then the script will do nothing.
 Of course you can modify the script to suit your own specific needs.
 Remember that the name of the integration here must match the name given within the script.
 
-image:images/cloudaccess_prefs.png[ Cloud Access integration preferences,scaledwidth=70.0%]
+image::images/cloudaccess_prefs.png[ Cloud Access integration preferences,scaledwidth=70.0%]
 
 Once these preferences have been defined you will need to enable the Cloud Access script to automate the process.
 This script can be found by going to Automation, double clicking on 'cloudassess course enrolment create' then click on the 'Enabled' check box and save.
 
-image:images/cloudaccess_script.png[ Cloud Access script,scaledwidth=70.0%]
+image::images/cloudaccess_script.png[ Cloud Access script,scaledwidth=70.0%]
 
 [[externalintegrations-canvas]]
 ==== Canvas
@@ -274,7 +274,7 @@ There is quite a bit of setup work for this integration, so ensure you are follo
 
 It's recommended that before you begin this integration, you get in touch with us via Support first.
 
-image:images/canvas_integration.png[ Canvas Integration window,scaledwidth=100.0%]
+image::images/canvas_integration.png[ Canvas Integration window]
 
 To use the onCourse integration with Canvas, you will first need to have set up a developer key in Canvas itself.
 You can find instructions on how to do this here -
@@ -332,7 +332,7 @@ To use this integration, you'll need to have your own Micropower instance.
 Each field in the integration window should map directly to a similarly named field in your Micropower system.
 Copy each field from your Micropower system into the corresponding field within onCourse, and ensure you activate the Micropower integration script in the Scripts section of the Automation window.
 
-image:images/mpower.png[ Micropower Integration window,scaledwidth=100.0%]
+image::images/mpower.png[ Micropower Integration window]
 
 [[externalintegrations-USI]]
 ==== USI
@@ -341,7 +341,7 @@ This integration connects your onCourse system to the USI Agency so that onCours
 This section will detail how you can activate this integration.
 If you wish to learn more about the basics of how the USI functions in onCourse, you can read more in our dedicated <<usi, USI chapter>> here.
 
-image:images/usi_integration.png[ USI Agency Integration window,scaledwidth=100.0%]
+image::images/usi_integration.png[ USI Agency Integration window]
 
 Follow the below steps to activate the integration:
 
@@ -377,13 +377,13 @@ Confirm this.
 . The entry you just added should now diplay as "Active".
 It should look like the screenshot below.
 
-image:images/usi-active-status-ram.png[ At the end of the process,scaledwidth=100.0%]
+image::images/usi-active-status-ram.png[ At the end of the process]
 
 ==== VET Student Loans
 
 This integration feeds data from onCourse directly into the HEIMS data collection system (sometimes called TCSI).
 
-image:images/tcsi_integration.png[ USI Agency Integration window,scaledwidth=100.0%]
+image::images/tcsi_integration.png[ USI Agency Integration window]
 
 ==== Google Classroom
 
@@ -393,7 +393,7 @@ Instant.
 Paperless.
 Easy.
 
-image:images/google_integration.png[ Google Classroom Integration window,scaledwidth=100.0%]
+image::images/google_integration.png[ Google Classroom Integration window]
 
 To create a new Google Classrooms integration you'll require a Google client id, and a client secret.
 Once you have both of these from Google, Follow the next steps:

@@ -74,7 +74,7 @@ You can select to have this administrative fee deposited into the income account
 By default, the income account associated with the enrolment income line will be selected.
 Any GST component will be credited to the GST account.
 
-image:images/cancel_enrolment.png[ Cancelling an enrolment and charging a cancellation fee,scaledwidth=100.0%]
+image::images/cancel_enrolment.png[ Cancelling an enrolment and charging a cancellation fee]
 
 ==== Cancelling an enrolment paid for by a voucher
 
@@ -88,7 +88,7 @@ In the example below, the enrolment fee of $264 was paid for partially by a vouc
 
 When the enrolment is cancelled and the credit note created, I could then purchase another $200 voucher for the student with the credit note, leaving them with $64 in general credit, that could either be used towards another enrolment or refunded.
 
-image:images/enrolment_cancellation_with_voucher.png[ Cancelling an enrolment that was partially paid for with a voucher,scaledwidth=100.0%]
+image::images/enrolment_cancellation_with_voucher.png[ Cancelling an enrolment that was partially paid for with a voucher]
 
 [[transferringEnrolments]]
 === Transferring an enrolment
@@ -109,13 +109,13 @@ You also have the ability to do the following things related to the invoice or i
 You can only transfer one enrolment at a time.
 ====
 
-image:images/transferring_enrolment.png[ Transferring an enrolment,scaledwidth=90.0%]
+image::images/transferring_enrolment.png[ Transferring an enrolment,scaledwidth=90.0%]
 
 Once you have checked what you need to and pressed 'Proceed', a pre-populated checkout window will then open with the student's and payer's contact details along with the course from the 'transferred' enrolment.
 Select a new class, then ensure the correct credit note is being applied to the new enrolment in the Payments section by clicking on the 'previous credit'.
 If a credit note was created for the transfer and it is being applied then the payment method should appear as 'No Payment'.
 
-image:images/transfer_enrolment_QE.png[ Transferring an enrolment in checkout,scaledwidth=80.0%]
+image::images/transfer_enrolment_QE.png[ Transferring an enrolment in checkout,scaledwidth=80.0%]
 
 [[cancellingEnrolments-creditNote]]
 === Creating a manual credit note
@@ -145,7 +145,7 @@ This will also make the invoice show in the class budget tab.
 . Ensure the balance of the new invoice/credit note is as you expect before choosing save.
 You can not edit the invoice/credit note after saving it.
 
-image:images/reversed_invoice_for_credit.png[ Creating a credit note by duplicating and reversing the values of the original invoice,scaledwidth=100.0%]
+image::images/reversed_invoice_for_credit.png[ Creating a credit note by duplicating and reversing the values of the original invoice]
 
 
 . Begin by opening the Invoice window.
@@ -160,7 +160,7 @@ Ensure if you are creating a credit note that the value has a minus sign in fron
 You will now see in the list view window an unbalanced invoice for a negative amount.
 This is the credit note.
 
-image:images/Manual_credit_note.png[ Creating a manual credit note,scaledwidth=100.0%]
+image::images/Manual_credit_note.png[ Creating a manual credit note]
 
 [[cancellingEnrolments-Discounts]]
 === Manual discounts after enrolment
@@ -183,7 +183,7 @@ The next time the contact enrols, or pays for another student's enrolment, they 
 This information will show in the Payments section of the checkout window next to previous owing as a minus amount.
 The amount due for payment will automatically adjust.
 
-image:images/credit_note_qe.png[ A student enrolling in a class with a credit note of $132 automatically applied to their balance,scaledwidth=80.0%]
+image::images/credit_note_qe.png[ A student enrolling in a class with a credit note of $132 automatically applied to their balance,scaledwidth=80.0%]
 
 [[cancellingEnrolments-paymentReversals]]
 === Payment reversals within the payment in window
@@ -205,14 +205,14 @@ Your payment in is now ready to reverse via the following steps:
 . The banking deposit window will show both halves of the reversal.
 You should bank them together so they balance each other out.
 
-image:images/payment_in_reverse_payment.png[ View of the payments in window when trying to reverse a payment,scaledwidth=100.0%]
+image::images/payment_in_reverse_payment.png[ View of the payments in window when trying to reverse a payment]
 
 [TIP]
 ====
 Only 1 payment In item can be reversed at one time and the date of reversal will be set as today's date
 ====
 
-image:images/payment_in_reverse_payment_confirmation.png[ Confirmation window that pops up when trying to reverse a payment,scaledwidth=100.0%]
+image::images/payment_in_reverse_payment_confirmation.png[ Confirmation window that pops up when trying to reverse a payment]
 
 [[cancellingEnrolments-PaymentOut]]
 === Refunding a student via Payment Out
@@ -240,9 +240,9 @@ The refund amount must be less than or equal to the amount in the credit note se
 . Hit Save to process the refund.
 If there is an error, or if the bank declines the refund for whatever reason, you'll be notified via an error message.
 
-image:images/apply_payment_out_from_invoice.png[ Selecting a credit note to process a payment out against,scaledwidth=100.0%]
+image::images/apply_payment_out_from_invoice.png[ Selecting a credit note to process a payment out against]
 
-image:images/payment_out_via_credit_card.png[ Selecting the credit card transaction to be refunded from the drop down list,scaledwidth=100.0%]
+image::images/payment_out_via_credit_card.png[ Selecting the credit card transaction to be refunded from the drop down list]
 
 ==== A few notes on onCourse credit card reversals
 
@@ -263,7 +263,7 @@ For example, if two $100 enrolments we paid for in separate credit card transact
 {empty}3. If the credit card you are attempting to refund has been cancelled by it's owner, or expired, the attempt to refund it will fail.
 You will need to contact the student and arrange an alternate refund method.
 
-image:images/accounts_paymentout.png[ Creating a payment out record for a refund processed,scaledwidth=100.0%]
+image::images/accounts_paymentout.png[ Creating a payment out record for a refund processed]
 
 [[cancellingEnrolments-cancellingAClass]]
 === Cancelling a Class
@@ -285,7 +285,7 @@ This will notify you how many credit notes will be created.
 . Send credit note email (ticked by default) - this sends the credit note details created by the first step to each payer of the enrolment, advising them of the credit they now have available to use towards another enrolment, or request to be refunded.
 . Create credit notes to reverse invoices manually (ticked by default) - if you have manually created and linked additional invoices to the class, these will also be reversed
 
-image:images/cancel_class.png[ Options available when cancelling a class,scaledwidth=80.0%]
+image::images/cancel_class.png[ Options available when cancelling a class,scaledwidth=80.0%]
 
 Once a class is cancelled it will appear greyed out the class list view, and be available in the core filter 'cancelled classes'.
 Cancelled classes that were visible on the web will be removed.
@@ -312,7 +312,7 @@ If you adjust the wording of any of the email templates, be sure to adjust the p
 The student notification email can also be sent manually from the enrolment window.
 Highlight the enrolments you wish to send the message to and choose send email from template > Class cancellation from the cogwheel options.
 
-image:images/class_cancellation_email_template.png[ Default email template sent to students when their class is cancelled,scaledwidth=80.0%]
+image::images/class_cancellation_email_template.png[ Default email template sent to students when their class is cancelled,scaledwidth=80.0%]
 
 ==== Reporting on cancelled classes
 
@@ -327,7 +327,7 @@ Once you have selected the classes, click the Share button > PDF > Cancelled cla
 
 This report will show you the enrolments that were in the class prior to the cancellation and the income that had been collected.
 
-image:images/cancelled_classes_report.png[ An example report showing the potentially lost income and displeased students resulting from cancelled classes,scaledwidth=80.0%]
+image::images/cancelled_classes_report.png[ An example report showing the potentially lost income and displeased students resulting from cancelled classes,scaledwidth=80.0%]
 
 [[cancellingEnrolments-Transfers]]
 === Student Transfer Questions

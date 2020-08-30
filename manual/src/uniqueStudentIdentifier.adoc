@@ -44,7 +44,7 @@ The USI does not need to be captured at the time of enrolment, but typically you
 
 Some students will not be able to navigate the USI portal to obtain their own USI, in which case you are able to do this on their behalf within the VET section of their contact record, just click the cogwheel next to the USI field then select 'Create a USI...'
 
-image:images/usi/create_a_usi.png[ When there is no USI supplied,you can click on the link to open a web portal and create a new USI.,scaledwidth=100.0%]
+image::images/usi/create_a_usi.png[ When there is no USI supplied,you can click on the link to open a web portal and create a new USI.]
 
 Clicking on this link will open a web portal where you can complete the student details and identity document information.
 You will need to declare that you have obtained permission from the student to complete this process on their behalf.
@@ -57,7 +57,7 @@ When you create a new student or update an existing one, you can type the USI di
 This can also be done directly within the checkout process.
 The USI will be checked for validity (it is the correct length and matches a checksum) and then verified against the USI agency.
 
-image:images/usi/invalid_usi.png[ What you will see if the USI has not been entered correctly. This USI is invalid as it doesn't meet the character length and checksum. It can't be validated and the record can't be saved.,scaledwidth=100.0%]
+image::images/usi/invalid_usi.png[ What you will see if the USI has not been entered correctly. This USI is invalid as it doesn't meet the character length and checksum. It can't be validated and the record can't be saved.]
 
 If you have completed the steps to set up the USI Integration successfully, then the USI validation system in onCourse will be enabled.
 
@@ -66,13 +66,13 @@ The validation process is checking that the student's first name, last name, dat
 
 If it succeeds the USI will be marked as verified with a green pill next to the USI field and the student's first name, last name and date of birth will become locked.
 
-image:images/usi/verified_usi.png[ This USI has passed verification and the record has been locked.,scaledwidth=100.0%]
+image::images/usi/verified_usi.png[ This USI has passed verification and the record has been locked.]
 
 If the one of the fields do not match e.g. the student's first name in onCourse is a shortened version of their legal name, then the USI verification process will fail.
 Hovering over the information icon next to the USI field label will show the reason why the verification process failed.
 You can update the non-matching data in onCourse and the verification process will run again, automatically, when you change one of the first name, last name, date of birth or USI field's data.
 
-image:images/usi/usi_verification_failed.png[ This USI has failed verification. The data can be corrected and the verification attempted again.,scaledwidth=100.0%]
+image::images/usi/usi_verification_failed.png[ This USI has failed verification. The data can be corrected and the verification attempted again.]
 
 ==== Editing a locked student record
 
@@ -86,7 +86,7 @@ In the VET section of the contact, click the cogwheel next to the USI field and 
 This will empty the student's USI field and unlock their first name, last name and birth date fields.
 Once updated you'll need to re-enter the student's USI number for validation.
 
-image:images/usi/usi_edit_sheet.png[ Click the cogwheel next to the USI field,then select Update USI to update an already verified contact's details,scaledwidth=100.0%]
+image::images/usi/usi_edit_sheet.png[ Click the cogwheel next to the USI field,then select Update USI to update an already verified contact's details]
 
 [[usi-selfService]]
 === Student self-service
@@ -100,9 +100,9 @@ You can modify these templates or alter the script which determines when and how
 Note that students are only sent this email if they are enrolled in a VET flagged class, to avoid bothering your students engaging in non-VET training, however by default VET flagged courses without qualifications or units will also trigger this email as they are usually reported via AVETMISS for funding arrangements.
 You may wish to alter the scripts to only send the email when the course has a qualification record attached.
 
-image:images/usi/usi_email.png[ An example of a confirmation email with USI information,scaledwidth=100.0%]
+image::images/usi/usi_email.png[ An example of a confirmation email with USI information]
 
-image:images/usi/usi_followup_email.png[ An example of a USI reminder email.,scaledwidth=100.0%]
+image::images/usi/usi_followup_email.png[ An example of a USI reminder email.]
 
 Once the student gets the email requesting their USI, they will be able to click on a link which takes them directly to a page within the skillsOnCourse portal.
 They will not require a password and the link will be valid for 7 days from the email being sent.
@@ -124,7 +124,7 @@ This allows you, if desired, to collect minimal information during the online en
 In the example below, the student is required to complete some mandatory fields such as their street address and country of birth, plus some options contact details such as home phone numbers.
 Previously supplied contact details like email address and mobile phone number are not displayed.
 
-image:images/usi/usi_mobile_start.png[ Step 1: This is the screen the students will arrive at. Fields will only be shown if data isn't already supplied.,scaledwidth=100.0%]
+image::images/usi/usi_mobile_start.png[ Step 1: This is the screen the students will arrive at. Fields will only be shown if data isn't already supplied.]
 
 ==== Step 2: AVETMISS questions
 
@@ -134,7 +134,7 @@ Responses to these questions are not mandatory but may be important for verifica
 For each VET enrolment the student has in progress, they will be asked to complete a 'reason for study' question.
 Some students may have this question once, for a single enrolment, where other students enrolled in multiple programs.
 
-image:images/usi/usi_portal_step2.png[ Step 2: The student completes the AVETMISS questions.,scaledwidth=100.0%]
+image::images/usi/usi_portal_step2.png[ Step 2: The student completes the AVETMISS questions.]
 
 ==== Step 3: USI
 
@@ -143,13 +143,13 @@ If the student doesn't have, or know, their USI, they can click on the link to v
 
 On clicking next, the student's USI and contact details will be verified with the USI Agency.
 
-image:images/usi/usi_enter_in_portal.png[ Step 3: Provide your USI,scaledwidth=100.0%]
+image::images/usi/usi_enter_in_portal.png[ Step 3: Provide your USI]
 
-image:images/usi/usi_mobile_verifying.png[ Step 3 in progress: While the USI is being verified they will see this window.,scaledwidth=100.0%]
+image::images/usi/usi_mobile_verifying.png[ Step 3 in progress: While the USI is being verified they will see this window.]
 
 If the USI agency reports back that the student's name is wrong (for example, they enrolled in onCourse with their maiden name but their USI is issued in their married name) then onCourse will give them the opportunity to fix this.
 
-image:images/usi/usi_student_name_mismatch.png[ Step 3 failed: The student's name doesn't match the USI Registry data. They have the opportunity to correct the data in onCourse.,scaledwidth=100.0%]
+image::images/usi/usi_student_name_mismatch.png[ Step 3 failed: The student's name doesn't match the USI Registry data. They have the opportunity to correct the data in onCourse.]
 
 === USI Exemption Process
 
@@ -165,17 +165,17 @@ To set a USI exemption in a student's contact record:
 . Click the cogwheel option next to the USI field
 . Select the exemption type that applies
 +
-image:images/usi/usi_set_special_status.png[image,scaledwidth=100.0%]
+image::images/usi/usi_set_special_status.png[image]
 . The record will update to inset the exemption code and marked the student's record as verified.
 This will allow you to print Certification.
 +
-image:images/usi/usi_INTOFF.png[image,scaledwidth=100.0%]
+image::images/usi/usi_INTOFF.png[image]
 +
-image:images/usi/usi_INDIV.png[image,scaledwidth=100.0%]
+image::images/usi/usi_INDIV.png[image]
 
 Should a student's exemption status later change, the cogwheel can also be used to remove the special USI status, so an actual USI value can be entered and verified.
 
-image:images/usi/usi_remove_special_status.png[image,scaledwidth=100.0%]
+image::images/usi/usi_remove_special_status.png[image]
 
 [[usi-certificatePrinting]]
 === Certificate printing and the USI
@@ -190,13 +190,13 @@ By default, all non admin users do not have permission to print certificates for
 
 All admin users will see the warnings if a student doesn't have a USI or verified USI, however they will be able to proceed to print for all certificates if they choose.
 
-image:images/usi/usi_cert_print_warn.png[ This is a warning only. You can still proceed by selecting print.,scaledwidth=100.0%]
+image::images/usi/usi_cert_print_warn.png[ This is a warning only. You can still proceed by selecting print.]
 
 All access roles have two optional levels of access - print certificate without verified USI (this means the student has supplied a USI that meets the checksum requirements, but for whatever reason it hasn't passed verification with the USI Registry System) and a higher level of permission, print certificate without USI.
 
 We do not recommend that you allow staff permission to print certificates without verified USIs.
 
-image:images/usi/usi_certificate_print_permissions.png[ This access role does not have permission to print certificates without a verified USI.,scaledwidth=100.0%]
+image::images/usi/usi_certificate_print_permissions.png[ This access role does not have permission to print certificates without a verified USI.]
 
 [[usi-FAQs]]
 === USI FAQ

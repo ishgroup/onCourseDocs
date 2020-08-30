@@ -11,7 +11,7 @@ This chapter outlines the advanced configuration options for access control, use
 The below example has been completed with Windows Server 2003 R2 SP2 and onCourse 1.7.13. onCourse has the ability to use an external LDAP/AD server for authentication and authorisation, what we mean by this is that you do not need to use the onCourse user and group database but you can use your already setup AD database.
 Firstly on your Windows Server 2003 Machine go to "My Computer" right click and select "Properties" and you will find the following screen.
 
-image:images/Windows_2003_system_properties.png[image,scaledwidth=100.0%]
+image::images/Windows_2003_system_properties.png[image]
 
 Please take careful note of the "Full Computer Name" and the "Domain" as with this information you now have the building blocks for our configuration.
 
@@ -23,7 +23,7 @@ So now we enter "Active Directory Users and Computers" and create our user: and 
 Now we have everything we need!
 Complete the setup screen as follows:
 
-image:images/onCourse_LDAP_AD_screen_setup.png[image,scaledwidth=100.0%]
+image::images/onCourse_LDAP_AD_screen_setup.png[image]
 
 Once you have substituted all of the settings as necessary press the "Test Connection" button to ensure that onCourse can bind to the LDAP server.
 Once that works, you can then go to the "Users" section of this configuration page and place "sAMAccountName" and (objectClass=user) for the search filter.
@@ -51,7 +51,7 @@ When you have created those groups in AD add the necessary users who belong to e
 
 We can then turn it on the onCourse preferences under LDAP/Authorisation and Roles and set it up the same as the following picture:
 
-image:images/LDAP_AD_authorisation_settings.png[image,scaledwidth=100.0%]
+image::images/LDAP_AD_authorisation_settings.png[image]
 
 That is all for Windows Server AD/LDAP authentication and authorisation!
 good luck!
@@ -195,4 +195,4 @@ Edit, create or delete logs do not show any additional information in the edit v
 You can also access the audit logs for a particular record by using the 'find related' feature from any list view.
 For example, you can select a class and find the related audit logs for that one particular class, or from the user account record, all audit logs for one particular user.
 
-image:images/audit_log_list_view.png[ The list view of the audit logs,scaledwidth=100.0%]
+image::images/audit_log_list_view.png[ The list view of the audit logs]

@@ -18,18 +18,18 @@ An existing or new invoice can be converted to a payment plan by adding payment 
 This can be done by firstly either creating a new invoice as mentioned in the section above 'Creating a manual invoice' just stopping before you click on 'Save', or opening an existing invoice.
 Then click on the '+' symbol at the top right side of the payment plans / payments table for as many different payment due dates you want to add.
 
-image:images/invoice_add_payment_plans.png[ Manually adding payment plan lines to an invoice,scaledwidth=100.0%]
+image::images/invoice_add_payment_plans.png[ Manually adding payment plan lines to an invoice]
 
 Once this has been done you can then start editing these payment plan lines starting with the dates you want the payments to be due.
 This is done by double clicking on one of the 'today' payment due date fields in the table and changing it to a date that you want the payment to be due by.
 Then do the same for the other payment due date fields until they are all setup correctly.
 
-image:images/invoice_edit_payment_due_lines.png[ Editing the date for each of the payment due lines,scaledwidth=100.0%]
+image::images/invoice_edit_payment_due_lines.png[ Editing the date for each of the payment due lines]
 
 Then lastly change the amounts that are due on each of these dates from $0 to your chosen amount.
 This is also done by double clicking on the relevant field in the table and editing the fee amount.
 
-image:images/invoice_adding_payment_plans.png[ Invoice with manually added payment due dates and amounts,scaledwidth=100.0%]
+image::images/invoice_adding_payment_plans.png[ Invoice with manually added payment due dates and amounts]
 
 It is important that the total of the payment plan amounts equals the amount owing; you will not be able to save the invoice unless they match.
 The 'Overdue' column in the Invoices list view will show the total unpaid component of the invoice that is due prior to tomorrow.
@@ -57,7 +57,7 @@ Click the + next to Payment Plan to add an additional payment after the enrolmen
 You can set this amount and the number of days after the class starts that the payment is due.
 When adding payment plans, ensure that the amounts you're adding add up to the full, expected amount of the enrolment fee.
 
-image:images/Class_payment_plan.png[ Creating a payment plan in a class,scaledwidth=100.0%]
+image::images/Class_payment_plan.png[ Creating a payment plan in a class]
 
 [[batchpayments-QE]]
 ==== Checkout
@@ -69,19 +69,19 @@ If, at the time of enrolment, the next payment dates have already passed those a
 So, let's take an example class with a $1000 deposit and $500 due 7 days before the start of class.
 A student enrolling 10 days before the class starts will be charged $1000 and a student enrolling 5 days before class starts will be charged $1500.
 
-image:images/Payment_plan_invoices.png[ Payment plan invoices in Checkout for a class that starts on 16th September 2020,scaledwidth=70.0%]
+image::images/Payment_plan_invoices.png[ Payment plan invoices in Checkout for a class that starts on 16th September 2020,scaledwidth=70.0%]
 
 ==== Online enrolments
 
 If a payment plan applies to the class, we suggest you make some note of it in the class web tab, so a potential student enrolling via the web can see what amount is payable and when.
 The full class fee will still display in the class block when a payment plan applies.
 
-image:images/payment_plan_class_block.png[ Payment plan detail explained in the class web info,scaledwidth=100.0%]
+image::images/payment_plan_class_block.png[ Payment plan detail explained in the class web info]
 
 When the student completes the enrolment process, the 'pay now' component will be reduced to the deposit payable.
 The invoice the student receives on completion of the enrolment process will itemise the remaining payment components and their due dates.
 
-image:images/payment_plan_pay_now.png[ Pay now reduced to the applicable payment plan deposit,scaledwidth=100.0%]
+image::images/payment_plan_pay_now.png[ Pay now reduced to the applicable payment plan deposit]
 
 [[batchpayments-script]]
 ==== Automating payment plans with scripts
@@ -96,21 +96,21 @@ More sophisticated payment plan scripts can create different plans depending on 
 When a student is on a payment plan, you may wish to enable the default system script 'send payment plan reminder' so the debtor is automatically emailed a reminder 7 days before their payment is due a link to make the payment via the skillsOnCourse portal.
 You can enable this from the top menu by going to Automation > Scripts, then double-click on the script 'send payment plan reminder', click on the checkbox 'Enabled' in the top right side of the window, then Save.
 
-image:images/payment_plan_script.png[ 'send payment plan reminder' script,scaledwidth=100.0%]
+image::images/payment_plan_script.png[ 'send payment plan reminder' script]
 
 This default reminder will also send overdue notices to any debtor who has an invoice (on a payment plan or otherwise) where the payment is overdue.
 
 This script will trigger the email template 'Payment reminder' which can be edited by going to the Automation window and clicking into the Message Templates section.
 Look for the 'Payment Reminder' template in the section that expands open and click it.
 
-image:images/payment_plan_email_template.png[ 'Payment reminder' message template,scaledwidth=100.0%]
+image::images/payment_plan_email_template.png[ 'Payment reminder' message template]
 
 [[batchpayments-storedCards]]
 === Stored Cards
 
 If a contact makes a payment via the Checkout with a credit card, you can tick the Store Card checkbox and it will store their card details for use to process future payments.
 
-image:images/store_card.png[ Click 'Store Card' to store the card for later use,scaledwidth=100.0%]
+image::images/store_card.png[ Click 'Store Card' to store the card for later use]
 
 Card information is shown in the Financial section of the contact record.
 If you wish to delete the stored card data, it can be done so by clicking the Delete button next to the data in the contact record.
@@ -130,21 +130,21 @@ If you don't wish to process a particular payment, you can untick the invoice an
 You can also open any particular contact in Checkout and apply an individual payment in that way.
 Just hover your mouse over the contact name and click 'Open in Checkout'.
 
-image:images/batch_payments.png[ The Batch Payments In window showing 14 payments overdue,scaledwidth=100.0%]
+image::images/batch_payments.png[ The Batch Payments In window showing 14 payments overdue]
 
 When you click on an owed payment, the selection will expand to show more details of which invoices are included for each contact.
 
 You can click on an invoice to remove it from the payment and it will uncheck.
 Any checked item will have a payment attempted once you click 'Process Payments'.
 
-image:images/batch_payments_detail.png[ This contact owes money on two invoices,but only one will have a payment attempted on it,scaledwidth=100.0%]
+image::images/batch_payments_detail.png[ This contact owes money on two invoices,but only one will have a payment attempted on it]
 
 When the process is running, each payment will take its turn one-by-one to process.
 You'll see a smaill processing symbol appear, and when the process is either duccessfull or failed, the icon will change.
 
-image:images/batch_payment_running.png[ While running,each payment will display a 'processing' icon,scaledwidth=100.0%]
+image::images/batch_payment_running.png[ While running,each payment will display a 'processing' icon]
 
 Whether a payment is successful or failed, it will show an icon at the end of the process indicating which payments were successful and which ones failed.
 If you want to run another attempt, refresh the window.
 
-image:images/batch_payments_results.png[ The results after processing 6 payments; 1 failed,5 successful,scaledwidth=100.0%]
+image::images/batch_payments_results.png[ The results after processing 6 payments; 1 failed,5 successful]

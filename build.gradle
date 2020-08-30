@@ -29,7 +29,7 @@ subprojects {
 
     asciidoctor {
         logDocuments true
-        baseDir "${projectDir}/src"
+        baseDir "src"
         sourceDir baseDir
         sources {
             include 'index.adoc'
@@ -46,7 +46,7 @@ subprojects {
                     'icons': 'font',
                     'docinfo': 'shared',
                     'docinfodir': "${rootDir}/src",
-                    'stylesheet': development == "false" ? "${documentPath}/${project.name}/css/oncourse.css" : './css/oncourse.css',
+                    'stylesheet': 'css/oncourse.css',
                     'revnumber': project.version,
                     'revdate': LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy"))
         resources {

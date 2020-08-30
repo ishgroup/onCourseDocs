@@ -59,6 +59,12 @@ subprojects {
                 include 'images/**'
             }
         }
+
+        doLast {
+            ant.replaceregexp(match: 'img', replace: 'img loading="lazy"', flags: 'g') {
+                fileset(dir: "${buildDir}/html", includes: '*.html')
+            }
+        }
     }
 
     distributions {

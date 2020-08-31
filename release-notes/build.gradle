@@ -115,37 +115,37 @@ class ReleaseNotes extends DefaultTask {
     def output = "= Release ${version}" + "\n"
     output += new Date().format('d MMM yyyy') + "\n"
     output += "\n"
-    output += "==Important changes" + "\n"
+    output += "== Important changes" + "\n"
     output += "\n"
 
-    output += "==Major features" + "\n"
+    output += "== Major features" + "\n"
     output += "\n"
 
-    output += "==Reports and scripts" + "\n"
+    output += "== Reports and scripts" + "\n"
     issues_reports.each { issue ->
       output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
     }
     output += "\n"
 
-    output += "==Minor features" + "\n"
+    output += "== Minor features" + "\n"
     issues_angel.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
       output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
     }
     output += "\n"
 
-    output += "==Fixes" + "\n"
+    output += "== Fixes" + "\n"
     issues_angel.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
       output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
     }
     output += "\n"
 
-    output += "==Web" + "\n"
+    output += "== Web" + "\n"
     issues_web.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
       output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
     }
     output += "\n"
 
-    output += "==Web fixes" + "\n"
+    output += "== Web fixes" + "\n"
     issues_web.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
       output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
     }

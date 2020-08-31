@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	// $('.book #header > #toc').prepend("<gcse:search></gcse:search>");
   $('body').addClass('page-loaded');
 
   $('#header').before('\
@@ -37,7 +36,7 @@ $(document).ready(function() {
     var sidebarToc = $('.sidebar-toc');
     if (mainContainer && sidebarToc && sidebarToc[0].offsetHeight > 0) {
       var mainContainer_offsetTop = mainContainer[0].offsetTop;
-      
+
       if (scrollTop > mainContainer_offsetTop) {
         $('body').addClass('affix-toc-sidebar');
       } else {
@@ -70,12 +69,6 @@ $(document).ready(function() {
     });
   }
 
-
-  // need to wait until Google draws the search box
-	window.setTimeout(function() {
-  		$('input.gsc-input').attr('placeholder', 'search...');
-	} , 1000);
-
 });
 
 function readCookie(name) {
@@ -88,15 +81,3 @@ function readCookie(name) {
   }
   return null;
 }
-
-// Custom search
-  (function() {
-    const cx = '012973152760557279116:_k5mgzmdgpo';
-    const gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol === 'https:' ? 'https:' : 'http:') +
-        '//cse.google.com/cse.js?cx=' + cx;
-    const s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();

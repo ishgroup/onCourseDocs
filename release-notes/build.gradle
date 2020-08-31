@@ -13,14 +13,15 @@ buildscript {
 }
 
 asciidoctor {
-  baseDir "${projectDir}/build/processed"
+  baseDir "build/processed"
   sourceDir baseDir
   sources {
     include '**/*.adoc'
   }
   attributes 'toc': null,
           'revnumber': null,
-          'revdate': null
+          'revdate': null,
+          'stylesheet': '../css/oncourse.css'
 }
 
 task createIndex(type: Copy) {

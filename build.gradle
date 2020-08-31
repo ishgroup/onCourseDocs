@@ -61,7 +61,7 @@ subprojects {
         }
 
         doLast {
-            ant.replaceregexp(match: 'img', replace: 'img loading="lazy"', flags: 'g') {
+            ant.replaceregexp(match: 'img src', replace: 'img src="images/placeholder.png" class="lazy" data-src', flags: 'g') {
                 fileset(dir: "${buildDir}/html", includes: '*.html')
             }
         }

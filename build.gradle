@@ -47,7 +47,7 @@ subprojects {
                     'docinfo': 'shared',
                     'docinfodir': "${rootDir}/src",
                     'stylesheet': 'css/oncourse.css',
-                    'revnumber': project.version,
+                    'revnumber': null,
                     'revdate': LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy"))
         resources {
             from(sourceDir) {

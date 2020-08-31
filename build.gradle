@@ -112,18 +112,29 @@ subprojects {
         // both ImageMagick and optipng need to be installed
         doLast {
             fileTree("src").matching{ include '**/*.png' }.each{ f ->
-                new ByteArrayOutputStream().withStream { resolution ->
+                BigDecimal resolution=0, width=0
+                new ByteArrayOutputStream().withStream { output ->
                     exec {
                         commandLine = 'magick'
-                        standardOutput = resolution
+                        standardOutput = output
                         args = ['identify', '-format', '%x', f.absolutePath]
                     }
-                    if (resolution?.toString()?.isInteger() && resolution.toString() as Integer != 72) {
-                        logger.warn('Found image {} which has resolution {}. Resizing now.', f.absolutePath, resolution.toString())
-                        exec {
-                            commandLine = 'convert'
-                            args = [f.absolutePath, '-strip', '-units' ,'PixelsPerInch', '-resample', '72', f.absolutePath]
-                        }
+                    resolution = output.toString() as BigDecimal
+                }
+                new ByteArrayOutputStream().withStream { output ->
+                    exec {
+                        commandLine = 'magick'
+                        standardOutput = output
+                        args = ['identify', '-format', '%w', f.absolutePath]
+                    }
+                    width = output.toString() as BigDecimal
+                }
+
+                if (resolution != 72 || width > 900) {
+                    logger.warn('Found image {} which has resolution {} and width {}. Rescaling now.', f.absolutePath, resolution, width)
+                    exec {
+                        commandLine = 'convert'
+                        args = [f.absolutePath, '-strip', '-units' ,'PixelsPerInch', '-density', '72', '-resize', '900>', f.absolutePath]
                     }
                 }
                 exec {

@@ -17,7 +17,7 @@ $(document).ready(function() {
   $('body #content').wrap('<div id="main-container" class="clearfix container" />');
 
   var toc = $('#header #toc');
-  if (toc) {
+  if (toc.length) {
     $('#main-container').append('<div class="sidebar-toc"><div id="toc" class="toc2">' + toc.clone().html() + '</div> </div>');
   }
 
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
     var mainContainer = $('#main-container');
     var sidebarToc = $('.sidebar-toc');
-    if (mainContainer && sidebarToc && sidebarToc[0].offsetHeight > 0) {
+    if (mainContainer && sidebarToc.length && sidebarToc[0].offsetHeight > 0) {
       var mainContainer_offsetTop = mainContainer[0].offsetTop;
 
       if (scrollTop > mainContainer_offsetTop) {

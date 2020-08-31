@@ -1,29 +1,28 @@
 = Release 39
 31 Aug. 2020
 
+For this latest release we've focused on a few bug fixes, building a couple of new integrations, and an update to the Portal Checkout so that it now uses the same Checkout as your website. We've also put some work into Google Analytics, fixing an issue where multi-student enrolments could show the wrong quantity and wrong dollar amount, and adding a new GA event that fires when the 'Enrol Now' button is rendered on screen.
+
 == Major features
-* Convert all manuals to asciidoc `OD-14839`
-* Learndash integration `OD-14885`
-* TalentLMS integration `OD-14941`
+* Converted all manuals to asciidoc `OD-14839`
+* Added a new Learndash integration `OD-14885`
+* Added a new TalentLMS integration `OD-14941`
+* Fixed a possible issue with multi-student enrolments in Google Analytics `OD-13030`
 
 == Reports and scripts
 * script: ecoach-enrol updated to new style `OD-14375`
 
 == Minor features
-* Make CorporatePass common component for all Products `OD-13097`
-* Make adding payroll in class easier to understand `OD-14183`
+* Made CorporatePass common component for all Products `OD-13097`
+* Made adding payroll in class easier to understand `OD-14183`
 
 == Fixes
-* Add form errors auto scroll on Data collection forms form `OD-14834`
 * Cannot Search for and Locate Existing Documents to re-attach to Contact `OD-14945`
-* Error when exporting AVETMISS `OD-14954`
-* TypeError in /preferences/customFields `OD-14956`
-* Export AVETMISS 8 not creating NAT00030A file when expected `OD-14960`
-* Viewing audit records of a script should show audit records for that script entity `OD-14966`
-* Tag input glitch on classes edit view `OD-14973`
-* Smart & Skilled Export error `OD-14976`
+* Fixed an error that stopped Export AVETMISS 8 from creating NAT00030A file when expected `OD-14960`
+* Viewing audit records for a script will now only show audit records for that script entity, instead of all scripts `OD-14966`
+* Fixed a Smart & Skilled Export error that could stop the export from running after it had already been running for long periods of time `OD-14976`
 
 == Web
 
-== Web fixes
+* Credit Card payments made in the Portal now use the same Checkout UI as on the website
 

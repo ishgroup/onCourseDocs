@@ -410,31 +410,42 @@ button next to the Integrations heading
 
 image::images/talentlms_integration.png[title='TalentLMS Integration window']
 
-This is a simple integration that uses a script to iterate through different course modules and creates a separate enrolment in TalentLMS for each unit in their TalentLMS system.
+TalentLMS is a cloud-based learning management system that provides an online tool to deliver your course materials.
 
-Enter your TalentLMS URL into 'Base url' and, your TalentLMS API key into 'API key'. Additionally, for this integration to work it's very important you keep your courses in onCourse, and your courses in TalentLMS in sync. The integration doesn't replicate courses from onCourse to TalentLMS, and will fail if the script cannot find a course in TalentLMS.
+Enter your TalentLMS URL into 'Base url' and your TalentLMS API key into 'API key'. Once you save the integration a new script block will be available for use. The standard script looks just like this:
 
-Your courses in TalentLMS must use the following naming convention - [courseCode][classCode][moduleNationalCode]. For example, if your Course Code is ENG101, the class code is 43, and the module code is BELLRN201, then your course in TalentLMS should be named ENG10143BELLRN201.
+```
+talentLMS {
+    action 'enrol'
+    course record.courseClass.course.code
+    student record.student
+}
+```
 
-The integration will create a user in TalentLMS if they don't already exist. The details will be:
+By default, the course in TalentLMS should be named with the onCourse course code for this integration to work. Of course, you can modify this script to use any value, for example the course-class code or even the unit of competency code.
 
-* login = email
-* password = random password, 8 characters in length
-* type = Learner-Type
+When creating new students in TalentLMS, they will be created with their email address as the login, type "Learner-Type" and a random password. Students can reset their password in TalentLMS. By default TalentLMS will typically send a welcome email.
 
-On student enrolment, a new student to TalentLMS will receive a confirmation email from them.
 
 ==== LearnDash
 
 image::images/learndash_integration.png[title='LearnDash Integration window']
 
-This integration will push enrolments created in onCourse into LearnDash courses.
+LearnDash is a learning management system plugin for Wordpress websites only. It can provide an online space for you to deliver your course materials to students.
 
-LearnDash is an LMS plugin for Wordpress websites. For this integration to work, you must have installed on your Wordpress site the 'Application Password' Wordpress plugin, then adjust the .htaccess config file (see https://github.com/WordPress/application-passwords/wiki/Basic-Authorization-Header----Missing for exact instructions).
+For this integration to work, you must have installed on your Wordpress site the 'Application Password' Wordpress plugin, then adjust the .htaccess config file (see the following link https://github.com/WordPress/application-passwords/wiki/Basic-Authorization-Header----Missing for exact instructions).
 
-Generate a password for any admin user though be aware that this is the user information you will enter in the integration window. Also enter your site URL in to the 'Base url' field and click Save.
+After this is set up, generate a password for the admin user; this is the user whose information you will enter in the integration window. Go to the integration window and enter your site URL in to the 'Base url' field, the user login for the admin user into the 'User login' field, and the password you created into the 'User password' field, and click Save. The standard script will look like:
 
-You will need to keep your courses in onCourse and LearnDash in sync by ensuring that the course slug in LearnDash and the course code in onCourse are exactly the same. If onCourse can't find the course in LearnDash by matching its course code with the LearnDash course slug, the integration will do nothing.
+```
+learndash {
+    action 'enrol'
+    course record.courseClass.course.code
+    student record.student
+}
+```
+
+onCourse needs to match against the course slug in LearnDash. By default, it uses the onCourse Course Code to do this, but you can alter this to something else if you wish. In its default configuration, you need ensure that the Course Code in onCourse and the course slug in LearnDash match.
 
 === Other Integrations
 

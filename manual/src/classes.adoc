@@ -5,26 +5,21 @@
 === onCourse Terms and Definitions
 
 Course::
-A course is the training product delivered by your organisation.
-For example: Computers for Beginners, Advanced Jewellery Making or MYOB for Professionals.
-A course can be given any course code to identify that course uniquely.
+A course is the training product delivered by your organisation. For example: Computers for Beginners, Advanced Jewellery Making or MYOB for Professionals. A course can be given any course code to identify that course uniquely.
 Class::
 A class is the instance of a course run at a particular time and date, led by one or more tutors and with a group of students enrolled.
 Classes may meet for one or more sessions depending on the subject outline and timetable.
 Timetable::
-Each class has a timetable which represents each meeting between the students and the tutor(s).
-The timetable can link to rooms and sites and each session in the timetable has the flexibility to be allocated to a different tutor or a different room.
+Each class has a timetable which represents each meeting between the students and the tutor(s). The timetable can link to rooms and sites and each session in the timetable has the flexibility to be allocated to a different tutor or a different room.
 Students::
 A student is a person enrolled in a class.
 
 [[classes-workingWith]]
 === Working with Classes
 
-All records in onCourse can be viewed in either a list view or record view.
-You need to open the list view to access individual records.
+All records in onCourse can be viewed in either a list view or record view. You need to open the list view to access individual records.
 
-To access the class records go to the Dashboard and search for Classes.
-Click the result to view the Classes list view.
+To access the class records go to the Dashboard and search for Classes. Click the result to view the Classes list view.
 
 You can enter a class record by double clicking on it in the window.
 
@@ -35,34 +30,25 @@ image::images/class_list_view.png[title='The full class list view']
 
 ==== Cogwheel icon
 
-image::images/cog.png[title='The cog wheel - used to perform special actions to selected classes']
+image::images/cog.png[title='The cogwheel - used to perform special actions to selected classes']
 
-On the classes list view you will see a cog wheel icon on the right hand side of the window.
-If you highlight one or more classes in the list and then click on the cog wheel, a drop down list will appear offering a range of different options.
-Some of these functions are only available through the cog wheel, while others are options that you can set in an individual class, but though the cog wheel can set for a group of classes.
+On the classes list view you will see a cogwheel icon on the right-hand side of the window. If you highlight one or more classes in the list and then click on the cog wheel, a drop down list will appear offering a range of different options. Some of these functions are only available through the cog wheel, while others are options that you can set in an individual class, but though the cog wheel can set for a group of classes.
 
-* *Send message to students from x class* - This option allows you to send email and/or sms, or postal messages to students enrolled in the selected class or classes.
-You might use this option to let all the students enrolled in classes with a particular tutor know that their tutor is sick and classes this week are cancelled.
-* *Send message to tutors from x class* - You can contact the tutor from one or more classes using this options.
-You might use it to notify all tutors who are teaching this term of a staff meeting.
-* *Duplicate x class* - To create another instance of an existing class, the duplicate function will save you the effort of setting all the information again.
-Need to offer another class in a fortnight?
-Duplicate the class and move it forward by 14 days.
-You can also move a whole term of classes forward to the next term in one action.
-When duplicating a class with a payment plan, the payment plan structure is duplicated across as well.
+Execute script:: This option allows you to execute any script that is listed in the Classes entity.
+Send message:: This opens the Send Message window, allowing you to send an SMS or Email to students and/or tutors. Select a template from the list to populate your message, or type one of your own using the simple templates.
+Create certificates:: For VET classes, this will create Statements of Attainment or Qualifications for all eligible students.
+For all other classes, this option will create a Certificate of Attendance for all enrolled students.
+Duplicate x class:: To create another instance of an existing class, the duplicate function will save you the effort of setting all the information again. Need to offer another class in a fortnight? Duplicate the class and move it forward by 14 days. You can also move a whole term of classes forward to the next term in one action. When duplicating a class with a payment plan, the payment plan structure is duplicated across as well.
 +
 These options are saved separately for each user, so the next time you have to duplicate a class the previous selections you made should be saved and carry over.
 +
 image::images/duplicating_a_class.png[title='Duplicating a class']
-* *Cancel class* - If a class is not viable, you can use this cogwheel function to cancel it and create credit notes for all the enrolled students.
-Students can't enrol in cancelled classes.
-* *AVETMISS export* - Exporting AVETMISS from the classes window allows you to export the data for one or more classes for a funding submission.
-A whole term or year's worth of data can be exported from the Export window.
-* *Create certificates* - For VET classes, this will create Statements of Attainment or Qualifications for all eligible students.
-For all other classes, this option will create a Certificate of Attendance for all enrolled students.
-* *Generate payslips for x class* - Use this option to create payslips for a selected group of classes.
-* *Show class on website* - You can add classes in bulk to your onCourse website with this option, instead of doing it one at a time in the individual class window.
-* *Remove class from website* - Use this option to remove classes in bulk from your onCourse website.
+
+Cancel class:: If a class is not viable, you can use this cogwheel function to cancel it and create credit notes for all the enrolled students. Students can't enrol in cancelled classes.
+Generate tutor pay:: Use this option to create payslips for a selected group of classes.
+AVETMISS 8 export:: Exporting AVETMISS from the classes window allows you to export the data for one or more classes for a funding submission. A whole term or year's worth of data can be exported from the Export window.
+Bulk edit:: Allows you to make select bulk edits to the selected classes. You can enable enrolments, enable the class as visible online, and add and remove tags in bulk.
+Delete record:: Use this option to delete a class record entirely. You can only delete one class at a time. Deleted classes cannot be recovered. You cannot delete classes that are currently live.
 
 [[classes-recordTabs]]
 === Class Record View
@@ -74,63 +60,72 @@ This is a summary section where you can edit the Class Code, apply tags and cont
 
 You can click any of the heading in the right-hand column to be taken to that section of the record instantly.
 
-You can select from the following options:
+In General you have the following options:
 
-* Enrolments Allowed - If turned on, enrolments will be enabled for this class
+Restrictions:: You can set the minimum and maximum ages for enrolment on a per class basis here.
+Enrolments Allowed:: If turned on, enrolments will be enabled for this class within onCourse.
+Visible Online:: When turned on, enrolments can be taken for this class on your website.
+Message for operator:: Any text put here will display as a red box warning in the Checkout when this record is attached to it. This is a good way to let other users in your organisation learn any must-know details for this contact.
+Custom fields:: Any custom fields you create for Classes will be displayed in General. You enter the data for these fields here.
 
-As well as all this, the general section has a handy summary above the status drop down list:
-
-* Timetable Summary - including number of sessions, start and end dates (if applicable), Site and Room information
-* Budget Summary - including Class fee which can be adjusted via the edit link to amend the fee amount.
-* Discounts fee rates applicable to this Class
-* Indicative information on number of enrolments required to meet the Class running costs
-* Tutor Summary - listing all teaching staff assigned to the Class
-* Tags - any class specific tags that have been attached to this record
-* Message alert for operator - important information you wish to share with your fellow onCourse users about this class e.g. 'remind enrolling students there is no class on the Queen's Birthday long weekend'.
-The copy entered here will appear in red text inside QuickEnrol when this class is selected for enrolment.
-This information is not published to the web.
-
-This overview and these calculations are designed to show you at a glance if the class is financially viable based on the budget expenses and current enrolment numbers.
-
-You can also set minimum and maximum enrolment ages for the class in this window.
-These restrictions apply only for enrolment in this particular instance of the class, and will prevent students without a date of birth from enrolling in this class, as well as preventing students who don't meet the age requirements from enrolling.
+[NOTE]
+====
+Restrictions apply only for enrolment in this particular instance of the class, and will prevent students without a date of birth from enrolling in this class, as well as preventing students who don't meet the age requirements from enrolling.
+====
 
 image::images/class_general_tab.png[title='Example of content within the Class/General section']
+
+[[classes-Web]]
+==== Web
+
+You can add class specific web information to this section to appear on the public website, and in the student and tutor portals for this class.
+
+Most advertising information will come from the course record's marketing section. Content added to the class web section will appear in the class display box with the heading: Important information. *It is recommended that you only use this field for limited content*, like 'Funding available for existing workers' or 'This class is assessment only for RPL/RCC candidates'.
+
+image::images/website_class_description.png[title='Example of content in the class Web section displayed within the class summary']
+
+[[classes-VET]]
+==== VET
+
+This section relates to RTOs. Default data for AVETMISS reporting and VET Fee Help funding source information can be set here for the whole class group, and modified on a student by student basis via their enrolment or outcome records as needed. You can also suppress all data related to this class, including its enrolments and outcomes from reporting by choosing the 'Do not report for AVETMISS' switch.
+
+Please note some of these reporting fields are state specific. This is indicated in the field label. The default values of the 'Delivery mode' and 'Funding source national' can be set in the general preferences AVETMISS section.
+
+The Qualification and nominal hours shown here are based on the values set for the qualification and units attached to the parent course. A summary of the classroom hours (from the timetabled sessions) and student contact hours (nominal hours multiplied by the number of students enrolled) is also displayed.
+
+You can override the hours reported for this class by editing the reportable hours field. It will default to reporting the nominal hours, or the classroom hours if no nominal hours have been supplied. The reportable hours field allows you to enter numbers with decimal places, but this value will be rounded to the nearest whole number during the AVETMISS export process, as per the requirements of the standard.
+
+You can also set the class as eligible for VET Student Loans by ticking the checkbox. Learn more about VET Student Loan handling in onCourse in our <<FEEHELP, VET Student Loans & FEEHELP>> chapter.
+
+image::images/class_vet_tab.png[title='The class vet section,with the VET Fee Help fields displayed']
+
 
 [[classes-Tutor]]
 ==== Tutor
 
 This section allows you to add one or more current tutors to the class.
-If the tutor has an employment end date in the past, and is no longer and active employee you cannot select them in this section.
-You will need to go to their contact and remove the end date before you can add them to a class.
 
-Tutors roles can be selected, tutors can be confirmed and tutor payrates set.
-You can also choose if the tutor is to be published as part of the class promotional material, either online or in a printed format.
-Select the "Show this tutor in class information" checkbox to have the tutor appear on your onCourse website linked to the class and in any exports or reports you run.
+Tutors roles must be selected, tutors can be confirmed and tutor pay rates are set by clicking 'Add Pay' when adding a new tutor, or 'Edit Pay' if they're already added. You can also choose if the tutor is to be published as part of the class promotional material online by checking the 'Make tutor visible on web site' checkbox.
+
+[NOTE]
+====
+If the tutor has an employment end date in the past (set in the Tutor section of their contact record), they will not appear in the search results list. You will need to go to their contact and remove the end date before you can add them to a class.
+====
 
 If you show you tutors in your onCourse website, this also allows their associated profile picture, resume/bio and links to other classes they are teaching to be displayed.
 
-Tutor roles are defined in the onCourse preferences > Tutor roles.
-This is where you can name the roles specific to your organisation and set the default pay rates that apply to a tutor of this role type.
-More information about this feature can be found in <<payroll>>.
-You can override the payrate that applies for this particular instance of the class where needed, while keeping the relationship to the original tutor role name.
+Tutor roles are defined in the onCourse Preferences window, under Tutor roles. This is where you can name the roles specific to your organisation and set the default pay rates that apply to a tutor of this role type. More information about this feature can be found in <<payroll>>. You can override the pay rate that applies for this particular instance of the class where needed, while keeping the relationship to the original tutor role name.
 
 Tutors can use their skillsOnCourse portal to confirm their availability to teach the class, or you can manually set the date they confirm in their tutor record.
 
-If you select the option 'Add the selected tutor to all class sessions' the tutor will be ticked against each session.
-This will create a payroll line for the tutor for that session.
-You can check and uncheck each tutor per session in the timetable section.
+Tutors must be set per session; you can have multiple tutors assigned to a class and have them teach alternating sessions, or have two or more for an individual session, for example if you have a guest speaker. You do this in the Timetable section.
 
 image::images/class_tutor_tab.png[title='Edit view of Tutor window to allow a Tutor to be assigned and tutor role to be set']
 
 [[classes-Budgets]]
 ==== Budget
 
-The budget feature is enabled with some paid onCourse support contracts.
-Check your college's support agreement to see if this feature has been enabled for your organisation.
-
-Class budgets allow users to add additional income, expense and wages lines to assist your program coordinators to determine the profitability of a class.
-In addition to the income collected from your current enrolments, you can predict the income and expenses you will incur for any projected number of enrolments.
+Class budgets allow users to add additional income, expense and wages lines to assist your program coordinators to determine the profitability of a class. In addition to the income collected from your current enrolments, you can predict the income and expenses you will incur for any projected number of enrolments.
 
 This function can be particularly useful for long term income planning.
 For example, if you are in a position to schedule your classes a year in advance, you can predict the income for each class based on the class budget.
@@ -276,36 +271,7 @@ Sessions not yet marked do not contribute to the overall calculation of attendan
 
 image::images/markedattendance.png[title='Students showing different attendance statuses and percentages']
 
-[[classes-VET]]
-==== VET
 
-This section relates to RTOs.
-AVETMISS reporting defaults and VET Fee Help funding source information can be set here for the whole class group, and modified on a student by student basis via their enrolment or outcome records as needed.
-You can also suppress all data related to this class, including its enrolments and outcomes from reporting by choosing the 'Do not report for AVETMISS' switch.
-
-Please note some of these reporting fields are state specific.
-This is indicated in the field label.
-The default values of the 'Delivery mode' and 'Funding source national' can be set in the general preferences AVETMISS section.
-
-The Qualification and nominal hours shown here are based on the values set for the qualification and units attached to the parent course.
-A summary of the classroom hours (from the timetabled sessions) and student contact hours (nominal hours multiplied by the number of students enrolled) is also displayed.
-
-You can override the hours reported for this class by editing the reportable hours field.
-It will default to reporting the nominal hours, or the classroom hours if no nominal hours have been supplied.
-The reportable hours field allows you to enter numbers with decimal places, but this value will be rounded to the nearest whole number during the AVETMISS export process, as per the requirements of the standard.
-
-image::images/class_vet_tab.png[title='The class vet section,with the VET Fee Help fields displayed']
-
-[[classes-Web]]
-==== Web
-
-You can add class specific web information to this section to appear on the public website, and in the student and tutor portals for this class.
-
-Most advertising information will come from the course record's marketing section.
-Content added to the class web section will appear in the class display box with the heading: Important information.
-It is recommended that you only use this field for limited content, like 'Funding available for existing workers' or 'This class is assessment only for RPL/RCC candidates'.
-
-image::images/website_class_description.png[title='Example of content in the class Web section displayed within the class summary']
 
 ==== Documents
 

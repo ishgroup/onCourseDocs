@@ -37,7 +37,7 @@ The username and password for the demo are:
 * username - demo
 * password - demo123
 
-==== Running onCourse from your browser
+==== Accessing onCourse from your browser
 
 . You'll be given the URL to access your college's instance of onCoruse on sign-up.
 It'll look like https://yourcollege.cloud.oncourse.cc.
@@ -58,28 +58,18 @@ On many screens you will see a help icon in the bottom left-hand corner - this w
 +
 image::images/dashboard_blog.jpg[title='If you make it to this screen you have logged in successfully. Well done!']
 
-==== Installing the standalone version of onCourse on your system
 
-onCourse is also available as an installed, standalone application, rather than the cloud version you access via a browser URL.
+== Installing the standalone version of onCourse
+
+onCourse is also available as an installed, standalone application, rather than the cloud version hosted by the vendor.
 
 In order to download and install the standalone application:
 
 * Go to https://www.ish.com.au/download
-* Scroll down to the onCourse Client, then click the version that matches the operating system you're running on your machine
-* For Windows:
-** Start the download, then run the installer.exe that downloads.
-When installation is complete, the icon should appear in your Start Menu.
-However, if you're having trouble finding it, you can also search for it in the search bar by searching the term 'onCourse'.
-* For Mac OSX:
-** Start the download, you can set it to save the file or open it from the location, it doesn't matter.
-When the download finishes, drag-and-drop the application file from the folder that opens on to the desktop.
-* When the application opens, you'll notice the log-in screen looks very similar to the browser URL version, with a couple of extra fields--Host and Port.
-If you have logged in to onCourse before using the browser URL version, these two fields should automatically populate themselves, so you shouldn't need to change anything within them.
-* If you notice a 'Server not available' error when you attempt login, it's likely there is something incorrect in one of these fields.
-Get in touch with us via our support channel, Squish, and we can check this for you.
+* Download onCourse Server. There is one application bundle which will work on OSX, Windows, Linux and Unix platforms.
+* Install and set up MariaDB 10.3 or higher on your system. Consult their docs to see how to do that. mySQL and postgresql should also work but we only test MariaDB for every release.
+* Make sure you have Java 11 or newer installed. We typically use the AdoptOpenJDK distribution here, but any distribution should work OK.
+* Edit onCourse.yml to suit your setup and database
+* Run onCourse using either the `bin/server.bat` Windows script file or `bin/server` for all other platforms.
 
-==== Troubleshooting login
-
-If you're experiencing username or password issues when logging in, you can ask an admin user at your college to reset your password.
-If you experience any other kind of error, or cannot reach the log in page for some reason (that isn't related to your own internet connection) then please https://squish.ish.com.au/servicedesk/customer/portal/4[contact
-ish support].
+Once it is running, you should be able to connect with your browser and login with username "admin", password "admin".

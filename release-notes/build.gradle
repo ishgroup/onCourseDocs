@@ -13,10 +13,9 @@ buildscript {
 }
 
 asciidoctor {
-  baseDir "build/processed"
-  sourceDir baseDir
   sources {
-    include '**/*.adoc'
+    include '**/release-notes.adoc'
+    exclude 'index.adoc'
   }
   attributes 'toc': null,
           'revnumber': null,
@@ -24,7 +23,7 @@ asciidoctor {
           'stylesheet': '../css/oncourse.css'
 }
 
-task createIndex(type: Copy) {
+task buildIndex(type: Copy) {
   def versions = file('src').listFiles().collect{it.name}.findAll{ it[0].isNumber() }
   versions.sort() { a, b ->
 
@@ -47,17 +46,37 @@ task createIndex(type: Copy) {
   from "src/index.adoc"
   into "${buildDir}/processed"
   filter(ReplaceTokens,tokens: [
-          versions: versions.reverse().collect { "* link:./${it}[Release ${it}]" }.join('\n'),
+          versions: versions.reverse().collect { "* link:./${it}/release-notes.html[Release ${it}]" }.join('\n'),
   ])
 }
-asciidoctor.dependsOn createIndex
 
-task mergeImages(type: Copy) {
-    from fileTree(dir: 'src', include: '**/images/*').files
-    into "${buildDir}/html/images"
-    includeEmptyDirs = false
+task outputIndex(type: org.asciidoctor.gradle.jvm.AsciidoctorTask, dependsOn: buildIndex) {
+  doFirst {
+    copy {
+      from "${rootDir}/src"
+      include "css/oncourse.css"
+      into "${buildDir}/processed"
+    }
+  }
+  baseDir "${buildDir}/processed"
+  sourceDir baseDir
+  sources {
+    include 'index.adoc'
+  }
+  outputDir "${buildDir}/html"
+  asciidoctorj {
+    attributes 'stylesheet': 'css/oncourse.css'
+  }
 }
-asciidoctor.dependsOn mergeImages
+asciidoctor.dependsOn outputIndex
+
+asciidoctor.doLast {
+  copy {
+    from "src"
+    into "${buildDir}/html"
+    exclude '**/*.adoc'
+  }
+}
 
 // Run the following task to create new release notes from squish
 // ./gradlew release-notes:releaseNotes -PreleaseVersion=1.1

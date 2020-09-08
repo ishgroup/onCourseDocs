@@ -49,10 +49,12 @@ task buildIndex(type: Copy) {
     verA.size() <=> verB.size()
   }
 
+  // convert the list of versions into map with version and release date
+  Map versionWithDate = versions.reverse().collectEntries { v -> [ v, getReleaseDate(v)] }
   from "src/index.adoc"
   into "${buildDir}/processed"
   filter(ReplaceTokens,tokens: [
-          versions: versions.reverse().collect { "* link:./${it}/release-notes.html[Release ${it}]" }.join('\n'),
+          versions: versionWithDate.collect { v, releaseDate -> "* link:./${v}/release-notes.html[Release ${v}] ${releaseDate}" }.join('\n'),
   ])
 }
 
@@ -184,5 +186,13 @@ class ReleaseNotes extends DefaultTask {
     output += "\n"
 
     return output
+  }
+}
+
+String getReleaseDate(version) {
+  def releaseDate
+  project.file("src/${version}/release-notes.adoc").withReader { reader ->
+    reader.readLine() // skip first line
+    releaseDate = reader.readLine()
   }
 }

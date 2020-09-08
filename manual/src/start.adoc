@@ -71,6 +71,8 @@ In order to download and install the standalone application:
 * Make sure you have Java 11 or newer installed. We typically use the AdoptOpenJDK distribution here, but any distribution should work OK.
 * Edit onCourse.yml to suit your setup and database
 
+=== onCourse.yml
+
 By default onCourse.yml looks like this:
 
 ```
@@ -93,23 +95,38 @@ The database connection is fairly self obvious. The mariadb JDBC driver should w
 
 Finally the license section allows you to limit concurrent users and force the admin password to be reset on next startup.
 
-Then you'll need to create a certificate for your browser to connect to onCourse with. For testing you can use a self-signed certificate, but in production you'll definitely need a properly signed certificate for your domain. First create a PEM formatted certificate and key pair named "onCourseSSL.pem", complete with all intermediate certificates. There are plenty of resources online to help you do that. Then:
+=== SSL Certificate
+
+Then you'll need to create a certificate for your browser to connect to onCourse with. For testing you can use a self-signed certificate, but in production you'll definitely need a properly signed certificate for your domain. First create a PEM formatted certificate and key pair named "onCourseSSL.pem", complete with all intermediate certificates.
 
 ```
-# openssl pkcs12 -export -out onCourseSSL.pkcs12 -in onCourseSSL.pem -password pass:ish2008
-
-# keytool -v -importkeystore -srckeystore onCourseSSL.pkcs12 -srcstoretype PKCS12 -destkeystore onCourseSSL.keystore -deststoretype PKCS12 -srcstorepass ish2008 -deststorepass ish2008 -noprompt"
+# openssl genrsa -aes256 -out onCourseSSL.key 4096
 ```
-You'll need to install the `openssl` application to run the first command. `keytool` comes bundled with the Java JDK. The final result is a file called onCourseSSL.keystore in the same directory as onCourse.yml.
 
-* Run onCourse using either the `bin/server.bat` Windows script file or `bin/server` for all other platforms.
+Enter any password at the prompt.
 
+```
+# openssl req -new -x509 -key onCourseSSL.key -out onCourseSSL.pem -days 825
+```
 
-Once it is running, you should be able to connect with your browser and login with username "admin", password "admin".
+Answer all the questions. The Common Name should be the fully qualified domain name of the onCourse Server you are deploying. At this point you should get this key signed by Let's Encrypt or another certifying authority. Then continue conerting the certificate and key to pkcs12 and then to a keystore:
+
+```
+# openssl pkcs12 -export -out onCourseSSL.pkcs12 -in onCourseSSL.pem -inkey onCourseSSL.key -password pass:ish2008
+
+# keytool -v -importkeystore -srckeystore onCourseSSL.pkcs12 -srcstoretype PKCS12 -destkeystore onCourseSSL.keystore -deststoretype PKCS12 -srcstorepass ish2008 -deststorepass ish2008 -noprompt
+```
+`keytool` comes bundled with the Java JDK. The final result is a file called onCourseSSL.keystore which you should put in the same directory as onCourse.yml.
+
+=== Launching server
+
+Run onCourse using either the `bin/server.bat` Windows script file or `bin/server` for all other platforms.
+
+Once it is running, you should be able to connect with your browser. Make sure you use https, any special port you've chosen and your browser will need to support HTTP/2. Login with username "admin", password "admin".
 
 
 [[advancedSetup-serverMemory]]
-=== Server Memory Allocation
+=== Memory allocation
 
 Edit the value of `DEFAULT_JVM_OPTS` in the bin/server or bin/server.bat. The parameter `-Xmx` specifies the largest amount of heap memory allocated to the application. Java will allocate a bit more than this for compiling code and running the JVM itself. It is very important that you don't allocate more memory than the machine actually has available or else everything will run incredibly slowly as the operating system swaps to disk.
 
@@ -118,3 +135,5 @@ More memory generally helps onCourse run faster.
 === Log files
 
 onCourse will create a `logSetup.xml` file in the same directory as `onCourse.yml` when it starts up. This is a standard log4j2 configuration file and you have full access to all the configuration of how logs are output, rolled over and the logging levels.
+
+By default logs are output to a folder called 'logs' in the same directory as the application.

@@ -1,8 +1,6 @@
 [[advancedSetup]]
 == Advanced Setup and Configuration
 
-This chapter outlines the advanced configuration options for access control, users and groups, using external databases and server memory allocation.
-
 [[advancedSetup-accessControl]]
 === Controlling User Access (authorisation)
 
@@ -43,114 +41,8 @@ We can then turn it on the onCourse preferences under LDAP/Authorisation and Rol
 
 image::images/LDAP_AD_authorisation_settings.png[]
 
-That is all for Windows Server AD/LDAP authentication and authorisation. Good luck!
-
-[[advancedSetup-serverconfigurationfile]]
-=== Server configuration file
-
-Sometimes the onCourse server defaults aren't perfect for your office. Ports may be blocked, another server might already be set up. We've added the ability to specify useful parameters in a configuration file that onCourse Server will check on startup.
-
-Create a text file called with the name 'onCourse.cfg' and place in the same folder as the onCourse Server executable, whether that be running on Windows (.exe), OSX (.app) or Unix/Linux (.jar).
-
-The directives allowed in this file are:
-
-....
-        ip – specify which IP addresses to listen on. Repeat this line as many times as you require.
-        ssl_port – specify which port to listen on for SSL client connection.
-        db – specify and URI for your database.
-        max_concurrent_users - maximum number of users who can connect at once
-        client_server_compression_level - compression between client and server connection. 0 is off, 6 is default and 9 is the maximum compression setting. More compression uses more CPU at each end.
-
-....
-
-A sample onCourse.cfg might contain:
-
-....
-        port=0
-        ssl_port=8182
-        db=jdbc:mysql//db.example.com/onCourse
-        ip=192.168.0.1
-        ip=192.168.0.2
-        max_concurrent_users=10
-        client_server_compression_level=8
-
-....
-
-examples of URLs for internal Derby database (OS X, FreeBSD):
-
-....
-        db=jdbc:derby:/Users/admin/onCourse/
-        db=file:/Users/admin/onCourse/
-....
-
-examples of URLs for internal Derby database (Windows):
-
-....
-        db=jdbc:derby:/C:/onCourse/
-        db=file:/C:/onCourse/
-
-....
-
-[NOTE]
-====
-use 3 slashes after the protocol name 'file' in both cases, use /, not \ also under Windows, onCourse will replace all white spaces with '%20', If you use windows or there are white spaces in the URI path you must surround the URI with ".
-====
-
-[[advancedSetup-externalDatabase]]
-=== Using an external database
-
-In order to connect to external databases such as MySQL and MS SQL, onCourse Server needs to know where the external database lives.
-
-Starting the server with special arguments (in the cases of headless configurations commonly found on Unix-derivative systems such as FreeBSD, Linux and Solaris), or choosing the external database option through GUI when first starting onCourse Server.
-
-[NOTE]
-====
-Connecting to an external database is a paid for feature, you must contact us to enable it.
-====
-
-A valid URI contains the following information: host, e.g. 203.29.62.146 or delish.ish.com.au, port, e.g. 1376, 3306 or 1521, database name, e.g. onCourse, user name, e.g. oncourse, password, e.g. oncourse, every vendor has its own URI (URL) format which has to be used (remind quotations) MS SQL Server:
-
-....
-                  db=jdbc:jtds:sqlserver://<host>:<port>/<dbName>;user=username;password=password
-                  db=jdbc:jtds:sqlserver://203.29.62.146:1376/onCourse;user=oncourse;password=oncourse
-
-....
-
-MySQL:
-
-....
-                  db=jdbc:mysql://<host>:<port>/<dbname>?user=username&password=password
-                  db=jdbc:mysql://delish.ish.com.au:3306/onCourse?user=oncourse&password=oncourse
-
-....
-
-It is not necessary to specify a port if the default port is used.
-
-More information about URIs at: http://blogs.msdn.com/ie/archive/2006/12/06/file-uris-in-windows.aspx
-
-[[advancedSetup-serverMemory]]
-=== Server Memory Allocation
-
-In addition, you can specify a different memory utilisation for onCourse Server. onCourse Server will try to use all the memory you allocate to it, since it makes use of that memory for caching. Up to a certain point, adding more memory will help, but after that more memory will have no effect or even slow things down since the server has more work to do to manage all that cache. You will have to tune your settings according to your own needs, but the default will do fairly well for most installations.
-
-If you are running Linux or Unix, you will find the necessary settings in the startup script. On Windows you need to create a text file with the name onCourseServer.vmoptions or onCourseService.vmoptions. The name of this file before the dot must match exactly the name of your executable before the dot. In that file put this:
-
-....
--Xmx1500M
-....
-
-That will increase the cache to 1500 Mb for onCourse Server. About another 80Mb will be used by the application itself, so the total usage will be those two combined. On Windows 32bit, never go past 1.5Gb for onCourse because of limitations in Windows. A Unix or OSX 32bit environment will allow you to assign up 3.5Gb.
-
-The onCourseServer.log will report errors of java.lang.OutOfMemoryError if you have given the onCourse Server insufficient RAM for your usage requirements. Prior to this your end users may also detect processing errors, such as failing enrolments.
-
-Beyond what you have allocated to onCourse, make sure the server has sufficient RAM to run the operating system and other applications. It is very important the server doesn't swap memory to disk at any time or you will encounter major performance problems.
-
-In a 64bit operating system you can install more than 4Gb of RAM in the server memory. OS X users will be running 64bit by default. We recommend installing 64bit operating systems for all servers.
 
 [[advancedSetup-Help]]
-=== Log files
-
-The onCourse server application and the onCourse client application both create daily log files. The onCourse server log levels are set by the onCourse database manager inside the config file.
 
 === Audit Logging
 

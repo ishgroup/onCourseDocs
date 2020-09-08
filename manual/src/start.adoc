@@ -70,6 +70,17 @@ In order to download and install the standalone application:
 * Install and set up MariaDB 10.3 or higher on your system. Consult their docs to see how to do that. mySQL and postgresql should also work but we only test MariaDB for every release.
 * Make sure you have Java 11 or newer installed. We typically use the AdoptOpenJDK distribution here, but any distribution should work OK.
 * Edit onCourse.yml to suit your setup and database
+
+Then you'll need to create a certificate for your browser to connect to onCourse with. For testing you can use a self-signed certificate, but in production you'll definitely need a properly signed certificate for your domain. First create a PEM formatted certificate and key pair named "onCourseSSL.pem", complete with all intermediate certificates. There are plenty of resources online to help you do that. Then:
+
+```
+# openssl pkcs12 -export -out onCourseSSL.pkcs12 -in onCourseSSL.pem -password pass:ish2008
+
+# keytool -v -importkeystore -srckeystore onCourseSSL.pkcs12 -srcstoretype PKCS12 -destkeystore onCourseSSL.keystore -deststoretype PKCS12 -srcstorepass ish2008 -deststorepass ish2008 -noprompt"
+```
+You'll need to install the `openssl` application to run the first command. `keytool` comes bundled with the Java JDK.
+
 * Run onCourse using either the `bin/server.bat` Windows script file or `bin/server` for all other platforms.
+
 
 Once it is running, you should be able to connect with your browser and login with username "admin", password "admin".

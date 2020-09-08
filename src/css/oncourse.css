@@ -188,10 +188,13 @@ body {
 
 body.page-loaded #main-container #content {
     display: block;
+    padding-left: 0;
+    padding-right: 0;
 }
-
-body.page-loaded #main-container #content {
+body.page-loaded.toc2 #main-container #content {
     width: 100%;
+    padding-left: .9375em;
+    padding-right: .9375em;
 }
 
 body.page-loaded #main-container .sidebar-toc {
@@ -496,9 +499,11 @@ blockquote, blockquote p {
     h4 {
         font-size: 1.4375em
     }
-    body.page-loaded #main-container #content {
+    body.page-loaded.toc2 #main-container #content {
         width: calc(100% - 20em);
         float: left;
+        padding-left: .9375em;
+        padding-right: .9375em;
     }
 
     body.page-loaded #main-container .sidebar-toc {
@@ -2940,7 +2945,6 @@ td.gsc-input {
     position: relative;
     min-height: 50px;
     background-color: #fff;
-    display: none;
 }
 .navbar .navbar-header {
     float: left;

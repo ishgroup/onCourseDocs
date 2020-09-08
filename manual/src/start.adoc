@@ -66,10 +66,9 @@ onCourse is also available as an installed, standalone application, rather than 
 In order to download and install the standalone application:
 
 * Go to https://www.ish.com.au/download
-* Download onCourse Server. There is one application bundle which will work on OSX, Windows, Linux and Unix platforms.
-* Install and set up MariaDB 10.3 or higher on your system. Consult their docs to see how to do that. mySQL and postgresql should also work but we only test MariaDB for every release.
-* Make sure you have Java 11 or newer installed. We typically use the AdoptOpenJDK distribution here, but any distribution should work OK.
-* Edit onCourse.yml to suit your setup and database
+* Download onCourse Server. There is one application bundle which will work on OSX, Windows, Linux and Unix platforms. Unzip it to any suitable folder on your application server.
+* Install and set up MariaDB 10.3 or higher on your system. Consult their docs to see how to do that. MySQL, Amazon RDS, MS-SQL and Postgresql should also work but we only test MariaDB for every release. Install your database server, create a database and a user with full access rights to that database, including the ability to create schema.
+* Make sure you have Java 11 or newer installed on your onCourse Server operating system. We typically use the AdoptOpenJDK distribution here, but any distribution should work OK.
 
 === onCourse.yml
 
@@ -137,3 +136,7 @@ More memory generally helps onCourse run faster.
 onCourse will create a `logSetup.xml` file in the same directory as `onCourse.yml` when it starts up. This is a standard log4j2 configuration file and you have full access to all the configuration of how logs are output, rolled over and the logging levels.
 
 By default logs are output to a folder called 'logs' in the same directory as the application.
+
+=== Upgrading onCourse
+
+Shut down the server and replace all the application files. It is important to completely delete the old lib folder and remove old files; don't just keeping adding the new ones. Really the only file you need to keep between releases is onCourse.yml.

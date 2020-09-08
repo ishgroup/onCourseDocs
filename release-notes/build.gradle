@@ -17,7 +17,13 @@ asciidoctor {
     include '**/release-notes.adoc'
     exclude 'index.adoc'
   }
-  attributes 'toc': null,
+  options doctype: 'book'
+  attributes 'source-highlighter': 'coderay',
+          'linkcss': true,
+          'toc': null,
+          'icons': 'font',
+          'docinfo': 'shared',
+          'docinfodir': "${projectDir}/src",
           'revnumber': null,
           'revdate': null,
           'stylesheet': '../css/oncourse.css'
@@ -54,7 +60,7 @@ task outputIndex(type: org.asciidoctor.gradle.jvm.AsciidoctorTask, dependsOn: bu
   doFirst {
     copy {
       from "${rootDir}/src"
-      include "css/oncourse.css"
+      include "../css/oncourse.css"
       into "${buildDir}/processed"
     }
   }
@@ -64,8 +70,14 @@ task outputIndex(type: org.asciidoctor.gradle.jvm.AsciidoctorTask, dependsOn: bu
     include 'index.adoc'
   }
   outputDir "${buildDir}/html"
+  options doctype: 'book'
   asciidoctorj {
-    attributes 'stylesheet': 'css/oncourse.css'
+    attributes 'source-highlighter': 'coderay',
+              'linkcss': true,
+              'icons': 'font',
+              'docinfo': 'shared',
+              'docinfodir': "${rootDir}/src",
+              'stylesheet': './css/oncourse.css'
   }
 }
 asciidoctor.dependsOn outputIndex

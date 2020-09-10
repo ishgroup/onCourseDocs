@@ -9,11 +9,20 @@ Although we take care of many of the technical details, there is absolutely no s
 That is, if you don't spend the time to write words which will get you ranking, then you are doomed from the outset.
 But if you write course descriptions and tag descriptions which are both engaging to potential students and use the correct search terms that people will search for, you are well on your way to a successful website.
 
+[[seo-webmaster]]
+== Google search console
+
+https://search.google.com/search-console[Google search console] (previously called Google Webmaster tools) is a useful resource for to you review aspects of your website.
+Here you are able to see your site in the way Google sees it, understand how markup affects Google's schema parsing, and see which pages are indexed.
+Its also an important place to tell Google if you've changed domain names, ensuring your SEO isn't left behind on your old site.
+
+In order to log in, Google will give you an html file to upload to your site named something like `google4ddabfacdb4f6795.html`. Log into webDAV and put that file just inside the 's' folder, not inside any other folder. Publish your site for Google to be able to see this file.
+
 [[seo-tagmanager]]
 == Tag Manager
 
-Every site we build is created with Google Tag Manager integrated.
-This service drives the injection of javascript and tracking pixels or html into your site in really neat ways.
+Every site we build is created with Google Tag Manager integrated. This service drives the injection of javascript and tracking pixels or html into your site in really neat ways.
+
 In particular it allows:
 
 * Adding livechat systems to your site
@@ -26,34 +35,24 @@ In particular it allows:
 * Event tracking (such as add to shopping basket)
 
 When we build your site, we'll give you access to Google Tag Manager, set up some initial Analytics tags for you, and get you started.
-You can then build more tracking or hand over access to your SEO consultants.
-We will continue to need access to tag manager so that we can debug problems and update core code as needed.
+You can then build more tracking or hand over access to your SEO consultants. We will continue to need access to tag manager so that we can debug problems and update core code as needed.
 
 [[seo-analytics]]
 == Google analytics
 
-onCourse injects some additional data into your analytics beyond the standard page views:
+If you want to see how your site is performing, this is the tool for you. Typical analytics shows you page view, user demographics and much more, but onCourse injects even more data into your analytics:
 
 * Transactional sales dollars.
-Every sale through the website puts the dollar value into your Analytics.
-So not only can you see how many page views you got from that ad campaign, you can see the dollar value of the sales that generated.
-You'll discover that the two aren't always correlated.
-Do you care about ten thousand views from Facebook likes or the 200 real sales from a targeted campaign?
+Every sale through the website puts the dollar value into your Analytics. So not only can you see how many page views you got from that ad campaign, you can see the dollar value of the sales that generated. You'll discover that the two aren't always correlated. Do you care about ten thousand views from Facebook likes or the 200 real sales from a targeted campaign?
 This is how you can tell the difference.
 * Course and products.
-Drill down in your data to see where sales are coming from.
-Getting lots of language course sales from an ad you placed on a friendly site?
-Great, now you know what works and where to focus your time and money.
-* Events.
-Because we log "add to shopping basket" and other events, you'll be able to see who is engaging with your site but not following through to the end.
-* Checkout steps.
-You can track each step in the checkout process through a Google Analytics acquisition funnel.
-See where and why people are dropping off.
+Drill down in your data to see where sales are coming from. Getting lots of language course sales from an ad you placed on a friendly site? Great, now you know what works and where to focus your time and money.
+* Events. Because we log "add to shopping basket" and other events, you'll be able to see who is engaging with your site but not following through to the end.
+* Checkout steps. You can track each step in the checkout process through a Google Analytics acquisition funnel. See where and why people are dropping off.
 
 === Google Analytics Setup
 
 In order to get data into your Google Analytics account you'll need to complete the following steps:
-
 
 . Create a new https://analytics.google.com/analytics/web/[Google
 Analytics] account (or use an existing one).
@@ -183,17 +182,6 @@ dataLayer.push({
     },
   });
 ....
-
-[[seo-webmaster]]
-== Webmaster tools
-
-https://www.google.com/webmasters/tools[Google webmaster tools] is a useful resource for to you review aspects of your website.
-Here you are able to see your site in the way Google sees it, understand how markup affects Google's schema parsing, and see which pages are indexed.
-Its also an important place to tell Google that you've changed domain names, ensuring your SEO isn't left behind on your old site.
-
-In order to log in, Google will give you an html file to upload to your site.
-Just log into webDAV and put that file just inside the 's' folder.
-Publish your site for Google to be able to see this file.
 
 [[seo-sitemap]]
 == Sitemap

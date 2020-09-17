@@ -20,6 +20,12 @@ You can also build individual documentation projects with something like
 
     ./gradlew design:asciidoctor
 
+
+## Editing
+
+We recommend Intellij with the Asciidoc plugin installed to work on this documentation.
+
+
 ## Proprietary parts
 
 The artwork folder contains documents created using the Omnigraffle application which has been used to create most of the diagrams within the manuals. Ideally we'd like to migrate this to an open source tool.

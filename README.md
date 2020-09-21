@@ -26,6 +26,10 @@ You can also build individual documentation projects with something like
 We recommend Intellij with the Asciidoc plugin installed to work on this documentation.
 
 
+## License
+
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+
 ## Proprietary parts
 
 The artwork folder contains documents created using the Omnigraffle application which has been used to create most of the diagrams within the manuals. Ideally we'd like to migrate this to an open source tool.

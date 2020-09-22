@@ -275,9 +275,36 @@ image::images/usi-active-status-ram.png[title='At the end of the process']
 
 ==== VET Student Loans
 
-This integration feeds data from onCourse directly into the HEIMS data collection system (sometimes called TCSI).
+This integration feeds data from onCourse directly into TCSI. If you are authorised by the Commonwealth Government Department of Human Services to provide VET Student Loans to your students, you will need to enable the Integration for the purpose of reporting this data to the government.
 
 image::images/tcsi_integration.png[title='USI Agency Integration window']
+
+. Log into PRODA
++
+Go to https://proda.humanservices.gov.au/. Either log in or register for a new account. You'll need to ensure your organisation is listed here and you are authorised to make changes.
++
+. Link your organisation to the TCSI service.
++
+.. Select “Organisations” located in the top right of the screen.
+.. Select the organisation
+.. Expand the “Service Provider” dropdown, and click “Add Service Provider”.
+.. Select “Tertiary Collection of Student Information” and click the “Add Service Provider” button.
+
+. Create a B2B Device.
++
+.. Select “Organisations” located in the top right of the screen.
+.. Select your organisation from the list of organisations.
+.. Expand the “B2B Device” dropdown, and click “Register new B2B Device”.
+.. Enter "onCourse" as the device name and click “Register Device”.
+.. Device Activation Code, Device Name and PRODA RA (Organisation) number will display. Record these details.
+
+. Create onCourse integration.
++
+.. Log into onCourse with admin right and open the Integrations section of the Automation window.
+.. Add the "VET Student Loans" integration. You need to name the integration (orange bar at the top of the window) and enter the Device Name, Organisation ID (PRODA RA) and Device Activation Code into the fields provided.
+.. Save the integration. On clicking Save, the device activation process will begin automatically.
+
+. login to PRODA again and check the device is activated.
 
 ==== Google Classroom
 

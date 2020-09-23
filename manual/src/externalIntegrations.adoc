@@ -19,7 +19,10 @@ To add a Moodle integration you will need to click on the 'Add' button below the
 * *Service Name -* The name of your integration inside Moodle
 * *Only activate for enrolments in courses tagged with -* This defines which tag the script should look for when executing. All courses tagged with this tag will be included in the integration
 
-*IMPORTANT:* For this to work, courses to be integrated with Moodle are required to have a specific user-created tag associated with them that must be created separately in the Tags screen. <<tagging-creatingTags, You can see how to do that here>>. The bottom field 'Only activate for enrolments in courses tagged with' is where the name of this tag is defined, so you must make sure the name you put in here matches the name of the tag you created precisely.
+[IMPORTANT]
+====
+For this to work, courses to be integrated with Moodle are required to have a specific user-created tag associated with them that must be created separately in the Tags screen. <<tagging-creatingTags, You can see how to do that here>>. The bottom field 'Only activate for enrolments in courses tagged with' is where the name of this tag is defined, so you must make sure the name you put in here matches the name of the tag you created precisely.
+====
 
 image::images/moodle_prefs.png[title='Moodle integration preferences']
 
@@ -27,89 +30,58 @@ Once these preferences have been defined you will need to enable the 'moodle enr
 
 image::images/moodle_script.png[title='Moodle enrol script']
 
-==== Where to find the preferences in Moodle
+==== Set up Moodle
 
-Below are the steps that are needed to be done to enable the Moodle integration.
+Enable the integration in Moodle:
 
-. The Base URL is the site url (e.g. http://localhost:8888/moodle29/).
-. To create a user go to Site administration -> Users -> Accounts -> Add a new user
-
+. Create a user in `Site administration -> Users -> Accounts -> Add a new user`
++
 image::images/Moodle_1._Create_user.png[title='Creating a user']
-. To assign user to a role go to Site administration -> Users -> Permissions -> Assign system roles
-. To add a service go to Site administration -> Plugins -> Web services -> External services.
-When you are on the page click on 'Add' and fill in the Service Name and Short Name, then click on 'Add service'
-
-image::images/Moodle_3.1_External_Services_screen.png[title='External services screen']
-
-When you are on this page click on 'Add' and fill in the Service Name and Short Name, then click on 'Add service'
-
+. Assign user to a role in `Site administration -> Users -> Permissions -> Assign system roles`
+. Add a service in `Site administration -> Plugins -> Web services -> External services` and give it a name.
++
 image::images/Moodle_3.2_Create_Service.png[title='Adding the service']
-. Once the Service is created, click on 'Add functions'
-
+. Once the Service is created, click on `Add functions`
++
 image::images/Moodle_4.1_Functions_screen.png[title='Functions page']
-
-Add following functions: core_user_create_users, core_user_get_users, core_course_get_courses, enrol_manual_enrol_users
-
+. Add following functions: `core_user_create_users, core_user_get_users, core_course_get_courses, enrol_manual_enrol_users`
++
 image::images/Moodle_4.2_Add_Functions.png[title='Adding the functions to the service']
-. The next step is to generate the token, you can do this by going to Site administration -> Plugins -> Web services -> Manage tokens then click on 'Add'.
-
+. Generate a token in `Site administration -> Plugins -> Web services -> Manage tokens`
++
 image::images/Moodle_5.1_Token_screen.png[title='Manage tokens page']
-
-Then select the created user and service, and if needed Enable and Set 'Valid Until' date
-
+. Then select the created user and service.
++
 image::images/Moodle_5.2_Create_token.png[title='Create token page']
-. The last step is to create a course, you can do this by going to Site administration -> Courses -> Manage courses and categories, then Create new course.
-The ID should be the same as course code in onCourse.
+. The last step is to create a course, you can do this by going to `Site administration -> Courses -> Manage courses and categories`.
+
+The ID should be the same as course code in onCourse for the default integration script to work, although you can customise this in different ways.
 
 [[externalintegrations-mailchimp]]
 === MailChimp
 
 MailChimp is an online email marketing solution to manage contacts, send emails and track results.
 
+
+. Log into MailChimp and obtain an https://mailchimp.com/help/about-api-keys[API key] for your account. Go to `Account -> Extras -> API keys -> Create a key`
+. In MailChimp, find your https://mailchimp.com/help/find-audience-id/[Audience Id]. Go to the `Lists page > Settings`, and scroll to find the unique Audience ID field you want to subscribe your enrolling students to.
+. Add a https://demo.cloud.oncourse.cc/automation/integrations/new/mailchimp[new Mailchimp integration] in onCourse.
++
+image::images/mailchimp_prefs.png[title='MailChimp integration for a Mailing List integration']
++
+. Click the 'Add' button below the MailChimp icon. The name of the integration must be 'Enrolment'. Insert your API key and Audience ID from MailChimp, then save and close this window.
+
+
+Once the integration has been defined you will need to enable a MailChimp script to automate data flowing between the systems. Scripts can be found by going to the Automation window. Sample scripts are provided to enrol students on enrolment and to update marketing material settings in onCourse when they unsubscribe in Mailchimp.
+
 There are three types MailChimp integrations available in onCourse:
 
-. *mailchimp subscribe:* for onCourse mailing list subscription: This type of integration triggers when you manually attach a Mailing List tag an onCourse contact. You can create multiple mailing list tag groups in onCourse that integrate with multiple MailChimp lists.
-. *mailchimp unsubscribe:* onCourse mailing list unsubscription: This type of integration triggers when you manually remove a mailing list tag from a contact. This script should be enabled the script 'mailchimp subscribe'.
-. *mailchimp subscribe on enrolment:* This type of integration triggers when a contact enrols via onCourse or the web. You can only have one of these types of integrations to subscribe all enrolling students to a single MailChimp list. Your onCourse integration must be named "Enrolment" for this to work.
+mailchimp subscribe:: for onCourse mailing list subscription: This type of integration triggers when you manually attach a Mailing List tag an onCourse contact. You can create multiple mailing list tag groups in onCourse that integrate with multiple MailChimp lists.
+mailchimp unsubscribe:: onCourse mailing list unsubscription: This type of integration triggers when you manually remove a mailing list tag from a contact. This script should be enabled the script 'mailchimp subscribe'.
+mailchimp subscribe on enrolment:: This type of integration triggers when a contact enrols via onCourse or the web. You can only have one of these types of integrations to subscribe all enrolling students to a single MailChimp list. Your onCourse integration must be named "Enrolment" for this to work.
 
-==== Creating an onCourse mailing list integration
-
-The name of your onCourse mailing list tag and MailChimp integration must be the same for this to work. This integration will only add new subscribers to your mailing list to MailChimp, once enabled.
-
-. Log into MailChimp and obtain an API key for your account at https://mailchimp.com/help/about-api-keys/. Go to Account > Extras > API keys > Create a key (under Your API Keys header)
-. In MailChimp, find your the Audience Id at https://mailchimp.com/help/find-audience-id/. Go to the Audience page > Settings, and scroll to find the unique List ID field
-. In onCourse, go to Tags. Find the Tag Group named 'Mailing Lists', and double-click to open the Tag's window.
-. To create a new mailing list, click the green plus in the bottom left-hand corner. Name your tag, then click 'Save'
-. To add the MailChimp integration, go to Automation and click on the '+' button next to the heading integrations.
-. Click the 'Add' button below the MailChimp icon. _The name of the integration must be the same as the name of the onCourse mailing list_. Insert your API key and Audience (List) ID from MailChimp, then save and close this window.
-
-image::images/mailchimp_prefs.png[title='MailChimp integration for a Mailing List integration']
-
-. Once the integration has been defined you will need to enable the MailChimp scripts to automate the process.
-These scripts can be found in the Automation window.
-. Double click on the script called 'mailchimp subscribe', click on the checkbox 'Enabled' and save the script.
-. You should also enable the 'mailchimp unsubscribe', click on the checkbox 'Enabled' and save the script. Please note that if contacts unsubscribe to the MailChimp list directly, they will not be unsubscribed in the onCourse mailing list (they can unsubscribe to onCourse mailing lists via the portal, which does update MailChimp), but either way, they will not receive further emails from you via MailChimp.
-. To test this script is working as required, you can manually subscribe some contacts to your onCourse mailing list and check they have been added to the correct MailChimp list. To manually subscribe some contacts, open the contact window, highlight some records. Select the cogwheel, then click 'Bulk edit'. Selecy 'Add Tags', then add a mailing list tag. You can also tag an individual contact by opening their record and adding the tag manually.
-
-If you wish to add additional mailing list integrations, you can repeat steps 1 to 6 as needed, adding multiple mailing list integrations to onCourse. Once the scripts are enabled, you do not need to repeat steps 7 to 10 again.
 
 image::images/mailchimp_script.png[title='MailChimp mailing list subscribe script']
-
-==== Creating an 'on enrolment' integration
-
-This type of integration with MailChimp automatically subscribes on enrolment all contacts who have the permission 'accept email marketing material' on their contact record. You can only have on integration of this type in onCourse.
-
-
-. Log into MailChimp and obtain an API key for your account at http://kb.mailchimp.com/accounts/management/about-api-keys. Go to Account > Extras > API keys > Create a key
-. In MailChimp, find your the List Id at
-http://kb.mailchimp.com/lists/managing-subscribers/find-your-list-id. Go to the Lists page > Settings, and scroll to find the unique List ID field you want to subscribe your enrolling students to.
-. To add the MailChimp integration, go to Automation and click on the '+' button next to the Integrations heading.
-. Click the 'Add' button below the MailChimp icon. The name of the integration must be 'Enrolment'. Insert your API key and List and ID from MailChimp, then save and close this window.
-. Once the integration has been defined you will need to enable the MailChimp script to automate the process.
-This scripts can be found by going to the Automation window, under Scripts.
-. Double click on the script called 'mailchimp subscribe on enrolment', click on the checkbox 'Enabled' and save the script.
-+
-Note that there is no corresponding unsubscribe script for this integration - students can unsubscribe from this list directly via MailChimp after receiving an email from you.
 
 [[externalintegrations-surveymonkey]]
 === SurveyMonkey
@@ -127,7 +99,6 @@ image::images/surveymonkey_script.png[title='SurveyMonkey scripts']
 ==== Access Tokens and Creating a developer account
 
 Survey Monkey introduced access tokens as a means of integration in January 2017. All integrations created after that date will need to use access tokens. API Keys will not be used after this time. Existing integrations using an API key will continue to use the API key. To create an access token, you set up a developer account in SurveyMonkey and add onCourse as an App.
-
 
 . Go to SurveyMonkey.com and login using your regular login. If you do not have a login for SurveyMonkey you will need to create one.
 . Once logged in, got to the URL https://developer.surveymonkey.com. This will bring you to the developers area to set up your integration.

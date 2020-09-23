@@ -1,9 +1,6 @@
 [[externalintegrations]]
 == External Integrations
 
-[[externalintegrations-integrationsPrefs]]
-=== Integration Preferences
-
 onCourse allows you to create integration points with a number of popular commercial tools. These integrations allow you to create your own links to external services and products you have purchased, and define with a corresponding script how onCourse utilises these services.
 
 You can find all the current built in integrations by going to the Automation window. Then click on the '+' button next to the heading 'Integrations' to see all the integrations, as shown below.
@@ -11,7 +8,7 @@ You can find all the current built in integrations by going to the Automation wi
 image::images/integration_prefs.png[title='Integration preferences window']
 
 [[externalintegrations-moodle]]
-==== Moodle
+=== Moodle
 
 Moodle is a free, open-source PHP web application for producing modular internet-based courses that supports a modern social constructionist pedagogy.
 
@@ -30,42 +27,42 @@ Once these preferences have been defined you will need to enable the 'moodle enr
 
 image::images/moodle_script.png[title='Moodle enrol script']
 
-===== Where to find the preferences in Moodle
+==== Where to find the preferences in Moodle
 
 Below are the steps that are needed to be done to enable the Moodle integration.
 
 . The Base URL is the site url (e.g. http://localhost:8888/moodle29/).
 . To create a user go to Site administration -> Users -> Accounts -> Add a new user
-+
+
 image::images/Moodle_1._Create_user.png[title='Creating a user']
 . To assign user to a role go to Site administration -> Users -> Permissions -> Assign system roles
 . To add a service go to Site administration -> Plugins -> Web services -> External services.
 When you are on the page click on 'Add' and fill in the Service Name and Short Name, then click on 'Add service'
-+
+
 image::images/Moodle_3.1_External_Services_screen.png[title='External services screen']
-+
+
 When you are on this page click on 'Add' and fill in the Service Name and Short Name, then click on 'Add service'
-+
+
 image::images/Moodle_3.2_Create_Service.png[title='Adding the service']
 . Once the Service is created, click on 'Add functions'
-+
+
 image::images/Moodle_4.1_Functions_screen.png[title='Functions page']
-+
+
 Add following functions: core_user_create_users, core_user_get_users, core_course_get_courses, enrol_manual_enrol_users
-+
+
 image::images/Moodle_4.2_Add_Functions.png[title='Adding the functions to the service']
 . The next step is to generate the token, you can do this by going to Site administration -> Plugins -> Web services -> Manage tokens then click on 'Add'.
-+
+
 image::images/Moodle_5.1_Token_screen.png[title='Manage tokens page']
-+
+
 Then select the created user and service, and if needed Enable and Set 'Valid Until' date
-+
+
 image::images/Moodle_5.2_Create_token.png[title='Create token page']
 . The last step is to create a course, you can do this by going to Site administration -> Courses -> Manage courses and categories, then Create new course.
 The ID should be the same as course code in onCourse.
 
 [[externalintegrations-mailchimp]]
-==== MailChimp
+=== MailChimp
 
 MailChimp is an online email marketing solution to manage contacts, send emails and track results.
 
@@ -75,7 +72,7 @@ There are three types MailChimp integrations available in onCourse:
 . *mailchimp unsubscribe:* onCourse mailing list unsubscription: This type of integration triggers when you manually remove a mailing list tag from a contact. This script should be enabled the script 'mailchimp subscribe'.
 . *mailchimp subscribe on enrolment:* This type of integration triggers when a contact enrols via onCourse or the web. You can only have one of these types of integrations to subscribe all enrolling students to a single MailChimp list. Your onCourse integration must be named "Enrolment" for this to work.
 
-===== Creating an onCourse mailing list integration
+==== Creating an onCourse mailing list integration
 
 The name of your onCourse mailing list tag and MailChimp integration must be the same for this to work. This integration will only add new subscribers to your mailing list to MailChimp, once enabled.
 
@@ -85,9 +82,9 @@ The name of your onCourse mailing list tag and MailChimp integration must be the
 . To create a new mailing list, click the green plus in the bottom left-hand corner. Name your tag, then click 'Save'
 . To add the MailChimp integration, go to Automation and click on the '+' button next to the heading integrations.
 . Click the 'Add' button below the MailChimp icon. _The name of the integration must be the same as the name of the onCourse mailing list_. Insert your API key and Audience (List) ID from MailChimp, then save and close this window.
-+
+
 image::images/mailchimp_prefs.png[title='MailChimp integration for a Mailing List integration']
-+
+
 . Once the integration has been defined you will need to enable the MailChimp scripts to automate the process.
 These scripts can be found in the Automation window.
 . Double click on the script called 'mailchimp subscribe', click on the checkbox 'Enabled' and save the script.
@@ -98,7 +95,7 @@ If you wish to add additional mailing list integrations, you can repeat steps 1 
 
 image::images/mailchimp_script.png[title='MailChimp mailing list subscribe script']
 
-====== Creating an 'on enrolment' integration
+==== Creating an 'on enrolment' integration
 
 This type of integration with MailChimp automatically subscribes on enrolment all contacts who have the permission 'accept email marketing material' on their contact record. You can only have on integration of this type in onCourse.
 
@@ -115,7 +112,7 @@ This scripts can be found by going to the Automation window, under Scripts.
 Note that there is no corresponding unsubscribe script for this integration - students can unsubscribe from this list directly via MailChimp after receiving an email from you.
 
 [[externalintegrations-surveymonkey]]
-==== SurveyMonkey
+=== SurveyMonkey
 
 SurveyMonkey allows you to create and publish online surveys in minutes, and view the results graphically in real time. SurveyMonkey provides free online questionnaire and survey software.
 
@@ -127,7 +124,7 @@ Once these preferences have been defined you will need to enable at least one of
 
 image::images/surveymonkey_script.png[title='SurveyMonkey scripts']
 
-===== Access Tokens and Creating a developer account
+==== Access Tokens and Creating a developer account
 
 Survey Monkey introduced access tokens as a means of integration in January 2017. All integrations created after that date will need to use access tokens. API Keys will not be used after this time. Existing integrations using an API key will continue to use the API key. To create an access token, you set up a developer account in SurveyMonkey and add onCourse as an App.
 
@@ -140,16 +137,16 @@ Survey Monkey introduced access tokens as a means of integration in January 2017
 * Create/Modify Collectors
 * View Collectors
 * View Surveys
-+
+
 image::images/surveymonkeyScopes.png[title='The required scopes in SurveyMonkey']
 . Once you've activated the required Scopes, scroll up to the Credentials section and locate the 'Access Token' field. The Access token is the large string of numbers and letters in the field. Copy all the text in this field and paste it into the 'OAuth token' field within the Integration you're setting up in onCourse, found in the Automations window.
-+
+
 image::images/surveymonkeyCredientials.png[title='SurveyMonkey Access Token Location']
-+
+
 . The Survey Name you need to enter in onCourse is the name listed in the 'Title' field on Survey Monkey, in the example below it's simply called 'Test'. This can be found by logging into your account in https://www.surveymonkey.com then clicking on the top menu option 'My Surveys'.
-+
+
 image::images/SurveyMonkey_name.png[title='All your surveys inSurveyMonkey will be listed in 'My Surveys'']
-+
+
 . Survey Monkey uses the term 'Collectors' to describe ways you can send out your survey and collect responses.
 
 Set up your collector and name it 'onCourse', as this is the default collector name the app looks for. If there is no Collector by this name, then the first Collector in the list is selected. We highly recommend naming the Collector 'onCourse'.
@@ -163,7 +160,7 @@ The 'Sender email address' that survey responses are sent to is the same one you
 image::images/Preferences_messaging.png[title='Messaging tab of the Preferences window']
 
 [[externalintegrations-surveygizmo]]
-==== SurveyGizmo
+=== SurveyGizmo
 
 SurveyGizmo is a powerful survey tool designed to make even the most advanced survey projects fun, easy and affordable.
 
@@ -175,7 +172,7 @@ Once these preferences have been defined you will need to enable at least one of
 
 image::images/surveygizmo_script.png[title='SurveyGizmo scripts']
 
-===== Where to find the preferences in SurveyGizmo
+==== Where to find the preferences in SurveyGizmo
 
 Below is the information that is needed to enable the integration that can be found in SurveyGizmo.
 
@@ -183,11 +180,11 @@ Below is the information that is needed to enable the integration that can be fo
 . The User and Password is the same one you use to log into your account at SurveyGizmo
 . The Survey ID is taken from survey address, so in the example below the Survey ID is 2290616. Please visit
 http://help.surveygizmo.com/help/article/link/how-to-find-ids[here] for more information.
-+
+
 image::images/SurveyGizmo_Survey_ID.png[title='Where to find the SurveyGizmo Survey ID']
 
 [[externalintegrations-cloudassess]]
-==== Cloud Assess
+=== Cloud Assess
 
 Cloud Assess is an online service for managing the assessment process. It can be used for VET and non-VET enrolments, and can be used by tutors to help manage classroom based assessments as well as online assessments.
 
@@ -202,7 +199,7 @@ This script can be found by going to Automation, double clicking on 'cloudassess
 image::images/cloudaccess_script.png[title='Cloud Access script']
 
 [[externalintegrations-canvas]]
-==== Canvas
+=== Canvas
 
 Canvas is an open-source learning management system for delivering training to students. This integration allows you to automatically make enrolments, classes and students using information you've already entered into onCourse. There is quite a bit of setup work for this integration, so ensure you are following the instructions precisely.
 
@@ -229,21 +226,21 @@ As soon as you've got your developer key, you can continue with the integration 
 . Find the Canvas integrations and select 'Add'
 . Enter the URL of your Canvas instance. This will look like following -
 https://my_canvas_instance.instructure.edu.au/ - where 'my_canvas_instance' would be personalised with the name you gave it during initial set up. You also need to enter your client id, and the client secret from your developer key.
-+
+
 The account ID is the id number that corresponds with the account you wish to enrol students into. You can find this by logging into Canvas, then navigating to the left-hand menu bar. Select Admin > then select your account.
 This will open an accounts page. The account ID will be listed in the site's URL e.g. if the URL is
 https://my_canvas_instance.instructure.edu.au/accounts/36 then you would enter 36 as the account ID, and only that number. You don't enter the URL. Once you've completed filling in the expected fields in onCourse, a button labelled 'Configure' will appear. Click this and a pop-up window will appear, asking you to log in to Canvas and authorise onCourse to integrate with your account.
 . Lastly, you'll need to turn on the integration script. You can do this by going to Automation, and enabling the 'Canvas Enrol' script. Make sure you hit the Save button before closing the window.
 
 [[externalintegrations-micropower]]
-==== Micropower
+=== Micropower
 
 This integration allows for a connection between a Micropower (MPower MSL) based system and onCourse. To use this integration, you'll need to have your own Micropower instance. Each field in the integration window should map directly to a similarly named field in your Micropower system. Copy the data each field from your Micropower system into the corresponding field within onCourse, and ensure you activate the Micropower integration script in the Scripts section of the Automation window.
 
 image::images/mpower.png[title='Micropower Integration window']
 
 [[externalintegrations-USI]]
-==== USI
+=== USI
 
 This integration connects your onCourse system to the USI Agency so that onCourse can automatically verify a student's USI number. This section will detail how you can activate this integration. If you wish to learn more about the basics of how the USI functions in onCourse, you can read more in our dedicated <<usi, USI chapter>> here.
 
@@ -259,39 +256,39 @@ Follow the below steps to activate the integration:
 . Log into onCourse and go to the Automation window, then scroll the left hand column until you see the Integrations header. Click the + button next to the header, then select 'Add' under the USI integration listing. This will create a new USI integration.
 . In the new Integration screen you'll see two numbers; a Digital Software Provider number and a Software ID number, as well as some text with an embedded link. The Software ID number will be unique to your system.
 Make a note of these two numbers. Click the link and it will take you back to the Relationship Authorisation Manager.
-+
+
 [NOTE]
 ====
 DO NOT use the Software ID from the image above as it is only an example and will not work.
 ====
-+
+
 . Click on the "Entity name" which is your RTO.
 . In the top menu, click on 'Manage Notifications', then click 'Add Notification'.
 . In the 'Digital Service Provider ABN' field, enter the following Digital Software Provider number '74073212736', and then click the magnifying glass icon. You will see the company ISH GROUP PTY LTD. Confirm this.
 . Enter the Software ID from the USI Integration window in onCourse and confirm.
 . The entry you just added should now diplay as "Active". It should look like the screenshot below.
-+
+
 image::images/usi-active-status-ram.png[title='At the end of the process']
 
-==== VET Student Loans
+=== VET Student Loans
 
 This integration feeds data from onCourse directly into TCSI. If you are authorised by the Commonwealth Government Department of Human Services to provide VET Student Loans to your students, you will need to enable the Integration for the purpose of reporting this data to the government.
 
 image::images/tcsi_integration.png[title='USI Agency Integration window']
 
 . Log into PRODA
-+
+
 Go to https://proda.humanservices.gov.au/. Either log in or register for a new account. You'll need to ensure your organisation is listed here and you are authorised to make changes.
-+
+
 . Link your organisation to the TCSI service.
-+
+
 .. Select “Organisations” located in the top right of the screen.
 .. Select the organisation
 .. Expand the “Service Provider” dropdown, and click “Add Service Provider”.
 .. Select “Tertiary Collection of Student Information” and click the “Add Service Provider” button.
 
 . Create a B2B Device.
-+
+
 .. Select “Organisations” located in the top right of the screen.
 .. Select your organisation from the list of organisations.
 .. Expand the “B2B Device” dropdown, and click “Register new B2B Device”.
@@ -299,23 +296,21 @@ Go to https://proda.humanservices.gov.au/. Either log in or register for a new a
 .. Device Activation Code, Device Name and PRODA RA (Organisation) number will display. Record these details.
 
 . Create onCourse integration.
-+
+
 .. Log into onCourse with admin right and open the Integrations section of the Automation window.
 .. Add the "VET Student Loans" integration. You need to name the integration (orange bar at the top of the window) and enter the Device Name, Organisation ID (PRODA RA) and Device Activation Code into the fields provided.
 .. Save the integration. On clicking Save, the device activation process will begin automatically.
 
 . login to PRODA again and check the device is activated.
 
-==== Google Classroom
+=== Google Classroom
 
 Google Classroom is mission control for your classes. As a free service for teachers and students, you can create classes, distribute assignments, send feedback, and see everything in one place.
-
 
 image::images/google_integration.png[title='Google Classroom Integration window']
 
 To create a new Google Classrooms integration you'll require a Google client id, and a client secret.
 Once you have both of these from Google, Follow the next steps:
-
 
 . in onCourse, go to Automation > Integrations and click the green + button next to the Integrations heading
 . Scroll down and click 'Add' in the Google Classrooms integration
@@ -323,7 +318,7 @@ Once you have both of these from Google, Follow the next steps:
 . Enter your Client ID and Client secret
 . Click 'Get Activation Code' to get your activation code
 
-==== TalentLMS
+=== TalentLMS
 
 image::images/talentlms_integration.png[title='TalentLMS Integration window']
 
@@ -343,8 +338,7 @@ By default, the course in TalentLMS should be named with the onCourse course cod
 
 When creating new students in TalentLMS, they will be created with their email address as the login, type "Learner-Type" and a random password. Students can reset their password in TalentLMS. By default TalentLMS will typically send a welcome email.
 
-
-==== LearnDash
+=== LearnDash
 
 image::images/learndash_integration.png[title='LearnDash Integration window']
 
@@ -367,6 +361,3 @@ learndash {
 onCourse needs to match against the course slug in LearnDash. By default, it uses the onCourse Course Code to do this, but you can alter this to something else if you wish. In its default configuration, you need ensure that the Course Code in onCourse and the course slug in LearnDash match.
 
 Once all this is completed, this integration will create enrolments in LearnDash as they are created in onCourse.
-
-
-

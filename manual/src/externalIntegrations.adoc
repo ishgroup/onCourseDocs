@@ -100,25 +100,23 @@ image::images/surveymonkey_script.png[title='SurveyMonkey scripts']
 
 Survey Monkey introduced access tokens as a means of integration in January 2017. All integrations created after that date will need to use access tokens. API Keys will not be used after this time. Existing integrations using an API key will continue to use the API key. To create an access token, you set up a developer account in SurveyMonkey and add onCourse as an App.
 
-. Go to SurveyMonkey.com and login using your regular login. If you do not have a login for SurveyMonkey you will need to create one.
-. Once logged in, got to the URL https://developer.surveymonkey.com. This will bring you to the developers area to set up your integration.
-. In the Developers area, go to My Apps. If you already have an App, make sure it's not disabled or expired. If you don't already have an app, or if yours is currently expired/disabled, click on 'Add a New App'. SurveyMonkey Developer site Add New App Feature.
-. This will open new window asking you to add an App. You can choose the name of App i.e. 'onCourse'
-. In the App record, go to Settings, scroll down to the section called Scopes and activate the following three Scopes:
+. Log into the https://developer.surveymonkey.com[SurveyMonkey developer portal]
+. Go to `My Apps` and add a new app.
+. In the App record, go to `Settings -> Scopes` activate the following three Scopes:
 * Create/Modify Collectors
 * View Collectors
 * View Surveys
-
++
 image::images/surveymonkeyScopes.png[title='The required scopes in SurveyMonkey']
-. Once you've activated the required Scopes, scroll up to the Credentials section and locate the 'Access Token' field. The Access token is the large string of numbers and letters in the field. Copy all the text in this field and paste it into the 'OAuth token' field within the Integration you're setting up in onCourse, found in the Automations window.
-
+. Go to `Credentials -> Access Token`. The Access token is the long string of numbers and letters. Copy this and paste it into the 'OAuth token' field within the https://demo.cloud.oncourse.cc/automation/integrations/new/surveymonkey[SurveyMonkey Integration] you're setting up in onCourse.
++
 image::images/surveymonkeyCredientials.png[title='SurveyMonkey Access Token Location']
-
++
 . The Survey Name you need to enter in onCourse is the name listed in the 'Title' field on Survey Monkey, in the example below it's simply called 'Test'. This can be found by logging into your account in https://www.surveymonkey.com then clicking on the top menu option 'My Surveys'.
-
++
 image::images/SurveyMonkey_name.png[title='All your surveys inSurveyMonkey will be listed in 'My Surveys'']
 
-. Survey Monkey uses the term 'Collectors' to describe ways you can send out your survey and collect responses.
+Survey Monkey uses the term 'Collectors' to describe ways you can send out your survey and collect responses.
 
 Set up your collector and name it 'onCourse', as this is the default collector name the app looks for. If there is no Collector by this name, then the first Collector in the list is selected. We highly recommend naming the Collector 'onCourse'.
 
@@ -143,10 +141,7 @@ Once these preferences have been defined you will need to enable at least one of
 
 image::images/surveygizmo_script.png[title='SurveyGizmo scripts']
 
-==== Where to find the preferences in SurveyGizmo
-
 Below is the information that is needed to enable the integration that can be found in SurveyGizmo.
-
 
 . The User and Password is the same one you use to log into your account at SurveyGizmo
 . The Survey ID is taken from survey address, so in the example below the Survey ID is 2290616. Please visit
@@ -172,17 +167,11 @@ image::images/cloudaccess_script.png[title='Cloud Access script']
 [[externalintegrations-canvas]]
 === Canvas
 
-Canvas is an open-source learning management system for delivering training to students. This integration allows you to automatically make enrolments, classes and students using information you've already entered into onCourse. There is quite a bit of setup work for this integration, so ensure you are following the instructions precisely.
-
-It's recommended that before you begin this integration, you get in touch with us via Support first.
+Canvas is an open-source learning management system for delivering training to students. This integration allows you to automatically make enrolments, classes and students using information you've already entered into onCourse.
 
 image::images/canvas_integration.png[title='Canvas Integration window']
 
-To use the onCourse integration with Canvas, you will first need to have set up a developer key in Canvas itself.
-You can find instructions on how to do this here - https://community.canvaslms.com/docs/DOC-12657-4214441833
-
-You can find some more developer-oriented information about Canvas developer keys here -
-https://canvas.instructure.com/doc/api/file.developer_keys.html.
+To use the onCourse integration with Canvas, you will first need to have set up a https://community.canvaslms.com/t5/Admin-Guide/How-do-I-add-a-developer-key-for-an-account/ta-p/259[developer key in Canvas itself].
 
 You will also need to have the relevant courses and classes set up in Canvas. Canvas uses slightly different terminology here; courses are still 'courses', but classes are known as 'sections'. You'll need to ensure that every course and class you want captured by the integration is duplicated in both Canvas and onCourse. However, if you cannot set up every class, in the Canvas script there is a value that, when set to true, can create new sections (classes) if one does not exist for the equivalent course in onCourse.
 
@@ -220,19 +209,24 @@ image::images/usi_integration.png[title='USI Agency Integration window']
 Follow the below steps to activate the integration:
 
 
-. Go to this link to request access to the USI System Registry - https://www.usi.gov.au/training-organisations/set-access-usi-registry-system. This is only required if you've never registered with the USI Agency before.
+. https://www.usi.gov.au/training-organisations/set-access-usi-registry-system[Request access] to the USI System Registry. This is only required if you've never registered with the USI Agency before.
 . Register a MyGovID. Please note that myGovID is not the same MyGov.
-**IMPORTANT:** When you create a MyGovID, it is for you as an individual, not for the organisation.
-. Link your RTO to your myGovID with the Relationship Authorisation Manager - https://authorisationmanager.gov.au/. Once logged in, choose the "Link your business" option. The business you link must use the same ABN as is set in your Preferences > College section.
++
+[IMPORTANT]
+====
+When you create a MyGovID, it is for you as an individual, not for the organisation.
+====
++
+. Link your RTO to your myGovID with the https://authorisationmanager.gov.au/[Relationship Authorisation Manager]. Once logged in, choose the "Link your business" option. The business you link must use the same ABN as is set in your Preferences -> College section.
 . Log into onCourse and go to the Automation window, then scroll the left hand column until you see the Integrations header. Click the + button next to the header, then select 'Add' under the USI integration listing. This will create a new USI integration.
 . In the new Integration screen you'll see two numbers; a Digital Software Provider number and a Software ID number, as well as some text with an embedded link. The Software ID number will be unique to your system.
 Make a note of these two numbers. Click the link and it will take you back to the Relationship Authorisation Manager.
-
++
 [NOTE]
 ====
 DO NOT use the Software ID from the image above as it is only an example and will not work.
 ====
-
++
 . Click on the "Entity name" which is your RTO.
 . In the top menu, click on 'Manage Notifications', then click 'Add Notification'.
 . In the 'Digital Service Provider ABN' field, enter the following Digital Software Provider number '74073212736', and then click the magnifying glass icon. You will see the company ISH GROUP PTY LTD. Confirm this.
@@ -245,7 +239,7 @@ image::images/usi-active-status-ram.png[title='At the end of the process']
 
 This integration feeds data from onCourse directly into TCSI. If you are authorised by the Commonwealth Government Department of Human Services to provide VET Student Loans to your students, you will need to enable the Integration for the purpose of reporting this data to the government.
 
-image::images/tcsi_integration.png[title='USI Agency Integration window']
+image::images/tcsi_integration.png[title='TCSI Integration']
 
 . Log into PRODA
 

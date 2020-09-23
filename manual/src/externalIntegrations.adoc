@@ -12,12 +12,12 @@ image::images/integration_prefs.png[title='Integration preferences window']
 
 Moodle is a free, open-source PHP web application for producing modular internet-based courses that supports a modern social constructionist pedagogy.
 
-To add a Moodle integration you will need to click on the 'Add' button below the Moodle icon. You will then see a number of fields that are needed to enable the integration. Each field _must_ be filled out, or else the integration scripts will fail.
+Add a https://demo.cloud.oncourse.cc/automation/integrations/new/moodle[Moodle integration] in onCourse automation.
 
-* *Base URL -* The URL of your Moodle instance. This must include the 'http://' or 'https://' protocol at the beginning of the URL.
-* *Username & Password -* The username and password used to access your Moodle instance
-* *Service Name -* The name of your integration inside Moodle
-* *Only activate for enrolments in courses tagged with -* This defines which tag the script should look for when executing. All courses tagged with this tag will be included in the integration
+Base URL:: The URL of your Moodle instance. This must include the 'http://' or 'https://' protocol at the beginning of the URL.
+Username & Password:: The username and password used to access your Moodle instance
+Service Name:: The name of your integration inside Moodle.
+Only activate for enrolments in courses tagged with:: This defines which tag the script should look for when executing. All courses tagged with this tag will be included.
 
 [IMPORTANT]
 ====
@@ -62,7 +62,6 @@ The ID should be the same as course code in onCourse for the default integration
 
 MailChimp is an online email marketing solution to manage contacts, send emails and track results.
 
-
 . Log into MailChimp and obtain an https://mailchimp.com/help/about-api-keys[API key] for your account. Go to `Account -> Extras -> API keys -> Create a key`
 . In MailChimp, find your https://mailchimp.com/help/find-audience-id/[Audience Id]. Go to the `Lists page > Settings`, and scroll to find the unique Audience ID field you want to subscribe your enrolling students to.
 . Add a https://demo.cloud.oncourse.cc/automation/integrations/new/mailchimp[new Mailchimp integration] in onCourse.
@@ -70,7 +69,6 @@ MailChimp is an online email marketing solution to manage contacts, send emails 
 image::images/mailchimp_prefs.png[title='MailChimp integration for a Mailing List integration']
 +
 . Click the 'Add' button below the MailChimp icon. The name of the integration must be 'Enrolment'. Insert your API key and Audience ID from MailChimp, then save and close this window.
-
 
 Once the integration has been defined you will need to enable a MailChimp script to automate data flowing between the systems. Scripts can be found by going to the Automation window. Sample scripts are provided to enrol students on enrolment and to update marketing material settings in onCourse when they unsubscribe in Mailchimp.
 
@@ -112,7 +110,7 @@ image::images/surveymonkeyScopes.png[title='The required scopes in SurveyMonkey'
 +
 image::images/surveymonkeyCredientials.png[title='SurveyMonkey Access Token Location']
 +
-. The Survey Name you need to enter in onCourse is the name listed in the 'Title' field on Survey Monkey, in the example below it's simply called 'Test'. This can be found by logging into your account in https://www.surveymonkey.com then clicking on the top menu option 'My Surveys'.
+. The Survey Name you need to enter in onCourse is the name listed in the 'Title' field on Survey Monkey, in the example below it's simply called 'Test'. This can be found by logging into your https://www.surveymonkey.com[SurveyMonkey account] and go to 'My Surveys'.
 +
 image::images/SurveyMonkey_name.png[title='All your surveys inSurveyMonkey will be listed in 'My Surveys'']
 
@@ -120,7 +118,7 @@ Survey Monkey uses the term 'Collectors' to describe ways you can send out your 
 
 Set up your collector and name it 'onCourse', as this is the default collector name the app looks for. If there is no Collector by this name, then the first Collector in the list is selected. We highly recommend naming the Collector 'onCourse'.
 
-If you haven't used SurveyMonkey before you will need to verify the collectors email address. This is done by clicking on the name of the Survey followed by on the tab 'Collect Responses' and then on the Survey name under the heading 'NICKNAME' and continuing until this email gets sent.
+If you haven't used SurveyMonkey before you will need to verify the collectors email address. Click on `Survey name -> 'Collect Responses' tab -> Survey name under 'NICKNAME'` and continue until the email is sent.
 
 image::images/survey_collector.png[title='A view of some Collectors,one has yet to be configured']
 
@@ -218,7 +216,7 @@ When you create a MyGovID, it is for you as an individual, not for the organisat
 ====
 +
 . Link your RTO to your myGovID with the https://authorisationmanager.gov.au/[Relationship Authorisation Manager]. Once logged in, choose the "Link your business" option. The business you link must use the same ABN as is set in your Preferences -> College section.
-. Log into onCourse and go to the Automation window, then scroll the left hand column until you see the Integrations header. Click the + button next to the header, then select 'Add' under the USI integration listing. This will create a new USI integration.
+. Log into onCourse and go to the Automation window, then scroll the left-hand column until you see the Integrations header. Click the + button next to the header, then select 'Add' under the USI integration listing. This will create a new USI integration.
 . In the new Integration screen you'll see two numbers; a Digital Software Provider number and a Software ID number, as well as some text with an embedded link. The Software ID number will be unique to your system.
 Make a note of these two numbers. Click the link and it will take you back to the Relationship Authorisation Manager.
 +

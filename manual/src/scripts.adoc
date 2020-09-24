@@ -150,6 +150,7 @@ The email that is sent to the contact is plain text, embedded within the script.
 There is no separate email template to edit and no HTML version available.
 The email includes the total balance outstanding and a 30 day no login required link to the skillsOnCourse portal where the invoices can be viewed and payments made.
 There is no copy of this message stored in onCourse against the contact record.
+. *historic aged debtors* - this on demand script is run from the dashboard. Set the 'As of date' and the script will generate a CSV file listing all debtors, how od their debt is and the total amounts they owe. This number should match the Closing balance of the trial balance report on the same date.
 
 ===== Marketing and sales scripts
 
@@ -442,7 +443,7 @@ This just makes the rest of our script easier to read.
 
 [source,groovy]
 ----
-if (i.confirmationStatus == ConfirmationStatus.NOT_SENT) {
+if (i.confirmationStatus == ConfirmationStatus.NOT_SENT)
 ----
 
 So our invoice has an attribute confirmationStatus.

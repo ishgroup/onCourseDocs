@@ -1,9 +1,7 @@
 [[importExport]]
 == Importing and exporting
 
-onCourse offers you a variety of ways to get data into and out of the system.
-The onCourse DSL (Domain Specific Language) that outlines the database objects and enumerations is available at
-https://www.ish.com.au/onCourse/doc/latest/dsl/
+onCourse offers you a variety of ways to get data into and out of the system. The onCourse DSL (Domain Specific Language) that outlines the database objects and enumerations is available at https://www.ish.com.au/onCourse/doc/latest/dsl/
 
 This chapter is recommended for Intermediate to Advanced users of onCourse who have a good general understanding of structured data and the onCourse schema.
 
@@ -18,9 +16,7 @@ Go to Automation, and find the Exports section in the left-hand column to see th
 
 The list of exports available to you will include those supplied as part of the default onCourse application configuration and any additional custom exports you have created or have commissioned ish to create on your behalf.
 
-Generally, export files that end with CSV (comma separated files) are designed to be opened, viewed and edited in a plain text editor or spreadsheet application.
-These are flat files containing columns and rows of data.
-Export files that end with XML (eXtensible Markup Language) are designed to be imported into other software applications and represent a relational data structure.
+Generally, export files that end with CSV (comma separated files) are designed to be opened, viewed and edited in a plain text editor or spreadsheet application. These are flat files containing columns and rows of data. Export files that end with XML (eXtensible Markup Language) are designed to be imported into other software applications and represent a relational data structure.
 
 Each export displayed in this list has a Name, Type, Output, Key Code, Variables, Options, and an Available From section.
 
@@ -30,81 +26,57 @@ The Type (formerly Entity) is the object in the database that the export is join
 
 The Output is the requested file extension of the export and the types of Variables that become available to you.
 
-The Key Code is a unique identifier for the export and when supplied by ish as part of the default onCourse application will begin with 'ish'.
-When the export is custom, is should begin with an identifying acronym for the organisation.
+The Key Code is a unique identifier for the export and when supplied by ish as part of the default onCourse application will begin with 'ish'. When the export is custom, the key should begin with an identifying acronym for the organisation.
 
-Variables are values that are set when you run an automation (a script, import, print report or export).
-This value is then used to change the behavior of an automation without directly editing the code itself.
-A variable can be a date, a word or checkbox.
-For example; perhaps you would like to write a script to check what classes will start between now and a specific date.
-You can add a variable to this script so you can change specified date when the script is executed.
+Variables are values that are set when you run an automation (a script, import, print report or export). This value is then used to change the behavior of an automation without directly editing the code itself. A variable can be a date, a word or checkbox. For example; perhaps you would like to write a script to check what classes will start between now and a specific date. You can add a date variable to this script so you can change specified date when the script is executed.
 
-Like variables, Options are values that are used to change the behavior of an automation.
-However, an option's value is set while editing/creating a script.
-For example; imagine you'd like to change the email template that is sent to students by a script.
-An option could be created and inserted into the script so that which template is delivered could be changed without editing the script directly.
+Like variables, Options are values that are used to change the behavior of an automation. However, an option's value is set while editing/creating a script. For example; imagine you'd like to change the message template that is sent to students by a script. An option could be created and inserted into the script so that user can set the template without having to go into the code to change anything themselves.
 
-You can double click on the export record in the list to see the structure of the export file, what fields are included and what formatting is applied.
+You can double-click on the export record in the list to see the structure of the export file, what fields are included and what formatting is applied.
 
 The Filters search panel in the left-hand column can help you find specific exports you're looking for by simply typing the name of the export.
 
 image::images/exports/export_template_list.png[title='Export templates in the Automation view']
 
+[[importExport-howtoExport]]
 ==== Exporting from the list view via Share button
 
 Like print reports, the list of available exports in the list view are those exports linked to the entity, or list view, you are viewing.
 
-Each list view in onCourse has the ability to export data in a variety of formats.
-You can either highlight the records you wish to export and click on the Share Icon, then select 'Excel'.
+Each list view in onCourse has the ability to export data in a variety of formats. You can either highlight the records you wish to export and click on the Share Icon, then select 'Excel', or just click the Share icon without selecting records. Then click 'Excel'.
 
 image::images/exports/export_icon.png[title='Share Icon in the bottom-right of the Invoices list view']
 
-A dialog will appear giving you some choices:
-
-* *Export template name:* This list allows you to choose from one of the exports joined to this entity.
-There will usually be at least one CSV and one XML option to select from.
-* Based on:
-+
-*<x> selected records:* only include the highlighted records you've selected.
-+
-*<x> found records:* include every record in the list you're printing from in your export.
+Next select the export name. Finally, you can choose whether to include only your selected records, or all records. Lastly, hit Share.
 
 [[export-clipboard]]
 ===== Copying data rows to Clipboard
 
-You can copy selected rows of data to your computer's clipboard.
-This is useful for when you're compiling spreadsheets in excel, creating an email or or word processing document.
-Copy items to the clipboard by doing the following:
+You can copy selected rows of data to your computer's clipboard in the format of one of your system's CSV exports. This is useful for when you're compiling spreadsheets in excel, creating an email or word processing document. Copy items to the clipboard by doing the following:
 
-
-. Highlight the rows of data you want to copy to the clipboard
+. Highlight the records you want to copy to the clipboard
 . Click the Share button
 . Select 'Excel' then click 'Copy to Clipboard'
 . You can then change focus to the program you want to copy the data to, and use the paste function to paste the data.
 
 image::images/exports/copy_to_clipboard.png[title='The selected rows of data will be copied to the clipboard for pasting into other documents']
 
-==== Examples of default Exports and their uses
+[[importExport-examplesExport]]
+==== Examples of default exports and their uses
 
 Begin by opening the Classes window and running a query or otherwise selecting the range of classes you wish to export for the brochure.
 
-From the share options, select 'InDesign Brochure XML export' and save the resulting file to a location on your computer.
-This default layout includes the information from the course general tab 'Print brochure description' and combines it with the class summary information including location, cost, start date and time and tutor.
-The information is grouped by the Subject tag hierarchy.
+From the share options, select 'InDesign Brochure XML export' and save the resulting file to a location on your computer. This default layout includes the information from the course general section 'Print brochure description' and combines it with the class summary information including location, cost, start date and time and tutor. The information is grouped by the Subject tag hierarchy.
 
-The XML file is designed to be imported into a publishing product such as Adobe InDesign and then customised however you wish with the addition of styles and images.
-The XML tags in the onCourse export can be mapped to styles in InDesign, allowing the data to be imported and dropped into a brochure layout as many times as needed during the production cycle process.
-The XML file created by onCourse is not designed to be opened or edited in a product like Word - it is designed for import into a specialist layout and design software tools.
-If you do not have software that can work with these files installed on your machine, you should be able to email the file to your design staff for them to work with directly.
+The XML file is designed to be imported into a publishing product such as Adobe InDesign and then customised however you wish with the addition of styles and images. The XML tags in the onCourse export can be mapped to styles in InDesign, allowing the data to be imported and dropped into a brochure layout as many times as needed during the production cycle process. The XML file created by onCourse is not designed to be opened or edited in a product like Word - it is designed for import into a specialist layout and design software tools. If you do not have software that can work with these files installed on your machine, you should be able to email the file to your design staff for them to work with directly.
 
-The Class list includes a number of CSV exports, some with specific purposes.
-The 'CourseClass CSV export' is a generic export that includes most of the class fields.
+The Class list includes a number of CSV exports, some with specific purposes. The 'CourseClass CSV export' is a generic export that includes most of the class fields.
 
 image::images/exports/class_export_options.png[title='Available exports accessed via Site List']
 
 
 . Highlight the Class records you wish to export within the Class window.
-. Go to File > Import/Export > Export Classes or select the share icon in the bottom right hand corner of the list window
+. Click the share icon in the bottom right-hand corner of the list window
 . You then have the following export options to select from the drop down menu:
 * *CourseClass CSV export* - standard export of Class information
 +
@@ -127,8 +99,7 @@ image::images/exports/attendance_export_csv.png[title='Excerpt of Class attendan
 
 [TIP]
 ====
-When exporting the above class exports, the resulting CSV output file will have the same name in all instances: it will be labelled as 'CourseClassExport.csv'.
-You can then re-label these export files to whatever you need.
+When exporting the above class exports, the resulting CSV output file will have the same name in all instances: it will be labelled as 'CourseClassExport.csv'. You can then re-label these export files to whatever you need.
 ====
 
 onCourse enables users to export not only the invoice information, with each invoice reflected as one line within the resulting output file, you can also export the invoice line detail.

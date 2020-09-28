@@ -1,53 +1,37 @@
 [[migrating]]
 == Migrating to onCourse
 
-Unless you are a brand new training organisation, you probably already have student and enrolment data.
-You may want to migrate some, or all, of this data to onCourse as part of the setup and implementation process.
+Unless you are a brand new training organisation, you probably already have student and enrolment data. You may want to migrate some, or all, of this data to onCourse as part of the setup and implementation process.
 
-There are many reasons both for and against migrating data from a legacy system.
-The first consideration is will you have access to the legacy system once you have onCourse up and running?
-If the answer is yes, you should be quite choosy about what information you bring into onCourse, and only bring across data that serves a valid business purpose, such as contact data from the last three years.
+There are many reasons both for and against migrating data from a legacy system. The first consideration is will you have access to the legacy system once you have onCourse up and running? If the answer is yes, you should be quite choosy about what information you bring into onCourse, and only bring across data that serves a valid business purpose, such as contact data from the last three years.
 
 If you are using a commercial system under licence, which you will no longer have access to once you stop paying your licensing fees, and your are an RTO, you may be required by compliance standard to bring over as much information as possible so you can access 'old' training data, for as long as thirty years.
 
 Of course, garbage in equals garbage out.
-One of the reasons you may be moving to a new system is to start over and escape from poorly set up and invalid data in your current enrolment system.
-If that is a concern, then we would caution against importing this data into onCourse.
 
-Some data, like contact details, are quite simple to import from an external system.
-Other data, such as courses, classes and enrolments can be more complex.
+One of the reasons you may be moving to a new system is to start over and escape from poorly set up and invalid data in your current enrolment system. If that is a concern, then we would caution against importing this data into onCourse.
 
-Every database has a schema that outlines how it's information is stored in tables and fields, and how the data in each table is related to data in other tables.
-Even though all student management systems roughly store the same sort of information about students, enrolments and outcomes that's about where the similarity ends.
-How they each do it is completely different. onCourse is as open and transparent to the world about our database schema as possible, and we publish this information on our public website.
-This makes it easy to migrate to, and away from, onCourse, without having to pay us for the privilege.
-However, many database system schemas are commercially confident, so exporting and importing usable structured data from them may be near on impossible.
+Some data, like contact details, are quite simple to import from an external system. Other data, such as courses, classes and enrolments can be more complex.
 
-Every student management database is analogous to a human language, so converting your data from your current system to onCourse may be a bit like translating some text from English to Mandarin and then back to English.
-It's unlikely to come out looking quite the same way as it did when it went in.
-However, if your current system is capable of exporting contact data in CSV files or enrolment data in AVETMISS files, then we have included some basic import options in onCourse.
+Every database has a schema that outlines how its information is stored in tables and fields, and how the data in each table is related to data in other tables. Even though all student management systems roughly store the same sort of information about students, enrolments and outcomes that's about where the similarity ends. How they each do it is completely different. onCourse is as open and transparent to the world about our database schema as possible, and we publish this information on our public website. This makes it easy to migrate to, and away from, onCourse, without having to pay us for the privilege. However, many database system schemas are commercially confidential, so exporting and importing usable structured data from them may be near impossible.
 
-Over the years, we have also developed other migration options for various custom and commercial products, so please don't hesitate to contact us if you want to bring across more data than AVETMISS includes, like tutor contact details or documents into the onCourse document management system.
-We may already have a tool we can use, or can provide you with a quote for a custom migration.
+Every student management database is analogous to a human language, so converting your data from your current system to onCourse may be a bit like translating some text from English to Mandarin and then back to English. It's unlikely to come out looking quite the same way as it did when it went in. However, if your current system is capable of exporting contact data in CSV files or enrolment data in AVETMISS files, then we have included some basic import options in onCourse.
+
+Over the years, we have also developed other migration options for various custom and commercial products, so please don't hesitate to contact us if you want to bring across more data than AVETMISS includes, like tutor contact details or documents into the onCourse document management system. We may already have a tool we can use, or can provide you with a quote for a custom migration.
 
 === DIY Migration options
 
 Looking for a low cost do-it-yourself version?
-One of the strengths of onCourse is its comprehensive access to the data behind every field in the system.
-Every field in every object is accessible through the API, driven by groovy scripts.
-Out of the box, onCourse comes with several useful import scripts.
+
+One of the strengths of onCourse is its comprehensive access to the data behind every field in the system. Every field in every object is accessible through the API, driven by groovy scripts. Out of the box, onCourse comes with several useful import scripts.
 
 ==== Contact CSV import
 
-Sometimes you just need a simple way to get contact data from Excel into onCourse.
-In onCourse, contacts can be students, tutors or companies.
-Format your Excel spreadsheet with the following columns (shown here in rows, with a sample data in the format "columnName : example data")
+Sometimes you just need a simple way to get contact data from Excel into onCourse. In onCourse, contacts can be students, tutors or companies. Format your Excel spreadsheet with the following columns (shown here in rows, with a sample data in the format "columnName : example data")
 
 The order of the columns isn't important, and you can leave columns blank where there is no data for that contact
 
-Every contact should have their own row.
-In this example, the contact is both a student and a tutor.
-For a contact that is only a tutor, all the student specific fields can be left blank.
+Every contact should have their own row. In this example, the contact is both a student and a tutor. For a contact that is only a tutor, all the student specific fields can be left blank.
 
 title: Mr
 
@@ -141,61 +125,39 @@ tutorDateFinished :
 
 tutorResume : Any information you want to publish about the tutors experience and credentials
 
-Then save your document as CSV and import it from Import window - just type 'Import' into the Find Anything search on the Dashboard and select 'Import...'.
+Then save your document as CSV and import it from Automation window, in the Import Templates section. Select the import you want to run by highlighting it, then hover your mouse over the cogwheel in the top-right, then click the play button. You'll be asked to select your .csv file.
 
 Remember that you will get duplicate contacts if you import the same records again, but you can use the onCourse <<contacts-merge, contact merge>> feature to resolve this manually.
 
+If the import fails, there may be an issue with the data. Check it to ensure it's formatted as expected.
+
 ==== AVETMISS 80/85
 
-All other student management systems designed for RTOs in Australia are able to export data to the AVETMISS standard.
-So if you can get your data out in this way, it is simple to bring it into onCourse.
-The 80 and 85 files contain just student information without any enrolments.
+All other student management systems designed for RTOs in Australia are able to export data to the AVETMISS standard. So if you can get your data out in this way, it is simple to bring it into onCourse. The 80 and 85 files contain just student information without any enrolments.
 
-There are two versions of this import.
-The first will bring in students and try to match the records already found in onCourse using the first name, last name and date of birth.
-If it cannot find a perfect match, then a new contact record will be created.
-For example, if the imported record doesn't have a date of birth, then a new record will be created in onCourse.
+There are two versions of this import. The first will bring in students and try to match the records already found in onCourse using the first name, last name and date of birth. If it cannot find a perfect match, then a new contact record will be created. For example, if the imported record doesn't have a date of birth, then a new record will be created in onCourse.
 
-The second version will also import the student number from the external system.
-If the student number is already used in onCourse then that student will be overwritten with the new data.
-Be careful with this import since it might be quite destructive if used on a system with a lot of existing data.
-However this option is quite useful if you want to preserve the student number between your old system and onCourse; you might want this if you are reporting for government funding and your exports from onCourse need to match the student numbers from your previous report.
+The second version will also import the student number from the external system. If the student number is already used in onCourse then that student will be overwritten with the new data. Be careful with this import since it might be quite destructive if used on a system with a lot of existing data. However, this option is quite useful if you want to preserve the student number between your old system and onCourse; you might want this if you are reporting for government funding and your exports from onCourse need to match the student numbers from your previous report.
 
 ==== AVETMISS 60, 80, 85 and 120
 
 This import works just the same way as the 80/85 import above, but it also brings in outcomes data.
-Although the AVETMISS standard calls the 120 file "enrolments" it actually represents what onCourse calls "outcomes".
-That is, just a relationship between the student and the modules/units of competency.
-In onCourse we cannot store that in the Enrolment because we'd need classes, courses and much more.
-The AVETMISS data isn't enough to reconstruct all that.
-Instead we create records in Prior Learning representing learning that was recorded outside of onCourse.
-All the important Outcome data is also imported and stored.
+Although the AVETMISS standard calls the 120 file "enrolments" it actually represents what onCourse calls "outcomes". That is, just a relationship between the student and the modules/units of competency. In onCourse we cannot store that in the Enrolment because we'd need classes, courses and much more. The AVETMISS data isn't enough to reconstruct all that. Instead we create records in Prior Learning representing learning that was recorded outside of onCourse. All the important Outcome data is also imported and stored.
 
-You can run an AVETMISS export from your legacy system, submit it to the relevant training authorities, import that data to onCourse and then run another export with almost the same results.
-Minor changes may occur where onCourse applies validation rules during the export process to reduce your errors.
+You can run an AVETMISS export from your legacy system, submit it to the relevant training authorities, import that data to onCourse and then run another export with almost the same results. Minor changes may occur where onCourse applies validation rules during the export process to reduce your errors.
 
-When you export the AVETMISS data from your legacy system, make sure you export the entire date range you wish to bring across into a single set of files.
-If your legacy system only allows for the export of a maximum 12 months of data at a time, please contact us first.
-If you import multiple years in multiple sets of files, it is possible you will create quite a number of duplicate records in onCourse.
+When you export the AVETMISS data from your legacy system, make sure you export the entire date range you wish to bring across into a single set of files. If your legacy system only allows for the export of a maximum 12 months of data at a time, please contact us first. If you import multiple years in multiple sets of files, it is possible you will create quite a number of duplicate records in onCourse.
 
-If you are importing AVETMISS data into to onCourse, it is import that it is validated and as error free as possible.
-We suggest using the
-https://avs.ncver.edu.au/avs/[NCVER AVS tool] to check your data prior to import.
+If you are importing AVETMISS data into to onCourse, it is import that it is validated and as error free as possible. We suggest using the https://avs.ncver.edu.au/avs/[NCVER AVS tool] to check your data prior to import.
 
-To import the NAT00060, NAT00080, NAT00085 and NAT00120 files, go to the Import window and select the option 'onCourse AVETMISS outcome import'.
-The import process will prompt you to open each of the NAT files listed above from a location on your computer.
+To import the NAT00060, NAT00080, NAT00085 and NAT00120 files, go to the Import window and select the option 'onCourse AVETMISS outcome import'. The import process will prompt you to open each of the NAT files listed above from a location on your computer.
 
 Once you have selected all four files, click on the import button on the bottom of the window.
 
 === Custom Migration
 
-Because the import is just groovy, you have the full use of both the groovy and Java programming languages to parse one of more files in any way you need.
-You can format, interpret and chop up the data in any way you like.
-Then take the results, create objects in onCourse (students, enrolments, vouchers, etc) and commit them to the database. onCourse comes with json, XML, CSV and fixed width parsers so those file formats are easy.
+Because the import is just groovy, you have the full use of both the groovy and Java programming languages to parse one of more files in any way you need. You can format, interpret and chop up the data in any way you like. Then take the results, create objects in onCourse (students, enrolments, vouchers, etc) and commit them to the database. onCourse comes with json, XML, CSV and fixed width parsers so those file formats are easy.
 
-You can also call an importer directly from onCourse scripts.
-So perhaps you might write an import format to bring in room Unavailability from an external room management system.
-Perhaps your rooms are shared across the campus and you need to get that data each day into onCourse.
-Simply write your script to fetch the data (perhaps a RESTful request) and pass it to the importer.
+You can also call an importer directly from onCourse scripts. So perhaps you might write an import format to bring in room Unavailability from an external room management system. Perhaps your rooms are shared across the campus and you need to get that data each day into onCourse. Simply write your script to fetch the data (perhaps a RESTful request) and pass it to the importer.
 
 We can also offer script writing and custom migration as a quoted service if you don't have the skills in house.

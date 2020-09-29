@@ -32,6 +32,4 @@ This work is licensed under a Creative Commons Attribution 4.0 International Lic
 
 ## Proprietary parts
 
-The artwork folder contains documents created using the Omnigraffle application which has been used to create most of the diagrams within the manuals. Ideally we'd like to migrate this to an open source tool.
-
 The DSL documentation also has a dependency on some swagger API files which are not available under an open source license yet. We are working on making that available.

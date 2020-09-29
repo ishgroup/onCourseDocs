@@ -1,40 +1,152 @@
 [[accounting]]
+
 == Accounting
 
-The following chapter provides an overview of the principles of the onCourse financial process, as well as clear explanations as to how you get the information you need from onCourse in order to obtain your monthly / weekly reports.
+The following chapter provides an overview of the principles of the onCourse financial process.
 
 [[accounting-Relationship]]
 === Relationship between the Student and the Debtor within onCourse
 
 onCourse has a clear separation between financial data and enrolment data. Students enrol in classes. Students may not be a company, since only natural people can enrol in a class. The contact linked to an invoice (the debtor) may however be a company or a natural person. The student and the debtor may be the same person; this often happens for a simple enrolment of one person into one class. The student and the debtor could be two different people, or in fact a debtor could pay for the enrolment of multiple students on one invoice.
 
-In the following example of a basic enrolment, there are 2 students Peter and Amy, and the invoice is issued to the debtor Geoff (1). Geoff then pays the full amount (2).
+In the following example of a basic enrolment, there are students Peter and Amy, and the invoice is issued to the debtor Geoff (1). Geoff then pays the full amount (3).
 
-image::images/Student_and_Debtor_Simple_Enrolment.png[title='Simple Enrolment for Student and Debtor']
+
+[plantuml]
+----
+hide footbox
+
+actor Geoff
+actor Peter
+actor Amy
+
+  Note over Geoff: Geoff wants to send his staff on a course.
+    Geoff -> Peter: enrol in Photography for $50
+    Geoff -> Amy: enrol in Photography for $50
+    Geoff --> Geoff: pay $100 invoice
+----
+
 
 If an enrolment needs to be cancelled for whatever reason, the cancellation process will generate a credit note to the debtor. It is important to note that although Peter might phone to cancel his enrolment, the credit can only be issued back to Geoff in onCourse.
 
-image::images/Student_and_Debtor_Refund_Process.png[title='Student and Debtor refund process']
+[plantuml]
+----
+hide footbox
+
+actor Geoff
+actor Peter
+actor Amy
+
+  Note over Peter: Peter cancels his enrolment
+    Peter -> Geoff: Cancel enrolment
+    Geoff --> Geoff: $50 credit note issued
+----
 
 As the credit note is attached to the debtor, it can be applied to another enrolment for the same student or a different student. In the following example Peter wishes to cancel his enrolment, so the credit note is issued to Geoff as the debtor. Geoff is then able to enrol another person (Sue) into another course using the credit note that has been issued.
 
-image::images/Student_and_Debtor_Cancellation_and_New_Enrolment.png[title='Original student cancels,allowing the credit note to be applied by the debtor (Geoff) to a new student (Sue)']
+[plantuml]
+----
+hide footbox
+
+actor Geoff
+actor Peter
+actor Sue
+
+  Note over Peter: Peter cancels his enrolment
+    Peter -> Geoff: Cancel enrolment
+    Geoff --> Geoff: $50 credit note issued
+  Geoff -> Sue: Enrol in Photography for $50
+ Geoff --> Geoff: $50 invoice created and paid by credit note
+----
+
 
 [[accounting-principles]]
 === Principles of Accrual Accounting
 
-onCourse works on the principle of accrual accounting, which means that the income is recorded to the General Ledger (GL) at the point the invoice has been generated, irrespective of when the payment is received. The following diagrams illustrate the difference between accrual accounting and cash accounting, and the point at which income is recorded against the GL.
+In cash accounting system income is recorded to the General Ledger (GL) at the time payment is received. Although this is simple, it isn't a good way to understand what your debtors and creditors represent on your balance sheet and it can limit how you structure your tax at the end of a financial year. You may receive large payments in advance (for example prepayment for training at the start of term) which aren't matched by expenses (like tutor wages) and look like large profits that in reality don't exist. onCourse is not a cash accounting system and cannot be used in that way. Trying will end in tears.
+
+onCourse works on the principle of deferred accrual accounting, which means that the income is recorded to the General Ledger (GL) at the point the invoice has been generated, irrespective of when the payment is received. The following diagrams illustrate the difference between accrual accounting and cash accounting, and the point at which income is recorded against the GL.
 
 You will note also that the income that is received will initially be assigned to a liability account, then transferred to the income account once the class commences. For further information see <<accounting-deferredIncome>>
 
-image::images/Updated_Accrual_vs_Cash_Accounting.png[title='Comparison of accrual and cash accounting standards']
+[plantuml]
+----
+hide footbox
+
+participant invoice
+participant payment
+participant class
+box General ledger
+collections transactions
+end box
+
+... Enrolment/invoice created ...
+
+invoice -[#green]> transactions:  <&arrow-top> Prepaid fee liability $300
+invoice -[#blue]> transactions: <&arrow-top> Trade debtor asset $300
+
+... Payment made ...
+
+payment -[#CornflowerBlue]> transactions: <&arrow-top>Cheque account asset $300
+payment -[#blue]> transactions: <&arrow-bottom>Trade debtor asset $300
+
+... Class commences sometimes later ...
+
+group daily for 10 days
+class -[#green]> transactions: <&arrow-top>Prepaid fee liability $30
+class -[#DeepPink]> transactions: <&arrow-bottom>Student fee Income $30
+end loop
+----
+
+
+[[accounting-deferredIncome]]
+==== Unearned Income
+
+In this section we provide an overview of how unearned income works within onCourse and how the system deals with adjustments and or cancellations to a Class.
+
+Transfer of funds from Liability Account to Income Account at time of Course Delivery.
+
+Unearned income is income received before goods are sold or a service is provided. When you enrol students, you collect the fees for the class. When the class is delivered, the income is then 'earned' by the provider. This is sometimes called deferred accrual accounting.
+
+When an invoice is generated within onCourse, those funds are initially listed within the GL against the Pre Paid Fees (Liability account). These funds are then transferred to the income account of the GL at the commencement of the Class.
+
+As you can see from the above diagram, the method by which onCourse determines how the unearned income is transferred across from the Pre Paid Fees (liability) account is as follows:
+
+. First session of class is run
+. At approximately 1am the following morning, the system will run a comparison between the amount of funds in the liability account and the amount of funds in the income account for that Class. It will also check how many hours of the overall Class have been run and how many are yet to be run
+. Based on the above comparison, onCourse automatically transfers an instalment of funds from the Pre Paid Fees account to the Income account
+. This nightly comparison will continue for the duration of the Class until all remaining funds are transferred from the Pre Paid Fees account to the Income account.
+
+==== What Happens If I have to Cancel or Add a Session to a Class?
+
+As you would have noted within the previous section, onCourse runs a nightly comparison of the amount of funds in the Pre Paid Fees account against the amount of funds in the Income account.
+
+If for example you have to cancel a session within a given Class, the next time the system does an overnight check of the status, it will allow for this cancellation and transfer all remaining funds to the Income account.
+
+Alternatively, if you have to add additional sessions to a Class, the system will adjust the nightly instalment of funds being transferred to allow for the increased number of total hours in the given Class.
+
+==== What if I want all funds to be transferred at the commencement of the Class?
+
+A College may decide that they do not wish to transfer income incrementally across the duration of a given Class.
+
+If you don't want to use this feature within onCourse, you can easily deactivate this within the Financial Preferences in the onCourse Application.
+
+By choosing to not assign funds from liability to income in nightly increments, the system will instead transfer all funds from the Pre Paid Fees account to the Income account the night after the first session of the Class is run.
+
+Please note that this setting is universal, so all Classes are either assigned funds incrementally across the duration of the Class, or the funds are transferred in one installment after the first session of the Class is completed.
 
 [[accounting-financialTransactions]]
 === Explanation of Financial Transactions Generated by the System
 
 onCourse follows the basic concepts of double-entry accounting: all financial transactions are written to the general ledger in balanced pairs. Asset and expense sit on the left, and liability and income on the right. So an increase in Asset could be matched with an equal decrease in another Asset. An increase in Expense might be matched by an equal increase in Liability.
 
-image::images/Basics_of_onCourse_Accounting.png[title='Basic principles of double-entry accounting']
+
+|===
+| Debit   | Credit
+
+| Asset   | Liability/Equity
+| Expense | Income
+|===
 
 ==== Financial Transactions generated by Enrolment and Payment Process
 
@@ -46,7 +158,23 @@ Within the Transaction window of onCourse, you can clearly see the individual tr
 . $300 is credited to the cheque account, also known as the deposited funds account, where your income is receipted,
 . Unearned income is transferred from Prepaid Fees Liability account to Income account once the Class commences.
 
-image::images/simple_enrol_pymt_with_deferred_income_non_gst.png[Transactions generated by simple enrolment Non GST Class including unearned income]
+[plantuml]
+----
+@startmindmap
+*_ <&person>
+** checkout
+*** invoice
+****_ <&arrow-top> Prepaid fee liability $300
+****_ <&arrow-top> Trade debtor asset $300
+*** enrolment
+*** payment
+****_ <&arrow-top>Cheque account asset $300
+****_ <&arrow-bottom>Trade debtor asset $300
+
+** Class commence
+***_ <&arrow-top>Prepaid fee liability $300
+***_ <&arrow-bottom>Student fee Income $300
+----
 
 For a class fee that includes GST, this would add 2 x additional transaction lines for the GST component of the class fee as shown.
 
@@ -57,8 +185,6 @@ For a class fee that includes GST, this would add 2 x additional transaction lin
 . Now the payment reverses the total amount owing (Fee + GST component) in Trade Debtors
 . $385 is credited to the cheque account, also known as the deposited funds account, where your income is receipted
 . Unearned income is transferred from Prepaid Fees Liability account to Income account once Class commences.
-
-image::images/simple_enrol_pymt_with_deferred_income_gst_inc.png[Transactions generated by simple enrolment GST Class including unearned income]
 
 [[accounting-COS_financials]]
 ==== Transactions created when a COS discount is applied
@@ -206,43 +332,6 @@ You can only use credit notes to contra invoices for the same contact. You can't
 
 image::images/invoice_detail_showing_contra_payment.png[title='Invoice detail showing a contra payment at the bottom of the Payments section']
 
-[[accounting-deferredIncome]]
-=== Unearned Income
-
-In this section we provide an overview of how unearned income works within onCourse and how the system deals with adjustments and or cancellations to a Class.
-
-Transfer of funds from Liability Account to Income Account at time of Course Delivery
-
-==== How Unearned Incomes Works
-
-Unearned income is income received before goods are sold or a service is provided. When you enrol students, you collect the fees for the class. When the class is delivered, the income is then 'earned' by the provider. This is sometimes called deferred accrual accounting.
-
-When an invoice is generated within onCourse, those funds are initially listed within the GL against the Pre Paid Fees (Liability account). These funds are then transferred to the income account of the GL at the commencement of the Class.
-
-As you can see from the above diagram, the method by which onCourse determines how the unearned income is transferred across from the Pre Paid Fees (liability) account is as follows:
-
-. First session of class is run
-. At approximately 1am the following morning, the system will run a comparison between the amount of funds in the liability account and the amount of funds in the income account for that Class. It will also check how many hours of the overall Class have been run and how many are yet to be run
-. Based on the above comparison, onCourse automatically transfers an instalment of funds from the Pre Paid Fees account to the Income account
-. This nightly comparison will continue for the duration of the Class until all remaining funds are transferred from the Pre Paid Fees account to the Income account.
-
-==== What Happens If I have to Cancel or Add a Session to a Class?
-
-As you would have noted within the previous section, onCourse runs a nightly comparison of the amount of funds in the Pre Paid Fees account against the amount of funds in the Income account.
-
-If for example you have to cancel a session within a given Class, the next time the system does an overnight check of the status, it will allow for this cancellation and transfer all remaining funds to the Income account.
-
-Alternatively, if you have to add additional sessions to a Class, the system will adjust the nightly instalment of funds being transferred to allow for the increased number of total hours in the given Class.
-
-==== What if I want all funds to be transferred at the commencement of the Class?
-
-A College may decide that they do not wish to transfer income incrementally across the duration of a given Class.
-
-If you don't want to use this feature within onCourse, you can easily deactivate this within the Financial Preferences in the onCourse Application.
-
-By choosing to not assign funds from liability to income in nightly increments, the system will instead transfer all funds from the Pre Paid Fees account to the Income account the night after the first session of the Class is run.
-
-Please note that this setting is universal, so all Classes are either assigned funds incrementally across the duration of the Class, or the funds are transferred in one installment after the first session of the Class is completed.
 
 [[accounting-accountCodes]]
 === Creating additional income accounts

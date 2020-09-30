@@ -20,7 +20,7 @@ subprojects {
     apply plugin: 'org.asciidoctor.jvm.convert'
 
     group = 'ish.oncourse.docs'
-    version = project.hasProperty('releaseVersion') ? project.releaseVersion : 'SNAPSHOT'
+    version = "" // this project doesn't have versioned releases
 
     // bug https://github.com/asciidoctor/asciidoctor-gradle-plugin/issues/559
     repositories {
@@ -76,6 +76,7 @@ subprojects {
 
     distributions {
         html {
+            baseName project.name
             contents {
                 from "${buildDir}/html"
             }
@@ -87,9 +88,7 @@ subprojects {
     publishing {
         publications {
             html(MavenPublication) {
-                artifact htmlDistZip {
-                    archiveName "${project.name}.zip"
-                }
+                artifact htmlDistZip
             }
         }
         repositories {

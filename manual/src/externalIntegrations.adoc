@@ -289,13 +289,14 @@ TalentLMS is a cloud-based learning management system that provides an online to
 
 Enter your TalentLMS URL into 'Base url' and your TalentLMS API key into 'API key'. Once you save the integration a new script block will be available for use. The standard script looks just like this:
 
-```
+[source,groovy]
+----
 talentLMS {
     action 'enrol'
     course record.courseClass.course.code
     student record.student
 }
-```
+----
 
 By default, the course in TalentLMS should be named with the onCourse course code for this integration to work. Of course, you can modify this script to use any value, for example the course-class code or even the unit of competency code.
 
@@ -314,13 +315,14 @@ After this is set up, generate a password for the admin user; this is the user w
 
 Then, go to the Automation window and look under Scripts for the script called 'LearnDash course enrolment' and enable it, then click Save. The standard script will look like:
 
-```
+[source,groovy]
+----
 learndash {
     action 'enrol'
     course record.courseClass.course.code
     student record.student
 }
-```
+----
 
 onCourse needs to match against the course slug in LearnDash. By default, it uses the onCourse Course Code to do this, but you can alter this to something else if you wish. In its default configuration, you need ensure that the Course Code in onCourse and the course slug in LearnDash match.
 

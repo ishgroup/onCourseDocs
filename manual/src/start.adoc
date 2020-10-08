@@ -74,7 +74,8 @@ In order to download and install the standalone application:
 
 By default onCourse.yml looks like this:
 
-```
+[source,yaml]
+----
 http:
     port: 443
     ip: 127.0.0.1
@@ -86,7 +87,7 @@ db:
 license:
     max_concurrent_users: 99
     admin_password_reset: false
-```
+----
 
 At a minimum, you'll want to set the ip address to a reachable address on your server. Perhaps you'll have onCourse behind a firewall or load balancer or exposed directly to the internet on a public IP address. That's up to you.
 
@@ -98,23 +99,27 @@ Finally the license section allows you to limit concurrent users and force the a
 
 Then you'll need to create a certificate for your browser to connect to onCourse with. For testing you can use a self-signed certificate, but in production you'll definitely need a properly signed certificate for your domain. First create a PEM formatted certificate and key pair named "onCourseSSL.pem", complete with all intermediate certificates.
 
-```
-# openssl genrsa -aes256 -out onCourseSSL.key 4096
-```
+[source,shell script]
+----
+openssl genrsa -aes256 -out onCourseSSL.key 4096
+----
 
 Enter any password at the prompt.
 
-```
-# openssl req -new -x509 -key onCourseSSL.key -out onCourseSSL.pem -days 825
-```
+[source,shell script]
+----
+openssl req -new -x509 -key onCourseSSL.key -out onCourseSSL.pem -days 825
+----
 
 Answer all the questions. The Common Name should be the fully qualified domain name of the onCourse Server you are deploying. At this point you should get this key signed by Let's Encrypt or another certifying authority. Then continue conerting the certificate and key to pkcs12 and then to a keystore:
 
-```
-# openssl pkcs12 -export -out onCourseSSL.pkcs12 -in onCourseSSL.pem -inkey onCourseSSL.key -password pass:ish2008
+[source,shell script]
+----
+openssl pkcs12 -export -out onCourseSSL.pkcs12 -in onCourseSSL.pem -inkey onCourseSSL.key -password pass:ish2008
 
-# keytool -v -importkeystore -srckeystore onCourseSSL.pkcs12 -srcstoretype PKCS12 -destkeystore onCourseSSL.keystore -deststoretype PKCS12 -srcstorepass ish2008 -deststorepass ish2008 -noprompt
-```
+keytool -v -importkeystore -srckeystore onCourseSSL.pkcs12 -srcstoretype PKCS12 -destkeystore onCourseSSL.keystore -deststoretype PKCS12 -srcstorepass ish2008 -deststorepass ish2008 -noprompt
+----
+
 `keytool` comes bundled with the Java JDK. The final result is a file called onCourseSSL.keystore which you should put in the same directory as onCourse.yml.
 
 === Launching server

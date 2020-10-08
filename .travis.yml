@@ -1,18 +1,22 @@
 language: java
 install: skip
-
 os: linux
 dist: focal
 jdk: openjdk11
-
 script:
-  - ./gradlew asciidoc
-
+- "./gradlew asciidoc"
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+deploy:
+  provider: releases
+  api_key:
+    secure: co/LzJ5huNmk4qFNA3LmfZRBi5ro8uYwW/4kAuAee5lBGb+g+hkZAJjq+Q6gXqF6fu0X493tJyNGL5t0xjPLwhzLVpFQrDOhMthBfN/IfjVZrUzdeiHKVAGAhS5eADUNAL58tbwZsRynU/ZKN/he8gnh++ncxFz5SszOChbS3jeuDEGcAESopYgVKk9PiViSw43f1+JcGj9orc5ZN5ceKtSQ6Rrnza+BxYFjz+3oaQYRPev4edtEcbqUG4GjzQVGtn9bTv4vx8lqrnGEv/pcyFfmIA50T/+hqHp6DFRpbY5AHcTSw+ur3UNn3OiEfIC7eIjbZx5OEZSkqtIIxAvN3GBtgJ7rx7fRyxNIILl2SX8ztuByhTm8DydujLWgugNnC8vob7W0vgOq3LmuSIGirffReT+z5FXp6eBkHCXJOagNzHmoxFpwwOWSUDvAfgWcsSxAH0E58DoDL88RaAR9/bK92E++4xPU7XrVWryCd6cIE73FkqbgqzMSDTLqIP0OJq8zR+E+Q4/BaOCNh70Lg4ZbDFOQ0Rfcq5k0JetBiUakzbYWHaRrVt6+xIc+S8Z2OEYq6uNk5x7pTAqobjx/OLnDtblvEZHE4s7oeihEVe3FArcqL4k5c5GwAfqWPWGtIyDyfAQg7Q17jDkDMO8f+0M7gubkYZ1RstaGX6n32/g=
+  file: manual/build/distributions/manual.zip
+  on:
+    repo: ishgroup/onCourseDocs
+  skip_cleanup: 'true'

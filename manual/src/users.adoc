@@ -338,10 +338,6 @@ Please take careful note of the "Full Computer Name" and the "Domain" as with th
 
 Now the next thing we need to get the LDAP/AD authentication working is either the Administrator password or, a user account which is a member of the Administrators group. This is because when a query happens on the AD server it is required to login first before it can do any searches on users. If your administrators want to lock it down further they are welcome to do so, we only need read access to all user and group objects in the AD as well as the passwords for all of those users. So now we enter "Active Directory Users and Computers" and create our user: and add it to the administrators group and remember your password!
 
-Now we have everything we need! Complete the setup screen as follows:
-
-image::images/onCourse_LDAP_AD_screen_setup.png[]
-
 Once you have substituted all of the settings as necessary press the "Test Connection" button to ensure that onCourse can bind to the LDAP server. Once that works, you can then go to the "Users" section of this configuration page and place "sAMAccountName" and (objectClass=user) for the search filter. Now test a user in your domain and see if it authenticates. If it works, congratulations you are now authenticating against your AD server!
 
 ==== AD Authorisation

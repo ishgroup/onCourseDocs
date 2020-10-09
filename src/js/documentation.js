@@ -1,13 +1,7 @@
-window.onload = function() {
-  var loaderParent = document.createElement('div');
-  loaderParent.classList.add("splash-page");
-  loaderParent.innerHTML = '<div class="loader-inner line-scale"><div></div><div></div><div></div><div></div><div></div> </div>';
-  document.body.appendChild(loaderParent);
-};
-
 $(document).ready(function() {
+  $('body').addClass('page-loaded');
   setTimeout(function() {
-    $('body').addClass('page-loaded');
+    $('body').addClass('is-loaded');
   }, 1000);
 
   $('#header').before('\
@@ -39,7 +33,7 @@ $(document).ready(function() {
   if (hash !== "") {
     setTimeout(function() {
       $('.sidebar-toc #toc a[href="' + hash + '"].nav-link')[0].click();
-    }, 1500);
+    }, 300);
   }
 
   $(window).on('scroll', function() {

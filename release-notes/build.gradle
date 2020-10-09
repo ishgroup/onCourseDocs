@@ -71,7 +71,7 @@ task outputIndex(type: org.asciidoctor.gradle.jvm.AsciidoctorTask, dependsOn: bu
   sources {
     include 'index.adoc'
   }
-  outputDir "${buildDir}/html"
+  outputDir "${buildDir}/dist"
   options doctype: 'book'
   asciidoctorj {
     attributes 'source-highlighter': 'coderay',
@@ -89,7 +89,7 @@ asciidoctor.dependsOn outputIndex
 asciidoctor.doLast {
   copy {
     from "src"
-    into "${buildDir}/html"
+    into "${buildDir}/dist"
     exclude '**/*.adoc'
   }
 }

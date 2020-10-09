@@ -3,7 +3,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 plugins {
-    id 'com.github.ben-manes.versions' version '0.29.0' // adds the task 'dependencyUpdates'
+    id 'com.github.ben-manes.versions' version '0.33.0' // adds the task 'dependencyUpdates'
     id 'com.dorongold.task-tree' version '1.5' // adds the task 'taskTree [some task]'
     id 'distribution'
     id 'maven-publish'
@@ -20,7 +20,7 @@ subprojects {
     apply plugin: 'org.asciidoctor.jvm.convert'
 
     group = 'ish.oncourse.docs'
-    version = "" // this project doesn't have versioned releases
+    version = 'SNAPSHOT' // this project doesn't have versioned releases
 
     // bug https://github.com/asciidoctor/asciidoctor-gradle-plugin/issues/559
     repositories {
@@ -34,7 +34,7 @@ subprojects {
         sources {
             include 'index.adoc'
         }
-        outputDir "${buildDir}/html"
+        outputDir "${buildDir}/dist"
         options doctype: 'book'
         attributes  'source-highlighter': 'coderay',
                     'linkcss': '',
@@ -69,40 +69,41 @@ subprojects {
         }
         doLast {
             ant.replaceregexp(match: 'img src', replace: 'img src="images/placeholder.png" class="lazy" data-src', flags: 'g') {
-                fileset(dir: "${buildDir}/html", includes: '*.html')
+                fileset(dir: "${buildDir}/dist", includes: '*.html')
             }
         }
     }
 
     distributions {
-        html {
-            baseName project.name
+        main {
             contents {
-                from "${buildDir}/html"
+                from asciidoctor
             }
         }
     }
-    distTar.enabled = false
-    htmlDistZip.dependsOn asciidoctor
 
     publishing {
         publications {
-            html(MavenPublication) {
-                artifact htmlDistZip
+            maven(MavenPublication) {
+                artifact distZip
+                pom {
+                    description = "ish onCourse documentation"
+                    licenses {
+                        license {
+                            name = "Creative Commons Attribution 4.0 International License"
+                            url = "https://github.com/ishgroup/onCourseDocs/blob/master/LICENSE.txt"
+                        }
+                    }
+                    scm {
+                        url = "https://github.com/ishgroup/onCourseDocs"
+                    }
+                }
             }
         }
         repositories {
             maven {
                 name "snapshots"
                 url "https://repo.ish.com.au/content/repositories/ish-snapshots"
-                credentials {
-                    username nexusUsername
-                    password nexusPassword
-                }
-            }
-            maven {
-                name "releases"
-                url "https://repo.ish.com.au/content/repositories/ish-releases"
                 credentials {
                     username nexusUsername
                     password nexusPassword

@@ -15,6 +15,7 @@ cache:
 
 deploy:
   provider: releases
+  github_token: $GITHUB_TOKEN
   file:
     - manual/build/distributions/manual.zip
     - design/build/distributions/design.zip

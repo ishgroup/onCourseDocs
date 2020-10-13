@@ -82,6 +82,10 @@ subprojects {
         }
     }
 
+    distZip {
+        archiveFileName.set "${project.name}.zip"
+    }
+
     publishing {
         publications {
             maven(MavenPublication) {

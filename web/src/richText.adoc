@@ -17,8 +17,84 @@ If you select HTML you can use standard HTML tags to build the content on your p
 
 Markdown is a simplified markup language designed to be easy to use for people who don't code. To add content using markdown, select 'markdown' from the drop-down box in the top-right of the content page you're editing. Markdown mode also supports HTML, so you can combine the two when using markdown mode.
 
+==== Simple guide to Markdown
+
+.Common formatting options
+[cols=",,",options="header",]
+|===
+|You type |Output |Notes
+a|
+....
+The sun was **shining on the sea**
+....
+
+|The sun was *shining on the sea* |All text between the * will be bold.
+Don't put a space between the * and the text.
+
+a|
+....
+Shining with _all its might_
+....
+
+|Shining with _all its might_ |All text between the _ will be italics.
+Don't put a space between the _ and the text.
+
+a|
+....
+* Now this was very odd
+* because it was
+* the middle of the night
+....
+
+a|
+* Now this was very odd
+* because it was
+* the middle of the night
+
+|Make sure you put a space after the * on each line.
+
+a|
+....
+1. Now this was very odd
+2. because it was
+3. the middle of the night
+....
+
+a|
+
+. Now this was very odd
+. because it was
+. the middle of the night
+
+|Make sure you put a space after the # on each line.
+
+a|
+....
+# The Moon
+....
+
+| *The Moon* |Use the h1. for a large heading (you can also use h2. h3.
+h4. and h5. for smaller headings). Ensure you use a lower case h and
+full stop and space after the number. Leave a blank line of text between
+your heading text and the following paragraph, or all the text to follow
+will be rendered as a heading also.
+
+a|
+....
+https://hole.example.com[Alice]
+....
+
+|https://hole.example.com[Alice] |The text wrapped in the quotes becomes
+the hyperlink text and the url which follows is the link the user will
+be redirected to upon clicking.
+
+a|
+|===
+
+
 [[richText-mdHeaders]]
 ==== Headers
+To type out a header, add a # symbol at the beginning of the line. The number of # you use, up to 4 total, sets the type of heading that's used.
 
 [source,markdown]
 ----
@@ -31,12 +107,13 @@ Markdown is a simplified markup language designed to be easy to use for people w
 [[richText-mdEmphasis]]
 ==== Emphasis
 
+You can bold or italicize text by wrapping the text in asterisks and/or underscores.
+
 [source,markdown]
 ----
 You can **bold text** using twin asterisk's (**) on either side of the text you want to emphasize.
 You can use _italics_ by using an underline (_) on either side of the text you want to emphasize.
 You can also combine the two to create text that's **both bold and _italicized_**.
-If you want to ~~crossout~~ strike out some text, add twin tilde's (~~) either side of it.
 ----
 
 [[richText-mdLineBreaks]]
@@ -47,7 +124,7 @@ Line breaks can be added by starting a new paragraph with a line gap in between 
 [[richText-mdLists]]
 ==== Lists
 
-You can create both ordered and unordered lists, ansd combinations of the two as well. Some examples include:
+You can create both ordered and unordered lists, and combinations of the two as well. Some examples include:
 
 [source,markdown]
 ----
@@ -94,7 +171,7 @@ Whatever you put in 'Title Text' will appear when hovering the mouse over the im
 [[richText-mdCodeBlock]]
 ==== Code blocks
 
-You can highlight portions of text to preserve things like code formatting by using the ` symbol. You can also create code blocks this way, see the example below:
+You can highlight portions of text to preserve things like code formatting by flanking the text using the ` symbol. You can also create code blocks this way, see the example below:
 
 [source,markdown]
 ----
@@ -118,6 +195,18 @@ You can highlight `certain words` or a `call to action` like this.
 
 You can insert videos using pure Markdown, however it's far simpler (and better for users as well) if you simply embed the html code into the page. Video services like YouTube have an easy 'Embed' button that gives you the code you need to copy and paste into the content field of the page you're editing.
 
+[[richText-mdBlockQuote]]
+==== Block Quotes
+
+You can add Block Quotes to your text by using a > symbol at the beginning of the line, like so:
+
+[source,markdown]
+----
+> This is a block quote.
+> This is a part of the same block quote.
+----
+
+
 [[richText-Legacy]]
 === Legacy (rich text)
 
@@ -128,7 +217,7 @@ Many places in onCourse where can enter large amounts of text to display on the 
 You can also enter rich text in any web page or block within the CMS when 'legacy' is selected.
 
 [[richText-guide]]
-===== Simple guide to rich text
+==== Simple guide to rich text
 
 .Common formatting options
 [cols=",,",options="header",]

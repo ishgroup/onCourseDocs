@@ -13,11 +13,11 @@ image::images/editor_dropdown_selections.png[title="The three choices of editing
 If you select HTML you can use standard HTML tags to build the content on your page. This is only recommended for advanced users with a prior working knowledge of HTML, otherwise we recommend using markdown mode.
 
 [[richText-md]]
-=== Markdown
+=== Rich Text
 
 Markdown is a simplified markup language designed to be easy to use for people who don't code. To add content using markdown, select 'markdown' from the drop-down box in the top-right of the content page you're editing. Markdown mode also supports HTML, so you can combine the two when using markdown mode.
 
-==== Simple guide to Markdown
+==== Simple guide to Rich Text
 
 .Common formatting options
 [cols=",,",options="header",]
@@ -208,7 +208,7 @@ You can add Block Quotes to your text by using a > symbol at the beginning of th
 
 
 [[richText-Legacy]]
-=== Legacy (rich text)
+=== Legacy
 
 ==== Formatting text
 
@@ -217,7 +217,7 @@ Many places in onCourse where can enter large amounts of text to display on the 
 You can also enter rich text in any web page or block within the CMS when 'legacy' is selected.
 
 [[richText-guide]]
-==== Simple guide to rich text
+==== Simple guide to legacy
 
 .Common formatting options
 [cols=",,",options="header",]
@@ -308,11 +308,12 @@ default mail client, followed by the email address.
 |===
 
 For further information about rich text, please look at the
-http://en.wikipedia.org/wiki/Textile_%28markup_language%29[Textile
+http://en.wikipedia.org/wiki/Textile_%28markup_language%2
+9[Textile
 documentation].
 We use textile with some special extra additions for dynamic course content.
 
-==== Inserting dynamic content
+=== Dynamic content
 
 Using *rich text markup* onCourse is able to draw from many parts of your data.
 Maybe you wish to display a banner, linked to a random course from a subset of high priority courses; or display a collapsible menu of subject.
@@ -340,13 +341,13 @@ That is, you can insert images, course lists, video and much more inside other w
 |Add text field into a given form |\{text}
 |===
 
-==== \{block}
+=== \{block}
 
 Start by creating a new Block in the CMS editor and giving it the title of "bannerAd1".
 Put some text in there an image with a link to some special offer.
 Once this Block is saved it can be displayed in either your content or another block, throughout your website by the simple inclusion of the rich text markup
 
-===== Usage
+==== Usage
 
 ....
 {block name:"bannerAd1"}
@@ -357,7 +358,7 @@ The name of the Web Block.
 Blocks cannot share the same name, so make sure each in unique.
 
 [[Course]]
-==== \{course}
+=== \{course}
 
 The second rich text markup we consider is *\{course}* This tag functions to embed specific onCourse Course data into a page or web block.
 It can display data/content either at random, or specified from a particular grouping - ie evening classes.
@@ -365,7 +366,7 @@ If a course is chosen at random - courses can be restricted by specific tagging 
 
 You might like to highlight particular courses on your front page ("Course of the Week" for example), or display a random course in a 'block' in the sidebar across all pages of your website - the possibilities are endless.
 
-===== Usage
+==== Usage
 
 ....
 {course tag:"/Subjects/Leisure/Arts" showclasses:"false"}
@@ -389,14 +390,14 @@ A unordered list of all the classes available for this course will also be displ
 Default is false.
 
 [[tags-courses]]
-==== \{courses}
+=== \{courses}
 
 The third rich text markup we should look at is *\{courses}* This variation of the "course" code will display a List of courses within your content or "block"; and can be sorted dynamically by number of filters including; by start date; alphabetical listing, and others.
 
 For example the Courses markup could be used if you wished to create a home page... or landing page that contained the most popular courses, alternatively Courses that were about to start through the coming week.
 To do so, what you would need to do is open the relevant page - home page or other, and place the following rich text markup: (replace 'yourTopicsHere' with an appropriate list)
 
-===== Usage
+==== Usage
 
 ....
 {courses tag:"/Subjects/Leisure/Arts" limit:"3" sort:"alphabetical" order:"asc" style:"titles"}
@@ -442,7 +443,7 @@ details: shows full information about this course
 default: details
 
 [[tags-tags]]
-==== \{tags}
+=== \{tags}
 
 Tags are the most common way of creating navigation to your courses and classes.
 You might organise your courses into subject categories, e.g.:
@@ -476,7 +477,7 @@ Clicking on any tag will take the user to a URL like /courses/leisure/crafts and
 To place a tree of tag options on a page, simply use the rich text "\{tags}".
 Further options allow you to customise the output.
 
-===== Usage
+==== Usage
 
 ....
 {tags name:"/Subjects/Leisure/Craft" maxLevels:"3" showDetail:"true" hideTopLevel:"false" template:"TagItem.tml"}
@@ -507,7 +508,7 @@ The name of the template to use for rendering each item in the tag list.
 Defaults to TagItem.tml.
 If you set this to something else, make sure you create the appropriate file in your website resources.
 
-===== Sample HTML output
+==== Sample HTML output
 
 [source,xml]
 ----
@@ -528,12 +529,12 @@ If you set this to something else, make sure you create the appropriate file in 
 
 The output of \{tags} with a little css styling applied.
 
-==== \{page}
+=== \{page}
 
 You may want to display content from one page within another page.
 Use this rich text element to embed content.
 
-===== Usage
+==== Usage
 
 ....
 {page code:"123"}
@@ -543,7 +544,7 @@ code::
 The page number you wish to embed.
 This is the same as the number at the end of the default URL for the target page ("/page/123").
 
-==== \{form}
+=== \{form}
 
 You are able to use this markup to display a form on the page which anyone can fill in.
 This can be very useful as a 'contact us' form for example.
@@ -551,7 +552,7 @@ When the user enters the required data, an email is sent to the address you nomi
 This is the only rich text markup which requires a closing bit of markup to designate where the form ends.
 Don't forget to insert \{form} at the end!
 
-===== Usage
+==== Usage
 
 ....
 {form name:"email us" email:"sales@acmecollege.com.au" url:"/thankyou"}
@@ -575,12 +576,12 @@ If not supplied, they will be returned to the current page.
 required fields::
 If you wish to set a given field as a required field, you can reflect this within the form as either 'true' or 'yes' if it is required.
 
-==== \{text}
+=== \{text}
 
 This markup is only useful inside \{form} markup (see the previous section).
 You use this to add a text field into the form.
 
-===== Usage
+==== Usage
 
 ....
 {text label:"Reason for complaint" required:true lines:8}
@@ -599,12 +600,12 @@ If this value is not set, a single line text field will be shown.
 This can be set to any integer value greater than 1 and limits the input in this field to this number of characters.
 Note that spaces count toward this maximum.
 
-==== \{radiolist}
+=== \{radiolist}
 
 This markup is only useful inside \{form} markup.
 You use this to add a set of radio buttons into the form, of which only one can be selected.
 
-===== Usage
+==== Usage
 
 ....
 {radiolist label:"Age range" default:"20-25" options:"20-25,26-30,31-35,36-40,41-45,46-50,50+"}
@@ -622,12 +623,12 @@ Setting this to any other value or leaving it out means that the field is option
 This comma separated list of options will be displayed as the list of radio button options.
 You must have at least two options.
 
-==== \{popuplist}
+=== \{popuplist}
 
 This markup is only useful inside \{form} markup.
 You use this to add a popup list into the form, of which only one can be selected.
 
-===== Usage
+==== Usage
 
 ....
 {popuplist label:"Age range" default:"20-25" options:"20-25,26-30,31-35,36-40,41-45,46-50,50+"}
@@ -646,7 +647,7 @@ This comma separated list of options will be displayed as the list of options.
 You must have at least two options.
 
 [[images_and_attachments-image]]
-==== \{image}
+=== \{image}
 
 You may want to attach images and other files to courses, classes, sites, rooms and tutors and have them appear on the website.
 Just attach the file you want in onCourse via the Training > Documents menu item, click the '+' button and upload the file or image, mark it as 'Public' via the Access dropdown box and that file will be automatically transferred and attached to your site.
@@ -655,7 +656,7 @@ So for instance, just attach a PDF to a course to have that document appear as a
 Likewise, pictures will appear at the bottom of the page.
 If however you would like to position the image somewhere else (say, next to the relevant paragraph of text) you can do so with a special rich text entry called \{image}.
 
-===== Usage
+==== Usage
 
 ....
 {image name:"duck" align:"right" caption:"This is a duck"}
@@ -697,7 +698,7 @@ Optional.
 If supplied, this image will be made an href link to the destination you specify.
 
 [[images_and_attachments-video]]
-==== \{video}
+=== \{video}
 
 Embed a video on your page.
 You will not upload the video directly to onCourse, but instead use a third party service like YouTube - their servers are optimised for video delivery and the performance and tools more helpful.
@@ -706,7 +707,7 @@ You can also use this within the Marketing tab of any Course, Class or anywhere 
 Just copy and paste the below portion of code, and replace the youtube_id with the id from the YouTube video you wish to embed.
 You can find this after the = sign in the Video URL.
 
-===== Usage
+==== Usage
 
 ....
 p<{height:315px}. {video type:"youtube" id:"youtube_id" height:"315" width:"560"}
@@ -727,12 +728,12 @@ The width in pixels you want to force the video to.
 If you leave this option out, it will default to the standard player size.
 
 [[images_and_attachments-attachment]]
-==== \{attachment}
+=== \{attachment}
 
 Link to an attachment.
 When your user clicks on the link, the file will be downloaded. You will want to use well accepted file formats such as PDF.
 
-===== Usage
+==== Usage
 
 ....
 {attachment name:"course_guide"}

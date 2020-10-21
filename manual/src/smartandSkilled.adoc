@@ -1,4 +1,4 @@
-[[fundedTrainging]]
+[[fundedTraining]]
 == Funded Training
 
 https://smartandskilled.nsw.gov.au/for-training-providers[Smart and Skilled] is the NSW funded training programme and https://www.education.vic.gov.au/skillsfirst/Pages/default.aspx[Skills First] is the Victorian State government programme administered by Skills Victoria. Other states also have funded training programmes which are also supported by onCourse.
@@ -14,7 +14,7 @@ As outcomes are completed (or withdrawn) certain funding will be paid as per you
 Completion::
 Finally, when you create a Certificate in onCourse and all the outcomes are finalised, you'll be able to receive your final payment.
 
-
+[[fundedTraining-skillsGroups]]
 === Skills Groups
 
 Skills Group are special 'made up' Skill Sets or mini qualifications that have been invented by funding bodies to allow funding for clusters of units.
@@ -32,6 +32,7 @@ onCourse includes by default all official training package and accredited course
 
 image::images/smartandskilled_SkillsGroupCourse.png[title='Smart and Skilled Course set up with a Skills Group ']
 
+[[fundedTraining-generalConfig]]
 === General configuration
 
 Data collection rules and forms allow you to define what information is collected during the online enrolment, application and waiting list process. You can create custom fields and forms for using the Data Collection feature, and assigned them to particular courses, which can assist with the individual requirements of your contact. You can read more about <<dataCollection>>.
@@ -44,53 +45,46 @@ Finally, set up your classes and decide whether the enrolments in that class wil
 
 image::images/smartandskilledClassSetUp.png[title='Smart and Skilled Class VET tab with the funding contract 'STSOnline(NSW)' selected ']
 
+[[fundedTraining-enrolments]]
 === Enrolments
 
 After processing the student enrolment ensure you add the Commitment ID to the `Purchasing Contract Identifier` field. If the student has multiple enrolments under this funding committment ID (for example you may have split up the delivery into separate classes) make sure they all have exactly the same ID so onCourse can join them together in the AVETMISS export.
 
 image::images/smart_and_skilled_fields.png[title='Red text showing where specific Smart and Skilled data is recorded']
 
-
+[[fundedTraining-eligibilityChecks]]
 === Eligibility Checks and Provider Calculator
 
-onCourse has developed processes that allow you to collect the student's information and lodge it with State Training Services using the STSOnline provider portal.
-You will need to ensure the following set up at the course level before you can proceed.
+onCourse has developed processes that allow you to collect the student's information and lodge it with State Training Services using the STSOnline provider portal, using onCourse's Smart and Skilled Bulk Upload export. You will need to ensure everything is set up at the course level before you can proceed.
 
-
-
+[[fundedTraining-bulkUploadExport]]
 ==== Creating the Bulk Upload Export
 
 . From the Dashboard, open the Applications window.
-. From the Applications list view, sort and filter the list until you have the applications you want in the batch.
-Ensure they are highlighted.
+. From the Applications list view, sort and filter the list until you have the applications you want in the batch. Ensure they are highlighted.
 . Go to the Share icon on the bottom right hand of the list view, select Excel, and the export file "Smart and Skilled Bulk Upload" and click Share.
 . Save the file to your computer.
 
 image::images/smartandskilledBulkUpload.png[title='Smart and Skilled Bulk Upload Export']
 
-==== Editing the Bulk Upload Template for Eligibility Checks
+===== Editing the Bulk Upload Template for Eligibility Checks
 
 The bulk upload template will need to be edited before you can upload it via the STSOnline provider portal.
 
-Certain fields are mandatory and must be completed for a successful upload.
-Some fields are conditional and only need to be completed if another field has a value.
-A few fields are optional and do not need to be completed for he Eligibility checks.
+Certain fields are mandatory and must be completed for a successful upload. Some fields are conditional and only need to be completed if another field has a value. A few fields are optional and do not need to be completed for the eligibility checks.
 
 Full details of the fields and their specifications are found in the "Smart and Skilled Provider Calculator Data Specifications and User Guide Multiple Student Process" available from the STSOnline provider portal.
 
-onCourse has added values where applicable from the student, employer, course or class and included some default values for fields as details below, however, the provider will need to confirm that they are accurate and correct for each upload.
-
-All values in the export will need to be reviewed and verified by the operators to ensure it's compliant.
-You should consult the documentation on the STSOnline provider portal for specific information.
+onCourse has added values where applicable from the student, employer, course or class and included some default values for fields as details below, however, the provider will need to confirm that they are accurate and correct for each upload. All values in the export will need to be reviewed and verified by the operators to ensure it's compliant. You should consult the documentation on the STSOnline provider portal for specific information.
 
 We recommend you download the "Smart and Skilled Provider Calculator Data Specifications and User Guide Multiple Student Process" Table 1 Bulk Upload file and confirm the values you will need to enter with your compliance team or management before you do your first upload.
 
-Please make sure to check that the dates are formatted as DD/MM/YYY for all date columns, some spreadsheet programs will change the date formats when the file is opened.
+Please make sure to check that the dates are formatted as DD/MM/YYYY for all date columns, some spreadsheet programs will change the date formats when the file is opened.
 
 If you encounter issues with the upload failing or student not being accepted, you will need to contact Training Market for assistance:
 https://www.training.nsw.gov.au/about_us/contacts.html
 
-==== Export values for an Eligibility Checks
+===== Export values for an Eligibility Checks
 
 .Bulk Upload Export Template Fields for Eligibility Checks
 [width="100%",cols="9%,15%,10%,50%,8%,8%",options="header",]

@@ -30,6 +30,7 @@ This is most commonly added as a secondary payment to cover variable costs like 
 
 Pay rate can be assigned on oncost to take into account any additional expenses related to employment, such as superannuation, leave loading, payroll tax and workers compensation costs. Oncosts are added to the budget to reflect the costs of employment, they are not added to or displayed on the payslip.
 
+[[payroll-updatingPay]]
 ==== Updating pay
 
 Once a pay run has been generated tutors with pay cannot then be deleted from the class or timetable which are linked to those payslips. You can however change the payable hours in the timetable sessions and they will not update the payslips which are already generated.
@@ -38,16 +39,19 @@ If you add a tutor to additional classes or timetables and assign a pay in those
 
 If your pay rate doesn't start until today, but the class start date is prior to today, no automatic pay rate will be found when you add the Tutor to the class. You can still create a manual pay line in the class. Also, if the pay rate changes during the class progress, i.e. class spans June and July, and at the start of the financial year a new pay rate applies, that class budget information will only show the original pay rate in the cost calculations, but the actual payslip calculations will be correct as to the timing of each session and the pay rate that applied as each session was delivered.
 
+You can assign tutors multiple tutor roles, and therefore multiple pay rates, by adding the tutor to the class more than once.
+
 
 [[payroll-defaultRates]]
-=== Default pay rates
+=== Tutor pay rates
 
-onCourse allows you to https://demo.cloud.oncourse.cc/preferences/tutorRoles/[assign pay rates] to Tutor types. These are used by default but can be overridden or edited per class as needed. So when you assign a tutor to a class timetable and give them a role of "assessor" any pay rates from that role are automatically applied.
+onCourse allows you to https://demo.cloud.oncourse.cc/preferences/tutorRoles/[assign pay rates] to Tutor types. These are used by default but can be created, overridden and edited per class as needed. So when you assign a tutor to a class timetable and give them a role of "assessor" any pay rates from that role are automatically applied.
 
 image::images/definedTutorRolesList.png[title=adding a default payrate]
 
-You can assign multiple payrates for a single tutor role, each with a starting date. This allows you to plan for future award and negotiated rate changes even if that change occurs in the middle of a class timetable. onCourse will automatically adjust the pay rate on the transition date.
+You can assign multiple pay rates for a single tutor role, each with a starting date. This allows you to plan for future award and negotiated rate changes even if that change occurs in the middle of a class timetable. onCourse will automatically adjust the pay rate on the transition date.
 
+[[payroll-inactiveRoles]]
 ==== Disabling tutor roles
 
 If a tutor role and rate is no longer used by your college, you can make the role inactive.
@@ -61,11 +65,15 @@ image::images/deactivate_tutor_role.png[title=The Contractor Level 1 role has be
 [[payroll-classBudget]]
 === Class budget
 
-Once you have defined the default pay rates for the various classifications of Tutors you employ, you can use these to automatically add wages costs to your class budgets. You can do this by adding Tutors to classes. You can learn more about that in our <<classes-Tutor, Classes section>>.
+Once you have defined the default pay rates for the various classifications of tutors you employ, you can use these to automatically add wages costs to your class budgets. You can do this by adding Tutors to classes, and then assigning the tutors to sessions. Classes and sessions can have multiple tutors.
+
+If you add a tutor twice or more to assign them multiple tutor roles, each tutor role will be given a separate wage line in the budget. As you assign tutors to sessions, the budget numbers will update accordingly.
+
+You can learn more about adding tutors to classes in our <<classes-Tutor, Classes section>>.
 
 [TIP]
 ====
-If you do not know who the individual Tutor will be in advance to your class scheduling, we recommend you set up a Tutor named something like 'To Be Advised' whom you can assign to classes. This will allow you take wages into account in your initial class budget and viability calculations. When you know the name of the individual who will be running the class you can replace TBA with the actual Tutor, and make any changes to their pay rate as required.
+If you do not know who the individual tutor or tutors will be in advance to your class scheduling, we recommend you set up a tutor named something like 'To Be Advised' whom you can assign to classes. This will allow you take wages into account in your initial class budget and viability calculations. When you know the name of the individual who will be running the class you can replace TBA with the actual tutor, and make any changes to their pay rate as required.
 ====
 
 
@@ -218,11 +226,11 @@ If the tutors attached to the session have different payable times due to them i
 
 Tutor payable time can be either increased or decreased from the scheduled session time.
 
-*Q:* I have a five hour class, with one tutor teaching for the full five hours, and other teaching only for two of those hours. How do I record their different payable times?
+*Q:* I have a five-hour class, with one tutor teaching for the full five hours, and other teaching only for two of those hours. How do I record their different payable times?
 
-*A:* There are a few options available here, depending on how you wish to present the class timetable to the tutors and students attending. One option is to break the single five hour session into a three hour and two hour session, and assign the five hour tutor to both, and the two hour tutor to their session only. The class budget will then show the correct expenses for tutor wages. The benefit of this approach is that both tutors will see the times they are expected to be teaching in their timetable. Your onCourse website will slightly alter the display of the class details block when you have broken a day into multiple sessions so it is clear to potential students what the delivery structure looks like and what the class start and end times are.
+*A:* There are a few options available here, depending on how you wish to present the class timetable to the tutors and students attending. One option is to break the single five-hour session into a three-hour and two-hour session, and assign the five-hour tutor to both, and the two-hour tutor to their session only. The class budget will then show the correct expenses for tutor wages. The benefit of this approach is that both tutors will see the times they are expected to be teaching in their timetable. Your onCourse website will slightly alter the display of the class details block when you have broken a day into multiple sessions so it is clear to potential students what the delivery structure looks like and what the class start and end times are.
 
-A second option would be to keep the single five hour session and have both tutors assigned. The two hour attending tutor, instead of having a per timetabled hour rate could have their wage line overridden to a per session rate, that you manually worked out to be the per timetabled hour rate x 2. This will give you the correct class budget payroll expenses, but the two hour tutor will see in their timetable that they are 'teaching' a five hour session.
+A second option would be to keep the single five-hour session and have both tutors assigned. The two-hour attending tutor, instead of having a per timetabled hour rate could have their wage line overridden to a per session rate, that you manually worked out to be the per timetabled hour rate x 2. This will give you the correct class budget payroll expenses, but the two-hour tutor will see in their timetable that they are 'teaching' a five-hour session.
 
 A third option would be to keep both tutors assigned as above, but use the attendance marking function for the two hour attending tutor to mark their payable time to be 120 minutes only. This option will generate the correct payroll for the tutor, but the budget will show that you expect to pay them for five hours of attendance, not two, so will be overestimating the class costs. The tutor timetable will also show that the two hour tutor is 'teaching' a five hour session.
 

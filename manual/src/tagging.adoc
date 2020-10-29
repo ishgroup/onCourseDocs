@@ -29,52 +29,42 @@ As a general rule of thumb, a website visible tag should apply to a minimum 3 to
 
 For each tag group, you can decide if applying a tag from the group is mandatory or optional. A mandatory tag may make sense if you want to ensure your staff always tag every course in your database with a website navigation tag. You can also choose whether the tag can be applied an unlimited number of times, or only once. A pop up will display when changing any tag group between Mandatory or Limit to One, as each setting has implications on the records they're attached to.
 
-You can also decide if records can have more than one tag from the tag group.
-Giving courses multiple subject tags mean they can be listed in multiple places on your website.
-For example, an MYOB course could be tagged with both 'Accounting' and 'Computers'.
+You can also decide if records can have more than one tag from the tag group. Giving courses multiple subject tags mean they can be listed in multiple places on your website. For example, an MYOB course could be tagged with both 'Accounting' and 'Computers'.
 
-You can add any number of tags by clicking on the "+" icon. To add a
-subcategory tag, first click on a tag to select it and then click once
-again on the "+" icon.
+You can add any number of tags by clicking on the + icon next to the `Tags` header. To add a subcategory tag, use the same + button to create the tag, then drag and drop it by clicking and holding on the six dots icon (the left side of the tag record) and then dragging it into the sub-category you want it placed in.
 
-By default, tags will be sorted by alphabetical order.
-The tag edit view also allows you to apply your own sort order to the tags.
-Highlight a tag in the list then drag and drop a given tag item within the group to the place in the hierarchy you wish it to go.
+By default, tag groups will be sorted by alphabetical order, and tags in theorder that they are created. You can also apply your own sort order to the tags by dragging and dropping it on the window in the order you want it displayed.
 
-This tag display order will also be mimicked on your onCourse website for tags under the "Subjects" tag group
+This tag display order will also be mimicked on your onCourse website for tags under the "Subjects" tag group.
 
 image::images/adjustment_of_tag_weighting.png[title='Adjusting the tag weighting via tag group edit view']
 
+[[tagging-tagRelationships]]
 ===== Understanding tag hierarchies and relationships
 
-When setting up your subject tags, it is advisable to only apply these subject tags to Courses and not to classes or other types of records.
-The reason for this relates back to the hierarchical nature of the database the information that is connected back to a course.
+When setting up your subject tags, it is advisable to only apply these subject tags to Courses and not to classes or other types of records. The reason for this relates back to the hierarchical nature of the database the information that is connected back to a course.
 
-For example, a Course within the database will have classes, and within a class tutor(s) will be assigned, room(s) allocated and students enrolled.
-From a filtering perspective, by applying a subject tag to a Course, when you select the subject tag filter within any window, e.g. contact, the related information such as student enrolled in a class from a course with the tag, or tutor teaching a class from the course with the tag, will be displayed.
+For example, a Course within the database will have classes, and within a class tutor(s) will be assigned, room(s) allocated and students enrolled. From a filtering perspective, by applying a subject tag to a Course, when you select the subject tag filter within any window, e.g. contact, the related information such as student enrolled in a class from a course with the tag, or tutor teaching a class from the course with the tag, will be displayed.
 
 If you apply the tag directly to contact records as well as Courses, the meaning of the filter will change to also include the meaning above "AND show me all the contacts tagged with" which can lead to a returned results list that doesn't make much sense to the user.
 
-In the following image you can see in the class window.
-The information has been filtered by the "Business" subject tag.
+In the following image you can see the class window where the information has been filtered by the "Business" subject tag.
 Even though the classes listed are not tagged with the "Business" subject tag, but the classes all relate to a course that has the '"Business" subject tag, they will display automatically.
 
 image::images/filtering_class_by_course_subject_tag.png[title='Filtering Classes by a Course subject tag']
 
+[[tagging-tagWebsite]]
 === Tags on your onCourse website
 
-Course tags, beginning with the Subject tag group, define your website user navigation experience.
-Any new tags you create, or changes you make to any existing tags will update automatically on the website.
-By default, all tags within a tag group are set as 'show on website' by default and are assigned a random colour.
-If you uncheck this option, the tag will no longer show on the web, but will still be visible inside the onCourse application for your own internal filtering.
-This can be a better option than deleting a tag and all it's relationships to historical records, if the tag is not currently in use for active courses.
+Course tags, beginning with the Subject tag group, define your website user navigation experience. Any new tags you create, or changes you make to any existing tags will update automatically on the website.
 
-If you have two onCourse websites for two arms of your business, each website may be driven by it's own tag group.
-For example, a site for open enrolments might be driven by the subjects tag group, where the corporate site might be driven by a different tag group called 'corporate'.
-If this is the case, every course that you want to show on each website, must be tagged by a tag from the defined website tag group, even if that tag is not currently shown on the website.
-In this multi site situation, a course tagged with a non-visible tag will still be accessible via the course URL if you wish, while not being accessible via the navigation structure.
-Without a tag from the defined website group, the URL will return 404 not found.
+By default, all tags within a tag group are set as 'private' and are assigned a random colour. If you uncheck this option, the tag will show on the web, and will still be visible inside the onCourse application for your own internal filtering.
 
+Making a tag private can be a better option than deleting a tag and all its relationships to historical records, if the tag is not currently in use for active courses.
+
+If you have two onCourse websites for two arms of your business, each website may be driven by its own tag group. For example, a site for open enrolments might be driven by the subjects tag group, where the corporate site might be driven by a different tag group called 'corporate'. If this is the case, every course that you want to show on each website, must be tagged by a tag from the defined website tag group, even if that tag is not currently shown on the website. In this multi site situation, a course tagged with a non-visible tag will still be accessible via the course URL if you wish, while not being accessible via the navigation structure. Without a tag from the defined website group, the URL will return 404 not found.
+
+[[tagging-tagWebsiteURL]]
 ==== Tagging and the website URL
 
 The URL for the subject tag group is /courses/subjects.

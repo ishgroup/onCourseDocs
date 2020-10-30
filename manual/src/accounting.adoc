@@ -594,25 +594,24 @@ By default, an asset account named 'undeposited funds' is where all manually ban
 
 Automatically and manually banked payments are grouped where possible into daily totals. These banking deposits can then be reconciled as a group, or where needed, transaction by transaction.
 
+[[accounting-Banking]]
 ==== Banking
 
-As onCourse is integrated with a credit card payment gateway, the system will automatically settle payments in and payments out received via the credit card gateway, whether these payments are processed through your office or via website enrolments.
-This settlement process is automatically done between 7pm and 9pm each evening and will be deposited into your nominated merchant account the following business day as a single sum. If a payment is processed into onCourse after the nightly settlement cut off time, the payment will not be banked or appear in your nominated account until the day after. The grouping of the deposited credit card bankings in onCourse will match the batching of the deposits processed by your bank.
+As onCourse is integrated with a credit card payment gateway, the system will automatically settle payments in and payments out received via the credit card gateway, whether these payments are processed through your office or via website enrolments. This settlement process is automatically done between 7pm and 9pm each evening and will be deposited into your nominated merchant account the following business day as a single sum. If a payment is processed into onCourse after the nightly settlement cut off time, the payment will not be banked or appear in your nominated account until the day after. The grouping of the deposited credit card bankings in onCourse will match the batching of the deposits processed by your bank.
 
 If you accept AMEX credit cards, these payment types will be grouped and deposited in a separate banking deposit in onCourse. This is because the AMEX settlement process works differently to Mastercard & Visa, and does not always settle on a daily basis. Instead, it is dependent on the value of the transactions you have processed.
 
-If you have an EFTPOS terminal that you use in conjunction with, or instead of the onCourse credit card gateway, ensure you select EFTPOS, rather than EFT or credit card, as the payment in type, even if you have processed a credit card through the terminal. EFTPOS transactions will be marked as banked on creation, and like your onCourse credit card gateway, will be settled automatically into your bank account overnight.
+If you have an EFTPOS terminal you use in conjunction with, or instead of the onCourse credit card gateway, ensure you select EFTPOS, rather than EFT or credit card, as the payment in type, even if you have processed a credit card through the terminal. EFTPOS transactions will be marked as banked on creation, and like your onCourse credit card gateway, will be settled automatically into your bank account overnight.
 
 For payments received via Cheque, Electronic Funds Transfer (EFT), Money Order or Cash, a manual banking process will group and deposit these transactions. The 'Deposit Banking' function within the onCourse client allows you to track the date of settlement, method of payment, payment amount and staff member who performs this function. It also ensures that you do not 'double count' any funds to your nominated bank account.
 
 image::images/onCourse_Deposit_Banking_Window.png[title='Banking Deposits Window']
 
-Manual banking is done on a site by site basis. As in, each physical site where manual payment types are collected should run its own banking process. You can see the site you are logged into as a user in the onCourse dashboard. If you wish to process the banking for an alternate site, you need to change your location on the dashboard first.
-Usually, an administration manager at each site would be responsible for running the bank process at their site.
+Manual banking is done on a site by site basis. As in, each physical site where manual payment types are collected should run its own banking process. You can see the site you are logged into as a user in the onCourse dashboard. If you wish to process the banking for an alternate site, you need to change your location on the dashboard first. Usually, an administration manager at each site would be responsible for running the bank process at their site.
 
 You should collect all your payments received and confirm you have the same cash balance and cheques indicated in the bank deposit window as you complete this process.
 
-. From the favourites section of the Dashboard, choose the option 'Deposit Banking'.
+. From the Dashboard, choose the option 'Deposit Banking'.
 . If you only have one 'Deposited funds' asset account, then you will not need to make a choice of bank account. However, if you have multiple accounts, you will need to bank to each bank account as a separate process.
 . This will open a window showing all the payments that have been receipted for that bank account at the site you are logged into, that have not yet been banked since the last time the banking process was run.
 . Ensure the correct administration centre/banking site is selected. It appears in the top-left of the window with a drop-down box. Once the banking has been 'deposited' this cannot be changed, so you must ensure it is correct before completing the process.
@@ -625,10 +624,10 @@ It is generally recommended you bank both the payment and reversal together, so 
 
 image::images/reversed_payments_in_bank.png[title='Numerous cash payments awaiting banking']
 
+[[accounting-viewEditBanking]]
 ===== Viewing and adjusting banking records
 
-You can see a list of your banking history, including transactions banked automatically, by viewing the Banking Deposits window. You can access it by typing Banking Deposits into the dashboard search.
-In this list view you will be able to see the following information:
+You can see a list of your banking history, including transactions banked automatically, by viewing the Banking Deposits window. You can access it by typing Banking Deposits into the dashboard search. In this list view you will be able to see the following information:
 
 * The date that each amount of money is banked - The date will have been set by a user as they manually banked the money e.g. cash or cheques. Alternatively if the deposit is automatically banked, the settlement date will be automatically set as the date the funds should be received into your bank account.
 * The type or the method of how these funds got banked - The method could be MANUAL (banked via a manual process), AUTO_MCVISA (Visa and Mastercard credit cards banked automatically by the onCourse credit card gateway), AUTO_AMEX (American Express credit cards banked by the onCourse credit card gateway) or AUTO_OTHER (non-credit card payments banked automatically). Prior to the 8.20 upgrade, Amex, Mastercard and Visa were banked together in a grouping type called GATEWAY.
@@ -641,7 +640,7 @@ You can double-click on a banking deposit record from this list view to adjust d
 
 Should you wish to reprint the banking report, usually created during a manual banking deposit process, you can do this from the window by selecting one or more banking deposit records and choosing 'banking report' from the Share screen.
 
-You can also 'unbank' a transaction by highlighting the payment in the banking list and clicking on the delete icon in the top right-hand corner of the window. This will change journal the transaction from the 'deposited funds' asset account to the 'undeposited funds' asset account. The payment can be banked again using the manual banking deposit process as needed, or if it was processed in error or reversed.
+You can also 'unbank' a transaction by highlighting the payment in the banking list and clicking on the red - icon in the top left-hand corner of the window, next to the number of payments heading; it will appear greyed out till you select at least one record. This will change journal the transaction from the 'deposited funds' asset account to the 'undeposited funds' asset account. The payment can be banked again using the manual banking deposit process as needed, or if it was processed in error or reversed.
 
 image::images/changing_settlement_date_manual.png[title='Changing the settlement date for a banking deposit record']
 
@@ -649,6 +648,7 @@ To change the deposit date of a payment in or payment out record, double-click o
 
 image::images/edit_deposited_payment.png[title='Changing the settlement date for a single payment record within a bank deposit']
 
+[[accounting-bankRec]]
 ==== Reconciliation
 
 Reconciliation is a process you may optionally undertake within onCourse to confirm your banking deposits match the amounts listed on your bank statement.
@@ -690,6 +690,7 @@ When you finalise and close the period, any banked but unreconciled payments wil
 
 image::images/finalisePeriod.png[title='Warnings and report options before finalising period']
 
+[[accounting-generalLedger]]
 ==== General Ledger Journals
 
 On occasion, you may find income in onCourse has been posted to the wrong account, due to the error in a class set up.

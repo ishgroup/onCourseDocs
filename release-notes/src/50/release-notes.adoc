@@ -1,0 +1,37 @@
+= Release 50
+4 Nov. 2020
+
+=== Document sharing
+
+A complete reworking of the document sharing user interface makes this clearer and easier to use. `OD-15207`
+
+=== Rich text
+
+The new rich text user interface has been rolled out across the entire onCourse application. Remember to stay with legacy mode until you have updated your content to markdown syntax.
+
+=== Query language time
+
+You can now search on datetime fields with relative time. `OD-15293`
+
+    endDateTime in now .. now + 4 hours
+
+
+== Major features
+
+== Reports and scripts
+
+== Minor features
+* AQL search for class with no room `OD-14720`
+* 'No Discount' in checkout greyed out `OD-14740`
+* Class budget graph with no data `OD-14917`
+* Scripts, reports, exports and templates are removed automatically when they are removed from the onCourse product `OD-15107`
+* Classes - Budget/Tutor Pay improvements `OD-15248`
+* Send Message - Group message templates in drop down list `OD-15284`
+* Course change during duplication shows disabled courses `OD-15299`
+
+== Fixes
+* Fix memory usage during AVETMISS export which could cause high CPU use and make onCourse Server unresponsive to other users `OD-14753`
+* Certificate dates were not displaying correctly in the list `OD-15212`
+* search query error - enrolments through contacts `OD-15246`
+* Custom field setters `OD-15300`
+* Impossible to find a specific file in documents search `OD-15302`

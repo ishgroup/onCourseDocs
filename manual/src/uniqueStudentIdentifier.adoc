@@ -1,55 +1,47 @@
 [[usi]]
 == Unique Student Identifier (USI)
 
-This section is only important for RTO's.
-If you are not an RTO, you don't need to worry about the USI or this section of the documentation.
+This section is only important for RTO's. If you are not an RTO, you don't need to worry about the USI or this section of the documentation.
 
 [[usi-onCourseProcess]]
 === The onCourse USI process
 
 Our primary goal is to make obtaining and verifying USIs the responsibility of the enrolling student to minimise the data entry and management effort required by your office staff.
 
-If a student enters their USI online, or you enter it manually in onCourse the USI will automatically be verified against the USI Agency system.
-In order for this process to work you'll need to run through the USI Integration process, listed on our Integrations page here.
+If a student enters their USI online, or you enter it manually in onCourse the USI can automatically be verified against the USI Agency system. In order for this process to work you'll need to run through the USI Integration process, <<externalintegrations-USI, listed on our Integrations page>>.
 
-The verification system is not available to onCourse community edition users who don't have a support agreement with ish.
-You can still capture the USI within onCourse and report it for AVETMISS but you will not be able to take advantage of the online student self-service process or the automatic verification process.
-Community users can verify their student's USIs manually using the USI Agency RTO portal.
+The verification system is not available to onCourse community edition users who don't have a support agreement with ish. You can still capture the USI within onCourse and report it for AVETMISS but you will not be able to take advantage of the online student self-service process or the automatic verification process. Community users can verify their student's USIs manually using the USI Agency RTO portal.
 
+[[usi-automation]]
 ==== How onCourse automates the USI process
 
-When a student enrols in a course which is identified as a VET course, their enrolment confirmation will include some additional text explaining what a USI is and why they need to tell you theirs.
-This email directs them to a special onCourse portal page (no log in required) requesting they supply their USI or go through the process to create one.
+When a student enrols in a course which is identified as a VET course, their enrolment confirmation will include some additional text explaining what a USI is and why they need to tell you theirs. This email directs them to a special onCourse portal page (no log in required) requesting they supply their USI or go through the process to create one.
 
-Most students will be going through the process of creating a new USI.
-Once they complete this part of the process, we will then take that new USI and verify it against their first name, last name and date of birth as supplied on their enrolment.
-If the USI doesn't validate (possibly because the student used a dummy date of birth on enrolment, or a shortened version of their first name) then they will be prompted to update the incorrect data in onCourse to match their USI, so we can pass the USI validation process.
+Most students will be going through the process of creating a new USI. Once they complete this part of the process, we will then take that new USI and verify it against their first name, last name and date of birth as supplied on their enrolment. If the USI doesn't validate (possibly because the student used a dummy date of birth on enrolment, or a shortened version of their first name) then they will be prompted to update the incorrect data in onCourse to match their USI, so we can pass the USI validation process.
 
-Provided you have the 'send usi reminder' script enabled in the Automation > Scripts section, every Monday morning (this timing can be changed), all recently enrolled VET students who have not supplied you with their USI will be sent an automatic reminder email on how to complete this process and why it is important they do so.
-A student who doesn't complete this process or can not validate their USI will be flagged in onCourse for you to follow up.
+Provided you have the 'send usi reminder' script enabled in the Automation > Scripts section, every Monday morning (this timing can be changed), all recently enrolled VET students who have not supplied you with their USI will be sent an automatic reminder email on how to complete this process and why it is important they do so. A student who doesn't complete this process or cannot validate their USI will be flagged in onCourse for you to follow up.
 
+[[usi-enableValidation]]
 ==== What you need to do enable the USI validation service in onCourse
 
-You can enable the USI validation by following the steps laid out in the
-https://www.ish.com.au/s/onCourse/doc/latest/manual/externalintegrations.html#externalintegrations-USI[USI
-section of our external integrations chapter] of our documentation.
-There are a handful of steps that must be completed externally to the onCourse system before running the integration so ensure you follow each step closely before moving on to the next one.
+You can enable the USI validation by following the steps laid out in the <<externalintegrations-USI, USI section of our external integrations chapter>> of our documentation. There are a handful of steps that must be completed externally to the onCourse system before running the integration so ensure you follow each step closely before moving on to the next one.
 
 [[usi-Capturing]]
 === Capturing the USI in onCourse
 
 The USI does not need to be captured at the time of enrolment, but typically you'll want to have it entered and verified before the class is completed in order to not delay issuing of certificates.
 
+[[usi-createUSI]]
 ==== Creating a USI for a student
 
 Some students will not be able to navigate the USI portal to obtain their own USI, in which case you are able to do this on their behalf within the VET section of their contact record, just click the cogwheel next to the USI field then select 'Create a USI...'
 
 image::images/usi/create_a_usi.png[title='When there is no USI supplied,you can click on the link to open a web portal and create a new USI.']
 
-Clicking on this link will open a web portal where you can complete the student details and identity document information.
-You will need to declare that you have obtained permission from the student to complete this process on their behalf.
+Clicking on this link will open a web portal where you can complete the student details and identity document information. You will need to declare that you have obtained permission from the student to complete this process on their behalf.
 
 We do not recommend you copy or store the student's identity documentation in their onCourse record as this is in breach of the USI legislation.
+
 
 ==== Manual entry of a USI
 

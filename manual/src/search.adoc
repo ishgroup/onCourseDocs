@@ -92,330 +92,266 @@ In your query, you will want to compare the field with some value. The type of c
 
 EQUALS or =::
 Finds records where the field matches the value exactly. This operator is not case-sensitive.
- +
-
++
 ....
 createdOn = today
 ....
-
-  +
++
 ....
 nationalCode EQUALS "ABC"
 ....
+
+
 NOT EQUAL or !=::
-  NOT EQUAL finds records that do not match the input value.
-  +
+NOT EQUAL finds records that do not match the input value.
++
 ....
 deliveryMode != ONLINE
 ....
+
+
 LESS THAN or <::
-  LESS THAN returns records where the value is less than the input
-  value.
-  +
-  LESS THAN can also be used with EQUALS to return records where the
-  value is less than or equal to the input value.
-  +
+LESS THAN returns records where the value is less than the input value.
++
+LESS THAN can also be used with EQUALS to return records where the value is less than or equal to the input value.
++
 ....
 enrolmentCount < 10
 ....
-  +
++
 ....
 enrolmentCount <= 9
 ....
+
+
 GREATER THAN or >::
-  GREATER THAN returns records where the value is greater than the input
-  value.
-  +
-  GREATER THAN can be used with EQUALS to return records where the value
-  is greater than or equal to the input value.
-  +
+GREATER THAN returns records where the value is greater than the input value.
++
+GREATER THAN can be used with EQUALS to return records where the value is greater than or equal to the input value.
++
 ....
 age > 17
 ....
-  +
++
 ....
 age >= 18
 ....
+
+
 BETWEEN or ..::
-  BETWEEN ( .. ) is used to specify a date range. BETWEEN ( .. ) will
-  return records where the specified attribute occurred or was created
-  between the set dates.
-  +
+BETWEEN ( .. ) is used to specify a date range. BETWEEN ( .. ) will return records where the specified attribute occurred or was created between the set dates.
++
 ....
 createdOn in 01/01/2018 .. 01/02/2018
 ....
-  +
-  BETWEEN can be used with a star closure ( * ), placed either directly
-  before or after the date. See below for the correct syntax; placing
-  the star and BETWEEN before the date will find all relevant data from
-  before that date, while placing them after will find all relevant data
-  after that date.
-  +
++
+BETWEEN can be used with a star closure ( * ), placed either directly before or after the date. See below for the correct syntax; placing the star and BETWEEN before the date will find all relevant data from before that date, while placing them after will find all relevant data after that date.
++
 ....
 createdOn not * .. 01/01/2018
 ....
-  +
-  Both the above and below queries will show you the same data, all
-  records created before 01/01/2018. The top query asks all records
-  created before this date to be excluded thanks to the 'Not' operator,
-  while the bottom query asks for all records created after this date to
-  be shown thanks to the 'In' operator.
-  +
++
+Both the above and below queries will show you the same data, all records created before 01/01/2018. The top query asks all records created before this date to be excluded thanks to the 'Not' operator, while the bottom query asks for all records created after this date to be shown thanks to the 'In' operator.
++
 ....
 createdOn in 01/01/2018 .. *
 ....
+
+
 IN::
-  IN will display any data that fits into the input data set.
-  +
-  A set is denoted as a list of items, where each element of the set is
-  separated by a comma. In the below example, this query will return and
-  display any data that has a confirmationStatus as either _NOT_SENT_ or
-  _DO_NOT_SEND_.
-  +
+IN will display any data that fits into the input data set.
++
+A set is denoted as a list of items, where each element of the set is separated by a comma. In the below example, this query will return and display any data that has a confirmationStatus as either _NOT_SENT_ or _DO_NOT_SEND_.
++
 ....
 confirmationStatus in (NOT_SENT, DO_NOT_SEND)
 
 enrolment.student.id in (10,11,12)
-
 ....
+
+
 [ ]::
-  Square brackets are a shorthand to search for the record id (the
-  primary key in the database) in a list, denoted by [ ].
-  +
+Square brackets are a shorthand to search for the record id (the primary key in the database) in a list, denoted by [ ].
++
 ....
-
 enrolment.student[10,11,12]
-
 ....
-  +
-  This query is equivalent to:
-  +
++
+This query is equivalent to:
++
 ....
-
 enrolment.student.id in (10,11,12)
-
-....
-\{ }::
-  Curly brackets allow you to reference a record attribute multiple
-  times without needing to retype the full path to that attribute.
-  +
-  The following query can be simplified using curly brackets:
-  +
 ....
 
+
+{ }::
+Curly brackets allow you to reference a record attribute multiple times without needing to retype the full path to that attribute.
++
+The following query can be simplified using curly brackets:
++
+....
 outcome.enrolment.status == REFUNDED and outcome.enrolment.student.contact.lastName == 'Smith'
-
 ....
-  +
-  Here's the simplified version:
-  +
++
+Here's the simplified version:
++
 ....
-
 outcome.enrolment{status == REFUNDED and student.contact.lastName == 'Smith'}
-
 ....
-  +
-  Notice how the path from 'outcome' to the 'enrolment' attribute is
-  only typed out once. The query inside the curly braces is in the scope
-  of the 'enrolment' attribute.
++
+Notice how the path from 'outcome' to the 'enrolment' attribute is only typed out once. The query inside the curly braces is in the scope of the 'enrolment' attribute.
+
+
 BEFORE::
-  BEFORE can be used in conjunction with dates (or date-specific
-  keywords, like 'today' or 'tomorrow') to return any requested data
-  created or set before the input date.
-  +
+BEFORE can be used in conjunction with dates (or date-specific keywords, like 'today' or 'tomorrow') to return any requested data created or set before the input date.
++
 ....
-
 createdOn before today
-
-....
-AFTER: after::
-  AFTER can be used in conjunction with dates (or date-specific
-  keywords, like 'today' or 'tomorrow') to return any requested data
-  created or set after the input date.
-  +
 ....
 
+
+AFTER::
+AFTER can be used in conjunction with dates (or date-specific keywords, like 'today' or 'tomorrow') to return any requested data   created or set after the input date.
++
+....
 createdOn after today
-
 ....
 
 CONTAINS::
-  CONTAINS returns any data where the specified field contains/matches
-  the input.
-  +
+CONTAINS returns any data where the specified field contains/matches the input.
++
 ....
-
 name contains "Gardening"
-
-....
-STARTS WITH:::
-  STARTS WITH returns any data where the specified field contains data
-  that starts with the input.
-  +
 ....
 
+STARTS WITH::
+STARTS WITH returns any data where the specified field contains data that starts with the input.
++
+....
 name starts with "Cooking"
-
 ....
-ENDS WITH: ends with::
-  ENDS WITH returns any data where the specified field contains data
-  that ends with the input.
-  +
+ENDS WITH::
+ENDS WITH returns any data where the specified field contains data that ends with the input.
++
 ....
-
 name ends with "Expert"
-
 ....
+
 NOT::
-  NOT reverses the returned value of all of the previous operators.
-  +
-  For example, 'code not contains "Gardening"' with return all courses
-  that have a code that does not contain the term 'Gardening'
-  +
+NOT reverses the returned value of all of the previous operators.
++
+For example, 'code not contains "Gardening"' with return all courses that have a code that does not contain the term 'Gardening'
++
 ....
-
 name not like John
-
 ....
-  +
++
 ....
-
 name not contains "Gardening"
-
 ....
-  +
++
 ....
-
 name not starts with "Cooking"
-
 ....
-  +
++
 ....
-
 name not ends with "Beginners"
-
 ....
+
+
 HASHTAG or #::
-  The HASHTAG ( # ) operator will return records that are tagged with
-  the specified tag in onCourse E.G. if you have a tag named Health and
-  Care, and another named Training, and you wanted to find records that
-  use either tag, you'd use:
-  +
+The HASHTAG ( # ) operator will return records that are tagged with the specified tag in onCourse E.G. if you have a tag named Health and Care, and another named Training, and you wanted to find records that use either tag, you'd use:
++
 ....
-
 #Health_and_Care or #Training
-
 ....
+
+
 FILTER TAG or @::
-  The FILTER TAG ( @ ) operator is used to as shorthand to call a custom
-  query or other filter that has been saved.
-  +
-  For example, imagine the following query is saved with the name
-  _kids_:
-  +
+The FILTER TAG ( @ ) operator is used to as shorthand to call a custom query or other filter that has been saved.
++
+For example, imagine the following query is saved with the name _kids_:
++
 ....
-
 Age <= 12
-
 ....
-  +
-  _@kids_ can then be called in the construction of other queries
-  +
++
+_@kids_ can then be called in the construction of other queries
++
 ....
-
 @kids and isMale is true
-
 ....
-  +
-  is equivalent to Age <= 12 and isMale is true
++
+is equivalent to Age <= 12 and isMale is true
+
 LIKE or ~::
-  The LIKE (~) operator is used to search a field for a specific
-  pattern.
-  +
-  There are two special wild card characters used with the LIKE
-  operator:
-  +
-
-  . _%_: the percent sign is used to represent any amount of characters
-  (including zero)
-  . ___: the underscore is used to represent exactly one character
-  +
-  Examples of the LIKE operator with wild card characters:
-  +
+The LIKE (~) operator is used to search a field for a specific pattern.
++
+There are two special wild card characters used with the LIKE operator:
++
+. _%_: the percent sign is used to represent any amount of characters (including zero)
+. ___: the underscore is used to represent exactly one character
++
+Examples of the LIKE operator with wild card characters:
++
 ....
-
 name ~ "a%" name like "a%"
-
 ....
-  +
-  finds any record that has a name starting with "a"
-  +
++
+finds any record that has a name starting with "a"
++
 ....
-
 name ~ "%a"
-
 ....
-  +
-  finds any record that has a name ending with "a"
-  +
++
+finds any record that has a name ending with "a"
++
 ....
-
 name ~ "%ab%"
-
 ....
-  +
-  finds any record that has a name containing "ab"
-  +
++
+finds any record that has a name containing "ab"
++
 ....
-
 name ~ "_a%"
-
 ....
-  +
-  finds any record that has a name with "a" as the second letter
-  +
++
+finds any record that has a name with "a" as the second letter
++
 ....
-
 name ~ "_%_%_%"
-
 ....
-  +
-  finds any record that has a name with at least a length of 3
-  characters
-  +
++
+finds any record that has a name with at least a length of 3 characters
++
 ....
-
 name ~ "a%b"
+....
++
+finds any record that has a name starting with "a" and ending with "b".
 
-....
-  +
-  finds any record that has a name starting with "a" and ending with
-  "b".
-....
+
 
 [[search-advanced-conditions]]
 ==== Combining queries
 
 OR::
 ....
-
 name contains "Gardening" or code starts with "GAR"
-
 ....
+
+
 AND::
 ....
-
 startDateTime = tomorrow and successAndQueuedEnrolments >= minimumPlaces
-
 ....
+
+
 ( )::
-  Use brackets to specify the order in which query fragments are
-  executed.
-  +
+Use brackets to specify the order in which query fragments are executed.
++
 ....
-
 name contains "Gardening" or (code starts with "GAR" and startDateTime = tomorrow)
-
 ....
 
 [[search-advanced-keywords]]
@@ -452,103 +388,91 @@ DATES::
     from Monday 17 September 2018 to 24 September 2018.
   +
 ....
-
 createdOn today createdOn yesterday .. tomorrow startDateTime last week endDateTime next year
-
 ....
-  +
-  Dates can be combined with basic arithmetic and a specified time unit
-  to query over a period of time.
-  +
++
+Dates can be combined with basic arithmetic and a specified time unit to query over a period of time.
++
 ....
-
 createdOn today + 1 day createdOn yesterday..tomorrow + 2 week createdOn * .. today + 6 month createdOn 9:00 .. 19:00 today - 1 year
-
 ....
+
+
 ME::
-  ME allows for search to be constructed using the currently logged in
-  user as a query value.
-  +
+ME allows for search to be constructed using the currently logged in user as a query value.
++
 ....
-
 Invoice.createdByUser = me
-
 ....
+
+RELATIVE TIME::
+Time references allow you to query for records within specific time periods
+  now;;
+    acts as a timestamp for the moment the query is run
+  <x> hour;;
+    set a number of hours to/from the search query period
+  <x> minute;;
+    set a number of minutes to/from the search query period
++
+....
+endDateTime in now + 1 hour .. now + 2 hours 30 minutes
+....
+
 
 [[search-advanced-arithmetic]]
 ==== Arithmetic
 
-Basic arithmetic can be performed directly within the query language.
-Addition, subtraction, division, multiplication and modulus operations
-are all supported.
+Basic arithmetic can be performed directly within the query language. Addition, subtraction, division, multiplication and modulus operations are all supported.
 
 ....
-
 feeHelpAmount is 100 + 50 feeHelpAmount is 100 - 50 feeHelpAmount is 100 / 2 feeHelpAmount is 100 * 5 feeHelpAmount is 100 % 3
-
 ....
 
 ==== Special attributes
 
-Some record types have special attributes which aren't stored in the
-database, but calculated on the fly. Some examples are:
+Some record types have special attributes which aren't stored in the database, but calculated on the fly. Some examples are:
 
 enrolmentCount::
-  Search Class records on the current count of active enrolments.
-  +
+Search Class records on the current count of active enrolments.
++
 ....
-
 enrolmentCount = 3
-
 ....
+
 isMinEnrolments::
-  Search Class records to find those that have reached their minimum or
-  above.
-  +
+Search Class records to find those that have reached their minimum or above.
++
 ....
-
 isMinEnrolments = true
-
 ....
+
 isMaxEnrolments::
-  Search Class records to find those that have reached their maximum
-  capacity.
-  +
+Search Class records to find those that have reached their maximum capacity.
++
+....
+isMaxEnrolments = false
 ....
 
-isMaxEnrolments = false
 
 [[search-save]]
 ==== Saving custom searches
 
-Any search query that you create in the advanced search bar can be saved
-for just yourself to use, or for everyone who uses your onCourse system.
+Any search query that you create in the advanced search bar can be saved for just yourself to use, or for everyone who uses your onCourse system.
 
-The small bookmark icon shows you whether or not your search query is
-valid. When the search is empty it appears grey, when you're using an
-accepted query it'll display in green, and when using an invalid query
-it'll display in red. When the query is good and the bookmark is green,
-you can click the bookmark to save your search so it appears in the
-left-hand column. Just choose if you want it visible for only you or
-everyone who uses your system, give it a name then hit the save icon
-that appears next to it.
+The small bookmark icon shows you whether or not your search query is valid. When the search is empty it appears grey, when you're using an accepted query it'll display in green, and when using an invalid query it'll display in red. When the query is good and the bookmark is green, you can click the bookmark to save your search so it appears in the left-hand column. Just choose if you want it visible for only you or everyone who uses your system, give it a name then hit the save icon that appears next to it.
 
 image::images/search/savesearch.png[These save options appear when you click the green bookmark icon that displays next to a valid query]
+
 
 [[search-script]]
 === Searching in custom scripts
 
-Scripts often need retrieve records from your database to perform some
-function. For example, if you wanted to contact all students who are
-enrolled in a class starting tomorrow, you would need to retrieve all
-classes that start tomorrow from the database.
+Scripts often need retrieve records from your database to perform some function. For example, if you wanted to contact all students who are enrolled in a class starting tomorrow, you would need to retrieve all classes that start tomorrow from the database.
 
 Add a query panel to your script like this.
 
 image::images/search/searchScript.png[]
 
-The results of this query are then available to you in your script in
-the variable 'records'. You can use this to perform additional actions
-in the script.
+The results of this query are then available to you in your script in the variable 'records'. You can use this to perform additional actions in the script.
 
-Read more information on custom <<scripts>>.
+Read more information on custom scripts here <<scripts, in our scripts chapter>>.

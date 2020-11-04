@@ -80,19 +80,28 @@ Some parts of onCourse have special handling of documents. At the moment the onl
 Each document has multiple settings that will tell the system who can view it and where they can view it. You can see information at a glance about who can see the document, and where, by looking in the blue 'Who can view this document?' box. This will change dynamically based on your selections in the boxes below.
 
 Attached To::
-Here you'll see a list of the records that this document is attached to, which will also affect where the document displays both in onCourse and elsewhere, depending on permissions e.g. if a document is attached to a Course but both the Shared in portal and Shared by link switches are off, then the document will only appear in the course record of onCourse. If the Shared by link switch is on, then the file is considered public and will also display on the relevant Course page on your website.
+Here you'll see a list of the records that this document is attached to, which will also affect where the document displays both in onCourse and elsewhere, depending on permissions e.g. if a document is attached to a Course but both the Shared in portal and Shared by link switches are off, then the document will only appear in the course record of onCourse. If the Shared by link and Shared with website visitors switches are on, then the file will also display on the relevant Course page on your website.
+
+If the document is attached to one record only, an 'Attach only to this record' checkbox appears here. Check this to restrict this document to a single linked record. You'll also see related link icons next to each entity. Click these to see a list of associated records in that entity. If Skills onCourse 'Shared in portal' is on, you'll see a list of contacts who can view the document in the portal.
 
 Skills onCourse::
-This box has a switch called 'Shared in portal' which, when active, allows the document to be viewed within the portal. There are also two checkboxes, 'Show to tutors' and 'Show to students'. Show to tutors is always on when 'Shared in portal' is selected and can only be deactivated if the 'Show to Students' checkbox is ticked. If a document is attached to a class, contact, on enrolment and this is switched on, then the document will be visible in the portal to all tutors and students associated with the class, contact or enrolment the document is attached to.
+This box has a switch called 'Shared in portal' which, when active, allows the document to be viewed within the portal. Who can view this document in the portal is controlled by two factors; which records the document is attached to, and the checkbox settings in this permissions. the two checkbox options are 'Show to tutors' and 'Show to students'. 'Show to tutors' cannot be deactivated, but 'Show to students' can be switched off to show to tutors only.
+
+If the document isn't attached to any record but this permission is active, then the document is visible to EVERYONE with a portal login. If the document is attached to a class or course then the document will be visible in the portal to all permissable tutor and student records associated with that class/course.
 
 You can send the class tutor or an enrolled student a link to the document inside the portal to allow them to access it e.g. https://www.skillsoncourse.com.au/portal/resources to access all their resources, or https://www.skillsoncourse.com.au/portal/class/5040367 to access the resources attached to a specific class, where 5040367 is the class id in the onCourse web database.
 
 Shareable Link::
-This is the most 'public' permission, allowing anyone with the link to see this file when it's active, as well as anyone associated with the records it's attached to. If the document isn't attached to any records, then only users with the link will be able to see it. Click 'Copy Link' to copy it to the clipboard for linking in a message or email.
+When active, this permission allows anyone with the generated link to access this file. If the document isn't attached to any records, then only users with the link will be able to see it. Click 'Copy Link' to copy it to the clipboard for linking in a message or email.
+
+image::images/documentManagement/shareable_link.png[title='The shareable link permission switched on']
 
 All documents, when opened in onCourse, will open with a link, however only documents that have 'Shareable Link' permissions activated can be shared in this manner. If you share a link to a document without this permission the user will get an 'access denied' error.
 
-image::images/documentManagement/shareable_link.png[title='The shareable link permission switched on']
+Website::
+Switching on this permission allows the document to be viewed on the website, and works as a pair with the Shareable Link permission. It is only viible when the document is either not attached to any record at all, or atached to a single course record.
+
+It's important to note that just because this permission is on doesn't automatically mean the document will be displayed on the website; this also depends on the type of record the document is attached to. If the record isn't attached to any record, but referenced using the shareable link
 
 The below example shows that this record is attached to 7 sites records, 1 asessment record, 3 contact records and 1 course. The shared in portal switch is on with both tutors and students checkboxes checked, but the shareable link is not active. As shown in the 'Who can view this document' box, you can see that this means only onCourse admin users and some students and tutors, specifically those contacts the document is attached to and in the portal for any tutor or student associated with the course '20 Great Ways to Promote Your Businesss Online'. The document will not appear on the Course's website page unless the shareable link is active.
 

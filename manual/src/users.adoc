@@ -4,40 +4,32 @@
 [[users-Users]]
 === Security Settings
 
-You can access the Security window by typing 'Security' into the Find Anything search on the dashboard.
-Along with some standard security-related preferences, here you will find a full list of users with login access to your onCourse application and data, along with the different user roles you have defined within onCourse.
+You can access the https://demo.cloud.oncourse.cc/security[Security] window on the dashboard. Along with some standard security-related preferences, here you will find a full list of users with login access to your onCourse application and data, along with the different user roles you have defined within onCourse.
 
-If you know the name of the record you're looking for, type it into the Filter Items search at the top of the left-hand column.
-Otherwise just scroll the list until you find what you're after.
+If you know the name of the record you're looking for, type it into the Filter Items search at the top of the left-hand column. Otherwise just scroll the list until you find what you're after.
 
 image::images/security_settings.png[title='The Security window']
 
-The first section is called 'Settings', containing onCourse's main security related preferences, including rules around enforcing two-factor authentication.
-You have the following preferences to switch on or off:
+The first section is called 'Settings', containing onCourse's main security related preferences, including rules around enforcing two-factor authentication. You have the following preferences to switch on or off:
 
-* *Automatically disable inactive user accounts* - this will disable accounts that haven't logged in after a set number of days.
-This could be useful for disabling the accounts of past employees if you don't have the time to manage it yourself.
-* *Require better passwords* - when enabled, this feature demands the use of a more secure password.
-When enabled, it will typically reject any common passwords and enforce a higher standard of password to be used by all users.
-* *Require password change every <x> days* - When enabled, this feature will demand users change their password every set number of days.
-You can change the number of days manually by clicking the number in the field.
-* *Require two-factor authentication every <x> hours* - When enabled, this will require all users to get a new authorisation via a third-party authorisation app after the set number of hours.
-You can change the number of hours manually by editing the number in the field.
-This only applies when the same user is using the computer.
-If another user signs in to their account on your computer, you will be required to enter your 2FA authorisation regardless of this setting.
+Automatically disable inactive user accounts::
+this will disable accounts that haven't logged in after a set number of days. This could be useful for disabling the accounts of past employees if you don't have the time to manage it yourself.
+
+Require better passwords::
+When enabled, this feature demands the use of a more secure password. When enabled, it will typically reject any common passwords and enforce a higher standard of password to be used by all users.
+
+Require password change every <x> days::
+When enabled, this feature will demand users change their password every set number of days. You can change the number of days manually by clicking the number in the field.
+
+Require two-factor authentication every <x> hours::
+When enabled, this will require all users to get a new authorisation via a third-party authorisation app after the set number of hours. You can change the number of hours manually by editing the number in the field. This only applies when the same user is using the computer. If another user signs in to their account on your computer, you will be required to enter your 2FA authorisation regardless of this setting.
 
 [[users-settings]]
 === Users
 
-You then have the ability to add new users or edit existing users details such as their name, email address, access level or password.
-Only users with admin rights will be able to see, edit and add users, everyone else can only edit their own user settings.
-There are no limits to the number of users in onCourse.
-Users should be deactivated if they leave your organisation.
+You then have the ability to add new users or edit existing users details such as their name, email address, access level or password. Only users with admin rights will be able to see, edit and add users, everyone else can only edit their own user settings. There are no limits to the number of users you can create in onCourse. Users should be deactivated if they leave your organisation.
 
-Every person in the organisation who uses onCourse should have their own user account.
-We do not recommend users 'share' a login as various user layout preferences are saved against each user account.
-Important records created in onCourse like invoices, payments and enrolments are linked to the user who created them.
-If you need to follow up any discrepancies, this is made much easier when your staff each have their own login and their user name is something easy to identify the person by, like their first name.
+Every person in the organisation who uses onCourse should have their own user account. We do not recommend users 'share' a login as various user layout preferences are saved against each user account. Important records created in onCourse like invoices, payments and enrolments are linked to the user who created them. If you need to follow up any discrepancies, this is made much easier when your staff each have their own login and their user name is something easy to identify the person by, like their first name.
 
 * Login - What you use along with the password to login into onCourse, usually something simple to remember like 'John'.
 * Password - this is where you enter a new user's password.
@@ -59,54 +51,49 @@ You do not need this permission to edit website content like courses, classes an
 
 image::images/users_screenshot.png[title='Viewing a user account']
 
-==== Changing user settings and passwords
+[[users-changePassword]]
+==== Changing passwords
 
-A user can change their own password by going File -> Preferences -> and click on the option 'Change my password' at any time.
-Once they do this a window will pop up asking them to enter what they would like their new password to be.
-
-image::images/Change_password.png[title='Change my password window']
+A user can change their own password by typing 'change' on the Dashboard and clicking 'Change my password'. Once they do this a window will pop up asking them to enter what they would like their new password to be.
 
 [TIP]
 ====
-If your College has more than one Administration Centre, it is possible to switch between these centres whilst a user is logged in via the Users section on the Security window (File > Preferences > Security).
-Simply select the user from the list on the left, and select a choice from under the 'bank cash/cheques to site' heading.
+If your College has more than one Administration Centre, it is possible to switch between these centres whilst a user is logged in via the Users section on the Security window. Simply select the user from the list on the left, and select a choice from under the 'bank cash/cheques to site' heading.
 ====
 
 image::images/reset_admin_site_login.png[title='Switching the administration centre']
 
+[[users-requireNewPassword]]
 ===== Require password change
 
 An administrator can request a user change their password at their next login by hitting the 'require password change' button under 'Users'.
 
 image::images/require_password_change.png[title='When your administrator requests a new password,you'll see this screen']
 
+[[users-requireBetterPassword]]
 ===== Require better passwords
 
-If you have this setting enabled, the application will demand a better quality of password from your users, rejecting simple passwords e.g. a sequence of numbers or anything containing the word 'password'.
-If a user logs in and their password is deemed insecure, they will see a pop up prompting them to create a new one.
+If you have this setting enabled, the application will demand a better quality of password from your users, rejecting simple passwords e.g. a sequence of numbers or anything containing the word 'password'. If a user logs in and their password is deemed insecure, they will see a pop up prompting them to create a new one.
 
 image::images/password_minimum_requirements.png[title='The prompt asking for a more secure password']
 
+[[users-preventConcurrent]]
 ===== Preventing users from logging in twice concurrently
 
-If you try and log into onCourse with the same login credentials as a user that is already logged in, then a window will pop up asking you what you want to do.
-You will then have the option to quit your log in attempt, or log in and kick the other user using the same log in details out.
-So to prevent this from happening it's best to always have your own user name and password to log in with.
+If you try and log into onCourse with the same login credentials as a user that is already logged in, then a window will pop up asking you what you want to do. You will then have the option to quit your log in attempt, or log in and kick the other user using the same log in details out. So to prevent this from happening it's best to always have your own user name and password to log in with.
 
 image::images/user_already_logged_in.png[title='Users who try and log in twice concurrently will see this screen']
 
 [[users-roles]]
 === User Roles
 
-Access rights restrict what parts of onCourse users can modify, print, view or delete.
-This is an advanced feature, available for onCourse "Professional and Enterprise" customers.
-Four pre-defined user roles are available within the system, Enrolment Officer, Administration Manager, Course Manager and Financial Manager.
-You can modify these and create new access rights groups as needed.
-Each user within your organisation can be given Admin access rights (full access) or be added to any of your access groups.
-Select the access rights when creating or editing user profiles, as above.
+Access rights restrict what parts of onCourse users can modify, print, view or delete. This is an advanced feature, available for onCourse "Professional and Enterprise" customers.
+
+Four pre-defined user roles are available within the system, Enrolment Officer, Administration Manager, Course Manager and Financial Manager. You can modify these and create new access rights groups as needed. Each user within your organisation can be given Admin access rights (full access) or be added to any of your access groups. Select the access rights when creating or editing user profiles, as above.
 
 image::images/security_user_roles.png[title='Access rights can be set individually for each user role']
 
+[[users-editingRoles]]
 ==== Creating and Editing User Roles
 
 To access User Roles, in onCourse go to File > Preferences > Security, then look under the User Roles heading in the left-hand panel.
@@ -117,6 +104,7 @@ Each onCourse user should be assigned to a user role that defines their access l
 
 You can edit an existing user role by clicking on its heading in the left-hand panel, or create new access roles using the + button next to the User Roles heading in the left-hand panel.
 
+[[users-editingRolesIcons]]
 ===== Icon Definitions
 
 * Orange circle - This is the level of access enabled for this entity.
@@ -125,6 +113,7 @@ This may be due to choices you've made in other areas around types of access, or
 * Two dots connected by light orange lines - These are default access selections
 * Two dots connected by bold orange line - These were set by a user
 
+[[users-rolesAccess]]
 ===== User Role levels of access
 
 * *View:* A view permission only allows the contact to see data already created, but does not allow existing records to be edited or new records to be created.
@@ -133,14 +122,14 @@ This may be due to choices you've made in other areas around types of access, or
 * **Delete:**Allows record deletion where permitted by onCourse validation.
 Linked and locked records can not be deleted just because a user has delete rights.
 * *Print:* Allows printing of reports associated with this record type
-* *Hide:* Some processes only have one level of access - allow.
-If this option is not ticked, it means the ability to run the process is denied and the element is hidden from use.
+* *Hide:* Some processes only have one level of access - allow. If this option is not ticked, it means the ability to run the process is denied and the element is hidden from use.
 
-===== What can you edit in User Roles?
 
-* Name: here you define the name of the role, e.g; "Administration Manager".
-* People and companies
-** Contact: this refers to all onCourse students, tutors and companies.
+==== What can you edit in User Roles?
+
+Name:: here you define the name of the role, e.g; "Administration Manager".
+People and companies::
+Contact::: this refers to all onCourse students, tutors and companies.
 Full create rights are recommended for any user who needs to process enrolments as new contacts are often created at this time.
 * Course Management
 ** Course: permission to work with courses

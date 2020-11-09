@@ -26,12 +26,13 @@ You can send a message in this way to 1 person or 20,000 people, and onCourse ha
 
 . Highlight one or more classes from the class list view
 . Click the cogwheel and choose "send message"
-. The message window will open to where you can choose to send the message to Tutors, Students, or all
+. The message window will open to where you can choose to send the message to Tutors, active students, withdrawn students, or all.
 
 ==== From waiting lists
 
 . Highlight one or more records in the waiting list view
-. Click the cogwheel and choose "send message". Every potential student highlighted will be sent a message of your creation.
+. Click the cogwheel and choose "send message".
+. The message window will open to where you can choose tthe template and whether to send to surpressed students or not.
 
 A good way to use this is to search for all waiting list records for a particular course or group of courses. Then send them a message to let them know a new class has just been scheduled and let them know to enrol online or call the office. Read <<waitingLists, our Waiting List chapter>> for more information about waiting lists.
 
@@ -46,11 +47,11 @@ ish onCourse integrates email & SMS export functionality within the database. Th
 
 Sophisticated bounce processing is in place for email, notifying you if a message is undeliverable.
 
-After you have selected the list of people you wish to contact using one of the methods described in the previous section, you can begin selecting the methods which you will use to contact them.
+After you have selected the list of people you wish to contact using one of the methods described in the previous section, you can begin selecting the methods which you will use to contact them. Depending on which window you're sengin messages from, you may be given a choice between sending to students and tutors, students only, or active, withdrawn and all students.
 
 For example, if you have 26 contacts selected in a message window and of those 26, 22 have email addresses available to contact, there will be 4 people who are listed as 'without email or with undeliverable email'. If you have mobile phone numbers for those four people you could choose to SMS them only, by selecting the option 'send SMS' and not including people who are emailed. By using this combined method you can reach more people via their preferred medium, or in the case of emergencies, attempt to reach people via multiple mediums.
 
-In this example the user is sending an email using the template 'Simple Email' to 13 students. 19 are selected, but 2 are suppressed while 4 are classed as unreachable or do not have an email address.
+In this example the user is sending an email using the template 'Simple Email' to 13 contacts. 19 are selected, but 2 are suppressed while 4 are classed as unreachable or do not have an email address.
 
 image::images/messagingStudents.png[title='Sending an email using the simple email template']
 
@@ -59,7 +60,7 @@ image::images/messagingStudents.png[title='Sending an email using the simple ema
 
 Email messaging in onCourse is managed by your own mail server. In the Messaging section of the Preferences window, you can set up the email server address and account details. You can also set up how bounced emails are processed. More information is available in the <<generalPrefs, General Preferences>> chapter.
 
-Not every email you send from onCourse will reach the intended contact. There are many reasons for this and they include:
+Not every email you send from onCourse will reach the intended contact. There are many reasons for this:
 
 * The email address you collected from the student was incorrect. This is less likely if the student enrolled online and was required to type in their email address themselves rather than have a staff member translate it from a handwritten form. Common errors include incorrect domain names e.g. bigpond.com.au instead of bigpond.com and simple typos.
 +
@@ -76,7 +77,7 @@ If the user account you are trying to send to doesn't exist, you should expect a
 
 Messages sent manually through onCourse use Message Templates which contain two types of email formats - plain and HTML, each contained within a single message template. HTML messages are formatted and usually include images, hyperlinks and styled font and content. A plain text email message is just that - it contains only plain text without any additional styling.
 
-Message Templates can be edited in the Automation window, under the Message Templates heading. You can create both Email and SMS templates.
+Message Templates can be edited in the https://demo.cloud.oncourse.cc/automation[Automation] window, under the Message Templates heading. You can create both Email and SMS templates.
 
 [NOTE]
 ====

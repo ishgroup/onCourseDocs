@@ -22,7 +22,7 @@ Most students will be going through the process of creating a new USI. Once they
 Provided you have the 'send usi reminder' script enabled in the Automation > Scripts section, every Monday morning (this timing can be changed), all recently enrolled VET students who have not supplied you with their USI will be sent an automatic reminder email on how to complete this process and why it is important they do so. A student who doesn't complete this process or cannot validate their USI will be flagged in onCourse for you to follow up.
 
 [[usi-enableValidation]]
-==== What you need to do enable the USI validation service in onCourse
+==== Enabling automated USI validation
 
 You can enable the USI validation by following the steps laid out in the <<externalintegrations-USI, USI section of our external integrations chapter>> of our documentation. There are a handful of steps that must be completed externally to the onCourse system before running the integration so ensure you follow each step closely before moving on to the next one.
 
@@ -42,63 +42,50 @@ Clicking on this link will open a web portal where you can complete the student 
 
 We do not recommend you copy or store the student's identity documentation in their onCourse record as this is in breach of the USI legislation.
 
-
+[[usi-manualEntryUSI]]
 ==== Manual entry of a USI
 
-When you create a new student or update an existing one, you can type the USI directly into the field available on the VET tab in their contact record.
-This can also be done directly within the checkout process.
-The USI will be checked for validity (it is the correct length and matches a checksum) and then verified against the USI agency.
+When you create a new student or update an existing one, you can type the USI directly into the field available on the VET tab in their contact record. This can also be done directly within the checkout process. The USI will be checked for validity (it is the correct length and matches a checksum) and then verified against the USI agency.
 
 image::images/usi/invalid_usi.png[title='What you will see if the USI has not been entered correctly. This USI is invalid as it doesn't meet the character length and checksum. It can't be validated and the record can't be saved.']
 
 If you have completed the steps to set up the USI Integration successfully, then the USI validation system in onCourse will be enabled.
 
-Once a complete USI is entered in the student record, the background validation process with the USI Registry System will run automatically.
-The validation process is checking that the student's first name, last name, date of birth and USI match the data held by the USI Registry System.
+Once a complete USI is entered, the background validation process with the USI Registry System will run automatically. The validation process is checking that the student's first name, last name, date of birth and USI match the data held by the USI Registry System.
 
 If it succeeds the USI will be marked as verified with a green pill next to the USI field and the student's first name, last name and date of birth will become locked.
 
 image::images/usi/verified_usi.png[title='This USI has passed verification and the record has been locked.']
 
-If the one of the fields do not match e.g. the student's first name in onCourse is a shortened version of their legal name, then the USI verification process will fail.
-Hovering over the information icon next to the USI field label will show the reason why the verification process failed.
-You can update the non-matching data in onCourse and the verification process will run again, automatically, when you change one of the first name, last name, date of birth or USI field's data.
+If the one of the fields do not match e.g. the student's first name in onCourse is a shortened version of their legal name, then the USI verification process will fail. Hovering over the information icon next to the USI field label will show the reason why the verification process failed. You can update the non-matching data in onCourse and the verification process will run again, automatically, when you change one of the first name, last name, date of birth or USI field's data.
 
 image::images/usi/usi_verification_failed.png[title='This USI has failed verification. The data can be corrected and the verification attempted again.']
 
+[[usi-editLockedRecord]]
 ==== Editing a locked student record
 
 After successful USI validation, the data that was matched with the USI - the first name, last name, date of birth and USI of the student, becomes locked and will no longer display an edit icon next to the field.
 
-On occasion, a student may inform you that they created their USI with the wrong name details and wish to update their records.
-To do this, they need to contact the USI Agency by logging into their own portal and completing the process to make the change.
-Once the USI Agency has the details of the change, you can go ahead and update their onCourse records to match.
+On occasion, a student may inform you that they created their USI with the wrong name details and wish to update their records. To do this, they need to contact the USI Agency by logging into their own portal and completing the process to make the change. Once the USI Agency has the details of the change, you can go ahead and update their onCourse records to match.
 
-In the VET section of the contact, click the cogwheel next to the USI field and click 'Update USI'.
-This will empty the student's USI field and unlock their first name, last name and birth date fields.
-Once updated you'll need to re-enter the student's USI number for validation.
+In the VET section of the contact, click the cogwheel next to the USI field and click 'Update USI'. This will empty the student's USI field and unlock their first name, last name and birth date fields. Once updated you'll need to re-enter the student's USI number for validation.
 
 image::images/usi/usi_edit_sheet.png[title='Click the cogwheel next to the USI field,then select Update USI to update an already verified contact's details']
 
 [[usi-selfService]]
 === Student self-service
 
-On enrolment through the office or the web, onCourse will send an email enrolment confirmation to the student.
-If the course is VET flagged, the confirmation template will include some text directing the student to obtain and supply you with their USI.
+On enrolment through the office or the web, onCourse will send an email enrolment confirmation to the student. If the course is VET flagged, the confirmation template will include some text directing the student to obtain and supply you with their USI.
 
-Another default script in onCourse can be enabled to send a reminder email to students every Monday at 9am until the class is complete or the USI is entered.
-You can modify these templates or alter the script which determines when and how often to send these emails.
+Another default script in onCourse can be enabled to send a reminder email to students every Monday at 9am until the class is complete or the USI is entered. You can modify these templates or alter the script which determines when and how often to send these emails.
 
-Note that students are only sent this email if they are enrolled in a VET flagged class, to avoid bothering your students engaging in non-VET training, however by default VET flagged courses without qualifications or units will also trigger this email as they are usually reported via AVETMISS for funding arrangements.
-You may wish to alter the scripts to only send the email when the course has a qualification record attached.
+Note that students are only sent this email if they are enrolled in a VET flagged class, to avoid bothering your students engaging in non-VET training, however by default VET flagged courses without qualifications or units will also trigger this email as they are usually reported via AVETMISS for funding arrangements. You may wish to alter the scripts to only send the email when the course has a qualification record attached.
 
 image::images/usi/usi_email.png[title='An example of a confirmation email with USI information']
 
 image::images/usi/usi_followup_email.png[title='An example of a USI reminder email.']
 
-Once the student gets the email requesting their USI, they will be able to click on a link which takes them directly to a page within the skillsOnCourse portal.
-They will not require a password and the link will be valid for 7 days from the email being sent.
-The URL is cryptographically signed so that they will not work after the expiry date and they will not be transferable between students.
+Once the student gets the email requesting their USI, they will be able to click on a link which takes them directly to a page within the skillsOnCourse portal. They will not require a password and the link will be valid for 7 days from the email being sent. The URL is cryptographically signed so that they will not work after the expiry date and they will not be transferable between students.
 
 You can change the default 7 days expiry to any number of your choosing by editing your enrolment confirmation and USI reminder email templates.
 

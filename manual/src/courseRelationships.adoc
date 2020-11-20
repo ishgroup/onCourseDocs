@@ -1,0 +1,67 @@
+[[courseRelations]]
+== Course relationships
+
+Course relationships in onCourse allow you to create powerful new course packaging rules between courses and products. Applying these relationships to course records will
+
+Courses can have multiple relationships of varying types.
+
+[[courseRelations-creating]]
+=== Creating new course relationships
+
+You can create a new course relationship by going to the Preferences window, then clicking 'Course relationship types' in the left-hand column. You need to give the relationship a name that's unique. You'll also have to name the 'to' and 'from' sides of the relationship e.g. next/previous, component/bundle/ similar/similar etc. The 'to' and 'from' relationships can have the same name - make sure it's relevant to the relationship you're defining. You also set a 'cart action', which will define what happens next when someone puts a class from this course in their cart.
+
+The 'Show on web' checkbox, when active, will show this relationship on the website, while the 'description' is used to explain what you're selling e.g. for similar courses your description might read "Other courses you might be interested in". You can associate an existing discount record with the course relationship using the 'discount' field. The 'Consider history' checkbox will do a history check of the student's prior enrolments in your system to ensure they meet any prerequisite or corequisite requirements for enrolment. e.g. you may have an English level 4 course where students must have completed levels 1, 2 and 3 in order to enrol into level 4.
+
+onCourse also comes with pre-defined default course relationships that can be used to achieve different goals around the marketing and selling of your courses and products. Suggest similar courses or encourage students on to the next level of study i.e. from English 2 to English 3, provided they've finished the prerequisite course. In cases where you may need to apply a fee for enrolment, say in the case of requiring an audition or entry exam, automatically apply a fee product to the enrolment that the student cannot remove.
+
+
+[[courseRelations-directions]]
+==== 'To' and 'From' relationships
+
+The relationships defined in these records are directional, which gives you great flexibility to market your courses and products in any manner you choose. We describe these directional relationships as 'to' and 'from'. However, we allow you to name them anything you like, so you can always ensure they're relevant to what you're trying to achieve.
+
+When you apply the 'to' relationship to a course, the 'from' relationship will be applied to the opposite record e.g you're using the default level progression relationship and applying it three english course, ENG001, ENG002 and ENG003. The 'to' and 'from' relationships in the level progression course relationship type are named 'next' and 'previous'. This means that if the 'next' type is applied to ENG002 on the ENG001 record, then on ENG002 the relationship type will show as 'previous'. Similarly, when you apply the 'next' type to ENG003 on ENG002, when you open ENG003 the ENG002 record will already display with the 'previous' type set.
+
+
+[[courseRelations-cartActions]]
+==== Cart actions
+
+The 'cart action' field lets you define what happens if a student adds a course or product with a relationship to their cart. Each choice has a different action. These actions are:
+
+* *No action -* No extra actions are taken when adding this course/product to the cart
+* *Add and allow removal -* Upon adding a course/product to the cart with this relationship type, any related courses/products will also be added to the cart. These can be removed again by the user if they choose not to purchase the additional item/s.
+* *Add but do not allow removal -* When a course is added using this relationship, the related courses and products will be added to the student's checkout as well as the course/product they initially selected. These items _cannot_ be removed from the cart. This is useful for relationships like bundles or a course progression as it makes purchasing every item as a group mandatory.
+* *Suggestion -* Relationships that use the suggestion cart action will show in the checkout as suggested courses. These can be freely added or removed from the cart at any time.
+
+
+[[courseRelations-defaultTypes]]
+=== Default course relationship types
+
+The following course relationship types are defined in onCourse by default.
+
+[[courseRelations-similar]]
+==== Similar courses
+
+This is intended for when two or more courses are similar in nature e.g. language courses, arts courses and other similar courses that you'd like marketed together. The to and from relationships are both defined as 'similar' which
+
+[[courseRelations-levels]]
+==== Course level progression
+
+
+[[courseRelations-bundle]]
+==== Bundles
+
+
+[[courseRelations-audition]]
+==== Audition fee
+
+
+[[courseRelations-rolling]]
+==== Rolling intakes
+
+
+[[courseRelations-online]]
+=== Course relationships online
+
+
+

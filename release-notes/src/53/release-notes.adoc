@@ -5,19 +5,21 @@
 
 === Sellable item relationships
 
-Course and product relationships now have user definable types with a number of configurable properties for marketing purposes. Relationships can be displayed on your website and they can have specific shopping cart actions such as:
+Course and product relationships now have user definable types with a number of configurable properties for marketing purposes. This feature will allow you to set relationships between both courses and products that will affect how these items are sold to students.
 
-* suggestion only
+They can have specific shopping cart actions such as:
 
-==== co-requisites
+* suggestion only - these items will appear as suggestions in the cart/checkout
 
-* add to cart (and allow removal)
-* add to cart (and don't allow removal)
+==== co-requisite purchase requirements
 
-==== pre-requisites
+* add to cart (and allow removal) - items with this relationship are added to the cart/checkout automatically upon adding the root record, but these items can be removed by the student/user
+* add to cart (and don't allow removal) - items with this relationship are added to the cart/checkout automatically upon adding the root record and cannot be removed by the student/user
 
-* add to cart only if user never purchased/enrolled in it in the past (and allow removal)
-* add to cart only if user never purchased/enrolled in it in the past (and don't allow removal)
+==== pre-requisite purchase requirements
+
+* add to cart only if user never purchased/enrolled in it in the past (and allow removal) - items with this relationship are added to the cart/checkout automatically upon adding the root record only if the system can see previous enrolments that match the 'from' record. These can be removed from the cart/checkout by the student.
+* add to cart only if user never purchased/enrolled in it in the past (and don't allow removal) - items with this relationship are added to the cart/checkout automatically upon adding the root record only if the system can see previous enrolments that match the 'from' record. These cannot be removed from the cart/checkout by the student.
 
 == Minor features
 * Remove 'endsWith' from AQL for richtext fields since the new richtext mode will break these searches  `OD-14952`

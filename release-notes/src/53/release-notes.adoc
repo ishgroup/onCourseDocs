@@ -1,0 +1,25 @@
+= Release 53
+24 Nov. 2020
+
+== Major features
+
+=== Sellable item relationships
+
+Course and product relationships now have user definable types with a number of configurable properties for marketing purposes. Relationships can be displayed on your website and they can have specific shopping cart actions such as:
+
+* suggestion only
+
+==== co-requisites
+
+* add to cart (and allow removal)
+* add to cart (and don't allow removal)
+
+==== pre-requisites
+
+* add to cart only if user never purchased/enrolled in it in the past (and allow removal)
+* add to cart only if user never purchased/enrolled in it in the past (and don't allow removal)
+
+== Minor features
+* Remove 'endsWith' from AQL for richtext fields since the new richtext mode will break these searches  `OD-14952`
+* Split replication to separate module: Java code `OD-15213`
+* Remove system resources which have been removed from the application `OD-15230`

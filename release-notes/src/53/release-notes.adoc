@@ -5,23 +5,29 @@
 
 === Sellable item relationships
 
-Course and product relationships now have user definable types with a number of configurable properties for marketing purposes. This feature will allow you to set relationships between both courses and products that will affect how these items are sold to students.
+Course and product relationships now have user definable types with a number of configurable properties for marketing purposes. This feature will allow you to set relationships between both courses and products that will affect how these items are sold.
 
 They can have specific shopping cart actions such as:
 
-* suggestion only - these items will appear as suggestions in the cart/checkout
+. suggestion only - these items will appear as suggestions in the cart/checkout
 
-==== co-requisite purchase requirements
+==== co-requisite
 
-* add to cart (and allow removal) - items with this relationship are added to the cart/checkout automatically upon adding the root record, but these items can be removed by the student/user
-* add to cart (and don't allow removal) - items with this relationship are added to the cart/checkout automatically upon adding the root record and cannot be removed by the student/user
+Items with this relationship are added to the cart/checkout automatically. They can be locked to the cart, or removable.
 
-==== pre-requisite purchase requirements
+[start=2]
+. add to cart and allow removal
+. add to cart and don't allow removal
 
-* add to cart only if user never purchased/enrolled in it in the past (and allow removal) - items with this relationship are added to the cart/checkout automatically upon adding the root record only if the system can see previous enrolments that match the 'from' record. These can be removed from the cart/checkout by the student.
-* add to cart only if user never purchased/enrolled in it in the past (and don't allow removal) - items with this relationship are added to the cart/checkout automatically upon adding the root record only if the system can see previous enrolments that match the 'from' record. These cannot be removed from the cart/checkout by the student.
+==== pre-requisite
+
+Items with this relationship are added to the cart/checkout automatically, but only if the user has never purchased/enrolled in them before. They can be locked to the cart, or removable.
+
+[start=4]
+. add to cart and allow removal
+. add to cart and don't allow removal
 
 == Minor features
 * Remove 'endsWith' from AQL for richtext fields since the new richtext mode will break these searches  `OD-14952`
-* Split replication to separate module: Java code `OD-15213`
 * Remove system resources which have been removed from the application `OD-15230`
+* Increase the image preview size in document cards and make it easier to update sharing permissions `OD-15307`

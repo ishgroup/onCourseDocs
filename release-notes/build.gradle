@@ -101,18 +101,30 @@ task releaseNotes(type: ReleaseNotes) {
   	version = releaseVersion
   }
   outputFile = new File(project.projectDir, "/src/${version}/release-notes.adoc")
+  jiraURL = project.property('jiraURL')
+  jiraUsername = project.property('jiraUsername')
+  jiraPassword = project.property('jiraPassword')
 }
 
 class ReleaseNotes extends DefaultTask {
   @Input
   String version
 
+  @Input
+  String jiraURL
+
+  @Input
+  String jiraUsername
+
+  @Input
+  String jiraPassword
+
   @OutputFile
   def outputFile
 
   @TaskAction
   def getNotes() {
-    def issues = getJiraResponse("resolution in (closed,Unresolved) and fixVersion=${version}").issues as Collection
+    def issues = getJiraResponse("resolution in (closed,Unresolved) and fixVersion='${version} angel'").issues as Collection
 
     logger.lifecycle "Found ${issues.size()} issues..."
 
@@ -124,9 +136,9 @@ class ReleaseNotes extends DefaultTask {
 
   def getJiraResponse(jql) {
     // https://developer.atlassian.com/cloud/jira/platform/rest/
-    def squish = new RESTClient('https://squish.ish.com.au', ContentType.JSON)
+    def squish = new RESTClient(jiraURL, ContentType.JSON)
     // The following line is needed instead of squish.auth.basic since we need to pre-emptive auth
-    squish.headers.'Authorization' = "Basic ${"gradle:7Am1*^X8A#ul".bytes.encodeBase64().toString()}"
+    squish.headers.'Authorization' = "Basic " + (jiraUsername + ":" + jiraPassword).bytes.encodeBase64().toString()
     try {
       def response = squish.get(
               path: '/rest/api/2/search',

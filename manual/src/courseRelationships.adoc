@@ -1,14 +1,16 @@
 [[courseRelations]]
-== Course relationships
+== Sellable items relationships
 
-Course relationships in onCourse allow you to create powerful new course packaging rules between courses and products. Applying these relationships to course records will
+Sellable items relationships in onCourse allow you to create powerful new packaging rules between both courses and products. Applying these relationships to course and product records will allow you to market them in specific ways, like as a related course or as a part of a group of courses being sold together alog with some textbooks.
 
-Courses can have multiple relationships of varying types.
+Courses and Products can have multiple relationships of varying types, allowing you to be flexible with your offerings.
 
 [[courseRelations-creating]]
-=== Creating new course relationships
+=== Creating new relationships
 
-You can create a new course relationship by going to the Preferences window, then clicking 'Course relationship types' in the left-hand column. You need to give the relationship a name that's unique. You'll also have to name the 'to' and 'from' sides of the relationship e.g. next/previous, component/bundle/ similar/similar etc. The 'to' and 'from' relationships can have the same name - make sure it's relevant to the relationship you're defining. You also set a 'cart action', which will define what happens next when someone puts a class from this course in their cart.
+You can create a new relationship by going to the Preferences window, then clicking 'Sellable items relation types' in the left-hand column.
+
+Give the relationship a name that's unique. You'll also have to name the 'to' and 'from' sides of the relationship e.g. next/previous, component/bundle/ similar/similar etc. The 'to' and 'from' relationships can have the same name e.g. in our 'Similar courses' example you'll notice both the 'to' and 'from' names are the word 'similar'. You must also set a 'cart action', which will define what happens next when someone puts an item associated with this relationship in their cart.
 
 The 'Show on web' checkbox, when active, will show this relationship on the website, while the 'description' is used to explain what you're selling e.g. for similar courses your description might read "Other courses you might be interested in". You can associate an existing discount record with the course relationship using the 'discount' field. The 'Consider history' checkbox will do a history check of the student's prior enrolments in your system to ensure they meet any prerequisite or corequisite requirements for enrolment. e.g. you may have an English level 4 course where students must have completed levels 1, 2 and 3 in order to enrol into level 4.
 
@@ -32,6 +34,14 @@ The 'cart action' field lets you define what happens if a student adds a course 
 * *Add and allow removal -* Upon adding a course/product to the cart with this relationship type, any related courses/products will also be added to the cart. These can be removed again by the user if they choose not to purchase the additional item/s.
 * *Add but do not allow removal -* When a course is added using this relationship, the related courses and products will be added to the student's checkout as well as the course/product they initially selected. These items _cannot_ be removed from the cart. This is useful for relationships like bundles or a course progression as it makes purchasing every item as a group mandatory.
 * *Suggestion -* Relationships that use the suggestion cart action will show in the checkout as suggested courses. These can be freely added or removed from the cart at any time.
+
+
+[[courseRelations-addRelation]]
+=== Adding relationships to records
+
+You can add relationships to both Courses and Products. To add a new relationship between a course/product, open the record of the course/product you want to link and scroll down to the relations section, click the + icon to create a new relationship.
+
+
 
 
 [[courseRelations-defaultTypes]]

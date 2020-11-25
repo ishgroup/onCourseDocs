@@ -75,12 +75,16 @@ This is intended for when two or more courses are similar in nature e.g. languag
 
 [plantuml]
 ----
-@startmindmap
-* Beginner French
-** Beginner German
-** Beginner Japanese
--- Beginner Italian
--- Beginner Chinese
+rectangle "Beginner French" as F
+rectangle "Beginner German" as G
+rectangle "Beginner Japanese" as J
+rectangle "Beginner Italian" as I
+F -- G
+F -- I
+F -- J
+G -- I
+J -- I
+J -- G
 ----
 
 [[courseRelations-levels]]
@@ -90,11 +94,13 @@ This should be used to show a suggested path of progression between similar cour
 
 [plantuml]
 ----
-@startmindmap
-* Cooking 101
-** Cooking 102
-*** Cooking 103
-**** Cooking 104
+rectangle "Cooking level 1" as 1
+rectangle "Cooking level 2" as 2
+rectangle "Cooking level 3" as 3
+rectangle "Cooking level 4" as 4
+1 -> 2: next
+2 -> 3: next
+3 -> 4: next
 ----
 
 [[courseRelations-bundle]]
@@ -106,27 +112,34 @@ Let's say you want to sell a group of 3 english courses as a bundle with a disco
 
 [plantuml]
 ----
-@startmindmap
-* 3 for $150 English Course Bundle (product)\nand discount applied
-** ENG001 Enrolment\nENG002 Enrolment\nENG003 Enrolment
--- ENG001
--- ENG002
--- ENG003
+left to right direction
+rectangle "English level 1 $100" as 1
+rectangle "English level 2 $100" as 2
+rectangle "English level 3 $100" as 3
+
+node "Complete English Bundle $250 (product)" as P
+
+P --> 1: add to cart\nwith discount
+P --> 2: add to cart\nwith discount
+P --> 3: add to cart\nwith discount
+
+note bottom of P
+Product causes discount to be applied
+end note
 ----
 
 
 [[courseRelations-audition]]
 ==== Application fee
 
-This is intended for use in situations where you may have an application or audition fee that you need to apply at checkout any time someone enrols. E.G. if your music classes require an audition any time someone enrols and that audition requires a fee, you can make a product called 'audition fee' and then add the 'product fee (Application fee)' relationship between the course and it, the application fee product will be automatically added to checkout when the related course is added. The fee product is not able to be removed.
+This is intended for use in situations where you may have an application or audition fee that you need to apply at checkout. For example, apply a $100 audition fee when someone applies to the Trumpet course. The fee is a product and cannot be removed from the cart. Do not consider history, since this fee applies even if the student has applied before.
 
 [plantuml]
 ----
-@startmindmap
-* Grade 5 Trumpet (course)
-** Class enrolment
-** Audition fee (product)
-***_ cannot be removed from cart
+rectangle "Grade 5 Trumpet (course)" as T
+node "Audition fee (product)" as P
+
+T -> P: required in cart
 ----
 
 [[courseRelations-rolling]]
@@ -140,21 +153,36 @@ Each class will contain the regular timetable, units, outcomes, training plans, 
 
 [plantuml]
 ----
-@startmindmap
-* Certificate IV (product)
-** Term 1 (4 units)
-***_ Jan-Mar 2020 class
-***_ Jan-Mar 2021 class
-** Term 2 (4 units)
-***_ Apr-Jun 2020 class
-***_ Apr-Jun 2021 class
-** Term 3 (4 units)
-***_ Jul-Sep 2020 class
-***_ Jul-Sep 2021 class
-** Term 4 (4 units)
-***_ Oct-Dec 2020 class
-***_ Oct-Dec 2021 class
+left to right direction
+node "Certificate IV (product)" as P
+rectangle "Term 1 (4 units)" as 1
+rectangle "Term 2 (4 units)" as 2
+rectangle "Term 3 (4 units)" as 3
+rectangle "Term 4 (4 units)" as 4
+
+interface "Jan-Mar 2020 class" as 1_1
+interface "Jan-Mar 2021 class" as 1_2
+interface "Apr-Jun 2020 class" as 2_1
+interface "Apr-Jun 2021 class" as 2_2
+interface "Jul-Sep 2020 class" as 3_1
+interface "Jul-Sep 2021 class" as 3_2
+interface "Oct-Dec 2020 class" as 4_1
+interface "Oct-Dec 2021 class" as 4_2
+
+P --> 1
+P --> 2
+P --> 3
+P --> 4
+1 -[dashed]-> 1_1
+1 -[dashed]-> 1_2
+2 -[dashed]-> 2_1
+2 -[dashed]-> 2_2
+3 -[dashed]-> 3_1
+3 -[dashed]-> 3_2
+4 -[dashed]-> 4_1
+4 -[dashed]-> 4_2
 ----
+
 
 
 [[courseRelations-materials]]
@@ -164,12 +192,12 @@ This relationship type is inteded to define the relationship between a course an
 
 [plantuml]
 ----
-@startmindmap
-* Accounting (course)
-** Class enrolment
-** Scientific Calculator (product)
-***_ can be removed from cart
-** Accounting 101 Handbook (product)
-***_ can be removed from cart
+left to right direction
+rectangle "Accounting (course)" as A
+node "Scientific Calculator (product)" as C
+node "Accounting 101 Handbook (product)" as H
+
+A --> C: add to cart
+A --> H: add to cart
 ----
 

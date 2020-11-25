@@ -33,26 +33,33 @@ How you set the cart actions of the relationship type will determine what happen
 
 The 'cart action' field lets you define what happens if a student adds a course or product with a relationship to their cart. Each choice has a different action. These actions are:
 
-* *No action -* No extra actions are taken when adding this course/product to the cart
-* *Add and allow removal -* Any related courses/products will also be added to the cart. These can be removed again by the user if they choose not to purchase the additional item/s.
-* *Add but do not allow removal -* The related courses and products will be added to the student's checkout as well as the course/product they initially selected. These items _cannot_ be removed from the cart. This makes things like bundles or automatic audition fees possible.
-* *Suggestion -* Relationships that use the suggestion cart action will show in the checkout as suggested courses. These can be freely added or removed from the cart at any time.
+No action::
+No extra actions are taken when adding this course/product to the cart
+
+Add and allow removal::
+Any related courses/products will also be added to the cart. These can be removed again by the user if they choose not to purchase the additional item/s.
+
+Add but do not allow removal::
+The related courses and products will be added to the student's checkout as well as the course/product they initially selected. These items _cannot_ be removed from the cart. This makes things like bundles or automatic audition fees possible.
+
+Suggestion::
+Relationships that use the suggestion cart action will show in the checkout as suggested courses. These can be freely added or removed from the cart at any time.
 
 image::images/relationTypes_cartActions.png[title='The cart actions section of the relationship type']
 
 Discounts can be applied to any 'from' relationship, and you can set the discount to be applied in this field.
 
-The 'Consider history' checkbox will check the enrolment and product purchase history of the contact your system to ensure they meet any requirements set by your defined rules. E.G. if trying to enrol in a course that has another course with a 'from' relationship and that relationship is set to consider history, then the enrolling student must have a previously existing enrolment record for that course that is not cancelled.
+The 'Consider history' checkbox will check the enrolment and product purchase history of the contact your system to ensure they meet any requirements set by your defined rules. For example, if trying to enrol in a course that has another course with a 'from' relationship and that relationship is set to consider history, then the enrolling student must have a previously existing enrolment record for that course that is not cancelled.
 
 
 [[courseRelations-addRelation]]
 === Adding relationships to records
 
-Relationships are made between both Courses and Products. To add a new relationship between a course/product, open the record of the course/product you want to link and scroll down to the related courses/products section, click the + icon to create a new relationship.
+Relationships are made between both Courses and Products. To add a new relationship between a course/product, open the record of the course/product you want to link and scroll down to the related courses/products section, click the `+` icon to create a new relationship.
 
 image::images/relationTypes_courseadd.png[title='Adding a relationship between courses']
 
-Depending on what type of record you want to link, type the name of the course or product into either the 'Find Products' or 'Find Courses' fields. Once you'vefound the record you want to link, click 'add', then select a relationship type and direction using the drop-down box that appears.
+Depending on what type of record you want to link, type the name of the course or product into either the `Find Products` or `Find Courses` fields. Once you'vefound the record you want to link, click `add`, then select a relationship type and direction using the drop-down box that appears.
 
 image::images/relationTypes_select.png[title='Choose a relationship direction and type from the drop-down box after adding the relationship.']
 

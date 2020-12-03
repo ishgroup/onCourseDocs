@@ -339,6 +339,10 @@ onCourse paymentIn CSV import:: Using CSV data, import paymentIn information in 
 
 onCourse Contact Update Subscriptions CSV import:: Search for contacts based on the provided email address and update their marketing permissions in bulk.
 
+onCourse custom field types import:: allows the creation of custom fields in bulk by attaching a .txt file with data in json format (cannot be a .json file, must be .txt).
+
+
+
 [[importExport-payentIn]]
 ==== Payment In Import file set up
 
@@ -377,3 +381,30 @@ This import will allow you to update, in bulk, the email, post and sms subscript
 |bob@email.com.au |TRUE |FALSE |FALSE
 |charlie@email.com.au |FALSE |FALSE |FALSE
 |===
+
+
+[[importExport-customFieldTypes]]
+==== Custom field types import
+
+This allows you to create custom field types in bulk. The schema to use for this import should be formatted like so:
+
+[source,json]
+----
+  {
+      "name" : "custom field name",
+      "isMandatory": 1,
+      "choices": [
+                    {"label":"label 1", "value":"1"},
+                    {"label":"label 2", "value":"2"}
+                    ],
+      "fieldKey": "ishFieldKey",
+      "entityIdentifier": "Enrolment"
+  }
+]
+----
+
+Name:: The name of the custom field
+isMandatory:: Denotes whether the field is mandatory or not
+choices:: These are the list selections that will appear in the drop-down box. You can set both a label and a value.
+fieldKey:: the unique key given to the new custom field. This must be unique.
+entityIdentifier:: The name of the entity i.e. Enrolment, Contact, CourseClass etc.

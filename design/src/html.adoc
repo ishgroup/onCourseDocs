@@ -312,6 +312,28 @@ Produces a Course Class specific search
 Called by "BodyHeader" and in turn calls "Search Inputs"
 
 
+=== Course/CourseClass Tutors 
+
+Filename::
+TutorsDetails.tml
+
+Renders list of all the tutors associated with particular course.
+
+Display tutors in course detail using following piece of the code in CourseItem.tml
+
+[source,xml]
+----
+<span t:type="ui/tutorsDetails" course="courseItemModel.course"/>
+----
+
+Display tutors in course class detail using following piece of the code in CourseClassDetails.tml 
+
+[source,xml]
+----
+<span t:type="ui/tutorsDetails" courseClass="courseClass"/>
+----
+
+
 === Global Navi
 
 Filename::

@@ -1151,3 +1151,25 @@ When your user clicks on the link, the file will be downloaded. You will want to
 name::
 The name of the attachment as you specified it in the onCourse attachment entry screen.
 
+[[Tutors]]
+=== \{tutors}
+
+You are able to use this markup to display tutors on your home, courses, course detail, internal page or any other page. Use this rich text element to embed tutors.
+
+==== Usage
+
+....
+{tutors tagName:"featured"} 
+....
+
+....
+{tutors id:"10"}
+....
+
+
+[tagName]::
+Optional. Shows 3 random tutors tagged with 'featured' tag if [count] is not specified. Please note that featured is not a tag group but its name of certain child tag.
+[count]::
+Optional. Defining this option will limit number of tutors that needs to be displayed. Default value is 3.
+[id]::
+Optional. The specific tutor you wish to display. id parameter refers to angelId. This is the same id which we use in tutor page. ("/tutor/123")

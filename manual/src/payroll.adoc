@@ -140,6 +140,8 @@ Paid/Exported:: This record has been exported and is considered paid. The record
 
 Once Tutor pay records have been created they can be edited. Each Tutor pay record has a list of items grouped by class and based on the relevant attendance/wages/sessions for that class. Payslips can only be edited with they have a status of 'new'. Once you finalise or export them they become locked.
 
+the 'Pay Type' field has two choices, Employee and Contractor. These tie in to the default notifications that are sent to tutors when they are paid. Set this per tutor record. You can learn more about this below in our section on  <<payroll-employeesContractors, employees and contractors>>.
+
 Switching off the 'Include in payslip' option will remove it from being paid in this payroll cycle. The next time you run a payroll it will be added to the tutor's payslip again.
 
 image::images/defer_tutor_pay.png[title='The top line is deferred from the next payslip,the bottom is included']
@@ -162,23 +164,30 @@ Only a status of "Paid / Exported" prevents the editing of the record.
 [[payroll-employeesContractors]]
 ==== Managing employees vs contractors
 
-As the onCourse payroll functionality is a time and attendance calculation, rather than a complete payroll system that calculates income tax and leave allowances, both employees and contractors should be treated in the same way within the system.
+As the onCourse payroll functionality is a time and attendance calculation, rather than a complete payroll system that calculates income tax and leave allowances, both employees and contractors should be treated in the same way within the system, with the only difference being the 'pay type' set on each pay record.
 
-If you are exporting the tutor payslip data from onCourse into your primary accounting system to complete the final stages of the payroll process, you will want to be able to clearly identify your employees and contractors.
+These 'pay types' are used to tell the system which notification to send the tutor. There are two default notifications for tutor pay, one for employees and one for contractors. When the corresponding scripts for these notifications are turned on, any tutor pay record that is set to 'Contractor' will be sent a contractor tutor pay notification when the pay status is set to Approved, and any record set to 'Employee' wil have the employee notification sent to them when their pay status is set as 'Paid/Exported'.
 
-In the onCourse tutor contact record, on the section labelled tutor, you can enter a payroll reference number. This number is shown in the list of payslips generated. Often employees and contractors will have different types of identification numbers, for example all employees may have a unique ID from the primary payroll system used to match them on import, and contractors have the label 'contractor'. In the payslip list view, this makes employees and contractors easy to identify.
+image::images/payroll_paytype.png[title='Setting the pay type in a pay record']
 
-image::images/payslip_contractor.png[title='In the payslip window,payslips for contractors can be easily identified and excluded from export']
 
-You may then select your employee payslip records and export and finalise them, locking the payslip from further adjustment and locking the attendance and approval data for the included pay lines.
+[[payroll-payNotifications]]
+=== Automated pay notifications
 
-Employee payslips may be exported from onCourse and marked as finalised on a fortnightly basis, but you also need to keep a track of your contractor invoices - have they been issued to you as expected, and do they match the amount you budgeted for?
+onCourse has two default scripts and message templates to notify tutors of their pay; one set for employees and another for contractors. Its important to note that these notifications don't contain tax information, only the gross pay rate and amount for each class they are being paid for this run.
 
-In this case, having time and attendance payslips generated for your contractors gives you the data you need to compare against the invoice you receive. These contractors may not invoice you on the same cycle as employees are paid, even though onCourse will create the payslip data for them on the same cycle. However, by having the payslip data in onCourse with a status of 'new' provided you don't finalise that payslip, each fortnight when you run the generate pay process, the contractor payslip will be added to.
+For Employees::
+This uses the script 'notify tutor of processed payslip' and the default message template called 'Tutor pay processed'. This script will send out the applied message template whenever a pay record with the type 'Employee' has its status set as 'paid/exported'.
 
-This way, over time, you may have eight weeks, or four pay cycles of contractor data in a single payslip which matches their eventual invoice. When the invoice is received, you can compare it to this payslip, and the finalise the payslip that matches your invoice.
+For Contactors::
+This uses the script 'notify contractor of approved payslip' and the default message template called 'contractor pay processed'. This script will send off the applied message template whenevr a pay record with the type 'contractor' has its status set to 'approved'
 
-You may choose to defer some pay lines if they aren't included on the invoice received, and that is fine, it means they will come back again the next time you run a pay cycle, but this time on a new payslip.
+[[payroll-payNotificationsManual]]
+==== Send pay notifications manually
+
+You can also send the above notifications manually from the tutor pay window. Highlight a record and then select the cogwheel, click 'send message' and then select the correct template from the template list that you want to send. Make sure you select the correct template type for the tutor pay you want to send i.e. don't send a contractor notification to an employee.
+
+image::images/payroll_tutor_pay_message.png[title='Sending the tutor pay notification manually']
 
 [[payroll-tagging]]
 ==== Tagging Payslips

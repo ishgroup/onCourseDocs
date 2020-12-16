@@ -18,6 +18,9 @@ jobs:
       with:
         java-version: 11
 
+    - name: graphviz install
+      run: apt-get install graphviz
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 

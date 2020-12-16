@@ -312,6 +312,32 @@ Produces a Course Class specific search
 Called by "BodyHeader" and in turn calls "Search Inputs"
 
 
+=== Class Grouping 
+
+Filename::
+GroupedCourseClassesList.tml
+
+Renders list of classes grouped by site.
+
+To display a list of classes grouped by site using following piece of the code in CourseItem.tml, you need to replace: 
+
+[source,xml]
+----
+<t:loop source="courseItemModel.availableClasses" value="courseClass">
+   <span t:type="ui/courseclassitem" courseClass="courseClass" linkToLocationsMap="linkToLocationsMap" isList="isList" allowByAplication="allowByAplication" feeOverride="feeOverride"/>
+</t:loop>
+----
+
+with 
+
+[source,xml]
+----
+<span t:type="ui/groupedCourseClassesList" courseClasses="courseItemModel.availableClasses"  linkToLocationsMap="linkToLocationsMap" isList="isList" allowByAplication="allowByAplication" feeOverride="feeOverride" />
+----
+
+Classes that have no site assigned will be displayed last in a group called "Venue TBA".
+
+
 === Course/CourseClass Tutors 
 
 Filename::
@@ -332,6 +358,7 @@ Display tutors in course class detail using following piece of the code in Cours
 ----
 <span t:type="ui/tutorsDetails" courseClass="courseClass"/>
 ----
+
 
 === Course Relations
 

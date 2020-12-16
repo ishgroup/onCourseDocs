@@ -317,9 +317,9 @@ Called by "BodyHeader" and in turn calls "Search Inputs"
 Filename::
 GroupedCourseClassesList.tml
 
-Renders list of classes by grouping them into site.
+Renders list of classes grouped by site.
 
-Display list of classes grouped by site using following piece of the code in CourseItem.tml, you need to replace 
+To display a list of classes grouped by site using following piece of the code in CourseItem.tml, you need to replace: 
 
 [source,xml]
 ----
@@ -335,7 +335,7 @@ with
 <span t:type="ui/groupedCourseClassesList" courseClasses="courseItemModel.availableClasses"  linkToLocationsMap="linkToLocationsMap" isList="isList" allowByAplication="allowByAplication" feeOverride="feeOverride" />
 ----
 
-Classes that has no site assigned will be displayed in last group under "Venue TBA"
+Classes that have no site assigned will be displayed last in a group called "Venue TBA".
 
 
 === Course/CourseClass Tutors 

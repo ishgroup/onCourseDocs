@@ -240,62 +240,65 @@ The detail of the tutor with internal id 23.
 All pages under this path are reserved for the enrolment/checkout processing pages.
 
 [[onlineAdvancedSearch]]
-=== Advanced Search Options
+=== Search
 
-onCourse includes a Solr search engine indexed to your website. This allows users to use the built in simple or advanced search tools on your webpages to find the courses they are looking for, or for you to craft URLs which include certain search results.
+onCourse includes a powerful search engine across your website. Because it understands the structure of your content, it can be used to deliver very precise results.
 
-You can also choose to include only courses tagged with a set tag group in your search engine index, this is commonly done when providers have multiple websites for different training departments. i.e. the workplace learning site only ever searches on and shows results tagged with professional development, while the community site indexes all courses.
+Search engines like Google will create a pathway for students to get to your site which is why we implement opengraph (Facebook) and schema.org (Google, etc) to inject structured data into those search engines as well.
 
-The sort order for course results in a list view page prioritises courses with classes starting next. When a search parameter is added into a page, the sort order is shifted to bring results with a greater relevancy to the top of the page, and then to sort by classes starting next.
+When a student arrives on your onCourse site, use some of the tools below to craft a user journey from the front page to the course they are looking for.
 
-To see the scoring priority for each course in a search result, add the string ?debugQuery=true to the end of your URL.
+==== Keyword search
+    /courses?s=cooking
 
-When adding a 'near=' search, it will automatically hide results outside of 100km radius the search suburbs' GPO. This can be useful if you deliver in seperated locations. For example, a website visitor who searches for courses in Sydney is unlikely to be interested in results in Melbourne, but may be interested in results in Chatswood. In this case the Melbourne classes would be suppressed from the list but shown to the user if they click the button 'Show other classes'
+This is standard keyword search, which includes stemming so the term cooking will find cook, cooks, cooking, cookery, etc. Synonyms are also matched. Phrases are search both as separate words and as a phrase.
 
-Classes that are full or cancelled are suppressed from the course results.
+Ordering of the results is highly sophisticated, taking into account higher priority for terms appearing in headings, tutor names or words in the description as a complete phrase or just words close together. Course with classes starting sooner are also sorted higher. Classes which are cancelled or full are sorted lower. And since classes are always grouped by course, these rankings are aggregated to produce the final sort order.
 
-If you wanted to craft some specific searches to put behind image banners, promotional ads or other links, you can build your search within a tag group URL to make the results more specific.
-For example, if you want a promo for day time cooking classes your search might be www.myurl.com/courses/cooking?time=day which will find all the courses tagged with the subject tag group named cooking that have classes running during the day time.
+==== Distance to suburb
+    /courses?near=Chatswood/2067/1
 
-The onCourse search options available are:
+Search on the Suburb/postcode/search radius in km. While the search may work without the postcode, adding the postcode is essential for some suburbs which are not unique in your country. If you skip the search radius, all results within 100km will be returned with the closest sorted to the top. If you include the radius, then results further away will be completely excluded from the results.
 
-Keyword search::
-Example - _/courses?s=cook_
- +
-This is standard keyword search, which includes stemming so the term cook will find cook, cooks, cooking, cookery ect.
-The search results prioritise courses where the search term appears in the course name, over courses where it appears in the course description.
-Search by proximity to location::
-Example - _/courses?near=Chatswood/2067/1_
- +
-Search on both the Suburb/postcode/search radius in km.
-While the search may work without the postcode, adding the postcode is essential to determine location if the suburb exists in multiple states.
-You do not require the search radius for this to function.
-Search by price::
-Example - _/courses?price=200_
- +
+==== Price
+    /courses?price=200
+
 This searches for classes with an enrolment fee less than the specified dollar value.
-Search by specific tutor::
-Example - _/courses?tutorId=1234_
- +
-This searches for all classes that the tutor with ID number 1234 is currently teaching.
-To find what a tutors ID is you will need to find a class that is online and one the tutor currently teaches.
-Then right click on their name, in the class block, and open the link in a new window/tab.
-The tutors ID will be the last few digits of the URL. So if the URL is www.yoursite.com.au/tutor/3, then the tutor ID is 3.
-Search by time of day::
-Example - _/courses?time=daytime_
- +
+
+==== Duration
+   /courses?duration=3
+
+Find classes that last this many days, including the start and end days. So a duration of 1, is a single day class.
+
+   /courses?duration=>3
+   /courses?duration=<3
+
+Find classes with 3 or more days, or 3 or fewer days. Note that the symbols are not in the order you might expect. You need to use +=>+ rather than +>=+
+
+   /courses?duration=selfpaced
+
+This finds selfpaced classes.
+
+
+==== Tutor
+   /courses?tutorId=1234
+
+This searches for all classes that the tutor with ID 1234 is currently teaching. Note that a normal keyword search will find tutors by name, but may also pick up those words in other places like course description.
+
+==== Time of day
+   /courses?time=daytime
+
 Searching for a day class means the first session commences before 5pm.
- +
-Example - _/courses?time=evening_
- +
+
+   /courses?time=evening
+
 Searching evening means the session starts after 5pm.
-Search for classes starting on a specific day::
-Example - _/courses?day=mon_
- +
-This searches for a class where the first session is on Monday.
- +
-Parameters:
- +
+
+==== Specific day
+   /courses?day=mon
+
+This searches for a class where the first session is on Monday. Choices you can use here:
+
 * mon
 * tues
 * wed
@@ -303,52 +306,68 @@ Parameters:
 * fri
 * sat
 * sun
-* weekday - _searches for classes where the first session is held Monday to Friday_
-* weekend - _searches for classes where the first session is held on a Saturday or Sunday_
-Date Specific Search::
-Example - _/courses?after=20141201_
- +
-This will show class that start after the date 1/12/2014. The date in the search is in format yyyymmdd.
- +
-Example - _/courses?before=20141201_
- +
-This will show classes that start before 1/1/2015. The date in the search is in format yyyymmdd.
-This can be used in combination with the after search option to create a date range.
-Relative Time Search::
-Example - _/courses?before=30_
- +
+* weekday
+* weekend
+
+==== Date
+   /courses?after=20141201
+
+This will show classes that start after the date 1/12/2014. The date in the search is in format yyyymmdd.
+
+   /courses?before=20141201
+
+This will show classes that start before 1/1/2015. The date in the search is in format yyyymmdd. This can be used in combination with the after search option to create a date range.
+
+   /courses?after=20141201&before=20151201
+
+
+==== Relative dates
+    /courses?before=30
+
 This will show all classes starting within the next 30 days.
- +
-Example - _/courses?after=365_
- +
-This will show all classes that are starting 365 days or more after the current day.
-Tag Specific Search::
-Example - _/courses/cooking?tag=delivery/School+holidays_
- +
-This search allows you search for courses that are tagged with multiple tags.
-You must use the full secondary tag path.
-This means the course is tagged with both the landing page tag (usually the tag group from within the subjects tag) and the search term tag.
 
-Multiple search teams can be concatenated to created complex search strings such as _www.myurl.com/courses/cooking?s=thai&near=Chatswood+2057&price=500&time=day&tag=level/beginner_ which is searching inside the subject tag group cooking for courses also tagged with the level tag group beginner that contain the keyword Thai, held near Chatswood NSW in the day time and costing under $500.
+    /courses?after=365
 
-[NOTE]
-====
-A note on the space character inside a URL: If you have a tag name that contains a space, and you are manually crafting a URL that includes that tag, you need to replace the space character with a + symbol e.g. tag name "cooking for kids" in a URL becomes "cooking+for+kids". This is done automatically for pages generated by onCourse, it is only in hand crafted URLs you need to remember to add the space delimiter. "%20" works also, but makes the URL harder for a human to read.
-====
+This will show all classes that are starting a year or more into the future.
+
+==== Tag Specific Search
+    /courses/cooking?tag=delivery/School-holidays
+
+This search allows you to search for courses that are tagged with multiple tags. In this case the primary tag searched on is "cooking" from the "Subject" tag group. The tag description for cooking will appear at the top of that page.
+
+The results will be filtered for the secondary tag "school holidays" from the tag group "delivery".
+
+
+==== Combination searches
+
+Multiple search teams can be concatenated to created complex search strings such as
+
+    /courses/cooking?s=thai&near=Chatswood+2057&price=500&time=day&tag=level/beginner
+
+which is searching inside the subject tag group cooking for courses also tagged with the level tag group beginner that contain the keyword Thai, held near Chatswood NSW in the daytime and costing under $500.
+
+==== Debugging
+
+To see the scoring priority for each course in a search result, add the parameter `debugQuery=true` to the end of your URL.
 
 
 [[onlineAdvnacedFiltering]]
-==== Filtering class results using advanced search
+==== Filtering classes
 
 Advanced search parameters can also be added to specific course pages, to filter the list of results returned. This can be a useful function when you offer the same course in multiple locations, but users only want to see the classes from a specific location.
 
 These search options are appended to a standard course page, with the URL containing the course code. In these examples, course code ABC123 is used.
 
-Example - _/course/ABC123/?near=Chatswood+2057_::
+     /course/ABC123/?near=Chatswood+2057
+
 Search on both the Suburb+postcode. While the search may work without the postcode, adding the postcode is essential to determine location if the suburb exists in multiple states.
-Example - _/course/ABC123/?time=day_::
+
+    /course/ABC123/?time=day
+
 Searching for day classes of a course means the first session commences before 5pm.
-Example - _/course/ABC123/?time=evening_::
+
+    /course/ABC123/?time=evening
+
 Searching evening classes of a course means the first session starts after 5pm.
 
 [[onlineFacetedSearch]]
@@ -1159,7 +1178,7 @@ You are able to use this markup to display tutors on your home, courses, course 
 ==== Usage
 
 ....
-{tutors tagName:"featured"} 
+{tutors tagName:"featured"}
 ....
 
 ....

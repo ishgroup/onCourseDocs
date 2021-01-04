@@ -28,39 +28,24 @@ In the print dialogue, you will be asked if you want to print selected or all re
 [[reports-background]]
 === Print Backgrounds
 
-onCourse printed reports can be set up with a defined background or overlay allowing the user to utilise different backgrounds or headers dependent upon the particular report. These backgrounds must be created as a PDF document that is then imported into onCourse via the PDF Backgrounds section of the `Automation` window.
+onCourse printed reports can be set up with a defined background. These backgrounds must be created as a PDF document that is then imported into onCourse via the PDF Backgrounds section of the `Automation` window.
 
-Generally, a college will have a standard 'letterhead' style background, available in both portrait and landscape modes that can be used as the print background to common reports like invoices, enrolment confirmations and class rolls.
-
-In addition, the college may have one or more background reports for their Qualification, Statement of Attainment, Transcript and Certificate of Attendance reports. These backgrounds will usually contain formal elements such the colleges contact details, RTO ID, the business logo, the AQF and/or NRT logos and possibly the certificate signatory details & signature. They also may contain optional design elements such as borders, background images or watermarks.
-
-By using the background function for activities such as certificate printing design, with only the text based contents coming from the onCourse report, a college can modify their backgrounds at any time,without access to sophisticated software or report writing skills.
-
-As a general rule you will have about 30mm at the top of the first reports page to add you logo and any text around it. If you want the exact dimensions you can go to the Automation section, scroll to PDF Reports, highlight the report you want to find these dimensions for. If it's a default ish report, you'll need to click the cogwheel, save as a new PDF report and enter a new key. Then you can highlight the new report, click the 'edit' button. If the report is a custom-made one, you can simply click the 'edit' button. If you have to enter a key, just make one up (but keep it short, unique and relevant). Then to open the file you would have to download a tool called JasperSoft Studio, more information about this can be found in the <<reports-custom>> chapter of the user manual.
+Generally, you will have a standard 'letterhead' style background, available in both portrait and landscape modes that can be used as the print background to common reports like invoices, enrolment confirmations and class rolls. You might also have some special backgrounds for certificates and other formal documents. Put all your graphic elements on these backgrounds such as signatures, logos, compliance icons and watermarks. It is easier to add these elements to the background than to the report itself.
 
 [[reports-createBackground]]
-==== Setting Up New Backgrounds
+==== Creating a backgrounds
 
-The following instructions outline how you can set up your report print backgrounds which will be overlaid with the report content:
+Use your favourite page layout tool. Indesign, Quark, Word, Pages or any other tool which can create high quality PDF output will do fine. Make sure you set up the page size and orientation to match your report.
 
-. Create a new Microsoft Word or Apple Pages document and ensure that the page set up is set to Portrait.
-. Open up the Header for the new document and place the required logo and contact details you wish the report to display.
-+
+If you create a single page PDF, that background will be used for all the pages of your report. If you create a two page PDF, the first page of the PDF will be used as the background for the first page of the report and the second page of the PDF will be used for all subsequent pages. It is common to create a two page PDF with letterhead on the first page and a blank page for the follow-on.
+
 [TIP]
 ====
-Ensure that the elements that you place within the header do not exceed the dimensions of the report header space.
+Many of the built-in reports have 30mm header space. If you can keep your header within that area, you'll not have to adjust the standard reports to fit.
 ====
-. Once you have completed the set up of the page header, save the document as a PDF so that it is ready to be imported into onCourse as a background. Make sure that you clearly label within the name of the PDF whether the document is Portrait or Landscape format.
-+
-[TIP]
-====
-You can create a two page background by saving your PDF with a blank second page
-====
-. Reset the original Word or Pages document to display in Landscape format, then realign the elements within Header to ensure it fits within the dimensions of the Header.
-. Repeat step 3 making sure that you clearly label within the name of the PDF whether the document is Portrait or Landscape format
 
 [[reports-addNewBackground]]
-==== Adding a New Background to onCourse
+==== Adding a background to onCourse
 
 Once you have created the print backgrounds for your reports, you can now import those PDF backgrounds into onCourse and attach them to their relevant reports. You only need to import each report background once.
 
@@ -79,8 +64,7 @@ If you click back into your record, you will now see that it shows a preview of 
 
 [TIP]
 ====
-The chosen report will display the last background used as the default when printing that report.
-But you can simply select an alternate background from the drop down menu or import a new background if you so chose.
+When printing, the report will default to the last background you used for that report.
 ====
 
 [[reports-choosingBackground]]

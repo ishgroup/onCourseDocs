@@ -1,0 +1,40 @@
+= Release 58
+12 Jan. 2021
+
+== Major features
+
+=== Search for empty joins
+
+Searching is now possible like this (on the Site list)
+
+    rooms is empty
+
+This will find all sites with no rooms.
+
+
+== Minor features
+* Contacts - Memberships display more information `OD-13717`
+* Funding invoice: create one per student `OD-14874`
+* New dashboard links for Automation and Preferences `OD-15312`
+* Document permissions displaying on document info dialog `OD-15409`
+* Cron job for clustered server `OD-15421`
+* Auto Increment service for clustering   `OD-15424`
+* Don't allow enrolments into disabled classes `OD-15431`
+
+== Fixes
+* Classes - Changes to VET Training Plan aren't saving `OD-15338`
+* Certificate renewal not detected until restart `OD-15361`
+* Tutor Pay Rates - 'Discount' pay type appearing `OD-15376`
+* Upgrade hashing algorithm for passwords `OD-15388`
+* Student not automatically added to checkout when checkout accessed via class `OD-15402`
+* Voucher status is not set to Redeemed when applying from checkout `OD-15406`
+* Error when saving a note to a room `OD-15412`
+* Payment Out wrong amount `OD-15413`
+* Checkout: Voucher added with sellable items relation is not purchased `OD-15417`
+* Duplicating class for another course duplicates original course training plan `OD-15422`
+* New class create bugged: no class code, null Reportable hours `OD-15423`
+* Axios security fix `OD-15427`
+* Update default admin password to new hash `OD-15429`
+* Cannot enrol contact created in checkout `OD-15434`
+* Canvas integration doesn't save `OD-15435`
+

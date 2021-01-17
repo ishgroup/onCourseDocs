@@ -71,9 +71,9 @@ Date range:: The options available here are date based and will collect the OUTC
 
 Commenced Outcomes:: all outcomes that have a start date in the past from the chosen enrolments. Be careful choosing this with 'Fee for service VET' or 'Non VET' as you will export every outcome ever created in your onCourse database. It is better chosen in combination with a specific Funding Source.
 
-Previous calendar year:: this will show in the drop down as a date range like '2017 year'
+Previous calendar year:: this will show in the drop down as a date range like '2020'
 
-Previous calendar quarter:: this will show in the drop down as a date range like '1 Jan 2018 - 30 April 2018'
+Previous calendar quarter:: this will show in the drop down as a date range like 'Fri 01 Jan 2021 - Sun 31 Jan 2021'
 
 Custom date range:: this will display two text fields where you can enter your own start and end dates.
 
@@ -83,11 +83,9 @@ AVETMISS reporting is designed to report data in the past, so your date range en
 The end date is considered to be 'Reporting as of' date, meaning that the exported data will be true to how it was set as of the end date in this field.
 ====
 
-Include all outcomes linked by enrolment (Checkbox):: When running a funded export, you often need to select this option as this collects the additional outcomes associated with the funded enrolment that may fall outside the outcome date range selected. For example. when reporting to Smart and Skilled, you must always report all outcomes associated with the funding, even if they haven't yet commenced, or completed in the past. This option is only available when you run the AVETMISS export from the Export AVETMISS 8 window directly. It doesn't display when running from the cogwheel, as all outcomes from enrolments are always included.
+Include linked outcomes (Checkbox):: When running a funded export, you often need to select this option as this collects the additional outcomes associated with the funded enrolment that may fall outside the outcome date range selected. For example. when reporting to Smart and Skilled, you must always report all outcomes associated with the funding, even if they haven't yet commenced, or completed in the past. This option is only available when you run the AVETMISS export from the Export AVETMISS 8 window directly. It doesn't display when running from the cogwheel, as all outcomes from enrolments are always included.
 
-History:: This section shows you a list of the most recent AVETMISS exports to be run on your system, allowing you to run them again or review the outcomes exported by each. You can also set a status for each–either Success, Fail or Unknown–so you can tell in the future which extracts were reported successfully. You must set this manually; the next time you open the AVETMISS export window after running an extract you'll be asked a question about your previous export, whether it was successful, failed or outcome unknown. Once you choose an answer the export will be 'filed' in the History section as the most recent export, and display the time of the export, the number of outcomes, the user who ran it and the success/failure flag.
-
-These records will last in the system dependent on how they're flagged. Exports flagged as Success will remain forever, while those set as Unknown will remain for 28 days. Any set as failed will only be stored for three days.
+History:: This section shows you a list of the most recent AVETMISS exports to be run on your system, allowing you to run them again or review the outcomes exported by each. You can also set a status for each–either Success, Fail or Unknown–so you can tell in the future which extracts were reported successfully.
 
 [NOTE]
 ====
@@ -108,6 +106,7 @@ Final Status:: This is a breakdown of the number of different outcomes included 
 
 image::images/AVETMISS_export_overview.png[title='A breakdown of your export as it appears before you create the NAT files']
 
+[[AVETMISS-History]]
 === History
 
 When you run an AVETMISS export, a history of the upload is stored in the History section of the AVETMISS Export window. When you open the export window after running an export, you'll be asked whether the previous upload was successful or not, and will record the answer. This section also allows you to change the status of the export to record if it was successfully exported (and uploaded) to NCVER or your funding provider, or if it failed. By adding this information to onCourse, you will have a history stored of each time you export your data as is required under various contractual arrangements, and can access the same exports more quickly in the future by simply clicking the 'run again' button next to the export you wish to run.

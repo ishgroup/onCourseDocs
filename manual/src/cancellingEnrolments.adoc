@@ -4,27 +4,27 @@
 [[cancellingEnrolments-single]]
 === Cancelling a single enrolment
 
-It is important to remember that within the accrual financial system of onCourse, that every action has an opposite. When an enrolment is created, an invoice is generated to the payer. When the payer pays the invoice, a payment in record is created. If you want to cancel an invoice or refund a payment, you need to generate an equal and opposite record. To reverse an invoice, you create a credit note (a negative invoice) and to give someone back their money, you need to create a payment out. This section outlines the common processes involved in creating credit notes and refunds.
+It is important to remember that, within the accrual financial system of onCourse, every action has an opposite. When an enrolment is created, an invoice is generated to the payer. When the payer pays the invoice, a payment in record is created. If you want to cancel an invoice or refund a payment, you need to generate an equal and opposite record. This is calles a credit note (a negative invoice) and to give someone back their money, you need to create a payment out using this credit note.
 
-If you need to remove a student from a class, due to them withdrawing or failing to attend, you need to cancel their enrolment. If you wish to provide them with a credit note you can do this at the time of the enrolment cancellation.
+If you need to remove a student from a class due to them withdrawing or failing to attend, you need to cancel their enrolment. If you wish to provide them with a credit note you can do this at the time of the enrolment cancellation.
 
 The first step is to cancel and credit the existing enrolment.
 
 . Find the enrolment in the Enrolments window
 . Highlight the enrolment by clicking on it
-. Click on the cogwheel in the bottom right-hand corner and choose "Cancel 1 enrolment". This will bring up a dialog with a checkbox offering to also credit the enrolment fee charged - it is unticked by default. If you tick this, you will create a create note as part of this process. If you keep it unticked, you will retain all the student's fees as part of your business income. 99% of the time you want to create a credit note. If the student's enrolment is unpaid, the credit note will pay their unpaid invoice, rather than leaving it as an unpaid debt on your books.
-. In the cancellation window, choose if you want to send the student a credit note email. If you are have not previously agreed to transfer the student to another class, or provide them with a refund, selecting this option will let the student know how much credit they have available with you for future redemption.
+. Click on the cogwheel in the bottom right-hand corner and choose "Cancel 1 enrolment". This will bring up a dialog with a checkbox offering to also credit the enrolment fee charged - it is unticked by default. If you tick this, you will create a credit note. If you keep it unticked, you will retain all the student's fees as part of your business income. 99% of the time you want to create a credit note.
+. In the cancellation window, choose if you want to send the student a credit note email. If you have not previously agreed to transfer the student to another class, or provide them with a refund, selecting this option will let the student know how much credit they have available with you for future redemption.
 . Hit "Proceed".
 
 This process will cancel the enrolment, and create a credit note in the system for the value of the existing enrolment. Note that the credit note will apply to the original payer of the invoice. This may not be the student who enrolled in the class, but their employer, parent or other third party. Read the text in the cancellation window to confirm if the student, and the payer, are the same or different people.
 
 If the invoice originally issued for this enrolment remains unpaid, the credit note created will create an automatic contra payment against that invoice, in effect 'cancelling' it from requiring payment.
 
-If the originating invoice was paid in full, the credit note can be used to contra pay another outstanding invoice from that debtor. It can also be refunded to the customer.
+If the originating invoice was paid in part or full, the remaining balance on the credit note can be used to contra pay another outstanding invoice from that debtor, enrol in another class, or it can also be refunded to the customer.
 
 [TIP]
 ====
-Please note that a payment back to the student will not be automatically created after cancelling an enrolment. That student might want use the credit to enrol into another class. Or you may wish to contact the student and arrange a refund. The next sections explain these options in detail.
+Please note that a refund payment back to the student will not be automatically created after cancelling an enrolment. That student might want use the credit to enrol into another class. Or you may wish to contact the student and arrange a refund. The next sections explain these options in detail.
 ====
 
 ==== Outcome deletion on cancellation
@@ -41,11 +41,11 @@ Retained outcomes attached to cancelled enrolments are reported like all other o
 
 You can also elect to charge a cancellation fee (with or without tax) as per your college policies. The difference between the fee paid, and the cancellation fee charged will be available as credit to the student, or can be refunded to them.
 
-Note that if you charge GST, this amount will be added on to the value you specify e.g. in the screen shot below a $20 plus GST fee has been charged, totalling $22.
+Note that if you charge GST, this amount will be added on to the value you specify. You can see this in the screenshot example below where the user has charged a $20 admin fee on the cancelled enrolment, and that fee also requires a tax named 'GST', which makes the fee $22 (as GST tax defaults to 10%).
 
-You can select to have this administrative fee deposited into the income account of your choice. By default, the income account associated with the enrolment income line will be selected. Any GST component will be credited to the GST account.
+You can select to have this administrative fee deposited into the income account of your choice. By default, the income account associated with the enrolment income line will be selected. Any tax component will be credited to the tax account.
 
-image::images/cancel_enrolment.png[title='Cancelling an enrolment and charging a cancellation fee']
+image::images/cancel_enrolment.png[title='Cancelling an enrolment and charging an administrative fee']
 
 ==== Cancelling an enrolment paid for by a voucher
 
@@ -53,9 +53,9 @@ On occasion, you may have cause to cancel and enrolment that was originally paid
 
 If you have a business rule that states that students who paid with vouchers cannot access a refund, then use the credit note to purchase a new voucher for the student that they can again redeem.
 
-In the example below, the enrolment fee of $264 was paid for partially by a voucher ($200) and partially by cash ($64) - this can be found by looking at the original invoice for the enrolment.
+In the example below, the enrolment fee of $50 was paid for by a voucher - this can be found by looking at the original invoice for the enrolment.
 
-When the enrolment is cancelled and the credit note created, you could then purchase another $200 voucher for the student with the credit note, leaving them with $64 in general credit, that could either be used towards another enrolment or refunded.
+When the enrolment is cancelled and the credit note created, you could then purchase another $50 voucher for the student with the credit note, or simply enrol them in another class and use the credit note for that.
 
 image::images/enrolment_cancellation_with_voucher.png[title='Cancelling an enrolment that was partially paid for with a voucher']
 
@@ -81,26 +81,9 @@ Once you have checked what you need to and pressed 'Proceed', a pre-populated ch
 image::images/transfer_enrolment_QE.png[title='Transferring an enrolment in checkout']
 
 [[cancellingEnrolments-creditNote]]
-=== Creating a manual credit note
-
-==== Using the Duplicate and Reverse function
+=== Creating credit notes
 
 On occasion, you may need to create a credit note of refund for a student without using the enrolment cancellation process. This may be because you wish to offer the student a credit to apply to further training (perhaps there was problem with the class they attended), because they purchased another product outside of the class enrolment, or because you created a credit note for the wrong amount during the enrolment cancellation.
-
-Before you can issue any type of refund, you must create a credit note. You can create a credit note manually in the invoice window. Note that this process is not necessary if you create a credit note during the enrolment cancellation process.
-
-The quickest way to create a credit note to fix an error is to find the original invoice, duplicate it and reverse it. Reversing an invoice manually allows you to make an adjustment (partial reversal) or complete reversal to an invoice created in error.
-
-. Begin by opening the invoice window and locating the invoice that is problematic.
-. Single click on the invoice, and from the cogwheel select the option 'Duplicate and reverse invoice'. A new manual invoice/credit note window will open.
-. This new credit note will contain all the same invoice lines as the original invoice line, but with each line item reversed. Remove any invoice lines you do not want to include in this credit note.
-. To adjust the value of a remaining invoice line or charge the reversal to a different income account, click to expand it. You can make changes to any of the fields available in the box.
-. Optionally link the reversal back to its original course-class code to deduct this amount from the class income. This will also make the invoice show in the class budget tab.
-. Repeat the process for each additional invoice line you want to reverse.
-. Remove the check box from the 'send email' option if you do not want a copy of this adjustment to be sent to the payer.
-. Ensure the balance of the new invoice/credit note is as you expect before choosing save. You cannot edit the invoice/credit note after saving it.
-
-image::images/reversed_invoice_for_credit.png[title='Creating a credit note by duplicating and reversing the values of the original invoice']
 
 ==== Manually create a credit note
 
@@ -111,15 +94,30 @@ image::images/reversed_invoice_for_credit.png[title='Creating a credit note by d
 
 image::images/Manual_credit_note.png[title='Creating a manual credit note']
 
+==== Using the Duplicate and Reverse function
+
+The quickest way to create a credit note to fix an error is to find the original invoice, duplicate it and reverse it. Reversing an invoice manually allows you to make an adjustment (partial reversal) or complete reversal to an invoice created in error.
+
+. Begin by opening the invoice window and locating the problem invoice.
+. Single click on the invoice, and from the cogwheel select the option 'Duplicate and reverse invoice'. A new manual invoice/credit note window will open.
+. This new credit note will contain all the same invoice lines as the original invoice line, but with each line item reversed. Remove any invoice lines you do not want to include in this credit note.
+. To adjust the value of a remaining invoice line or charge the reversal to a different income account, click to expand it. You can make changes to any of the fields available in the box.
+. Optionally link the reversal back to its original course-class code to deduct this amount from the class income. This will also make the invoice show in the class budget tab.
+. Repeat the process for each additional invoice line you want to reverse.
+. Remove the check box from the 'send email' option if you do not want a copy of this adjustment to be sent to the payer.
+. Ensure the balance of the new invoice/credit note is as you expect before choosing save. You cannot edit the invoice/credit note after saving it.
+
+image::images/reversed_invoice_for_credit.png[title='Creating a credit note by duplicating and reversing the values of the original invoice']
+
+
 [[cancellingEnrolments-Discounts]]
 === Manual discounts after enrolment
 
 Sometimes students enrol in classes and pay the full fee, and after enrolment they realise a discount needs to be provided as the student was eligible for a reduced enrolment fee.
 
-In onCourse, when a discount is issued the COS account Discounts Given is credited and the chosen income account is debited.
+In onCourse, when a discount is issued the COS account 'Discounts Given' is credited and the chosen income account is debited.
 
-To create a manual discount, follow the steps above to issue a manual credit note, but enter an amount in the Discount Each ex tax field.
-This will create a credit note, but add the cost of the discount to the COS account, just like if it was taken during the enrolment.
+To create a manual discount, follow the steps above to issue a manual credit note, but enter an amount in the Discount Each ex tax field. This will create a credit note, but add the cost of the discount to the COS account, just like if it was taken during the enrolment.
 
 Please note that discounts processed manually will not be linked to the class and will not show in the class budget, unless you add the link back to the class in the invoice line.
 
@@ -132,14 +130,16 @@ The next time the contact enrols, or pays for another student's enrolment, they 
 This information will show in the Payments section of the checkout window next to previous owing as a minus amount.
 The amount due for payment will automatically adjust.
 
-image::images/credit_note_qe.png[title='A student enrolling in a class with a credit note of $132 automatically applied to their balance']
+image::images/credit_note_qe.png[title='A student enrolling in a class with a credit note of $1000 automatically applied to their balance. They are paying the remaining $200 by credit card']
 
 [[cancellingEnrolments-paymentReversals]]
 === Payment reversals within the payment in window
 
 If you processed a payment in record in error, i.e. recorded an EFTPOS payment that failed to process through your EFTPOS terminal, and want to reverse the payment to set the invoice back to unpaid, you can do this in the Payments In window.
 
-To reverse a payment, it first of all must be unbanked. Some payment types, like Credit Card, are set to bank automatically on creation. If your payment is banked, double-click on the payment in record and remove the date banked date, then save and close the record.
+Some payment types, like Credit Card, are set to bank automatically on creation. To reverse a payment, it must be unbanked.
+
+ If your payment is banked, double-click on the payment in record and remove the date banked date, then save and close the record.
 
 Your payment in is now ready to reverse via the following steps:
 
@@ -186,8 +186,7 @@ onCourse stores a transaction reference number supplied by the bank for each cre
 
 There are some limitations that you need to be aware of however:
 
-. Credit card transactions are only available to reverse up to three months after the initial date of purchase.
-An attempted refund to a transaction older than this will fail.
+. Credit card transactions are only available for a limited time after purchase. This is always set on the bank's end, and onCourse is informed by the bank at the time of refund whether it is possible or not. onCourse does not choose which payments you can and cannot refund.
 
 . You can only refund UP TO the original amount of the transaction. You cannot refund the student more than they paid per transaction. For example, if two $100 enrolments we paid for in separate credit card transactions by the same contact and both cancelled and eligible for a refund, you would need to process two payments out of $100 each, once against each transaction.
 
@@ -230,8 +229,7 @@ It is important you read, and possibly customise, the text of these two sets of 
 
 If you adjust the wording of any message template, be sure to adjust the plain text and HTML versions in the same way.
 
-The student notification email can also be sent manually from the enrolment window.
-Highlight the enrolments you wish to send the message to and choose send message. The in the window that opens, choose the correct message template and click 'Send'.
+The student notification email can also be sent manually from the enrolment window. Highlight the enrolments you wish to send the message to and choose send message. In the window that opens, choose the correct message template and click 'Send'.
 
 image::images/class_cancellation_email_template.png[title='Default email template sent to students when their class is cancelled']
 

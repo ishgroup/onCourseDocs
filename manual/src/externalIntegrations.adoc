@@ -335,13 +335,19 @@ image::images/xero_integration.png[title='Xero Integration window']
 
 Xero is an accounting solution which includes payroll capability.
 
-==== Journals
+Our Xero Integration requires you first configure it to connect with Xero. Give the integration a name and then click the 'Configure' button to be taken to the Xero login dashboard. You'll need to be a Xero admin user in order to complete this step and connect the apps.
+
+Once you have done this, you'll be returned to the integration window where you'll be able to save the integration. Once saved, the final step is to activate either one, or both, of the available scripts in the Automation > Scripts window.
+
+The available scripts are:
+
+==== Xero manual journal
 
 onCourse can create daily journal records in Xero with trial balance movements. Create the integration and then enable the Xero Journal script. It is important you set up your accounts in Xero and onCourse carefully so that the account codes in onCourse match those in Xero. You can have additional accounts in Xero which don't exist in onCourse, but all your onCourse accounts must be created in Xero.
 
 Additionally, you cannot use https://central.xero.com/s/article/Locked-and-system-accounts-in-your-chart-of-accounts#Systemaccounts[Xero locked accounts] in onCourse. So you cannot map onCourse trade debtors to Xero "Accounts Receivable". Instead you'll need to create a separate Xero asset account like "onCourse debtors".
 
-==== Payroll
+==== Xero payroll
 
 With the default Xero payroll script, onCourse will create a pay record in Xero as you mark pay in onCourse as "approved". Once pay is successfully uploaded to Xero, those records will be marked as "Paid/Exported" and locked in onCourse.
 

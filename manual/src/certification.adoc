@@ -4,9 +4,7 @@
 There are two types of Certification available within onCourse:
 
 . Vocational Education Training (VET) Certification, which creates a permanent record stored in the database for compliance purposes, and forms the basis of NAT00130 Program Completed data reported to NCVER that is used to create the student's official USI Transcript.
-. Certificates of Attendance for non accredited and professional development course certification. No formal register of this type of certificate creation is stored in onCourse, nor is their issuance reported to any formal bodies.
-
-This chapter of the user documentation covers the creation, customisation and distribution of both these types of certificates.
+. Certificates of Attendance for non-accredited and professional development course certification. No formal register of this type of certificate creation is stored in onCourse, nor is their issuance reported to any formal bodies.
 
 [[rto-Certificates]]
 === Creating Certificates
@@ -32,27 +30,26 @@ There are two pieces of the VET certification process you can automate with defa
 
 ===== Enabling the automatic VET Certificate creation script
 
-Like most included scripts, the 'automatic creation of VET Certificates' script is disabled by default. If you wish to automate this script you will need to enable it in the Automation window.
+Like most included scripts, the 'automatic creation of VET Certificates' script is disabled by default. To automate this script you will need to enable it in the Scripts window.
 
 The script checks at 4am every day check for outcomes which have been modified in the previous 24 hrs. If any outcomes attached to the enrolment are not yet marked, the enrolment is skipped for certificate creation. When all outcomes have a status, then the certificate creation process is triggered. This means if outcomes are marked over time, the certificate will not be created until the last outcome of the enrolment is marked.
 
 [[manual-Certificates]]
 ===== Creating certificates manually
 
-If you have a student who has collected units of competency across multiple enrolments, and you want to print a certificate showing this, you can create a manual certificate directly in the certificate window, selecting your choice of qualification reference and appropriate units from their entire transcript list. To create a certificate record manually:
+If you have a student who has collected units of competency across multiple enrolments and you want to print a certificate showing this, you can create a manual certificate directly in the certificate window, selecting your choice of qualification reference and appropriate units from their entire transcript list. To create a certificate record manually:
 
 . Open the Certificate window and click on the + sign to begin creating certificates.
 . Type the student name into the first field. This field is clairvoyant and will detect results as you type. The student must be in the database and the name entered correctly to proceed. The students suburb and date of birth will be displayed when their record is found.
-. Enter the National Code for the Qualification, Accredited Course or skill set you wish to use for the certificate.
-This is not limited to qualifications the student has attempted at your college, as many units are valid towards a number of qualifications.
+. Enter the National Code for the Qualification, Accredited Course or skill set you wish to use for the certificate. This is not limited to qualifications the student has attempted at your college, as many units are valid towards a number of qualifications.
 . If you wish to issue a full qualification or skill set, select 'Satisfies complete qualification or skill set'. 'Statement of Attainment' will be selected by default.
-. Select the + sign next to Transcript to begin adding modules/units from the students record to the certificate.
-You can add as many as you need – you must ensure that you only add units that meet the qualification packaging rules of the qualification or skill set you selected above. Modules/units selected can be added to this certificate only once, however they can be used again to create other certificates in the future.
-. By default, the Awarded on date will be the date you created the certificate record. Edit this if needed. At this point, the Issued on date will be blank, and will be set based on the date you print the certificate. You can manually set this date now if needed.
+. Select the + sign next to Transcript to begin adding modules/units from the students record to the certificate. You can add as many as you need – you must ensure that you only add units that meet the qualification packaging rules of the qualification or skill set you selected above. Modules/units selected can be added to this certificate only once, however they can be used again to create other certificates in the future.
+. By default, the 'Awarded on' date will be the date you created the certificate record. Edit this if needed. At this point, the 'Issued on' date will be blank, and will be set based on the date you print the certificate. You can manually set this date now if needed.
 . Add any public notes that you wish to display on the certificate face, such as information about the funded program that this certificate was delivered under, or the language the training was delivered in (if not English).
 . If your certificate should have an expiry (E.G. a first-aid certificate), you can enter the expiry date into the expiry date field.
 . When the information is correct, select save.
-. Created certificates appear in the Certificates window. From this window, you can print the certificates. Select the Share icon > PDF > and choose which certificates you wish to print. Ensure you select a certificate PDF report.
+
+Created certificates appear in the Certificates window. From this window, you can print the certificates. Highlight the certificate records you wish to print certificates for, select the Share icon > PDF > and ensure you select a certificate PDF report before selecting 'Share' to generate the PDF's.
 
 image::images/certificate_edit_view.png[title='Certificate edit view in full screen mode']
 
@@ -66,8 +63,7 @@ If you wish to create certificate records for the whole class group, we recommen
 . Open the class window and highlight the class(es) you wish to create certificates for.
 . Select the cog wheel option 'Create certificates'. This will automatically create Statements of Attainment or Qualifications (depending what was chosen at the course level and the student's outcomes) and transcripts for each student enrolled in the class. These records are created in the certificate table.
 . Open the certificate window and edit any certificates that need changes and/or delete any certificate records that have been created for students who are not eligible for certification. Units can be added or removed from individual certificates as needed, but only prior to printing.
-. You can create the certificates, but will not be able to print them, until each of the outcomes are set.
-Ensure the outcomes have been set in the class outcomes window, the enrolment records or via the student's contact record.
+. You can create the certificates, but will not be able to print them, until each of the outcomes are set. Ensure the outcomes have been set in the class outcomes window, the enrolment records or via the student's contact record.
 . From the certificate window, click the Share icon, select PDF and print the certificates as needed.
 
 [[enrolment-certificates]]

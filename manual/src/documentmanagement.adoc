@@ -43,14 +43,21 @@ If you wish to attach an existing document (one which has previously been upload
 When attaching a document to a record you'll be able to set its permissions, as well as any tags and give it a description. For a closer look at how permissions work, <<documentManagement-accessRights, click here>>.
 
 
+[[documentManagement-listView]]
+=== Document List View
+
+The Document lst view is the main view of the Documents window. It functions the same way as other list views in onCourse do, allowing you to click a record to highlight it, use find-related, search queries and cogwheel functions.
+
+There is a small difference in the cogwheel functions in this section. When an active record is highlighted, the 'delete record' function in the cogwheel will appear as 'Move to Bin'. When a document that is in the bin is highlighted, it will read 'Restore from Bin'.
+
 [[documentManagement-Editing]]
 === Editing document records
 
-Once documents have been stored in onCourse you can edit their properties in the Document list view. The list view shows you a summary of the document, including a preview, tags, the name, document permissions and document history.
+Once documents have been stored in onCourse you can edit their properties in the Document edit view. The edit view shows you a summary of the document, including a preview, tags, the name, document permissions and document history.
 
 image::images/documentManagement/document_list_view.png[title='Document list view in 3 column mode']
 
-View the document by double clicking on the record.
+Open the document record by double-clicking on the record.
 
 [[documentManagement-EditingView]]
 ==== Document record view
@@ -59,7 +66,7 @@ There are a number of fields and settings in the document record. You need to gi
 
 image::images/documentManagement/multiple_attachments.png[title='General overview of the document']
 
-You can also delete or undelete a document by using the 'Deleted' switch.
+If a document is marked for deletion, you'll the words 'Pending Deletion' across the screen.
 
 image::images/documentManagement/edit_attachment_history.png[title='Version history of the document']
 
@@ -67,7 +74,7 @@ image::images/documentManagement/edit_attachment_history.png[title='Version hist
 [[documentManagement-Versioning]]
 ==== History
 
-onCourse keeps a history of all files you upload, letting you view older versions of files as well as seeing who uploaded them and when. You can upload a new version of a file by clicking the `upload new version` button.
+onCourse keeps a history of all versions of files you upload, letting you view older versions of files as well as seeing who uploaded them and when. You can upload a new version of a file by clicking the `upload new version` button.
 
 [[documentManagement-specialDocuments]]
 ===== Contact pictures
@@ -111,12 +118,15 @@ image::images/documentManagement/portal_permissions.png[title='An example of use
 
 
 [[documentManagement-deleted]]
-=== Handling deleted documents
+=== Bin
 
-To delete a document, highlight the record in the Documents list view, click the cogwheel and select 'delete record'
+Documents sent to the bin are marked for permanent deletion. The bin is emptied at a random time every Sunday, and will remove any items that have a modifiedOn date of over 30 days old.
 
-However, for auditing purposes, documents uploaded to onCourse are never deleted, rather they are disabled and locked from use.
-
-If you ever need to recover a deleted document for whatever reason, simply go to the documents list in onCourse and click the 'Deleted' filter to see deleted documents. Find the document record, click to open it and then make sure the 'Deleted' switch is off, then click save.
+Documents added to the bin DO NOT have their associations with other records removed, and can be restored by simply clicking the 'Restore' button with the record itself.
 
 image::images/documentManagement/deleted_document.png[title='The 'Deleted' switch for this document is on. Turn it off and save to recover the document.']
+
+[[documentManagement-deletedNotification]]
+==== Get notified about documents pending deletion
+
+You can be notified of which documents are marked for deletion the following Sunday by enabling the Documents for Deletion script. This will send out an email (called 'Documents for deletion') that contains the file names of each document due to be deleted. Each document will be hyperlinked back to the document record in onCourse so you can easily restore it if you wish.

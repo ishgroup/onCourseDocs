@@ -24,21 +24,21 @@ When enabled, this feature will demand users change their password every set num
 Require two-factor authentication every <x> hours::
 When enabled, this will require all users to get a new authorisation via a third-party authorisation app after the set number of hours. You can change the number of hours manually by editing the number in the field. This only applies when the same user is using the computer. If another user signs in to their account on your computer, you will be required to enter your 2FA authorisation regardless of this setting.
 
+Disable account after <x> login attempts::
+When enabled, any user account that fails to login with the correct password this number of times willhave their account disabled. An admin user of your system will need to go in to their user record and re-enable them manually.
+
 [[users-settings]]
 === Users
 
-You then have the ability to add new users or edit existing users details such as their name, email address, access level or password. Only users with admin rights will be able to see, edit and add users, everyone else can only edit their own user settings. There are no limits to the number of users you can create in onCourse. Users should be deactivated if they leave your organisation.
+In user records you can add to or edit existing users details such as their name, email address, access level or send a password reset request. Only users with admin rights will be able to see, edit and add users, everyone else can only edit their own user settings. There are no limits to the number of users you can create in onCourse. Users should be deactivated if they leave your organisation.
 
-Every person in the organisation who uses onCourse should have their own user account. We do not recommend users 'share' a login as various user layout preferences are saved against each user account. Important records created in onCourse like invoices, payments and enrolments are linked to the user who created them. If you need to follow up any discrepancies, this is made much easier when your staff each have their own login and their user name is something easy to identify the person by, like their first name.
+Every person in the organisation who uses onCourse should have their own user account. We do not recommend users 'share' a login as various user layout preferences are saved against each user account. Important records created in onCourse like invoices, payments and enrolments are linked to the user who created them. If you need to follow up any discrepancies, this is made much easier when your staff each have their own user.
 
-* Login - What you use along with the password to login into onCourse, usually something simple to remember like 'John'.
-* Password - this is where you enter a new user's password. Only visible when creating a new user.
-* Reset Password - reset the selected user's password.
-* First Name
-* Last Name
-* Bank cash/cheques to site - This should be the physical site where your staff are working. Select the site from the drop down menu.
-This is important if you take physical cash, cheque or EFTPOS payments at these venues and you need the site banking process to correctly tally the location balances.
+* Name - A name for the user record. This isn't used to login with, this is just an identifier.
+* First Name - The user's first name
+* Last Name - The user's last name
 * Email - the users primary email address, also used for login (this email address will be used for the CMS login process).
+* Bank cash/cheques to site - This should be the physical site where your staff are working. Select the site from the drop down menu. This is important if you take physical cash, cheque or EFTPOS payments at these venues and you need the site banking process to correctly tally the location balances.
 * Active - selecting this allows the user to login to onCourse. If active is not selected, the user will receive an "authentication failed" message at the onCourse login screen.
 * Admin - Checking this will allow the user to be an admin, they will have full access rights and can assign roles and rights to other users.
 * Last logged in - not editable, just tells you when that user last logged into onCourse.
@@ -47,10 +47,19 @@ This is important if you take physical cash, cheque or EFTPOS payments at these 
 
 image::images/users_screenshot.png[title='Viewing a user account']
 
-[[users-changePassword]]
-==== Changing passwords
+[[users-aboutNewUsers]]
+==== Creating new users
 
-A user can change their own password by typing 'change' on the Dashboard and clicking 'Change my password'. Once they do this a window will pop up asking them to enter what they would like their new password to be.
+When creating a new user, the 'Save' button will read as 'Invite' and, when clicked, will send out an email to the new user asking them to click the link to accept the invitation to become an onCourse user. The user record will appear in the user list with a 'Invited' pill icon next to their name.
+
+The new user will not be able to login until they have accepted the invitation. If there are issues with the invitation not being received, the 'Save' button will appear as a 'Resend Invite' allowing you to resend the invitation as many times as required.
+
+[[users-changePassword]]
+==== Resetting passwords
+
+if a user requires their password to be reset, an admin user can 'reset' a user's password by clicking this button. The user will be sent an invite to change their password. This invite is only active for 24 hours and will need to be resent if it expires.
+
+If a user has this sent to them, then their current password will be immediately reset and they will not be able to log in until they have set the password.
 
 [TIP]
 ====
@@ -60,7 +69,7 @@ If your College has more than one Administration Centre, it is possible to switc
 image::images/reset_admin_site_login.png[title='Switching the administration centre']
 
 [[users-requireNewPassword]]
-===== Require password change
+===== Require password change every <x> days
 
 An administrator can request a user change their password at their next login by hitting the 'require password change' button under 'Users'.
 
@@ -76,7 +85,7 @@ image::images/password_minimum_requirements.png[title='The prompt asking for a m
 [[users-preventConcurrent]]
 ===== Preventing users from logging in twice concurrently
 
-If you try to log into onCourse with the same login credentials as a user that is already logged in, then a window will pop up asking you what you want to do. You will then have the option to quit your login attempt, or log in and kick the other user using the same log in details out. So to prevent this from happening it's best to always have your own user name and password to log in with.
+If you try to log into onCourse with the same login credentials as a user that is already logged in, then a window will pop up asking you what you want to do. You will then have the option to quit your login attempt, or log in and kick the other user using the same log in details out. So to prevent this from happening it's best to always have your own user account.
 
 image::images/user_already_logged_in.png[title='Users who try and log in twice concurrently will see this screen']
 
@@ -238,7 +247,7 @@ Have your mobile phone handy while you do this as you will need to install the T
 
 When you first run the Authenticator app and click 'Begin setup' you may also be asked to install a QR code reader if you don't already have one. You do not have to do this, as you can choose to manually add an account by selecting 'Enter provided key', however there is less chance of data entry error if you scan the code.
 
-The account name you create in Google Authenticator can be anything you like, such as "My onCourse login". It does not have to match your onCourse user name.
+The account name you create in Google Authenticator can be anything you like, such as "My onCourse login". It does not have to match the name of your onCourse user.
 
 image::images/googleAuthenticatorApp.png[title='Install Google Authenticator on your smart phone']
 
@@ -255,11 +264,9 @@ You should follow this process if you have bought a new smart phone and need to 
 
 image::images/Disable_two_factor_authentication_message.png[title='Message window you see when trying to disable your own two factor authentication']
 
-An admin user has the power to change a users password or disable a users two factor authentication, for example, if they have forgotten their mobile phone. You can do this by going to the Security window, double-clicking on the user you want to change, then clicking on the 'Reset Password' button.
+An admin user has the power to disable a users two-factor authentication if they have forgotten their mobile phone. You can do this by going to the Security window, double-clicking on the user you want to change, then clicking on the 'Disable 2FA'.
 
 image::images/users_screenshot.png[title='User edit view window']
-
-Once you click on the button 'Reset authentication' and the user has their two factor authentication disabled then the sheet that appears, as shown below, will only allow the admin user to reset their password.
 
 [NOTE]
 ====

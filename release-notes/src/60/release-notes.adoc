@@ -1,0 +1,39 @@
+= Release 60
+5 Feb. 2021
+
+== Important changes
+
+30 days after you upgrade to this release, deleted documents will be removed permanently from onCourse.
+
+If you don't want this to happen, review your deleted items and undelete anything you want to keep.
+
+== Major features
+
+When adding new users or reseting passwords of existing users, onCourse will send an invite email to that user. Make sure the email address is valid and working.
+
+== Minor features
+* Report component for script user interface `OD-12815`
+* move onCourse.cfg to yaml format `OD-14739`
+* Security - Disable account after <x> incorrect login attempts `OD-15366`
+* SMTP configuration moved to oncourse.cfg. Optionally limit messages per day `OD-15426`
+* Remove login for new SystemUsers `OD-15437`
+* Create system user by invitation `OD-15438`
+* Create system userrs on startup `OD-15440`
+* Document storage config and limit `OD-15444`
+* License for email batch size `OD-15445`
+* Document record changes `OD-15447`
+* Document Bin - timed purge `OD-15448`
+* Script & Message template for Bin `OD-15449`
+* Send invite when making Systemuser Active `OD-15477`
+* is Empty query `OD-15459`
+
+== Fixes
+* Email closure deprecated `OD-15367`
+* Can't add discount to classes by tag `OD-15453`
+* Script Query widget display issue `OD-15454`
+* Cannot delete Tax File Number - validation error `OD-15455`
+* Bundles - Product discount not applying to bundled courses/classes `OD-15472`
+* Error in /automation/email-templates/813 `OD-15484`
+* Payment In Transaction and authorisation issue `OD-15485`
+* Query - enrolment status shows incorrect auto-fill options `OD-15496`
+* Trying to include a # in a script query is causing an error `OD-15497`

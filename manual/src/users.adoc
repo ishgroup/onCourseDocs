@@ -25,7 +25,7 @@ Require two-factor authentication every <x> hours::
 When enabled, this will require all users to get a new authorisation via a third-party authorisation app after the set number of hours. You can change the number of hours manually by editing the number in the field. This only applies when the same user is using the computer. If another user signs in to their account on your computer, you will be required to enter your 2FA authorisation regardless of this setting.
 
 Disable account after <x> login attempts::
-When enabled, any user account that fails to login with the correct password this number of times willhave their account disabled. An admin user of your system will need to go in to their user record and re-enable them manually.
+When enabled, any user account that fails to login with the correct password this number of times will have their account disabled. An admin user of your system will need to go in to their user record and re-enable them manually. The default setting is 5 attempts.
 
 [[users-settings]]
 === Users
@@ -54,12 +54,20 @@ When creating a new user, the 'Save' button will read as 'Invite' and, when clic
 
 The new user will not be able to login until they have accepted the invitation. If there are issues with the invitation not being received, the 'Save' button will appear as a 'Resend Invite' allowing you to resend the invitation as many times as required.
 
+image::images/resend_invite.png[title='Click "Resend Invite" in order to resend an invite to a user]
+
 [[users-changePassword]]
 ==== Resetting passwords
 
-if a user requires their password to be reset, an admin user can 'reset' a user's password by clicking this button. The user will be sent an invite to change their password. This invite is only active for 24 hours and will need to be resent if it expires.
+if a user requires their password to be reset, an admin user can 'reset' a user's password by clicking the 'Reset Password' button inside the user record. The user will be sent an invite to change their password. This invite is only active for 24 hours and will need to be resent if it expires.
 
-If a user has this sent to them, then their current password will be immediately reset and they will not be able to log in until they have set the password.
+If a user has this sent to them, then their current password will be immediately reset and they will not be able to log in until they have set a new password.
+
+image::images/resend_invite.png[title='Click "Resend Invite" in order to resend an invite to a user]
+
+The Save button changes to Resend Invite and the user gets a small invite icon appearing next to their name in the user list.
+
+
 
 [TIP]
 ====
@@ -73,7 +81,7 @@ image::images/reset_admin_site_login.png[title='Switching the administration cen
 
 An administrator can request a user change their password at their next login by hitting the 'require password change' button under 'Users'.
 
-image::images/require_password_change.png[title='When your administrator requests a new password,you'll see this screen']
+image::images/force_password_change.png[title='When your administrator requests you set a new password, you will see this screen']
 
 [[users-requireBetterPassword]]
 ===== Require better passwords

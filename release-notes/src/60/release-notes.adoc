@@ -9,28 +9,22 @@ If you don't want this to happen, review your deleted items and undelete anythin
 
 == Major features
 
-When adding new users or reseting passwords of existing users, onCourse will send an invite email to that user. Make sure the email address is valid and working.
+When adding new users or resetting passwords of existing users, onCourse will send an invite email to that user. Make sure the email address is valid and working.
 
 == Minor features
-* Report component for script user interface `OD-12815`
-* move onCourse.cfg to yaml format `OD-14739`
-* Security - Disable account after <x> incorrect login attempts `OD-15366`
-* SMTP configuration moved to oncourse.cfg. Optionally limit messages per day `OD-15426`
-* Remove login for new SystemUsers `OD-15437`
-* Create system user by invitation `OD-15438`
-* Create system users on startup `OD-15440`
-* Document storage config and limit `OD-15444`
-* Document Bin - timed purge `OD-15448`
-* Script & Message template for Bin `OD-15449`
-* Send invite when making Systemuser Active `OD-15477`
-* is Empty query `OD-15459`
+* Added report component to script user interface `OD-12815`
+* Added disable account after <x> incorrect login attempts `OD-15366`
+* Removed login name for new users. New users must use email to login. Already existing users may continue to use login name. `OD-15437`
+* Added document storage config and limit `OD-15444`
+* Added a timed purge to document bin `OD-15448`
+* Added Script & Message template for warning of pending deletion for items in bin `OD-15449`
+* Added ability to send invite when making Systemuser Active `OD-15477`
 * Email closure deprecated `OD-15367`
 
 == Fixes
-* Can't add discount to classes by tag `OD-15453`
-* Script Query widget display issue `OD-15454`
-* Cannot delete Tax File Number - validation error `OD-15455`
-* Bundles - Product discount not applying to bundled courses/classes `OD-15472`
-* Payment In Transaction and authorisation issue `OD-15485`
-* Query - enrolment status shows incorrect auto-fill options `OD-15496`
-* Trying to include a # in a script query is causing an error `OD-15497`
+* Fixed an issue where users couldn't add discount to classes by tag `OD-15453`
+* Fixed a Script Query widget display issue with the Enrolment entity `OD-15454`
+* Fixed an error where users couldn't delete Tax File Number due to validation error `OD-15455`
+* Fixed an error where product discount was not applying to bundled courses/classes `OD-15472`
+* Fixed a rare authorisation issue in checkout that could affect payment amounts `OD-15485`
+* Fixed an issue where trying to include a # in a script query was causing an error `OD-15497`

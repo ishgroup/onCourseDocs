@@ -75,6 +75,7 @@ smtp:
   email_batch: 10000
   host: mail.example.com
   port: 465
+  mode: tls
   username: relay
   password: fg%4ghsgdfjhsDG3
 ----
@@ -85,7 +86,13 @@ The database connection is fairly self obvious. The mariadb JDBC driver should w
 
 The license section allows you to limit concurrent users.
 
-Add a document block with details of your AWS S3 bucket and an smtp block with details of your outbound mail server.
+Add a document block with details of your AWS S3 bucket and a smtp block with details of your outbound mail server. The smtp mode can be:
+
+* tls
+* starttls
+* unsafe
+
+Use 'unsafe' only if you are sure you want to send unencrypted mail across your network or the internet. Don't do that.
 
 [[install-sslcert]]
 === SSL Certificate

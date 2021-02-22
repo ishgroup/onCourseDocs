@@ -276,7 +276,7 @@ This searches for classes with an enrolment fee less than the specified dollar v
 ==== Duration
    /courses?duration=3
 
-Find classes that last this many days, including the start and end days. So a duration of 1, is a single day class.
+Find classes that last this many days, including the start and end days. So a duration of 1 is a single day class.
 
    /courses?duration=>3
    /courses?duration=<3
@@ -1177,6 +1177,25 @@ When your user clicks on the link, the file will be downloaded. You will want to
 
 name::
 The name of the attachment as you specified it in the onCourse attachment entry screen.
+
+[[richtext-duration]]
+=== \{duration}
+
+A block to display search options for duration.
+
+==== Usage
+
+....
+{duration display:"One-day courses" duration:"1"}
+{duration display:"Longer courses" duration:">5"}
+{duration display:"Self-paced" duration:"selfpaced"}
+....
+
+display::
+A label to display in the user interface.
+
+duration::
+The number of days the class runs for. "1" is a single day class. "selfpaced" for classes with no timetable. Use ">3" or "<3" for greater than or less than searches.
 
 [[Tutors]]
 === \{tutors}

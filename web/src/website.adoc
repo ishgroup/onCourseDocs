@@ -256,9 +256,17 @@ This is standard keyword search, which includes stemming so the term cooking wil
 Ordering of the results is highly sophisticated, taking into account higher priority for terms appearing in headings, tutor names or words in the description as a complete phrase or just words close together. Course with classes starting sooner are also sorted higher. Classes which are cancelled or full are sorted lower. And since classes are always grouped by course, these rankings are aggregated to produce the final sort order.
 
 ==== Distance to suburb
-    /courses?near=Chatswood/2067/1
+    /courses?near=Chatswood/2067
 
-Search on the Suburb/postcode/search radius in km. While the search may work without the postcode, adding the postcode is essential for some suburbs which are not unique in your country. If you skip the search radius, all results within 100km will be returned with the closest sorted to the top. If you include the radius, then results further away will be completely excluded from the results.
+Search for classes held near the Suburb and postcode. While the search may work without the postcode, adding the postcode is essential for some suburbs which are not unique in your country. All results within 100km will be returned with the closest sorted to the top.
+
+    /courses?near=Chatswood/2067/25
+
+Add a parameter for the search radius if you want something other than the default 100km. If you include the radius then results further away will be completely excluded from the results.
+
+    /courses?near=Chatswood/2067/25/North+Sydney
+
+Add one more parameter at the end for a label to display to users. So instead of the suburb name, we'll display "North Sydney" to users of the site.
 
 ==== Price
     /courses?price=200
@@ -358,7 +366,7 @@ Advanced search parameters can also be added to specific course pages, to filter
 
 These search options are appended to a standard course page, with the URL containing the course code. In these examples, course code ABC123 is used.
 
-     /course/ABC123/?near=Chatswood+2057
+     /course/ABC123/?near=Chatswood/2057
 
 Search on both the Suburb+postcode. While the search may work without the postcode, adding the postcode is essential to determine location if the suburb exists in multiple states.
 

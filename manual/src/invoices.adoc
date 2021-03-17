@@ -2,7 +2,7 @@
 == Invoices
 
 [[invoice-general]]
-=== Invoices
+=== About invoices
 
 Every time you create a purchase through Checkout, an invoice will be automatically created for you. Each item purchased will create an invoice line, so multiple students enrolling in multiple classes each can be recorded on a single invoice.
 
@@ -40,6 +40,31 @@ All future invoices created for this customer, including invoices created for en
 
 image::images/invoiceTerms.png[title='Financial terms in the contact. This contact has 7 days to pay their invoices by default.']
 
+[[invoice-create]]
+==== Creating a manual invoice
+
+While you will usually create an invoice through using Checkout, it is sometimes useful to create an invoice without an associated product or enrolment. You can easily do that by opening the list of invoices and pressing the plus icon at the top right.
+
+Invoices created manually can have an invoice date in the past or the future, although the default setting is today. Invoices created with a date in the past can be created prior to the financial period finalised date. They can only be created for unlocked periods. If you create a invoice in the past (or future) the general ledger transaction lines will be created for that date. You cannot pay an invoice though that has a creation date in the future, as it doesn't yet exist with an outstanding balance.
+
+Remember to associate each invoice line with the correct income account code. Once you save the invoice you will not be able to change this code.
+
+Each invoice line can have a discount applied by selecting one from the drop-down box that appears. Only valid discounts can be selected, and they can only be set during invoice creation. They cannot be edited after the invoice has been saved.
+
+By default, invoices are ticked to 'send email'. This sends the standard invoice email template to the debtor contact when you save the record.
+
+image::images/Creating_a_new_invoice.png[title='Creating a new invoice']
+
+[[invoice-linking]]
+===== Link invoice lines to class budgets
+
+When creating invoice lines you may optionally link each line to a class. This will treat the income with the same general ledger pre-paid fees and income deferral plan as invoices created by enrolling in the class. This also adds the total of that invoice line to the class budget and can be very useful when invoicing a company for an entire classroom delivery without recording individual enrolments or need to include additional income such as funding in a classes budget.
+
+Type the course name or code, and select the class code from the drop down list to join a manual invoice line to a class budget.
+
+image::images/invoice_lines.png[title='Linking invoice lines to a class in the Assign to Budget section']
+
+
 [[invoice-editInvoices]]
 ==== Editing Invoices with Credit Notes
 
@@ -64,29 +89,6 @@ The total payment amount will be auto-calculated to the balance of the selected 
 
 image::images/apply_payment_in.png[title='Applying a Payment In to a specific invoice via the cogwheel in the Invoices window']
 
-[[invoice-create]]
-==== Creating a manual invoice
-
-While you will usually create an invoice through using Checkout, it is sometimes useful to create an invoice without an associated product or enrolment. You can easily do that by opening the list of invoices and pressing the plus icon at the top right.
-
-Invoices created manually can have an invoice date in the past or the future, although the default setting is today. Invoices created with a date in the past can be created prior to the financial period finalised date. They can only be created for unlocked periods. If you create a invoice in the past (or future) the general ledger transaction lines will be created for that date. You cannot pay an invoice though that has a creation date in the future, as it doesn't yet exist with an outstanding balance.
-
-Remember to associate each invoice line with the correct income account code. Once you save the invoice you will not be able to change this code.
-
-Each invoice line can have a discount applied, and that discount can optionally be linked to a Cost of Sale (COS) account. If you do not apply the discount to a COS account, then the income value posted to the general ledger will be reduced by the value of the discount.
-
-By default, invoices are ticked to 'send email'. This sends the standard invoice email template to the debtor contact when you save the record.
-
-image::images/Creating_a_new_invoice.png[title='Creating a new invoice']
-
-[[invoice-linking]]
-===== Link invoice lines to class budgets
-
-When creating invoice lines you may optionally link each line to a class. This will treat the income with the same general ledger pre-paid fees and income deferral plan as invoices created by enrolling in the class. This also adds the total of that invoice line to the class budget and can be very useful when invoicing a company for an entire classroom delivery without recording individual enrolments or need to include additional income such as funding in a classes budget.
-
-Type the course name or code, and select the class code from the drop down list to join a manual invoice line to a class budget.
-
-image::images/invoice_lines.png[title='Linking invoice lines to a class in the Assign to Budget section']
 
 [[invoice-paymentPlans]]
 ==== Invoice payment plans

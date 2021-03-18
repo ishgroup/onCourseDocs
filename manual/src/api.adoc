@@ -1,0 +1,23 @@
+[[api]]
+== API
+
+onCourse can be accessed by third party tools through its API. This allows those tools to access, update, create, print, export and even delete records from onCourse. Anything you can do in the onCourse user interface you can do from the API.
+
+The onCourse API is RESTful with json encoding of objects. It can only be accessed over TLS and HTTP/2.
+
+Read the https://www.ish.com.au/onCourse/doc/server-api/[documentation] for specifics of how to access the data you need.
+
+[[api-security]]
+=== API Security
+
+You'll provide access by creating API tokens in the Security window. When you create a token you'll be given a token password which is then used to access the API. Once you close the window you'll never be able to see that password again, but you can easily create a new one.
+
+You should create a separate token password for each service you want to connect to onCourse. Keeping them separate gives you more control.
+
+Each API token acts as a particular onCourse user. This will show in audit logs and might be shown in the user interface as the user who created an invoice, added a note or performed some other task.
+
+[TIP]
+====
+Make sure that onCourse user has the minimum permissions possible. Remember that these API connections can change or destroy data, fill up your document storage or do any number of other harmful things. So reduce the exposure of those tokens by reducing permissions to just what is needed.
+====
+

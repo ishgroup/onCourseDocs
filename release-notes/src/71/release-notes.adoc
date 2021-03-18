@@ -7,8 +7,6 @@
 
 An entirely new part of onCourse has been introduced, allowing you to store and mark student submissions against assessments. This is not yet integrated with the portal, but that will come soon.
 
-
-
 === API tokens
 
 To make it much easier to authenticate external services to the onCourse API we've introduced API tokens. You can create secure keys to allow external access to the API without worrying about a login and cookie handshake.
@@ -16,31 +14,19 @@ To make it much easier to authenticate external services to the onCourse API we'
 == Reports and scripts
 
 == Minor features
-* Save button is now available in discard changes dialog `OD-12525`
-* Split class discounts section on class budget UI `OD-15480`
-* Invoices - Add discount drop down box to Invoice record view `OD-15503`
-* Jest tests for components of certificates `OD-15634`
-* Jest tests for components of contacts `OD-15635`
-* Jest tests for components of corporatePasses `OD-15636`
-* Jest tests for components of courses `OD-15637`
-* Jest tests for components of discounts `OD-15638`
-* Jest tests for components of enrolments `OD-15639`
-* Jest tests for components of invoices `OD-15640`
-* Jest tests for components of membershipProducts `OD-15641`
-* Jest tests for components of messages `OD-15642`
-* Jest tests for components of modules `OD-15643`
-* Make overridden and calculated dates more obvious in outcome `OD-15667`
-* Add Certificates find related link to Outcomes `OD-15684`
-* Move some Student Loan fields from Class to Course `OD-15686`
-* Documents - Version error messaging update `OD-15704`
-* Default from email address `OD-15718`
+* A Save button is now available in discard changes dialog `OD-12525`
+* Split class discounts into Promo Discounts and Related Discounts section on class budget UI `OD-15480`
+* Added a discount drop-down box to Invoice record view. `OD-15503`
+* Ui Changes in Outcomes make overridden and calculated dates more obvious `OD-15667`
+* Added 'find related' links between certificates and outcomes `OD-15684`
+* Moved some Student Loan fields from Class to Course `OD-15686`
+* Updated error message that shows when user attempts to upload document that already exists in system `OD-15704`
+* Added a default 'no-reply' from email address for when no default from address exists `OD-15718`
 
 == Fixes
-* Voucher Types - web description field is in old style `OD-15327`
-* Site edit view - Sort room list in A-Z `OD-15578`
-* Canvas script not enrolling students `OD-15611`
-* Upload document dialog appearing intermittently `OD-15701`
-* Cannot add first document in system when there is a document size limit `OD-15713`
-* Invoice Tax amount is not recalculated when adding discount `OD-15723`
-* Mailchimp scripts not working `OD-15581`
-* Rich text editor menu selection does not match actual rich text applied `OD-15691`
+* VFixed an issue where voucher types web description field was in old style `OD-15327`
+* We now sort the room list in a site record by A-Z `OD-15578`
+* Fixed an issue where Canvas script was not creating enrolments in Canvas `OD-15611`
+* Fixed an issue where upload document dialog appeared intermittently `OD-15701`
+* Fixed an issue where Mailchimp scripts weren't creating/updating new contacts `OD-15581`
+* Fixed an issue where some headings in rich text editor menu selection did not match actual rich text applied `OD-15691`

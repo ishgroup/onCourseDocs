@@ -17,24 +17,28 @@ Set your Fee Help Provider Code in the AVETMISS general preferences panel to exp
 image::images/fee_help_provider_code.png[title='Setting your Fee Help provider code']
 
 [[FEEHELP-Creating]]
-=== Creating a VET Student Loan eligible class
+=== Creating a VET Student Loan eligible course
 
-Creating the VET Student Loan course may involve creating a single course, for a full qualification, with all appropriate units of competency attached, if your course is delivered as a single program with one census date. This is generally no longer allowed, and in most cases you will need multiple courses, to represent multiple units of study.
+onCourse Courses are used to map to both the VSL courses and VSL units of study. The way you set this up in onCourse is by creating a parent course as the VSL course, and then another course for each unit of study - e.g. if there are four units of study to the course, then you'd make four more courses.
 
-Where your VET Student Loan course contains multiple subjects, each with one or more unit, and with varying census dates, you'll need to create the appropriate number of onCourse courses, and at least one VET Student Loan eligible class for each course.
+You can set the course's modules in the parent course, or within each unit of study course. Either way will work.
 
-The data you set in the course and class records is combined with student and enrolment data to create the VET Student Enrolment (VEN), VET Enrolment Revisions (VER), VET Load Liability (VLL), VET Unit of Study Completions (VCU), VET Course Completions (VCC) and VET Commonwealth Assisted Students - HELP Due (VDU) export files.
+You'll need to set a relation between all these courses soon, but first, in the course VET section, you will need to begin by checking the option 'This is a VET Student Loan eligible class'. This will show the additional VSL fields.
 
-On the class VET section, you will need to begin by checking the option 'This is a VET Student Loan eligible class'. This will show the additional class fields.
-
+* This is a VET Student Loan eligible class - When ticked, sets the course as VSL enabled and displays further VSL related fields.
 * Type of attendance - select from Full time or Part Time
 * Equivalent full-time student load - this must be expressed as a whole number where 1 = a full time student load, 05 is 50% of a full time load and 0125 is equal to 1/8th of a full time student load.
-* Census date - This is the last date students can withdraw before incurring the course VET Student Loan fee.
-This must match your pre-approved census dates for the course or subject.
-* Reporting period - This is the year and semester period in the format YYYYp.
-A valid entry in this field would be 20151 or 20152
 
 image::images/vet_fee_help_class.png[title='VET Student Loan fields in a Class record']
+
+When creating VSL class records within VSL courses, the following fields are available to set:
+
+* Census date - This is the last date students can withdraw before incurring the course VET Student Loan fee. This must match your pre-approved census dates for the course or subject. This only displays when the parent course has 'This is a VET Student Loan eligible class' ticked.
+* Reporting period - This is the year and semester period in the format YYYYp. A valid entry in this field would be 20151 or 20152
+
+Make sure each field is set correctly for the course/unit of study you're creating.
+
+The last step is these courses then need to be connected with a special type of relation called 'Higher Education'. From within the parent course record, go to Relations and create a relationship with each of the applicable unit of study courses you've made, using relation 'Unit of study (Higher education)'. Make sure that each unit of study course has this relationship with the parent course. If viewing a unit of study course, the relationship to the parent course will appear as 'Course (Higher Education)'.
 
 [[FEEHELP-studentEligibility]]
 === Setting the Student's VET Student Loan eligibility
@@ -76,3 +80,11 @@ The value reported in this element must be less than or equal to the value repor
 * Credit level - select from the drop down list
 
 image::images/vet_fee_help_enrolment.png[title='VET Student Loans section in a Enrolment record']
+
+
+[[FEEHELP-exportingData]]
+=== Exporting VSL
+
+The export process for VSL is very simple provided all your data has been entered correctly. Simply go to the Enrolments window in onCourse, highlight the enrolments you wish to export then click the cogwheel and select 'Execute script' > 'VSL Export'.
+
+This will not only export the data, but will push it to the TCSI system for reporting.

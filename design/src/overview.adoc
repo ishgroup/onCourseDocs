@@ -468,18 +468,27 @@ Important variables can be configured in the config.js file.
 checkoutPath::
 The path on which your checkout page lives.
 You can point this to any page on your site, as long as you create that page in the editor and add the correct markup for the checkout engine to be displayed.
-paymentSuccessURL::
-The path to the page where a student is directed after the enrolment process.
-Perhaps you want to take them to the homepage, a survey, additional products or a page with enrolment terms and conditions.
-You can set this here.
-If you don't provide this, they remain on the thank you page at the end of the checkout process.
+
+[source,html]
+----
+<div data-cid="checkout" id="oncourse-checkout"/>
+----
+
 termsAndConditions::
 A URL to outline any policies, procedures or terms and conditions a student must agree to.
-On the payment page a checkbox is displayed with the words "I understand the enrolment, sale and refund policy." If you provide a URL in this variable, those words will be hyperlinked to that URL. image::images/TandC_one.png[] If you don't provide a value they will still have to check the option but there will be no link.
+On the payment page a checkbox is displayed with the words "I understand the enrolment, sale and refund policy." If you provide a URL in this variable, those words will be hyperlinked to that URL.
+
+image::images/TandC_one.png[]
+
+If you don't provide a value they will still have to check the option but there will be no link.
+
 image::images/TandC_none.png[]
+
 featureEnrolmentDisclosure::
 If you provide a URL here, a second sentence is added below the terms and conditions checkbox with the words "I have read the Student Information or have had it explained to me, and I agree to accept these conditions." The words "Student Information" is linked to whatever destination you enter here.
+
 image::images/TandC_both.png[]
+
 guardianRequiredAge::
 Students under this age will be allowed to enrol, however the checkout process will prompt the user to enter both the student and a parent/guardian over this age.
 In order for this to work, you should ensure you have set up your data collection rules to collect the date of birth as a mandatory field.

@@ -2,11 +2,10 @@
 20 Mar. 2021
 
 == Minor features
-* Audit purge `OD-13537`
-* AVETMISS 8 export changes `OD-15682`
-* Assessment Submissions: show user interface in enrolment detail page `OD-15700`
-* Jest tests for components of paymentsOut `OD-15726`
+* Added 'Audit purge' to Maintenance page in Preferences. Will delete aged and irrelevant audit logs. `OD-13537`
+* AVETMISS 8 export changes; changed wording under 'Delivered' to say '<x> no final status', and 'export as 70' switch now includes Not Set and manually set (70) outcomes in export. `OD-15682`
+* Assessment Submissions: Added a new window called 'Assessment Submissions', which records the submission and marking dates of assessments. `OD-15700`
 
 == Fixes
-* Payment Out amount validation doesn't refresh correctly `OD-15436`
-* Waiting list edit view: course id displayed instead of name on creating `OD-15460`
+* Fixed an issue where Payment Out amount validation didn't refresh correctly in rare case `OD-15436`
+* Fixed an error where, in Waiting list edit view, course id displayed instead of name when creating a new record `OD-15460`

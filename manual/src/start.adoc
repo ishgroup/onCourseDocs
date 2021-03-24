@@ -16,7 +16,8 @@ In order to download and install the standalone application:
 
 * Go to https://www.ish.com.au/download
 * Download onCourse Server. There is one application bundle which will work on OSX, Windows, Linux and Unix platforms. Unzip it to any suitable folder on your application server.
-* Install and set up MariaDB 10.3 or higher on your system. Consult their docs to see how to do that. MySQL, Amazon RDS, MS-SQL and Postgresql should also work, but we only test MariaDB for every release. Install your database server, create a database and a user with full access rights to that database, including the ability to create schema.
+* onCourse is happy in a virtualised environment such as VMWare Xen, or AWS EC2. Ensure that you have sufficient RAM and CPU allocated. onCourse Server only writes to disk for log files so memory and CPU are more important than disk performance. Allocate at least 400Mb of RAM, but more is better.
+* Install and set up MariaDB 10.4 or higher on your system. Consult their docs to see how to do that. MySQL, Amazon RDS, MS-SQL and Postgresql should also work, but we only test MariaDB for every release. Install your database server, create a database and a user with full access rights to that database, including the ability to create schema.
 * Make sure you have Java 11 or newer installed on your onCourse Server operating system. We typically use the AdoptOpenJDK distribution here, but any distribution should work OK.
 
 [[install-oncourseyml]]
@@ -66,6 +67,18 @@ Add a document block with details of your AWS S3 bucket and a smtp block with de
 * unsafe
 
 Use 'unsafe' only if you are sure you want to send unencrypted mail across your network or the internet. Don't do that.
+
+=== Invite new users
+
+To create users or to reset passwords if you have lost them, create a file called `createAdminUsers.txt` and put it in the same folder as onCourse.yml. That file should contain one line per user you want to invite into the system in the format:
+
+----
+firstName lastName email
+----
+
+Put spaces between the fields.
+
+
 
 [[install-sslcert]]
 === SSL Certificate

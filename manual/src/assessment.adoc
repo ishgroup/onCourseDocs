@@ -1,14 +1,14 @@
 [[assessment]]
-== Assessment
+== Assessment tasks
 
 You can access Assessments by finding 'Assessment tasks' in the Dashboard.
 
 [[assesment-whatIs]]
-=== Assessment in onCourse
+=== Assessments in onCourse
 
-Assessments are tasks that you create and assign to classes in onCourse. When an assessment task is assigned to a class, it has a release date, due date and assessor nominated.
+Assessment tasks are records that you create and assign to classes in onCourse. When an assessment task is assigned to a class, it has a release date, due date and assessor nominated, as well as a 'submitted on' date and 'marked on' date for each student enrolled in the class
 
-An assessment comprises a name, description and attached documents, and is designed to:
+An assessment task comprises a name, description and attached documents, and is designed to:
 
 * Instruct the candidate, or student, of the assessment activity they are required to complete for the assessment task
 * Instruct the assessor, or tutor, of the marking guidelines and criteria for the assessment
@@ -18,7 +18,7 @@ An assessment comprises a name, description and attached documents, and is desig
 
 Assessments can be set as 'active' or 'not active'. Only active assessments can be assigned to classes.
 
-. In the bottom right-hand corner or the assessment tasks window, click the plus button to create a new assessment task
+. In the bottom right-hand corner or the assessment tasks window, click the + button to create a new assessment task
 . Give your assessment task a code and name you will remember. This is how you will look up the task later.
 . Add a description to the description field that describes the overall assessment task and its requirements. This will be visible to candidates and assessors in their web portal. The description field allows for rich text entry, so you can format your text with headings and other elements to make the content easy to read.
 
@@ -26,7 +26,9 @@ image::images/assessment/assessment_task_general.png[title='The general tab of a
 
 Any content added to the notes tab is internal data and will not be visible to candidates or assessors.
 
-To add a document to the assessment, click the + button to the right of the Documents heading, type the name you gave the document in onCourse, or click the Browse button to upload a new document from your machine. Add any assessment documents to distribute to the candidates or assessors. Be sure to set the appropriate permission for each document attached e.g. 'Tutors and enrolled students' for documents that the candidates and assessors can access like the assessment task instructions, and 'Tutors only' for documents that only the assessors can access, such as marking guides.
+To add a document to the assessment, click the + button to the right of the Documents heading, type the name you gave the document in onCourse, or drag and drop the document into the window from your desktop.
+
+Add any assessment documents to distribute to the candidates or assessors. Be sure to set the <<documentManagement-accessRights, appropriate permission>> for each document attached.
 
 image::images/assessment/assessment_task_documents.png[title='Adding an Assessment Guide pdf to the assement task record']
 
@@ -56,9 +58,10 @@ The Assessment task list view uses pre-populated filters for the status, and com
 
 image::images/assessment/assessmentListview.png[title='Assessment tasks list view']
 
+[[assesment-trainingPlan]]
 === Training and Assessment Plans
 
-Assessments assigned to the class inform the training and assessment plan for that class.
+For VET classes, assessment tasks assigned to the class inform the training and assessment plan for that class.
 
 In the VET section of the class record, you will see all sessions, outcomes, and scheduled assessments for a class under the heading 'Training Plan'.
 
@@ -80,8 +83,24 @@ Between the column and row edit options, you can quickly create your class train
 
 image::images/assessment/bulk_assign_unit.png[title='Assign the module (unit of competency) to all sessions and tasks in bulk']
 
+[[assessment-submissions]]
+=== Assessment Submissions
+
+Assessment submissions is another window in onCourse that automatically creates a new record any time an assessment task is marked as submitted by a student.
+
+The record contains the student name, class name, assessment task name, two checkboxes for 'submitted' and 'marked', a date field for each checkbox, and notes and documents.
+
+image::images/assessment/assessment_submissions_record.png[]
+
+[[assessment-bulkChangingOutcomes]]
 ==== How training and assessment plans calculate outcome start and end dates
 
-Outcome start and end dates are inherited from the class attendance settings. If you have an Assessment task attached to the outcome the end date will be the last due date of the last Assessment task.
+Outcome start and end dates are inherited from the class training plan settings.
 
-If you class has no scheduled sessions (a self paced class) the outcome start and end date will default to the day the student enrolled (start date) plus the 'maximum number of days to complete' (end date). If no 'maximum number of days to complete' has been set, the end date will default to 12 months after the start date.
+If you have an assessment task attached to the outcome in the training plan section of the class, the end date for that outcome will become the 'marked on' date of the assessment.
+
+You can change this in bulk for a whole class by setting a marked on date for all students. Open the assessment task record in the class and hover your mouse over the Marked heading, a calendar icon appears. Click the icon and set a date, then save the record. Provided this date is past the currently set outcome end date, this date will now show as the outcome end date.
+
+image::images/assessment/assessment_submission_bulk_marked.png[Click here to set a date and bulk set the outcome end date for this class]
+
+If your class has no scheduled sessions (a self paced class) the outcome start and end date will default to the day the student enrolled (start date) plus the 'maximum number of days to complete' (end date). If no 'maximum number of days to complete' has been set, the end date will default to 12 months after the start date.

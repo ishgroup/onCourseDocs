@@ -264,6 +264,10 @@ image::images/editor_design.png[]
 
 Themes are a way to describe a page structure made up by a number of blocks and is a design layout created for you by your designer. There will always be a layout called "default". If you want different parts of your site to have very different looks, ask your designer to create alternative layouts for you to use.
 
+Themes are applied by URL path. This will allow you to set up cetain themes for different sections of your site based on the URL e.g. if you have a tag URL for all your business courses that uses the /course/business URL path on your website, you can have a special theme for all pages that appear under this path.
+
+You can apply the same theme to multiple paths. Just add the URL path to the 'New Page URL' field and click the green + button to confirm. After confirming, a drop-down box appears where you set whether this will apply to all pages starting with this URL, or only pages with this exact URL. Be sure to Save after setting your changes and publishing.
+
 Each theme can have a number of blocks arranged in any way you choose. There are five regions available:
 
 * header
@@ -275,6 +279,11 @@ Each theme can have a number of blocks arranged in any way you choose. There are
 Each region can contain one or more blocks which you click and drag from the right-hand side 'Blocks' area. To remove a block, click and drag it back into the list of unused blocks on the right. Order the blocks on the page by clicking and dragging them into position.
 
 image::images/editor_designEditThemes.png[]
+
+[NOTE]
+====
+When editing or creating themes for pages, make sure you don't overwrite any default theme. You must always ensure there is a default theme set up for standard pages. This must always be set with the URL as "/" with a type of 'Starts with'.
+====
 
 [[editorHistory]]
 === History

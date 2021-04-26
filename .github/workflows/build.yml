@@ -37,7 +37,7 @@ jobs:
       run: ./gradlew asciidoc
 
     - name: Store release
-      uses: marvinpinto/action-automatic-releases@v1
+      uses: marvinpinto/action-automatic-releases@latest
       with:
         automatic_release_tag: "latest"
         title: "snapshot"

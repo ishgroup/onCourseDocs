@@ -22,8 +22,9 @@ jobs:
         key: gradle-${{ hashFiles('**/*.gradle*') }}
 
     - name: Set up JDK
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@v2
       with:
+        distribution: 'adopt'
         java-version: 11
 
     - name: graphviz install
@@ -34,3 +35,16 @@ jobs:
 
     - name: Build
       run: ./gradlew asciidoc
+
+    - name: Store release
+      uses: marvinpinto/action-automatic-releases@v1
+      with:
+        automatic_release_tag: "latest""
+        title: snapshot
+        draft: true
+        files: |
+          manual/build/distributions/manual.zip
+          design/build/distributions/design.zip
+          web/build/distributions/web.zip
+          release-notes/build/distributions/release-notes.zip
+        repo_token: ${{ secrets.GITHUB_TOKEN }}

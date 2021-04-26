@@ -43,9 +43,9 @@ jobs:
         title: "snapshot"
         draft: true
         files: |
-          manual/build/distributions/manual.zip
-          design/build/distributions/design.zip
-          web/build/distributions/web.zip
-          dsl/build/distributions/dsl.zip
-          release-notes/build/distributions/release-notes.zip
+          ${{ GITHUB_WORKSPACE }}/manual/build/distributions/manual.zip
+          ${{ GITHUB_WORKSPACE }}/design/build/distributions/design.zip
+          ${{ GITHUB_WORKSPACE }}/web/build/distributions/web.zip
+          ${{ GITHUB_WORKSPACE }}/dsl/build/distributions/dsl.zip
+          ${{ GITHUB_WORKSPACE }}/release-notes/build/distributions/release-notes.zip
         repo_token: "${{ secrets.GITHUB_TOKEN }}"

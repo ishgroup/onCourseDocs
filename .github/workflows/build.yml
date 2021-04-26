@@ -39,8 +39,8 @@ jobs:
     - name: Store release
       uses: marvinpinto/action-automatic-releases@v1
       with:
-        automatic_release_tag: "latest""
-        title: snapshot
+        automatic_release_tag: "latest"
+        title: "snapshot"
         draft: true
         files: |
           manual/build/distributions/manual.zip
@@ -48,4 +48,4 @@ jobs:
           web/build/distributions/web.zip
           dsl/build/distributions/dsl.zip
           release-notes/build/distributions/release-notes.zip
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"

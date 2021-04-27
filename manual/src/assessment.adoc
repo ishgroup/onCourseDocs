@@ -6,7 +6,7 @@ You can access Assessments by finding 'Assessment tasks' in the Dashboard.
 [[assesment-whatIs]]
 === Assessments in onCourse
 
-Assessment tasks are records that you create and assign to classes in onCourse. When an assessment task is assigned to a class, it has a release date, due date and assessor nominated, as well as a 'submitted on' date and 'marked on' date for each student enrolled in the class
+Assessment tasks are records that you create and assign to classes in onCourse. When an assessment task is assigned to a class, it has a release date, due date and assessor nominated, as well as a 'submitted on' date and 'marked on' date for each student enrolled in the class. Next to these dates is a 'grade' column, where you can set the student's assessment scrore according to criteria set in the Preferences > Grading types section.
 
 An assessment task comprises a name, description and attached documents, and is designed to:
 
@@ -101,10 +101,23 @@ If you have an assessment task attached to the outcome in the training plan sect
 
 You can change this in bulk for a whole class by setting a marked on date for all students. Open the assessment task record in the class and hover your mouse over the Marked heading, a calendar icon appears. Click the icon and set a date, then save the record. Provided this date is past the currently set outcome end date, this date will now show as the outcome end date.
 
-image::images/assessment/assessment_submission_bulk_marked.png[Click here to set a date and bulk set the outcome end date for this class]
+image::images/assessment/assessment_submission_bulk_marked.png[title='Click here to set a date and bulk set the outcome end date for this class']
 
 If your class has no scheduled sessions (a self paced class) the outcome start and end date will default to the day the student enrolled (start date) plus the 'maximum number of days to complete' (end date). If no 'maximum number of days to complete' has been set, the end date will default to 12 months after the start date.
 
 === Bulk adding or removing tags
 
 You can add or remove tags in bulk from assessment task records by, in the list view, highlighting the records you wish to change, clicking the cogwheel and selecting either 'add tags' or 'remove tags'. Select the tag and click 'Make Changes'.
+
+[[assessment-gradingTypes]]
+=== Grading types
+In the Preferences window of onCourse there is a Grading types section where you will be able to define the various types of grades offered on assessments. onCourse has numerous default options that cover a number of standard assessment scoring methods, however you can also create your own by hitting the + button at the top of this section.
+
+image::images/assessment/grading_types.png[title='The grading types section in Preferences. Create your own grading types here.']
+
+There are two types of grading:
+
+* *By Number* - For when you simply want to choose a score between the minimum and maximum set values, usually 0 to 100.
+* *by Choice List* - Lets you choose from a set of defined options, which can also map to a score if you wish. E.G. The University grades type uses terms like High Distinction, Distinction, Credit, Pass and Fail, but all of these also map to scores as well. If both a score and choice type are set, then both will display in the assessment submission record.
+
+image::images/assessment/grading_types_assessment_sub.png[title='Grades shown in the assessment submissions section of a class.']

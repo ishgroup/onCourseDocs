@@ -23,10 +23,12 @@ Maintenance::
 The maintenance preferences allows you to set backup preferences and change whether you would like automatic logout on or not.
 AVETMISS::
 Stands for the Australian Vocational Education and Training Management Information Statistical Standard which is the national reporting standard for Australian Registered Training Organisations, it is essential that these fields are all filled out fully and correctly as it is a major part of AVETMISS reporting.
-Funding Contracts::
-onCourse has created default templates for the state-based funding contracts, and integrated them with your AVETMISS reporting options. You are able to create custom funding contracts for any source of funding that supports the student enrolment, and enable/disable default funding contracts.
 Financial::
 The Financial preferences is where you set such things as what currency and local tax that is being used, amongst what default accounts to use.
+Funding Contracts::
+onCourse has created default templates for the state-based funding contracts, and integrated them with your AVETMISS reporting options. You are able to create custom funding contracts for any source of funding that supports the student enrolment, and enable/disable default funding contracts.
+Grading types::
+This is where you can create or edit the grading types used for scoring assessment submissions.
 Holidays::
 These preferences allow you to add Holidays (unavailabilities) for your whole business timetable and scheduling availability.
 Payment types::
@@ -37,6 +39,8 @@ Concession types::
 This is where you can define what concession types your students are able to use.
 Contact relation types::
 The contact relation types preferences allows you to define what relationships you want to be able to link contacts together with.
+Sellable items relation types::
+The types of relationships you can set between courses and products.
 Custom fields::
 This is where you can add any new custom fields you want to appear in contacts records, along with the option to add them to the online Enrolment, Waiting List and Application questions.
 
@@ -162,17 +166,6 @@ You can still make changes to any individual student's enrolment outcomes to add
 
 On this tab you can also set the signatory name and post-nominals. This name will print on the signature line for all onCourse certificate reports. If you leave it blank, the word 'Principal' will print.
 
-==== Funding Contracts
-
-Funding Contracts is where you can set the Funding Contracts available for selection in your application. You can choose from the selection included with the application as well as creating your own (if you have either a standard or enterprise licence agreement). To ensure a funding contract is selectable within the application, make sure its 'Active' check box is checked.
-
-if you have a Standard or Enterprise licence for onCourse, you can create your own funding contracts in this window. To create a new funding contract, click the black + button at the top of the window. This will create a new, blank record where you'll need to add a name, select the flavour (the rules used for AVETMISS reporting) and then check the Active check box to enable it.
-
-Any funding contract within this menu with the Active check box disabled will not appear for use in the application.
-
-You can learn more about <<fundingContract>>.
-
-image::images/fundingcontracts_prefs.png[title='Funding Contracts in the General Preferences window']
 
 [[generalPrefs-financial]]
 ==== Financial
@@ -189,9 +182,25 @@ If your college usually takes payment at the time of enrolment, then we suggest 
 
 You can also set up your default for your nominated Pre Paid Fees account, as well as determining whether the deferred income is transferred from your Pre Paid Fees Liability Account to your Income Account evenly across all Sessions of the Class. Or alternatively you can nominate to transfer all funds across after the completion of the first session of the Class. Refer to the chapter on <<accounting, Accounting chapter>> for more information about deferred income.
 
-
-
 image::images/FinancialPreferences.png[title='The "Financial" Preferences']
+
+[[generalPrefs-fundingContractsPrefs]]
+==== Funding Contracts
+
+Funding Contracts is where you can set the Funding Contracts available for selection in your application. You can choose from the selection included with the application as well as creating your own (if you have either a standard or enterprise licence agreement). To ensure a funding contract is selectable within the application, make sure its 'Active' check box is checked.
+
+if you have a Standard or Enterprise licence for onCourse, you can create your own funding contracts in this window. To create a new funding contract, click the black + button at the top of the window. This will create a new, blank record where you'll need to add a name, select the flavour (the rules used for AVETMISS reporting) and then check the Active check box to enable it.
+
+Any funding contract within this menu with the Active check box disabled will not appear for use in the application.
+
+You can learn more about <<fundingContract>>.
+
+image::images/fundingcontracts_prefs.png[title='Funding Contracts in the General Preferences window']
+
+[[generalPrefs-grading]]
+==== Grading types
+
+This feature ties in directly with assessment submissions and is where you can create, or edit, your own scoring models. You can learn more about grading types by going to our <<assessment-gradingTypes, Assessments chapter>>.
 
 [[generalPrefs-holidays]]
 ==== Holidays

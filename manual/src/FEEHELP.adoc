@@ -19,7 +19,7 @@ image::images/fee_help_provider_code.png[title='Setting your Fee Help provider c
 [[FEEHELP-Creating]]
 === Creating a VET Student Loan eligible course
 
-onCourse Courses are used to map to both the VSL courses and VSL units of study. The way you set this up in onCourse is by creating a parent course as the VSL course, and then another course for each unit of study - e.g. if there are four units of study to the course, then you'd make four more courses.
+onCourse Courses are used to map to both the VSL courses and VSL units of study. You set this up in onCourse by creating a parent course as the VSL course, and then another course for each unit of study - e.g. if there are four units of study to the course, then you'd make one parent course and four more 'unit of study' courses.
 
 You can set the course's modules in the parent course, or within each unit of study course. Either way will work.
 
@@ -87,3 +87,103 @@ image::images/vet_fee_help_enrolment.png[title='VET Student Loans section in a E
 The export process for VSL is very simple provided all your data has been entered correctly. Simply go to the Enrolments window in onCourse, highlight the enrolments you wish to export then click the cogwheel and select 'Execute script' > 'VSL Export'.
 
 This will not only export the data, but will push it to the TCSI system for reporting.
+
+==== Fields for export
+
+The following fields are mapped for inclusion in the TCSI export:
+
+.VSL Data Elements - Student packet
+[cols=",,",options="header",]
+|===
+|*VSL Field Name*|*onCourse Field Name*|*onCourse Window*
+|https://www.tcsisupport.gov.au/element/313[Student identification code]|Student number|Contacts
+|Date of birth|Date of birth|Contacts
+|Student family name|Last name|Contacts
+|Student given name - first|First name|Contacts
+|Student given name - others|Middle name|Contacts
+|Gender code|Gender|Contacts
+|Aboriginal and Torres Strait Islander Code|Indigenous Status|Contacts
+|Country of birth code|Country of Birth|Contacts
+|Language spoken at home code|Language spoken at home|Contacts
+|Year left school|Achieved in year|Contacts
+|Level left school|Highest school year|Contacts
+|Term address country code|Country|Contacts
+|Residential address country code|Country|Contacts
+|Term address postcode|Postcode|Contacts
+|Residential address postcode|Postcode|Contacts
+|Residential address street|Street|Contacts
+|Residential address suburb|Suburb|Contacts
+|Residential address state|State|Contacts
+|Tax file number|Tax file number|Contacts
+|CHESSN|Commonwealth higher education support number (CHESSN)|Contacts
+|Unique student identifier|Unique Student Identifier (USI)|Contacts
+|Disability code|Disability type|Contacts
+|Citizen Resident Code|Citizenship Status|Contacts
+|===
+
+
+.VSL Data Elements - Course packet
+[cols=",,",options="header",]
+|===
+|*VSL Field Name*|*onCourse Field Name*|*onCourse Window*
+|Course code|Code|Courses
+|Course name|Name|Courses
+|Course of study load|Equivalent full-time student load|Courses
+|Standard course duration|An aggregate of first class duration of all related courses|Classes
+|Course effective from date|Date of the earliest related class|Classes
+|Course effective to date|Date of the last related class|Classes
+|===
+
+
+.VSL Data Elements - Delivery location packet
+[cols=",,",options="header",]
+|===
+|*VSL Field Name*|*onCourse Field Name*|*onCourse Window*
+|Delivery location code|Site ID|Sites
+|Campus effective from date|Earliest outcome start date|Outcomes
+|Delivery location street address|Street|Sites
+|Delivery location suburb|Suburb|Sites
+|Delivery location country code|Country|Sites
+|Delivery location postcode|Postcode|Sites
+|Delivery location state|State|Sites
+|Campus effective to date|(optional field)|N/A
+|===
+
+.VSL Data Elements - Disability packet
+[cols=",,",options="header",]
+|===
+|*VSL Field Name*|*onCourse Field Name*|*onCourse Window*
+|Disability code|Disability type|Contacts
+|Disability effective from date|Enrolment creation date|Enrolments
+|Disability effective to date|Always 'null'|N/A
+|===
+
+.VSL Data Elements - Citizenship packet
+[cols=",,",options="header",]
+|===
+|*VSL Field Name*|*onCourse Field Name*|*onCourse Window*
+|Citizen resident code|Citizenship status|Contacts
+|Citizenship effective from date|Enrolment creation date|Enrolments
+|===
+
+
+.VSL Data Elements - Citizenship packet
+[cols=",,",options="header",]
+|===
+|*VSL Field Name*|*onCourse Field Name*|*onCourse Window*
+|Student resource key or Student identification code|Student number|Contacts
+|Course resource key or Course code|Course code|Courses
+|Course of student commencement date|An aggregate of first class duration of all related courses|Classes
+|Type of attendance code|Type of attendance|Classes
+|Highest attainment code|Prior educational achievement|Contacts
+|Study reason code|Study reason|Enrolments
+|Labour force status code|Employment category|Contacts
+|Course outcome code|Depends on enrolment status for parent course.
+
+*1* when enrolment completed.
+
+*3* when enrolment cancelled.|Enrolments (not based on a single field, but enrolment status)
+|Course outcome date (required only if course completed)|Last related outcome end date|Outcomes
+|Basis for admission code||
+
+

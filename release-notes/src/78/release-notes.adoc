@@ -1,0 +1,39 @@
+= Release 78
+6 May 2021
+
+== Major features
+
+=== Script widgets
+
+We've had attractive cards for queries when creating automation script for ages now. In this release we've added similar cards to all common closures (actions within { } ).
+
+
+=== Script trigger on specific attribute change
+
+Before you could trigger scripts on edit/create/delete events for any type of object. Now you can cause those triggers to only run when a specific attribute is changed. For example, this makes it much easier to run an event when a contact changes their 'do not contact for marketing' flag, or a value is added to special needs.
+
+
+=== Assessment grading
+
+Assessments now have a grading feature and you can define your own grade schemas. Score assessments out of 100, 10 or any other number. Assign thresholds to certain scores. Or just create a dropdown list of grades such as A to F or pass/fail.
+
+
+
+
+== Reports and scripts
+
+== Minor features
+* Classes - add drop down list of sites and rooms `OD-13928`
+* Improve error message when voucher is expired or redeemed `OD-15351`
+* Object type variable for scripts `OD-15860`
+* Scripts: add a new system script for MailChimp `OD-15903`
+* Scripts: update entity attributes for triggering on startup `OD-15904`
+* Custom fields with regular expression matching `OD-15915`
+
+
+== Fixes
+* Membership scripts trigger missing `OD-15659`
+* Scripts: query param in the query closure isn't valid `OD-15905`
+* createAdminUsers.txt doesn't reset passwords `OD-15989`
+* Bulk change rooms when adding new class doesn't change all sessions / update properly `OD-16009`
+* Some modal dialogs styles are broken `OD-16056`

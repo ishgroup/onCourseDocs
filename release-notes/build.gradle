@@ -123,7 +123,7 @@ class ReleaseNotes extends DefaultTask {
   def outputFile
 
   @TaskAction
-  def getNotes() {
+  def generateNotes() {
     def issues = getJiraResponse("resolution in (closed,Unresolved) and fixVersion='${version} angel'").issues as Collection
 
     logger.lifecycle "Found ${issues.size()} issues..."

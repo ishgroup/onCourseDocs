@@ -11,9 +11,24 @@ Scripts often work hand in hand with <<emailTemplates, message templates>>, send
 
 image::images/send_payment_receipt_script.png[title='Example of what a script looks like']
 
+[[scripts-navigatingViews]]
 === Navigating the Scripts view
 
 Click the 'Scripts' heading in the Automation window to expand the section. Then click the script you want to view in detail and it will open in the section on the right.
+
+image::images/script_list_view.png[title='Scripts as they appear in the Automation window']
+
+Scripts has two separate views; cards view and code view. You can switch between the two view modes by hovering over the cogwheel and then clicking the switch view icon.
+
+image::images/scripts_change_view.png[title='Click this icon to change the view mode']
+
+Card view:: For standard users. Gives a simpler way to view, or craft, scripts without needing to write any code. Of course, you can still write code in this view if you wish.
+
+image::images/scripts_card_view.png[title='Card view breaks the code into easy to read cards; trigger, query, script, message and import']
+
+Code view:: Does away with separate cards, instead showing pure code with which you can edit. This mode is recommended for advanced users.
+
+image::images/scripts_code_view.png[title='Code view shows just the trigger and the script code']
 
 [[scripts-whatYouCanDo]]
 === What can you do with scripts?
@@ -60,8 +75,6 @@ You can enable and disabled a script within the script record by ensuring the 'E
 
 Scripts which are enabled display the information about when they will next run in the record.
 Disabled scripts appear greyed out.
-
-image::images/script_list_view.png[title='Scripts as they appear in the Automation window']
 
 [[scripts-onCourseDefaultScripts]]
 === onCourse default scripts
@@ -151,6 +164,7 @@ Moodle enrol:: Create an enrolment in moodle where the course has the tag define
 Coassemble enrol:: Create an enrolment in Coassemble LMS.
 Mailchimp subscribe:: Subscribe contacts to mailchimp mailing lists using the onCourse mailing list feature. NB The name of the integration must match the name of the mailing list exactly for this script to work. You can set up multiple integrations, one for each mailing list. You only need to enable this one script to run them all.
 Mailchimp subscribe on enrolment:: Subscribe all enrolling students to a mailchimp mailing list, where the integration name is 'Enrolment'. NB you must set up the integration before enabling this script.
+Mailchimp subscripbe on attribute changing:: Whenever the email marketing permissions for a contact is updated to 'allowEmail', subscribe contact to mailchimp
 Mailchimp unsubscribe:: Unsubscribe contacts from mailchimp mailing lists using the onCourse mailing list unsubscribe feature
 SurveyGizmo send invite on enrolment:: Send a survey invite (template
 - survey invite) on enrolment in a course tagged with the tag defined in the SurveyGizmo integration
@@ -160,6 +174,7 @@ SurveyMonkey send invite on enrolment:: Send a survey invite (template
 - survey invite) on enrolment in a course tagged with the tag defined in the SurveyMonkey integration
 SurveyMonkey send invite on enrolment completion:: Send a survey invite (template - survey invite) on class completion in a course tagged with the tag defined in the SurveyMonkey integration
 Xero manual journal:: Create a Xero set of journals for the total transactions for each account created on the previous day
+Xero payroll:: Pushes tutor pay data to Xero
 MYOB manual journal:: Create a MYOB set of journals for the total transactions for each account created on the previous day
 
 [[scripts-scriptTriggers]]
@@ -263,6 +278,10 @@ on the first day of the month.
 ==== Entity events
 
 Rather than a specific time, the trigger for a script can instead be a record change, otherwise known as an entity event. You are able to specify the entity name and the type of change to trigger the script: create, update, create or update, or remove. Note that entity names are mostly the same as database table names, but there is a difference. Some entities don't map directly to the database.
+
+You can even set this to trigger when a specific entity attribute is edited; for example you could easily create a script that sends out an email the moment a contact allows for email marketing, or a confirmation email of a last name change.
+
+
 
 For more details of what entities are available, please consult our detailed API documentation.
 

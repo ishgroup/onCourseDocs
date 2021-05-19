@@ -58,28 +58,29 @@ image::images/Moodle_5.2_Create_token.png[title='Create token page']
 The ID should be the same as course code in onCourse for the default integration script to work, although you can customise this in different ways.
 
 [[externalintegrations-mailchimp]]
-=== MailChimp
+=== Mailchimp
 
-MailChimp is an online email marketing solution to manage contacts, send emails and track results.
+Mailchimp is an online email marketing solution to manage contacts, send emails and track results.
 
-. Log into MailChimp and obtain an https://mailchimp.com/help/about-api-keys[API key] for your account. Go to `Account -> Extras -> API keys -> Create a key`
+. Log into mailchimp and obtain an https://mailchimp.com/help/about-api-keys[API key] for your account. Go to `Account -> Extras -> API keys -> Create a key`
 . In MailChimp, find your https://mailchimp.com/help/find-audience-id/[Audience Id]. Go to `Audience dashboard -> Manage Audience -> Settings -> Audience name and campaign defaults`, and find the unique Audience ID number for the list you want to subscribe your enrolling students to.
 . Add a https://demo.cloud.oncourse.cc/automation/integrations/new/mailchimp[new Mailchimp integration] in onCourse.
 +
-image::images/mailchimp_prefs.png[title='MailChimp integration for a Mailing List integration']
+image::images/mailchimp_prefs.png[title='Mailchimp integration for a Mailing List integration']
 +
-. Click the 'Add' button below the MailChimp icon. The name of the integration must be 'Enrolment'. Insert your API key and Audience ID from MailChimp, then save and close this window.
+. Click the 'Add' button below the mailchimp icon. The name of the integration must be 'Enrolment'. Insert your API key and Audience ID from MailChimp, then save and close this window.
 
-Once the integration has been defined you will need to enable a MailChimp script to automate data flowing between the systems. Scripts can be found by going to the Automation window. Sample scripts are provided to enrol students on enrolment and to update marketing material settings in onCourse when they unsubscribe in Mailchimp.
+Once the integration has been defined you will need to enable a mailchimp script to automate data flowing between the systems. Scripts can be found by going to the Automation window. Sample scripts are provided to enrol students on enrolment and to update marketing material settings in onCourse when they unsubscribe in mailchimp.
 
-There are three types MailChimp integrations available in onCourse:
+There are five mailchimp scripts for use with the mailchimp integration available in onCourse:
 
-mailchimp subscribe:: for onCourse mailing list subscription: This type of integration triggers when you manually attach a Mailing List tag an onCourse contact. You can create multiple mailing list tag groups in onCourse that integrate with multiple MailChimp lists.
-mailchimp unsubscribe:: onCourse mailing list unsubscription: This type of integration triggers when you manually remove a mailing list tag from a contact. This script should be enabled the script 'mailchimp subscribe'.
-mailchimp subscribe on enrolment:: This type of integration triggers when a contact enrols via onCourse or the web. You can only have one of these types of integrations to subscribe all enrolling students to a single MailChimp list. Your onCourse integration must be named "Enrolment" for this to work.
+mailchimp subscribe:: for onCourse mailing list subscription: This type of integration triggers when you manually attach a Mailing List tag, with the same name as the integration, to an onCourse contact. You can create multiple mailing list tag groups in onCourse that integrate with multiple mailchimp lists by first creating that tag in the Mailing List tag group, and then creating an integration with the same name. TIP: it's best if the mailchimp audience, mailing list tag and integration all share the same name, so you can more easily follow the movement of data.
+mailchimp unsubscribe:: onCourse mailing list unsubscription: This type of integration triggers when you manually remove a mailing list tag from a contact. This script should be enabled whenever the script 'mailchimp subscribe' is enabled.
+mailchimp subscribe on enrolment:: This type of integration triggers when a contact enrols via onCourse or the web. You can only have one of these types of integrations to subscribe all enrolling students to a single mailchimp list. Your onCourse integration must be named "Enrolment" for this to work.
+mailchimp pull subscribe:: This script will pull unsubscriber information back from mailchimp into onCourse, and based on email address, will mark the contact's record as 'email marketing unavailable'.
+mailchimp subscribe on attribute changing:: Allows you to subscribe or unsubscribe a user in mailchimp whenever their 'email marketing' checkbox is changed.
 
-
-image::images/mailchimp_script.png[title='MailChimp mailing list subscribe script']
+image::images/mailchimp_script.png[title='Mailchimp mailing list subscribe script']
 
 [[externalintegrations-surveymonkey]]
 === SurveyMonkey

@@ -184,6 +184,52 @@ The following fields are mapped for inclusion in the TCSI export:
 
 *3* when enrolment cancelled.|Enrolments (not based on a single field, but enrolment status)
 |Course outcome date (required only if course completed)|Last related outcome end date|Outcomes
-|Basis for admission code||
+|Basis for admission code|Basis for admission|Enrolments
+|Credit used value|NULL|N/A
+|Credit basis code|NULL|N/A
+|===
 
+.VSL Data Elements - Basis for admission packet
+[cols=",,",options="header",]
+|===
+|*VSL Field Name*|*onCourse Field Name*|*onCourse Window*
+|Basis for admission code|Basis for admission|Enrolments
+|===
 
+.VSL Data Elements - Course prior credit packet
+[cols=",,",options="header",]
+|===
+|*VSL Field Name*|*onCourse Field Name*|*onCourse Window*
+|Credit used value|NULL|N/A
+|Credit basis code|NULL|N/A
+|===
+
+.VSL Data Elements - Unit enrolment packet
+[cols=",,",options="header",]
+|===
+|*VSL Field Name*|*onCourse Field Name*|*onCourse Window*
+|Course admission resource key or Unique course admission combination|Combination of student number, course code of the higher education related course and aggregated start/end dates of related higher education courses|Contacts and Courses
+|Unit of Study code|Course code|Courses
+|Delivery location resource key or Delivery location code|Site ID|Sites
+|Discipline code|Field of education|Units of Competency
+|Unit of study year-long indicator|If End date - Start Date > 10 months then is true, otherwise false|Class start and end dates
+|Unit of study census date|Census date|Classes
+|Unit of study commencement date|Outcome start date|Outcomes
+|Equivalent full-time student load|Equivalent full-time student load|Courses
+|Unit of study status code|
+*1* - If child course enrolment is cancelled
+
+*3* - If all outcomes in child course are successful (or no outcomes at all) and end date has passed, or
+
+*4* - None of the above are true|Set automatically
+|Unit of study outcome date|Outcome end date|Outcomes
+|Course assurance indicator|This will always come out False|N/A
+|Mode of attendance code|Type of attendance|Enrolments
+|Student status code|Fee subsidy field|Enrolments
+|Amount charged|Fee charged|Enrolments
+|Amount paid upfront|Fee charged|Enrolments
+|Loan fee|Loan fee|Enrolments
+|HELP loan amount|Fee HELP requested|Enrolments
+|Recognition of prior learning code|RPL Indicator|Enrolments
+|Remissions reason code|Always NULL|N/A
+|===

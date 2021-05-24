@@ -2,6 +2,7 @@ import groovyx.net.http.ContentType
 import groovyx.net.http.RESTClient
 import groovyx.net.http.HttpResponseException
 import org.apache.tools.ant.filters.ReplaceTokens
+import org.asciidoctor.gradle.jvm.AsciidoctorTask
 
 buildscript {
   repositories {
@@ -58,7 +59,7 @@ task buildIndex(type: Copy) {
   ])
 }
 
-task outputIndex(type: org.asciidoctor.gradle.jvm.AsciidoctorTask, dependsOn: buildIndex) {
+task outputIndex(type: AsciidoctorTask, dependsOn: buildIndex) {
   doFirst {
     copy {
       from "${rootDir}/src"
@@ -120,7 +121,7 @@ class ReleaseNotes extends DefaultTask {
   String jiraPassword
 
   @OutputFile
-  def outputFile
+  File outputFile
 
   @TaskAction
   def generateNotes() {
@@ -153,7 +154,7 @@ class ReleaseNotes extends DefaultTask {
   String createRelease(version, Collection issues) {
     issues.sort { issue -> issue.key }
     issues.each { issue ->
-      logger.lifecycle issue.key + " " + issue.fields.summary
+      logger.lifecycle "${issue.key} ${issue.fields.summary}"
     }
     def issues_reports, issues_web, issues_angel
     def WEB_APPS = ['web', 'enrol', 'editor', 'portal', 'search', 'usi']

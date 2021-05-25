@@ -9,7 +9,7 @@ In addition to enrolments in classes you can also sell:
 
 In this chapter we'll focus on the last of these items: product sales. For more information on memberships, see <<concessions, Concessions and Memberships>> chapter, and for more information on vouchers see <<vouchers, the Vouchers chapter>>.
 
-Products in onCourse are a simple way to supply additional, defined items during an enrolment sale. onCourse does not manage a stock inventory or the shipping of products. It is expected that most products will be supplied to the student in person when they attend the class.
+Products in onCourse are a simple way to supply additional, defined items during an enrolment sale. onCourse does not manage a stock inventory or the shipping of products. It is expected that most products will be supplied to the student in person when they attend the class. Each product record can have its own data collection rule set, this allows for better control over data collected at the point of purchase for different types of products.
 
 [[products-navigatingAround]]
 === Navigating around the Product window
@@ -29,8 +29,9 @@ Name:: Allows you to name the product
 Code:: Allows you to create a code for this product
 Description:: This allows you to include a description of the product in rich text, useful for the online marketing of the product
 Income account:: Allows you to select what income account this is connected to
-Fee:: Ex tax shows the Fee excluding any tax, Total Fee shows the full free including tax. Choose the tax setting from the Tax drop down box
+Fee:: Ex tax shows the Fee excluding any tax, Total Fee shows the full free including tax. Choose the tax setting from the Tax dropdown box
 Status:: You can choose whether this product can be either disabled; purchased in the office only; or purchased in the office as well as online
+Data collection rule:: Sets the data collection rule governing this product
 Corporate Pass:: This feature allows you to link a number of Corporate Pass to products. You can find the list of Corporate Passes linked to the product by clicking on the Corporate Passes tab in the products edit view.
 
 [[products-relatingToACourse]]
@@ -66,7 +67,7 @@ image::images/adding_a_product_in_QE.png[title='View in checkout when the produc
 
 A product can also be purchased online provided its status allows it. For a product to be available online, the status field on its product record must be set to 'can be purchased in office and online'.
 
-After a user adds a product to their cart and proceeds to checkout, once they complete any marketing questions and get to the summary page, they will be able to set the quantity of the product they're purchasing and the checkout price will be updated automatically.
+After a user adds a product to their cart and proceeds to checkout, once they complete any marketing questions and get to the summary page, they will be able to set the quantity of the product they're purchasing and the checkout price will be updated automatically. This is also where any set data collection forms will be filled out.
 
 image::images/purchase_product_online.png[title='Voucher in the website checkout']
 

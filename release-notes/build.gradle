@@ -1,6 +1,4 @@
-import groovyx.net.http.ContentType
-import groovyx.net.http.RESTClient
-import groovyx.net.http.HttpResponseException
+import groovy.json.JsonSlurper
 import org.apache.tools.ant.filters.ReplaceTokens
 import org.asciidoctor.gradle.jvm.AsciidoctorTask
 
@@ -9,7 +7,7 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
+    classpath 'org.codehaus.groovy:groovy-json:3.0.8'
   }
 }
 
@@ -137,17 +135,11 @@ class ReleaseNotes extends DefaultTask {
 
   def getJiraResponse(jql) {
     // https://developer.atlassian.com/cloud/jira/platform/rest/
-    def squish = new RESTClient(jiraURL, ContentType.JSON)
-    // The following line is needed instead of squish.auth.basic since we need to pre-emptive auth
-    squish.headers.'Authorization' = "Basic " + (jiraUsername + ":" + jiraPassword).bytes.encodeBase64().toString()
-    try {
-      def response = squish.get(
-              path: '/rest/api/2/search',
-              query: [jql: jql, maxResults: '1000'])
-      return response.data
-
-    } catch (HttpResponseException e) {
-      logger.error "*** Request to squish failed with error: ${e.response.data}"
+    def squish = new URL("${jiraURL}rest/api/2/search?jql=${URLEncoder.encode(jql, 'UTF-8')}&maxResults=1000").openConnection() as HttpURLConnection
+    squish.setRequestProperty('Authorization', 'Basic ' + "${jiraUsername}:${jiraPassword}".bytes.encodeBase64().toString())
+    squish.setRequestProperty('Accept', 'application/json')
+    return squish.inputStream.withCloseable { inStream ->
+      new JsonSlurper().parse( inStream as InputStream )
     }
   }
 

@@ -29,11 +29,6 @@ a:active, a:hover {
     outline: 0
 }
 
-h1 {
-    font-size: 2em;
-    margin: .67em 0
-}
-
 abbr[title] {
     border-bottom: 1px dotted
 }
@@ -161,23 +156,23 @@ table {
     box-sizing: border-box
 }
 
-html, body {
-    font-size: 100%
-}
-
 body {
-    background: #fff;
     color: rgba(0, 0, 0, .8);
     padding: 0;
     margin: 0;
     font-weight: 400;
     font-style: normal;
-    line-height: 1;
-    position: relative;
     cursor: auto;
     tab-size: 4;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+
+    color: #444;
+    background: #fff;
+    font-size: 17px;
+    font-family: 'Merriweather', serif;
+    line-height: 1.9em;
+    position: relative;
 }
 
 #main-container {
@@ -349,11 +344,15 @@ h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 {
 h1 small, h2 small, h3 small, #toctitle small, .sidebarblock > .content > .title small, h4 small, h5 small, h6 small {
     font-size: 60%;
     color: #e99b8f;
-    line-height: 0
+    line-height: 0;
 }
 
 h1 {
-    font-size: 2.125em
+    margin: .67em 0;
+    font-size: 3em;
+    padding: 0.8em 0 0.4em;
+    color: #f2a143;
+    font-family: 'Port Lligat Slab', sans-serif;
 }
 
 h2 {
@@ -2229,16 +2228,6 @@ strong {
     outline: 0;
 }
 
-body {
-    color: #444;
-    background-color: #fff;
-    font-size: 17px;
-    font-family: 'Merriweather', serif;
-    line-height: 1.9em;
-    font-weight: 300;
-    position: relative;
-}
-
 ol, ul {
     list-style: none;
 }
@@ -2260,13 +2249,6 @@ div.table-contents td, div.table-contents th {
 
 caption, th {
     font-weight: 400;
-}
-
-#content h1 {
-    font-size: 3em;
-    padding: 0.8em 0 0.4em;
-    color: #323232;
-    font-family: 'Port Lligat Slab', sans-serif;
 }
 
 span.part a {

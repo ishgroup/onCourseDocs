@@ -288,32 +288,20 @@ An admin user can see a list of all users that have this feature enabled in the 
 [[users-emergencyAccess]]
 === Emergency access
 
-[NOTE]
-====
-This section only applies to users with access to their own onCourse Server, not cloud-hosted customers.
-====
+If you're running your own onCourse server and run into issues where you no longer have access, you can create a .txt file to put into the server folder.
 
-Should you lock yourself out of your onCourse Server because you have lost or forgotten the last admin login, there is a way to recreate or reset the 'admin' user password.
+The file should be called createAdminUsers.txt and use the following format:
 
-You need to do the following:
+----
+John,Doe,johndoe@mail.com
+Jane,Doe,<janedoe@mail.com>
+John Smith johnsmith@mail.com
+Jane Smith <janesmith@mail.com>
+----
 
-. Add "admin_password_reset=true" to the onCourse.cfg file on the server.
-. Restart the onCourse Server
-. Watch for the following lines in the log file and write down the password (it will be randomly generated everytime)
-+
-====
-Administrator password reset command found in onCourse.cfg
+If the user is a new user, then that user will be created and an email will be sent to them requesting that they set their password.
 
-Account with name "admin" now has password "hggd74"
-
-onCourse Server will now shut down.
-
-Remove the line starting "admin_password_reset" before restarting
-====
-+
-. Remove "admin_password_reset=true" from onCourse.cfg
-. Start up onCourse Server one more time
-. Log in with the user "admin" and the password as given above. TOTP will be disabled and this user will be made into an admin level account if they were not already.
+If you add to this file a user that already exists, when the file is read, that user's password is automatically reset and they will be sent a reset password email allowing them to set a new one.
 
 [[advancedSetup-accessControl]]
 === Controlling User Access (authorisation)

@@ -303,7 +303,7 @@ select {
     margin-bottom: .25em
 }
 
-div, dl, dt, dd, ul, ol, li, h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6, pre, form, p, blockquote, th, td {
+div, ul, ol, li, h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6, pre, form, p, blockquote, th, td {
     margin: 0;
     padding: 0;
     direction: ltr
@@ -327,7 +327,7 @@ p {
     font-family: inherit;
     font-weight: 400;
     font-size: 1em;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 1.25em;
     text-rendering: optimizeLegibility
 }
@@ -403,7 +403,7 @@ code {
 
 ul, ol, dl {
     font-size: 1em;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 1.25em;
     list-style-position: outside;
     font-family: inherit
@@ -440,9 +440,9 @@ ol li ul, ol li ol {
     margin-bottom: 0
 }
 
-dl dt {
-    margin-bottom: .3125em;
-    font-weight: bold
+dt {
+    margin-top: 2em;
+    font-weight: 600;
 }
 
 dl dd {
@@ -810,10 +810,6 @@ p a > code:hover {
     margin-left: .125em;
 }
 
-#toc ul.sectlevel0 > li > a {
-    font-weight: 500;
-}
-
 #toc ul.sectlevel0 > li {
     margin-top: 2em;
 }
@@ -833,8 +829,8 @@ p a > code:hover {
 }
 
 #toc li {
-    line-height: 1.3334;
-    margin-top: .3334em
+    line-height: 1.7;
+    margin-top: .5em
 }
 
 #toc a {
@@ -891,6 +887,7 @@ p a > code:hover {
 
 #toc .nav-link {
     position: relative;
+    font-weight: 500;
 }
 
 #toc .nav-link::before {
@@ -943,7 +940,7 @@ p a > code:hover {
     }
 
     #toc.toc2 > ul {
-        font-size: .85em;
+        font-size: .9em;
         margin-bottom: 0
     }
 
@@ -1187,7 +1184,9 @@ table.tableblock #preamble > .sectionbody > [class="paragraph"]:first-of-type p 
     word-wrap: break-word;
     overflow-x: auto;
     padding: 1em;
-    font-size: .8125em
+    font-size: .8125em;
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 
 @media screen and (min-width: 768px) {
@@ -2231,9 +2230,9 @@ strong {
 }
 
 body {
-    color: #555;
+    color: #444;
     background-color: #fff;
-    font-size: 16px;
+    font-size: 17px;
     font-family: 'Merriweather', serif;
     line-height: 1.9em;
     font-weight: 300;
@@ -2266,7 +2265,7 @@ caption, th {
 #content h1 {
     font-size: 3em;
     padding: 0.8em 0 0.4em;
-    color: #DB7430;
+    color: #323232;
     font-family: 'Port Lligat Slab', sans-serif;
 }
 
@@ -2357,7 +2356,7 @@ body > .book, body > .part, body > .book {
 }
 
 .list-of-tables p {
-    color: #DB7430;
+    color: #f2a143;
     font-size: 1.5em;
     margin-bottom: 0.2em;
 }
@@ -2465,7 +2464,7 @@ div.navfooter > table > tbody > tr > td[align=right] {
 }
 
 .toc a {
-    color: #555;
+    color: #444;
 }
 
 /* TOC -Parts */
@@ -2517,7 +2516,7 @@ div.navfooter > table > tbody > tr > td[align=right] {
 }
 
 .book > .titlepage h2.title {
-    color: #DB7430;
+    color: #f2a143;
     font-family: 'Port Lligat Slab', sans-serif;
     font-size: 2.5em;
     margin-bottom: 20px;
@@ -2532,10 +2531,10 @@ div.navfooter > table > tbody > tr > td[align=right] {
 /* Main TOC */
 div.list-of-examples > p, div.toc > p {
     font-family: 'Port Lligat Slab', sans-serif;
-    color: #DB7430;
+    color: #f2a143;
     margin: 20px 0 10px;
     padding-bottom: 2px;
-    border-bottom: 1px solid #DB7430;
+    border-bottom: 1px solid #f2a143;
     line-height: 1;
 }
 
@@ -2545,28 +2544,30 @@ div.list-of-examples dl {
 
 /* Main content pages */
 .book h2, .book h3, .book h4, .book h5, .book h6 {
-    margin-bottom: 0.25em;
+    margin-bottom: 0.7em;
     font-family: 'Port Lligat Slab', sans-serif;
-    color: #DB7430;
+    color: #f2a143;
     word-break: break-word;
 }
 
 .book h2 {
     font-size: 2em;
+    font-weight: 600;
 }
 
 .book h3 {
     font-size: 1.5em;
-    padding-top: 30px;
+    padding-top: 40px;
+    font-weight: 600;
 }
 
 .book h4, .book h5 {
     font-size: 1.2em;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .book h6 {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .book p {
@@ -2591,7 +2592,7 @@ body.book h1.title, div.book h1.title {
 }
 
 .titlepage h2.title {
-    color: #DB7430;
+    color: #f2a143;
     font-family: 'Port Lligat Slab', sans-serif;
     line-height: 1;
     margin-bottom: 10px;
@@ -2745,13 +2746,13 @@ pre.programlisting {
 }
 
 .book .toc p, .part .toc p {
-    color: #DB7430;
+    color: #f2a143;
     font-family: 'Port Lligat Slab', sans-serif;
     font-size: 1.8em;
     line-height: 1;
     margin: 20px 0 10px;
     padding-bottom: 2px;
-    border-bottom: 1px solid #DB7430;
+    border-bottom: 1px solid #f2a143;
 }
 
 .book .toc p b {

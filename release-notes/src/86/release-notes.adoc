@@ -1,5 +1,5 @@
-= Release 84
-6 Jun. 2021
+= Release 86
+8 Jun. 2021
 
 == Major features
 Outcomes now show progression in a pair of graphs. This progression shows assessments and attendance.
@@ -17,7 +17,18 @@ This flows through into the AVETMISS export window, separating out outcomes whic
 * SurveyGizmo renamed to Alchemer `OD-16160`
 
 == Fixes
+* Class attendance - OK button when entering attendance in detail doesn't work `OD-16184`
 * Unable to add a new room to a virtual site `OD-15948`
 * mailchimp/oncourse integrations mailchimp subscribe `OD-16085`
 * Automation - options showing wrong information `OD-16148`
 * Payment plans in checkout could auto-fill the wrong amount for previous invoices `OD-16167`
+
+== Test improvements
+* Tests for components of outcomes `OD-15724`
+* Tests for components of paymentsIn `OD-15725`
+* Tests for components of rooms `OD-15730`
+* Tests for components of preferences tutor-roles `OD-15803`
+* Checkout credit/owing check tests `OD-15906`
+* Tests for mock, components and epics of preferences grading-types `OD-15990`
+* Security mocks(data, api) and jest tests `OD-16070`
+* API tests: mock SMTP sending to avoid errors in logs `OD-16183`

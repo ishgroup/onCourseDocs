@@ -75,7 +75,22 @@ Once the integration has been defined you will need to enable a mailchimp script
 There are five mailchimp scripts for use with the mailchimp integration available in onCourse:
 
 mailchimp subscribe:: for onCourse mailing list subscription: This type of integration triggers when you manually attach a Mailing List tag, with the same name as the integration, to an onCourse contact. You can create multiple mailing list tag groups in onCourse that integrate with multiple mailchimp lists by first creating that tag in the Mailing List tag group, and then creating an integration with the same name. TIP: it's best if the mailchimp audience, mailing list tag and integration all share the same name, so you can more easily follow the movement of data.
-mailchimp unsubscribe:: onCourse mailing list unsubscription: This type of integration triggers when you manually remove a mailing list tag from a contact. This script should be enabled whenever the script 'mailchimp subscribe' is enabled.
+
+If your onCourse plan allows script editing, there are some additional lines that you can add to this script to both force Mailchimp to ignore its opt-in email setting and not send one, as well as adding a Mailchimp tag of the same tag name to the contact in Mailchimp.
+
+To disable email opt-in, add the following line within the script block:
+
+====
+optIn false
+====
+
+To tag a contact on subscription, add the following line:
+
+====
+tags record.taggedContact.tags
+====
+
+mailchimp unsubscribe:: onCourse mailing list unsubscription: This type of integration triggers when you manually remove a mailing list tag from a contact and will set the contact as Unsubscribed from the audience in Mailchimp. This script should be enabled whenever the script 'mailchimp subscribe' is enabled.
 mailchimp subscribe on enrolment:: This type of integration triggers when a contact enrols via onCourse or the web. You can only have one of these types of integrations to subscribe all enrolling students to a single mailchimp list. Your onCourse integration must be named "Enrolment" for this to work.
 mailchimp pull subscribe:: This script will pull unsubscriber information back from mailchimp into onCourse, and based on email address, will mark the contact's record as 'email marketing unavailable'.
 mailchimp subscribe on attribute changing:: Allows you to subscribe or unsubscribe a user in mailchimp whenever their 'email marketing' checkbox is changed.
@@ -128,25 +143,25 @@ The 'Sender email address' that survey responses are sent to is the same one you
 image::images/Preferences_messaging.png[title='Messaging tab of the Preferences window']
 
 [[externalintegrations-surveygizmo]]
-=== SurveyGizmo
+=== Alchemer
 
-SurveyGizmo is a powerful survey tool designed to make even the most advanced survey projects fun, easy and affordable.
+Alchemer is a powerful survey tool designed to make even the most advanced survey projects fun, easy and affordable.
 
-To add a SurveyGizmo integration you will need to click on the 'Add' button below the SurveyGizmo icon. You will then see a number of fields that are needed to enable the integration.
+To add an Alchemer integration you will need to click on the 'Add' button below the Alchemer icon. You will then see a number of fields that are needed to enable the integration.
 
-image::images/surveygizmo_prefs.png[title='SurveyGizmo integration preferences']
+image::images/surveygizmo_prefs.png[title='Alchemer integration preferences']
 
-Once these preferences have been defined you will need to enable at least one of the SurveyGizmo scripts to automatic the process. These scripts can be found by going to Automation, double-clicking on either 'SurveyGizmo send invite on enrolment' or 'SurveyGizmo send invite on enrolment completion', clicking on the checkbox 'Enabled' and saving the script.
+Once these preferences have been defined you will need to enable at least one of the Alchemer scripts to automatic the process. These scripts can be found by going to Automation, double-clicking on either 'Alchemer send invite on enrolment' or 'Alchemer send invite on enrolment completion', clicking on the checkbox 'Enabled' and saving the script.
 
-image::images/surveygizmo_script.png[title='SurveyGizmo scripts']
+image::images/surveygizmo_script.png[title='Alchemer scripts']
 
-Below is the information that is needed to enable the integration that can be found in SurveyGizmo.
+Below is the information that is needed to enable the integration that can be found in Alchemer.
 
 . The User and Password is the same one you use to log into your account at SurveyGizmo
 . The Survey ID is taken from survey address, so in the example below the Survey ID is 2290616. Please visit
-http://help.surveygizmo.com/help/article/link/how-to-find-ids[here] for more information.
+https://help.alchemer.com/help/how-to-find-ids[here] for more information.
 
-image::images/SurveyGizmo_Survey_ID.png[title='Where to find the SurveyGizmo Survey ID']
+image::images/SurveyGizmo_Survey_ID.png[title='Where to find the Alchemer Survey ID']
 
 [[externalintegrations-cloudassess]]
 === Cloud Assess

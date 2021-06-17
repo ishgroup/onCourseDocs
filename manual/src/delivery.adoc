@@ -145,10 +145,12 @@ There are several dates on display here, with the following meanings:
 
 * Training plan start date - Date of the first session in the class training plan
 * Training plan end date - Date of the last session or assessment in the class training plan
-* Actual start date - Date of the first session in the class
-* Actual end date - Date of the last session in the class
+* Actual start date - Date of the first session in the class. If this is in the future it will read 'Not yet started'.
+* Actual end date - Date of the last session in the class. If this is in the future it will read 'Not yet finished'.
 * Overidden start date - Is a locked field that, when the padlock icon is clicked and unlocked, can be manually edited.
 * Overidden end date - Is a locked field that, when the padlock icon is clicked and unlocked, can be manually edited.
+
+You can see these definitions in onCourse by hovering your mouse cursor over the headers.
 
 [NOTE]
 ====
@@ -269,6 +271,24 @@ If you have set outcomes on an enrolment record and want them deleted, and not r
 If you have created a certificate that includes outcomes from the enrolment, they will always be retained on the student's outcome and cannot be deleted manually, even if the certificate has been revoked.
 
 image::images/cancel_enrolment.png[title='Cancelling an enrolment and deleting all unset outcomes']
+
+[[rto-OutcomesTracking]]
+=== Tracking outcome progression
+
+Using a combination of <<assessment, assessments>> and class <<classes-Attendance, attendance>>, you can more easily track the progression of a students outcomes.
+
+In the outcome record, you'll notice two graphs in the Progression section. One if for attendance, the other is for assessments. Each graph will animate and fill out to show you how far through completion of this outcome the student is based on these attributes.
+
+You’ll need to make sure the following is set up correctly in your Course/Class workflow:
+
+* The course has the correct modules/UoC added to it
+* The assessment task records are created in your system
+* The correct assessment tasks are added to the class in the Assessment Tasks section of the class edit view
+* The class training plan has been set up for the class - this is essential as it’s what ties together all the outcomes, assessments, outcome start and end dates etc for the tracking to work.
+* Attendance is marked
+
+image::images/outcome_progression.png[title='Cancelling an enrolment and deleting all unset outcomes']
+
 
 [[rto-CSWECourses]]
 === CSWE courses, classes and outcomes

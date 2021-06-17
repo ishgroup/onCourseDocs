@@ -88,7 +88,9 @@ image::images/assessment/bulk_assign_unit.png[title='Assign the module (unit of 
 
 Assessment submissions is another window in onCourse that automatically creates a new record any time an assessment task is marked as submitted by a student.
 
-The record contains the student name, class name, assessment task name, two checkboxes for 'submitted' and 'marked', a date field for each checkbox, and notes and documents.
+The record contains the student name, class name, assessment task name, two checkboxes for 'submitted' and 'marked', a grade field fro grading, a date field for each checkbox, and notes and documents.
+
+The 'marked' date field can also have a tutor applied to it, to denote who marked the assessment.
 
 image::images/assessment/assessment_submissions_record.png[]
 
@@ -121,3 +123,8 @@ There are two types of grading:
 * *by Choice List* - Lets you choose from a set of defined options, which can also map to a score if you wish. E.G. The University grades type uses terms like High Distinction, Distinction, Credit, Pass and Fail, but all of these also map to scores as well. If both a score and choice type are set, then both will display in the assessment submission record.
 
 image::images/assessment/grading_types_assessment_sub.png[title='Grades shown in the assessment submissions section of a class.']
+
+[NOTE]
+====
+If an assessment has no grading type set, then the 'Marked' and 'Grade' columns will not appear in the assessment submission view.
+====

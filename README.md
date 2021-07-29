@@ -1,4 +1,6 @@
 # onCourseDocs
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fishgroup%2FonCourseDocs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fishgroup%2FonCourseDocs?ref=badge_shield)
+
 Documentation for all parts of the onCourse student management system
 
 This is the source code for the documentation which can be found here:
@@ -29,6 +31,9 @@ We recommend Intellij with the Asciidoc plugin installed to work on this documen
 ## License
 
 This work is licensed under a Creative Commons Attribution 4.0 International License.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fishgroup%2FonCourseDocs.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fishgroup%2FonCourseDocs?ref=badge_large)
 
 ## Proprietary parts
 

@@ -3,20 +3,25 @@
 
 == Important changes
 
+=== Accounts used for payment reversals
+
+Prior to this release, payment reversals would point towards the default asset account set in your onCourse financial preferences. From the release of 93 onwards, any new payment reversals done in the system will NOT point to the default asset account, but rather the same account within which the original payment was made.
+
+This change WILL NOT affect payment reversals which already exist and aren't banked. When you go to bank these payments, they will still automatically post to the default asset account set in your onCourse financial preferences.
+
 == Major features
 
 === Leads
 
-A new concept has been added to onCourse to enhance the CRM functionality. Leads represent a relationship between a contact (person or company) and zero or more products or courses. In this way you can track prospects and leads right from first contact or even just a mailing list through to conversion into a sale.
+A new concept has been added to onCourse to enhance the CRM functionality. Leads represent a relationship between a contact (person or company) and zero or more products or courses. In this way you can track prospects and leads right from first contact, or even a mailing list entry through to conversion into a sale.
 
+Contacts can also have multiple leads, making it useful to track numerous varying requests from your contacts at any one time. If you handle bulk or corporate training requests, this is how you can manage it, with ease, right within the onCourse software.
 
 === Quotes
 
-You can also now create quotes, which are just like invoices except you can edit them right until they are sent to the customer. If accepted, they can be really easily converted into an invoice.
+You can also now create quotes, which are just like invoices except you can edit them right until they are sent to the customer. If accepted, they can be really easily converted into an invoice, from which point they can no longer be edited or changed.
 
 Typically, you would attach quotes to a lead in order to track the progression of the sales process.
-
-
 
 == Minor features
 * Scripts now allow multi-line content in a message block `OD-16332`

@@ -16,8 +16,9 @@ $(document).ready(function() {
     </header>\
   ');
 
-  $('.book > #header').wrap('<div id="top-header" />');
+  // $('.book > #header').wrap('<div id="top-header" />');
   $('body #content').wrap('<div id="main-container" class="clearfix container" />');
+  $('body #main-container').wrap('<div class="documentation-wrapper" />');
 
   var toc = $('#header #toc');
   if (toc.length) {
@@ -26,6 +27,11 @@ $(document).ready(function() {
 
   $('#toc ul').addClass('nav');
   $('#toc ul li a').addClass('nav-link');
+
+  $('.sect1 h2').each(function(){
+    var me = $(this);
+    me.html(me.html().replace(/(^(?:\S+\s+\n?){1,2})/, '<span class="htext-highlighted">$1</span>'));
+  });
 
   $('body').scrollspy({ target: "#toc" });
 
@@ -40,7 +46,10 @@ $(document).ready(function() {
     var scrollTop = $(this).scrollTop();
 
     $('#toc .hasChildren').removeClass('toc-open');
-    $($('#toc .hasChildren .nav-link.active').parents('li.hasChildren:not(.toc-open)').find('.toc-expand')).trigger('click');
+    $($('#toc .hasChildren .nav-link.active').parents('li.hasChildren:not(.toc-open)').toggleClass('toc-open'));
+
+    $('#header #toc .nav-link').removeClass('current');
+    $('#header #toc .active').last().addClass('current');
 
     var mainContainer = $('#main-container');
     var sidebarToc = $('.sidebar-toc');
@@ -49,12 +58,27 @@ $(document).ready(function() {
 
       if (scrollTop > mainContainer_offsetTop) {
         $('body').addClass('affix-toc-sidebar');
+        $('#toc').addClass('nav-visible');
       } else {
         $('body').removeClass('affix-toc-sidebar');
+        $('#toc').removeClass('nav-visible');
       }
     } else {
       $('body').removeClass('affix-toc-sidebar');
     }
+
+    // display nav on mobile after 400 scroll from top
+    if (scrollTop > 500) {
+      $('#toc').addClass('nav-visible');
+    } else {
+      $('#toc').removeClass('nav-visible');
+    }
+
+  });
+
+  // click to expand mobile navigation
+  $('.sectlevel0').click(function() {
+    $(this).parent().toggleClass("nav-expanded");
   });
 
   $('head').append('<style type="text/css">.gsc-adBlock, .gsc-resultsHeader, .gcsc-branding {display: none !important;}</style>');

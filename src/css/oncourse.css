@@ -289,7 +289,7 @@ select {
 
 .subheader, .admonitionblock td.content > .title, .audioblock > .title, .exampleblock > .title, .imageblock > .title, .listingblock > .title, .literalblock > .title, .stemblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, table.tableblock > .title, .verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title {
     line-height: 1.45;
-    color: #7a2518;
+    color: #FF8A00;
     font-weight: 300;
     margin-top: 0;
     margin-bottom: .25em
@@ -347,7 +347,7 @@ h1 {
     margin: .67em 0;
     font-size: 3em;
     padding: 0.8em 0 0.4em;
-    color: #f2a143;
+    color: #f7941d;
     font-family: 'Port Lligat Slab', sans-serif;
 }
 
@@ -721,9 +721,15 @@ p a > code:hover {
 }
 
 #header h1 {
-    font-size: 3.5em;
+    font-size: 3.2em;
     font-family: 'Port Lligat Slab', sans-serif;
-    color: #f2a143;
+    color: #f7941d;
+    letter-spacing: -0.04em;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    font-size: 3.8em;
 }
 
 #header > h1:first-child + #toc {
@@ -748,6 +754,15 @@ p a > code:hover {
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
     font-size: 0.8em;
+}
+.details .author,
+.details #revdate {
+    line-height: 1.8em;
+}
+
+.details #revdate {
+    color: #37caad;
+    font-weight: bold;
 }
 
 #header .details span:first-child {
@@ -829,7 +844,8 @@ p a > code:hover {
 }
 
 #toc li {
-    line-height: 1.7;
+    line-height: 1.4;
+    margin-bottom: 8px;
 }
 
 #toc a {
@@ -848,8 +864,8 @@ p a > code:hover {
 
 #toc ul.sectlevel0 ul.sectlevel1 > li {
     position: relative;
-    border-bottom: 1px solid #ddd;
-    padding: 2px 20px 2px 0;
+    /*border-bottom: 1px solid #ddd;*/
+    padding: 0;
 }
 
 #toc ul.sectlevel0 ul.sectlevel2 {
@@ -881,7 +897,7 @@ p a > code:hover {
 
 #toc ul.sectlevel0 ul.sectlevel1 > li.hasChildren .toc-expand::after {
     content: "+";
-    color: #ccc;
+    color: #FF8A00;
     display: block;
 }
 
@@ -892,20 +908,25 @@ p a > code:hover {
 #toc .nav-link {
     position: relative;
     font-weight: 400;
+    font-size: 13px;
 }
 
 #toc .nav-link::before {
     content: "";
     position: absolute;
-    width: 2px;
-    height: 1px;
-    background: none;
-    top: 1px;
-    left: -4px;
+    width: 16px;
+    height: 12px;
+    background: transparent url('../../../../src/images/icon-arrow-right.svg') repeat 0 0;
+    background-size: contain;
+    opacity: 0;
+    top: 4px;
+    left: 0;
+    transition: all ease-out 0.2s;
 }
 
 #toc .nav-link:hover::before {
-    background: #FF8A00;
+    /*opacity: 1;*/
+    /*transition: all ease-out 0.2s;*/
 }
 
 #toc .nav-link.active {
@@ -913,8 +934,8 @@ p a > code:hover {
 }
 
 #toc .nav-link.active::before {
-    background: #FF8A00;
-    height: 1.2em;
+    opacity: 1;
+    transition: all ease-out 0.2s;
 }
 
 @media screen and (min-width: 768px) {
@@ -924,14 +945,14 @@ p a > code:hover {
 
     #toc.toc2 {
         margin-top: 0 !important;
-        background: #ffffff;
+        /*background: #ffffff;*/
         position: relative;
         top: 0;
-        border-right: 1px solid #e7e7e9;
+        /*border-right: 1px solid #e7e7e9;*/
         border-top-width: 0 !important;
         border-bottom-width: 0 !important;
         z-index: 1000;
-        padding: 1.25em 1em 1.25em 0;
+        /*padding: 1.25em 1em 1.25em 0;*/
         height: 100%;
         display: block;
         overflow: hidden;
@@ -973,7 +994,8 @@ p a > code:hover {
     }
 
     #toc.toc2 ul ul {
-        padding-left: 1.25em
+        padding-left: 22px;
+        margin-top: 7px;
     }
 }
 
@@ -1018,7 +1040,7 @@ p a > code:hover {
     }
 
     .sect1 {
-        padding-bottom: 1.25em;
+        padding-bottom: 3.5em;
         padding-top: 4em;
     }
 }
@@ -1184,7 +1206,7 @@ table.tableblock #preamble > .sectionbody > [class="paragraph"]:first-of-type p 
     border-radius: 4px;
     word-wrap: break-word;
     overflow-x: auto;
-    padding: 1em;
+    padding: 30px;
     font-size: .8125em;
     margin-top: 1em;
     margin-bottom: 2em;
@@ -2255,11 +2277,13 @@ blockquote, q {
 
 a {
     text-decoration: none !important;
-    color: #8A1C16;
+    color: #37caad;
+    transition: all ease-out 0.2s;
 }
 
 a:hover {
     color: #FF8A00;
+    transition: all ease-out 0.2s;
 }
 
 /* Header */
@@ -2323,7 +2347,7 @@ body > .book, body > .part, body > .book {
 }
 
 .list-of-tables p {
-    color: #f2a143;
+    color: #f7941d;
     font-size: 1.5em;
     margin-bottom: 0.2em;
 }
@@ -2481,7 +2505,7 @@ div.navfooter > table > tbody > tr > td[align=right] {
 }
 
 .book > .titlepage h2.title {
-    color: #f2a143;
+    color: #f7941d;
     font-family: 'Port Lligat Slab', sans-serif;
     font-size: 2.5em;
     margin-bottom: 20px;
@@ -2496,10 +2520,10 @@ div.navfooter > table > tbody > tr > td[align=right] {
 /* Main TOC */
 div.list-of-examples > p, div.toc > p {
     font-family: 'Port Lligat Slab', sans-serif;
-    color: #f2a143;
+    color: #f7941d;
     margin: 20px 0 10px;
     padding-bottom: 2px;
-    border-bottom: 1px solid #f2a143;
+    border-bottom: 1px solid #f7941d;
     line-height: 1;
 }
 
@@ -2510,20 +2534,20 @@ div.list-of-examples dl {
 /* Main content pages */
 .book h2, .book h3, .book h4, .book h5, .book h6 {
     margin-bottom: 0.7em;
-    font-family: 'Port Lligat Slab', sans-serif;
-    color: #f2a143;
+    color: #000;
     word-break: break-word;
 }
 
 .book h2 {
+    font-family: 'Port Lligat Slab', sans-serif;
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .book h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding-top: 40px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .book h4, .book h5 {
@@ -2556,7 +2580,7 @@ body.book h1.title, div.book h1.title {
 }
 
 .titlepage h2.title {
-    color: #f2a143;
+    color: #f7941d;
     font-family: 'Port Lligat Slab', sans-serif;
     line-height: 1;
     margin-bottom: 10px;
@@ -2700,13 +2724,13 @@ pre.programlisting {
 }
 
 .book .toc p, .part .toc p {
-    color: #f2a143;
+    color: #f7941d;
     font-family: 'Port Lligat Slab', sans-serif;
     font-size: 1.8em;
     line-height: 1;
     margin: 20px 0 10px;
     padding-bottom: 2px;
-    border-bottom: 1px solid #f2a143;
+    border-bottom: 1px solid #f7941d;
 }
 
 .book .toc p b {
@@ -2714,9 +2738,10 @@ pre.programlisting {
 }
 
 .book #content h1.sect0 {
-    border-bottom: 1px solid #f0f0f0;
+    /*border-bottom: 1px solid #f0f0f0;*/
     padding: 0 0 0.2em;
     margin-bottom: 0.2em;
+    letter-spacing: -0.035em;
 }
 
 .book #content h1.sect0 + .sect1 {
@@ -2741,8 +2766,10 @@ pre.programlisting {
 
 /* Images */
 img {
+    border: 1px solid #e5e5e5;
     margin-bottom: 10px;
-    box-shadow: 3px 3px 8px #aaa;
+    margin-top: 20px;
+    /*box-shadow: 3px 3px 8px #aaa;*/
     max-width: 100%;
 }
 
@@ -3002,6 +3029,8 @@ img.lazy {
 
 .license img {
     box-shadow: none;
+    margin-top: 0;
+    border: 0;
 }
 
 
@@ -3157,4 +3186,197 @@ img.lazy {
     -ms-transform-origin: right center;
     -o-transform-origin: right center;
     transform-origin: right center;
+}
+
+
+
+
+/* New Brand Styles */
+
+#header {
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+
+body.page-loaded #main-container .sidebar-toc {
+    width: 340px;
+    padding-right: 40px;
+    padding-top: 40px;
+}
+
+body.affix-toc-sidebar #toc.toc2 {
+    width: 340px;
+    padding-right: 40px;
+}
+
+.documentation-wrapper {
+    overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+    .documentation-wrapper {
+        background: #fcf9f0 url('../../../../src/images/icon-dots.png') repeat 0 0;
+        background-size: 18px;
+        overflow: hidden;
+    }
+
+    body.page-loaded.toc2 #main-container #content {
+        width: calc(100% - 340px);
+        background-color: #fff;
+        margin: 0;
+        padding: 60px 70px 0;
+    }
+
+    #toc.toc2 > ul {
+        background-color: #fcf9f0;
+        padding: 2px 20px 20px;
+    }
+}
+
+#content::after {
+    content: "";
+    position: absolute;
+    width: 3000px;
+    width: 3000px;
+    left: 100%;
+    background: #fff url('../../../../src/images/icon-dots.png') repeat 0 0;
+    background-size: 18px;
+    height: 100%;
+    display: block;
+    top: 0;
+}
+
+.htext-highlighted {
+    position: relative;
+    z-index: 1;
+}
+
+.htext-highlighted::before {
+    content: "";
+    position: absolute;
+    background-color: #FACA66;
+    z-index: -1;
+    top: 18px;
+    left: -4px;
+    height: 56%;
+    width: calc(100% + 1px);
+}
+
+#toc .sectlevel0 .nav-link.active {
+    color: #000;
+}
+
+#toc .sectlevel0 > li .nav-link.active::before {
+    display: none;
+}
+
+#toc .sectlevel1 > li .nav-link.active::before {
+    display: block;
+}
+
+#toc .sectlevel1 .nav-link.active {
+    color: #FF8A00;
+    padding-left: 22px;
+}
+
+#toc .nav-link:hover {
+    color: #000;
+}
+
+#content pre.CodeRay,
+.literalblock pre, .listingblock > .content > pre:not(.highlight), .listingblock > .content > pre[class="highlight"], .listingblock > .content > pre[class^="highlight "] {
+    background: #fdfcf7;
+}
+
+li.hasChildren {
+    padding-right: 20px !important;
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        background: #fcf9f0 url('../../../../src/images/icon-dots.png') repeat 0 0;
+        background-size: 18px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 30px 20px 40px;
+    }
+
+    .book #header #toc {
+        border-bottom: none;
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #fcf9f0 url('../../../../src/images/icon-dots.png') repeat 0 0;
+        background-size: 18px;
+        padding: 0 20px;
+        left: 0;
+        height: 60px;
+        overflow: hidden;
+        opacity: 0;
+        transition: all ease-out 0.2s;
+        z-index: 3;
+    }
+
+    .sectlevel0 {
+        cursor: pointer;
+    }
+
+    .book #header #toc.nav-visible {
+        opacity: 1;
+        transition: all ease-out 0.2s;
+    }
+
+    .book #header #toc.nav-expanded {
+        height: 100%;
+        transition: all ease-out 0.2s;
+        overflow-y: scroll;
+    }
+
+    .book #header #toctitle {
+        display: none;
+    }
+
+    .book #header #toc.toc2 > ul {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    #toc:not(.nav-expanded) ul.sectlevel0 > li {
+        margin-top: 0;
+    }
+
+    #toc:not(.nav-expanded) li {;
+        margin-bottom: 0;
+    }
+
+    #toc:not(.nav-expanded) li a {
+        display: none;
+        line-height: 60px;
+    }
+
+    #toc:not(.nav-expanded) li a.current {
+        display: block !important;
+    }
+
+    #toc:not(.nav-expanded) ul.sectlevel0 ul.sectlevel1 {
+        margin: 0;
+    }
+
+    #toc:not(.nav-expanded) .sectlevel1 .nav-link.active {
+        color: #000;
+        padding-left: 0;
+    }
+
+    #toc:not(.nav-expanded) .sectlevel1 > li .nav-link.active::before {
+        display: none;
+    }
+
+    #toc:not(.nav-expanded) ul {
+        margin-left: 0;
+    }
+
+    #toc:not(.nav-expanded) ul.sectlevel0 ul.sectlevel1 > li.hasChildren .toc-expand {
+        top: 16px;
+    }
 }

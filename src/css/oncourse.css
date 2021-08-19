@@ -1709,7 +1709,8 @@ td.hdlist1 {
 }
 
 .imageblock > .title {
-    margin-bottom: 0
+    font-size: 14px;
+    margin-bottom: 0;
 }
 
 .imageblock.thumb, .imageblock.th {
@@ -2778,10 +2779,42 @@ pre.programlisting {
 /* Images */
 img {
     border: 1px solid #e5e5e5;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     margin-top: 20px;
     /*box-shadow: 3px 3px 8px #aaa;*/
     max-width: 100%;
+}
+
+.imageblock {
+    background: #fff;
+    border: 2px solid #dfdfdf;
+    border-radius: 14px;
+    display: inline-block;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.content img {
+    position: relative;
+    border: 1px solid #dfdfdf;
+    margin-bottom: 14px
+    margin-top: 0;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .imageblock {
+        padding: 22px;
+    }
+
+    .content img {
+        position: relative;
+        border: 1px solid #dfdfdf;
+        margin-bottom: 18px;
+        margin-top: 0;
+        border-radius: 5px;
+    }
 }
 
 div.caption {
@@ -3036,6 +3069,11 @@ img.lazy {
     overflow: auto;
     margin-bottom: 1em;
     font-size: 0.8em;
+}
+
+.license .imageblock {
+    border: none;
+    padding: 0;
 }
 
 .license img {
@@ -3303,7 +3341,7 @@ li.hasChildren {
     padding-right: 20px !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     #header {
         background: #fcf9f0 url('../../../../src/images/icon-dots.png') repeat 0 0;
         background-size: 18px;

@@ -38,6 +38,7 @@ jobs:
 
     - name: Store release
       uses: marvinpinto/action-automatic-releases@latest
+      if: github.ref == 'refs/heads/main'
       with:
         automatic_release_tag: "latest"
         title: "snapshot"

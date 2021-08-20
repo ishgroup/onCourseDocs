@@ -162,12 +162,11 @@ body {
     tab-size: 4;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-
     color: #444;
     background: #fff;
-    font-size: 17px;
+    font-size: 16px;
     font-family: 'Merriweather', serif;
-    line-height: 1.9em;
+    line-height: 1.8em;
     position: relative;
 }
 
@@ -208,7 +207,7 @@ body.affix-toc-sidebar #toc.toc2 {
 }
 
 .container, #header {
-    max-width: 1280px;
+    max-width: 1440px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -318,8 +317,8 @@ a img {
 p {
     font-family: inherit;
     font-size: 1em;
-    line-height: 1.8;
-    margin-bottom: 1.25em;
+    line-height: 1.7;
+    margin-bottom: 15px;
     text-rendering: optimizeLegibility
 }
 
@@ -694,7 +693,7 @@ p a > code:hover {
 #header, #content, #footnotes, #footer {
     width: 100%;
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 1400px;
     *zoom: 1;
     position: relative;
     padding-left: .9375em;
@@ -1469,7 +1468,9 @@ td.tableblock > .content > :last-child.sidebarblock {
 }
 
 table.tableblock, th.tableblock, td.tableblock {
-    border: 0 solid #dedede
+    border: 0 solid #dedede;
+    font-size: 13px;
+    margin-bottom: 25px;
 }
 
 table.grid-all > thead > tr > .tableblock, table.grid-all > tbody > tr > .tableblock {
@@ -1708,7 +1709,8 @@ td.hdlist1 {
 }
 
 .imageblock > .title {
-    margin-bottom: 0
+    font-size: 14px;
+    margin-bottom: 0;
 }
 
 .imageblock.thumb, .imageblock.th {
@@ -2046,7 +2048,8 @@ p {
 }
 
 .sidebarblock p, .sidebarblock dt, .sidebarblock td.content, p.tableblock {
-    font-size: 1em
+    font-size: 13px;
+    line-height: 1.4em;
 }
 
 .exampleblock > .content {
@@ -2278,12 +2281,21 @@ blockquote, q {
 a {
     text-decoration: none !important;
     color: #37caad;
+    font-weight: bold;
     transition: all ease-out 0.2s;
 }
 
 a:hover {
     color: #FF8A00;
     transition: all ease-out 0.2s;
+}
+
+#content a {
+    text-decoration: underline !important;
+}
+
+#content a:hover {
+    text-decoration: none !important;
 }
 
 /* Header */
@@ -2560,7 +2572,7 @@ div.list-of-examples dl {
 }
 
 .book p {
-    margin-bottom: 0.6em;
+    margin-bottom: 15px;
     word-break: break-word;
 }
 
@@ -2767,10 +2779,42 @@ pre.programlisting {
 /* Images */
 img {
     border: 1px solid #e5e5e5;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     margin-top: 20px;
     /*box-shadow: 3px 3px 8px #aaa;*/
     max-width: 100%;
+}
+
+.imageblock {
+    background: #fff;
+    border: 2px solid #dfdfdf;
+    border-radius: 14px;
+    display: inline-block;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.content img {
+    position: relative;
+    border: 1px solid #dfdfdf;
+    margin-bottom: 14px
+    margin-top: 0;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .imageblock {
+        padding: 22px;
+    }
+
+    .content img {
+        position: relative;
+        border: 1px solid #dfdfdf;
+        margin-bottom: 18px;
+        margin-top: 0;
+        border-radius: 5px;
+    }
 }
 
 div.caption {
@@ -3025,6 +3069,11 @@ img.lazy {
     overflow: auto;
     margin-bottom: 1em;
     font-size: 0.8em;
+}
+
+.license .imageblock {
+    border: none;
+    padding: 0;
 }
 
 .license img {
@@ -3292,7 +3341,7 @@ li.hasChildren {
     padding-right: 20px !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     #header {
         background: #fcf9f0 url('../../../../src/images/icon-dots.png') repeat 0 0;
         background-size: 18px;

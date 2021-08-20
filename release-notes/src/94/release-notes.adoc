@@ -5,9 +5,11 @@
 
 === Accounts used for payment reversals
 
-Prior to this release, payment reversals would point towards the default asset account set in your onCourse financial preferences. From the release of 93 onwards, any new payment reversals done in the system will NOT point to the default asset account, but rather the same account within which the original payment was made.
+Prior to onCourse version 94, when you reversed a payment, that reversal was attached to the asset account set in your onCourse financial preferences ( https://acme.cloud.oncourse.cc/preferences/financial ). So if you had a payment into bank account A, but your preferences set to bank account B, then the reversal would be linked to bank account B.
 
-This change WILL NOT affect payment reversals which already exist and aren't banked. When you go to bank these payments, they will still automatically post to the default asset account set in your onCourse financial preferences.
+From this release, any new payment reversals will be linked to the bank account from the original payment. The preference is no longer used.
+
+This change will not affect payment reversals which have already been created even if they aren't banked. When you go to bank these payments, they will still automatically post to the preference asset account which existed at the time you created that reversal.
 
 == Major features
 

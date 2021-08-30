@@ -8,11 +8,13 @@ Tagging in onCourse is a powerful tool that allows you to add additional hierarc
 
 Tag groups applied to other record types can be used for internal navigation and grouping, but will not affect the website.
 
-Tags can be created and edited by navigating to the Tags window. This will bring up a list of Tag groups. By default, onCourse will have a special tag group called Subjects that exists in your new database, whose name cannot be changed.
+Tags can be created and edited by navigating to the Tags window. This will bring up a list of Tag groups. By default, onCourse will have a special tag group called Subjects that exists in your new database, whose name cannot be changed. Tags are assigned colours that display alongside each tag throughout onCourse, to help identify them quickly.
 
 Tags names can use almost any characters except the following: @ # _ , or "
 
 However you can use any of the following: ! % ( ) = & ^ + [ ] \{ } / . < > : or ;
+
+image::images/adjustment_of_tag_weighting.png[title='Adjusting the tag weighting via tag group edit view']
 
 [[tagging-subjectsTag]]
 ==== The Subjects tag group
@@ -33,14 +35,13 @@ You can also decide if records can have more than one tag from the tag group. Gi
 
 You can add any number of tags by clicking on the + icon next to the `Tags` header. To add a subcategory tag, use the same + button to create the tag, then drag and drop it by clicking and holding on the six dots icon (the left side of the tag record) and then dragging it into the sub-category you want it placed in.
 
-By default, tag groups will be sorted by alphabetical order, and tags in theorder that they are created. You can also apply your own sort order to the tags by dragging and dropping it on the window in the order you want it displayed.
+By default, tag groups will be sorted by alphabetical order, and tags in the order that they are created. You can also apply your own sort order to the tags by dragging and dropping it on the window in the order you want it displayed.
 
 This tag display order will also be mimicked on your onCourse website for tags under the "Subjects" tag group.
 
-image::images/adjustment_of_tag_weighting.png[title='Adjusting the tag weighting via tag group edit view']
 
 [[tagging-tagRelationships]]
-===== Understanding tag hierarchies and relationships
+==== Understanding tag hierarchies and relationships
 
 When setting up your subject tags, it is advisable to only apply these subject tags to Courses and not to classes or other types of records. The reason for this relates back to the hierarchical nature of the database the information that is connected back to a course.
 
@@ -48,10 +49,20 @@ For example, a Course within the database will have classes, and within a class 
 
 If you apply the tag directly to contact records as well as Courses, the meaning of the filter will change to also include the meaning above "AND show me all the contacts tagged with" which can lead to a returned results list that doesn't make much sense to the user.
 
-In the following image you can see the class window where the information has been filtered by the "Business" subject tag.
-Even though the classes listed are not tagged with the "Business" subject tag, but the classes all relate to a course that has the '"Business" subject tag, they will display automatically.
+In the following image you can see the class window where the information has been filtered by the "Zoom", "Online" and "Remote" course tags. Even though the classes listed are not all tagged with the one of these tags, they relate to a course that has one of these tags, hence they display.
 
-image::images/filtering_class_by_course_subject_tag.png[title='Filtering Classes by a Course subject tag']
+image::images/tag_group_filters_duplicate.png[title='A Courses filter called "Online" being viewed in Classes. Notice some records do not have a dot? they still display here because the parent course has one of the selected tags applied.]
+
+[[tagging-colours]]
+==== Tag Colours
+
+Tags will have a colour applied to them when created, and this coloured tag will be visible in both list views, tag filters and when editing records in order to help identify each tag and its associated data quickly.
+
+image::images/tag_colours_list_view.png[title='Tag colours shown in the tag filters and the "selected" column in the Courses list view']
+
+Tag colours in the list view appear in the 'record selected' column. There is only space for three colours to show, and they are shown in the order they sit in the tag filter column, so you can control which tags display here by re-ordering those tag filters.
+
+Re-order the tag filters by clicking and dragging the group heading and moving it up or down the column, then dropping it in the position you want.
 
 [[tagging-tagWebsite]]
 === Tags on your onCourse website
@@ -148,11 +159,9 @@ image::images/tag_colours_edit.png[title='A contact filter using the subjects ta
 
 All tags groups you create will be available as filters within the relevant onCourse list views. The tag groups shown are based on the record type the tag is related to, and then the records related to that record type.
 
-For example, a tag group applied to Courses will also be available as a filter in the related windows of classes, contacts and enrolments.
+For example, a tag group applied to Courses will also be available as a filter in the related windows of classes, contacts and enrolments. Additionally, if a tag is made available for more than one entity and those entites share filters, the filter will appear duplicated, but in fact they are for each separate entity. E.G. if you have a tag group called 'Online' that appears on both Classes and Courses, then when viewed from Classes that tag group will appear once as 'Online' and once again as 'Courses (Online)'.
 
 In the course window, checking the filter means 'show me course records tagged with this tag'. In the class window, checking the same subject filter means 'show me the classes for the course tagged with this tag'. In the student window it displays as Subjects (enrolled), and means 'show me the students enrolled in classes linked to courses tagged with this tag'.
-
-image::images/tag_subject_enrolled.png[title='A contact filter using the subjects tag to show students enrolled into classes joined to courses tagged with the subject 'Creative Arts'']
 
 The tags that display within the left-hand pane of a given window, provide you with a number of different options in terms of searching and sorting of information. Tag groups and components of tag groups can be expanded and collapsed to create your preferred window layout. You can utilise the tags within the window in a number of ways:
 

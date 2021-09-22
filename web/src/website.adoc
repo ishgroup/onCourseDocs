@@ -54,6 +54,7 @@ Click Save.
 The image will now appear where the blank head image used to be.
 . Provided there is text in the Resume field on their tutor record, the image will display on their tutor profile.
 
+[[images_and_attachments-courseThumb]]
 === Adding thumbnail images
 
 You have the ability to add thumbnail images to all your courses.
@@ -82,6 +83,7 @@ default -> CourseItem.tml.
 
 You would then store the attached image you want to the course and making sure the pixel width and height is the same as the code in the CourseItem.tml and name them 'coursecode_1' e.g. ActingBeg_1.
 
+[[images_and_attachments-courseHero]]
 === Editing Course Hero Images in onCourse
 
 You can use images you have uploaded into onCourse as hero images for a specific course.
@@ -108,6 +110,7 @@ Ensure that you set the name of the uploaded hero image in onCourse to x_hero, w
 
 You can edit the height and width values, but be aware that this may result in inconsistent results if the images you upload are all different szes to begin with.
 
+[[images_and_attachments-tagging]]
 === Tagging images
 
 You have the ability to display a different hero image on each course detail page.
@@ -139,6 +142,29 @@ If the image isn't uploaded to onCourse yet, click Browse and search your local 
 Remember to make sure the pixel width and height is the same as the code in the CourseItem.tml then tag them to the tag 'hero' in the tag group 'image'.
 
 image::images/tagged_image_course.png[title='Added the image 'dart' to the course 'Accounting'']
+
+[[images_and_attachments-editorPages]]
+=== Adding images to pages in the Editor
+
+There are two methods of adding an image to a page you've created in the editor.
+
+==== via WebDAV
+
+The first involves uploading the images to your website <<overview-editing,webdav via a program like Cyberduck>>. Click the link to learn how to set that up if you haven't already. Once you have access to you webdav files, upload your images into the /s/img folder. You can realistically use any folder you like, but for consistency we suggest using this one.
+
+Once your images are uploaded into the desired folder, you can reference them on any page or content block using the following syntax:
+
+    <img src="/s/img/imagename.jpg" alt="">
+
+This calls the images directly from your website files and can be a more efficient method than referencing from within onCourse. You can also add image attributes like 'alt', 'height', 'width' etc.
+
+==== via onCourse
+
+The second method involves uploading the images directly into onCourse, setting the permissions for the images with 'shareable link' turned on, which enables the image to appear on the website. Then, you can reference the image in an imf tag directly using the shareable link generated, like below:
+
+    <img src="https://website.com.au/longimageurlstring" alt="">
+
+This then calls the image from the URL. You can also add image attributes like 'alt', 'height', 'width' etc.
 
 
 [[onlineCollege]]

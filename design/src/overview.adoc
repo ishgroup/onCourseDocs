@@ -454,9 +454,7 @@ Example:
 ----
 var checkout_config = {
   "checkoutPath": "/checkout",
-  "paymentSuccessURL": "/products",
   "termsAndConditions": "/termsAndConditions",
-  "featureEnrolmentDisclosure": "/policies/enrolment",
   "guardianRequiredAge": 16
 }
 ----
@@ -482,28 +480,7 @@ If you don't provide a value they will still have to check the option but there 
 
 image::images/TandC_none.png[]
 
-featureEnrolmentDisclosure::
-If you provide a URL here, a second sentence is added below the terms and conditions checkbox with the words "I have read the Student Information or have had it explained to me, and I agree to accept these conditions." The words "Student Information" is linked to whatever destination you enter here.
-
-image::images/TandC_both.png[]
-
 guardianRequiredAge::
 Students under this age will be allowed to enrol, however the checkout process will prompt the user to enter both the student and a parent/guardian over this age.
+
 In order for this to work, you should ensure you have set up your data collection rules to collect the date of birth as a mandatory field.
-
-canCreateContact::
-If a student tries to enrol in a course, or sign up to a mailing or waiting list, the checkout web application can create a new contact record for this student . You can specify whether or not a new contact record can be created if a student does not have a contact in your onCourse database.
-You can set different rules for enrolments, waiting lists and mailing lists.
- +
-If one of the *canCreateContact* parameters are set to FALSE, only an existing contact can be used for a transaction of this type, no new contact will be created.
- +
-
-[source,javascript]
-----
-{
-    true,
-    waitingList: true,
-    mailingList: true
- },
-
-----

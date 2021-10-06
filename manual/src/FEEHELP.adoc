@@ -56,13 +56,26 @@ image::images/vet_fee_help_contact.png[title='VET Student Loan fields in a Conta
 [[FEEHELP-loanRequests]]
 === Student VET Student Loan requests
 
-Every enrolment record has a VET Student Loans section that is used to record the VET Student Loan request, or report that the student doesn't wish to apply for a loan. This section is hidden by default. You can show these fields by flicking on the switch next to the VET Student Loans heading, showin in the screenshot below.
+Every enrolment record has a VET Student Loans section that is used to record the VET Student Loan request, or report that the student doesn't wish to apply for a loan. This section is hidden by default unless the student is enrolled in a VET Student Loans eligible class.
 
-The fee charged field will show the enrolment fee the student was charged. This data is tied to the invoices generated is not editable in their enrolment record.
+First you must set a reporting status on the enrolment. The default setting is 'eligible' but you can choose from one of four. Each setting does something different:
 
-In the FEE HELP requested field, you can indicate that the student doesn't wish to apply for a loan by leaving the default value as $0.00 or enter an amount up to the full class fee.
+* *Eligible* - the default selection. It hides the VSL fields but adds the enrolment to the TCSI reporting.
+* *Not eligible* - hides the VSL fields and the enrolment is NOT added to the TCSI reporting.
+* *Ongoing* - displays the VSL fields, allows the VSL fields to be edited and adds the enrolment to TCSI reporting.
+* *Finalized* - displays the fields but locks them for editing. This will also stop the enrolment being reported to TCSI.
 
-The loan fee will be calculated based on the value you have set in the Fee Subsidy drop down box. Non-state government subsidised courses will incur a 20% loan fee that you'll see added to the Total Loan amount. Subsidised courses incur no loan fee.
+image::images/vsl_reporting_status.png[title='VET Student Loan fields shown after setting the reporting status as "Ongoing"']
+
+In the FEE HELP requested field you can indicate that the student doesn't wish to apply for a loan by leaving the default value as $0.00 or enter an amount up to the full class fee.
+
+The loan fee will be calculated based on the date of the enrolment and the value you have set in Fee Subsidy (read below). Non-state government subsidised courses will incur a 20% loan fee that you'll see added to the Total Loan amount. Subsidised courses incur no loan fee.
+
+The Fee Subsidy field is hidden from the UI but is drawn automatically from other data:
+
+If 'fee help requested' is $0 then we export one of the 400 codes. Which 400 code we export depends on the flavour/state associated with the funding contract set on the enrolment. E.G. if the fee help requested field is $0 and the funding contract is STSOnline, which uses the STSOnline flavour, then we export fee subsidy as 404.
+
+If 'fee help requested' is more than $0 then we export one of the 500 codes, and again also use the flavour/state associated with funding contract on the enrolment to determine which one we use. Using the same example above, if the same enrolment had a fee help requested of more than $0 then the fee subsidy field would export as a 504.
 
 You can also override the Type of Attendance information at the enrolment level. By default, the enrolment will inherit the attendance type of the class, but you can change it here if you have students attending the same class, but with different attendance types.
 

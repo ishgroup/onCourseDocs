@@ -168,13 +168,13 @@ image::images/SurveyGizmo_Survey_ID.png[title='Where to find the Alchemer Survey
 
 Cloud Assess is an online service for managing the assessment process. It can be used for VET and non-VET enrolments, and can be used by tutors to help manage classroom based assessments as well as online assessments.
 
-When you create an account with Cloud Assess ask for the different user names and keys shown in the image. Then enable the script "cloudassess course enrolment create" in order to automatically push enrolments in onCourse into Cloud Assess. This script assumes that you'll create a course in Cloud Assess with the same course code as the course in onCourse. If there is no matching course in Cloud Assess then the script will do nothing.
-Of course, you can modify the script to suit your own specific needs. Remember that the name of the integration here must match the name given within the script.
+When you create an account with Cloud Assess ask for your specific username and api-key, as well as your Organisation ID. You'll need them when you go to activate your integration.
+
+Next you'll need to create your integration. In the Automation window, open the Integrations section, select the Cloud Assess integration and enter the details you were given from Cloud Assess mentioned above. Also remember to name the integration in the name field at the top of the window, then hit Save.
 
 image::images/cloudaccess_prefs.png[title='Cloud Access integration preferences']
 
-Once these preferences have been defined you will need to enable the Cloud Access script to automate the process.
-This script can be found by going to Automation, double clicking on 'cloudassess course enrolment create' then click on the 'Enabled' check box and save.
+Once the integration is saved, you will need to enable the Cloud Access script to automate the process. This script can be found by going to Automation > Scripts, clicking on 'cloudassess course enrolment create', clicking the 'Enabled' switch so it's turned on then hitting save.
 
 image::images/cloudaccess_script.png[title='Cloud Access script']
 

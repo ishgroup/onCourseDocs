@@ -32,11 +32,9 @@ Now set up your database.
 [[install]]
 == Installing onCourse on your server
 
-In order to download and install the standalone application:
+https://www.ish.com.au/download[Download onCourse Server]. There is one application bundle which will work on OSX, Windows, Linux and Unix platforms. Unzip it to any suitable folder.
 
-* Go to https://www.ish.com.au/download
-* Download onCourse Server. There is one application bundle which will work on OSX, Windows, Linux and Unix platforms. Unzip it to any suitable folder.
-* onCourse is happy in a virtualised environment such as VMWare, Xen, or AWS EC2. Ensure that you have sufficient RAM and CPU allocated. onCourse Server only writes to disk for log files, so memory and CPU are more important than disk performance. Allocate at least 400Mb of RAM, but at least 1Gb is better. onCourse will take all the memory you give it to cache data and run faster, up to a point.
+onCourse is happy in a virtualised environment such as VMWare, Xen, or AWS EC2. Ensure that you have sufficient RAM and CPU allocated. onCourse Server only writes to disk for log files, so memory and CPU are more important than disk performance. Allocate at least 400Mb of RAM, but at least 1Gb is better. onCourse will take all the memory you give it to cache data and run faster, up to a point.
 
 
 [[install-oncourseyml]]
@@ -78,7 +76,7 @@ The license section allows you to limit concurrent users and disable some functi
 * starttls
 * unsafe
 
-Use 'unsafe' only if you are sure you want to send unencrypted mail across your network or the internet. That's usually a bad thing. If you want to use gmail to send outbound mail, you'll need to provide a valid username and password here.
+Use 'unsafe' only if you are sure you want to send unencrypted mail across your network or the internet. That's usually a bad thing. If you want to use gmail to send outbound mail, you'll need to provide a valid username and password here, and also https://myaccount.google.com/lesssecureapps[relax security settings here]. Otherwise you can use your ISP's mail server, your office server or an MTA like exim you install locally.
 
 === Invite new users
 

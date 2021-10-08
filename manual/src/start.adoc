@@ -3,11 +3,31 @@
 
 If you install onCourse yourself, rather than using the managed service from ish, you'll need to configure the environment into which you install onCourse. You will need:
 
-* A unix, linux, OSX or Windows server
-* A database.
-* An outbound mail server offering SMTP over TLS
-* Java 11
+* A unix, linux, OSX or Windows operating system
+* A database. No database specific features are used, but onCourse is regularly tested with MariaDB, MySQL, and Amazon Aurora RDS. Others like postgresql or SQL Server might also work, but aren't regularly tested.
+* An outbound mail server (smtp)
+* Java 11 or higher
 
+=== Installing dependencies
+
+On MacOS, use homebrew to install many of the requirements.
+
+1. https://brew.sh/[Install homebrew.]
+1. Install MariaDB 10.4. `brew install mariadb@10.4`
+1. Install Java. ` brew tap homebrew/cask-versions; brew install temurin11`
+
+Now set up your database.
+
+1. `brew services start mariadb` to start the server
+1. `mysql_secure_installation` and configure the root account.
+1. `mysql -uroot -p` to log in to the SQL console and execute some commands to create a user. Use a proper secure password instead of 'password123'.
+
+    CREATE USER 'onCourse' IDENTIFIED BY 'password123';
+    GRANT ALL PRIVILEGES ON * . * TO 'onCourse';
+    FLUSH PRIVILEGES;
+
+    CREATE DATABASE onCourse;
+    exit;
 
 [[install]]
 == Installing onCourse on your server
@@ -15,15 +35,14 @@ If you install onCourse yourself, rather than using the managed service from ish
 In order to download and install the standalone application:
 
 * Go to https://www.ish.com.au/download
-* Download onCourse Server. There is one application bundle which will work on OSX, Windows, Linux and Unix platforms. Unzip it to any suitable folder on your application server.
-* onCourse is happy in a virtualised environment such as VMWare Xen, or AWS EC2. Ensure that you have sufficient RAM and CPU allocated. onCourse Server only writes to disk for log files so memory and CPU are more important than disk performance. Allocate at least 400Mb of RAM, but more is better.
-* Install and set up MariaDB 10.4 or higher on your system. Consult their docs to see how to do that. MySQL, Amazon RDS, MS-SQL and Postgresql should also work, but we only test MariaDB for every release. Install your database server, create a database and a user with full access rights to that database, including the ability to create schema.
-* Make sure you have Java 11 or newer installed on your onCourse Server operating system. We typically use the AdoptOpenJDK distribution here, but any distribution should work OK.
+* Download onCourse Server. There is one application bundle which will work on OSX, Windows, Linux and Unix platforms. Unzip it to any suitable folder.
+* onCourse is happy in a virtualised environment such as VMWare, Xen, or AWS EC2. Ensure that you have sufficient RAM and CPU allocated. onCourse Server only writes to disk for log files, so memory and CPU are more important than disk performance. Allocate at least 400Mb of RAM, but at least 1Gb is better. onCourse will take all the memory you give it to cache data and run faster, up to a point.
+
 
 [[install-oncourseyml]]
 === onCourse.yml
 
-By default onCourse.yml looks like this:
+The bundled onCourse.yml looks like this:
 
 [source,yaml]
 ----
@@ -33,50 +52,43 @@ http:
     path: /
 
 db:
-    uri: 'jdbc:mariadb://127.0.0.1/onCourse?user=onCourse&password=password'
+    uri: 'jdbc:mariadb://127.0.0.1/onCourse?user=onCourse&password=password123'
 
 license:
     max_concurrent_users: 99
-
-document:
-  accessKeyId: GFTR4GJEUYU73HVDJQ
-  accessSecretKey: fgf5rdhfgfgjhtfhF/Hf35fghdfFGgflQZ
-  bucket: sttrianians
-  region: ap-southeast-2
-  limit: 100G
+    custom_scripts: True
+    access_control: True
 
 smtp:
-  email_batch: 10000
-  host: mail.example.com
-  port: 465
-  mode: tls
-  username: relay
-  password: fg%4ghsgdfjhsDG3
+    email_batch: 100000
+    host: smtp.gmail.com
+    port: 465
+    mode: tls
+    username: your_email@gmail.com
+    password: your_email_password
 ----
 
-At a minimum, you'll want to set the ip address to a reachable address on your server. Perhaps you'll have onCourse behind a firewall or load balancer or exposed directly to the internet on a public IP address. That's up to you. In order to run onCourse on a port lower than 1024 you will typically need to run it as root.
+At a minimum, you'll want to set the ip address to a reachable address on your server. Perhaps you'll have onCourse behind a firewall or load balancer or exposed directly to the internet on a public IP address. That's up to you. In order to run onCourse on a port lower than 1024 you will typically need to run it as root. Remember that onCourse includes functionality to write scripts which can then access the entire system as the user the server is running as, so where possible run onCourse as a non-privileged user or run it in a jail.
 
-The database connection is fairly self obvious. The mariadb JDBC driver should work fine with mysql or AWS Aurora, but if you want to use Microsoft SQL server you'll need to add the jtds library to your classpath.
+The database connection should be configured appropriately. The mariadb JDBC driver should work fine with mysql or AWS Aurora, but if you want to use Microsoft SQL server you'll need to add the jtds library to your classpath.
 
-The license section allows you to limit concurrent users.
-
-Add a document block with details of your AWS S3 bucket and a smtp block with details of your outbound mail server. The smtp mode can be:
+The license section allows you to limit concurrent users and disable some functionality of the product. The smtp mode can be one of:
 
 * tls
 * starttls
 * unsafe
 
-Use 'unsafe' only if you are sure you want to send unencrypted mail across your network or the internet. Don't do that.
+Use 'unsafe' only if you are sure you want to send unencrypted mail across your network or the internet. That's usually a bad thing. If you want to use gmail to send outbound mail, you'll need to provide a valid username and password here.
 
 === Invite new users
 
-To create users or to reset passwords if you have lost them, create a file called `createAdminUsers.txt` and put it in the same folder as onCourse.yml. That file should contain one line per user you want to invite into the system in the format:
+To create the first user or to reset passwords if you have lost them, create a file called `createAdminUsers.txt` and put it in the same folder as onCourse.yml. That file should contain one line per user in the format:
 
 ----
 firstName lastName email
 ----
 
-Put spaces between the fields.
+Put spaces between the fields. When you restart onCourse this file will be deleted and those users will be sent an invite link by email.
 
 
 
@@ -97,7 +109,7 @@ Enter any password at the prompt.
 openssl req -new -x509 -key onCourseSSL.key -out onCourseSSL.pem -days 825
 ----
 
-Answer all the questions. The Common Name should be the fully qualified domain name of the onCourse Server you are deploying. At this point you should get this key signed by Let's Encrypt or another certifying authority. Then continue conerting the certificate and key to pkcs12 and then to a keystore:
+Answer all the questions. The Common Name should be the fully qualified domain name of the onCourse Server you are deploying. At this point you should get this key signed by Let's Encrypt or another certifying authority. Then continue converting the certificate and key to pkcs12 and then to a keystore:
 
 [source,shell script]
 ----

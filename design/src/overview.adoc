@@ -1,3 +1,5 @@
+= Design overview
+
 [[overview]]
 == Customising onCourse Websites
 
@@ -92,7 +94,7 @@ All pages under this path are reserved for the cms engine.
 All pages under this path are reserved for webdav access.
 
 [[specialPages-editor]]
-=== Building Editor pages
+=== Creating pages
 
 Pages which are not 'special' are delivered from the Editor.
 That is, you are able to create pages and assign them to any URL you choose.
@@ -198,24 +200,18 @@ If an invalid redirect is entered into the redirects.txt file, the file will not
 
 === Video
 
-Although it is possible to load video files directly into the static folder, the onCourse servers are not optimised for serving video.
-You will get much better results by hosting your video at a site such as YouTube or Vimeo and linking to them from within your pages.
-Not only do they have servers placed in data centres around the world, but also the allow streaming of video.
-
-Alternatively you can upload video to the onCourse document management system and deliver it from there, however you'll have to create your own video player and tie them all together, so we still recommend one of the third party video delivery systems like YouTube or Vimeo.
+Although it is possible to load small video files directly into the static folder, the onCourse servers are not optimised for serving video.
+You will get much better results by hosting your video at a site such as YouTube or Vimeo and linking to them from within your pages. Their engineers have optimised their networks for serving video to many different types of devices.
 
 === Favicon
 
-Some websites show a tiny icon in the URL bar and in bookmarks.
-This is called a favicon.
-To add a favicon to your onCourse website, you need an image in both '.ico' and '.png' format.
-The standard is to have the .ico images in either 16x16 or 32x32 size, and the .png up to 180x180.
+Some websites show a tiny icon in the URL bar and in bookmarks. This is called a favicon.
 
-Both of these images have to be uploaded via WebDAV to the directory '/s/images' with the names 'favicon.ico' and 'apple-touch-icon-precomposed.png' (you can use any names for these images, but these are the convention).
+To add a favicon to your onCourse website, you need an image in both '.ico' and '.png' format. The standard is to have the .ico images in either 16x16 or 32x32 size, and the .png up to 180x180.
+
+Both of these images should to be uploaded via WebDAV to the directory '/s/images' with the names 'favicon.ico' and 'apple-touch-icon-precomposed.png' (you can use any names for these images, but these are the convention).
 
 Next, add the relevant html to the PageHead.tml file, found in the '/templates/' directory in WebDAV.
-
-Adding the following lines (assuming you have named the .ico and .png files conventionally) should have web browsers auto detect and display the favicon images
 
 [source,html]
 ----
@@ -226,18 +222,16 @@ Adding the following lines (assuming you have named the .ico and .png files conv
 
 === Robots.txt
 
-If you have specific pages on your website you'd like to stop search engines from crawling, you can manually add a robots.txt file to your WebDAV. There are, however, a few important things to note before you do this:
+onCourse automatically generates a robots.txt file, with a pointer to the sitmap.xml which is also automatically generated.
 
-* You add the 'robots.txt' file to WebDAV, using a program like CyberDuck. The folder to place the file in is /templates/default/.
-* You can add 'disallow' commands using the following syntax:
+If you have specific pages on your website you'd like to stop search engines from crawling, you can manually add a robots.txt file to the folder /templates/default/. You can then add 'disallow' commands using the following syntax:
 
-    Disallow: /room/200\n\
-    Disallow: /course/abc123/\n\
+    Disallow: /room/200
+    Disallow: /course/abc123/
 
-* The content of your custom robots.txt file will replace the default robots.txt file, so you need to copy 'disallow' lines you want to keep from the default one before replacing it. You can do this by going to https://www.yourwebsiteURL.edu.au/robots.txt and simply copying and pasting all that text into the new robots.txt before adding your own entries.
-* No additional 'user-agent' or 'sitemap' lines are required beyond the ones that are in the default robots.txt. You need to keep these in your new file as well.
+Don't forget to add the link to sitemap.xml as well if you override this asset.
 
-Once you've uploaded the new robots.txt file to WebDAV, you'll need to publish the site from the CMS editor for changes to apply. Deleting robots.txt from templates again will cause the old robots.txt to regenerate.
+It is not necessary to hide class pages, or any page which you have otherwise hidden (such as a site you no longer use). onCourse will automatically remove them from the sitemap.xml or add noindex meta headers as needed.
 
 === Checkout
 
@@ -246,218 +240,4 @@ In order to help with styling the Checkout portion of the website, you need to f
     ?previewMode=true
 
 If done correctly, the Thank You page should show, allowing you to style it without having to put through a transaction.
-
-
-[[stylesheets]]
-== Stylesheets
-
-One of the first ways you'll want to modify the look of your site is by changing css stylesheets. onCourse comes with a set of default stylesheets to make your life easier, so you will probably start with a copy of our template-a, template-b or template-c.
-These in turn build on our base stylesheets which we update once a year or so.
-
-Because you are building on existing stylesheets, lots of things are already taken care of for you.
-Your html/css developer can save weeks of work with our existing responsive layouts, grid and basic styling.
-
-=== File structure
-
-First let's see where all the files are.
-To make it easier to navigate, all the CSS is broken up into lots of files within a set of folders.
-
-Start inside the '*/s/stylesheets*' folder in WebDAV. You'll see two folders: 'css' and 'src'.
-It is important that you do not edit the files in 'css' directly, but instead only edit the files in 'src'.
-
-    /s/stylesheets/src/
-
-Start by looking at the file site.scss.
-That's the top of the stylesheet structure and it includes all the other files you need.
-Look for lines like this:
-
-[source,css]
-----
-@import "application/settings";
-----
-
-We recommend you create a new file with your customisations and add a reference to that from site.scss.
-Don't remove the import of the 'base' stylesheets.
-That import brings in the core stylesheet definitions which are required for your onCourse site: shortlists, course and class listings, enrolment templates and much more.
-Override them however you want, but they will save you a lot of work rather than starting from scratch.
-
-=== SCSS
-
-If you didn't recognise the `@import` command above as CSS, that's because onCourse uses a variation of CSS called
-http://sass-lang.com/documentation/file.SASS_REFERENCE.html[SCSS] (also known as SASS).
-This extends the basic stylesheet concepts and adds some very useful abilities:nested rules, variables, mixins, selector inheritance
-
-Every time you edit any file in `/s/stylesheets/src/`, the destination
-`/s/stylesheets/css/site.css` is automatically regenerated by libsass.
-This takes less than a second, so you can see the results almost immediately.
-Remember that to see changes in the staging site you must be logged into the CMS in your web browser.
-You should not edit the site.css file directly, as any changes you make will be overwritten.
-
-If you don't want to bother with learning SCSS that's fine.
-Just write ordinary CSS in the site.scss file.
-As your stylesheets become more complex, you will find that SCSS gives you valuable shortcuts to achieving what you want and you will never want to go back.
-
-If you would like to break up your stylesheets into more manageable pieces, add another import statement under the 'base' import like this:
-
-[source,css]
-----
-@import "colours";
-----
-
-Then create a file `/s/stylesheets/src/_colours.scss` (with the underscore).
-When you make changes to that file, onCourse will automatically merge any content from _colours.scss into the main css for your site.
-
-Look through the default styles for variables which you can easily modify to change your site.
-For example, override `$bodyFontFamily` in order to change the font right through your site.
-Or change
-`$primaryColor`, `$secondaryColor` and `$containerWidth`.
-
-==== Bourbon
-
-By default your stylesheets include Bourbon.
-This css library gives you lots of useful functionality that you'd otherwise have to write by hand.
-http://bourbon.io/[Read up on this library] and get instant rounded corners across all browsers, typography features, reset, and much much more.
-As just one simple example
-
-[source,css]
-----
-section {
-  @includelinear-gradient(totop,red,orange);
-}
-----
-
-will give you the following output
-
-[source,css]
-----
-section {
-  background-color:red;
-  background-image:-webkit-linear-gradient(bottom,red,orange);
-  background-image:linear-gradient(totop,red,orange);
-}
-----
-
-without having to remember to put Opera, webkit, Mozilla and html5 elements into your css.
-You don't need to use bourbon, but it can help you keep your site consistent across browsers more easily and save you time with common css blocks.
-
-Read the http://bourbon.io/docs/[docs for Bourbon].
-
-==== Compression
-
-No matter how many separate files you break up your stylestyles into, the output will be compressed into one file and minified.
-This means whitespace is stripped and the file is pretty hard to read.
-However browsers will be able to parse it just fine; this minification can make a big improvement to page load speeds and also to your SEO.
-
-Comments will be stripped out, so don't hesitate to put lots of useful notes in your scss files.
-
-Finally we compress the file with gzip to serve it across the internet as fast as possible.
-You'll see these output files as:
-
-    /s/stylesheets/css/site.css
-    /s/stylesheets/css/site.css.gz
-
-==== Map
-
-Because it can be hard to review minified and combined CSS in your browser, we also output a map file.
-This allows Chrome and Firefox developer tools to identify the real file and line number in the source scss where your stylesheet rule can be found, saving you a lot of searching.
-The map can be seen as:
-
-    /s/stylesheets/css/site.css.map
-
-Your browser will automatically find and use that file if it knows how.
-
-=== Responsive design
-
-It is extremely important in a modern world filled with tablets and smart phones that your site is built to make life easy for those users.
-onCourse sites already are prepared with responsive designs at four sizes.
-That means that as the browser window gets smaller with different sized devices, the design itself alters to work better at that size.
-It is still up to you as a designer to properly take advantage of this responsive design, but the groundwork is already there for you in onCourse and the enrolment pages as well as skillsOnCourse are optimised already.
-
-onCourse has media sizes of $small-screen, $tablet-screen and $desktop-screen throughout the base stylesheets and a grid based on bootstrap 3.
-
-=== Bootstrap
-
-Because we bring in http://getbootstrap.com/[bootstrap] 3 by default, you get not only a nice grid but also a lot of common component styles which are very useful.
-
-
-
-[[javascript]]
-== Javascript
-
-=== File structure
-
-Log into webDAV and look at the folder `/s/js/`.
-
-In there you'll see a number of javascript files which drive your onCourse website.
-Some are third party vendor supplied files and others are default parts of onCourse itself. site.js is the starting point and it has a list of all the other files which are included.
-Note that the order of including files can sometimes be important.
-Let's look at base.js now:
-
-[source,javascript]
-----
-//= minify off
-//= require base.js
-//= require extra.js
-----
-
-This is telling you that minification is disabled and that the javascript files base.js and extra.js are included.
-This is a different syntax to SCSS so don't get them confused.
-The combined output file is called all.js and the files which are merged don't need to start with an underscore.
-
-==== Minification
-
-Unlike CSS, the javascript is not automatically minified.
-This is because sometimes javascript minification can actually break your javascript (particularly if it contains errors).
-Browsers will often manage to figure out your broken javascript, but once minified, errors really cause problems.
-
-You can enable minification by changing the "off" to "on" and saving the file.
-Wait about 30 seconds and then review your site in staging before pushing it to live.
-
-We use the Google Closure compiler to verify and minify the output.
-
-==== Compression
-
-all.js.gz is automatically created and used by browsers.
-This is another reason minification may not be quite so important: compression often does a pretty good job of reducing the file sizes.
-
-=== Core libraries
-
-We supply a number of third party javascript libraries with your site by default.
-The following list are bundled together as dynamic.js and cannot be removed without breaking some key shopping basket functionality on the site:
-
-* classnames
-* react
-* react-dom
-* react-redux
-* redux
-* redux-thunk
-* jquery 3.x
-
-In addition there are some useful libraries which are often used when building sites:
-
-* BxSlider 4.x
-* jquery.customSelect
-* jQuery Validation Plugin
-
-You may wish to remove or add more libraries for your particular design
-
-=== config.js
-
-config.js controls the location of the checkout pages on your site. You can relocate checkout to anywhere you'd like.
-
-[source,javascript]
-----
-var checkout_config = {
-  "checkoutPath": "/checkout"
-}
-----
-
-checkoutPath::
-The path on which your checkout page lives.
-You can point this to any page on your site, as long as you create that page in the editor and add the correct markup for the checkout engine to be displayed.
-
-[source,html]
-----
-<div data-cid="checkout" id="oncourse-checkout"/>
-----
 

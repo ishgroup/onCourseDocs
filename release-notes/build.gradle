@@ -99,10 +99,10 @@ task releaseNotes(type: ReleaseNotes) {
   if (project.hasProperty('releaseVersion')) {
   	version = releaseVersion
   }
-  outputFile = new File(project.projectDir, "/src/${version}/release-notes.adoc")
-  jiraURL = project.property('jiraURL')
-  jiraUsername = project.property('jiraUsername')
-  jiraPassword = project.property('jiraPassword')
+  outputPath = new File(project.projectDir, "/src/")
+  jiraURL = project.property('jiraURL') as String
+  jiraUsername = project.property('jiraUsername') as String
+  jiraPassword = project.property('jiraPassword') as String
 }
 
 class ReleaseNotes extends DefaultTask {
@@ -119,18 +119,22 @@ class ReleaseNotes extends DefaultTask {
   String jiraPassword
 
   @OutputFile
-  File outputFile
+  File outputPath
 
   @TaskAction
   def generateNotes() {
     def issues = getJiraResponse("resolution in (closed,Unresolved) and fixVersion='${version} angel'").issues as Collection
 
+    // split the version on dots or hyphens and take just the first part
+    version_major = version.split('[-.]').first()
+
     logger.lifecycle "Found ${issues.size()} issues..."
+    outputFile = new File(outputPath + version_major, "release-notes.adoc")
 
     outputFile.parentFile.mkdirs()
     new File(outputFile.parentFile, "images").mkdirs()
 
-    outputFile.append(createRelease(version, issues))
+    outputFile.append(createRelease(version, version_major, issues))
   }
 
   def getJiraResponse(jql) {
@@ -143,7 +147,7 @@ class ReleaseNotes extends DefaultTask {
     }
   }
 
-  String createRelease(version, Collection issues) {
+  String createRelease(version, version_major, Collection issues) {
     issues.sort { issue -> issue.key }
     issues.each { issue ->
       logger.lifecycle "${issue.key} ${issue.fields.summary}"
@@ -153,7 +157,7 @@ class ReleaseNotes extends DefaultTask {
     (issues_web, issues_angel) = issues.split { issue -> issue.fields.components.any { WEB_APPS.contains(it.name) } }
     (issues_reports, issues_angel) = issues_angel.split { issue -> issue.fields.summary.contains('report') }
 
-    def output = "= Release ${version}" + "\n"
+    def output = "= Release ${version_major}" + "\n"
     output += new Date().format('d MMM yyyy') + "\n"
     output += "\n"
     output += "== Important changes" + "\n"

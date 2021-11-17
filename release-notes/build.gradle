@@ -118,18 +118,17 @@ class ReleaseNotes extends DefaultTask {
   @Input
   String jiraPassword
 
-  @OutputFile
+  @OutputDirectory
   File outputPath
 
   @TaskAction
   def generateNotes() {
-    def issues = getJiraResponse("resolution in (closed,Unresolved) and fixVersion='${version} angel'").issues as Collection
+    def issues = getJiraResponse("fixVersion='${version} angel'").issues as Collection
+    logger.lifecycle "Found ${issues.size()} issues..."
 
     // split the version on dots or hyphens and take just the first part
-    version_major = version.split('[-.]').first()
-
-    logger.lifecycle "Found ${issues.size()} issues..."
-    outputFile = new File(outputPath + version_major, "release-notes.adoc")
+    def version_major = version.split('[-.]').first()
+    def outputFile = new File(outputPath, "${version_major}/release-notes.adoc")
 
     outputFile.parentFile.mkdirs()
     new File(outputFile.parentFile, "images").mkdirs()
@@ -139,7 +138,7 @@ class ReleaseNotes extends DefaultTask {
 
   def getJiraResponse(jql) {
     // https://developer.atlassian.com/cloud/jira/platform/rest/
-    def squish = new URL("${jiraURL}rest/api/2/search?jql=${URLEncoder.encode(jql, 'UTF-8')}&maxResults=1000").openConnection() as HttpURLConnection
+    def squish = new URL("${jiraURL}rest/api/3/search?jql=${URLEncoder.encode(jql, 'UTF-8')}&maxResults=1000").openConnection() as HttpURLConnection
     squish.setRequestProperty('Authorization', 'Basic ' + "${jiraUsername}:${jiraPassword}".bytes.encodeBase64().toString())
     squish.setRequestProperty('Accept', 'application/json')
     return squish.inputStream.withCloseable { inStream ->

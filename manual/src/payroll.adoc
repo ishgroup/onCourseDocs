@@ -1,7 +1,7 @@
 [[payroll]]
 == Tutor pay
 
-In this chapter, we cover how to set up standard rates of pay for your Tutors, how to include Tutor costs within the overall class budget, confirming Tutor attendance / hours worked and how to generate Tutor pay from onCourse.
+In this chapter, we cover how to set up standard rates of pay for your Tutors, how to include Tutor costs within the overall class budget, confirming tutor rostering / hours worked and how to generate Tutor pay from onCourse.
 
 Before you work through this section, you need to ensure you have already set up a class with a timetable and have assigned a tutor.
 
@@ -78,28 +78,34 @@ If you do not know who the individual tutor or tutors will be in advance to your
 
 
 [[payroll-attendance]]
-=== Attendance
+=== Confirming the tutor roster
 
-Not only is attendance used for students, it is also used to generate the tutor payroll at the default rate scheduled, or record whether they stayed for longer or shorter than their scheduled time. You must confirm tutor attendance for payroll to be processed, either by setting it manually or allowing the 'generate tutor pay' process to set all unmarked attendance as payable.
+onCourse uses the tutor roster within sessions to confirm the tutor payroll at the default rate scheduled, or record whether they stayed for longer or shorter than their scheduled time. You must confirm tutor rostering for payroll to be processed, either by setting it manually or allowing the 'generate tutor pay' process to set all unmarked attendance as payable.
 
-Tutor attendance can be set for each session in the class Attendance section. Attendance can only be confirmed for sessions that the tutor is assigned to in the class timetable.
+[CAUTION]
+====
+For payroll purposes, the tutor roster for a session CANNOT be confirmed until after the session is complete.
+====
 
-. Open a class record and navigate to the attendance section.
-. For each session, click on the attendance field and set the appropriate attendance. Click once to confirm payroll for that session/date (the tutor should be paid the scheduled rate), twice to reject payroll for that session/date (the tutor should not be paid for this session). Three clicks will set the session back to not confirmed.
+Tutor rostering can be set and confirmed for each session in the class timetable. Rostering can only be confirmed for sessions that the tutor is assigned to in the class timetable.
+
+. Open a class record and navigate to the timetable section.
+. Set the tutor roster status: there are three in total:
+* PAYABLE H: This is an unconfirmed status that shows the number of hours payable. E.G. PAYABLE 5H is 5 hours payable. Any roster with this status during a generated pay run can have their status confirmed using the 'Confirm Now' button that appears in the 'Generate Tutor Pay' pop-over.
+* ABSENT: The tutor was absent and will not be paid for this session.
+* PAY SCHEDULED: This payroll is now confirmed.
+. The PAYABLE <x>H' denotes an uncomfirmed roster and is selected by default.
 +
-Attendance can also be set in bulk by clicking on the downward arrow icon next to the tutor name or a class date and choosing one of the options from the drop down.
+You must do this for each tutor, in each session, to confirm the full tutor payroll.
 +
-image::images/payroll_tutor_attendance.png[title='Confirming tutor pay in bulk']
+image::images/payroll_tutor_attendance.png[title='Set the roster status next to the name of each tutor.']
 
+To change the payable time for a session to more than or less than the rostered time:
 
-To change the payable time for a session to more than or less than the scheduled payroll time:
-
-. Click on the note icon to the right of the attendance icon. This icon appears when move your you mouse over the area.
+. In the session card, click the chevron next to the tutor's name to expose the rostering fields.
 +
-image::images/attendance_hover_icon.png[title='Click the note icon to change the payable time for the session']
-. In the sheet that opens, you will see the default payable time field with a locked icon next to it. Make sure the tutor is confirmed for payroll. Unlock the field to change the value. You can also optionally add a note to explain the payroll variation.
-+
-image::images/payroll_partial_attendance.png[title='Changing the payable time for one session']
+. Set the payable duration to the correct setting, then hit Save. You cannot change this after the pay run has been completed for that session.
+
 
 [[payroll-payslips]]
 === Generating Tutor pay
@@ -108,7 +114,12 @@ onCourse generates Tutor pay records in bulk, up until a specified date, based o
 
 Tutor pay is run for payslips up to and including your defined date. It's best to use yesterdays date if you do not want todays payslips included.
 
-If payroll has not been confirmed in the classes for the individual sessions, then tutor pay will not be processed. However, you can use the 'generate tutor pay' function and confirm in bulk all currently unconfirmed sessions. To generate tutor pay, simply:
+[CAUTION]
+====
+If a tutor's pay has not been added to the class budget by clicking 'Add Pay' when you add a tutor to the class, then their tutor pay will not generate regardless of the roster status.
+====
+
+If rostering has not been confirmed in the classes for the individual sessions, then tutor pay will not be processed. However, you can use the 'generate tutor pay' function and confirm in bulk all currently unconfirmed sessions. To generate tutor pay, simply:
 
 . Open the Tutor pay window
 . Click the cogwheel and select the "Generate tutor pay"
@@ -124,6 +135,14 @@ image::images/generateTutorPayStep2(new).png[]
 . Press save and wait until a new list view, showing all newly created Tutor pay records is displayed. They will have a creation date of 'today' and will be marked with a status of 'new'.
 
 onCourse assists you to view the payslips by tutor with the Payslip report. This report is a summary of the payslips by classes, session, and can be run against a single tutor, a group of tutors, or all tutors.
+
+image::images/tutor_pay_paid.png[title='The tutor roster clearly showing a tutor has been paid after the generating of tutor pay']
+
+==== Creating payroll through the class window
+
+You can also create payroll through the cogwheel menu in the Class list view. You can either generate pay for selected classes that you click on to highlight, or if no classes are selected, pay will generate for all classes. Once the classes are selected, click the cogwheel and select Generate tutor pay.
+
+image::images/generateTutorPayStep1.png[title='Generating tutor pay from the class window']
 
 [[payroll-status]]
 ==== Status
@@ -203,12 +222,6 @@ Payslips are taggable to assist you in creating your own custom steps for handli
 image::images/payroll_taggable.png[title='Tagging payslips']
 
 You can add or remove tags in bulk from payslips by, in the list view, highlighting the records you wish to change, clicking the cogwheel and selecting either 'add tags' or 'remove tags'. Select the tag and click 'Make Changes'.
-
-==== Creating payroll through the class window
-
-You can also create payroll through the cogwheel menu in the Class list view. You can either generate pay for selected classes that you click on to highlight, or if no classes are selected, pay will generate for all classes. Once the classes are selected, click the cogwheel and select Generate tutor pay.
-
-image::images/generateTutorPayStep1.png[title='Generating tutor pay from the class window']
 
 [[payroll-securityAccess]]
 === Payroll access control

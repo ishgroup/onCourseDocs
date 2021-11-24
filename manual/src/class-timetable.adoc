@@ -5,22 +5,43 @@ The class timetable is where you set up how a class is delivered; either through
 
 For a <<classes-aboutSelfPaced,self-paced>> class, ensure the 'self-paced' switch is turned on within this section, then save and close the record.
 
-For a class with <<classes-aboutClassTimetables,timetabled sessions>> you'll need to create each session. Sessions have their own start and end time, tutors, sites and rooms. For classes with lots of sessions, create one and then duplicate the rest from that initial session.
+For a class with <<classes-aboutClassTimetables,timetabled sessions>> you'll need to create each session. Sessions have their own start and end time, tutors, sites and rooms. Tutors assigned to sessions can each have their own rostered hours, separate of the session.
+
+For classes with lots of sessions, create one and then duplicate the rest from that initial session.
 
 [[classes-timetableSessions]]
 === Creating sessions
 
+In the timetable section of the class record, hit the + button to create a new session. First enter the start date and time, then the session's duration in hours; this will fill in the session end time.
+
+Next, set the location of the session by setting the site and the room that the session will take place in.
+
+[CAUTION]
+====
+If the Tutor Time and Attendance section appears empty, then you haven't added any tutors to the class. Add your tutors to the class by clicking the + button next to the Tutors heading and filling in the fields. Once added, come back to this section.
+====
+
+Click + next to Tutor Time and Attendance and select one of your class tutors from the drop-down list. By default, any tutor added to the session will be assigned a roster exactly the same as the session. E.G. if the session starts at 9am and ends at 3pm, any assigned tutor will by default have the same roster; 9am to 3pm, unless explicitly changed.
+
+To set a custom roster, click the chevron next to the tutor's name reveal the roster start, roster end and payable time fields, as well as the attendance notes field. Add your times and ensure the payable duration is correct. If the roster is different from the session, this will appear next to the tutor's name in the session card.
+
+Lastly, set any public or private notes for the session. These are covered later in this chapter.
+
+==== How to easily create multiple sessions for different days
+
 The following is a detailed example of how you would add sessions for a class on different days of the week. This example will use the scenario of a user wanting to add a total of 10 sessions over consecutive Saturdays and Sundays.
 
-The idea here is to create the first session for each different day of the week the sessions are being held on, and then we'll duplicate those sessions. So first we'll create the first Saturday session, then we'll create the first Sunday session. Then, we'll duplicate those sessions four more times each so that they take place each subsequent week from the first session, making it a 10 session class.
+The idea here is to create the first session for each different day of the week the sessions are being held on, and then we'll duplicate those sessions as many times as we need. First we'll create the first Saturday session, then we'll create the first Sunday session. Lastly, we'll duplicate those sessions four more times each so that they take place each subsequent week from the first session, making it a 10 session class.
 
 Here's how:
 
-In the timetable section of the class record, hit the + button to create a new session. First enter the start date and time, then the session's duration in hours. You can also edit the payable duration, which ties to your tutor pay settings allowing you to exclude times for breaks etc. If you've assigned tutors to the class, you'll be able to leave a check mark next to the tutors who will be assigned to this session. Lastly, you can set the location from a list of your Sites and Rooms.
+In the timetable section of the class record, hit the + button to create a new session. First enter the start date and time, then the session's duration in hours; this will fill in the session end time.
 
-Below is an example of how your first class will look once filled out. This one starts on the Saturday 03rd June 2023 at 9am. The class goes for 6 hours, though the lecturer is paid for 5 hours and 30 minutes due to an unpaid 30-minute break. The selected tutor for this session is James Swinbanks, and he's being paid at the Course Manager pay rate, although Eliatan Hill could also be selected. The session will take place at Sydney Campus in the Training Lab.
+Next, set the location of the session by setting the site and the room that the session will take place in. Lastly, add tutors to your session.
 
-image::images/payable_hours.png[title='You can have a different value for the session duration and for the sessions payable hours']
+Below is an example of how your first class will look once filled out. This one starts on the Saturday 03rd June 2023 at 9am. The class goes for 6 hours, and each tutor has the same roster as the session timetable. If any tutor is given a different roster, this will be clearly indicated next to their name.
+
+image::images/class_example.png[title='This session has three tutors assigned, all of them with the same tutor roster as the session']
 
 Next, repeat the steps above but for the Sunday session. When you're done, you should have two sessions, one for Saturday and one for Sunday.
 
@@ -41,6 +62,19 @@ If you create any sessions in error, simply hit the delete button on that sessio
 
 image::images/new_class_timetable_example.png[title='The ten class sessions for the scenario described above.']
 
+[[classes-tutorRoster]]
+=== Tutor rostering
+
+You can set a separate roster for each tutor, per session.
+
+When creating a session, click the name of the tutor you want to set a new roster for and the roster fields, including payable duration, will display. Here you can set the roster start and end time, and the payable duration for the session, which will directly flow on to the tutor pay when generated.
+
+image::images/tutor_roster_edit.png[title='The tutor roster. Edit these fields to set a roster separate to the session.']
+
+Once a separate roster has been set, you will be able to see this clearly marked for each tutor. Tutors with nothing indicated use the same roster as the session.
+
+image::images/tutor_roster_show.png[title='Here you can clearly see one tutor is starting at 10:30am and finishing at 4:30pm, while the other is working the standard session hours']
+
 [[classes-bulk-change-sessions]]
 === Bulk changing sessions
 
@@ -60,14 +94,13 @@ Selecting 'Bulk change...' will open up a pop-over window where you can select w
 
 . Tutors - Allows you to select which tutors to assign to the selected sessions. *REMEMBER:* Tutors must be added to the Class before they can be added to the sessions
 . Location - Allows you to change the Site and Room setting for the selected sessions
-. Payable Duration - Allows you to set a new payable duration amount in hours and minutes e.g. 3 hours and 30 minutes would be expressed as `3h 30m`
-. Start Time - Allows you to set a new start time for the selected sessions.
-lick the clock icon in the field to select a new time, or type it out e.g. 12:45 pm is simply 12:45, while 5:45pm would be written as `17:45`.
+. Actual Payable Duration - Allows you to set a new payable duration amount in hours and minutes e.g. 3 hours and 30 minutes would be expressed as `3h 30m`
+. Start Time - Allows you to set a new start time for the selected sessions. Click the clock icon in the field to select a new time, or type it out e.g. 12:45 pm is simply 12:45, while 5:45pm would be written as `17:45`.
 . Duration - Allows you to set the duration of the class e.g. 3 hours and 30 minutes would be expressed as `3h 30m`
 . Move Forward - Allows you to move the sessions forward a set number of days.
 . Move Backward - Allows you to move the sessions backwards a number of days.
 
-image::images/bulk_change_sessions_popover.png[title='The bulk change po-over. Both Payable Duration and Move Forward have been selected here']
+image::images/bulk_change_sessions_popover.png[title='The bulk change pop-over. Both Payable Duration and Move Forward have been selected here']
 Click the Update button. This confirms the changes and updates the selected sessions.
 
 [[classes-collision-detection]]
@@ -86,6 +119,7 @@ The timetable section is used to create sessions for your class. You can set the
 * Session times
 * Tutor(s) assigned to deliver each session
 * Session Duration in hours and minutes. You can also enter 3.5 for 3h 30mins
+* Tutor roster - Set separate start and end times for tutors based on a roster.
 * Payable duration - the time payable to the tutor, for example this could be shorter than the session duration by 30mins to account for an unpaid break, or longer than the session duration to account for coordination duties
 * Private notes (for scheduling or equipment notes)
 * Public notes (for session content you want to publish to students and the web)
@@ -104,7 +138,7 @@ The public information will appear on your onCourse website, to provide addition
 
 Any information added to public notes will also appear inside the student and tutor portal for the session. The tutor will also see the private notes.
 
-The private information will appear on printed reports that your venue coordinators can be given. Private information may be useful for recording information like, TV & DVD player needed for this session. The report 'Class Timetable Report - Planning' can be accessed from either the site, room or class share windows.
+The private information will appear on printed reports that your venue coordinators can be given. Private information may be useful for recording information you don't want seen publicly. The report 'Class Timetable Report - Planning' can be accessed from either the site, room or class share windows.
 
 image::images/session_notes_class.png[title='The public and private notes fields in the session']
 

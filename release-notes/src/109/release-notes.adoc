@@ -2,9 +2,11 @@
 4 Dec 2021
 
 == Minor features
-* Remove old document replication `OD-10060`
-* Put unreplicated MessagePerson records to replication queue on server start `OD-14963`
-* Web checkout discount postcodes `OD-16772`
-* Creative Kids end of year redemption `OD-16783`
-* New documents are private by default `OD-16774`
-* Add timezone field for virtual sites. This will be used in places where the user's timezone is unknown such as emails `OD-16791`
+* Removed deprecated method of document replication `OD-10060`
+* Amended Creative Kids redemption script to allow for vouchers to be redeemed before the new year `OD-16783`
+* Newly added documents are made private by default. `OD-16774`
+
+
+== Minor fixes
+* Fixed an issue where discounts were not applying if a certain value was null. `OD-16772`
+* Fixed an issue where timezone was not appearing for virtual sites. `OD-16791`

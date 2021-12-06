@@ -1,6 +1,10 @@
 = Release 109
 4 Dec 2021
 
+== Important changes
+
+In this release we've merged the Message and MessagePerson tables. If you have custom scripts accessing these entities directly, please review those scripts after the upgrade. All scripts which use the standard closures to send messages will work fine without modifications.
+
 == Minor features
 * Removed deprecated method of document replication `OD-10060`
 * Amended Creative Kids redemption script to allow for vouchers to be redeemed before the new year `OD-16783`

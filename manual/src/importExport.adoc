@@ -292,6 +292,15 @@ For example, if you have a contact custom field with the keycode 'howDidYouHearA
 "How Did You Hear About Us?"  :  c.howDidYouHearAboutUs?.value
 ----
 
+Alternatively, if it was in an enrolment record, you can also use something like below:
+
+[source,groovy]
+----
+"Column Name"   : e.customFields.find { cf -> cf.customFieldType.key == "listTest" }?.value
+----
+
+This second method is the best way to retrieve a value from a list of options.
+
 Refer to the <<generalPrefs-customFields>> for more information about creating custom fields in onCourse.
 
 [[importExport-testingExports]]

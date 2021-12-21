@@ -36,13 +36,45 @@ Finally, select your base template from our list.
 
 When you're done, click Save and your new website will start to build. Websites without custom domains will appear almost instantly while those with custom domains will take a little longer.
 
-=== Google services
+=== Log in to Google services
 
-You can log in and connect with Google services like analytics directly from within onCourse. Click the 'Log in' button and accept the permissions to set up your services.
+The first thing you'll do here is log in and connect with Google services. This will allow you to access things like analytics directly from within onCourse. Click the 'Log in' button and accept the permissions to set up your services.
+
+image::images/google_services_logged_in.png[title='The Google Services screen after successful log in']
+
+The first step is to set up your Analytics, and then your Google Tag Manager, and then add your Google Maps API key. If you have not created an account for either Analytics or Tag Manager, you will need to do so before you can complete these steps.
+
+Analytics - https://analytics.google.com/
+
+Tag Manager - https://tagmanager.google.com/
+
+Once you have selected your analytics account from the list, you can select the Analytics web property. This is the specific code used to track events and users on your site. If you leave this empty, onCourse will attempt to create one for you at the point you hit 'Save'.
+
+Simiarly with the Google Tag Manager account, select this from the drop-down list, and then select the appropriate container from the drop-down box.
+
+If you don't have the right permissions to use or view a tag manager container or analytics web property, you won't be able to see them in the lists. In these cases just leave these fields empty and onCourse will create them for you automatically when you Save.
+
+==== Google Maps API
+
+You also apply your Google Maps API key on the Google Services set up screen. It's a bit of a process to get set up for Google Maps, so follow the instructions below:
+
+1. Go to https://console.cloud.google.com/projectselector2/google/maps-apis/credentials
+2. Create a new project by clicking 'Create Project'
+3. Choose 'Maps Javascript API', and then select 'Enable'
++
+image::images/enable_maps_api.png[title='click Enable to turn on the API]
++
+4. Click 'Credentials', then '+ Create Credentials' in the top bar, then click 'API Key', then click 'Restrict API key'
+5. In the next window, rename your API key to something relevant
+6. Under 'Application restrictions', select 'HTTP referrers (websites)'
+7. IMPORTANT - DO NOT SKIP THIS STEP - Under Website restrictions, click 'Add an item'. You'll want to add at least two items - the first will be your onCourse website URL eg acme.oncourse.cc/* with a * on the end. The second will be your custom domain URL, again with a star on the end after the slash eg www.acme.com.au/*. THIS IS VERY IMPORTANT FOR SECURITY
+8. Lastly, go into billing section of the Google Cloud Platform and attach your credit card details, otherwise your api call quota will be very small. You're given $100 worth of credit every month, but without adding your credit card there's a very good chance this will stop working until you next top it up. The map functionality will simply not work if you choose not to do this.
+
+image::images/google_application_restrictions.png[title='The Google Services screen after successful log in']
 
 ==== Analytics
 
-
+To set up Analytics, simply log in to Google Services and then select your Analytics account from the drop-down box. Once this is set up and analytics are flowing into your system, you'll be able to view the analytics directly from here.
 
 ==== URLs
 
@@ -54,5 +86,5 @@ If your onCourse plan allows for them, you can also add any custom site domains 
 
 ==== Tag manager
 
+To set up Analytics, simply log in to Google Services and then select your Analytics account from the drop-down box. Once this is set up, you'll be able to review your tag manager settings.
 
-==== Google search

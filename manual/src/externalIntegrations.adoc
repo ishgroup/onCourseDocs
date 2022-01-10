@@ -206,6 +206,31 @@ This will open an accounts page. The account ID will be listed in the site's URL
 https://my_canvas_instance.instructure.edu.au/accounts/36 then you would enter 36 as the account ID, and only that number. You don't enter the URL. Once you've completed filling in the expected fields in onCourse, a button labelled 'Configure' will appear. Click this and a pop-up window will appear, asking you to log in to Canvas and authorise onCourse to integrate with your account.
 . Lastly, you'll need to turn on the integration script. You can do this by going to Automation, and enabling the 'Canvas Enrol' script. Make sure you hit the Save button before closing the window.
 
+[[externalintegrations-serviceNsw]]
+=== Service NSW Vouchers
+
+This integration allows for the automatic validation and redemption of Service NSW Creative Kids vouchers when they are used to enrol into specific courses. The process invloves allowing users with a valid creative kids voucher to use an oncourse voucher product which you'll call Creative Kids $100 Voucher to pay for their online enrolment, and then use the scripts and integration to redeem the value of the voucher from the NSW Government.
+
+There are a number of steps to getting this integration working so ensure that you go through them carefully, as missing any step will cause the entire process to not work.
+
+. Create three new custom fields and ensure that you match exactly the details below:
+* *Name* = Creative Kids Student Full Name, *key* = creativeKidsStudentName, *Data Type* = Text, *Record Type* = Voucher
+* *Name* = Creative Kids Voucher Number, *key* = serviceNswVoucher, *Data Type* = Pattern Text, *Record Type* = Voucher, *Pattern* = 9[0-9a-zA-Z]{15}
+* *Name* = Service NSW Redeemed On, *key* = serviceNswRedeemedOn, *Data Type* = Date time, *Record Type* = Voucher
++
+. Create a new Voucher Type, called 'Creative Kids $100 Voucher'. This voucher will be used to allow people to enrol online using their CK vouchers. The voucher type should be set to cost $0 and redeem for value of $100.
+. You'll then need to add relations between the kids courses you'll want to allow folks to enrol in using this voucher. Make sure to use a relationship type that includes the 'Suggestion' cart action. By default the 'Similar courses' relationship will use this. This means that in the Checkout, users will be suggested that they add the voucher to their cart.
++
+. Set up a new data collection form for Vouchers, and add into it two of your custom field questions; Creative Kids Student Full Name and Creative Kids Voucher Number.
++
+. Go to Integrations (in the Automation window) and in the Service NSW Vouchers box click 'Next'.
++
+. There are several details you'll need to add here. All of these details come from Service NSW so if none of these sections make sense, your contact at Service NSW should be able to help you get these. Add a name for the integration (this can be anything of your choice), select a voucher type (CK - creative kids, or AK - active kids, you want to select CK). Store channel code, POS terminal id, Programme and API key are all fields need to get the details for from Service NSW before you finish.
++
+. Once that is set, the last step is to activate the two Service NSW scripts in the Scripts section. The validation script runs on enrolment creation, and will validate the details of any CK Voucher used to enrol online. If the details are incorrect, you'll be sent an email with details to contact the student with. The redemption script will complete the redemption process by checking that the CK vouchers stored in your system are valid, and then redeem them.
+
+image::images/service_nsw_automation.png[title='Service NSW Vouchers integration window']
+
 [[externalintegrations-micropower]]
 === Micropower
 
@@ -374,3 +399,19 @@ With the default Xero payroll script, onCourse will create a pay record in Xero 
 If the tutor doesn't exist as a Xero employee, the script will first try to find that tutor in Xero by name, email and date of birth. If they are not found, a new employee will be created in Xero. An email will be sent to you (make sure your account has a valid email address) with details of what to do next, including setting up a pay calendar, super account and pay template in Xero.
 
 Finally, you can make changes in Xero and submit the payrun for payment, super and ATO submission. Note that any changes you make in Xero will not flow back to onCourse.
+
+[[externalIntegrations-myob]]
+=== MYOB
+
+MYOB, Mind Your Own Business, is an Australian multinational corporation that provides tax, accounting and other services to small and medium businesses. This integration will link to your MYOB system, pushing through transaction data and the general ledger.
+
+image::images/myob_integration.png[title='MYOB Integration window']
+
+To set up, set the Base URL, add your MYOB user name and MYOB password, then hit the 'Connect to MYOB' button.
+
+Once a connection has been confirmed with MYOB, the integration will be able to be saved.
+
+In MYOB, you need to ensure that you have all the corresponding accounts from onCourse in MYOB, and they need to share the same name so the integration can tell which onCourse account to map to each account in MYOB. If this isn't done, the script will fail when it's run.
+
+In order to push data from onCourse to MYOB you'll need to run the 'MYOB integration' script. As this is a 'no entity' script, it can only be run by an admin user from the dashboard. When running it, set the from and to dates to denote the export period.
+

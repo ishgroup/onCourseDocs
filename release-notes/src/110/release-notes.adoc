@@ -2,23 +2,23 @@
 10 Jan 2022
 
 == Major features
-* Add notes to Sales `OD-16664`
-* Add tags to products `OD-16715`
-* Add notes to Products `OD-16720`
-* Add documents to Products `OD-16721`
+* Added notes to Sales `OD-16664`
+* Added tags to products `OD-16715`
+* Added notes to Products `OD-16720`
+* Added documents to Products `OD-16721`
 * Allow custom fields on Products `OD-16722`
-* Add documents to Sales `OD-16726`
-* Add tagging to Sales `OD-16727`
+* Added documents to Sales `OD-16726`
+* Added tagging to Sales `OD-16727`
 
 == Minor features
 * Remove taggable inheritance from Message `OD-10207`
-* Add NOT NULL constraints on `createdOn` and `modifiedOn` fields for al tables `OD-12326`
-* Rename `forward` and `backward` to `later` and `earlier` `OD-14566`
+* Add NOT NULL constraints on `createdOn` and `modifiedOn` fields for all tables `OD-12326`
+* In Class Timetable bulk edit, rename `forward` and `backward` to `later` and `earlier` `OD-14566`
 
 == Fixes
-* Bulk change - tutor roster issue `OD-16812`
-* Classes - bulk edit session issue `OD-16815`
-* Bulk change - tutor roster timezone issue `OD-16861`
-* Error when opening Products with disabled income account `OD-16862`
-* Bulk edit in some lists doesn't show placeholders `OD-16863`
-* Repeating session doesn't copy tutor roster `OD-16864`
+* Fixed issue where bulk editing a tutor roster would apply unexpected results `OD-16812`
+* Fxied an issue where if you tried to bulk edit Tutors and Duration in the class timetable bulk edit view at the same time, an error would throw `OD-16815`
+* Fixed an issue where onCourse was trying to account for daylight savings changes when it shouldn't `OD-16861`
+* Error sometimes occurred when opening Products with disabled income account `OD-16862`
+* Added bulk edit to some list views that didn't previously have it - Enrolments, Outcomes and Assessment Submissions  `OD-16863`
+* Fixed an issue where duplicating a session wouldn't copy tutor roster as well `OD-16864`

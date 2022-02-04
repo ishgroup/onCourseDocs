@@ -1,9 +1,9 @@
 [[websiteSetup]]
-
 == Website setup
 
 By going to the Website Setup section in onCourse, you can manage and control much of the setup behind your website, including the adding of custom domains, set up of google tag manager and analytics, and even create brand new websites from scratch.
 
+[[websiteSetup-Billing]]
 === Billing
 
 The billing section will show you your current level of onCourse plan, and the number of concurrent users your licence allows for.
@@ -18,12 +18,14 @@ Once you're happy with your changes, hit Save.
 IMPORTANT - If you drop to a lower tier plan, it will take effect at the start of the next month. If you raise up to a higher tier plan, the change will be immediate.
 ====
 
+[[websiteSetup-Websites]]
 === Websites
 
 Here you will see a list of all of your onCourse websites, each with four different sub-sections beneath them; analytics, URLs, tag manager and google search.
 
 You can also create a new website. by clicking the + button next to the Websites header.
 
+[[websiteSetup-newWebsite]]
 ==== Creating a new website
 
 Create a new website linked to your onCourse system by clicking the + button next to the Websites header.
@@ -36,6 +38,7 @@ Finally, select your base template from our list.
 
 When you're done, click Save and your new website will start to build. Websites without custom domains will appear almost instantly while those with custom domains will take a little longer.
 
+[[websiteSetup-googleServices]]
 === Log in to Google services
 
 The first thing you'll do here is log in and connect with Google services. This will allow you to access things like analytics directly from within onCourse. Click the 'Log in' button and accept the permissions to set up your services.
@@ -54,6 +57,7 @@ Simiarly with the Google Tag Manager account, select this from the drop-down lis
 
 If you don't have the right permissions to use or view a tag manager container or analytics web property, you won't be able to see them in the lists. In these cases just leave these fields empty and onCourse will create them for you automatically when you Save.
 
+[[websiteSetup-maps]]
 ==== Google Maps API
 
 You also apply your Google Maps API key on the Google Services set up screen. It's a bit of a process to get set up for Google Maps, so follow the instructions below:
@@ -70,21 +74,34 @@ image::images/enable_maps_api.png[title='click Enable to turn on the API]
 7. IMPORTANT - DO NOT SKIP THIS STEP - Under Website restrictions, click 'Add an item'. You'll want to add at least two items - the first will be your onCourse website URL eg acme.oncourse.cc/* with a * on the end. The second will be your custom domain URL, again with a star on the end after the slash eg www.acme.com.au/*. THIS IS VERY IMPORTANT FOR SECURITY
 8. Lastly, go into billing section of the Google Cloud Platform and attach your credit card details, otherwise your api call quota will be very small. You're given $100 worth of credit every month, but without adding your credit card there's a very good chance this will stop working until you next top it up. The map functionality will simply not work if you choose not to do this.
 
-image::images/google_application_restrictions.png[title='The Google Services screen after successful log in']
+image::images/google_application_restrictions.png[title='Where to retrieve your Google Maps API key']
 
+[[websiteSetup-analytics]]
 ==== Analytics
 
-To set up Analytics, simply log in to Google Services and then select your Analytics account from the drop-down box. Once this is set up and analytics are flowing into your system, you'll be able to view the analytics directly from here.
+image::images/ga_logged_in.png[title='Adding your Google Analytics details in onCourse']
 
+To plug your Google Analytics account into your website and view simple analytics from this section in onCourse, click the Analytics section under the website you wish to set up or view, then simply log in to Google Services and select your Analytics account from the drop-down box. You'll need to have this set up in Google Analytics before it will show in onCourse. If you have yet to set your Google Analytics, you can get started by clicking 'Open Analytics' while logged in to Google Services.
+
+Once this is set up and analytics are flowing into your system, you'll be able to view the number of website sessions from the past 4 weeks from here. In Google Analytics, 'Sessions' refers to the number of individual sessions initiated by all the users of your website.
+
+[[websiteSetup-urls]]
 ==== URLs
 
-Here you can see the domains in use for this website.
+image::images/ga_urls.png[title='The website URLs page is where you can set your custom domains]
 
-You can change the page title by editing the current entry, then hitting Save. Your site location is fixed and cannot be edited.
+Here you can see the domain names in use for this website, if you have a custom one, as well as the default onCourse domain for your site.
 
-If your onCourse plan allows for them, you can also add any custom site domains to your website here. AFter you've entered the domain nam make sure you also set the primary hostname from the drop-down box, then hit Save.
+You can change the page title by editing the current entry in the Website page title prefix field, then hitting Save. Your site location is the default URL, and is fixed and cannot be edited.
 
+If your onCourse plan allows for them, you can also add any custom site domains to your website here. After you've entered the domain name URL make sure you also set the primary hostname from the drop-down box that appears, then hit Save.
+
+[[websiteSetup-tagManager]]
 ==== Tag manager
 
-To set up Analytics, simply log in to Google Services and then select your Analytics account from the drop-down box. Once this is set up, you'll be able to review your tag manager settings.
+image::images/ga_gtm.png[title='Adding your Google Analytics details in onCourse']
+
+This screen will show you which container from your Tag Manager setup you've applied to the site. If you want to change this, go to the Analytics window and change it there, or click 'Configure' to be taken to the Google Tag Manager dashboard, outside onCourse.
+
+Your Tag Manager needs to be set up separately from onCourse in order for this to be available to use, so ensure it is ready to go before attempting to link Google Services to your onCourse website.
 

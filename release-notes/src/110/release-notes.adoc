@@ -14,6 +14,11 @@
 * Remove taggable inheritance from Message `OD-10207`
 * Add NOT NULL constraints on `createdOn` and `modifiedOn` fields for all tables `OD-12326`
 * In Class Timetable bulk edit, rename `forward` and `backward` to `later` and `earlier` `OD-14566`
+* newlines not preserved in email templates when college.paymentInfo is rendered `OD-11874`
+* Detect upgrade and refresh client application `OD-14721`
+* Add 'Reason for Study' as available data collection form question `OD-16031`
+* Sync abandoned shopping cart from website `OD-16263`
+* System user invite should last 7 days `OD-16958`
 
 == Fixes
 * Fixed issue where bulk editing a tutor roster would apply unexpected results `OD-16812`
@@ -22,6 +27,20 @@
 * Fixed an error that sometimes occurred when opening Products with disabled income account `OD-16862`
 * Added bulk edit to some list views that didn't previously have it - Enrolments, Outcomes and Assessment Submissions  `OD-16863`
 * Fixed an issue where duplicating a session wouldn't copy tutor roster as well `OD-16864`
+* Student transcript will not generate - error `OD-16850`
+* Unable to merge contact `OD-16868`
+* SchemaUpdateService logging shows wrong text `OD-16875`
+* Fix high contrast theme - Title section goes fully black on scroll `OD-16878`
+* Filter tool tips obscuring checkboxes `OD-16884`
+* {render MD} appearing in emails `OD-15809
+* Searching for room name which is just a number isn't producing any search results `OD-16806`
+* Class duplication issue `OD-16813`
+* Class Profit not balancing as expected after cancelled enrolment with no credit note created `OD-16823`
+* Creative Kids scripts failing `OD-16890`
+* Invoice overdue not appearing in Historic Aged Debtor export `OD-16946`
+
+== Web
+* Markdown support for tables `OD-16785`
 * Fixed an issue where Student transcript would not generate `OD-16850`
 * Fixed an issue where some contacts could not be merged `OD-16868`
 * Fixed high contrast theme issue where title section would go fully black on scroll `OD-16878`

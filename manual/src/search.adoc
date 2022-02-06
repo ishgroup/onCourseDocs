@@ -374,7 +374,6 @@ DATES::
     previous month 23:59
   last week;;
     from Monday 00:00 to Sunday 23:59 of the previous week.
-    +
     If 'today' is Thursday 13 September 2018, then 'last week' will be
     from Monday 3 September 2018 to 9 September 2018.
   next year;;
@@ -384,16 +383,14 @@ DATES::
     month 23:59
   next week;;
     from Monday 00:00 to Sunday 23:59 of the next week.
-    +
     If 'today' is Thursday 13 September 2018, then 'next week' will be
     from Monday 17 September 2018 to 24 September 2018.
-  +
+
 ....
 createdOn today createdOn yesterday .. tomorrow startDateTime last week endDateTime next year
 ....
-+
 Dates can be combined with basic arithmetic and a specified time unit to query over a period of time.
-+
+
 ....
 createdOn today + 1 day createdOn yesterday..tomorrow + 2 week createdOn * .. today + 6 month createdOn 9:00 .. 19:00 today - 1 year
 ....
@@ -401,7 +398,7 @@ createdOn today + 1 day createdOn yesterday..tomorrow + 2 week createdOn * .. to
 
 ME::
 ME allows for search to be constructed using the currently logged in user as a query value.
-+
+
 ....
 Invoice.createdByUser = me
 ....
@@ -414,7 +411,6 @@ Time references allow you to query for records within specific time periods
     set a number of hours to/from the search query period
   <x> minute;;
     set a number of minutes to/from the search query period
-+
 ....
 endDateTime in now + 1 hour .. now + 2 hours 30 minutes
 ....
@@ -422,7 +418,7 @@ endDateTime in now + 1 hour .. now + 2 hours 30 minutes
 EMPTY::
 
 The Empty keyword allows you to search for null fields. A null field is a field that contains no data. For example if you were in the classes window and wanted to find all the classes with no tutor, you could type/select the below in the search query field:
-+
+
 ....
 tutorRoles is empty
 ....

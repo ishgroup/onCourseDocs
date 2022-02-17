@@ -1,0 +1,32 @@
+= Release 111
+17 Feb 2022
+
+== Important changes
+
+Phone numbers have now been stripped of all non numerical content. This 'normalisation' makes it possible to search for phone numbers.
+
+
+== Major features
+
+=== Abandoned cart
+
+If you are using an onCourse website, any time a user gets part way through checkout and does not complete, a record of their shopping basket will be kept against their contact record. This makes it possible to send them reminders to complete the checkout and for you to help them complete the process if necessary.
+
+When you use the onCourse checkout, you'll be prompted to load a customer's abandoned cart if one exists. In the future, we'll add scripts to the system to send them a reminder to return to your website and complete the checkout.
+
+
+== Reports and scripts
+* Optionally expand 'Historic aged debtor' report to include transaction lines `OD-17006`
+
+== Minor features
+* Checkout - search contact by email and phone `OD-16895`
+* Checkout - Create Lead button in Checkout `OD-16897`
+* Convert lead to sale... `OD-16899`
+* Abandoned checkout shopping carts server side `OD-16900`
+* Abandoned checkout shopping carts ui `OD-16915`
+
+== Fixes
+* Missing edit option for class fee from right sidebar `OD-16916`
+* Inconsistent naming of Product entity fields in UI `OD-16928`
+* Data Collection Forms - Save button incorrectly shows warning icon `OD-16959`
+* Historic debtors missing invoices on due date `OD-17007`

@@ -3,8 +3,7 @@
 
 == Important changes
 
-Phone numbers have now been stripped of all non numerical content. This 'normalisation' makes it possible to search for phone numbers.
-
+Phone numbers have now been stripped of all non-numerical content. This 'normalisation' makes it possible to search for phone numbers in the checkout.
 
 == Major features
 
@@ -14,19 +13,27 @@ If you are using an onCourse website, any time a user gets part way through chec
 
 When you use the onCourse checkout, you'll be prompted to load a customer's abandoned cart if one exists. In the future, we'll add scripts to the system to send them a reminder to return to your website and complete the checkout.
 
+=== Checkout enchancements
+
+We've expanded the search in the Checkout. In the contact field you can type a contact's name, phone number or email address to find their contact record.
+
+We've also enhanced the lead creation process, allowing you to create a lead from directly within the Checkout. If you add a single contact and a course (without selecting a class) to the shopping cart.
+
+While we're on the subject of Leads, you can now use the 'convert to sale' function within the Leads cogwheel menu to send the lead to the checkout. This will populate the checkout with the contact record and the courses they expressed interest in, allowing you to quickly select classes and accept payment.
 
 == Reports and scripts
 * Optionally expand 'Historic aged debtor' report to include transaction lines `OD-17006`
+* Removed Historic aged debtor script, was a duplicate with the Historic aged debtor export.
+* Moved Historic aged debtor export to be run from the Contacts window.
 
 == Minor features
-* Checkout - search contact by email and phone `OD-16895`
-* Checkout - Create Lead button in Checkout `OD-16897`
-* Convert lead to sale... `OD-16899`
-* Abandoned checkout shopping carts server side `OD-16900`
-* Abandoned checkout shopping carts ui `OD-16915`
+* Search for a contact by name, email and phone when in the Checkout `OD-16895`
+* Can create a lead from directly within Checkout `OD-16897`
+* In Leads, you can now directly send a lead to the checkout with 'convert to sale' cogwheel function.  `OD-16899`
+* In Contacts > Financial, added Abandoned checkout shopping carts UI showing the number of abandoned carts for that contact.  `OD-16915`
 
 == Fixes
-* Missing edit option for class fee from right sidebar `OD-16916`
-* Inconsistent naming of Product entity fields in UI `OD-16928`
-* Data Collection Forms - Save button incorrectly shows warning icon `OD-16959`
-* Historic debtors missing invoices on due date `OD-17007`
+* Fixed an issue where the edit icon for the class fee was missing from the right sidebar `OD-16916`
+* Fixed some inconsistent naming of Product entity fields in UI `OD-16928`
+* Fixed an issue where in Data Collection Forms, the Save button incorrectly showed a warning icon `OD-16959`
+* Fixed an issue where the Historic debtors export could miss invoices when checking on due date `OD-17007`

@@ -12,7 +12,7 @@ Leads can also be linked with one or multiple <<quotes,quotes>>.
 
 image::images/new_lead.png[title='A new lead with two course relations']
 
-To create a new lead, go to the Leads window and click the + icon in the bottom-right corner.
+There are two ways to create a new lead; within the leads window, or via the checkout. To create a lead directly within the leads window, go to the leads window and click the + icon in the bottom-right corner.
 
 Add a contact by typing their name and selecting a record from the drop-down list. The record must already exist in the system before you can create a lead for it.
 
@@ -22,6 +22,15 @@ Leads cannot be created without a contact, at minimum.
 ====
 
 You can set a number of students to indicate the potential number of enrolments or sales. Set a 'next action on' date and time, set a status of Open or Closed, add tags (useful if you want to add more detail to your leads for grouping). You can also add a site preference for the lead, <<documentManagement, documents>>, invoices (or quotes) and notes.
+
+[[leads-newCheckout]]
+=== Creating new leads in Checkout
+
+A fast way of creating leads is to do so directly from within the checkout.
+
+Add a single contact and any number of courses to the checkout, without selecting any classes. A 'create lead' button will appear. Click this to create a lead record using the data from the checkout.
+
+image::images/create_lead_checkout.png[title='Add a single contact and any number of courses without selecting a class to create a lead within the checkout.']
 
 [[leads-relations]]
 === Adding relations
@@ -58,3 +67,14 @@ You can add a document by simply dragging and dropping it from your desktop over
 === Add a note
 
 Click the + button next to Notes to add a new note. Type the text into the card, then click the 'Save' button to save the record.
+
+[[Leads-convertSale]]
+=== Coverting a Lead to a Sale
+
+When in the Leads list view, you can highlight a single lead record and, from the cogwheel menu, select 'convert lead to sale'. This will move the contact and any courses associated with the lead into the checkout, where you can then complete the enrolment. Similarly, if a lead with related courses that have no future classes is converted, only the contact will appear in the checkout.
+
+====
+NOTE: If a lead has no related courses, it can't be converted to a sale.
+====
+
+If a lead is converted to a sale, but then abandoned, the lead will remain a lead until it is converted again and the sale completed.

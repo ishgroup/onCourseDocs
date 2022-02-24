@@ -89,11 +89,11 @@ Changing an application status to 'in progress' does not trigger any scripts or 
 The Status field indicates what stage the application is at in the approval process. You set these manually as you progress each application through to enrolment. The status types are:
 
 New:: This is a new application that has yet to be evaluated.
-Offered:: This application has been offered a position. Setting this status actually changes the course's 'Apply Now' button to 'Enrol Now', allowing the student to finalise the enrolment process.
-Rejected:: This is given to applications where that are being rejected.
+Offered:: This application has been offered a position. Setting this status actually changes the course's 'Apply Now' button to 'Enrol Now', allowing the student to finalise the enrolment process. If the right scripts are enable it will also trigger an email notification telling them they can accept and linking them to their course on your website.
+Rejected:: This is given to applications where that are being rejected. If the rights scripts are enabled this will send an 'application rejected' message to the contact.
 Withdrawn:: This is for when the student would like to withdraw their application.
 In Progress:: This is for any application you are currently considering.
-Expired:: This is when an application was initially offered but not accepted by the student before the 'enrol by' date.
+Expired:: This is when an application was initially offered but not accepted by the student before the 'enrol by' date. The contact will need to apply again.
 
 When an application has its status changed in onCourse, this affects what actions are available to the student. For example, only a student with an application of status type 'offered' can proceed with an online enrolment in a class from the course.
 

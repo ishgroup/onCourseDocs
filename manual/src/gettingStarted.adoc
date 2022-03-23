@@ -13,9 +13,9 @@ onCourse is customisable, so you can tweak the windows and layout for your own u
 [[gettingStarted-homeScreen]]
 === The onCourse Dashboard
 
-The dashboard is the opening window of onCourse; it is the first thing you will see on your screen after you successfully login. The dashboard is made up of a three-column view window with a collapsible, global navigation quick access column containing two sub-tabs on the left (Favourites & Latest Activity) Enrolments & Revenue in the middle, and onCourse news on the right. There is also a logout button, a button to change your visual themes and, in some cases, and an Upgrade to onCourse Pro button for anyone using the free version of the software.
+The dashboard is the opening window of onCourse; it is the first thing you will see on your screen after you successfully login. The dashboard is made up of a three-column view window with a collapsible, global navigation quick access column containing favourites, categories & latest activity. Enrolments, revenue and automation status live in the middle, and onCourse news on the right. There is also a logout button, a button to change your visual themes and, in some cases, and an Upgrade to onCourse Pro button for anyone using the free version of the software.
 
-Columns can be resized by hovering your mouse over one of the cut-off lines, then clicking and dragging either left or right to decrease or increase the size of the column. You can also resize the window by hovering your mouse over the bottom-right corner, or the left or bottom edges of the window, then clicking and dragging to resize it.
+Columns can be resized by hovering your mouse over one of the cut-off lines, then clicking and dragging either left or right to decrease or increase the size of the column. You can also resize the browser window by hovering your mouse over the bottom-right corner, or the left or bottom edges of the window, then clicking and dragging to resize it.
 
 The global navigation column can be collapsed by clicking the `x` in the top-left.
 
@@ -33,15 +33,36 @@ image::images/global_nav_column.png[title='The global navigation column in the C
 
 Favourites is the best way to gain one-click access to almost all the different areas of the application.
 
-Initially, `Favorites` will only show Checkout (Quick Enrol), however if you click the `All` button it will change to show all the available windows and any on-demand scripts you have available. If you hover your mouse, you'll see a heart icon appear next to it. Click it to add that window to your Favorites window, and click it again to remove it. Click 'Save' to save your changes.
+Initially, `Favorites` will only show Checkout (Quick Enrol). Click into a category and select the heart icon that appears when hovering your mouse over a selection to add that window to your favourites.
 
-Checkout (Quick Enrol) will _always_ appear in Favourites.
+Your favourites will always appear at the top of the global navigation, and it will _always_ containg Checkout (Quick Enrol).
 
-image::images/dashboard_quickaccess.png[title='Global navigation when opened in the Classes window']
+image::images/dashboard_quickaccess.png[title='Adding the Automation window to my Favourites in navigation']
+
+==== Categories
+
+Each window in onCourse is grouped by category to better give users an idea of what can be achieved in onCourse. Some windows may appear in multiple categories.
+
+Click on a category to expand it. You'll see a full description for each category, as well as descriptions for each section in onCourse.
+
+The categories are:
+
+* Scheduling
+* Automation
+* Accounting
+* Sales
+* Configuration
+* Accreditation & RTO
+* Help
+* Marketing
+* Education
+* Payroll
+* Document Management
+* CRM (Customer Relationship Management)
 
 ==== Latest Activity
 
-This section will save and then display a history of the most recent records you've interacted with, including during previous logins, acting as a quick way to revisit screens you were just using. You can click any of the displayed windows or records to go directly to it.
+This section appears below the categories. It will save and then display a history of the most recent records you've interacted with, including during previous logins, acting as a quick way to revisit screens you were just using. You can click any of the displayed windows or records to go directly to it.
 
 image::images/dashboard_latest.png[title='The Latest Activity column']
 
@@ -55,7 +76,7 @@ image::images/automation_status.png[title='This sections shows whether your most
 
 ==== On Demand Scripts (Admin only)
 
-On Demands Scripts appear only for admin users, and can be triggered manually from here. They will appear here when three conditions are met:
+On Demands Scripts appear only for admin users, and can be triggered manually from the Automation category on the Dashboard. They will appear here when three conditions are met:
 
 . The script is set as on demand
 . The script has no related entity
@@ -63,14 +84,13 @@ On Demands Scripts appear only for admin users, and can be triggered manually fr
 
 You can learn more about <<scripts>> in general.
 
-image::images/on_demand_scripts_dashboard.png[title='On Demand scripts in the dashboard view have the small file icon next to them. You can also see the Favourited windows with the heart icon.']
-
+image::images/on_demand_scripts_dashboard.png[title='On Demand scripts appear at the bottom of the Automations category in the navigation.']
 
 ==== Find anything
 
-At the top of the Dashboard, you'll find a powerful search box called Find Anything. Here you can find all manner of data in onCourse and have it accessible at your finger tips with only a few keystrokes. Simply type in what you're looking for, be it a contact's last name, a course code or even an invoice number and the search results should populate as you type, filling out with any matching result.
+At the top of the Dashboard, you'll find a powerful search box called Find Anything. Here you can find all manner of data in onCourse and have it accessible at your finger tips with only a few keystrokes. Simply type in what you're looking for, be it a contact's last name, a course code or even an invoice number and the search results should populate as you type, filling out with any matching result. You can also search contacts using email address or phone number.
 
-The results should in order of newest to oldest record.
+The results should in order of newest to oldest record. It will only show a small handful of results at first. Click 'View more' to see the full list.
 
 Feel free to experiment with what you can search for, it covers _a lot_ of data!
 
@@ -81,6 +101,11 @@ image::images/find_anything.png[title='Find Anything will help you find almost a
 This column will give you a simple, graphical representation of your recent enrolments and revenue from the past four weeks in an easy-to-read graph. As well as the visual graph, you'll also see the raw numbers of enrolments and revenue, as well as a breakdown of the number of courses you have set up in the system.
 
 The course breakdown will show you the last courses enrolled in, the courses with the highest number of people on a waiting list, the number of courses open for enrolment, and a detailed look at the number of courses currently classed as in development, cancelled, commenced and completed.
+
+[NOTE]
+====
+This can be hidden from other onCourse users by turning off their Invoice view permissions in User Roles
+====
 
 image::images/enrolments_revenue.png[title='The Enrolments & Revenue Column']
 

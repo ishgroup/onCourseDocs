@@ -206,6 +206,16 @@ This will open an accounts page. The account ID will be listed in the site's URL
 https://my_canvas_instance.instructure.edu.au/accounts/36 then you would enter 36 as the account ID, and only that number. You don't enter the URL. Once you've completed filling in the expected fields in onCourse, a button labelled 'Configure' will appear. Click this and a pop-up window will appear, asking you to log in to Canvas and authorise onCourse to integrate with your account.
 . Lastly, you'll need to turn on the integration script. You can do this by going to Automation, and enabling the 'Canvas Enrol' script. Make sure you hit the Save button before closing the window.
 
+==== Canvas additional features
+
+There are some additional features that can be added individually to the onCourse Canvas integration. These include the ability to pass additional id's to Canvas from onCourse, create a course from a Canvas blueprint, create a password for a new student, add a tutor to the course, and expiring/suspending a student's canvas account if all their canvas enrolments are completed.
+
+If you have the licence to amend scripts, make a copy of the 'canvas enrol' script and amend it by adding further lines into the canvas closure, https://www.ish.com.au/onCourse/doc/dsl/#CanvasScriptClosure[as demonstrated in this documentation].
+
+To use the Expire Students function, you'll need to manually create a new automation script, with https://www.ish.com.au/onCourse/doc/dsl/#CanvasExpireScriptClosure[the closure detailed in this documentation] as the 'script' content.
+
+Refer to the above links for more details about these additional functions.
+
 [[externalintegrations-serviceNsw]]
 === Service NSW Vouchers
 

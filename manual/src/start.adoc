@@ -64,6 +64,10 @@ smtp:
     mode: tls
     username: your_email@gmail.com
     password: your_email_password
+
+monitoring:
+  user: monitoring
+  password: password123
 ----
 
 At a minimum, you'll want to set the ip address to a reachable address on your server. Perhaps you'll have onCourse behind a firewall or load balancer or exposed directly to the internet on a public IP address. That's up to you. In order to run onCourse on a port lower than 1024 you will typically need to run it as root. Remember that onCourse includes functionality to write scripts which can then access the entire system as the user the server is running as, so where possible run onCourse as a non-privileged user or run it in a jail.
@@ -77,6 +81,54 @@ The license section allows you to limit concurrent users and disable some functi
 * unsafe
 
 Use 'unsafe' only if you are sure you want to send unencrypted mail across your network or the internet. That's usually a bad thing. If you want to use gmail to send outbound mail, you'll need to provide a valid username and password here, and also https://myaccount.google.com/lesssecureapps[relax security settings here]. Otherwise you can use your ISP's mail server, your office server or an MTA like exim you install locally.
+
+My setting a monitoring username and password you can monitor the server at the URL path /monitoring. A json response will be returned with the following fields:
+
+
+        {
+            "time": {
+                "current": 1649163079287,
+                "timezone": "Australia/Sydney",
+                "iso8601": "2022-04-05T12:51:19.287716Z",
+                "uptime": 89189
+            },
+            "network": {
+                "path": "/",
+                "port": 8182,
+                "ip": "127.0.0.1"
+            },
+            "environment": {
+                "java.version": "11.0.14",
+                "os.arch": "x86_64",
+                "java.vm.specification.name": "Java Virtual Machine Specification",
+                "java.vm.vendor": "Amazon.com Inc.",
+                "os.version": "12.1",
+                "java.vm.specification.vendor": "Oracle Corporation",
+                "java.vm.info": "mixed mode",
+                "java.vendor": "Amazon.com Inc.",
+                "java.vm.version": "11.0.14+9-LTS",
+                "os.name": "Mac OS X",
+                "java.vm.specification.version": "11",
+                "java.vm.name": "OpenJDK 64-Bit Server VM"
+            },
+            "license": {
+                "access_control": true,
+                "users.max": 99,
+                "college_key": "1234",
+                "users.current": 0,
+                "custom_scripts": true
+            },
+            "systemRuntime": {
+                "heap.used": 218615712,
+                "cpu.usage": 0,
+                "availableProcessors": 6,
+                "heap.total": 447741952,
+                "threads": 43
+            },
+            "onCourse": {
+                "version": "120.1234"
+            }
+        }
 
 === Invite new users
 
@@ -93,30 +145,7 @@ Put spaces between the fields. When you restart onCourse this file will be delet
 [[install-sslcert]]
 === SSL Certificate
 
-Then you'll need to create a certificate for your browser to connect to onCourse with. For testing you can use a self-signed certificate, but in production you'll definitely need a properly signed certificate for your domain. First create a PEM formatted certificate and key pair named "onCourseSSL.pem", complete with all intermediate certificates.
-
-[source,shell script]
-----
-openssl genrsa -aes256 -out onCourseSSL.key 4096
-----
-
-Enter any password at the prompt.
-
-[source,shell script]
-----
-openssl req -new -x509 -key onCourseSSL.key -out onCourseSSL.pem -days 825
-----
-
-Answer all the questions. The Common Name should be the fully qualified domain name of the onCourse Server you are deploying. At this point you should get this key signed by Let's Encrypt or another certifying authority. Then continue converting the certificate and key to pkcs12 and then to a keystore:
-
-[source,shell script]
-----
-openssl pkcs12 -export -out onCourseSSL.pkcs12 -in onCourseSSL.pem -inkey onCourseSSL.key -password pass:ish2008
-
-keytool -v -importkeystore -srckeystore onCourseSSL.pkcs12 -srcstoretype PKCS12 -destkeystore onCourseSSL.keystore -deststoretype PKCS12 -srcstorepass ish2008 -deststorepass ish2008 -noprompt
-----
-
-`keytool` comes bundled with the Java JDK. The final result is a file called onCourseSSL.keystore which you should put in the same directory as onCourse.yml.
+When onCourse first starts, it will create a self-signed SSL certificate in a file onCourseSSL.pem. This will ensure all traffic to onCourse is encrypted but if you want to remove browser warnings that you'll get with a self-signed certificate you should replace onCourseSSL.pem with a certificate signed by a trusted authority.
 
 [[install-serverLaunch]]
 === Launching server

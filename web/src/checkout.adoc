@@ -128,7 +128,31 @@ After a successful online enrolment process, the payer of the invoice will be em
 
 These automatic emails are sent based on your customisable invoice and enrolment confirmation email templates in onCourse.
 
+[[online_enrolments-checkoutQueries]]
+=== Checkout queries
 
+You can use queries on the end of any Checkout URL to automatically add items to a student's web cart. Items that can be automatically added are any course, class or product.
+
+Examples:
+
+    /checkout?course=ABC
+    /checkout?product=XYZ
+    /checkout?class=ABC-1
+
+Multiple codes can be added by separating them with a comma ','
+
+    /checkout?course=ABC,DEF
+
+Different entities can be combined using an ampersand '&'
+
+    /checkout?course=ABC,DEF&product=XYZ&class=GHI-1
+
+This opens up lots of avenues for automation to guide students through certain course paths, or bundling particular items together. You could also create an automation that sends a new checkout link to a student to enrol in the next level course upon completion of their last enrolment.
+
+[IMPORTANT]
+====
+Remember that items will need to be set as visible online in onCourse to appear in web checkout.
+====
 
 [[payment_options]]
 == Payment options
@@ -214,28 +238,4 @@ The credit amount cannot be altered; the transaction will always use the full am
 
 image::images/credit_online.png[title='The 'Previous credit' line shows the amount of credit available for the transaction']
 
-[[online_enrolments-checkoutQueries]]
-=== Checkout queries
 
-You can use queries on the end of any Checkout URL to automatically add items to a student's web cart. Items that can be automatically added are any course, class or product.
-
-Examples:
-
-    /checkout?course=ABC
-    /checkout?product=XYZ
-    /checkout?class=ABC-1
-
-Multiple codes can be added by separating them with a comma ','
-
-    /checkout?course=ABC,DEF
-
-Different entities can be combined using an ampersand '&'
-
-    /checkout?course=ABC,DEF&product=XYZ&class=GHI-1
-
-This opens up lots of avenues for automation to guide students through certain course paths, or bundling particular items together. You could also create an automation that sends a new checkout link to a student to enrol in the next level course upon completion of their last enrolment.
-
-[IMPORTANT]
-====
-Remember that items will need to be set as visible online in onCourse to appear in web checkout.
-====

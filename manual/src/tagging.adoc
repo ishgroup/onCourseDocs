@@ -1,5 +1,5 @@
 [[tagging]]
-== Tags and Tag Groups
+== Tag Groups and Checklists
 
 [[tagging-usingTags]]
 === Tags in onCourse
@@ -207,3 +207,81 @@ When adding tags, click the field to see a drop down box of each of the tags ava
 When removing tags, select 'Remove Tags', click the field and select the tags you'd like to remove. The tags listed are all available tags, so not all records may be tagged with what is being displayed. You should ensure that you're selecting the correct records first before making any updates.
 
 image::images/bulk_edit_tags.png[title='Adding a tag to a number of class records in bulk']
+
+[[tagging-checklists]]
+== Checklists
+
+Checklists are a powerful tool for managing your internal workflows, as well as an additional filtering tool for your list views. Plan out your step-by-step processes and save them as separate checklists to track progress on scheduling a class, collecting information, or anything you can think of that you want to keep track of. Create rules that control when a checklist becomes visible. E.G. You may have an enrolment checklist to track supporting documentation that you only want to display when a document is attached to that enrolment, or a class preparation checklist
+
+image::images/checklists.png[title='The main checklists window']
+
+Checklists can be added to almost any record type in onCourse.
+
+You can find Checklists in the 'Configuration' navigation group, or by searching for Checklists from the dashboard search.
+
+Open a checklist by clicking on it.
+
+To go back from a checklist to the checklist overview, click the 'Checklists' heading in the left-side column.
+
+[[tagging-newChecklist]]
+=== Creating a new checklist
+
+From the Checklists window, click the + or Add New button to create a new checklist.
+
+image::images/blank_checklist.png[title='A new checklist. Requires a name and at least one assigned record type']
+
+Checklists must be given a name, and have at least one record type associated with it. Checklists can appear on multiple record types. You can also set a colour for each checklist.
+
+Click 'Add a task' to add a new task to the checklist. You can create as many tasks as you need. Rearrange tasks into a specific by clicking and dragging the dots just to the left of the task title.
+
+[[tagging-checklistDisplayRules]]
+=== Checklist display rules
+
+When setting which record types a Checklist will be visible on, a switch appears to the right of each record type you select called 'Add display rule'.
+
+This lets you use the <<search-advanced,onCourse Query Language>> to apply rules around when this checklist appears on records of this type.
+
+image::images/checklist_display_rule.png[title='This display rule is active only for applications and will only show this checklist on applications that have come from online e.g. SOURCE_WEB. It will show on all enrolment records']
+
+This will allow you to set up more complex groups of checklists without over-cluttering your views unnecessarily.
+
+[[tagging-usingChecklists]]
+=== Using checklists
+
+Checklists appear within the record edit view. They can be collapsed and expanded by clicking the chevron next to the checklist title.
+
+Click an item to mark it as done. By default, marked items will disappear from the list.
+
+image::images/checklist_hidden.png[title='In the default mode, marked items are removed from the list.']
+
+You can change this behaviour so marked items appear crossed out by clicking the options icon and selecting 'Show completed tasks'.
+
+image::images/checklist_show_completed.png[title='Click Show completed tasks to see marked items.']
+
+image::images/checklist_showing.png[title='Marked items will now display within the checklist.']
+
+Marked items will now display within the checklists.
+
+=== Using multiple checklists in one record
+
+You can use multiple checklists in one record type. They will display together within the record, and can be collapsed or expanded as required.
+
+image::images/checklist_multiple.png[title='An example of multiple checklists in the one record.']
+
+[[tagging_checklistFilters]]
+=== Checklist filters
+
+Just like with tags and filters, you can filter your list views by completed or incompleted checklist items.
+
+While in a list view, at the top of the left-hand filters column, click 'Checklists' to select a task status. You can choose between completed items or incomplete items.
+
+image::images/checklist_list_view.png[title='Select Checklists from the filter list in the left-hand column.']
+
+[IMPORTANT]
+====
+*Completed items* will show you records where the selected items have been marked as done. *Incomplete items* will show you records where the selected items are not yet marked as done.
+====
+
+Next, select the items you want to filter by. Any records that match your selection will appear in the list view.
+
+image::images/checklist_filters.png[title='Select Checklists from the filter list in the left-hand column.']

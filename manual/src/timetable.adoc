@@ -1,25 +1,29 @@
 [[timetable]]
 == Timetables
 
-When scheduling classes, it can be helpful to know at a glance when a room or a site might have some availability free to book up, or is booked out solidly for the next four weeks. onCourse allows you to track class sessions scheduled at both the site level, and the room level, making it easier to spot holes in their availability quickly and easily.
+When scheduling classes, it can be helpful to know at a glance when a room or a site might have some availability free to book up, or is booked out solidly for the next four weeks. onCourse allows you to track scheduled class sessions across a variety of records using out detailed Timetable view.
 
 [[timetable-access]]
 === Accessing Timetable View
 
-The Timetable view can be accessed from the Dashboard, or from within either a Site or a Room record.
+The Timetable view can be accessed from the Dashboard in the Scheduling category, or from within either a site, room, tutor or student record.
 
-To find a timetable view for a specific site or room:
+* Search for timetable on the dashboard for a full timetable of all classes
+* For student and tutor specific timetables, go to the student or tutor record and click the timetable link
+* For specific sites or rooms, go to the site or room record and click the timetable link
 
-. Open the Sites or Rooms window, whichever is applicable
-. If in three-column view, click the site or room you wish to view, then click the Timetable button in the right-hand column
-. If in two-column view, double-click the site or room you wish to view, then click the Timetable button
-
-image::images/sites_timetable_icon.png[title='The Sites window in three-column view,with the Timetable icon in the right-hand column']
+image::images/sites_timetable_icon.png[title='The Sites window in three-column view with the timetable link in the right-hand column']
 
 [[timetable-actions]]
 === Timetable Window
 
-The Timetable window features a mini-calendar marking today's date, the date selected and any days with sessions booked, along with three separate time of day filters; before 12pm, 12pm-6pm, and after 6pm. Selecting any combination of these filters will filter out results that appear outside these parameters.
+The Timetable window features a mini-calendar marking today's date, the date selected and any days with sessions booked.
+
+The mini calendar also acts as a *heatmap*, giving you an at-a-glance idea of which days are relatively booked up versus which days have more space. The deeper the colour, the more relatively busy that day is compared to the others.
+
+image::images/timetable_heatmap.png[title='The heatmap shows at a glance which days are more booked out with classes than others']
+
+Additionally, there are three separate time of day filters; before 12pm, 12pm-6pm, and after 6pm. Selecting any combination of these filters will filter out results that appear outside these parameters.
 
 image::images/timetable_standard_view.png[title='The default Timetable view']
 
@@ -27,37 +31,44 @@ You can also create custom filters using our Advanced Query Language, or AQL, a 
 
 You will always see a list of current sessions booked, the date, session length, session times, site and room information, and the name of the sessions tutors, if they're set. You can also see any tags and associated tag colours for each class.
 
-You can minimise the tags view to just the coloured dots by clicking any tag in the window.
-
 The class name can be clicked to open the applicable class record.
 
 [[timetable-views]]
-=== Timetable Views
+=== Timetable View Options
 
-The timetable offers three different views that each display data in a different way: Compact, Gap (Days) and Gap (Hours).
-Each view will show the date, time and session length of a class, as well as the tutor, the room, and the site name.
-It will also show any associated tags and their tag colours.
+The timetable offers three different views that each display data in a different way: Compact, Gap (Days) and Gap (Hours), as well as options for setting how you view tags, and some other grouping options.
 
-[[timetable-compact]]
-==== Compact View
+Each view will show the date, time and session length of a class, as well as the tutor, the room, and the site name. It can also show any associated tags and their tag colours. The view options available are:
 
-Shows all booked sessions only. Does not show any available spaces or timetable gaps.
-
+* *Compact View* - Shows all booked sessions only. Does not show any available spaces or timetable gaps.
++
 image::images/timetable_compact.png[title='The Timetable window in Compact view']
 
-[[timetable-gap-days]]
-==== Gap (Days)
-
-Shows any days that are fully available (no bookings that day), as well as all currently booked sessions
-
+* *Gap (Days)* - Shows any days that are fully available (no bookings that day), as well as all currently booked sessions
++
 image::images/timetable_gap_days.png[title='The Timetable in Gap (days) view mode']
 
-[[timetable-gap-hours]]
-==== Gap (Hours)
-
-Shows an hourly breakdown of each day from 9am to 6pm. For Sites, it will group each class by the hour. You can see a breakdown of each class within the hour by clicking the down chevron. For Rooms, it will display the name of the class for each hour it's booked. Any available times are marked 'available'.
-
+* *Gap (Hours)* - Shows an hourly breakdown of each day from 9am to 6pm. For Sites, it will group each class by the hour. You can see a breakdown of each class within the hour by clicking the down chevron. For Rooms, it will display the name of the class for each hour it's booked. Any available times are marked 'available'.
++
 image::images/timetable_gap_hours.png[title='Gap (hours) view mode shows classes grouped by hours of the day']
+
+[[timetable-tagViews]]
+=== Tags in Timetables
+
+You can change how tags are viewed as part of the timetable using the tags option drop down
+
+* *Tag names* - Displays the tag colour and tag name in full
+* *Tag dots* - Displays the coloured tag dots only
+* *Tag off* - Hides the tags from timetable view
+
+[[timetable-grouping]]
+=== Grouping options
+
+There are three grouping options for you choose from for the timetable view. Each view still breaks down classes per day, but these options will allow you to break the options down even further, either by tutors or by rooms.
+
+* *No grouping* - Works like per usual, classes are grouped by date only
+* *Group by tutor* - Groups classes per date, per tutor
+* *Group by room* - Groups classes per date, per room
 
 [[timetable-customFilters]]
 === Creating Custom Timetable Filters
@@ -66,25 +77,9 @@ You can apply custom filters to the timetable utilising the onCourse advanced qu
 
 image::images/timetable_filter_create.png[title='Creating a filter is easy thanks to the drop-down selections for each entity']
 
-To create a new search filter, make a selection from the drop down box in the search bar at the bottom of the window.
-You can choose from the following entities:
-
-* Sessions
-* Tutors
-* Contacts
-* Classes
-* Courses
-* Student names
-* Rooms
-* Sites
-
-Selections in the drop down box show you which entities the data is connected across within the onCourse database. E.G. the courses selection shows how the class session is connected to the class (called CourseClass in the database), which is connected to Course. It appears like so:
-
-`session.courseClass.course.`
-
 One example of a simple filter would be if you wanted to see when all your courses with Music in the name are on, you would select , then adding the following AQL code:
 
-`name contains "Music"`
+`courseClass.course.name contains "Music"`
 
 AQL uses pre-selectable options to choose from, which makes creating filters like this, or even far more complex ones, very simple.
 

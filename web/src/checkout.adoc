@@ -154,6 +154,15 @@ This opens up lots of avenues for automation to guide students through certain c
 Remember that items will need to be set as visible online in onCourse to appear in web checkout.
 ====
 
+=== Suggestions box
+
+If you want to make use of the <<courseRelations>> to show suggested items next to your website checkout, you can add the following html code to the available next to the checkout block on the /checkout page. It's important to remember to set the block type to 'HTML'.
+
+    <section class="ish__suggestions">
+     <h3 id="suggestions">Suggestions</h3>
+     <div data-cid="checkout-suggestions" class="oncourse-checkout oncourse-checkout-suggestions"></div>
+    </section>
+
 [[payment_options]]
 == Payment options
 

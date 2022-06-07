@@ -224,11 +224,11 @@ This integration allows for the automatic validation and redemption of Service N
 There are a number of steps to getting this integration working so ensure that you go through them carefully, as missing any step will cause the entire process to not work.
 
 . Create three new custom fields and ensure that you match exactly the details below:
-* *Name* = Creative Kids Student Full Name, *key* = creativeKidsStudentName, *Data Type* = Text, *Record Type* = Voucher
-* *Name* = Creative Kids Voucher Number, *key* = serviceNswVoucher, *Data Type* = Pattern Text, *Record Type* = Voucher, *Pattern* = 9[0-9a-zA-Z]{15}
-* *Name* = Service NSW Redeemed On, *key* = serviceNswRedeemedOn, *Data Type* = Date time, *Record Type* = Voucher
+* *Name* = Creative Kids Student Full Name, *key* = creativeKidsStudentName, *Data Type* = Text, *Record Type* = Sale (Voucher)
+* *Name* = Creative Kids Voucher Number, *key* = serviceNswVoucher, *Data Type* = Pattern Text, *Record Type* = Sale (Voucher), *Pattern* = 9[0-9a-zA-Z]{15}
+* *Name* = Service NSW Redeemed On, *key* = serviceNswRedeemedOn, *Data Type* = Date time, *Record Type* = Sale (Voucher)
 +
-. Create a new Voucher Type, called 'Creative Kids $100 Voucher'. This voucher will be used to allow people to enrol online using their CK vouchers. The voucher type should be set to cost $0 and redeem for value of $100.
+. Create a new Voucher Type, called 'Creative Kids $100 Voucher'. This voucher will be used to allow people to enrol online using their CK vouchers. The voucher type should be set as 'can be redeemed for value', with a value of $100 and cost of $0. You'll also need to set a data collection rule for the voucher type, use whatever choice you deem suitable.
 . You'll then need to add relations between the kids courses you'll want to allow folks to enrol in using this voucher. Make sure to use a relationship type that includes the 'Suggestion' cart action. By default the 'Similar courses' relationship will use this. This means that in the Checkout, users will be suggested that they add the voucher to their cart.
 +
 . Set up a new data collection form for Vouchers, and add into it two of your custom field questions; Creative Kids Student Full Name and Creative Kids Voucher Number.

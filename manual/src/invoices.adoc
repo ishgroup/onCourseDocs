@@ -47,11 +47,11 @@ While you will usually create an invoice through using Checkout, it is sometimes
 
 Invoices created manually can have an invoice date in the past or the future, although the default setting is today. Invoices created with a date in the past can be created prior to the financial period finalised date. They can only be created for unlocked periods. If you create a invoice in the past (or future) the general ledger transaction lines will be created for that date. You cannot pay an invoice though that has a creation date in the future, as it doesn't yet exist with an outstanding balance.
 
-Remember to associate each invoice line with the correct income account code. Once you save the invoice you will not be able to change this code.
+Remember to associate each invoice line with the correct income account code. Once you save the invoice you will not be able to change this code. Only select option 'Other' if you know what you are doing. Read the Caution box for more information.
 
-[WARNING]
+[CAUTION]
 ====
-When selecting an income account, there is an option called 'Other' which allows you to set any active account in your system, even ones that aren't designated income accounts. In almost all cases, do not select this. If you select it by accident, clear the unsaved invoice and start again
+When selecting an income account during manual invoice creation, there is an option called 'Other' which allows you to set any active account in your system, even ones that aren't designated income accounts. In almost all cases, DO NOT SELECT this option. If you select it by accident, clear the unsaved invoice and start again. Specifically, if you select an expense account this will create a transaction trail from asset to expense account, instead of the usual asset to liability transaction.
 ====
 
 Each invoice line can have a discount applied by selecting one from the drop-down box that appears. Only valid discounts can be selected, and they can only be set during invoice creation. They cannot be edited after the invoice has been saved.

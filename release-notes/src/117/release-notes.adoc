@@ -1,0 +1,34 @@
+= Release 117
+26 July. 2022
+
+This latest release of onCourse adds some small quality of life improvements, as well as a number of bug fixes. Some highlights include the removal of a link between 'Country of Birth' and 'Indigenous status' in the AVETMISS 8 Export, the addition of a 'Printed Certificate' column in the Outcomes list view, and some improved performance when editing records with lots of data in them.
+
+== Minor features
+
+* Improved perormance when updating records with lots of data associated with them `OD-17212`
+* In the AVETMISS 8 Export, Indigneous status is no longer affected by the student's country of birth, as per NCVER guidelines `OD-17355`
+* The validation from the field 'Level' in Qualification records has been removed. `OD-14722`
+* Added a new column available for use in the Outcomes list view, called 'Printed Certificate'. This simply shows whether the outcome is attached to at least one printed, non-revoked certificate or not. If it does, the column will show 'Yes', otherwise it will be empty. `OD-14203`
+
+
+== Fixes
+
+* Fixed an issue where documents would sometimes show the 'discard changes' message after first upload `OD-17370`
+* Fixed an issue where changing the session start time wouldn't adjust the session end time and tutor roster correctly `OD-17369`
+* Fixed an issue where saving a Qualification sometimes wouldn't update record save state `OD-17357`
+
+* Fixed an issue that could cause tagging AQL requests to not find records `OD-17352`
+* Fixed an issue where documents that were attached to a course and had the 'show in portal' switch 'off' would show in the portal. These documents no longer show in the portal, as expected. `OD-17339`
+* Fixed an issue where the calendar could open to a different date in browsers that aren't Google Chrome `OD-17336`
+* Fixed an issue where the calendar date picker wasn't working in the Calendar view `OD-17334`
+* Fixed an issue that could cause a list view to stop working for some users if they tried adding certain columns `OD-17317`
+* Fixed an issue where sorting by classes by session could cause problems in the classes list view `OD-17316`
+* Fixed an issue where the intermediate certificate for the server wasn't properly generated on system startupo/restart `OD-17292`
+
+
+
+
+
+
+
+

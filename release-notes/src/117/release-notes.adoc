@@ -9,6 +9,7 @@ This latest release of onCourse adds some small quality of life improvements, as
 * In the AVETMISS 8 Export, Indigneous status is no longer affected by the student's country of birth, as per NCVER guidelines `OD-17355`
 * The validation from the field 'Level' in Qualification records has been removed. `OD-14722`
 * Added a new column available for use in the Outcomes list view, called 'Printed Certificate'. This simply shows whether the outcome is attached to at least one printed, non-revoked certificate or not. If it does, the column will show 'Yes', otherwise it will be empty. `OD-14203`
+* Added the ability to use 'checklist task checked' and 'checklist complete' as automation triggers
 
 
 == Fixes
@@ -24,11 +25,5 @@ This latest release of onCourse adds some small quality of life improvements, as
 * Fixed an issue that could cause a list view to stop working for some users if they tried adding certain columns `OD-17317`
 * Fixed an issue where sorting by classes by session could cause problems in the classes list view `OD-17316`
 * Fixed an issue where the intermediate certificate for the server wasn't properly generated on system startupo/restart `OD-17292`
-
-
-
-
-
-
-
-
+* Fixed an issue that would stop the Canvas integration from configuring correctly
+* Fixed an issue around timings displayed in the contact insights panel

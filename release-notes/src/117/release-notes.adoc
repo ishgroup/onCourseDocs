@@ -1,3 +1,4 @@
+
 = Release 117
 26 July. 2022
 
@@ -5,11 +6,12 @@ This latest release of onCourse adds some small quality of life improvements, as
 
 == Minor features
 
-* Improved perormance when updating records with lots of data associated with them `OD-17212`
+* Improved performance when updating records with lots of data associated with them `OD-17212`
 * In the AVETMISS 8 Export, Indigneous status is no longer affected by the student's country of birth, as per NCVER guidelines `OD-17355`
 * The validation from the field 'Level' in Qualification records has been removed. `OD-14722`
 * Added a new column available for use in the Outcomes list view, called 'Printed Certificate'. This simply shows whether the outcome is attached to at least one printed, non-revoked certificate or not. If it does, the column will show 'Yes', otherwise it will be empty. `OD-14203`
 * Added the ability to use 'checklist task checked' and 'checklist complete' as automation triggers
+* Added 
 
 
 == Fixes
@@ -17,7 +19,6 @@ This latest release of onCourse adds some small quality of life improvements, as
 * Fixed an issue where documents would sometimes show the 'discard changes' message after first upload `OD-17370`
 * Fixed an issue where changing the session start time wouldn't adjust the session end time and tutor roster correctly `OD-17369`
 * Fixed an issue where saving a Qualification sometimes wouldn't update record save state `OD-17357`
-
 * Fixed an issue that could cause tagging AQL requests to not find records `OD-17352`
 * Fixed an issue where documents that were attached to a course and had the 'show in portal' switch 'off' would show in the portal. These documents no longer show in the portal, as expected. `OD-17339`
 * Fixed an issue where the calendar could open to a different date in browsers that aren't Google Chrome `OD-17336`
@@ -27,3 +28,7 @@ This latest release of onCourse adds some small quality of life improvements, as
 * Fixed an issue where the intermediate certificate for the server wasn't properly generated on system startupo/restart `OD-17292`
 * Fixed an issue that would stop the Canvas integration from configuring correctly
 * Fixed an issue around timings displayed in the contact insights panel
+* Fixed an issue where transferred enrolment details weren't correctly passed to the checkout when transferring an enrolment `OD-17423`
+* Fixed an issue where the find related menu would stick open for Firefox users `OD-17420`
+* Fixed an issue where the entity name field was accidentally set as required in automation scripts `OD-17414`
+* Fixed a UI issue that could occur when editing some fields in the contact view. `OD-17412`

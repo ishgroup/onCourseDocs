@@ -4,7 +4,7 @@
 
 This latest release of onCourse adds some small quality of life improvements, as well as a number of bug fixes. Some highlights include the removal of a link between 'Country of Birth' and 'Indigenous status' in the AVETMISS 8 Export, the addition of a 'Printed Certificate' column in the Outcomes list view, and some improved performance when editing records with lots of data in them.
 
-== Minor features
+=== Minor features
 
 * Improved performance when updating records with lots of data associated with them `OD-17212`
 * In the AVETMISS 8 Export, Indigneous status is no longer affected by the student's country of birth, as per NCVER guidelines `OD-17355`
@@ -13,7 +13,7 @@ This latest release of onCourse adds some small quality of life improvements, as
 * Added the ability to use 'checklist task checked' and 'checklist complete' as automation triggers
 
 
-== Fixes
+=== Fixes
 
 * Fixed an issue where documents would sometimes show the 'discard changes' message after first upload `OD-17370`
 * Fixed an issue where changing the session start time wouldn't adjust the session end time and tutor roster correctly `OD-17369`
@@ -31,3 +31,25 @@ This latest release of onCourse adds some small quality of life improvements, as
 * Fixed an issue where the find related menu would stick open for Firefox users `OD-17420`
 * Fixed an issue where the entity name field was accidentally set as required in automation scripts `OD-17414`
 * Fixed a UI issue that could occur when editing some fields in the contact view. `OD-17412`
+
+
+== New in Release 117.3151
+19th August 2022
+
+=== Minor Features
+
+* Added a new abandoned cart reminder email `OD-16973`
+* Added method to show percentage of attendance for students per enrolment `OD-17338`
+* Time now shows in Date Time column in Messages list view `OD-17394`
+* Optimised how Notes work. The tick has been removed so yo now simply need to just add your note and then hit Save. There will be a very short period after hitting Enter on your note where the screen will refresh before you can hit Save. This is the server validation completing and it should be more than fast enough to not interfere with your workflow. `OD-17422`
+* Removed the warning that shows up when exporting individual classes and enrolments for AVETMISS. `OD-17424`
+
+=== Fixes
+
+* Fixed an issue where cancelling an enrolment would cause the checkout to open in a new tab as though the student was transferring `OD-17455`
+* Separated tutor and student timetable links for contacts that re classed as both types. `OD-17298`
+* Fixed gender search auto-select options. They now display correctly again. `OD-17330`
+* Fixed issue where it looked like you could dete a parent tag from the tag menu. Parent tags can only be deleted from the cogwheel menu. `OD-17430`
+* Fixed an issue where the tutor payable duration did not update when session duration was updated via the bulk edit tools. `OD-17439`
+* Fixed an issue that could cause the Batch Payments In 'Processing' button to get stuck `OD-17442`
+* Further UI optimisations to the improve responsiveness when clicking in and out of different fields. `OD-17446`

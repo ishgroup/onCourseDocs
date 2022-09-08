@@ -4,7 +4,7 @@
 [[search-introduction]]
 === Introduction
 
-onCourse has powerful tools for searching across every piece of data you have collected. You can search in lists, perform basic and advanced searches on any attribute of the data and use these searches to write scripts and reports. In this chapter we'll start from the simplest tools and then show you more advanced possibilities.
+onCourse has powerful tools for searching across every piece of data you have collected. You can search in lists, perform basic and advanced searches on any attribute of the data and use these searches to write scripts and reports. In this chapter we'll start from the simplest tools and then show you the more advanced possibilities that onCourse allows.
 
 [[search_findAnything]]
 === Dashboard search
@@ -153,7 +153,7 @@ BETWEEN can be used with a star closure ( * ), placed either directly before or 
 createdOn not * .. 01/01/2018
 ....
 +
-Both the above and below queries will show you the same data, all records created before 01/01/2018. The top query asks all records created before this date to be excluded thanks to the 'Not' operator, while the bottom query asks for all records created after this date to be shown thanks to the 'In' operator.
+Both the above and below queries will show you the same data, all records created after 01/01/2018. The top query asks all records created before this date to be excluded thanks to the 'Not' operator, while the bottom query asks for all records created after this date to be shown thanks to the 'In' operator.
 +
 ....
 createdOn in 01/01/2018 .. *
@@ -285,7 +285,7 @@ _@kids_ can then be called in the construction of other queries
 @kids and isMale is true
 ....
 +
-is equivalent to Age <= 12 and isMale is true
+is equivalent to Age < = 12 and isMale is true
 
 LIKE or ~::
 The LIKE (~) operator is used to search a field for a specific pattern.

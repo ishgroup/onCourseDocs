@@ -13,7 +13,7 @@ image::images/security_settings.png[title='The Security window']
 The first section is called 'Settings', containing onCourse's main security related preferences, including rules around enforcing two-factor authentication. You have the following preferences to switch on or off:
 
 Automatically disable inactive user accounts::
-this will disable accounts that haven't logged in after a set number of days. This could be useful for disabling the accounts of past employees if you don't have the time to manage it yourself.
+This will disable accounts that haven't logged in after a set number of days. This could be useful for disabling the accounts of past employees if you don't have the time to manage it yourself.
 
 Require better passwords::
 When enabled, this feature demands the use of a more secure password. When enabled, it will typically reject any common passwords and enforce a higher standard of password to be used by all users.
@@ -30,7 +30,7 @@ When enabled, any user account that fails to login with the correct password thi
 [[users-settings]]
 === Users
 
-In user records you can add to or edit existing users details such as their name, email address, access level or send a password reset request. Only users with admin rights will be able to see, edit and add users, everyone else can only edit their own user settings. There are no limits to the number of users you can create in onCourse. Users should be deactivated if they leave your organisation.
+In user records you can add to or edit existing users details such as their name, email address, access level or send a password reset request. Only users with admin rights will be able to see, edit, and add users. Everyone else can only edit their own user settings. There are no limits to the number of users you can create in onCourse. Users should be deactivated if they leave your organisation.
 
 Every person in the organisation who uses onCourse should have their own user account. We do not recommend users 'share' a login as various user layout preferences are saved against each user account. Important records created in onCourse like invoices, payments and enrolments are linked to the user who created them. If you need to follow up any discrepancies, this is made much easier when your staff each have their own user.
 
@@ -56,7 +56,7 @@ When creating a new user, the 'Save' button will read as 'Invite' and, when clic
 
 The new user will not be able to login until they have accepted the invitation. If there are issues with the invitation not being received, the 'Save' button will appear as a 'Resend Invite' allowing you to resend the invitation as many times as required.
 
-image::images/resend_invite.png[title='Click "Resend Invite" in order to resend an invite to a user]
+image::images/resend_invite.png[title=Click "Resend Invite" in order to resend an invite to a user]
 
 [[users-changePassword]]
 ==== Resetting passwords
@@ -130,12 +130,14 @@ You can edit an existing user role by clicking on its heading in the left-hand p
 [[users-rolesAccess]]
 ===== User Role levels of access
 
+* *Hide:* Some processes only have one level of access - allow. If this option is not ticked, it means the ability to run the process is denied and the element is hidden from use.
 * *View:* A view permission only allows the contact to see data already created, but does not allow existing records to be edited or new records to be created.
+* *Print:* Allows printing of reports associated with this record type
 * **Edit:**Allows both edit and view rights.
 * *Create:* Allows the creation of new records, edit and view rights.
 * **Delete:**Allows record deletion where permitted by onCourse validation. Linked and locked records can not be deleted just because a user has delete rights.
-* *Print:* Allows printing of reports associated with this record type
-* *Hide:* Some processes only have one level of access - allow. If this option is not ticked, it means the ability to run the process is denied and the element is hidden from use.
+
+
 
 
 ==== What can you edit in User Roles?
@@ -149,40 +151,40 @@ People and companies::
 * *Contact:* this refers to all onCourse students, tutors and companies. Full create rights are recommended for any user who needs to process enrolments as new contacts are often created at this time.
 
 Course Management::
-* *Course:* permission to work with courses
-* *VET course details:* this only relates to adding or removing unit of competency details from a course
-* *Class:* permission to work with classes
-* *Enrolment outcomes:* only edit rights are editable. This allows the user to set outcome results or change the outcomes linked to a student's record
-* *Budget:* viewing the class budget can be disabled
-* *Session:* this permission relates to sessions as they belong to classes
-* *Waiting list:* permission to work with all wait list records
+* *Course:* Permission to work with courses
+* *VET course details:* This only relates to adding or removing unit of competency details from a course
+* *Class:* Permission to work with classes
+* *Enrolment outcomes:* Only edit rights are editable. This allows the user to set outcome results or change the outcomes linked to a student's record
+* *Budget:* Viewing the class budget can be disabled
+* *Session:* This permission relates to sessions as they belong to classes
+* *Waiting list:* Permission to work with all wait list records
 
 VET Management::
-* *Qualification reference data:* the only permission available here is edit, allowing you to add your choice of nominal hours.
-* *Certificate:* this relates to VET Statements of Attainment and Qualifications only. All contacts with class print permissions can create non-vocational certificates of attendance.
+* *Qualification reference data:* The only permission available here is edit, allowing you to add your choice of nominal hours.
+* *Certificate:* This relates to VET Statements of Attainment and Qualifications only. All contacts with class print permissions can create non-vocational certificates of attendance.
 * *Print certificate without verified USI:* This allows VET certificates to be printed when the student has a USI on record that has not yet been verified. A warning to the user will still be shown. This only applies to certificates created after 1/1/2015
 * *Print certificate without USI:* This allows VET certificates to be printed when the student has no USI on record. A warning to the user will still be shown. This only applies to certificates created after 1/1/2015
 
 Resources::
-* *Site:* view cannot be disabled, allows user to create new and edit current Sites.
-* *Room:* view cannot be disabled, allows user to create new and edit current Rooms.
+* *Site:* View cannot be disabled, allows user to create new and edit current Sites.
+* *Room:* View cannot be disabled, allows user to create new and edit current Rooms.
 
 Financial::
 * *Enrolment:* Create permission needed for an onCourse user to use Checkout
 * *Custom enrolment discount:* Allow permission gives the ability for any manual discount to be added to any enrolment processed through Checkout.
 * *Applications:* Lets the user access course applications from prospective students.
-* *Discount:* This permission relates to the creation of discount strategies. Discounts will auto apply to any applicable enrolment regardless of permission here. Also the ability to link discounts to classes, corporate passes, concession types and membership types.
+* *Discount:* This permission relates to the creation of discount strategies. Discounts will auto apply to any applicable enrolment regardless of permission here. Also the ability to link discounts to classes, corporate passes, concession types, and membership types.
 * *Tutor roles:* These roles determine pay rates for teaching staff.
 * *Tutor pay:* This permission relates to the creation and editing of payslips.
-* *Override tutor session payable time:* allows user to unlock and modify a tutor's payable time manually
-* *Bulk confirm tutor wages:* allows users to click the 'confirm now' button in the Generate tutor payroll sheet that confirms all the unconfirmed pay lines
+* *Override tutor session payable time:* Allows user to unlock and modify a tutor's payable time manually
+* *Bulk confirm tutor wages:* Allows users to click the 'confirm now' button in the Generate tutor payroll sheet that confirms all the unconfirmed pay lines
 * *Invoice:* This permission relates to the creation of manual invoices (invoices not created as part of the Checkout process).
-* *Credit note:* Allow the creation of manual credit notes. This permission is not needed for the creation of automatic credit notes during enrolment or class cancellation.
+* *Credit note:* Allows the creation of manual credit notes. This permission is not needed for the creation of automatic credit notes during enrolment or class cancellation.
 * *Payment In:* Permission relates only to manual payment in records, not those created during Checkout.
 * *Payment Out:* This permission is about creating refunds, usually processed in real time back to payer's credit cards.
 * *Payment Method:* This allows the user to change the payment method when accepting payments.
 * *Account:* Account settings for onCourse chart of accounts
-* *Transaction:* general ledger transaction records created during all financial transactions. These can only be viewed, never edited or manually created.
+* *Transaction:* General ledger transaction records created during all financial transactions. These can only be viewed, never edited or manually created.
 * *Financial preferences:* The onCourse preferences that set the default accounts for various transaction types
 * *Banking:* Allow permission to run the bank process
 * *Reconciliation:* Allow permission to reconcile payments
@@ -198,15 +200,15 @@ Special actions::
 * *Contact merging:* Merge duplicate student records
 * *Enrolment cancellation and transferring:* Cancel or transfer individual enrolments and create a credit note
 * *Export AVETMISS:* Export training data for government reporting
-* *Data import:* import data into onCourse
+* *Data import:* Import data into onCourse
 * *Override tutor pay rate:* Allow a local override at the class level to any manually set pay rate
 * *Edit/Delete Notes:* Gives permission to edit and delete record note items
 
 Messaging::
 * *Email up to 50 contacts:* This permission is useful for admin staff who may need to notify a class of students about changes at a time.
-* *Email over 50 contacts:* This permission is most appropriate to marketing staff who need to bulk email large amounts of students at the same time.
+* *Email over 50 contacts:* This permission is most appropriate to marketing staff who need to bulk email a large amounts of students at the same time.
 * *SMS up to 50 contacts:* This permission is for admin staff who may need to notify a class of students about changes.
-* *SMS over 50 contacts:* This permission is most appropriate to marketing staff.
+* *SMS over 50 contacts:* This permission is most appropriate to marketing staff who need to bulk SMS a large amount of students at the same time.
 
 Web and content management::
 * *Documents:* Permissions relating to documents used on the public website, inside onCourse and available via the portal
@@ -239,7 +241,7 @@ Two factor authentication (2FA) is an added layer of security for users accessin
 At every login attempt you will be encouraged to enable 2FA, and only once it has been enabled will this warning stop.
 This can be ignored by clicking 'Maybe Later'.
 
-image::images/2fa_notification.png[title='Login window']
+image::images/2fa_notification.png[title='Login window suggesting the implementation of 2FA']
 
 2FA means that there are two 'secrets' a user needs to know to successfully log in to your onCourse application. One secret is the password set for the user account. The second 'secret' is a code that requires a device such as a smart phone with a TOTP (time-based one time password) application such as https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator[Google
 Authenticator] installed, with an account linked to the onCourse user account. This service generates a unique code every 30 seconds. To login successfully you will need both the user password and a current token.
@@ -251,7 +253,7 @@ When 2FA is enabled, after initial login there is a third field that asks for th
 
 To enable 2FA, simply click 'Enable' when prompted at the login window.
 
-image::images/enter_2fa_code.png[title='Window you see when trying to enable your own two factor authentication']
+image::images/enter_2fa_code.png[title='Window you see to input your 2FA code']
 
 Have your mobile phone handy while you do this as you will need to install the TOTP software as the first part of the process. Search for 'Google Authenticator' in your phone's app store and install it.
 

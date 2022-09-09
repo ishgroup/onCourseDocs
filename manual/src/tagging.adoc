@@ -6,7 +6,7 @@
 
 Tagging in onCourse is a powerful tool that allows you to add additional hierarchical information to records in a way that can be easily used for searching and grouping records. When specifically related to Course records, tags are flexible ways for you to categorise your data and organise the navigation of your website.
 
-Tag groups applied to other record types can be used for internal navigation and grouping, but will not affect the website.
+Tag groups applied to record types other than courses and classes and can be used for internal navigation and grouping, but will not affect the website.
 
 Tags can be created and edited by navigating to the Tags window. This will bring up a list of Tag groups. By default, onCourse will have a special tag group called Subjects that exists in your new database, whose name cannot be changed. Tags are assigned colours that display alongside each tag throughout onCourse, to help identify them quickly.
 
@@ -23,9 +23,9 @@ The main tag group, used to drive your website and in the export of courses and 
 
 You can search for individual tag groups or tags by typing their name in to the Filter items search at the top of the left-hand column.
 
-Tag data is hierarchical so for example, under the category 'Computers' I might find tags with names like 'Microsoft Office', 'Adobe Creative Suite', 'Tablets & Smart phones'. There are no limit to the number of levels of hierarchy you can create, but from a user and navigational perspective, generally three levels are more than sufficient to represent the range of data you are tagging.
+Tag data is hierarchical so for example, under the category 'Computers' you might find tags with names like 'Microsoft Office', 'Adobe Creative Suite', 'Tablets & Smart phones'. There are no limit to the number of levels of hierarchy you can create, but from a user and navigational perspective, it is generally reccomended that three levels are more than sufficient to represent the range of data you are tagging.
 
-Any course tagged with a sub tag like 'Microsoft office' would also be visible if I clicked on the parent tag 'Computers'.
+Any course tagged with a sub tag like 'Microsoft Office' would also be visible if you clicked on the parent tag 'Computers'.
 
 As a general rule of thumb, a website visible tag should apply to a minimum 3 to 5 course records, and a maximum of 10 to 15 to give the website visitor a useful and workable group of courses to browse.
 
@@ -51,7 +51,7 @@ If you apply the tag directly to contact records as well as Courses, the meaning
 
 In the following image you can see the class window where the information has been filtered by the "Zoom", "Online" and "Remote" course tags. Even though the classes listed are not all tagged with the one of these tags, they relate to a course that has one of these tags, hence they display.
 
-image::images/tag_group_filters_duplicate.png[title='A Courses filter called "Online" being viewed in Classes. Notice some records do not have a dot? they still display here because the parent course has one of the selected tags applied.]
+image::images/tag_group_filters_duplicate.png[title='A Courses filter called "Online" being viewed in Classes. Notice some records do not have a dot? They still display here because the parent course has one of the selected tags applied.]
 
 [[tagging-colours]]
 ==== Tag Colours
@@ -104,7 +104,7 @@ In order to display the web description and any images you may attach, you need 
 
 * Flag the tag as web visible within the tag set up.
 * Enter the information, description of the tag into the detailfield for that tag. This appears under the Tag header, just click the edit button. This will also expand the detail window to display the full text in the field.
-* You can also add images to the tag web description by uploading the image to onCourse via the Resources > Attachmentsmenu.
+* You can also add images to the tag web description by uploading the image to onCourse via the Resources > Attachments menu.
 +
 For more information about rich text and adding images, refer to the http://www.ish.com.au/s/onCourse/doc/web/richText.html[rich text]
 chapter of the User Handbook.
@@ -133,7 +133,7 @@ To create a new tag group, begin by going to the Tags window (search for Tags in
 
 Begin by giving your tag group a name and deciding which part of the onCourse database you want this tag group to apply to using the + button next to 'Available For'.
 
-A tag group can apply to multiple record types, but cannot be applied to record and a record sub set. For example, you cannot apply a tag to both 'contacts' and 'students' as students are a type of contact. For the same reasons, a tag cannot apply to both 'courses' and 'classes'.
+A tag group can apply to multiple record types, including those that are parent and child records. e.g. a subject tag is able to be selected for both a Course and a Class. A tag on a parent record will also not be searchable in its child record. So a class that is attatched to a course that has a tag, cannot be searched for on the classes page with that specific tag, if the class itself has not been given it.
 
 Only tags which apply to 'Courses' will be available for display and navigation on your onCourse website. Tags which apply to other record types are for internal filtering only.
 
@@ -170,7 +170,7 @@ The tags that display within the left-hand pane of a given window, provide you w
 * Selecting multiple tag check boxes within the same tag group to create an OR search. e.g. selecting 'Business' and 'Writing' from the subjects tag at the same time will find results tagged with Business OR Writing.
 * Use a tag filter in conjunction with a core filter or saved search. This will filter and search. E.g. current classes AND subject 'Writing'.
 * Use the advanced search parameter of "tagged with" or "tagged with (including children)". This means the search will include any records which have been tagged with second or third level tags within the hierarchy, also known as "children".
-* Use a combination of seqrch queries, tag filter and core filters. The search queries will operate within the filtered set of results your checked options will limit the list of results to.
+* Use a combination of search queries, tag filter and core filters. The search queries will operate within the filtered set of results your checked options will limit the list of results to.
 
 [[tagging-filter]]
 === Creating a custom filter instead of a tag
@@ -182,7 +182,7 @@ Learn more about saved searches in our <<search-advanced, Search chapter>>.
 [[tagging-addremove]]
 === Adding and removing tags from records
 
-After you have created your tag groups and their structures, you need to assign these tags to your records.
+After you have created your tag groups and their structures, you can assign these tags to your records.
 
 This process can be done record by record in the edit view, or in bulk from the list view.
 
@@ -259,7 +259,7 @@ image::images/checklist_show_completed.png[title='Click Show completed tasks to 
 
 image::images/checklist_showing.png[title='Marked items will now display within the checklist.']
 
-Marked items will now display within the checklists.
+
 
 === Using multiple checklists in one record
 

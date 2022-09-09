@@ -12,35 +12,35 @@ Rooms are where the classes will be held, a class may be held in one room all ye
 [[sitesRooms-workingWith]]
 === Working with Sites and Rooms
 
-You can access both the https://demo.cloud.oncourse.cc/site[Sites] and the https://demo.cloud.oncourse.cc/room[Rooms] via the Dashboard.
+You can access both the https://demo.cloud.oncourse.cc/site[Sites] and the https://demo.cloud.oncourse.cc/room[Rooms] via the Dashboard under the scheduling tab, or by searching for them via the global navigation.
 
 [[sites]]
 ==== Site Record Details
 
 Double-click a record to open the Site details section.
 
-image::images/sites_three_column.png[title='The Sites window in two-column view mode']
+image::images/sites_three_column.png[title='The Sites window in list view mode']
 
 [[sites-General]]
 ===== General
 
-Here you can set the site name and address details. You can access this site's <<kiosk, Kiosk view>> by clicking the Kiosk button in the top right of the record. You can also access the site's Timetable view by clicking the Timetable button. Learn more about <<timetable>>.
+Here you can set the site name and address details. You can access this site's <<kiosk, Kiosk view>> by clicking the Kiosk button in the top right of the record. You can also access the site's Timetable view by clicking the Timetable button. Learn more about <<timetable, Timetables>> here.
 
-* Administration centre - allows you to set that site as an administration centre, a physical site where your staff work. Administration centres are the only sites that can have money banked against them. Sites flagged as an administration centre can be selected as a site to bank cash/cheques in <<users-settings>> and  <<accounting-Deposit>>.
-* Show this site on the website - allows you to show the site, and anything related to it on the website.
-* Virtual Site - refer to related section on <<sites-virtual>>.
+* Administration centre - allows you to set that site as an administration centre, a physical site where your staff work. Administration centres are the only sites that can have money banked against them. Sites flagged as an administration centre can be selected as a site to bank cash/cheques in <<users-settings, Users>> and  <<accounting-Deposit, Banking and Reconciliation>>.
+* Show this site on the website - enables you to show the site, and anything related to it on the website.
+* Virtual Site - refer to related section on <<sites-virtual, Virtual Sites>>.
 
 The following additional features can be managed via the General tab of the Site record:
 
 * By adding the street address, suburb, state and postcode, this information will automatically populate through to your onCourse website
-* You can set the relevant time zone for this particular Site by selecting the relevant option from the drop down menu in the General section
+* You can set the relevant time zone for a particular Site by selecting the relevant option from the drop down menu in the General section
 
 [NOTE]
 ====
-If you are running an integrated onCourse website, you will have access to full location searches and directions via Google maps. Just make sure you set the address details fully then the map will automatically generate.
+If you are running an integrated onCourse website and have added the Google Maps API key, you will have access to full location searches and directions via Google maps. Just make sure you set the address details fully then the map will automatically generate.
 ====
 
-image::images/site_record_general_tab.png[title='View of general section of site record']
+image::images/site_record_general_tab.png[title='View of General tab of a site record']
 
 [[sitesRooms-rooms]]
 ===== Rooms
@@ -97,18 +97,18 @@ You can add or remove tags in bulk from both Site and Room records by, in the li
 
 Double-click a record to open its details window.
 
-image::images/room_record_general_tab.png[title='The Rooms window in two-column view']
+image::images/room_record_general_tab.png[title='The Rooms window in list view']
 
 [[rooms-General]]
 ===== General
 
 Here you can set the Room name, the site to which the room is related , room capacity, room specific directions for once the student is at the site and add details about the facilities available in that room. There is also an attachment window available for things like images (see above for more on the attachment window).
 
-You can view a Room's Timetable view by clicking on the Timetable button. Learn more about <<timetable, Timetable's here>>.
+You can view a Room's Timetable view by clicking on the Timetable button. Learn more about <<timetable, Timetables>>.
 
 [NOTE]
 ====
-You will note that the Facilities and Directions fields within the Room record is part of the dynamic course content which is automatically published to your onCourse website.
+Note that the Facilities and Directions fields within the Room record is part of the dynamic course content which is automatically published to your onCourse website.
 ====
 
 image::images/rooms_general.png[title='A detailed view of a Room record']
@@ -136,7 +136,7 @@ If you have a room or site that you hire on a casual basis you can also set the 
 
 [TIP]
 ====
-It is a good idea to enter the sites and rooms first so later when you add the courses you can easily assign them to a location.
+It is a good idea to create the sites and rooms first so later when you add courses, you can easily assign them to a location.
 ====
 
 ==== How to set up a new site
@@ -144,13 +144,13 @@ It is a good idea to enter the sites and rooms first so later when you add the c
 . From the Sites list view, click on the + button. A new site screen will open on the details window in the general section.
 . In the Name field enter the name of the site e.g. Waverley Campus. Remember the site is where the rooms are located and is not the rooms themselves, that comes later.
 . Enter the street address of the site. If you report AVETMISS your sites must have accurate address suburbs and postcodes.
-. Once you've entered the complete address, a Google Maps image denoting your sites location will appear.
+. Once you've entered the complete address, a Google Maps image denoting your sites location will appear if you have added the Google Maps API key.
 . Move to the Directions section.
 If you have specific driving directions, public transport directions or special instructions like parking, you can add them here. This information is published to your ish website. Because these description fields are Rich Text enabled (the blue A indicates this) you can add hyperlinks to local bus timetables or other useful pages for your students, like transport infoline or your local equivalent.
 . If you have any internal notes about the site, you can add them on the notes tab. These are not published to your ish website.
 . To set an unavailability for the site, go to the Availability Rules section and click on the + button.
-. Create a new availability rule by clicking the +and define the Start and End date and time. You can also select 'all day' instead of selecting a time period.
-. Choose if you wish to repeat the unavailability and the end date of the repeats. You also need to add a description of why the resource is unavailable.
+. Create a new availability rule by clicking the + and define the Start & End date and time. You can also select 'all day' instead of selecting a specific time period.
+. Choose if you wish to repeat the unavailability and the end date of the repeats. You will also need to add a description of why the resource is unavailable.
 . Click save. Once you have saved your site, click Close to be returned to the list view.
 
 ==== How to set up a new Room
@@ -164,5 +164,6 @@ If you have specific driving directions, public transport directions or special 
 . Create a new availability rule by clicking the +and define the Start and End date and time. You can also select 'all day' instead of selecting a time period.
 . Choose if you wish to repeat the unavailability and the end date of the repeats. You also need to add a description of why the resource is unavailable.
 . Click save to save the record, then click close to return to the list view.
-. To edit any of the information you have entered simply click on the room or site that you wish to update. This will bring up the edit screen for that record. Make your changes and click save.
+
+To edit any of the information you have entered simply click on the room or site that you wish to update. This will bring up the edit screen for that record. Make your changes and click save.
 

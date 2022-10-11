@@ -9,7 +9,7 @@ A tool available to you in onCourse that allows you to enrol a student into a cl
 Enrolment::
 An enrolment is an instance in which a person has elected to partake in a class for different reasons, they will supply their details and this will be stored in the onCourse database.
 Invoice::
-An invoice is a record/document that represents income of some sort. This can be an enrolment into a class or other goods and services provided. An invoice is basically a bill.
+An invoice is a record/document that represents income of some sort. This can be an enrolment into a class or other goods and services provided by your college. An invoice is basically a bill.
 Payment::
 A payment is an instance in which money owing has been successfully taken from one party and transferred to another.
 Student::
@@ -21,9 +21,9 @@ A payer is someone who has personally paid an invoice for an enrolment in a clas
 [[processingEnrolments-quickEnrol]]
 === What is Checkout
 
-You can access Checkout from the global navigation. Checkout is the only window that cannot be removed from the Dashboard Favourites view.
+You can access Checkout from the global navigation. The Quick Checkout is the only window that cannot be removed from the Dashboard Favourites view.
 
-Checkout is a tool in which you can enrol students into classes. Most of the fields have auto complete functionality which means when you start typing, onCourse starts finding students that start with that name, and will display the results on the right-hand side of the window.
+Checkout is a tool in which you can enrol students into courses, register for memberships, and purchase products and vouchers. Most of the fields have auto complete functionality which means when you start typing, onCourse starts finding students whos last name starts with that, and will display the results on the right-hand side of the window. It is important to note that if you want to indicate that the name you are typing in is a first name, a space must be included, as onCourse prioritises last names.
 
 The following will identify the different elements of the Checkout window, and what their purpose is, the left side of the windows allows you to search for previous records that are stored on your database, where the right side houses the fields and functions.
 
@@ -40,14 +40,14 @@ Summary:: This section displays the summary of what's been added to the cart, wh
 
 ** _Discounts_ - Enter any promotional codes for discounts into the Find Promotions field. If they are entered correctly, the discount will be automatically applied to the items it should apply to (as defined in the discount record itself).
 The name of any discounts applying to the cart will appear in the left-hand column.
-** _This Invoice_ - This section shows you the make-up of the current sale, including each line item and which contact it's attached to. You can review each line item by clicking it to expand the section. You'll see a Studey Reason question that can be answered here. You can also edit the discount per line item by clicking on the line item, then selecting an invoice from the drop down box. If there's no discount to select, it will show 'No discount'.
+** _This Invoice_ - This section shows you the make-up of the current sale, including each line item and which contact it's attached to. You can review each line item by clicking it to expand the section. You'll see a Study Reason question that can be answered here. You can also edit the discount per line item by clicking on the line item, then selecting an invoice from the drop down box. If there's no discount to select, it will show 'No discount'.
 
 Payment:: This is the final step in the checkout process. Here you can see the payer's (the contact defined in the previous step) previous credit available, and any amounts owing from previous invoices as well. You can organise payment plans, and then once you're ready to complete the payment, select a payment type. If you have a payment plan with more than one payment in place, and you select payment type Credit Card, you'll be shown a special checkbox that allows you to automatically deduct future payment amounts from a saved credit card.
-** _Previous Credit/Owing_ - Both of these sections are clickable, and will show you either any available credit that can be used by the payer, or any invoices from prior transactions with owing amounts, and the dates those nexy payments are due. By default all of these are ticked in both sections, so make a habit of going into this section before finalising payment and ensuring you're applying the right invoices and credit notes to the transaction. The 'Pay due amounts' checkbox within this screen will highlight overdue amounts and add them to the 'Pay Now' total.
+** _Previous Credit/Owing_ - Both of these sections are clickable, and will show you either any available credit that can be used by the payer, or any invoices from prior transactions with owing amounts, and the dates those next payments are due. By default all of these are ticked in both sections, so make a habit of going into this section before finalising payment and ensuring you're applying the right invoices and credit notes to the transaction. The 'Pay due amounts' checkbox within this screen will highlight overdue amounts and add them to the 'Pay Now' total.
 ** _Payment Plan_ - The payment plan lays out how the current invoice is going to be paid off over time. There can be up to three parts to a payment plan (Pay Now, Pay by date, and Pay Later).
 +
 Pay Now means this is the amount to be paid upfront right now after taking into account any applied previous credit and debts. If you change the Pay Now amount to an amount less than the amount owed in the current invoice, then a Pay by Date step will appear. You can add any many if these steps as you like, just edit the amount payable on the prior step to create a new one. You can either use the date set by the system for the next payment, or you can set your own date by clicking the field. The last step is called Pay Later, and will only appear if there is an owing amount on the payer's account that is not expected to be paid in the current transaction.
-** *_Payment Method_* - This is where you select the method of payment. If you select Credit Card, this will open the online payment gateway where you can enter the details. Any other payment type will allow you to confirmt eh payment amount and then hit Finalize Checkout to complete the transaction.
+** *_Payment Method_* - This is where you select the method of payment. If you select Credit Card, this will open the online payment gateway where you can enter the details. Any other payment type will allow you to confirm the payment amount and then hit Finalise Checkout to complete the transaction.
 
 
 [[processingEnrolments-Creating]]
@@ -81,7 +81,7 @@ image::images/autocomplete.png[title='Use the auto complete to locate and select
 To review any credits on the payers account, click the 'Apply previous credit' checkbox, and then select any credit note you'd like to apply to the current transaction from the section on the right. Similarly, to apply any additionally owed invoices to the current transaction, click 'Pay previous owing' checkbox and select the invoices from the list that appears on the right. This will all be collated in the payment plan.
 . The Payment Plan appears below the previous credit/owing sections. Pay Now is the amount expected to be paid in this current transaction, with any additional credits or invoices applied. If you aren't accepting full payment straight away, you can edit the amount in this field and it will add a second field with a date and the remaining amount. You can change this date and amount and add as many additional payments as you like, until the invoice is paid in full. Anything listed under Pay Later is an amount owing in the future that does yet require payment.
 . Lastly, select your payment type. Credit Card will open the credit card payment portal in the section to the right.
-Enter the details and click Finalise Checkout. Any other payment method will simply show the amount to be paid, and a Finalise Checkout button. Complete your transaction and then click the Finslise Checkout button.
+Enter the details and click Finalise Checkout. Any other payment method will simply show the amount to be paid, and a Finalise Checkout button. Complete your transaction and then click the Finalise Checkout button.
 . You will see a Transaction Successful screen along with a snapshot of the invoice just paid. You can now close the tab.
 
 image::images/checkout_successful.png[title='The transaction successful screen']
@@ -91,7 +91,7 @@ image::images/checkout_successful.png[title='The transaction successful screen']
 
 To review the tax invoice, you must click on the Summary section below the cart. Here you can set who is being enrolled into what, who is paying for what, and who is getting what.
 
-If you have more than one contact added, you can choose who the payer is by hovering thew mouse over their name and clicking the 'Set as Payer' button. The payer is identified by the 'Payer' label next to their name.
+If you have more than one contact added, you can choose who the payer is by hovering the mouse over their name and clicking the 'Set as Payer' button. The payer is identified by the 'Payer' label next to their name.
 
 Any enrolments or products you have already added to this Checkout will be itemised automatically on the invoice, with any discount or tax applied. You can review this by clicking the invoice line to expand it. You can set the quanitity of any product in this screen, and set who will receive confirmation emails.
 
@@ -121,7 +121,7 @@ In the summary, click on the enrolment and check there is a discount available.
 If there is, you'll be able to click the padlock next to the price and enter a new price.
 The breakdown of the new enrolment fee will be displayed and this will be updated within that class's budget.
 
-image::images/checkout_price_adjust_discount.png[title='This enrolment has the 'early bird discount' applied,and is having its price manually edited to $100']
+image::images/checkout_price_adjust_discount.png[title='This enrolment has the "early bird discount" applied, and is having its price manually edited to $100']
 
 [[processingEnrolments-usingPromoCode]]
 ==== Adding a promotional code
@@ -132,7 +132,7 @@ When processing an enrolment, enter the code in the 'Enter voucher or promotion.
 
 image::images/Prom_code.png[title='The Checkout promotional code field before entering the code']
 
-image::images/Prom_code2.png[title='After entering the code,the system will automatically apply any discount matching the code and add it to the Summary. Here the promotion was called Combo 1']
+image::images/Prom_code2.png[title='After entering the code, the system will automatically apply any discount matching the code and add it to the Summary. Here the promotion was called Combo 1']
 
 [[processingEnrolments-thirdPartyPayer]]
 ==== Adding a 3rd party payer
@@ -140,7 +140,7 @@ image::images/Prom_code2.png[title='After entering the code,the system will auto
 To add a 3rd party payer to a transaction:
 
 . Add the student contact to the cart
-. If the third party is already related in onCourse to the student you have added, you can find them quickly by clicking Find contact field after already adding the related contact - they will appear already in the right without any searching required. Read more about relations in onCourse here
+. If the third party is already related in onCourse to the student you have added, you can find them quickly by clicking Find contact field after already adding the related contact - they will appear already in the right without any searching required. Read more about relations in onCourse <<contacts-Relationships, here>>
 . If the contact is not currently related to the student, add them as a contact in the same way as you added the student to Checkout. You do not need to enrol them in any classes, however, if they are a friend or family member they may be both enrolling and paying.
 . Set the classes for the student(s) as per the usual process, then go to the Summary section
 . In the Summary, hover your mouse over the payer's contact name and click 'Set as Payer'. That will set this contact as the payer for this invoice.
@@ -174,7 +174,7 @@ image::images/reports/funding_invoice.png[title='Funding invoice in the Checkout
 
 If you don't wish to use this section, you can flick the switch at the top of the window to disable it and continue on to the Payments window.
 
-To learn more about the function of funding invoices, look at <<rto_funding-invoices>>.
+To learn more about the function of funding invoices, look at our <<rto_funding-invoices, rto funding invoices>> chapter.
 
 [[processingEnrolments-paymentOptions]]
 === Checkout payment options
@@ -183,7 +183,7 @@ You can choose to pay the full amount owing, zero, or a portion of the amount ow
 
 If a voucher is being used to pay for an enrolment, you need to add the voucher before choosing how to pay any balance outstanding by an alternate method.
 
-If your financial preferences for the class are set to pay in full, but you are taking a partial payment now, you can edit the amount the contact wants to pay at this time by clicking on the pen icon above Pay Now and editing the amount. This will add a new payment to the payment chedule where you can set the amount and the due date. You can add as many additional payments as you like, but the amount must add up to the invoice total.
+If your financial preferences for the class are set to pay in full, but you are taking a partial payment now, you can edit the amount the contact wants to pay at this time by clicking on the pen icon above Pay Now and editing the amount. This will add a new payment to the payment schedule where you can set the amount and the due date. You can add as many additional payments as you like, but the amount must add up to the invoice total.
 
 image::images/QE_payment_options.png[title='Payment options available via Checkout']
 
@@ -201,11 +201,11 @@ If the payer has a saved credit card on their contact record, you can select 'Sa
 [[processingEnrolment-studentDebtCredit]]
 === Enrolling a student in credit or debt
 
-To enrol a student in credit or debt basically means that the student (when the student is the payer) you are about to enrol owes your organisation money through unpaid or partially paid fees, or your organisation owes this student money via an onCourse credit note. To achieve one of these you would need to make sure the following:
+To enrol a student who has debt or credit with your company means that the student (when the student is the payer) you are about to enrol owes your organisation money through unpaid or partially paid fees, or your organisation owes this student money via an onCourse credit note. To achieve one of these you would need to make sure the following:
 
 . The student must have been previously enrolled in a class.
-. The student must have accrued either credit or debit depending on their previous engagements with your organisation.
-. Once trying to enrol the student, you will notice the amount either in "apply previous credit" or "Pay previous owing" in the Payments step of Checkout.
+. The student must have accrued either credit or debt depending on their previous engagements with your organisation.
+. Once trying to enrol the student, you will notice the amount either in "Apply previous credit" or "Pay previous owing" in the Payments step of Checkout.
 . If the student has credit to their name, then the balance outstanding will be less than cost of the enrolment. The student may use all or some of their credit during this enrolment. If the student has insufficient credit available to cover the cost of this enrolment, they can pay the balance outstanding as per a standard enrolment.
 . If the student has a debt, and your financial preferences are to pay the enrolment in full, then the default payment amount will be the total they owe. As per the previous section 'How to review a contact's invoices', you can choose which, if any, of the outstanding invoices you wish to pay now.
 . Keep in mind the outstanding balance in any Checkout will be the balance of the payer's account. For many enrolments, the payer and student are the same person. However, if the payer is another person or company, their credit can be used to pay for another student's enrolment.
@@ -269,9 +269,9 @@ To process a new credit card payment you need to do the following steps:
 . Enter the credit card details into the secure payment window and then click the Submit button to process the payment
 +
 Whilst the secure payment is being processed, the Checkout window will remain open with a processing enrolment message being displayed.
-. The payment will be processed and if successful, the payment gateway window will display the message *Transaction successful* you can then close the payment browser window
+. The payment will be processed and if successful, the payment gateway window will display the message 'Transaction successful' you can then close the payment browser window
 . The Checkout window will also update to show that the transaction was successful, you can then click finalise transaction and then send the enrolment confirmation as per the standard process.
-. Click the 'Share' icon next to the invoice on the Transaction Succesul window to open the Share menu on that invoice record in order to generate and print the Invoice. You can also click the go to shorcut icons to go directly to either the payment record or the invoice.
+. Click the 'Share' icon next to the invoice on the Transaction Succesful window to open the Share menu on that invoice record in order to generate and print the Invoice. You can also click the go to shorcut icons to go directly to either the payment record or the invoice.
 . You can either close the tab or click 'Start New Checkout' to start a new transaction in a fresh checkout window.
 
 image::images/Successful_CC_Payment_Message.png[title='Transaction successful screen in the Checkout']
@@ -350,7 +350,7 @@ image::images/payments_in_batch.png[title='How to process batch payments vis Pay
 
 While reviewing the Summary in the Checkout is where you set who will be sent what in terms of confirmations and invoice notifications.
 
-By default, the payer will receive the invoice, and everyone will receive confirmation emails. However these can be switched off per contact in the summary by unticking the checkbo next to each option.
+By default, the payer will receive the invoice, and everyone will receive confirmation emails. However, these can be switched off per contact in the summary by unticking the checkbox next to each option.
 
 The enrolment confirmation goes to each student who has enrolled in a class. The tax invoice only goes to the payer. For example, if three friends were attending a class together, paid for by one of them as a gift to the others, you can set it so that the invoice and confirmation goes to the payer, and the others get nothing to retain the surprise.
 
@@ -462,7 +462,7 @@ This value is reported in the NAT00120 as a below the line state reporting optio
 *Funding Source State* This is derived from the class VET tab settings, or the enrolment and can be overridden for individual outcomes attached to the enrolment.
 This value is reported in the NAT00120 as a below the line state reporting option.
 
-image::images/outcome_locked_unlocked.png[title='The individual Outcome view']
+image::images/outcome_locked_unlocked.png[title='The individual outcome view']
 
 [[AVETMISSEnrolments-feehelp]]
 ==== VET Fee Help fields in the enrolment

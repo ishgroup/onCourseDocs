@@ -247,6 +247,25 @@ Some pages in your onCourse site don't last very long.
 In particular, the class pages with a URL like `/class/ABC-123` will be irrelevant as soon as that class is finished.
 You don't want to accumulate page rank on these pages, only for that to evaporate. onCourse automatically adds a canonical link to the correct course page, transferring any page rank and inbound links to somewhere it will do good.
 
+Canonical links are generated for all pages:
+
+For pages created using the editor, the canonical link is the page URL set as default
+
+For pages of Course and Class canonical link = https://website.com/course/course_code
+
+For pages of Product canonical link = https://website.com/product/product_skuCode
+
+For pages of Site and Room canonical link = https://website.com/site/site_Id
+
+For pages of Tutor canonical link = https://website.com/tutor/Id
+
+For Web static pages like canonical link = https://website.com/page_url
+
+The canonical link will also follow the rules described above if you use redirects. Example:
+Page: Memberships (URL = https://website.com/memberships)
+Redirect: page/tutors → page/memberships
+Canonical Link = https://website.com/memberships (because we render Page membership)
+
 ==== URLs
 
 onCourse has clean URLs which are easy for users and contribute to your SEO. All course detail and list pages contain the word "course" and you are free to create long course codes which contain useful SEO keywords.

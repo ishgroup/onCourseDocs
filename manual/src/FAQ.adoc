@@ -38,7 +38,8 @@
 . Press the plus button
 . Select the start date, time, and duration of the class
 . Add any additional details that you are aware of, it can be edited later
-. you want this exact class to be repeated, but on a different date, select the copy button that is on the top right of the timetable block
+
+If you want this exact class to be repeated, select the copy button that is on the top right of the timetable block, and set the gaps between classes, and how many times it will be repeated
 
 *How do I select what room the class is held in?*
 
@@ -52,8 +53,7 @@
 . Navigate to the class
 . Scroll down to the tutors section
 . Press the plus button
-. Find the contact and add their role
-If known/available, select their confirmed on date
+. Find the contact and add their role. If known/available, select their confirmed on date
 
 *How do I add a cost to the class?*
 
@@ -72,34 +72,6 @@ If known/available, select their confirmed on date
 *Can a class have multiple tutors?*
 
 Yes, a class can have multiple tutors, they can be added the same way every other tutor is. Two tutors can be scheduled for the same time in the same class, overlapping times, or no shared time at all.
-
-[[faq-rooms]]
-=== Rooms
-
-*How do I create a room?*
-
-. Navigate to the sites page
-. Select the site that needs a room added on
-. Scroll down to the rooms section
-. Press the plus button
-. Fill in the details
-
-*How can I change the capacity of a room?*
-
-. Navigate to the room that needs editing, can be done via sites or rooms pages
-. Change the seated capacity limit
-
-*How can I change the availability rules of a room?*
-
-. Navigate to the room that needs editing
-. Scroll down to the bottom to availability rules
-. Fill in all the details, can be repeated every hour, day, week, month or year
-
-*How can I change the site where this room is located?*
-
-. Navigate to the room that needs to be edited
-. Locate the site information
-. Select an option from the drop down list
 
 [[faq-sites]]
 === Sites
@@ -133,6 +105,34 @@ Yes, a class can have multiple tutors, they can be added the same way every othe
 . Navigate to the site that needs the information added
 . Scroll down to the directions section
 . Fill in the information, depending on what instructions you want to give
+
+[[faq-rooms]]
+=== Rooms
+
+*How do I create a room?*
+
+. Navigate to the sites page
+. Select the site that needs a room added on
+. Scroll down to the rooms section
+. Press the plus button
+. Fill in the details
+
+*How can I change the capacity of a room?*
+
+. Navigate to the room that needs editing, can be done via sites or rooms pages
+. Change the seated capacity limit
+
+*How can I change the availability rules of a room?*
+
+. Navigate to the room that needs editing
+. Scroll down to the bottom to availability rules
+. Fill in all the details, can be repeated every hour, day, week, month or year
+
+*How can I change the site where this room is located?*
+
+. Navigate to the room that needs to be edited
+. Locate the site information
+. Select an option from the drop down list
 
 [[faq-contacts]]
 === Contacts
@@ -206,6 +206,54 @@ A student cannot be set as a tutor for classes, and cannot receive payment from 
 . Click the cogwheel on the bottom right
 . Press the approve button
 
+[[faq-tags]]
+=== Tags
+
+*What are tags for?*
+
+Tags are a way to more simply filter a large group of records. Well-managed tags can make it very simple for users to find a group of records without having to use the Advanced Query Search.
+
+*What is the difference between a parent tag and a child tag?*
+
+A parent tag, or tag group, is the overarching tag and will generally have many child tags within it.
+
+*How do I create a tag?*
+
+. Navigate to “Tags”
+. Find the tag group you want to add the tag to, if on does not exist create a new one using the plus button
+. Press the plus button next to “Tags” within the tag group
+. Select a colour, name, a custom URL if applicable, and visibility on the website
+. Make sure the record types it is available on is correct
+. Save
+
+*How do I add a tag to a record?*
+
+. Find the record that the tag needs to be added to
+. Select it
+. Add it at the top in the “Tags” bar
+
+If you cannot find your desired tag, double check it is available to be places on that type of record
+
+*How do I filter records using tags in onCourse?*
+
+. Navigate to the records page that you need to filter
+. Select the tag that you want to filter for on the left column
+
+Tags follow OR not AND rules, meaning selecting multiple tags will show all records with at least one of the tags, not records with all of the selected tags
+
+*What is a default tag?*
+
+A default tag is a tag group that cannot be removed from onCourse as they are integrated with other onCourse systems. There are currently 4 and these are 1. Subjects 2. Terms 3. Payroll wage intervals and 4. Assessment method. It is recommended that you use these tags, especially the subjects and terms tags as they automatically integrate with your website.
+
+*How do I change the website description of a tag?*
+
+. Navigate to “Tags”
+. Find the tag group that the tag is under
+. Find the tag that needs to be changed
+. Click on it to open description box
+. Fill in the information
+. Make sure the tag and any parent tags are set to being visible online
+
 [[faq-automations]]
 === Automations
 
@@ -250,7 +298,8 @@ There are three types of templates within onCourse. Import templates, export tem
 . Choose what system you want onCourse to integrate with
 . Fill out all the necessary information
 . Enable any scripts that come with the integration
-. For extra help with the specifics look at <<externalintegrations, section 58>> of the manual
+
+For extra help with the specifics of each intergration look at <<externalintegrations, section 58>> of the manual
 
 [[faq-discounts]]
 === Discounts
@@ -311,31 +360,131 @@ Yes, multiple people can be enrolled at the same time in the checkout. Simply ty
 
 *How do you set up payment plans through the checkout?*
 
-. Get to the payment section of the checkout
+. Complete a quick enrol up until the point of payment
 . Go to the payments plan section
 . Input how much they will be paying in the first instalment, and select the date of that payment
 . Input the date of the second payment
-. A longer payment plan can be added by going directly to the invoice after creation and manually creating one
 
+A longer payment plan can be added by going directly to the invoice after creation and manually creating one
 
-=== CPD and onCourse Modules
+[[faq-products]]
+=== Products
 
-In onCourse, points for CPD are set up against a module/unit of competency record, found in the Units of Competency window. If you want to track or apply CPD points to a module, it's recommended that you create your own module first and apply the points and expiry days, you can learn how to do that in our <<rto-createModules, RTO chapter>>.
+*How can products automatically be added to a students cart when adding a class?*
 
-Both CPD points -- referred to as credit points in onCourse -- and the expiry days are set directly within the unit of competency record, and both of these will filter through to certificates. The best example of where this is useful is with first aid certificates; these usually have an expiry date attached to them. Setting the expiry days field in the first aid modules delivered will allow those expiry dates to flow automatically down to the certificate.
+. Navigate to “Preferences”
+. Find the sellable items relationship type on the left column
+. If not already existing, create a relationship that has one of the available options of adding to cart
+. Set this relationship to active
+. Navigate to the course that needs to be linked to the product
+. Link it to the product through the relations area
+. Select the relationship type that automatically adds to cart
 
-image::images/cpd_new_module.png[title='A new module being created that awards 2 credit points on completion and expires in 365 days']
+*How do you change the online description of a product?*
 
-==== Adding credit points and expiry days to a module record
-To add credit points or expiry days, simply go the Units of Competency window, find the record that you wish to add the details to and enter the data into the fields, then hit Save.
+. Navigate to the product
+. Locate the description box, below data collection rules and above documents
+. Create an appropriate description for the product
 
-* *Credit points* - enter the number of points to be acheived for completing this module successfully
-* *Expiry days* - enter the number of days the CPD points are valid from completion e.g. for a year you'd enter 365 days, for 3 years you'd enter 1095.
+[[faq-security]]
+=== Security
 
-The other fields are not essential for CPD.
+*What is the difference between a contact and a user?*
 
-=== CPD and Certificates
-When students want a physical representation of their CPD achieved through one of your courses or activities, you can use <<certification, an onCourse certificate>>. Specfically, a statement of attainment certificate will show the name of the modules completed along with the CPD points achieved.
+A contact is someone who is enrolled in your system as either a student or a tutor. A user is someone who has access to the onCourse system. A contact and a user can share an email address and a name, but the contact can be deleted and the user still active, or the user deactivated and the contact still listed. They are not correlated in any way
 
-These certificates can also utilise <<verifyVET-certificates, our certificate verification portal>>, which uses <<rto-qr, onCourse generated QR codes>> to verify the authenticity of a certificate against the data in the onCourse system, giving you confidence that the information presented on the certificate is real and genuine.
+*How do I add a new user?*
 
+. Navigate to “Security”
+. Go down to the users section on the left column
+. Press the plus button
+. Input all the information
+. Invite them via the button in the top right, this will send them a link they can use to set up their user account
+
+*How do I deactivate a no longer active user?*
+
+. Navigate to “Security”
+. Go down to the users section on the left column
+. Select the user whose account needs to be deactivated
+. Set the switch under their name from active to deactivate
+
+*How do I edit the user roles of an individual?*
+
+. Navigate to “Security”
+. Go down to the users section on the left column
+. Select the user that needs editing
+. Change their role from the box on the right
+
+If no role exists that allows them access to items that need accessing, you can easily create a new role within the "User roles" section
+
+*How can I allow someone access to editing the website?*
+
+. Navigate to “Security”
+. Go down to the users section on the left column
+. Select the user that needs the privilege
+. Flick the “can access #editor” switch to enabled
+
+*How do I reset someone's password?*
+
+. Navigate to “Security”
+. Go to users on the left column
+. Select the user whose password needs to be reset
+. Press the reset password button
+
+*How do I enable 2FA?*
+
+. Navigate to “Security”
+. Go to settings at the top of the left column
+. Enable 2FA for either all users, or admin level users
+
+*Someone can’t access their 2FA code but still needs access, how can I let them log in?*
+
+. Navigate to “Security”
+. Go to settings at the top of the left column
+. Make sure 2FA is not mandatory for all users
+. Find the user that needs 2FA disabled
+. Press the “Disable 2FA” button
+
+Making 2FA non-mandatory will not disable 2FA for all users, just disable new users from being forced to use it. Any new users created during this time will then need to set it up if it is then enabled again.
+
+[[faq-customfields]]
+=== Custom Fields
+
+*What are custom fields for?*
+
+Custom fields enable users to collect more data than off-the-shelf onCourse offers. They allow users to gather additional information on a variety of different records and provide numerous styles of data collection.
+
+*How do I create a custom field?*
+
+. Navigate to “Preferences”
+. Find custom fields in the left column
+. Press the plus button on the top left
+. Select the name, code, data collection type, and record this is attached to
+. Select if it is mandatory for this data to be collected
+
+[[faq-datacollectionforms]]
+=== Data Collection Forms
+
+*What are data collection forms?*
+
+These are forms that are generally filled out by students at the time of enrolment in order to collect more information. Examples of such are application forms for courses or permission notes.
+
+*How can I create a new data collection form?*
+
+. Navigate to “Data collection forms”
+. Press the plus button next to the title
+. Using the plus button on the top left add headings, and custom fields to the form
+
+If you need any help with custom fields read more <<generalPrefs-customFields, here>>.
+
+[[faq-avetmiss8]]
+=== AVETMISS 8
+
+*How do I perform an AVETMISS 8 export?*
+
+. Navigate to the “Export AVETMISS 8” page
+. Select the flavour/style of the export
+. Select the date range from the available options or set a custom date range, if setting a custom date range *_DO NOT_* set the end date after the current date
+. Press the find button
+. Review the found data
+. Press the export button on the bottom right of the box to get the NAT files

@@ -2,14 +2,17 @@
 = Release 120
 25 May 2023
 
-We are pleased to announce onCourse update 120, includes an upgrade from USI webservices version 4 to version 5, some minor upgrades to the functionailty of discounts, and a few bug fixes. As always we appreciate your feedback and support and remain commited to making onCourse even better to use.
+We are pleased to announce onCourse update 120, includes an upgrade from USI webservices version 4 to version 5, a new VET reporting screen, some minor upgrades to the functionailty of discounts, and a few bug fixes. As always we appreciate your feedback and support and remain commited to making onCourse even better to use.
 
 === Major Upgrades
 * Upgraded all systems from USI webservices version 4 to version 5 `OD-17392`
+* New VET Reporting screen `OD-18117`
 
 === Minor Features
-* Reworked how discounts can be selectively displayed, now available to be selected to use for soley online enrolments `OD-18146`
+* Reworked how discounts can be selectively displayed, now available to be selected to use for solely online enrolments `OD-18146`
 * The days before an audit log is automatically deleted is now able to be changed `OD-18088`
+* New CSV export for discounts by class `OD-18151`
+* Custome fields are now available to quotes, leads and invoices `OD-18089`
 
 === Minor Fixes
 * When writing descriptions using legacy text the spacebar was not adding spaces correctly `OD-18052`
@@ -19,3 +22,7 @@ We are pleased to announce onCourse update 120, includes an upgrade from USI web
 * Changed some wording involving removing related items from the checkout `OD-18084`
 * Discounting a class by 100% would create a price of -$0.01 when listed online `OD-18127`
 * Advanced Query Language with .tags wasn't functioning as intended `OD-17397`
+* Payrun values wouldn't round the cents amount and will show 3 digits for cents `OD-18221`
+* Some queries using AQL would be automatically wrapped with quotes `OD-18218`
+
+

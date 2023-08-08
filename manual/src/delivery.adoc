@@ -1,17 +1,25 @@
 [[delivery]]
 == Enrolments and Delivery
 
-=== During Enrolment and Delivery
-
 Right, that's everything you need to take care of before letting students hand over their money to enrol in your courses.
+
 All you need to worry about from this point is what to do while you're delivering training, but before you hit the 'Export' button on the AVETMISS runner to collate all your reporting data there are some things to consider.
 
-[[delivery-enrolment]]
-==== Enrolment
+[[delivery-editVETData]]
+=== Editing VET data
+You can edit any AVETMISS related data in the <<VETReporting, VET Reporting>> window. You can also individually edit any relevant enrolment, class, course, student (contact) or outcome record. AVETMISS fields are usually found in the VET category of these records.
+
+[[delivery-usi]]
+=== USI
 
 For all VET enrolments you are required to validate each student USI against their first name, last name and date of birth with the USI Registry System. If you have an onCourse support plan and have correctly set up your USI Integration in onCourse, onCourse will do this automatically for each USI supplied. For more information on creating and validating USIs, please refer to the <<usi, USI Chapter>>.
 
 Students who are exempt of the USI requirement will need to report the value 'INTOFF' or 'INDIV' in the USI field to demonstrate that they are exempt and show their exemption type. onCourse will assist you with complying with the requirements by automatically exporting 'INTOFF' for students with a residential address in a country outside Australia.
+
+[[delivery-enrolment]]
+=== Key data fields
+
+Below are descriptions of some of the key fields you need to capture data in for AVETMISS reporting. These can all be set within the VET Reporting window by finding a student and opening the record, then setting each field as required.
 
 Training Contract Identifier::
 This information can be entered on the General tab on the student Enrolment.
@@ -52,33 +60,6 @@ Exported from the option set the Enrolment record value from the field of the sa
 This is entered on the contact record AVETMISS tab in the field labelled Government Student Number (VIC/QLD)
 
 image::images/VSN_location.png[title='Enter a VSN or LUI in the Government student number (VIC/QLD) field. Data here will only export if you are reporting in VIC or QLD.']
-
-[[rto-attendance]]
-==== Marking attendance
-
-You must ensure that tutors are marking student attendance for every class. This can either be done in onCourse itself, within the attendance tab of the applicable class window, or more likely via the SkillsonCourse Portal. Accurately marking attendance means that certain fields will update automatically once a course has completed.
-
-You can learn more about marking attendance in onCourse <<classes-Attendance, here in our Classes>> chapter.
-
-==== Marking outcomes
-
-Tutors should always be marking student outcomes in the SkillsonCourse portal periodically to ensure data is as up to date as possible.
-
-You can also set Outcome statuses in the class record by clicking the 'show all outcomes' button. You can bulk set an outcome status but selecting all the records, clicking the cogwheel and selecting 'bulk edit...'. Or you can set them all one by one, whichever you prefer. You can also set the outcome status in the enrolment record.
-
-If you set an outcome an RPL, RCC or Credit Transfer status, the Delivery Mode Identifier will always export as 90 - NA regardless of what is set in the outcome value.
-
-==== Creating certificates
-
-onCourse will create AQF compliant certificates for your students, but for the purposes of lodging AVETMISS, you don't need to print or issue them. Qualification and skill set completions are reported in the NAT00130 file for all states. If the export flavour is for a funding type that requires it, details of anticipated qualifications e.g. NSW Smart and Skilled or Victoria's Skills First.
-
-The 'issued on' date determines the date of certificate issue for AVETMISS reporting purposes. By default, this date will be the date the certificate was created in onCourse. If you create certificates early in a calendar year that need to be reported as part of the previous calendar years completions, be sure to back date the 'awarded on' date to the previous year.
-
-More information about certificates, check our <<certification, Certificates>> chapter.
-
-==== Hours Attended
-
-If you need to set the hours attended you can find the field in the Outcome record. Double click the outcome to see this field called 'Reportable Hours'.
 
 [[delivery-outcomes]]
 === Setting and modifying outcomes
@@ -133,7 +114,8 @@ From this list you can run further searches or use the filters to search the out
 image::images/outcomes_list_view.png[title='Looking at the outcomes list view']
 . This same process can be done from the contact, student or the enrolments list view. Outcomes linked to prior learning records (which are available from the contact or student record) will not show any data in the course or code column, as they were not created via an enrolment in onCourse.
 
-==== Setting individual outcomes
+[[delivery-setOutcomes]]
+=== Setting individual outcomes
 
 To set the outcome, modify the start or end date, or delivery mode, simply open the record you wish to change and enter the data. You can also modify the unit/module the outcome is linked to, change the funding source or change the reportable hours.
 
@@ -160,7 +142,8 @@ When setting a given Class as Self Paced, the start date and end date for the st
 * End Date is the start date plus the maximum days to complete that has been set for the Class via the General tab.
 ====
 
-==== Setting outcomes in bulk
+[[delivery-setBulkOutcomes]]
+=== Setting outcomes in bulk
 
 You can set outcomes in bulk from the Outcomes window by highlighting the outcome records you want to update, clicking the cogwheel and selecting 'Bulk Edit'. You can choose from a number of fields to update:
 
@@ -176,7 +159,12 @@ Depending on the field you can either make a selection from the drop down box, o
 
 To learn about setting outcome dates in bulk by using assessment submissions and marking dates, check out our <<assesment-trainingPlan, assessments chapter>>.
 
-===== Exporting outcome data
+==== Hours Attended
+
+If you need to set the hours attended you can find the field in the Outcome record. Double-click the outcome to see this field called 'Reportable Hours'.
+
+[[delivery-export]]
+=== Exporting outcome data
 
 All RTOs are obliged to report their training activity data under the AVETMISS standard, as part of their registration obligations. For more information on Total VET Activity Reporting, please refer to the <<AVETMISS, AVETMISS chapter>> of the user handbook.
 
@@ -190,11 +178,11 @@ Another class export called 'Class Attendance CSV' exports an electronic record 
 image::images/reports/extended_outcomes_csv.png[title='A class grouped outcomes export in excel format']
 
 [[delivery-rpl]]
-==== Importing and adding prior learning
+=== Importing and adding prior learning
 
 If you are migrating to onCourse from another AVETMISS compliant student management system, or have students who have completed training at another RTO, you can add prior learning data to a student's record that can be used to create Certificate records in onCourse and be exported out as AVETMISS data.
 
-===== Manually adding prior learning records
+==== Manually adding prior learning records
 
 The education tab of a student record is comprised of four sections - enrolments, prior learning, outcomes and certificates. In onCourse, both enrolments and prior learning can be vocational, and linked to one or more units of competency or be non-vet and linked to no formal study units.
 
@@ -211,7 +199,7 @@ Once the prior learning record has been saved, the outcomes attached to the prio
 
 image::images/manual_add_prior_learning.png[title='The general tab of the prior learning sheet in the Education tab of a contact']
 
-===== Importing prior learning using AVETMISS files
+==== Importing prior learning using AVETMISS files
 
 If you are migrating to onCourse and wish to bring over your student and outcome data, onCourse can import standard AVETMISS files to create student contact records with prior learning data.
 
@@ -256,7 +244,8 @@ Once outcomes are linked to certificates and the certificate is printed and issu
 
 image::images/Training_Plan_outcomes.png[title='A student's education section showing outcomes linked to certificates,via enrolments and prior learning.']
 
-==== Cancelling VET enrolments
+[[delivery-cancelVET]]
+=== Cancelling VET enrolments
 
 Sometimes when you cancel a VET enrolment, it is because it was created in error and you want to delete all the outcomes. At other times, often when the training is funded, you want the enrolment cancelled to make another position available in the class, but have the outcomes retained for reporting purposes.
 
@@ -288,6 +277,33 @@ You’ll need to make sure the following is set up correctly in your Course/Clas
 * Attendance is marked
 
 image::images/outcome_progression.png[title='Cancelling an enrolment and deleting all unset outcomes']
+
+[[delivery-attendance]]
+=== Marking attendance
+
+You must ensure that tutors are marking student attendance for every class. This can either be done in onCourse itself, within the attendance tab of the applicable class window, or more likely via the SkillsonCourse Portal. Accurately marking attendance means that certain fields will update automatically once a course has completed.
+
+You can learn more about marking attendance in onCourse <<classes-Attendance, here in our Classes>> chapter.
+
+[[delivery-outcomesMarking]]
+=== Marking outcomes
+
+Tutors should always be marking student outcomes in the SkillsonCourse portal periodically to ensure data is as up-to-date as possible.
+
+You can also set Outcome statuses in the class record by clicking the 'show all outcomes' button. You can bulk set an outcome status but selecting all the records, clicking the cogwheel and selecting 'bulk edit...'. Or you can set them all one by one, whichever you prefer. You can also set the outcome status in the enrolment record.
+
+If you set an outcome an RPL, RCC or Credit Transfer status, the Delivery Mode Identifier will always export as 90 - NA regardless of what is set in the outcome value.
+
+[[rto-certificates]]
+=== Creating certificates
+
+onCourse will create AQF compliant certificates for your students, but for the purposes of lodging AVETMISS, you don't need to print or issue them. Qualification and skill set completions are reported in the NAT00130 file for all states. If the export flavour is for a funding type that requires it, details of anticipated qualifications e.g. NSW Smart and Skilled or Victoria's Skills First.
+
+The 'issued on' date determines the date of certificate issue for AVETMISS reporting purposes. By default, this date will be the date the certificate was created in onCourse. If you create certificates early in a calendar year that need to be reported as part of the previous calendar years completions, be sure to back date the 'awarded on' date to the previous year.
+
+More information about certificates, check our <<certification, Certificates>> chapter.
+
+
 
 
 [[rto-CSWECourses]]
@@ -328,7 +344,7 @@ If a student chooses not to be assessed against any outcomes, you either leave t
 [[rto-VETDeliveryHours]]
 === VET delivery hours
 
-How and where onCourse records and calculates student contact hours
+This is how and where onCourse records and calculates student contact hours.
 
 ==== VET data in the class window
 

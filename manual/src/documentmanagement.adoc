@@ -48,7 +48,21 @@ When attaching a document to a record you'll be able to set its permissions, as 
 
 The Document lst view is the main view of the Documents window. It functions the same way as other list views in onCourse do, allowing you to click a record to highlight it, use find-related, search queries and cogwheel functions.
 
-There is a small difference in the cogwheel functions in this section. When an active record is highlighted, the 'delete record' function in the cogwheel will appear as 'Move to Bin'. When a document that is in the bin is highlighted, it will read 'Restore from Bin'.
+[[documentManagement-deleteDocumentRecord]]
+=== Deleting a document record
+
+Due to their nature, you cannot directly delete document record from onCourse, you 'mark' them for periodical deletion. This gives you the opportunity to review documents pending deletion to ensure that you aren't getting rid of anything important.
+
+To mark a document record for deletion, from the documents list view highlight a single document record. Click the cogwheel and select 'Move to Bin'.
+
+When a document that is in the bin is highlighted, this cogwheel function will change to read 'Restore from Bin'. 'Restore from bin' will remove the record from pending deletion.
+
+Documents marked for deletion are deleted when their 'modifiedOn' date is more than 30 days old.
+
+[NOTE]
+====
+Deleting a version of a document is different to deleting the document record entirely. Please see the <<documentManagement-Versioning, 'History'>> section below for how to delete a version of a document.
+====
 
 [[documentManagement-Editing]]
 === Editing document records
@@ -68,18 +82,33 @@ image::images/documentManagement/multiple_attachments.png[title='General overvie
 
 If a document is marked for deletion, it will display the words 'Pending Deletion' across the screen.
 
+[[documentManagement-Versioning]]
+=== History
+
 image::images/documentManagement/edit_attachment_history.png[title='Version history of the document']
 
+When you use the 'Upload New Version' function, onCourse will keep a history of all versions of files you upload. Just click 'Upload New Version', then select the file from your local machine.
 
-[[documentManagement-Versioning]]
-==== History
+You can select which version of the document is used by selecting the tick box next to the documents under the 'History' heading.
 
-onCourse keeps a history of all versions of files you upload, letting you view older versions of files as well as seeing who uploaded them and when. You can upload a new version of a file by clicking the `upload new version` button.
+You can view the historical document by clicking the four-arrowed icon.
+
+You can also completely delete older or unused versions of documents by clicking the bin icon next to the file name under the 'History' heading. Document versions deleted this way are deleted permanently and cannot be recovered.
+
+[NOTE]
+====
+Deleting a version of document is not the same as deleting the document record entirely. For instructions on deleting the document record please see <<documentManagement-deleteDocumentRecord, this section above.>>
+====
+
 
 [[documentManagement-specialDocuments]]
-===== Contact pictures
+=== Contact pictures
 
-Some parts of onCourse have special handling of documents. At the moment the only publicly visible example of this is the contact picture. If you open a contact record (company, tutor, student) in edit view double-click on the image at the top left, you can add your own photo of that person. A file dialog will appear and you will be able to choose a photo to add. It will be automatically resized to a thumbnail size before being stored.
+Pictures added to contact, student and tutor records are stored automatically in the onCourse documents section.
+
+If you open a contact record (company, tutor, student) in edit view double-click on the image at the top left, you can add your own photo of that person. A file dialog will appear and you will be able to choose a photo to add. It will be automatically resized to a thumbnail size before being stored.
+
+As a matter of privacy, any image documents uploaded this way are automatically set as private, and need to have their permissions changed before the image will display publicly on your website.
 
 [[documentManagement-accessRights]]
 === Access rights

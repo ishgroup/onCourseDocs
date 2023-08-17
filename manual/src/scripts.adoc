@@ -390,10 +390,13 @@ args.entity::
 This is the object which caused the script to run. It is null if this script was triggered by a cron event.
 args.context::
 This is the Cayenne context within which the script runs. You'll use this to perform searches for other records or to commit changes back to the database.
+args.loggedInUser::
+This is the object which contains data about user, that triggered this script. Don't use it into scripts, that are not triggered by hand. The most useful fields are loggedInUser.email, loggedInUser.firstName, loggedInUser.lastName
 
 [source,groovy]
 ----
 def i = args.entity
+def userEmail = args.loggedInUser.email
 ----
 
 For convenience we've assigned this object to a variable with a nicer name. This just makes the rest of our script easier to read.

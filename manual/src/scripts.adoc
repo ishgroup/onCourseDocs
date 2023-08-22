@@ -391,7 +391,7 @@ This is the object which caused the script to run. It is null if this script was
 args.context::
 This is the Cayenne context within which the script runs. You'll use this to perform searches for other records or to commit changes back to the database.
 args.loggedInUser::
-This is the object which contains data about user, that triggered this script. Don't use it into scripts, that are not triggered by hand. The most useful fields are loggedInUser.email, loggedInUser.firstName, loggedInUser.lastName
+This object contains data about the user that triggered this script. It can only be used in scripts that are triggered by hand. The most useful fields are loggedInUser.email, loggedInUser.firstName, loggedInUser.lastName.
 
 [source,groovy]
 ----

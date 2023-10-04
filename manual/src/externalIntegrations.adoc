@@ -455,3 +455,26 @@ In order to push data from onCourse to MYOB you'll need to run the 'MYOB integra
 Kronos is a suite of workforce management solutions for time and attendance, absence management, scheduling, and more. This integration will send your tutor session rosters directly to your own Kronos Workforce Ready system.
 
 image::images/kronos_integration_home.png[title='Kronos integration window']
+
+=== OKTA Single Sign-on
+
+OKTA is a secure authentication solution for login and identity management.
+
+image::images/okta_sso.png[title='OKTA single sign on integration set up page']
+
+Our integration with OKTA allows users to sign in to the onCourse front-end with an OKTA single sign-on process.
+
+To set up the integration:
+
+. First you'll need to obtain your Client ID and Client Secret rom your OKTA admin portal. Log into the portal, then go to Applications > Applications > Select your web app. The Client ID is available from the General tab. You should also be able to generate a Client Secret here as well. Take note of both these items.
+. In onCourse, go to Automations > Integrations > Add New > OKTA. Click 'Add'
+. Write in the Client ID and Client Secret you got from OKTA
+. Next, set the OKTA App URL, this should be similar to the URL you log in to the admin console with, except without the '-admin' part.
+. The Sign-In URL should be automatically filled with the URL of your onCourse system.
+. Copy this onCourse Sign-In URL, go back to the OKTA Admin Portal > Applications > Applications > your web app > general tab > add the onCourse Sign-In URL under the Login section.
+. Ensure any users in onCourse are be set up with the same email address as they have in OKTA. Only users with email addresses that match across both systems will be to use OKTA single-sign on.
+
+If everything was done correctly, the onCourse Login page will now feature an 'Okta' login button on the onCourse log in page. Users can click this and be taken to the OKTA log in page.
+
+
+

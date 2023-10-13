@@ -174,7 +174,9 @@ Next you'll need to create your integration. In the Automation window, open the 
 
 image::images/cloudaccess_prefs.png[title='Cloud Access integration preferences']
 
-Once the integration is saved, you will need to enable the Cloud Access script to automate the process. This script can be found by going to Automation > Scripts, clicking on 'cloudassess course enrolment create', clicking the 'Enabled' switch so it's turned on then hitting save.
+Once the integration is saved, you will need to enable the Cloud Access script to automate the process. This script can be found by going to Automation > Scripts, clicking on 'cloudassess course enrolment create', clicking the 'Enabled' switch then hitting save.
+
+Intake names in Cloud Assess must match the Course Code of each corresponding course in onCourse for enrolments to match correctly between systems. EG if a course in onCourse uses the course code 'ENG101' then the corresponding intake in Cloud Assess should also be 'ENG101'.
 
 image::images/cloudaccess_script.png[title='Cloud Access script']
 
@@ -199,7 +201,7 @@ As soon as you've got your developer key, you can continue with the integration 
 . Click the green + button next to the Integrations header in the left-hand column of the window that opens
 . Find the Canvas integrations and select 'Add'
 . Enter the URL of your Canvas instance. This will look like following -
-https://my_canvas_instance.instructure.edu.au/ - where 'my_canvas_instance' would be personalised with the name you gave it during initial set up. You also need to enter your client id, the client secret from your developer key, and set the athentication provider id. Set this to 'true' if users should be authenticating via Canvas.
+https://my_canvas_instance.instructure.edu.au/ - where 'my_canvas_instance' would be personalised with the name you gave it during initial set up. You also need to enter your client id, the client secret from your developer key, and set the authentication provider id. Set this to 'true' if users should be authenticating via Canvas.
 
 The account ID is the id number that corresponds with the account you wish to enrol students into. You can find this by logging into Canvas, then navigating to the left-hand menu bar. Select Admin > then select your account.
 This will open an accounts page. The account ID will be listed in the site's URL e.g. if the URL is

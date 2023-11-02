@@ -1,9 +1,15 @@
 [[classes-timetable]]
-== Class timetable
+== Class type and timetable
 
-The class timetable is where you set up how a class is delivered; either through one or more sessions, or as a self-paced class.
+The class timetable is where you set up the class type (timetabled, self-paced or hybrid) which is how a class is delivered.
 
-For a <<classes-aboutSelfPaced,self-paced>> class, ensure the 'self-paced' switch is turned on within this section, then save and close the record.
+* *Timetabled* - These are standard classes that are made of one or more sessions.
+* *Self-paced* - These are classes that have no scheduled timetable, but rather a set time to completion.
+* *Hybrid* - Allows for a combination of timetabled sessions and self-paced study. Students are required to attend a minimum number of sessions to be considered 'completed'.
+
+image::images/class_type.png[title='This session has three tutors assigned, all of them with the same tutor roster as the session']
+
+For a <<classes-aboutSelfPaced,self-paced>> class, ensure the 'self-paced' switch is turned on within this section, then save and close the record. For Hybrid classes, make sure the 'Is Hybrid' switch is turned on and that you set a minimum number of sessions for completion.
 
 For a class with <<classes-aboutClassTimetables,timetabled sessions>> you'll need to create each session. Sessions have their own start and end time, tutors, sites and rooms. Tutors assigned to sessions can each have their own rostered hours, separate of the session.
 
@@ -178,6 +184,25 @@ Self-paced classes display online similarly to a timetabled class. The words 'se
 As there is no start or end date, self-paced classes will stay online and available for enrolment until you choose to change their status and remove them from website display.
 
 image::images/self_paced_online.png[title='This is an example of a self paced class which has been enabled for online enrolment']
+
+[[classes-hybrid]]
+=== About hybrid classes
+
+Hybrid classes are classes that have a combination of timetabled sessions alongside a self-paced component.
+
+Switching on 'Hybrid' within the Timetable section will update the display to show different fields for the user to add both the 'maximum days to complete' and the 'expected study hours' for this class. You can also select a virtual site for this class. You can learn more about virtual sites in our <<sites-virtual, sites chapter>>.
+
+Hybrid classes must also have at least one session. You will not be able to save the class if it's set as Hybrid and there isn't at least one session and a maximum number of days to complete set.
+
+image::images/hybrid_settings.png[title='Set the class as Hybrid using the switch in the Timetable section']
+
+[NOTE]
+====
+When setting a given class as hybrid, the start date and end date for the student outcomes work th same as in standard classes. You can set units of competency to be delivered on certain dates, or onCourse will just use the default start and end session dates. Otherwise, if it's a non-VET class, the start date will be the date of enrolment, while the end date will be the date of the last session. As always, these can be overidden using the override fields in each outcome.
+====
+
+Hybrid classes display online similarly to a timetabled class, showing the date of the first session, as well as the expected hours to completion.
+
 
 [[payroll-Unavailability]]
 ==== Availability rules

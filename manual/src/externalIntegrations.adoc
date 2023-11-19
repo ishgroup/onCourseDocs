@@ -172,13 +172,13 @@ When you create an account with Cloud Assess ask for your specific username and 
 
 Next you'll need to create your integration. In the Automation window, open the Integrations section, select the Cloud Assess integration and enter the details you were given from Cloud Assess mentioned above. Also remember to name the integration in the name field at the top of the window, then hit Save.
 
-image::images/cloudaccess_prefs.png[title='Cloud Access integration preferences']
+image::images/cloudaccess_prefs.png[title='Cloud Assess integration preferences']
 
-Once the integration is saved, you will need to enable the Cloud Access script to automate the process. This script can be found by going to Automation > Scripts, clicking on 'cloudassess course enrolment create', clicking the 'Enabled' switch then hitting save.
+Once the integration is saved, you will need to enable the Cloud Assess script to automate the process. This script can be found by going to Automation > Scripts, clicking on 'cloudassess course enrolment create', clicking the 'Enabled' switch then hitting save.
 
 Intake names in Cloud Assess must match the Course Code of each corresponding course in onCourse for enrolments to match correctly between systems. EG if a course in onCourse uses the course code 'ENG101' then the corresponding intake in Cloud Assess should also be 'ENG101'.
 
-image::images/cloudaccess_script.png[title='Cloud Access script']
+image::images/cloudaccess_script.png[title='Cloud Assess script']
 
 [[externalintegrations-canvas]]
 === Canvas
@@ -270,7 +270,7 @@ Once a connection has been established, make sure to turn on the 'coassemble enr
 
 In order for an enrolment to automatically be added to Coassemble
 
-image::images/mpower.png[title='Micropower Integration window']
+image::images/coassemble_prefs.png[title='Coassemble Integration window']
 
 
 [[externalintegrations-USI]]
@@ -468,7 +468,7 @@ Our integration with OKTA allows users to sign in to the onCourse front-end with
 
 To set up the integration:
 
-. First you'll need to obtain your Client ID and Client Secret rom your OKTA admin portal. Log into the portal, then go to Applications > Applications > Select your web app. The Client ID is available from the General tab. You should also be able to generate a Client Secret here as well. Take note of both these items.
+. First you'll need to obtain your Client ID and Client Secret from your OKTA admin portal. Log into the portal, then go to Applications > Applications > Select your web app. The Client ID is available from the General tab. You should also be able to generate a Client Secret here as well. Take note of both these items.
 . In onCourse, go to Automations > Integrations > Add New > OKTA. Click 'Add'
 . Write in the Client ID and Client Secret you got from OKTA
 . Next, set the OKTA App URL, this should be similar to the URL you log in to the admin console with, except without the '-admin' part.

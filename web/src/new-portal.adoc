@@ -14,13 +14,37 @@ skillsOnCourse provides a way to give 24-hour assistance to help students and tu
 
 === Portal Set up
 
-Your SkillsOnCourse portal URL will match the onCourse system key your college uses for its onCourse instance. For example, if you logged in to onCourse at testcollege.oncourse.cloud.cc then your college's default portal URL will be https://testcollege.skillsoncourse.com.au
+Your SkillsOnCourse portal URL will match the onCourse system key your college uses for its onCourse instance. For example, if you log in to onCourse at testcollege.oncourse.cloud.cc then your college's default portal URL will be https://testcollege.skillsoncourse.com.au
+
+image::images/new-portal/portal_set_up.png[title='Setting up your SkillsOnCourse Portal']
+
+You can also launch variations of the portal for use by select students. This could be because they are a corporate customer and they would like their own, branded portal. Or you'd like to separate portals with different branding or look for any reason. This is done from the 'Website Setup' section of onCourse.
+
+Click + next to Portals and apply a key, this will be the sub-domain of the portal URL. Then apply a title, logo and a default colouring, then click Save. Your new portal will be launched immediately.
+
+image::images/new-portal/portal_set_up_2.png[title='Fill in the fields then Save to launch your new portal']
+
+=== Setting a default portal when you have more than one
+
+By default, when you send a message with a link to the portal to a student, this link will send them to your main portal.
+
+If you have multiple portals, you will want to set each contact's default portal to ensure they are sent to the correct one. You can do this by first creating a custom field with the type 'Portal subdomain'. This is a special custom field that can only be applied to the Contact.
+
+image::images/new-portal/custom_field_portal_default.png[title='Create your custom field like this']
+
+Once created, in Contact records you will be able to click the field and see a drop-down box of each of your portals. The one you select will become the default portal for that student.
+
+image::images/new-portal/portal_contact_default.png[title='Each portal variant will appear in this list. Select the correct one and Save to apply the new default for this contact']
+
+This is useful when you have corporate or brand-specific students who are expecting to be using a portal separate from your main one.
 
 === Creating accounts and setting passwords
 
 From the moment they are created in onCourse, students will automatically have a skillsOnCourse account created. They just need to set a password in order to log in.
 
 They can do this by going to the login page for your portal, entering their first and last name and email address, then clicking 'forgot password'. They will be sent an email prompting them to click a link which will lead them to the password set window.
+
+image::images/new-portal/portal_password_set.png[title='Students must set a new password in order to access the new portal']
 
 Passwords must have a minimum of 12 characters, with at least one uppercase and one lowercase character each, at least one special character, and at least one number. The password reset page has indicators to help tell you whether the password you're trying to use is secure enough or not.
 
@@ -32,13 +56,13 @@ The skillsOnCourse login screen will prompt the student or tutor to enter their 
 
 Just like the onCourse enrolment process, a student is identified their first and last name and an email address to avoid forcing students and tutors to remember another user id.
 
-image::images/Tutor Portal Log In Screen.png[title='skillsOnCourse web login page']
+image::images/new-portal/portal_login.png[title='Student and Tutor log in screen']
 
 It's also possible to log into skillsOnCourse as a Company rather than an individual.
 
 To do so, click the 'As A Person' switch over to 'As A Company', then enter the name, email address and password for your company log in.
 
-image::images/Tutor Portal Log In Screen Company.png[]
+image::images/new-portal/portal_company_login.png[title='Company log in screen']
 
 ==== Recovering and Resetting Passwords
 
@@ -49,6 +73,8 @@ The student or tutor will need to provide a first name, last name and valid emai
 Students must have a valid email address for this process to work. Passwords cannot be updated within onCourse itself. Only the SkillsOnCourse password reset emails can be used to set passwords.
 
 If the user clicks on the forgot password link and enters the other details, an email will be sent to them with a link to enable them create a new password.
+
+image::images/new-portal/portal_password_set.png[title='Passwords must meet all requirements listed before being they will be accepted']
 
 This link will be valid for 24 hours only, after that time the link within the email will not work. Once the student has reset their password, they can continue using skillsOnCourse.
 
@@ -66,9 +92,9 @@ If you weren't trying to reset your password, don't worry - your account is stil
 
 Once a student has logged into their skillsonCourse portal they will see their dashboard.
 
-image::images/portal_dashboard.png[title='Example dashboard']
+image::images/new-portal/portal_dashboard.png[title='Example dashboard']
 
-image::images/portal_dashboard_mobile.png[title='Example mobile view dashboard']
+image::images/new-portal/portal_dashboard_mobile.png[title='Example mobile view dashboard']
 
 Students are able to navigate their way around skillsOnCourse via the top of page menu options. Each section is described in detail below.
 

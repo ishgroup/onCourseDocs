@@ -448,9 +448,11 @@ To set up, set the Base URL, add your MYOB user name and MYOB password, then hit
 
 Once a connection has been confirmed with MYOB, the integration will be able to be saved.
 
-In MYOB, you need to ensure that you have all the corresponding accounts from onCourse in MYOB, and they need to share the same name so the integration can tell which onCourse account to map to each account in MYOB. If this isn't done, the script will fail when it's run.
+In MYOB, you need to ensure that you have all the corresponding accounts from onCourse in MYOB, and they need to share the same name and account code/number so the integration can tell which onCourse account to map to each account in MYOB. If this isn't done, the script will fail when it's run.
 
 In order to push data from onCourse to MYOB you'll need to run the 'MYOB integration' script. As this is a 'no entity' script, it can only be run by an admin user from the dashboard. When running it, set the from and to dates to denote the export period.
+
+NOTE: If the integration doesn't run first time, add a hyphen (-) after the first character in each Account Code and run the script again.
 
 === Kronos
 

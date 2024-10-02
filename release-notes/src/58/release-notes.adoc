@@ -1,0 +1,37 @@
+= Release 58
+12 Jan. 2021
+
+== Major features
+
+=== Search for empty joins
+
+Searching is now possible, like in this example on the Site list view:
+
+    rooms is empty
+
+Specifically, this will find all sites with no rooms. The 'is empty' query can be used in any list view search.
+
+
+== Minor features
+* Memberships in the COntact record view now display more information `OD-13717`
+* Single student enrolments into classes that have the same default funding contract are now grouped into a single funding invoice `OD-14874`
+* Added new dashboard links for Automation and Preferences sub-windows `OD-15312`
+* Updated document permissions that display on document info dialog `OD-15409`
+* Added Cron job for clustered server `OD-15421`
+* Auto Increment service for clustering   `OD-15424`
+* No longer show disabled classes in the checkout class selection `OD-15431`
+* Upgraded hashing algorithm for passwords `OD-15388`
+
+== Fixes
+* Fixed an issue where changes to the VET Training Plan weren't saving `OD-15338`
+* Fixed an issue where SSL Certificate renewal was not detected until server restart `OD-15361`
+* removed errant 'discount' pay type from pay types window `OD-15376`
+* Fixed and issue where the student was not automatically added to checkout when it was accessed via the class record `OD-15402`
+* Fixed an issue where voucher status was not set to Redeemed after applying from checkout `OD-15406`
+* Fixed an error when saving a note to a room `OD-15412`
+* Fixed an error where the payment out amount would change itself unexpectedly `OD-15413`
+* Fixed an issue where a Voucher added with sellable items relation type could not be purchased within Checkout `OD-15417`
+* Training plans are no longer copied during class duplication `OD-15422`
+* Fixed an error where users could not enrol a new contact created in checkout `OD-15434`
+* Fixed an issue where the Canvas integration wouldn't save `OD-15435`
+

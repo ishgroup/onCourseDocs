@@ -1,0 +1,165 @@
+= Release 8.10
+22 Jan 2016
+
+
+== Important changes
+
+=== Optional USI script change
+
+Please read this information carefully and decide if you wish to update
+the default script 'Send USI reminder'.
+
+The USI reminder has been adjusted to send to only to students enrolled
+in courses with units of competency attached. The previous
+implementation was to send to VET flagged courses, however some onCourse
+users VET flag courses with no modules for funding purposes, and those
+students don't need a USI. An additional line has also been added to
+send a notification to your onCourse admin email address (as per your
+onCourse message preference settings) each time this message is sent,
+advising how many students were contacted. If you wish to update your
+script to the new version as described, please go to File > Preferences
+> Scripts and locate 'send USI reminder'. Double click on the script and
+click the button 'Update to latest version'. Ensure the 'enabled' flag
+is also set. You may also wish to adjust your enrolment confirmation
+email template that sends the first USI request to enrolling students.
+In both the plain text and HTML email, before the USI request text is a
+string that says:
+
+....
+ <% if (enrolment.courseClass.course.isVET == true) { %>
+....
+
+Replace it with:
+
+....
+ <% if (enrolment.courseClass.course.modules.size() > 0) { %>
+....
+
+== Major features
+
+=== Import AVETMISS outcome data from NAT00080, NAT00085 & NAT00120 files
+
+Of particular use to customers new to onCourse transitioning from
+another AVETMISS enabled student management system, onCourse will now
+allow you to import and create student contacts from the combination of
+NAT00080, NAT00085 & NAT00120 files. The NAT00080, NAT00085 will create
+contact records in onCourse, and any enrolment data in the NAT00120
+(whether VET or non-VET) will be added as prior learning records to the
+student files created.
+
+== Reports and scripts
+
+* Standard certificate CSV export updated to include all relevant data
+for use in providing details of your onCourse certificate registrar to
+an auditor or external body `#15094`
+* Added grouping and subtotals by financial income account to the
+'Income journal projection' report `#26982`
+* Added new report 'Income summary projection' to show the forward
+projection summaries for each financial income account. This shows the
+same data as the 'Income journal projection' report, but without the
+class detail `#26982`
+* The onCourse scripting engine can now be used to schedule and send SMS
+messages `#27028`
+* Descriptions have been added for all onCourse default scripts `#26637`
+
+== Minor features
+
+* A new field has been added to the financial preferences tab called
+'invoice remittance instructions'. Enter your custom instructions for
+your invoice payments here e.g. bank account details, and it will print
+on invoices with an outstanding balance to pay `#26912`
+* onCourse now remembers the user preference for the list view sort
+column, so when you close a list view and reopen it, it will reopen
+showing the data listed in the same way `#20965`
+* You can now sort list views by multiple columns at once by holding
+down the shift key and clicking on multiple column headers. The sort
+order is determined by the order the column headers are clicked upon i.e
+the first column clicked is the primary sort order, followed by the
+second column clicked ect. `#20965`
+* For AVETMISS field values that populate from class, to enrolment and
+then to outcome, the lock/unlock icon is used to show where values have
+been inherited (field shows a value with a locked padlock) versus where
+the value has been overridden (field is in editable mode, with an
+unlocked padlock) `#25252`
+* A new field, Confirmation of Enrolment (CoE) has been added to the
+enrolment edit window for CRICOS enrolments. This field does not report
+as part of the AVETMISS standard `#27121`
+* The Discount edit layout has been refreshed to improve the usability
+and grouping of related discount options`#27300`
+
+== Fixes
+
+* Increased size of company name field in contact record view `#26836`
+* Fix bug where contact address was missing from invoices where a class
+on the invoice had a payment plan `#27125`
+* Display name of voucher edit window now displays correct name 'voucher
+type' `#27132`
+* Removed extraneous validation in Quick Enrol that could cause an
+exception where an enrolment was removed from QE `#26786`
+* Fix to Quick Enrol that could cause the application to lock up when a
+class with more than 1,000 discounts was selected `#27254`
+* Fix the Google 'get location' tool in the sites records to retrieve
+the latitude and longitude of the site address `#26821`
+* Tab between fields order was adjusted on the contact record to ensure
+consistent and expected left to right behaviour `#26693`
+* Remove reference to 'this invoice' when a user is processing a payment
+in via Quick Enrol `#26858`
+* Fix to 'find related invoices' from the accounts window to ensure it
+returns the expected results `#26891`
+* Remove caching of payslip list view to improve ability to locate newly
+created records `#27067`
+* Fix to edit/save behaviour of multi record update options such as
+setting outcome values or adding/removing tags, so that if the record is
+not saved then the changes to the associated records are not saved
+`#26837`
+* Add correct pluralisation to sub list headings i.e. add 's' to the
+name when there is more than one record `#26995`
+* Pre-populate student information into Quick Enrol when the 'add
+enrolment' option is clicked inside their contact record `#27263`
+* Improve load time between onCourse splash screen and login
+window`#26983`
+* mySQL upgrade from AUTO_PK to db generated primary keys for improved
+use of database transaction functionality`#26963`
+* Improved the opening speed of the CorporatePass edit view by removing
+the embedded list of invoices that have used the CorporatePass. The find
+related function shows this information as needed`#27172`
+* Improved layout for payment plans in the invoice edit view. Payment
+lines are now arranged in chronological order so it logically follows
+Invoice and Payment In lines. Removed from view any unnecessary overdue
+values for initial payment lines `#27204`
+* Fix to the 'Hide discounted price on web' option in the discount
+window so it can be applied when a discount is eligible via a
+CorporatePass redemption, and not shown to general visitors on the
+website`#27300`
+* Performance improvements to the send email process when large batches
+of emails are sent together`#27328`
+
+== Web features
+
+* Removed rollover and hover text from portal to improve user experience
+on touch screen devices `#25991`
+* A payment agreement template was added to the website files, allowing
+users to customise the wording of the agreement to the terms and
+conditions of sale, and insert multiple links to other documents where
+required `#26191`
+* Added search options ?near and ?time to course pages, so classes
+displayed on these pages can be filtered for display `#26499`
+* Negative discounts that apply to web enrolments will automatically
+take priority over other discounts available `#26540`
+* Address, suburb and postcode field data collection via the USI portal
+is always mandatory, regardless of the CMS settings for the enrol app
+`#26605`
+
+== Web fixes
+
+* Fix to contact merge process to retain relationships for portal logins
+`#26014`
+* Ensure * option in custom field choices displays as 'other' in web
+enrolment and portal pages `#26677`
+* Fix to faceted search functionality that was impacted by non alpha
+characters in the tag names `#27082`
+* Fix to portal iCal feed, where some new classes were not automatically
+added to user calendars `#26618`
+* Fix to rich text rendering in portal to display italic text `#27224`
+* Improved wording to final confirmation screen of online
+enrolment/purchasing process when no payment is made `#27270`

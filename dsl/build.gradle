@@ -1,0 +1,38 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+
+configurations.create('dsl')
+configurations.dsl {
+        resolutionStrategy {
+            cacheChangingModulesFor 0, 'seconds'
+    }
+}
+repositories {
+    maven {
+        url 'https://repo.ish.com.au/content/groups/ish'
+    }
+}
+dependencies {
+    dsl 'ish.oncourse.angel:dsldocs:99-SNAPSHOT:documentation@zip'
+}
+
+task extractDSLSource(type: Copy) {
+    from zipTree(configurations.dsl.singleFile)
+    into "${buildDir}/processed"
+    filter(ReplaceTokens,tokens: [
+            projectName: project.name,
+            publishedDate: LocalDate.now().format(DateTimeFormatter.ofPattern("d MMM yyyy")),
+            copyrightYear : LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))
+    ])
+}
+
+asciidoctor {
+    baseDir "${projectDir}/build/processed"
+    sourceDir baseDir
+    attributes  'sectnumlevels': 0,
+                'toclevels': 1
+}
+
+asciidoctor.dependsOn extractDSLSource

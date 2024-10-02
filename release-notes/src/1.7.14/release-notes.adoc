@@ -1,0 +1,31 @@
+= Release 1.7.14
+01 Jan 2010
+
+
+== Minor features
+
+Re-enables the ability to define via a checkbox whether a discount is
+automatically applied to users via Quick Enrol. Previously discounts
+were always automatically applied if the student was eligible to receive
+that discount.
+
+== Fixes
+
+* Fixes a bug where the tag assignments could be relinked to refer to
+the tag group (e.g., Subjects) if redefining the tag definition.
+* Fixes the export of xml for class prices over $999 (removing comma
+separators)
+* Fixes mysql binary data storage definitions to allow attachments over
+32kB.
+* Fixes a problem where message sending could send multiple emails to
+some contacts when one or more of the contacts on the list had invalid
+data. Emails are now sent and tracked individually.
+* Fixes a server-side problem where refunds could fail (the banks would
+sometimes reuse their tracking numbers).
+* Fixes the contact list view tag filtering for 'Currently enrolled' and
+'Currently teaching'
+* Fixes a problem where the quit button in the login window didn't quit
+the application.
+* Extensive improvements to the AVETMISS export for State specific
+export formats in NSW, QLD, Tasmania and (almost) Victoria. You can now
+export AVETMISS for specific classes in any of these formats.

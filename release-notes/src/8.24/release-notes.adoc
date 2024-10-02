@@ -1,0 +1,78 @@
+= Release 8.24
+1 September 2016
+
+
+== Major features
+
+=== Automatically generate verification QR code for certificates
+
+In preparation for the deployment of the onCourse Certificate
+Verification service, Statements of Attainment and Qualifications can
+now be printed with a unique QR (Quick Response) code and manual URL
+verification code.
+
+The Certificate Verification service will allow employers or other RTOs
+to confirm the certificate was issued to the student named without
+requiring them phone, or otherwise contact the RTO to request look up of
+the Certificate number in the register. This web portal feature is
+currently in testing and will be deployed shortly.
+
+Printing the built in certificate template will allow you to print
+Statement of Attainment and Qualification certificates with or without a
+QR code. All RTOs wishing to use the verification portal should check
+the default location of the QR code on their onCourse certificate report
+and make adjustments to the background report elements or location of
+the QR code in the report as necessary. If you wish to add the QR code
+to existing custom certificate reports, you can contact ish for
+assistance.
+
+image::images/soa_with_qr_code.png[title='Example Statement of Attainment with
+a QR code in the bottom right hand corner']
+
+== Reports and scripts
+
+* A new CSV export for Attendance was added to the class export options,
+to show the attendance notes and record of who marked the roll (tutor
+name or office) and date of marking `#29599`
+* Improvement to SurveyMonkey API to create a single collector named
+'onCourse' so SurveyMonkey basic plan account users can better utilise
+this integration `#29273`
+* Simplification of the time zone formatter in groovy for class sessions
+`#29282`
+* Auto truncate scripted SMS messages at 160 characters `#29038`
+* Addition of the outcome marking data date, tutor name who marked the
+outcome, and VET fee exemption type to the extended outcome export CSV
+`#29594`
+
+== Minor features
+
+* Improvement to the manual invoice - invoice line user interface, to
+allow the selection of alternate COS discount accounts and to calculate
+GST in reverse `#28830`
+* Simplification to the class cancellation process to remove options
+relating to charging a cancellation fee. These options are still
+available for cancelling individual enrolments. `#28743`
+* Invoice date in Quick Enrol is now editable, and can not be less than
+the transaction locked date `#29239`
+* Improvement to the payment reversal process to create a matching,
+negative payment value for a reversed payment, and allow both payments
+to be banked `#29232`
+* Display of reversed payments in banking window in light grey text, to
+assist with their identification `#29806`
+
+== Fixes
+
+* Re-factoring of class deletion process to improve process speed
+`#26825`
+* Improvement to the Tagging user interface to display the tag list and
+tag description as larger fields field and show the tag URL value when
+the field is locked `#29388`
+* Improvement to tag weight ordering for exports and scripts `#28708`
+* Fix to the access rights for discounts to allow staff with edit
+permission to add new classes to existing discounts `#29364`
+* Improvement to allow a concession type to be added to a contact during
+record creation `#29408`
+* Fix to allow concessions to be added to discounts correctly `#29408`
+* Fix to allow discounts to be joined to related members `#29719`
+* Improvement to calculate class budget income as inclusive of credit
+notes manually joined to the class `#29429`

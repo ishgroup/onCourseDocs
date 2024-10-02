@@ -1,0 +1,35 @@
+= Release 109
+4 Dec 2021
+
+== Important changes
+
+In this release we've merged the Message and MessagePerson tables. If you have custom scripts accessing these entities directly, please review those scripts after the upgrade. All scripts which use the standard closures to send messages will work fine without modifications.
+
+== Minor features
+* Removed deprecated method of document replication `OD-10060`
+* Amended Creative Kids redemption script to allow for vouchers to be redeemed before the new year `OD-16783`
+* Newly added documents are made private by default. `OD-16774`
+* Add 'Allow Waiting List' to courses bulk edit function `OD-16757`
+* Batch payment-in link to documentation `OD-14741`
+
+
+== Minor fixes
+* Fixed an issue where discounts were not applying if a certain value was null. `OD-16772`
+* Fixed an issue where timezone was not appearing for virtual sites. `OD-16791`
+* Switching payers in checkout and then adding a new person will select the wrong payer `OD-16659`
+* Custom fields preferences is slow when there are a large number of fields `OD-16761`
+* Mitigation against CVE-2021-44228 (log4shell)
+* Default Waiting List reminder failing `OD-16504`
+* Chrome UI - scroll bar disappears in Chrome when using 90% zoom `OD-16786`
+* Cannot set class as self-paced in some circumstances `OD-16825`
+* Last column width issue when Tags column enabled `OD-16712`
+* Invoice source field is showing a money value, not the source `OD-16794`
+* Automation saving in card view adds unnecessary quotes `OD-16819`
+* Scripting: courseClass.payableClassroomHours is totalling the session hours, not payable duration `OD-16828`
+* Certificate transcript search doesn't work by code or name `OD-16831`
+* Bulk tag edit doesn't refresh for each subsequent use `OD-16832`
+
+== Reports and scripts
+* Remove the 'Class Roll - Age' report which hasn't worked for years and isn't very useful `OD-12028`
+* Student and tutor class notification scripts should be configurable to the number of days in advance to notify `OD-16539`
+

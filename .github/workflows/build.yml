@@ -1,0 +1,52 @@
+name: Asciidoc build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Cache
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: gradle-${{ hashFiles('**/*.gradle*') }}
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: 11
+
+    - name: graphviz install
+      run: sudo apt-get install graphviz
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    - name: Build
+      run: ./gradlew distZip
+
+    - name: Store release
+      uses: marvinpinto/action-automatic-releases@latest
+      if: github.ref == 'refs/heads/main'
+      with:
+        automatic_release_tag: "latest"
+        title: "snapshot"
+        draft: true
+        files: |
+          ./manual/build/distributions/manual.zip
+          ./design/build/distributions/design.zip
+          ./web/build/distributions/web.zip
+          ./dsl/build/distributions/dsl.zip
+          ./release-notes/build/distributions/release-notes.zip
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"

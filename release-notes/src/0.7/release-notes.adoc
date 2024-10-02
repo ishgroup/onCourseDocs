@@ -1,0 +1,226 @@
+= Release 0.7
+01 Jan 2008
+
+
+== Major features
+
+=== Content Management System (CMS)
+
+This is for the building of a web site which surrounds the course and
+enrolment pages. At the moment, colleges using our web enrolment systems
+have a separate mechanism for updating 'static' content via ftp and
+uploading files into a template. These pages might include special
+offers, policies, contact us, etc.
+
+With the new onCourse CMS, pages and menu structure can be built using
+onCourse itself. Just like your courses and other information, these
+pages automatically update the web site. What's more, some neat new
+things will be possible:
+
+* automatic generation of menus
+* embedding dynamic content everywhere. This allows you to mix dynamic
+content from courses, classes, sites, etc with 'static' pages. This
+allows you to easily build special offer pages for instance.
+* rich text display through our tagging markup syntax
+
+=== Images and pdf attachment
+
+With the introduction of these option, you can embed images and pdfs
+everywhere – this includes images on course pages, such as a tutor
+photo, or pdfs attached to a course or other page.
+
+=== Tagging
+
+A 'tagging' concept for courses, classes, web pages and other content
+allows you to build rich ways to navigate through your data. You may
+wish to group all courses as part of a specific promotion and have that
+grouping display as a list on your web site. Or you may wish to have a
+purely internal classification of areas of responsibility for classes.
+Think of this like categories and subcategories which extend as many
+levels as you want and with much more flexibility, not just for the web
+site but for your internal use as well.
+
+=== Multi-currency support
+
+Not everyone uses $, so we will extend the capabilities of the system to
+allow for other currency symbols. This doesn't make onCourse exchange
+rate aware, but allows it to operate outside of Australia.
+
+=== Import
+
+We are writing a generic import function which will bring in XML data
+from other enrolment systems. The idea is that we then write specific
+converter scripts for each program or data set we need to import which
+plug into this generic import framework. We will be releasing the
+documentation for this XML format so that others will also be able to
+write their own converter scripts.
+
+=== Indesign export
+
+More than just a text export, this tight integration with this popular
+layout program allows you to bring across courses, classes, tutor
+information, categories and subcategories. At the same time they can be
+automatically styled, ready for publication with only a few tweaks.
+
+== Minor features
+
+* Zeroconf server location`4121`
+* Role based/conditional validation`4204`
+* Build script enhancements`4210`
+* [Client GUI] Conditional disabling of data entry in edit
+screens.`4235`
+* database schema changes`4257`
+* [client] Cannot quit when server crashed`4444`
+* [client GUI] Site edit view. Room list columns not resizable.`4446`
+* [client GUI] new window tiling`4447`
+* [Client GUI] sheet shadow`4456`
+* move client/server common code into framework`4486`
+* multiple onCourse servers now cannot upload to web even if they have
+the same username/pass`4521`
+* [onCourse client] Allocating payment in money`4541`
+* AVETMISS export improvements`4578`
+* Cayenne infrastructure`4586`
+* Licensing file`4601`
+* rollover Classes functional enhancement`4620`
+* implement count query to improve speed of class list`4622`
+* [Server] Backup system improvements`4641`
+* global key event catch`4649`
+* client hangs on server restart`4653`
+* Review/implement command line switches/system properties`4793`
+* [Server GUI] file open dialog to be replaced`4857`
+* network gone -> disconnect dialog`4861`
+* Site postcode needs to become a String for non AU sites`4918`
+* Deselecting an item in the list view not currently possible.`4957`
+* return key saving the form`4977`
+* new feature: student number`4981`
+* course screen (checkbox for show only current classes)`4983`
+* add "?" widget link to help/information page/system.`5053`
+* textarea - provide facility to disallow tabs (to tab out of
+field)`5122`
+* Invoice number generation`5211`
+* server starting on linux`5212`
+* java file browser (selecting data file dir) difficult to use on
+windows`5217`
+* Accredited Courses and Qualifications search`5219`
+* [derby] batching speed improvements`5260`
+* Print dialog improvements`6132`
+* log file location`6501`
+* Certificates printing`6559`
+* class roll printing`6598`
+* class find - day of week description`6759`
+* find class: Funding source - contents of combo box too long for find
+sheet`6760`
+* find student: prior education code - combo too long for sheet`6763`
+* Cancel button key accelerator`6794`
+* session response to indicate records to re-replicate`6801`
+* QE fails -> got spinning wheel - needs an explanation message`6811`
+* fix up some preference keys`6814`
+* print to print -> logger.error when printer is only offline`6817`
+* order of reports - initial printing dialog`6831`
+* Class tagging`6840`
+* Class printing Transactions`6850`
+* Implement xml import`6852`
+* fix taskbar icon and other windows enhancements`6860`
+* error on site selection when creating a class`6865`
+* windows client sometimes stuck on "contacting server"`6877`
+* raw textile markup of course/class descriptions inside QE
+details`6900`
+* client should only connect to correct version of server`6901`
+* student list search enhancement requests (search by
+course/class)`6913`
+* onCourse Server, replication http error code handling`6922`
+* tutor displayed in session list`6930`
+* onCourse Enrolment Avetmiss screen`6932`
+* QE cancelEnrolment() method`6934`
+* find x with tag`6937`
+* Message templates - unable to add tags after initial
+open/close/re-open`6954`
+* merge students with existing enrollments`6958`
+* Quick Enroll - email confirmation to students checkbox`6960`
+* payment in: open existing record, validation error on amount.`6961`
+* shared email addresses ie. husband/wife`6963`
+* numbers in email address eg. 225125@usyd.edu.au`6964`
+* onCourse server 0.6.1 does not start with os x 10.3`6978`
+* row size of outcomes tab in edit class view`6983`
+* send messages - save button doesn't become enabled`6985`
+* refunding money owed`6991`
+* problems with two sheets displayed one after another`6994`
+* onCourse client does not start on 10.3`6996`
+* windows choose file dialog sometimes displays no files`6997`
+* freebsd packaging improvements`7001`
+* Zeroconf sometimes doesn't 'find server'`7002`
+* fix layout of duplicate class screen`7011`
+* transactions window`7012`
+* Better reporting of missing JDK`7100`
+* improve client server speed with large number of records (eg over
+50,000)`7118`
+* can no longer edit students after opening/closing 2 or 3`7119`
+* onCourse Server not starting`7120`
+* onCourse server about splash has no build version`7152`
+* default tag group(s): onCourse-Web`7153`
+* "gateway response" field not found in model`7154`
+* tax rate needs more decimal places`7174`
+* Printing dialog - Certificate`7187`
+* merge preview screen - enrolments tab not updated`7194`
+* invoices total shows non-gst while owing shows gst value`7200`
+* Mac os x doesn't correctly detect jdk version`7202`
+* Open office integration`7212`
+* Tutor: web password`7221`
+* Course VET requirements/field of education`7224`
+* Course: class sheet size/resizing issues - cropped`7228`
+* {empty}(i) gif needs to be slightly smaller to match label
+height`7231`
+* session dragging weirdness when dragged across months`7236`
+* Discount min/max fields formatter not showing $`7239`
+* Class and student message alerts.`7244`
+* short name + name confusion in tag`7277`
+* Refunds do not account for discounts`7297`
+* find button disabled sometimes`7298`
+* qualifications with no field of education need to be supported in
+Course VET tab`7299`
+* server gui does not look ok when path to datafile too long`7318`
+* Tag group delete failure`7321`
+* The attachment selection widget`7326`
+* Compiled reports stored in db`7332`
+* Orphaned web pages`7356`
+* Update sample data`7357`
+* Server GUI: logged in time display`7361`
+* Create Open Office templates`7366`
+* Student uniqueness validation`7378`
+* Importing XML`7380`
+* button alignment broken on windows in several places`7396`
+* bottom edge of sheet (eg. find dialog) missing`7398`
+* Solaris server doesn't run all data population scripts`7399`
+* Financial preferences windows should be smaller`7400`
+* Default currency in financial preferences should be set to Australian
+dollar`7401`
+* GUI Component minimum size`7403`
+* Image import TIFF`7404`
+* Import attachment`7405`
+* Deleting a concession GUI drawing issue`7406`
+* Price validation`7412`
+* calendar right click problem`7419`
+* Cayenne DataChannelCallbackInterceptor NPE`7422`
+* Tags: Check-marking students not sticking`7426`
+* changes to class fees in class edit not being saved`7427`
+* Removing course web attachments does not disappear when hitting the
+"-"`7437`
+* resizing columns behaviour improvement`7438`
+* Class edit view: can assign site, but room popup blank`7439`
+* Course - web tab - attachments - deleting not enabled without several
+clicks`7447`
+* Frame size (after financial prefs change) issue`7448`
+* Deleting tag - after clicking save button`7450`
+* new window size issue`7451`
+* Printing certificate - warning but still able to save as pdf`7452`
+* Course - web tab - attachments - "-" doesn't remove until saved and
+reopened`7454`
+* certificate edit window too small`7461`
+* Preference screen, username and pass fields alignment`7478`
+* Personalised reports broken in 0.7 preview`7495`
+* refactoring of credit card transaction processing in Quick Enrol to
+improve usability`7499`
+* unify the custom component height`7545`
+* Remove thermometer on window open`7557`
+* Windows gui improvements`7561`
+* Cannot replicate images to web site`7562`

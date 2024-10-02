@@ -1,0 +1,1632 @@
+= Release 9.0
+6 Decemeber 2016
+
+
+== Important changes
+
+=== Release notes will be displayed for each onCourse user at login
+
+Hello and welcome to your latest onCourse upgrade! Each time a new
+onCourse version is released, the release notes will be displayed to
+each onCourse user when they log in, inside the application.
+
+Take a moment to read through this screen to understand what has changed
+since the last time you logged in. When you are done here, just close
+the window. Once you've closed the window, you won't see this alert
+again until the next upgrade is deployed.
+
+== Major features
+
+=== onCourse Certificate Verification Portal
+
+The onCourse Certificate Verification Portal has now been deployed for
+all customers who have implemented the QR code printing function on
+their onCourse Qualification and Statement of Attainment certificates.
+
+The Certificate Verification Portal will allow employers or other RTOs
+to confirm the certificate was issued to the student named without
+requiring them phone, or otherwise contact the RTO to request look up of
+the Certificate number in the register.
+
+By taking a snapshot of the QR code printed on your certificates,
+clicking in the code from a PDF certificate of visiting
+http://www.skills.courses and typing in the unique certificate code, a
+verification page will be displayed with an electronic record of the
+units successfully completed, student name and date of issue. Revoked or
+otherwise invalid certificates will display 'no certificate found'.
+
+image::images/mobile_portal_verify.png[title='Welcome to the certificate verification portal ']
+
+image::images/verified_soa.png[title='A verified Statement of Attainment']
+
+If you are not yet printing the QR code on your certificates and you
+would like some assistance to do so, please get in contact with us at
+support@ish.com.au
+
+=== AVETMISS 8
+
+The new AVETMISS export has been added to this release of onCourse which
+includes the additional delivery modes.
+
+image::images/AVETMISS_8.png[title='AVETMISS 8 Export window']
+
+=== User interface changes
+
+==== onCourse Menu Restructure
+
+To improve clarity and ensure all new onCourse features have a home in
+the menu system, we have restructured the top level menus to better
+group related items.
+
+A new menu option called 'Products' includes all the items you can sell
+via onCourse, including Courses, Gift Vouchers and Memberships.
+
+The menu item 'Training' contains the features related to setting up and
+scheduling training, including items such as Classes, Sites and
+Documents.
+
+The previous menu 'People' has been split into two menus: The new
+'People' menu contains the options to access contacts and their
+communication history via mailing lists and messages, while the new
+'Activity' menu is where you will find Quick Enrol and all the results
+of contact engagement with onCourse including Applications, Enrolments,
+Certificates and Sales.
+
+All options related to fees and payments, including CorporatePasses and
+Discounts can be found under the 'Financial' menu.
+
+The File, Edit, Windows and Help menu options are unchanged.
+
+==== Find related record icon relocation
+
+The find related records function in onCourse is such a regularly used
+and powerful function of the onCourse application, that we have moved
+this feature out of the cogwheel list and in to its very own own action
+icon to make it more prominant. You can now access the 'Find related'
+feature to the right of the search box in all onCourse list views. It's
+icon looks like a magnifying glass hovering over a stack of papers.
+
+==== Payment In & Quick Enrol redesign for payment processing
+
+Creating a payment separately from an enrolment process used to open a
+'payment in' window. The window that opens now is Quick Enrol.
+Validation has been removed from inside Quick Enrol requiring the
+transaction to contain at least one purchase.
+
+Now, you can use Quick Enrol to process payments against invoices with
+outstanding balances. You can do this via the normal Quick Enrol window,
+or when clicking on the plus option inside the payment in list view.
+This change in user interface also introduces the opportunity for
+vouchers to be used as payment method after the enrolment process.
+
+==== onCourse font change
+
+The onCourse system font has been changed to SourceSansPro to allow for
+clearer display on Retina and other high resolution screens.
+
+==== Preference user interface updates
+
+The preference settings for payment types, custom fields, contact
+relations and concession types have been moved from being their own menu
+item and windows, to being added to the list of preference options in
+the File > Preferences > General list view.
+
+==== Class cancellation notifications moved to script and email templates
+
+When a class was cancelled in previous versions of onCourse, a window
+opened asking if the user wanted to send a message to the students to
+notify them, using a template that couldn't be easily customised. To
+make this process consistant with other automated notifications, a new
+script and email template set have been developed to replace this manual
+message. Please review the new template called 'Enrolment cancellation'
+and make the appropriate changes for your college before enabling this
+script.
+
+The new script 'Send enrolment cancellation' is disabled by default. If
+you wish to use it at your college you will need to enable it. Please
+note that enabling this script will automatically send the 'Enrolment
+cancellation' email message to all enrolled students each time you
+cancel a class. If this script is enabled this process will happen in
+the background without the opportunity to review or disable the sending
+of the message.
+
+Another new script and email template pair have been added to notify
+tutors when a class is cancelled, in the same way students are notified.
+Review the script called 'Send tutor class cancellation' which is
+disabled by default, and 'Tutor notice of class cancellation' email
+template for any adjustments you wish to make before enabling this
+script.
+
+Note these scripts do not trigger when an enrolment is cancelled - only
+when a class is cancelled.
+
+==== Improved record loading speed over high latency internet links
+
+The performance of communication between onCourse Client and Server has
+been dramatically improved. Opening and saving windows is improved
+throughout the whole application, but most noticeably if you are
+connecting over the internet (such as our cloud hosted solution).
+Improvements range from 20-30% in some cases to reducing the delay by a
+factor of 10 in other cases.
+
+==== Improved performance across the application
+
+Improve performance across the application, and especially in the class
+edit view. Over slow internet links the performance can be up to 10
+times faster for certain actions.
+
+=== RTO Features
+
+==== onCourse portal refresh
+
+A major refresh of the onCourse portal application has signficantly
+improved the functionality for students, tutors, employers, agents and
+parents.
+
+The new group timetable view, scrolling schedule timetable view,
+improved class roll attendance marking and payment gateway has been
+deployed. A brand new dashboard, outcome marking module and certificate
+verification service are also available.
+
+==== Automated creation of VET Certificates
+
+Unlike non-VET Certificates of Attendance, formal VET certifications
+like Statements of Attainment and Qualifications can only be issued when
+a student achieves outcome results for the units that make up their
+course.
+
+A new script in onCourse checks daily for any outcome results which have
+been updated during the previous 24 hours, and if all the outcomes
+attached to the enrolment have be set to have an outcome status, a VET
+certification will be created if at least one of those outcomes was
+successful.
+
+Where the student has successfully achieved all outcomes linked to a
+course which 'satisfies complete qualification or skill set', then they
+will be issued a Qualification or Skill Set Certificate on completion.
+If all outcomes have been marked, and some are unsuccessful, they will
+be issued a Statement of Attainment instead.
+
+For students undertaking a short course, who have successfully, or a mix
+of successfully and unsuccessfully, completed their outcomes, a
+Statement of Attainment will also be created for their successful units.
+
+Deatiled documentation for enabling this feature is available in the
+user handbook:
+https://www.ish.com.au/s/onCourse/doc/latest/manual/rto.html#rto-Certificates[VET
+Qualifications and other Certificates]
+
+==== Distribution of VET Certificates through the portal
+
+A new script has been added to automatically print and distribute VET
+Certificates through the skillsOnCourse portal called 'send certificate
+vet created notification'. Like all new scripts, it is disabled by
+default and you will need to enable it if you wish to use it.
+
+Each day, all unprinted VET Certificates for student who have a
+validated USI will be printed to PDF and saved to the student's
+enrolment record.
+
+You will need to make sure you have created and uploaded the following
+three two page background documents to onCourse before enabling this
+script: vet_qualification_background.pdf, vet_skillset_background.pdf,
+and vet_soa_background.pdf. The script will overlay the certificate
+template on the correct background type during the print process.
+
+The Certificate will then be uploaded to the student portal, and the
+student sent an email notifying them is available for download.
+
+The same email template, 'Certificate available', also called on by the
+non-VET Certificate of Attendance distribution script is sent. Ensure
+any modifications you make to the template suit the recipient of both
+VET and non-VET certificates, or create a copy of the template to send a
+different email to VET certified students.
+
+==== Automatically generate verification QR code for certificates
+
+In preparation for the deployment of the onCourse Certificate
+Verification service, Statements of Attainment and Qualifications can
+now be printed with a unique QR (Quick Response) code and manual URL
+verification code.
+
+The Certificate Verification service will allow employers or other RTOs
+to confirm the certificate was issued to the student named without
+requiring them phone, or otherwise contact the RTO to request look up of
+the Certificate number in the register. This web portal feature is
+currently in testing and will be deployed shortly.
+
+Printing the built in certificate template will allow you to print
+Statement of Attainment and Qualification certificates with or without a
+QR code. All RTOs wishing to use the verification portal should check
+the default location of the QR code on their onCourse certificate report
+and make adjustments to the background report elements or location of
+the QR code in the report as necessary. If you wish to add the QR code
+to existing custom certificate reports, you can contact ish for
+assistance.
+
+==== onCourse Certificate Verification Portal
+
+The onCourse Certificate Verification Portal has now been deployed for
+all customers who have implemented the QR code printing function on
+their onCourse Qualification and Statement of Attainment certificates.
+
+The Certificate Verification Portal will allow employers or other RTOs
+to confirm the certificate was issued to the student named without
+requiring them phone, or otherwise contact the RTO to request look up of
+the Certificate number in the register.
+
+By taking a snapshot of the QR code printed on your certificates,
+clicking in the code from a PDF certificate of visiting
+http://www.skills.courses and typing in the unique certificate code, a
+verification page will be displayed with an electronic record of the
+units successfully completed, student name and date of issue. Revoked or
+otherwise invalid certificates will display 'no certificate found'.
+
+image::images/mobile_portal_verify.png[title='Welcome to the certificate verification portal ']
+
+image::images/verified_soa.png[title='A verified Statement of Attainment']
+
+If you are not yet printing the QR code on your certificates and you
+would like some assistance to do so, please get in contact with us at
+support@ish.com.au
+
+==== AVETMISS 8
+
+The new AVETMISS export has been added to this release of onCourse which
+includes the additional delivery modes.
+
+image::images/AVETMISS_8.png[title='AVETMISS 8 Export window']
+
+==== AVETMISS improvements
+
+A new 'suppress for AVETMISS' field has been added to the enrolment
+record. This will let users met the NSW Smart & Skilled reporting
+requirements of reporting and retaining records of a deferred or
+discontinued student once, and then suppress the data from reporting in
+subsequent monthly reports without needing to cancel the enrolment in
+onCourse.
+
+The AVETMISS export runner default has also been changed to
+automatically tick and select the option 'Export 90 for VET outcomes
+which are not set'. This can still be changed to export another value,
+and won't affect the rules that govern the export of two blank spaces
+for NSW Smart & Skilled or 70 for outcomes completing in the following
+calendar year.
+
+==== New duplicate course option
+
+This feature is of particular interest to RTO onCourse users, who may
+need to re-create courses regularly as training packages change or
+internally unit clustering changes. In the course cogwheel, a 'duplicate
+course' option will copy all the marketing and attached VET unit
+information from an existing course and automatically add a '1' to the
+end of the course code. This new course can then have units quickly
+added, deleted or otherwise adjusted. By default, all duplicated courses
+are set to be enabled on creation, but will not display on the web until
+you set that value. NOTE: attached documents and related
+courses/products do not duplicate with the course.
+
+==== Import AVETMISS outcome data from NAT00080, NAT00085 & NAT00120 files
+
+Of particular use to customers new to onCourse transitioning from
+another AVETMISS enabled student management system, onCourse will now
+allow you to import and create student contacts from the combination of
+NAT00080, NAT00085 & NAT00120 files. The NAT00080, NAT00085 will create
+contact records in onCourse, and any enrolment data in the NAT00120
+(whether VET or non-VET) will be added as prior learning records to the
+student files created.
+
+==== Rewrite of the import feature
+
+onCourse imports have been re-written in a groovy syntax, making them
+easier for users to edit and extend. The most commonly used import, the
+AVETMISS 80 & 85 allows you to customise the student contact data import
+using AVETMISS files generated by another student management system.
+
+==== Prior Learning data
+
+To extend upon the exisiting AVETMISS data import option in onCourse
+that was used to create student records, the NAT0060 and NAT00120 files
+can also be imported to creating prior learning records in onCourse.
+This allows for simple migration from another AVETMISS compliant student
+management systems. The prior learning table can also be used to add
+enrolment and outcome data to exisiting students inside onCourse, where
+learning has taken place externally to the onCourse system.
+
+These records are visible in the contact enrolment tab 'outcomes' list,
+like other outcomes the student obtains via onCourse enrolments.
+
+==== Prior learning edit and export
+
+Prior learning data imported into onCourse now has its own view in the
+contact education tab. These records can be double clicked to edit, and
+new records can be added manually. All prior learning data added
+manually or via import will also be collected and exported in whole of
+college date range AVETMISS reporting.
+
+=== Financial Features
+
+==== Default invoice terms per contact
+
+A new field has been added to the general preferences to allow for a
+default due date for all invoices to be set. Previously, the default due
+date was always the day of creation. In addition, each contact in
+onCourse can have their own default due date that overrides the default,
+so you can offer a range of relative terms like 7 days, 14 days, 31 days
+to auto calculate an invoice due date for your corporate clients. This
+features ties in with the new invoice payment due reminder script and
+portal payment gateway also included in this release.
+
+==== Allow transaction dates to be edited before period finalised
+
+To allow for end of month Financial reporting adjustments, transaction
+effective dates prior to the date the record was created can now be set
+in onCourse. This will allow finance users to move transactions that
+occur early in a new month to be pushed back into the month prior, for
+invoices, payments in and payments out, and for the same types of
+transactions to be moved forward in time as needed. Journals can also be
+posted into the past.
+
+Once a month end's movements are complete, the period should be
+finalised, to avoid further movements during that date range. A new UI
+has been added to the Financial menu options to Finalise Period.
+
+Reports printed that include transactions in unlocked period include a
+red warning on the last page ""This report includes unposted transaction
+periods which are subject to change."
+
+==== New account - Undeposited funds
+
+A new default asset account has been created called 'undeposited funds'.
+This accounts holds the balance of all unbanked payment in and payment
+out transactions. When the payment is banked, it is transferred to the
+'deposited funds' asset account. Payment methods that are marked as bank
+automatically will always be deposited directly into the 'deposited
+funds' accounts. Only payment methods that are banked manually are first
+created in the 'undeposited funds' account. Payments that have their
+banking date removed are deducted from the 'deposited funds' account and
+returned to the 'undeposited funds' account.
+
+==== Bank reconciliation redesign
+
+The Bank Reconciliation process inside onCourse has been redesigned to
+work from within the Banking Deposit list, rather than in a separate
+window. Whole banking deposit records can be reconciled with a single
+click, or balanced transaction by transaction.
+
+In concert with this change, the associated reconciliation reports have
+also been renamed 'Cash movements reports'.
+
+The
+http://ish.com.au/s/onCourse/doc/latest/manual/accounting.html#accounting-Deposit[Banking
+and Reconciliation] chapter of the user handbook has been revised to
+document in detail all of these changes
+
+==== Default tax setting per income account
+
+Each income account now has the option to set a default tax value. This
+will automatically apply the selected tax option when the income account
+is chosen during the class set up process, or when a manual invoice is
+generated. The user can still choose to change the tax to another option
+available as needed.
+
+We recommend all finance managers review the default tax status of each
+account after the upgrade and ensure the default option for each income
+account is the more commonly used value i.e. does GST apply to most
+transactions in this account or not. Changing these values do not change
+any previous transactions in the system or any existing account/tax
+combinations, but will ensure less user errors in tax selection are made
+going forward.
+
+==== Allow Discounts to change fee charged instead of charge to expenses
+
+Previously, all discounts processed within onCourse processed the value
+of the discount to the default COS (cost of sale) account as defined by
+the financial preferences, called 'discounts given'. For example, if
+your class fee was $100, with a $20 discount, so the student was charged
+$80, then $100 income would be earnt by the transaction, with $20 of COS
+expense posted.
+
+Substantial changes have been made to the way discounts can be created
+in the system so they can be either be a:
+
+[arabic]
+. *Discount linked to your choice of COS Account from those created in
+the accounts list in general ledger.* You can now post each discount
+type to it's own COS account or create a COS account for each
+department. This type of setup is recommended for discounts like
+senior's card discounts or promotional activities.
+. *Discount linked to no COS account.* These types of discounts are
+treated as an adjustment to the income earnt e.g. if the class fee was
+$100, with a $20 discount posted to no COS account, so the student fee
+is $80, then $80 income would be earnt by the transaction, with no
+expense posted. For 'change of fee' type discounts, like Smart and
+Skilled student fees, using the no COS discount type is recommended.
+
+Changes to existing discount COS allocations will not change
+transactions created in the past; it will only affect transactions
+created after the change.
+
+All manual discounts in Quick Enrol, and discounts in manual invoices
+will post as a reduction of income, rather than to the COS expense.
+
+The
+http://ish.com.au/s/onCourse/doc/latest/manual/discounts.html[Discounts
+chapter] of the user documentation has been revised to document in
+detail all of these changes
+
+==== New types of discounts
+
+Two new bulk purchase discount types were added to onCourse. One option
+allows you to define discounts based on the number of enrolments in the
+transaction e.g. enrol 2 people and each get 5% off, or buy one get one
+free.
+
+The second option allows you to define a discount based on the total
+value of the invoice, e.g. a 10% discount applies when the total invoice
+value is over $1000.
+
+Corporate passes can now also be linked directly to discounts, so
+employers or agents enrolling students can have access to a special
+price.
+
+Discounts can now also be for a negative amount i.e. the discount raises
+the class fee instead of lowering it. If an enrolment is eligible for
+multiple types of discounts, and one of these discounts raises the class
+fee, that discount will be selected by default.
+
+In the case where an enrolment is eligible for multiple types of
+discounts that reduce the class fee, as always, the best price for the
+enrolling student will be selected by default.
+
+With the new addition of these more complicated types of discounts, the
+option to 'combine discounts' has now been removed from onCourse.
+
+==== Discount override at the class level
+
+This new feature allows you to override the discount value at the class
+level, to assign varying class fees sharing the same discount name. This
+option may be especially useful for funded programs like Smart &
+Skilled. For example, a number of courses and classes can share the
+discount 'First Qualification rate' but each class can have it's own
+discounted price. Double click on the discount in the class budget tab
+to edit it.
+
+==== Discount offset from class start date
+
+In addition to discounts running for a set date period, discounts can
+now be set to be valid as an offset from the class start date. The
+offset can allow the discount to run prior to the start date, or after
+the start date. This will allow the creation of both early bird style
+pricing and discounts for in-term enrolments.
+
+==== Payroll Improvements
+
+Tutors can now be attached to classes with multiple roles and payrates,
+allowing you to assign the same contact, for example, as both a tutor
+with an hourly payrate and an assessor with a per enrolment pay rate.
+Per session pay rates now display the correct pay value in the class
+budget, depending on the number of sessions the tutor is assigned to,
+rather than multiplying the rate by the total number of sessions in the
+class.
+
+The payslip edit view layout has been rebuilt to better group and
+display line items and make the editing processes, where class defaults
+are overridden, clearer by displaying variations with red text. A
+cogwheel option has been added next to each pay line item, replacing the
+cross/delete icon, allowing you to 'defer to next pay run' to improve
+the clarity of what this function does.
+
+When you choose to defer a pay line, it will be removed from the pay
+slip total for the current period, but when the payroll is generated for
+the following pay period, it will appear again on that payslip. This
+will continue until the pay line is processed via a pay slip.
+
+===
+
+=== Reports and scripts
+
+Please read this information carefully and decide if you wish to update
+the default script 'Send USI reminder'.
+
+The USI reminder has been adjusted to send to only to students enrolled
+in courses with units of competency attached. The previous
+implementation was to send to VET flagged courses, however some onCourse
+users VET flag courses with no modules for funding purposes, and those
+students don't need a USI. An additional line has also been added to
+send a notification to your onCourse admin email address (as per your
+onCourse message preference settings) each time this message is sent,
+advising how many students were contacted. If you wish to update your
+script to the new version as described, please go to File > Preferences
+> Scripts and locate 'send USI reminder'. Double click on the script and
+click the button 'Update to latest version'. Ensure the 'enabled' flag
+is also set. You may also wish to adjust your enrolment confirmation
+email template that sends the first USI request to enrolling students.
+In both the plain text and HTML email, before the USI request text is a
+string that says:
+
+....
+<% if (enrolment.courseClass.course.isVET == true) { %>
+....
+
+Replace it with:
+
+....
+<% if (enrolment.courseClass.course.modules.size() > 0) { %>
+....
+
+* Added the last outcome end date as 'Date achieved' to the Certificate
+of Attendance report `#30042`
+* Added the last outcome end date as 'Date achieved' to the Certificate
+of Attendance report `#30042`
+
+* A new CSV export for Attendance was added to the class export options,
+to show the attendance notes and record of who marked the roll (tutor
+name or office) and date of marking `#29599`
+* Improvement to SurveyMonkey API to create a single collector named
+'onCourse' so SurveyMonkey basic plan account users can better utilise
+this integration `#29273`
+* Simplification of the time zone formatter in groovy for class sessions
+`#29282`
+* Auto truncate scripted SMS messages at 160 characters `#29038`
+* Addition of the outcome marking data date, tutor name who marked the
+outcome, and VET fee exemption type to the extended outcome export CSV
+`#29594`
+
+* A new script has been added to onCourse called 'notification of
+unmarked attendance'. When enabled, this script sends a daily
+notification to advise an admin user of any sessions run the previous
+day where attendance was all or partially unmarked. If you have scripts
+enabled that rely on tutors electronically marking the roll, we suggest
+you enable this monitoring script also. `#26608`
+* A new script has been added to onCourse called 'send payment plan
+reminder'. When enabled, this script sends a reminder to the invoice
+payer if they have a payment due within the next 7 days or if they have
+a payment overdue. The email template link includes a password free one
+time login to the portal payment gateway to make the payment via credit
+card `#28806`
+* Fix to Payment In an Payment Out reports to render company names
+correctly `#28802`
+* Addition of the 'createdOn' field to the Transaction CSV report, to
+assist with idenitfying transaction_effective and record creation dates
+`#29160`
+* Addition of a default notification to the admin email address when a
+student completes an online application. Open the 'send application
+received notification' script and click 'update to latest version' to
+add this option to your default script `#29187`
+* Replace unsibscribe link in waiting list email template from one that
+required the user to login to unsubscribe, to a timed no login needed
+link. The updated template copy can be access on the
+https://github.com/ari/oncourse-scripts[Github repository] `#29422`
+
+* Two new AVETMISS imports were added to onCourse, allowing users to
+import data from external systems 'AVETMISS student update import' and
+'AVETMISS outcome update import' which either create new, or update
+existing student records with the same First Name, Last Name and Date of
+Birth. `#26792`
+* Fix to the 'Enrolment notification' email to tutors to display the
+price the student paid inclusive of any discounts. Change the line
++
+....
+Fee Paid:
+            ${enrolment.invoiceLine.priceEachExTax.add(enrolment.invoiceLine.taxEach)} GST
+            ${enrolment.invoiceLine.taxEach.isZero() ? 'free' : 'inc'}
+
+....
++
+to
++
+....
+Fee Paid: ${enrolment.invoiceLine.discountedPriceTotalIncTax} GST
+            ${enrolment.invoiceLine.taxEach.isZero() ? 'free' : 'inc'}
+
+....
++
+in both the plain and HTML copy of the template, or update the whole
+template with the latest version from the
+https://github.com/ari/oncourse-scripts[Github repository] `#29002`
+
+* A new version of the debtors report has been added to the contact
+window that can be run to a specified date range, so you can determine
+your debtors as of a particular date in time `#9508`
+* A new report has been added to the contact window to calculate monthly
+student attendance averages, of particular use to CRICOS providers
+`#27095`
+* A new script has been added to send an email notification to your
+default admin email address when a product purchase is made on the web.
+The script is called 'send product purchased email' and is disabled by
+default `#25716`
+* A new export has been added to the classes window called 'CourseClass
+Sessions CSV export' to export class session data to excel `#28680`
+* A new export has been added to the transaction window called 'Account
+Transaction Segmentation CSV export' to show the Discount, GST or
+Liability joins back to the invoiceLine income account `#28683`
+* The default certificate report that prints Statements of Attainments
+has had the second page Transcript report removed. Now, if the Statement
+of Attainment contains more units than will fit on a single page, the
+certificate will break into multiple pages, with the correct formatting
+for each page. The certificate number will be appended with /1, /2 ect
+as additional pages are created. If you use the default Certificate
+template and print with a two page background, you should change the
+background to a single page and re-test the print process. `#28313`
+* The Transcript report can be printed as required from the Certificate
+window for all types of certificate records `#28844`
+* Reconciliation print reports renamed 'Cash Movements Detail Report'
+and 'Cash Movements Summary Report' `#28264`
+* Fix to Statement Report to only include payments with a successful and
+non-reversed status `#28006`
+* Addition of new report 'Payment Out', available from the payment out
+window `#28646`
+* The contact import and contact export CSV layouts have been aligned
+`#27449`
+* A new column has been added to the scripts list view to show the next
+run date or event, and grey out the scripts that are disabled `#28315`
+* Change the script edit permissions to allow the script CRON schedule
+to be adjusted by all users `#27997`
+* Fix to the calculation of isActive flag to ensure cancelled classes
+are not included as active for reporting or scripting `#28689`
+* A new option has been added to the export template cogwheel to
+'duplicate export template'. This will assist users when creating their
+own custom templates, using an onCourse template as the starting point.
+The key code will be left blank in the duplicate process for you to
+create your own unique code. `#28063`
+* Improvement to the 'send certificate vet created notification' script
+to set the issued on date to the day the certificate was automatically
+printed and distributed to the student. If you are using this script,
+you should open the script record and click 'update to latest version'.
+`#28724 and #28579`
+* Improvement to the 'send weekly finance summary report' script with
+the addition of a send monthly option. If you are using this script and
+want to enable the monthly option, first open the script record and
+click 'update to the latest version'. Then, comment out the weekly time
+range, and uncomment the monthly time range `#27107`
+* Additional CRON times have been added to a drop down list, so rather
+than having to write a custom schedule for each script, you can select a
+pre-written option `#28500`
+
+* Update to the printed invoice report template to show the number of
+product items purchased on an invoice `#28218`
+
+* A new script has been created called 'Send weekly finance summary
+report' to email the Trial Balance for the previous 7 days to the system
+admin email address every Monday morning. You may like to alter the
+email address in the script, so this report sends to your finance
+managers email address. This script is disabled by default `#27931`
+* A new script has been created called 'cloudassess course enrolment
+create' to create enrolments in the CloudAssess LMS where you have set
+up this integration in onCourse. This script is disabled by default
+`#27107`
+* Added new ReportSpec API functions to allow reports to be printed and
+emailed via scripts `#27405`
+* Added new DocumentSpec API functions to allow documents to be created
+and uploaded into the skillsOnCourse portal via scripts `#27696`
+* Two new reconciliation reports have been added to the Banking Deposits
+window called 'Reconciliation Summary' and 'Reconciliation Detail' that
+group and total payments by type, better assisting bank account
+reconciliation for daily Credit Card and AMEX transactions `#27696`
+* The Enrolment Confirmation HTML email template has been updated to
+ensure the class list displays correctly in MS Outlook 2013. To apply
+this change, you will need to get the latest copy of the template from
+https://github.com/ari/oncourse-scripts/tree/master/email[GIT Hub] and
+add in any customisations you may have made to this template `#27122`
+* The Tax Invoice plain text and HTML templates have been updated to
+only show unpaid due dates for invoices. To apply these changes, you
+will need to get the latest copy of the templates from
+https://github.com/ari/oncourse-scripts/tree/master/email[GIT Hub] and
+add in any customisations you may have made to these templates.
+
+* A new template for Skill Set Statements of Attainment was added, that
+will automatically print when a certificate record is set to be a full
+Skill Set achievement `#25684`
+* New scripts to allow integration with Cloud Assess LMS have been added
+to onCourse. A self service API integration option will be added as part
+of a future release. This early stage integration is to pass over
+enrolment data from onCourse to create students and enrolments in Cloud
+Assess. `#27605`
+
+* Standard certificate CSV export updated to include all relevant data
+for use in providing details of your onCourse certificate registrar to
+an auditor or external body `#15094`
+* Added grouping and subtotals by financial income account to the
+'Income journal projection' report `#26982`
+* Added new report 'Income summary projection' to show the forward
+projection summaries for each financial income account. This shows the
+same data as the 'Income journal projection' report, but without the
+class detail `#26982`
+* The onCourse scripting engine can now be used to schedule and send SMS
+messages `#27028`
+* Descriptions have been added for all onCourse default scripts `#26637`
+
+* Standard certificate CSV export updated to include all relevant data
+for use in providing details of your onCourse certificate registrar to
+an auditor or external body `#15094`
+* Added grouping and subtotals by financial income account to the
+'Income journal projection' report `#26982`
+* Added new report 'Income summary projection' to show the forward
+projection summaries for each financial income account. This shows the
+same data as the 'Income journal projection' report, but without the
+class detail `#26982`
+* The onCourse scripting engine can now be used to schedule and send SMS
+messages `#27028`
+* Descriptions have been added for all onCourse default scripts `#26637`
+
+* A new OLGR data export file was added to the contact window for
+customers delivering RSA training `#26609`
+* Two new management reports added to the class window - Enrolment
+Income by Account and Enrolment Summary by Account. These reports show
+the enrolment numbers and income invoiced for classes selected in the
+report, grouped by income codes. The summary report shows only a total
+for each income account, without the class by class data `#26748`
+* Make it easier to send links to specific portal pages like this
+restrictedPortalURL("class" + $\{cc.willowId}, 7) which creates a link
+to the class page with an expiry of 7 days. This is particularly helpful
+for survey invites. `#26583`
+
+* A new set of scripts has been added that links the maximum number of
+places between two classes taught in the same room by the same tutor
+called 'Increase maximum places' and 'decrease maximum places'. These
+scripts are included in onCourse, but not enabled by default. `#26194`
+* Images uploaded to the onCourse document management system can be
+embedded into onCourse reports `#26503`
+* Scripts can now 'print' and email onCourse PDF reports and send them
+as attachments to related contacts e.g. class students and tutors
+`#26805`
+
+* Improvement to date references used within the Tax Invoice email
+templates. We recommend you update the date fields in your template as
+per the latest version on Git Hub. `#25971`
++
+If you would prefer not to overwrite the full invoice template and
+remove other modifications you have made, please replace in the plain
+text version of the template
++
+....
+Invoice created on: ${invoice.createdOn.format("d/M/yy")}
+....
++
+with
++
+....
+Invoice created on: ${invoice.invoiceDate.format("d/M/yy")}
+....
++
+and in the HTML version replace
++
+....
+${invoice.createdOn.format("EEEEE d MMMMM yyyy")}
+
+....
++
+with
++
+....
+${invoice.invoiceDate.format("EEEEE d MMMMM yyyy")}
+
+....
+* A new export called 'Extended outcome CSV export' was added to the
+class window. It creates an excel file that looks similar to an AVETMISS
+NAT00120 file, but includes additional data referencing the student name
+and onCourse course and class names and codes.
+* Grouping and display of costs and budget items improved in the 'Budget
+summary by class' report `#25391`
+* Improvement to the contact CSV export layout to include all available
+onCourse fields `#25900`
+* A new trigger type was created that can be used to execute scripts:
+class cancelled `#26272`
+* Improvement to the Outcome Assessment Report to sort by student last
+name `#26404`
+
+== Minor features
+
+* Additional advanced search options for the Enrolment general and VET
+Fee Help tabs have been added `#28696`
+* The course-class code export has been updated due to the changes to
+VET fee Help to make VLL and VCU consistent with it `#29842`
+* Additional advanced search options for the Enrolment general and VET
+Fee Help tabs have been added `#28696`
+* The course-class code export has been updated due to the changes to
+VET fee Help to make VLL and VCU consistent with it `#29842`
+
+* Improvement to the manual invoice - invoice line user interface, to
+allow the selection of alternate COS discount accounts and to calculate
+GST in reverse `#28830`
+* Simplification to the class cancellation process to remove options
+relating to charging a cancellation fee. These options are still
+available for cancelling individual enrolments. `#28743`
+* Invoice date in Quick Enrol is now editable, and can not be less than
+the transaction locked date `#29239`
+* Improvement to the payment reversal process to create a matching,
+negative payment value for a reversed payment, and allow both payments
+to be banked `#29232`
+* Display of reversed payments in banking window in light grey text, to
+assist with their identification `#29806`
+
+* All list view prefetches have been reviewed and updated, to ensure all
+onCourse windows are opening in the fastest possible time. Windows with
+noticeable delays, like Applications and Payment In load significantly
+faster `#29058`
+* Allow the change of settlement date for deposited banking records
+`#28972`
+* Only allow payment reversals to be processed on unbanked payments.
+Banked payments can be unbanked if they require reversing `#29707`
+* Add reversed payments to the deposit banking process, so bounced check
+papyments in and subsequent reversals can be banked on the correct dates
+of receipt and bounce. On upgrade you may find a number of unbanked
+reversals in your 'deposit banking' window. Be sure to bank them so the
+reversal is correctly processed against your bank account balance.
+Contact ish support if you require assistance with this process `#29232`
+* Addition of a certificate icon next to outcomes that are linked to a
+certificate. Text colour changes to light grey to indicate an outcome is
+no longer editable because it is joined to an issued certificate
+`#28832`
+* Redesign of the CorporatePass to improve clarity in 'limit to classes'
+feature `#29037`
+* Addition of core filters to the payment in window for faster searching
+and filtering `#29230`
+* Addition of payment date field in Quick Enrol, so payments received in
+the past e.g. direct deposit into your bank account, can be recorded
+with the actual date of payment `#29240`
+* Payment out date is now editable, and can be changed to a date in the
+past or the future `#29241`
+
+* The Tag edit view has been redesigned for a clearer and more concise
+user experience, including a new field to add a custom URL to your tags
+`#27055`
+* When duplicating courses, related courses and products and attachments
+are copied to the new course `#29136`
+* Show a red arrow in the preferences window if an aspect of the
+settings have a validation error and are preventing the window from
+saving `#26613`
+* The invoice remittance field height in the financial preferences has
+been increased to display multiple lines of text `#27796`
+* Report retained outcomes from cancelled enrolments in AVETMISS. By
+default, only outcomes given a status prior to cancelation are retained
+`#28141`
+* Remember last used directory when selecting files for import `#26650`
+
+* Default name of the asset account where payments are deposited changed
+from 'Cheque account' to 'Deposited funds', in preparation for new
+'undeposited funds' account creation `#28229`
+* Allow payment in and payment out banking dates to be edited for all
+types of payments `#28005`
+* Add to enrolment window advanced search options 'NSW Commitment ID',
+'Funding source - State' and 'Outcome Identifier - Training
+Organisation' `#28142`
+* AMEX payment types will now bank into a their own daily banking
+deposit record, so they can be reconciled as their own group instead of
+included with other credit card payment types `#28232`
+* Open payment in/payment out record on double click from within the
+Banking Deposit record to allow for the date banked record to be changed
+as needed `#28575`
+* Update the layout of the payment out edit window to show the same
+information as payment in, including the addition to both windows of the
+'create by' user name `#11537`
+* Simple and advanced search options have been added to the Banking
+Deposits window `#28263`
+* All advanced search options are listed in alphabetical order `#28399`
+* Ensure credit card payment types are always, and can only be, set to
+bank automatically `#28565`
+* Allow course with modules attached to be unflagged as VET to meet some
+NSW AVETMISS reporting requirements `#28515`
+* AVETMISS outcome '61 - Superseded subject' added to list of outcome
+status options available `#27959`
+* Store user preferences for all edit view windows, so that after
+closing, the window will reopen in your preferred layout and size
+`#26877`
+* Improve layout of the enrolment cancellation/transfer administrative
+fee display to auto select the income account from the class and show
+the total admin fee charged inclusive of GST `#27549`
+* Implementation of OS native file browser for simpler location of files
+on disk and uploading of documents into onCourse `#27914`
+* Improvements to the messaging window to search on message status, find
+related message contact, and open queued email and SMS records from the
+general messaging preferences `#28585`
+* Improvement to discount in class override UI, to show the new class
+fee inclusive/exclusive of tax, depending on the class tax settings
+`#27252`
+* An upgrade to convert some dateTime fields to date only has been
+implemented. In a number of places in onCourse, where date and time
+fields were used, but only date fields make sense, particularly in
+relation to finance and reporting, you'll notice there is now no
+requirement to add 12.00 am to the report runners. `#28231`
+
+* Changed advanced search date operates 'before' and 'after' to say
+'before and on' and 'after and on' so the meaning is clearer `#27589`
+* Removed the print and export 'all' option from the user interface for
+simplification. All records can still be printed or exported by ensuring
+the list view contains all the records prior to selecting print or
+export `#2772`
+* Add the ability to cancel an enrolment from inside the contact and
+class record using the delete icon `#27928`
+* Moved the display of the payer name inside Quick Enrol from next to
+the items list to the payment list for improved clarity as to which
+contact in the process is the debtor `#28088`
+* Improved linking inside onCourse to the specific sections of the user
+documentation `#28268`
+
+* Extended tags to waiting list, so you can now add your own workflow
+and grouping criteria to requests `#27398`
+* A new integration with the LMS Cloud Assess has been added to
+onCourse, to allow you to automatically enrol onCourse students into the
+LMS via enabling the 'cloudassess course enrolment create' script
+`#27931`
+* Added new 'Print' and 'Export' buttons to the list view, to allow
+quick access to these functions without having to choose a menu option
+`#27760`
+* Addition of syntax $\{image "imagename"} to allow onCourse images to
+be embedded in HTML email templates `#26862`
+* Added 'total' to the list of advanced search options in the invoice
+window `#27859`
+* Moved Taxes window (formerly in the financial menu) to the General
+Preferences `#27616`
+* Quick Enrol now shows all classes for a course sorted by start date
+order by default, with the next available classes at the top of the list
+`#27429`
+* Added a new access right type 'Summary extracts' to Financial section
+to Allow/not allow user roles to export/print MYOB and trial balance
+reports `#27288`
+* Export the option 'neither Aboriginal or Torres Straight Islander' for
+Indigenous status for all students born in a country other than
+Australia, regardless of their response in the AVETMISS questions, as
+'neither' is the only option allowed according to AVETMISS validation
+rules. `#27320`
+* Export 'Not provided' for student AVETMISS address data where the
+student has provided a PO or GPO Box address instead of a street address
+`#27488`
+* Add the additional text 'All outcomes ending after 'outcomes before'
+will automatically export as 'Continuing enrolment (70)' to the AVETMISS
+7 export runner for better clarity as to when a 70 will be exported
+instead of the database value `#27620`
+* Changed the AVETMISS label 'Identifier' to 'RTO Identifier' and added
+a link to training.gov to improve clarity for RTOs reporting into QLD
+who also report their QLD ID via an additional field `#27691`
+* AVETMISS improvements for non-VET Prior Learning, to export a default
+FOE ID of 129999 where no value is provided `#27241`
+* Export VET Fee Help files to the same nominated location as AVETMISS
+files by default `#27550`
+* Addition of the USI to the VET Fee Help VEN export file as per the
+2016 reporting requirements `#28116`
+* Embedded Open Sans Condensed fonts inside onCourse for new print
+report font options `#28070`
+
+* Supress AVETMISS export field for enrolment moved from VET Fee Help
+tab to General tab `#25396`
+* Require self-hosted onCourse installations to upgrade to the previous
+major version, before applying further updates. If you are not currently
+runnning the latest onCourse 8.0 release before applying this upgrade,
+you will be notified to upgrade to that version first. `#27472`
+* Implementation of the add enrolment and cancel enrolment function from
+inside the contact record using the + and - buttons on the education tab
+`#27472`
+* Add 'Send email from template' to the Contact list view. Note that
+there are no current default email templates in onCourse that send to
+contacts, however some users may have created their own email templates
+they wish to send using this function `#27336`
+* Add new student.portalLink functions that can be embedded in email
+templates and scripts to allow students to by pass the login process to
+access a specific and named resource `#27697`
+* Collision detection in the room timetable view reinstated `#27404`
+
+* A new field has been added to the financial preferences tab called
+'invoice remittance instructions'. Enter your custom instructions for
+your invoice payments here e.g. bank account details, and it will print
+on invoices with an outstanding balance to pay `#26912`
+* onCourse now remembers the user preference for the list view sort
+column, so when you close a list view and reopen it, it will reopen
+showing the data listed in the same way `#20965`
+* You can now sort list views by multiple columns at once by holding
+down the shift key and clicking on multiple column headers. The sort
+order is determined by the order the column headers are clicked upon i.e
+the first column clicked is the primary sort order, followed by the
+second column clicked ect. `#20965`
+* For AVETMISS field values that populate from class, to enrolment and
+then to outcome, the lock/unlock icon is used to show where values have
+been inherited (field shows a value with a locked padlock) versus where
+the value has been overridden (field is in editable mode, with an
+unlocked padlock) `#25252`
+* A new field, Confirmation of Enrolment (CoE) has been added to the
+enrolment edit window for CRICOS enrolments. This field does not report
+as part of the AVETMISS standard `#27121`
+* The Discount edit layout has been refreshed to improve the usability
+and grouping of related discount options `#27300`
+
+* Add check box option to retain or remove class VET data during
+duplication. Data is retained by default `#26606`
+* Renamed the enrolment tab in the contact window to education to
+reflect the addition of prior learning `#26768`
+* Add + button to the contact window on the education tab above the
+enrolment panel to open Quick Enrol with the student's details
+pre-populated `#26768`
+* Added search index for invoice dates and source to run faster queries
+against these fields in onCourse `#26869`
+* Redesign the front page of the class edit view to better present
+discounts, including the customised discount values. `#27123`
+* Added access level role to the user list view `#26797`
+
+* Improvement to add courses process from voucher, to use the same sheet
+and options as the add discount window `#25449`
+* Simplification to the onCourse chart of accounts, by removing
+reference to expense accounts that can not be posted to `#26410`
+* Date Created column added to the enrolment list inside the contact
+record, and the attached documents list `#24647`
+
+* All discounts are now allowed to be negative (i.e. a surcharge) in
+both discount schemes and manual discounts. This means the increased fee
+is part of the enrolment invoice line, so the full fee charged will be
+reversed should the enrolment be cancelled `#25447`
+* Allow purchased memberships and products to be cancelled and an
+optional credit note provided on cancellation `#25807`
+* Payslips are now taggable `#25815`
+* Added validation message if a tutor added to a class has an end date
+in the past `#17775`
+* New fields for recording Working with Children Check (WWCC) number,
+expiry date, status and check date to the tutor tab of a tutor record
+`#26006`
+* Moved the creation of email messages to the onCourse server. This has
+greatly improved the speed of sending large numbers of emails `#20489`
+* AusPost suburb and postcode datafile added to onCourse, to improve
+accuracy of address data entry `#22533`
+* Show a message in the payment window when the payment attempt fails
+and the window stays open to allow for another attempt or manual refund
+`#25367`
+* Validation added to ensure an outcome end date set manually can not be
+before the outcome start date `#25521`
+* Added date and time of document creation to the documents window.
+Documents are shown sorted in chronological order by default, with the
+newest documents at the top of the list `#25621`
+* Added contact middle name to the AVETMISS data export files `#25783`
+* Descriptions and other rich text content can now be added to the root
+tag e.g. subjects so that tag content will display for the URL
+www.mycollege.name/courses `#23330`
+* Allow the purchase of pre-defined products when using a corporatePass
+`#19808`
+* The VET Fee-Help 'Type of attendance' field has been added to the
+enrolment record. This allows you to set a 'Type of attendance' i.e.
+full time at the class level, but change it to part time for some
+students enrolled in the class `#25034`
+* Remember and return by default to the last browsed location when
+uploading a new document to onCourse `#25465`
+
+=== Fixes
+
+* Fix to the display of the contact financial tab so the balance
+calculates correctly `#29558`
+* Improvement to the creation of new custom filters so that they display
+in the list view after re-opening the window `#29397`
+* Import of new reports now correctly updates the report description
+`#27304`
+* Improvement to display of payment in list to clearly identify
+undeposited vs deposited funds `#29360`
+* Improvement to sales filters to differentiate between active and
+expired and cancelled memberships `#29391`
+* Allow multiple contacts to be removed from manual messaging lists
+`#29398`
+* Fix to permission for deletion of waitlist entries `#29436`
+* Fix to remove text field delimiters from CQR export `#29592`
+* Improvement to the AVETMISS delivery mode value so the inherited value
+behaves like other inherited values when locked or unlocked `#29595`
+* Improved the invoiceLine description default wording since some of the
+data was being repeated `#28008`
+* Changed the column headings in the Deposit Banking, Payment In and
+Payment Out list views from 'Created' to 'Date paid'. Changed the field
+in the Payment In edit view from 'Date created' to Date paid' `#29643`
+* Search results for census date now does not include results from day
+before or after selected period. E.g. 1-30 Sep period shows only
+September results, no results from 31 Aug or 1 Oct `#29841`
+* The 'is not empty' filter in the advanced search now correctly shows
+records with nothing in commitment ID field `#29757`
+* When a discount is manually changed at the class level, it now
+duplicates across when duplicating the class. `#29852`
+* Class list load times have been improved `#29918`
+* Emails sent to incorrect address (e.g. student@mailcom) are now being
+marked as not 'failed' `#28587`
+* Fix to the dashboard tab so it's now displaying data again `#29201`
+* The certificate report now always selects the correct template
+`#29898`
+* Credit notes are now automatically created when sales are cancelled
+`#29958`
+* Fix to the journals when vouchers are redeemed. Voucher liability
+total cannot be charged for more than the amount payed for the voucher,
+however it can be more than the used voucher value (e.g. when voucher
+value is less than voucher price) `#29961`
+* If the Messaging access right 'Email over 50 contacts' is not enabled
+then this restricts sending of emails from template to 50+ people. A
+message is also shown to the user when trying to send to more people
+`#29730`
+* LDAP SSL setting incorrect changes Bind user DN `#30193`
+
+* Refactoring of class deletion process to improve process speed
+`#26825`
+* Improvement to the Tagging user interface to display the tag list and
+tag description as larger fields field and show the tag URL value when
+the field is locked `#29388`
+* Improvement to tag weight ordering for exports and scripts `#28708`
+* Fix to the access rights for discounts to allow staff with edit
+permission to add new classes to existing discounts `#29364`
+* Improvement to allow a concession type to be added to a contact during
+record creation `#29408`
+* Fix to allow concessions to be added to discounts correctly `#29408`
+* Fix to allow discounts to be joined to related members `#29719`
+* Improvement to calculate class budget income as inclusive of credit
+notes manually joined to the class `#29429`
+
+* The onCourse credit card payment gateway has been added to the
+skillsOnCourse portal, to allow debtors to make payments against their
+outstanding invoices or payment plans `#19455`
+* A design refresh of the portal timetable has been implemented to show
+sessions in a continal scrolling schedule. Each session can be clicked
+on to expand and show additional notes and links `#28496`
+* A neew team timetable view has been implemented for users with group
+permissions for other users in the portal. In this view you will see the
+attendees scheduled for each session `#28496`
+* An all new and improved design for tutors marking attendance via the
+portal now includes the CRICOS marking options for partial attendance
+and absent with reason `#27482`
+* A feature for marking the class roll has been added to show the
+attendance percentage of each student `#27482`
+* Students (and their approved portal contacts) can see information
+about the student's attendance for each class, showing the marked roll
+results for each session as well as an overall attendance calculation
+`#28804`
+* A new feature has been added to the skillsOnCourse login screen to
+auto detect first time visitors to the site, when following a login link
+from onCourse. They system will auto populate their name and email
+address and prompt them to set up a password on their first visit
+`#28881`
+* A new feature for adding hero images to course descriptions using tags
+in onCourse. The
+http://www.ish.com.au/s/onCourse/doc/web/images_and_attachments.html#d5e1057[Images
+and Attachments] of the web documentation has detailed instructions on
+how to implement this feature `#29198`
+
+* Reinstate the Trial balance and MYOB export options option from the
+Financial - Summary Extracts menu so historical reports can be
+reprinted/re-exported `#29213`
+* Update the list of required import files when switching between import
+types `
+            #27351
+          `
+* Improvement to the AVETMISS import to always select English for any
+English equivalent language type such as 'American' `#28239`
+* Reinstate admin permision to edit historical note records `#29284`
+* Improvement to invoice date time to avoid date display changes across
+timezones `#28861`
+* Fix to credit card banking settlement date, to be reported date from
+the gateway rather than the onCourse banked on date `#29335`
+
+* Fix to simple search in certificate window to allow for standard
+'surname, firstname' or firstname surname' style searching of records
+`#28312`
+* Invoice number correctly displays on class roll `#28526`
+* Improvement to the contact merge feature to reduce duplicates between
+onCourse and web databases `#28235`
+* Improvement to the attendance percentage calculations inside the class
+attendance view to ensure partial attendance and absent with reason
+attendances count towards valid attendance counts `#28474`
+* Fix to the Fee Help Requested field in the enrolment record to ensure
+the value is not set until the enrolment status is finalised in the
+database `#28106`
+* VET Fee Help - VEN File name exports with a full stop in the file
+name, like the other export files `#28510`
+* VET Fee Help - VEN will now only export each contact once to avoid
+duplicates when enrolling in multiple courses `#28511`
+* VET Fee Help - Update 'unit of study code' to export as standard
+courseCode-classCode format `#28512`
+* Improve onCourse contact merge function when custom fields are present
+`#28545`
+* Prevent the preference window from opening more than one instance at a
+time for each user `#28586`
+* Display contact financial records sorted by date and time inside the
+contact record `#28781`
+* Fix to wait list tagging function to correctly delete related tags
+when the waiting list entry is deleted `#28959`
+* Improvement to EULA checking preference to retain check when the user
+name is modified `#27475`
+
+* Scroll bar added to preferences window left hand pane `#27873`
+* Fix to record status updates from inside edit view process to
+immediately update status change in related list views `#28117`
+* Allow payment plan payment due dates to be set prior to the invoice
+creation date `#27557`
+* Fix to 'add this discount when creating or duplicating classes' to add
+the discount to all classes, including those where it did not previously
+apply `#27679`
+* Improvement to the merge student process to prevent merging when both
+students have active enrolments in the same class `#27787`
+* Where prior learning data is non-VET, export it for AVETMISS with the
+module code ISH+ID of the record to ensure there are no inadvertent
+duplications of NAT00060 records `#27878`
+* Restore the display of the invoice number in the contact education tab
+record `#27944`
+* Prevent deletion of a prior learning record where one of it's outcomes
+are joined to a certificate record `#28004`
+* Fix to update contact details screen for students with a validated USI
+to show mouse cursor in the correct position `#28015`
+* Improved mouse scroll behavious in large text fields, such as scripts
+and templates `#28013`
+* Improved colour coding of classes in list view to indicate enrolment
+status. Classes that are disabled for enrolment or cancelled show in
+light grey font, classes with enrolment enabled via onCourse only in
+dark grey font, and classes where enrolment is allowed online in black
+font `#28058`
+* Display time of creation for invoics in the contact financial tab
+`#28088`
+* Allow access to open document attachments from inside Quick Enrol
+`#28101`
+* Fix to allow bulk tagging via mouse right click from the enrolments,
+waiting lists and payslips list view windows `#28144`
+* Scrolling through record edit views in the contact list using the next
+and previous options will attempt to load the next record on the same
+tab as the previous record. Where that tab is not available, the next
+tab is selected `#28247`
+* Fix to the VET Fee Help 'Fee charged' value, which was displaying
+$0.00 for some enrolment records, rather than the fee charged `#28343`
+* Prevent outcome start date from being reset to the class start date
+when the end date is edited manually `#28394`
+* Ensure data entered from inside a sheet opened from within a record
+edit view prompts the user to save when leaving the record `#28137`
+* Correctly export AVETMISS NAT00120 Specific Funding Identifer data
+from outcome record `#28196`
+* Improvement to CloudAssess integration to check for student duplicates
+on enrolment in a cloudAssess class `#28397`
+
+* Improved prefetches for creating large message batches, to ensure
+server is not overloaded `#27748`
+* Removed lock/unlock icons from outcomes obtained via prior learning,
+as there are no class dates to inherit this data from `#27241`
+* Do not request to save company records when closing the edit view and
+no changes have been made `#27631`
+* Improved validation message when attempting to delete discounts to
+explain discounts already used can only be disabled `#27346`
+* A fix to access control edit permissions where when the account access
+role was changed, and some preferences and permissions didn't update as
+expected `#27717`
+* Allow spaces to be added when entering credit card numbers in the
+onCourse payment gateway `#26889`
+* Improvement to the onCourse replication process to reduce the
+occurrence of stuck 'in transaction' status enrolments `#28089`
+* Improve clarity of user messages in Quick Enrol when the payment
+gateway is closed without completing or cancelling the payment attempt
+`#26888`
+* Improve visual display of calendar icon in advanced search so it
+doesn't overlay the data in the field `#27422`
+* Fix to prevent sending of Credit Note emails when 'send credit note
+email' option is unchecked in enrolment cancellation or transfer process
+`#27963`
+* Improved loading speed of course lookup process in Quick Enrol
+`#28057`
+* Fix to ensure correct naming of payment types in onCourse UI for new
+installations `#27991`
+* Replacement of the class cancellation script and email set to a
+version that triggers only on class cancellation instead of enrolment
+cancellation `#28001`
+
+* Fix for exception in Quick Enrol that could occur when a fee or
+payment amount contains a comma `#27523`
+* Moved the CQR export from the certificate cogwheel and into the export
+list to make it more consistent with other onCourse export processes
+`#27277`
+* Restored the functionality of opening related contacts from inside a
+contact record with the 'open related' icon `#27539`
+* Fix to voucher redemption process to update the redeemed value
+immediately `#26126`
+* Only display payment plan payment due dates on invoices that are fully
+or partially unpaid `#27203`
+* Ensure Certificates created with a retrospective Awarded On date are
+collected in the AVETMISS NAT00130 export for their date range `#27452`
+* Allow newly purchased vouchers to be redeemed immediately in Quick
+Enrol `#27505`
+* Ensure if 'export only VET courses' is selected in the AVETMISS export
+runner, non VET Prior Learning records do not export `#27525`
+* Fix to contact CSV export to export the student language name
+correctly `#27574`
+* Empty column removed from all onCourse default class rolls `#27586`
+* Significant improvement to onCourse server memory usage when large
+scripted emails queue to send `#27625`
+* Remove from Banking Deposit display unsuccessful and reversed payment
+types `#27664`
+* Show negative values (Payments Out - refunds) in brackets in the
+Banking Deposit list to clearly identify them `#27664`
+* In the Banking Deposit window total, deduct payments out (refunds)
+processed during the day from the total amount banked `#27664`
+* Fix to record creation, saving and editing process while large message
+batches are being created and updated `#27673`
+* Prevent discounts attached to CorporatePass use from displaying or
+being accessible in Quick Enrol `#27754`
+* Prevent null pointer exception when a Quick Enrol process including a
+payment plan invoice is unticked during the creation process `#27828`
+* Prevent the shifting of outcome start and end dates when the onCourse
+client and server are operating in different timezones `#27669`
+
+* Increased size of company name field in contact record view `#26836`
+* Fix bug where contact address was missing from invoices where a class
+on the invoice had a payment plan `#27125`
+* Display name of voucher edit window now displays correct name 'voucher
+type' `#27132`
+* Removed extraneous validation in Quick Enrol that could cause an
+exception where an enrolment was removed from QE `#26786`
+* Fix to Quick Enrol that could cause the application to lock up when a
+class with more than 1,000 discounts was selected `#27254`
+* Fix the Google 'get location' tool in the sites records to retrieve
+the latitude and longitude of the site address `#26821`
+* Tab between fields order was adjusted on the contact record to ensure
+consistent and expected left to right behaviour `#26693`
+* Remove reference to 'this invoice' when a user is processing a payment
+in via Quick Enrol `#26858`
+* Fix to 'find related invoices' from the accounts window to ensure it
+returns the expected results `#26891`
+* Remove caching of payslip list view to improve ability to locate newly
+created records `#27067`
+* Fix to edit/save behaviour of multi record update options such as
+setting outcome values or adding/removing tags, so that if the record is
+not saved then the changes to the associated records are not saved
+`#26837`
+* Add correct pluralisation to sub list headings i.e. add 's' to the
+name when there is more than one record `#26995`
+* Pre-populate student information into Quick Enrol when the 'add
+enrolment' option is clicked inside their contact record `#27263`
+* Improve load time between onCourse splash screen and login window
+`#26983`
+* mySQL upgrade from AUTO_PK to db generated primary keys for improved
+use of database transaction functionality `#26963`
+* Improved the opening speed of the CorporatePass edit view by removing
+the embedded list of invoices that have used the CorporatePass. The find
+related function shows this information as needed `#27172`
+* Improved layout for payment plans in the invoice edit view. Payment
+lines are now arranged in chronological order so it logically follows
+Invoice and Payment In lines. Removed from view any unnecessary overdue
+values for initial payment lines `#27204`
+* Fix to the 'Hide discounted price on web' option in the discount
+window so it can be applied when a discount is eligible via a
+CorporatePass redemption, and not shown to general visitors on the
+website `#27300`
+* Performance improvements to the send email process when large batches
+of emails are sent together `#27328`
+
+* Under certain circumstances, heavy use of scripts would exhaust all
+the server memory preventing any further logins `#27219`
+* Classes without any sessions, but not marked as self-paced would cause
+problems with setting outcome dates `#27215`
+* Add warning message when trying to delete a tutor with a wage that has
+already created paylines `#26885`
+* Honorific was incorrectly exported in position of contact title in
+standard CSV export. This has been corrected, and the honorific field
+added to export after the contact name `#26609`
+* Country of Birth name was not exporting the expected name value in the
+standard CSV exported `#26609`
+* Prevent tutor middle names from displaying in web advertising copy
+`#26741`
+
+* Make it easier to add brand new classes to discount strategies
+`#26409`
+* Improvement to AVETMISS reporting collection of outcomes to ensure
+self paced outcomes in the date range when their start and/or end dates
+are in the reporting period nominated `#26518`
+* Fix issue where users who did not have access rights to edit enrolment
+outcomes could not view any class record data `#26783`
+* Fix to allow correct deletion of pay lines for tutors who are attached
+to the class record multiple times with different pay roles `#26795`
+* Ensure all outgoing emails use the from address set in the messaging
+window, where this is different to the default from address `#26866`
+* Fix to display the time format with hours and minutes correctly across
+timezones `#26668`
+* In custom drop down fields, show the word 'Other' when the option * is
+chosen `#26676`
+* Correctly switch between % and $ value when discount type is changed
+during set up `#26697`
+* Ensure tag edit view fields grow with window resize `#26698`
+* Fix to advanced search payment in to allow search on date banked
+window `#26704`
+* Display all sessions in timetable when a contact is both a student and
+a tutor `#26727`
+* https:// added to the URL for all documents so they open correctly
+without certificate warnings `#26796`
+* Fix Quick Enrol switching between company and student contacts
+`#26819`
+
+* Fix to the class duplication process which could sometimes fail when
+tutor attendance was marked but not approved `#26023`
+* Validation message added when adding contact headshot to ensure the
+contact record has been saved to the database first `#25972`
+* Automatically tick the 'VET' flag of a course when a unit of
+competency is added to the VET tab `#25973`
+* Fix to classes that were duplicated over a daylight savings change
+period to show the correct time for each session `#26157`
+* Label in Quick Enrol 'concession type' changed to 'Discount type' to
+improve clarity of meaning `#26183`
+* A technical fix was implemented to prevent a race condition in the
+replication process which could leave some enrolments in an 'in
+transaction' state where there were multiple users attempting to process
+an enrolment into the last place in a class `#25706`
+* A maximum width for tags names was introduced to visually truncate
+long tag names attached to records and allow the tags to wrap correctly
+in the window `#26226`
+* Fix to the label in the class fee sheet to switch between "Total class
+fee (inc GST)" and "Total class fee (no GST)" depending on the GST
+option selected `#24264`
+* Improvement to window view copy and paste to excel functions to ensure
+date formats appear the same way in the pasted data as they did the
+onCourse window `#25918`
+
+=== Web features
+
+* A new option to the CMS has been added to enable tutor outcome marking
+in the portal. This option is disabled by default. `#28870`
+
+* The onCourse credit card payment gateway has been added to the
+skillsOnCourse portal, to allow debtors to make payments against their
+outstanding invoices or payment plans `#19455`
+* A design refresh of the portal timetable has been implemented to show
+sessions in a continal scrolling schedule. Each session can be clicked
+on to expand and show additional notes and links `#28496`
+* A neew team timetable view has been implemented for users with group
+permissions for other users in the portal. In this view you will see the
+attendees scheduled for each session `#28496`
+* An all new and improved design for tutors marking attendance via the
+portal now includes the CRICOS marking options for partial attendance
+and absent with reason `#27482`
+* A feature for marking the class roll has been added to show the
+attendance percentage of each student `#27482`
+* Students (and their approved portal contacts) can see information
+about the student's attendance for each class, showing the marked roll
+results for each session as well as an overall attendance calculation
+`#28804`
+* A new feature has been added to the skillsOnCourse login screen to
+auto detect first time visitors to the site, when following a login link
+from onCourse. They system will auto populate their name and email
+address and prompt them to set up a password on their first visit
+`#28881`
+* A new feature for adding hero images to course descriptions using tags
+in onCourse. The
+http://www.ish.com.au/s/onCourse/doc/web/images_and_attachments.html#d5e1057[Images
+and Attachments] of the web documentation has detailed instructions on
+how to implement this feature `#29198`
+
+* A new set of preferences were added to lock the online mailing list,
+waiting list and enrolment process to only allow existing students to
+add or enrol themselves. This feature is particularly for the use for
+enterprise RTOs or membership based organisations. To enable these
+functions on your website, uncheck the CMS setting options 'Allow create
+new student' `#27668`
+
+* An important change has been made to the student USI collection portal
+to improve the quality of the data collected by RTOs. Contact data
+mandatory for AVETMISS reporting that has not been supplied on
+enrolment, such as Address, Suburb, Postcode and Date of Birth will be
+requested in the first step. The second step now requests the students
+complete the AVETMISS questions, with the USI as the third step.
+`#27332`
+* Addition of OpenGraph and Facebook Namespaces to HTML tag for all
+default and custom website templates `#22081`
+* Allow tag description content to be added to root tags and to render
+on www.mysite.com/courses and www.mysite.com/subjects pages on the
+website `#23330`
+
+* Removed rollover and hover text from portal to improve user experience
+on touch screen devices `#25991`
+* A payment agreement template was added to the website files, allowing
+users to customise the wording of the agreement to the terms and
+conditions of sale, and insert multiple links to other documents where
+required `#26191`
+* Added search options ?near and ?time to course pages, so classes
+displayed on these pages can be filtered for display `#26499`
+* Negative discounts that apply to web enrolments will automatically
+take priority over other discounts available `#26540`
+* Address, suburb and postcode field data collection via the USI portal
+is always mandatory, regardless of the CMS settings for the enrol app
+`#26605`
+* Fix to the display of the contact financial tab so the balance
+calculates correctly `#29558`
+* Improvement to the creation of new custom filters so that they display
+in the list view after re-opening the window `#29397`
+* Import of new reports now correctly updates the report description
+`#27304`
+* Improvement to display of payment in list to clearly identify
+undeposited vs deposited funds `#29360`
+* Improvement to sales filters to differentiate between active and
+expired and cancelled memberships `#29391`
+* Allow multiple contacts to be removed from manual messaging lists
+`#29398`
+* Fix to permission for deletion of waitlist entries `#29436`
+* Fix to remove text field delimiters from CQR export `#29592`
+* Improvement to the AVETMISS delivery mode value so the inherited value
+behaves like other inherited values when locked or unlocked `#29595`
+* Improved the invoiceLine description default wording since some of the
+data was being repeated `#28008`
+* Changed the column headings in the Deposit Banking, Payment In and
+Payment Out list views from 'Created' to 'Date paid'. Changed the field
+in the Payment In edit view from 'Date created' to Date paid' `#29643`
+* Search results for census date now does not include results from day
+before or after selected period. E.g. 1-30 Sep period shows only
+September results, no results from 31 Aug or 1 Oct `#29841`
+* The 'is not empty' filter in the advanced search now correctly shows
+records with nothing in commitment ID field `#29757`
+* When a discount is manually changed at the class level, it now
+duplicates across when duplicating the class. `#29852`
+* Class list load times have been improved `#29918`
+* Emails sent to incorrect address (e.g. student@mailcom) are now being
+marked as not 'failed' `#28587`
+* Fix to the dashboard tab so it's now displaying data again `#29201`
+* The certificate report now always selects the correct template
+`#29898`
+* Credit notes are now automatically created when sales are cancelled
+`#29958`
+* Fix to the journals when vouchers are redeemed. Voucher liability
+total cannot be charged for more than the amount payed for the voucher,
+however it can be more than the used voucher value (e.g. when voucher
+value is less than voucher price) `#29961`
+* If the Messaging access right 'Email over 50 contacts' is not enabled
+then this restricts sending of emails from template to 50+ people. A
+message is also shown to the user when trying to send to more people
+`#29730`
+* LDAP SSL setting incorrect changes Bind user DN `#30193`
+
+=== Web fixes
+
+* A new option to the CMS has been added to enable tutor outcome marking
+in the portal. This option is disabled by default. `#28870`
+* Improvement to the web enrolment process when redeeming a voucher to
+auto assign the defined voucher contact as the payer by default,
+allowing vouchers to be redeemed by any student, but still ensuring the
+invoice on redemption is sent to designated voucher contact `#29138`
+* Improved display of invoices in the portal to better match onCourse
+email templates and print reports `#28286`
+* Hide payments in the portal of $0, including internal system payments
+and failed payment attempts `#29162`
+* Ensure new attendance sessions are created in the portal when sessions
+in the class are added or adjusted when the class is in progress
+`#29521`
+* Fix to ensure course images display in the portal correctly `#29607`
+
+* Allow students to manage their unsubscriptions without a login using
+$\{contact.getPortalLink("subscriptions")} in email templates `#27344`
+* Fix to the CMS editing process to allow multiple tabs to be open and
+edited at the same time `#28195`
+* Improvement to attendance marking replication process between the
+skillsOnCourse portal and onCourse where a class has multiple sessions
+on the same day `#27761`
+* Allow office onCourse users to successfully complete an enrolment for
+a student who abandoned their enrolment part way through on the web, but
+did not cancel it `#28168`
+* Improvement to the use of CorporatePass on the web to ensure any
+discount that applies to corporate pass users is removed if the
+purchaser changes their mind and instead enrols and pays with a credit
+card `#26731`
+* Upgrade to the Solr search engine used on the web to improve speed and
+mutli faceted search options `#26731`
+
+* Apply marketing preferences selected during the enrolment process to
+the contact record in onCourse `#27870`
+* Change validation for email addresses during the online enrolment
+process to allow for new domain name extensions `#27935`
+* Allow a voucher purchased on the website to be redeemed by any user
+presenting the voucher code `#27312`
+* Classes that have their enrolments automatically disabled based upon
+date restrictions collapse under the 'show full classes' list set with
+classes that are actually full `#27975`
+* Increase URL redirect fields in CMS to 512 characters `#27948`
+* Allow site based searches on course pages, to restrict the classes
+displayed to a particular site location `#27665`
+
+* Fix to display the $ symbol when displaying the corporatePass discount
+fees on the web `#27269`
+* Fix to the user switching function inside the skillsOnCourse portal
+which would not correctly lock/unlock the USI field when swapping
+between contacts `#27583`
+* Fix to the display of the 'loading more courses' icon at the bottom of
+a course list page when visiting an onCourse website from an iOS device
+`#26480`
+* Allow CMS redirects for pages containing unique characters in the URL
+such as % `#27054`
+
+* Fix to contact merge process to retain relationships for portal logins
+`#26014`
+* Ensure * option in custom field choices displays as 'other' in web
+enrolment and portal pages `#26677`
+* Fix to faceted search functionality that was impacted by non alpha
+characters in the tag names `#27082`
+* Fix to portal iCal feed, where some new classes were not automatically
+added to user calendars `#26618`
+* Fix to rich text rendering in portal to display italic text `#27224`
+* Improved wording to final confirmation screen of online
+enrolment/purchasing process when no payment is made `#27270`

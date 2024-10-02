@@ -1,0 +1,57 @@
+= Release 8.21
+18 July 2016
+
+
+== Reports and scripts
+
+* Two new AVETMISS imports were added to onCourse, allowing users to
+import data from external systems 'AVETMISS student update import' and
+'AVETMISS outcome update import' which either create new, or update
+existing student records with the same First Name, Last Name and Date of
+Birth. `#26792`
+* Fix to the 'Enrolment notification' email to tutors to display the
+price the student paid inclusive of any discounts. Change the line
+`Fee Paid:
+            ${enrolment.invoiceLine.priceEachExTax.add(enrolment.invoiceLine.taxEach)} GST
+            ${enrolment.invoiceLine.taxEach.isZero() ? 'free' : 'inc'} `
++
+to
++
+`Fee Paid: ${enrolment.invoiceLine.discountedPriceTotalIncTax} GST ${enrolment.invoiceLine.taxEach.isZero() ? 'free' : 'inc'} `
++
+in both the plain and HTML copy of the template, or update the whole
+template with the latest version from the
+https://github.com/ari/oncourse-scripts[Github repository]` #29002`
+
+== Minor features
+
+* The Tag edit view has been redesigned for a clearer and more concise
+user experience, including a new field to add a custom URL to your tags
+`#27055`
+* When duplicating courses, related courses and products and attachments
+are copied to the new course `#29136`
+* Show a red arrow in the preferences window if an aspect of the
+settings have a validation error and are preventing the window from
+saving `#26613`
+* The invoice remittance field height in the financial preferences has
+been increased to display multiple lines of text `#27796`
+* Report retained outcomes from cancelled enrolments in AVETMISS. By
+default, only outcomes given a status prior to cancelation are retained
+`#28141`
+* Remember last used directory when selecting files for import`#26650`
+
+== Fixes
+
+* Reinstate the Trial balance and MYOB export options option from the
+Financial - Summary Extracts menu so historical reports can be
+reprinted/re-exported `#29213`
+* Update the list of required import files when switching between import
+types`
+            #27351`
+* Improvement to the AVETMISS import to always select English for any
+English equivalent language type such as 'American' `#28239`
+* Reinstate admin permision to edit historical note records `#29284`
+* Improvement to invoice date time to avoid date display changes across
+timezones `#28861`
+* Fix to credit card banking settlement date, to be reported date from
+the gateway rather than the onCourse banked on date `#29335`

@@ -1,0 +1,49 @@
+=== Accounting best practices
+
+There are many ways to structure your accounts, and your circumstances may differ from the practices here. That's fine, as long as you get the results you need and have sufficient checks and balances. Accounting typically has three main goals: tax, audit and management. It will help if you don't mix them up. For example, the management reports are all done on an accrual basis in order to understand the true position of your business, while auditing mostly focuses on cash movements.
+
+==== Management
+
+Typical management reports focus on profitability of individual classes and across areas of the business.
+In onCourse you would select sets of classes using a combination of Advanced Search for choosing date ranges, and Tags for choosing a reporting group. You might also choose a set of students based on age, postcode, enrolment history, membership, concessions, etc and then use the 'related records' feature to find enrolments or invoices for those students.
+
+onCourse has budget and discount take-up reports, both at a detailed class level and across subjects. Forward income projection reports are available at both the class level and income account group level.
+
+You might export enrolment or invoice data and open the results in Excel in order to perform further analysis and graphing. If these are commonly used Excel transformations then write a custom onCourse export script or report. Absolutely anything you can do in Excel can be done inside onCourse's reporting and exporting engine.
+
+We haven't mentioned the onCourse general ledger yet, because most management micro-analysis is better done by looking at the source data in onCourse: classes grouped by tags, discounts, budget and gross profit. We do not recommend allocating fixed costs inside onCourse's budget; they add nothing to your understanding of the gross profit position at the class level and don't help your planning of which classes are worth running.
+
+To achieve whole-of-business reporting (including those fixed costs), with an accurate P&L and Balance Sheet, you should regularly journal the onCourse Trial Balance data to your finance system (Xero, MYOB, Quick Books, MoneyWorks, PeopleSoft, etc). Many of our customers do this once a month, but some do it daily with script automation.
+
+onCourse does not have a concept of terms or semesters and it is our advice that you avoid using them as your primary reporting period. Modern adult education is moving toward more continual delivery; asking students to wait 3-6 months before they can enrol may drive them to your competitors with more flexible scheduling. If you really need to, you can use tags in onCourse to group classes in terms, but you may instead like to report on months or quarters instead for similar results with much less administration.
+
+==== Tax
+
+onCourse is a deferred accrual accounting system. That means that income isn't recognised until the class is delivered, which works well in deferring your income tax liability until as late as possible. This is also best practice because it aligns the bulk of your costs (payroll) with your income.
+
+However, onCourse does not currently defer your GST liability, so that is posted at the creation of the invoice.
+For the purposes of creating a monthly or quarterly BAS report, exporting the invoice lines (sales items) of the invoices and credit notes raised during the period will allow you to calculate your GST inclusive and GST free sales.
+
+If you hold a significant amount in debtors, and you'd like to defer your GST liability to a cash basis, you will currently have to estimate that manually. Whether you are allowed to do this may depend on the type of your organisation and its annual turnover.
+
+==== Audit
+
+It is important not to confuse auditing processes with management accounting reporting. Good audit control will often focus on cash handling and tracking. Trying to overlay income accounts over your cash reports, and thereby convert your accounting to a cash basis, will be painful. onCourse is an accrual accounting system, so a partial payment against an invoice with multiple invoice lines each with different income accounts will be difficult to convert accurately from accrual to cash.
+
+We therefore advise you follow these processes to ensure your cash is tracked through the system:
+
+* Minimise the number of people with full admin access to onCourse and who are able to create refunds, perform banking, change the chart of accounts and perform other accounting functions.
+* Set up 'payment types' that mirror your real options. You may like to create a special payment type for 'internal journal' if other departments can pay you internally. Also, government funding (Smart & Skilled, VET Student Loans, etc) can also benefit from their own payment type.
+* If you can avoid handling cash entirely, don't allow it.
+* If you keep POS terminals, disable their ability to perform refunds or be selective about which staff have the passwords to this function. Because they allow you to refund to any card to any amount, they can be easily misused. onCourse will only allow you to refund credit cards from which you already received funds and only up to the amount you previously received.
+* Ensure your team is performing banking regularly and not holding unbanked cash and cheques.
+You can set up an alert in onCourse when payments remain unbanked for longer than you are happy with.
+* Regularly reconcile the banking in onCourse against your bank account. You don't need to wait until the end of the month with a printed bank statement to do this. If there are discrepancies between the 'onCourse' settlement date and the 'actual' settlement date this is a good time to adjust the dates in onCourse to match. Prompt entry into onCourse of any EFT payments received, banked with the date of receipt, will ensure a more accurate reconciliation process.
+* You may consider setting up a separate bank account for your inbound payments from student fees. This represents the funds held in trust for classes not yet delivered (whether or not it is an actual trust account).
+
+==== Periodic tasks
+
+* Reconcile all the payments in/out from onCourse against your bank account.
+* At least once a month, but perhaps weekly or fortnightly, run a trial balance from onCourse.
+* Journal these amounts into your main finance system, either using the export or by hand.
+* Create receipt records in your finance system from "deposited funds" you journalled from onCourse in the previous step against your actual bank account.

@@ -1,0 +1,144 @@
+= Release 3.0
+19 Jun 2012
+
+
+== Major features
+
+=== Dashboard
+
+The onCourse dashboard has been implemented. This shows a graphical
+representation of recent enrolment and financial activity for an 'at a
+glance' view of your college's business activities
+
+=== Budget
+
+New layout has been implemented for the class budget tab to provide more
+and clearer information about actual and budgeted income and expenses.
+In particular a whole new mechanism has been implemented to estimate the
+dollar value of discounts given away. The fields for enrolment minimum,
+maximum and projected which were previously located on the general tab,
+have been moved to the budget tab to improve the layout and now show for
+all budgeted items a comparison between the income and expenses for
+maximum, projected and actual columns.
+
+=== AVETMISS
+
+AVETMISS export options have been updated to meet the AVETMISS 6.1
+requirements including the addition of the Specific Program Identifier
+field in the NAT00120 and the capacity to automatically set outcome
+status 90 for all outcomes not yet set during the export process
+
+=== Deferred income.
+
+Rather than posting income to the general ledger at the time of
+enrolment, fees are posted to a "pre-paid fees" liability account in the
+onCourse GL. This is then journalled over to income as the class
+delivery occurs, giving you a much better view of actual income measured
+against delivery. This is particularly significant when you take
+enrolments in batches (eg at the start of term) and delivery stretches
+out over several months.
+
+=== Minimum requirements
+
+onCourse 3.0 increases some of the minimum requirements.
+
+* If you are running MS-SQL Server as the database backend, you need to
+be running version 2008 or better.
+* Java 6 is now required as a minimum. This means that some older G4
+Macs which cannot run Java 6 are now excluded.
+
+== Minor features
+
+* Automatically send email confirmations and invoices to contacts
+through Quick Enrol, where an email address has been provided. User
+options are now limited to selecting to print or not print at the end of
+the enrolment process.
+* Automatically remove students from a waiting list once they have
+enrolled in a class from the course they were wait listed
+* Allow onCourse administrative users to change their own passwords
+* When processing a refund, automatically create a zero dollar payment
+with a special type/status of "CONTRA" which matches the invoice to the
+credit note. Note that it may not pay 100% of the invoice since the
+refund could be for less than the total.
+* Change the message in the enrolment status column of the enrolment
+window to show that the student has completed the course. If the
+enrolment is active, it will now display 'complete' when the end date of
+the enrolment has passed.
+* Allow tagging on rooms
+* Display list of certificate records issued to a student in their
+student enrolment tab
+* Add country field to site records
+* Add timezone field to site records, to correctly display class times
+on websites when crossing timezones e.g. daylight savings. This will be
+important if you have delivery locations in multiple timezones.
+* New advanced search option for contacts to located contacts 'with
+concession type'
+* Allow for $0 tutor wage to be set
+* New options to export payslip to CSV and XML formats
+* Added tutors list and enrolment count to classes CSV export
+* Allow invoice due date to be edited after invoice creation
+* Allow editing of invoice billing address after invoice creation
+* When creating a class, allow the parent course to be found by course
+code search
+* Apply alphabetical sorting of rooms in timetable creation drop down
+menus
+* Allow refunding of administration fees to a different general ledger
+account than the enrolment fees
+* Created a new payment type called 'other' to use for payments that are
+neither cash, credit card, cheque or EFT
+* Emails can be larger than 32kB
+* Added totals to the financial sections of the students record, to see
+at a glance the outstanding balance of a student's account and updated
+layout of payment in/payment out data to make transaction information
+clearer
+* Addition of a Student Transcript Report to provide to students
+mid-enrolment and advise them of all their current outcome statuses
+* Added sold/max and male/female subtotals totals to Class by Subject
+report
+* Addition of class defaults to the general preferences tab to set
+default enrolment minimum and maximum, delivery mode and national
+funding sources for all new classes created
+
+== Fixes
+
+* Prevent the use of "/" character within tag names as it adversely
+effects automatic URL generation
+* Prevent record exception when tutor is deleted and then re-added to a
+class
+* Override rounding of GST amounts in full class fees where fees would
+previously round up or down 1c or 2c from the whole dollar.
+* Removed 'offer automatically' option in discount window. All discounts
+are always offered automatically when a promotional code is not required
+and the client otherwise meets the set discount requirements.
+* Allow outcome statuses 81 and 82 as valid options for setting VET unit
+of competency outcomes.
+* Corrected advanced query options in enrolment window so you can search
+for enrolments in classes which start or finish in a specific date range
+* Fixed class duplication process where sites and rooms weren't being
+carried forward when this option was selected
+* Correctly display per unit costs in the budget summary with the
+correct per unit label
+* Set all traineeship courses as full qualification courses by default
+* Correct display of inherited outcome delivery mode e.g. now displays
+mode set in class, instead of not set, when the outcome hasn't had it's
+delivery mode overridden locally
+* Improvement to timetable session editing to ensure only the session in
+focus has the time or date change applied
+* Validation fixed for setting VET outcome statuses of RPL or RCC type,
+allowing delivery mode to be set as NA (90)
+* Fix tax preferences default to allow no GST as a default option
+* Retain marked attendance records even if an enrolment is cancelled
+* Do not delete outcome records that have been used to create
+certificates even if an enrolment if cancelled
+* Accurate tag search results when searching across records with
+multiple tag types
+* Recognition of more attachment types, allowing files to be later
+exported out of onCourse
+* Prevent auto export of outcome 81 for outcomes where units were added
+to the student record post enrolment
+* Changed the label in enrolment record from Fee Paid to Fee Charged to
+clarify that the payer has been invoiced this amount for the enrolment,
+but may not have paid for the enrolment in full
+* Improve processing speed and efficiency for running exports.
+Efficiency gain shows that exporting 1000 records now reduced down to 1
+to 2 minutes, improvement aids the export of larger data sets

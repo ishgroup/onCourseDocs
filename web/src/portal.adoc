@@ -1,0 +1,572 @@
+== General
+
+=== Introduction
+
+skillsOnCourse is a website for tutors and students which allows them to interact with your college and with each other.
+
+Every student and tutor is automatically given a login when their record is created in onCourse or when they enrol online.
+
+skillsOnCourse gives tutors the information they need without having to contact you regularly.
+"Is my class full?", "Will my class go ahead?", "Can I get a class roll".
+
+These are all things that your teaching staff will ask you every day; now you have a 24-hour assistance to help tutors get the answers they need.
+
+Students can quickly and easily get the information they need about their classes and timetable.
+
+=== Creating accounts and logging in
+
+All students when they are created in onCourse, will automatically have a skillsOnCourse account set up for them. The first time a student enrols in your college, they will be sent an email which allows them to log into skillsOnCourse and set their password. Tutors are also given an account when their record is created in onCourse.
+
+The skillsOnCourse login screen will prompt the student or tutor to enter their details.
+Like the onCourse enrolment process, a student is identified by name and email address to avoid forcing students and tutors to remember another user id.
+
+image::images/Tutor Portal Log In Screen.png[title='skillsOnCourse web login page']
+
+It is also possible to log into skills onCourse as a Company rather than an individual.
+To do so simply click the 'as person' switch and it will change to 'as company', then enter the email address and password for your company.
+
+image::images/Tutor Portal Log In Screen Company.png[]
+
+==== Auto-detect first time users
+
+skillsOnCourse has the ability to auto detect first time visitors to the site, when following a login link from onCourse.
+The direct link that they would visit is
+https://www.skillsoncourse.com.au/portal/login?e=email@gmail.com
+replacing 'email@gmail.com' with the email address of the user.
+The system will auto populate their name and email address and prompt them to create an account on their first visit as shown below.
+
+image::images/First time users login screen.png[title='Auto-detect first time users login screen']
+
+Once you click on 'CREATE ACCOUNT' button you will be taken to page, as shown below, notifying you that a link has been sent to your email address where you can create a password.
+
+image::images/reset password message.png[title='Create new password message']
+
+==== Recovering and Resetting Passwords
+
+The main login screen for the skillsOnCourse portal includes a 'forgot password' link.
+The user will need to provide a name and valid email address in order to initiate the process.
+If the student or tutor does not have an email address in onCourse then they must contact the college so that you can manually update their record.
+It is important that you implement an appropriate set of policies around how to authenticate users over the phone when they request that their email address be changed or added, since that email address will give them access to the full profile and history of the user.
+
+If the user clicks on the forgot password link and enters the other details, an email will be sent to them with a link to enable them create a new password.
+This link will be valid for 24 hours only, after that time the link within the email will not work.
+Once the student has reset their password, they can continue using skillsOnCourse.
+
+....
+Dear {name},
+
+To reset your SkillsOnCourse password, simply click the link below. That will take you to a web page
+where you can create a new password. Please note that the link will expire 24 hours after
+this email was sent.
+
+  {recoveryLink}
+
+If you weren't trying to reset your password, don't worry - your account is still secure and no
+one has been given access to it. Most likely, someone just mistyped their email address
+while trying to reset their own password.
+....
+
+==== Dashboard
+
+Once a user has logged into their skillsonCourse portal they will see a number of blocks that will allow the user to see areas that can be reviewed or need actioned.
+
+image::images/portal_dashboard.png[title='Example dashboard']
+
+image::images/portal_dashboard_mobile.png[title='Example mobile view dashboard']
+
+==== Updating Your Details
+
+Once logged in, users are able to update their contact details via the Profile details menu.
+This screen also enables them to update their password and their responses to the RTO AVETMISS, USI and VET FEE Help student questions, under the various tabs available in their profile.
+Any custom fields that have been added and made to be shown in the cms preferences will appear in the 'Profile details' menu option.
+As you can see below the custom field 'Drivers Licence Number' has been added to the questions a student can answer or updated themselves.
+
+image::images/Tutor Portal My Profile View.png[title='My profile page of skillsOnCourse']
+
+image::images/Tutor Portal My Profile Update Password.png[title='Reset your skillsonCourse Password']
+
+==== Updating AVETMISS Details
+
+If a student is undertaking a VET course, they can provide or update the required AVETMISS information via the profile page, on the Census Questions tab.
+The student USI can also be supplied and will be verified in real time here, and citizenship information can be provided for funding and VET Fee-Help eligibility.
+
+image::images/portal_census_questions.png[title='Student USI and AVETMISS Information']
+
+=== Navigating skillsOnCourse
+
+Students and Tutors are able to navigate their way around skillsOnCourse via the top of page menu options.
+By clicking on the 'skillsOnCourse' logo in the top left hand corner of the page, they can return to the home page of the site.
+Because the site is built using modern html techniques, the user can safely use the back button on their browser or bookmark any page they like.
+When they return to a bookmarked page they will be asked to log in and will then be redirected to the page they bookmarked.
+
+If a student or tutor is updating their profile, they must save their changes before navigating away from that page.
+If they leave the page without saving the changes, those changes are lost.
+
+
+== Dashboard
+
+=== Next Class
+
+If a tutor is scheduled to teach an upcoming session, or a student is scheduled to attend a class, then when they log into their skillsonCourse portal they will see the next class icon on their dashboard as shown below.
+The 'View Map' button is clickable and redirect them to the class location tab where a google map will display where the session is taking place.
+
+image::images/portal_dashboard_next_session.png[title='Next Class dashboard icon']
+
+=== Attendance
+
+If a student has attended classes that have attendance marking then an icon will appear on their dashboard with their attendance percentage.
+The Attenance percentage is calculated by adding up all the sessions that the student has attended or are absent with a reason divided by the total number of session over the last 12 month period.
+
+image::images/portal_dashboard_attendance.png[title='Attendance dashboard icon']
+
+The attendance percentage icon that appears depends on a students average attendance over the last 12 months.
+
+* A green icon will appear if they have attended over 85%
+* A orange icon will appear if they have attended between 75% and 85%
+* A red icon will appear if they have attended under 75%
+
+image::images/portal_dashboard_attendance_difference.png[title='Variance of attendance icons']
+
+=== Payment Due
+
+If a payment is due, as in the due date of the payment has passed (not if the student owes money but is not due yet), there will be an icon on the dashboard notifying the student of this, as seen below.
+The 'PAY ONLINE NOW' button is clickable and redirect them to where they can make the payment.
+
+image::images/portal_dashboard_payment_due.png[title='Payment Due dashboard icon']
+
+=== USI Required
+
+Students who haven't already provided and verified their USI will see an icon on the dashboard notifying them that it's still required.
+They can then click on 'Review Now' which will direct them to the Census Questions tab of the students profile where they can either enter and verify or create a USI.
+
+image::images/portal_dashboard_usi.png[title='USI Required dashboard icon']
+
+=== Resources
+
+If a user has one or more documents or images linked to their account then they will see a resources icon listing the three most recent upload.
+All the listed resources are clickable and will open in a new tab.
+They can also click on the 'View All' button in the top right to be redirected to the Resources page to see the full list of all the attachments.
+
+image::images/portal_dashboard_resources.png[title='Resources dashboard icon']
+
+=== Class Feedback
+
+After a student has completed a class they will have the ability to provide feedback about it and rate out of 5 stars.
+If there are multiple classes that haven't been rated then it will show the oldest non-rated class first.
+If clicked on it will take the student to the class page.
+Once feedback has been provided the block will show the next oldest non-rated class; if there are no others then this icon will not be displayed at all.
+
+image::images/portal_dashboard_class_feedback.png[title='Class Feedback dashboard icon']
+
+=== Application to Study
+
+If a student has applied to study in a class and has yet to be enrolled or withdrawn then they will see a 'Application to Study' icon similar to the one below.
+It will include the name of the class along with the current status.
+
+image::images/portal_dashboard_application.png[title='Application to Study dashboard icon']
+
+If the application has been accepted then a 'PROCEED' button will appear, which if clicked, will redirect them to the Applications tab of the History page, as shown below.
+They can then either click on the 'Enrol Now' button to take them to a special URL on your website where they can enrol, or they can click on the 'Reject' button that will withdraw their application.
+
+image::images/portal_applications_history.png[title='Applications tab of the History page']
+
+=== Class Approval (tutors only)
+
+If a tutor has been assigned to teach a class and they haven't confirmed whether they can teach it, the class approval icon will appear on their skillsonCourse dashboard.
+If a tutor has multiple classes that haven't been approved then the block will show their next non approved class.
+If they don't have any classes to approve then this icon will not appear.
+
+image::images/portal_dashboard_class_approval.png[title='Class Approval dashboard icon']
+
+You can check whether a tutor has confirmed if they can teach a class by going to the tutor section of a class and checking if there's a confirmed date below their name.
+You can manually set a date by clicking to expand the tutor, clicking the field and adding a date.
+
+image::images/tutor_class_confirm_on_missing.png[title='Checking to see if a tutor has confirmed to teach a class in onCourse']
+
+=== Mark Roll (tutors only)
+
+Tutors will see the 'Mark Roll' dashboard icon in their portal if they are teaching a session less than an hour from now.
+If there is no such class then this block will show the tutor's last session taught that hasn't been marked.
+The icon will show the name of the course along with the start date and time of the session.
+The 'Mark Roll' button is clickable and will open the sessions roll marking page in the tutor's portal.
+
+image::images/portal_dashboard_mark_roll.png[title='Mark Roll dashboard icon']
+
+=== Mark Outcomes (tutors only)
+
+This block will appear if a tutor has outcomes for a class they have taught that haven't been marked.
+If a tutor has multiple classes with have outcomes that haven't been marked then this block will display the class that ended most recently.
+
+image::images/portal_dashboard_mark_outcomes.png[title='Mark Outcomes dashboard icon']
+
+If they click on the 'Mark Outcomes' button then it takes them to where they can either mark the students outcomes in the class by Outcome or by Student.
+
+image::images/portal_mark_outcomes_by_student.png[title='Marking Outcomes by Student']
+
+
+
+[[useful_information]]
+== Useful Information
+
+=== Timetable Information
+
+The user timetable can be viewed as either a schedule list of sessions or as a month or monthly calendar view.
+The timetable will display all classes on a given day, by clicking on a given day the session information will display at the top of the page, including course name, room, venue and tutor information.
+Timetables are applicable either to classes a student is enrolled in, or to sessions being taught by a tutor.
+
+The timetable will open to the current date, or next scheduled session by default.
+You can navigate between months by using the calendar month tool on the left panel.
+
+By expanding a timetable session, additional options like 'view course' and for tutors, 'mark roll' are available.
+
+image::images/Tutor Portal Timetable View.png[title='skillsOnCourse timetable view']
+
+==== Team Timetables
+
+If a portal user has permission to access the portal on behalf of other portal useres e.g. employers who can view their employee information, the timetable view will default to a team timetable view.
+
+This view shows a combined timetable view for all the linked portal users, so an employer can see at a glance all the sessions their staff are scheduled to attend, or a parent can see a combined timetable for all their children's sessions.
+
+The team view can be switched back to an individual view by using the link on the top of the page.
+
+==== Timetable Subscriptions
+
+Skills onCourse allows both Students and Tutors to subscribe to a timetable for their classes.
+To add this Calendar feed to your own Calendar, simply click on the Sync to Devicelink within the portal timetable view then add this feed to your own Calendaring software.
+
+Once the subscription has been set, any amendments made to the timetable for the classes you are either teaching or enrolled in will automatically flow through to your Calendar.
+This subscription only needs to be done once, per user.
+Any new classes a user enrols in, or are scheduled to teach, will be included in this subscription.
+
+image::images/PortalCalendarSubscription.png[title='URL link generated by the Portal which can be added to your own Calendar']
+
+=== Resources
+
+The resources tab is a quick way to navigate to any global resources that have been added to the portal, for example, documents like Student or Tutor handbooks, as well as resources for any classes currently in progress, grouped by their course name.
+
+Resources grouped by class may have been attached at either the course, class or student enrolment record, and may include documents such as learning and assessment resources, of completion Certificates.
+
+The display of resources in the portal is based on the permissions set for the document inside the onCourse application.
+Documents with the permission 'Student and tutor' show in the portal for both students and tutors.
+Documents with the permission 'Tutor only' show only to tutors, and are a suitable permission for resources like assessment marking guides.
+
+The skillsOnCourse dashboard also contains links to the newest resources added to the portal for the student or tutor.
+
+Resources for classes which are completed can be accessed from the class record directly.
+Completed classes are listed in History tab of the portal.
+
+image::images/portal_resources.png[title='Tutors can access detailed class information via the skillsOnCourse portal']
+
+=== Results
+
+The results tab of the portal show students the outcome results for their enrolments.
+Results may be for VET and non-VET courses.
+
+Some VET courses will show the link to the parent qualification, where the course has been created with this link in onCourse.
+Other VET courses, that are module only enrolments will list the outcomes only with no reference to a qualification.
+
+Results where no value has been set in onCourse will show as 'not marked' in the portal.
+
+Results where the outcome was successful will show in green font 'Pass' with the AVETMISS value set in onCourse displayed below.
+
+Results where the outcome was not successful will show in red font 'Not yet competent' and the AVETMISS value set in onCourse.
+
+image::images/portal_results_tab.png[title='List of all class results on the results tab']
+
+A student can also view their results for an individual class by clicking on the 'Results' tab on the class detail view.
+
+image::images/Tutor Portal Classes Menu Result Tab.png[title='Students results within a single class record']
+
+=== Class information
+
+Classes can be accessed from the link within the timetable, through the sidebar classes menu or via the History tab.
+
+Students can access up to date class information such as the date of the next session, venue and room information, as well as a link through to the class description which outlines the content to be covered within the class.
+
+The class tab also contains links to the class resources, such as learning and assessment materials, which have been uploaded to skillsOnCourse and any outcome results.
+Students can see their overall attendance calculation for the class, and the attendance value set for each class session.
+
+Tutors are also able to access class information, which includes information about the students enrolled, total number of enrolments, and can mark the class rolls.
+
+image::images/Tutor Portal Classes Menu Details Tab.png[title='Tutors can access detailed class information via the skillsOnCourse portal']
+
+[TIP]
+====
+Despite Tutors and Students both accessing the skills onCourse via the same log in page, the information displayed to these two groups is different.
+====
+
+==== Class feedback
+
+Students have the ability to rate classes they enrolled in and provide feedback comments.
+They can provide a Net Promoter Score response out of 10 (How likely are you to recommend us to a friend) and rate out of 5 stars how they found the Venue, Course and Tutor with a notes field below for them to add comments.
+The tutors that are teaching these class will then be able to see their overall class rating in their portal, without any information identifying the student/s who provided the rating.
+
+
+image::images/class_rating_student.png[title='Students have the ability to rate classes they enrolled in']
+
+==== Getting Directions to a Classroom
+
+The skillsOnCourse class detail view provides a link to Google maps, providing detailed directions for getting to the venue.
+Simply click on the View on Maplink within the Class details view.
+
+image::images/Tutor Portal Classes Menu Location Tab.png[title='Students can access Google Map directions via the skillsonCourse portal']
+
+=== Subscriptions
+
+A student can view what waiting lists they are on by clicking on Subsciptions and then clicking Waiting List.
+This page with allow you to find out more information about the waiting lists you are subscribed to along with the option of deleting your name off that list.
+
+image::images/Tutor Portal Subscriptions Menu Waiting Lists.png[title='Manage your Waiting List entries']
+
+A student can view what mailing lists they are subscribed to by clicking on Subscriptions and then clicking Mailing Lists.
+You have the option of choosing what method you would like to received the information by (E-mail, SMS, Post) and which of the designated mailing lists you wish to subscribe to.
+
+image::images/Tutor Portal Subscription Menu Mailing Lists.png[title='Add or remove yourself from Mailing Lists']
+
+[NOTE]
+====
+Students have the ability to manage their unsubscriptions without a login by adding the follow syntax $\{contact.getPortalLink("subscriptions")} in email templates.
+We recommend you include this link in message templates sent from wait lists.
+====
+
+=== History
+
+Students can access a list of their previously enrolled classes, their financial history and any applications they have submitted in the History menu.
+
+==== Applications
+
+If a student has submitted a applications that has been approved, they will have the option to enrol in the class or reject the offer.
+
+image::images/Tutor Portal History Applications.png[title='List view of applications submitted by the student']
+
+If you want to withdraw the application simply click on the 'Reject' option.
+You will then be taken to the page as shown below, confirming the application has been withdrawn.
+If you want to enrol in the class you have applied for, simply click on the 'Enrol now' option which will take the student to that course page on your website.
+
+image::images/Tutor Portal History Application withdrawn.png[title='Application has been withdrawn']
+
+==== Classes
+
+image::images/Tutor Portal History Enrolments.png[title='List view of previously enrolled classes']
+
+==== Finance
+
+image::images/Tutor Portal History Finance.png[title='List view of your Financial history']
+
+To find out more information about a certain transaction you can click on one of the records. That will iopen up payment information or a Tax invoice for the chosen payment, as seen below.
+
+image::images/Tutor Portal History Finance Invoice.png[title='Tax invoice']
+
+===== Making a credit card payment in the portal
+
+A student has the ability to make credit card payments in the skillsOnCourse portal, so debtors are allowed to make payments against their outstanding invoices or payment plans.
+This can be found in the Finance tab of the History menu.
+The payment option UI will only appear if the student has an overdue payment, if not, then this tab will just show a list of their financial history.
+A student has an option to reduce the amount they want to pay if they can't afford to pay the full amount at the present time, with a minimum limit of $20 unless the total overdue amount is less than this.
+Once the user has defined the amount they want to pay the student just needs to enter the credit card details of person making the payment.
+The user will then get a message notifying them if the payment was successful or if it failed.
+If the payment fails, then a few seconds after getting a notification of this they will get directed back to the payment page allowing them to try again.
+
+image::images/Tutor Portal Making a payment.png[title='Making a $550 overdue payment in the skillsOnCourse portal']
+
+If a payment is due there will be a block on the dashboard notifying the student of this, as seen below.
+If they click on the 'PAY ONLINE NOW' button in the block it will take them to where they can make the payment, as shown above.
+
+image::images/portal_payment_due_dashboard.png[title='Payment Due dashboard block']
+
+[NOTE]
+====
+If a student has mulitple invoices that are overdue the amount shown that needs to be paid will be the combined overdue total.
+If they don't want to pay the full amount yet, then the payment will be taken off the oldest invoice first, even if they are on a payment plan.
+====
+
+There is also a script in the Automation window called 'send payment plan reminder' that automatically sends a message 7 days before the payment due date, on the day the payment is due and every 7 days after that.
+
+image::images/send payment plan reminder.png[title='Send payment plan reminder script']
+
+Below is an example of the email that gets sent to a student who is overdue.
+There is also a link in the email that allows them to go straight to the portal, without having to log in, and pay the overdue balance.
+
+image::images/Payment Reminder Script.png[title='Payment reminder email']
+
+=== Certificates in skillsonCourse
+
+Once you have attached the students Certificate to their enrolment record you will want to be able to direct the student to where they can find it in their skillsonCourse portal.
+
+They can find this by:
+
+
+. clicking on 'History' tab in the top menu, then on 'Classes' to see the full list of past classes.
+. Under this section the student will see a list of past classes and to find the certificate for class 'Certificate III in Children's Services (CHC2-4)' they would need to click on this class in the list.
+. Finally click on the 'Resources' option; this option will only appear if they have something attached to their enrolment record.
+. When they have done this the student will be able to download and print their Certificate themselves.
+
+image::images/finding_certificate_portal.png[title='Where a student can find their Certificate in skillonCourse']
+
+
+[[tutor]]
+== Tutor Specific Features
+
+=== Tutor Specific Features
+
+Some features are only visible to tutors, including real time marking of the attendance roll for their classes.
+
+==== Viewing and Marking a Class Roll
+
+Tutors can access the attendance roll for the class they are teaching and mark the attendance records in real time, back to your onCourse database.
+Only class rolls for sessions in progress, or in the past, can be marked.
+Attendance can not be marked before the session has commenced.
+
+If you have uploaded student profile images in onCourse, their image will appear along side their name assisting the tutors in verifying their identify. onCourse is also integrated with Gravatar, so if students have a loaded a profile image against a Gravatar profile using the same email address as they use in onCourse, this image will be used.
+
+If a student is under 18, their age will show in brackets next to their name.
+
+Students can be marked as attended, partially attended, absent or absent with reason.
+For both partially attended and absent with a reason a note can be recorded against the attendance record to provide more information.
+
+Marked attendance data is then used to calculate the student's attendance percentage.
+This percentage may be important for reasons like CRICOS student visa compliance, or the college's own minimum attendance requirements in order to be eligible for a certificate of attendance.
+
+The attendance roll can also list contact details such as mobile and email addresses for students, allowing the tutor to easily contact students as needed.
+If this is enabled for students who are under 18, it will display the name of their Parent/Guardian and their contact details.
+
+image::images/Tutor Portal Classes Menu Marking Roll.png[title='Live attendance tracking via the skillsonCourse portal']
+
+image::images/marked_roll_mobile_portal.png[title='Marking the class roll on a mobile device']
+
+image::images/child_roll.png[title='How an under-18 student's contact details display']
+
+[TIP]
+====
+A College can set whether or they wish the Tutor to see the contact details of the students via the Website CMS under the Site Settings menu.
+Whether you want this information displayed is dependent upon the policies of your business and the management of student records.
+This setting is for all tutors of the college.
+====
+
+==== Approving Class Information
+
+Tutors can confirm their availability for a given Class using the Portal.
+
+To access any classes that a Tutor has not yet confirmed their availability for, simply click on the To Confirm menu within the Portal.
+
+There is also a dialog box available to the tutor so they can send in comments and or suggested amendments to the course copy. If a tutor sends in comments these are emailed to the system admin email set in Preferences.
+
+College staff then approve and update the changes via onCourse.
+
+Tutors cannot edit the course schedule or description themselves, since it needs to be properly approved by College administrative staff.
+
+The date of approval is shown as a date of confirmation in the Tutor section of the class.
+
+image::images/Skills_onCourse_Tutor_Class_Approval.png[title='Tutors can confirm availability for a given Class via the Portal']
+
+==== Viewing Student Results
+
+Tutors have the ability to view a list of results for each unit of competency for their students.
+They will be marked either 'Pass', 'Not Yet Competent' or 'No Result'.
+The AVETMISS specific value of the outcome is displayed below this summary label
+
+image::images/Tutor Portal Classes Menu Results Tab.png[title='Student Assessment Sorted by Unit of Competency']
+
+==== Marking in the tutor portal
+
+You can give your tutors access to mark their student's outcomes in the tutor portal.
+This will save time for the tutor and the college, and will give you fast, accurate results in your onCourse database.
+The system is simple and easy to use for tutors, and has the advantage of updating the onCourse database automatically, so no further staff time is needed to have up to date results for AVETMISS reporting or certificate issuing purposes.
+
+If your existing assessment strategy is for tutors to determine competency and notify the college, this system will be easy for you to enable, as it simply moves the notification to an online, integrated platform.
+
+Tutors will be able to mark the students competent, not yet competent, no result and withdrawn in the portal. onCourse will automatically assign the correct reporting codes based on the student's enrolment.
+The tutor is also be able select the date the outcome is marked as the end date of the outcome.
+This will override the existing outcome end date (or planned outcome end date) in the database.
+
+All other VET Outcomes, such as 51- Recognition of Prior Learning (RPL) and 60- Credit transfer (CT) are only available to college staff.
+This is to ensure the internal processes are meet before they are entered into your database.
+
+We recommend you have a policy for the tutors that outlines what settings you expect tutors to use.
+Please feel free to send them <<tutor_outcome_marking>> or edit them to include your own process with the specific steps and setting for your college.
+
+.Outcome Values in the portal and their values in onCourse
+[width="100%",cols="20%,34%,46%",options="header",]
+|===
+|Portal |VET outcomes |non-VET outcomes
+|Competent |20 - Competent |81 -Non-assessed enrolment - Satisfactorily
+completed
+
+|Not Yet Competent |30 - Competency not yet achieved / failed (NYC) |82
+- Non-assessed enrolment - Withdrawn or not satisfactorily completed
+
+|Withdrawn |40 - Withdrawn |82 - Non-assessed enrolment - Withdrawn or
+not satisfactorily completed
+
+|No Result |Not set |Not Set
+|===
+
+This feature is best for colleges that have a periodic, sample based assessment validation and moderation processes.
+If your college does ongoing moderation and validation on each assessment, it may be worthwhile considering a shift to a periodic system.
+Ongoing moderation and validation is a time intensive process that limits access to solutions that improve your overall efficiency and effectiveness.
+
+Attendance and outcome marking in the portal enables your college to collect the most update to date and accurate training information from your tutors, and allows for you to access further benefits when combined with default scripts.
+
+===== Enabling outcome marking via the tutor portal
+
+You can enable marking in your CMS Site settings.
+Note that this is a single setting for the whole business.
+If this feature is enabled all tutors will have access to outcome marking.
+This setting is disabled by default.
+
+
+. Login to the CMS
+. Go to 'Site Settings'
+. Click on 'skillsOnCourse'
+. Tick the check box 'Enable outcome marking in tutor portal'
+. Click Save at the bottom of the screen
+
+CMS Site Settings to enable tutors marking in the portal
+
+=== Class Resources and Files
+
+Tutor also have access to a list of resources and files for each individual class they teach.
+These resources could be teacher training and assessment resources, marking guides or additional course materials.
+These documents are uploaded via the class or course in the onCourse database with a 'Tutors only' permission.
+
+Tutors can also see documents uploaded with 'Tutors and enrolled students' permission, that may include documents like learning guides for students.
+
+image::images/Tutor Portal Classes Menu Resources Tab.png[title='Available teaching resources and documents for a Class']
+
+
+[[user_switching]]
+== User Switching
+
+This feature allows you to set up different relationships between e.g. An employer and their staff members and allow them to have access to their skillsonCourse portal login.
+
+=== onCourse Settings
+
+To enable this feature between certain relationship you need to tick the checkbox in the Contact Relation types window in Preferences.
+Type 'Preferences' into the dashboard search and open the window, then select 'Contact Relation types' in the left hand column.
+
+image::images/contact_relationship_list.png[title='Contact Relation Types view in Preferences']
+
+Once you have the marked the checkbox, as shown below, the employer will be able to access their staffs skillsonCourse portal.
+
+image::images/contact_relationship_edit.png[title='The 'allow access to portal' checkbox']
+
+After a relationship has been created and marked as giving access to information with the skillsonCourse portal then you can start creating relationships between contacts.
+To do this you have to open up the contact you want to create relationship to, Scroll till you see 'Relation' then click the + button.
+From here a sheet will appear that will allow you to choose who you want to create a relationship to along with what type of relationship.
+In the example below I am trying to make 'Natalie Morton' the employer of 'James Matthews'.
+
+image::images/adding_a_relationship_to_contacts_record.png[title='Adding a relationship to a contacts record']
+
+Once you have added the relationship it will remain there on the contact record once the record is saved
+
+=== What will you see in skillsonCourse
+
+Once you have marked the checkbox in the Contact Relation Types view in Preferences there should now be an option to switch users within skillsonCourse.
+This can be found at the top right hand side of the window.
+In the example below you can see user Natalie Morton has been given access to James Matthews' skillsonCourse details.
+
+image::images/skillsonCourse_user_switching.png[title='Where to switch users within skillsonCourse']
+
+Once your in a different users account the second name below your name in the top right side of the page will change to the name of what ever users account you are in, as seen below.
+
+image::images/skillsonCourse_user_switching2.png[title='View of what you will see in the top right side of the window when Natalie has switched to James' skillsonCourse login']

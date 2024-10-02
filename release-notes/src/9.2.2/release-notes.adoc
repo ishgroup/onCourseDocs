@@ -1,0 +1,81 @@
+= Release 9.2.2
+6 Mar 2017
+
+
+== Important changes
+
+== Major features
+
+* Audit logging implemented `OD-9900`
+
+== Reports and scripts
+
+* Assessment task matrix report sorting and printing fixes `OD-10123`
+* Contact financial record does not match printed statement report
+`OD-10153`
+
+== Minor features
+
+* Improve logging of AUSKEY errors `OD-10118`
+* Suppress 'Did not start' or 66 for AVETMISS Reporting for NCVER
+flavour exports `OD-10147`
+* MYOB journal export `OD-9735`
+
+== Fixes
+
+* Invoice edit view elements are not displayed correctly with large
+number of invoice lines `OD-10073`
+* Extend course code field to 50 characters `OD-10076`
+* Editing student fee should not override tax settings back to the
+account default `OD-10082`
+* Session start time shifts when duplicated class in different daylight
+savings period `OD-10091`
+* Cancelled Memberships should not show in Current Members filter
+`OD-10095`
+* Tag window sizing and validation improvements `OD-10100`
+* AVETMISS 'achieved in year' can't be set from a value to no value
+`OD-10106`
+* Canceling batch-marking of attendances still marks first attendance
+`OD-10121`
+* Deleting and adding same tag when editing record causes error
+`OD-10122`
+* Saved Advanced Find changing date range of saved search from 2016 to
+2017 `OD-10125`
+* AVETMISS NAT00060 VET Flag error for outcomes added via prior learning
+`OD-10128`
+* Wrong financial tab balance showing on contact profiles `OD-10137`
+* SMS messages over 160 characters throw an error message `OD-10138`
+* Access control stops users from sending template emails to more than
+50 customers `OD-10139`
+* Debtors and Creditors Report grouping error into single column
+`OD-10140`
+* New payroll window: do not store 'confirm now' action until user
+presses the 'Save' button `OD-10142`
+* Contact financial data not displaying in Quick Enrol `OD-10148`
+* Tutor status cannot be removed from contact `OD-10150`
+* Allow advanced search on tags and children of tags `OD-10151`
+* AVETMISS calculation of 3 - New or 4 - Continuing enrolment not
+correctly calculating `OD-10155`
+* Tutor or Student tag types not visible in contact edit view `OD-10158`
+* Generate tutor pay unacceptably slow `OD-10160`
+* Prepaid fees not journalled to income for some custom invoices. This
+will be automatically repaired by the upgrade. `OD-10162`
+* Don't show empty tag groups as filters or in tag lists `OD-9936`
+
+== Web features
+
+* Filter website course detail page by web root tag `OD-10086`
+* Upgrade jQuery `OD-10154`
+* Allow active memberships to be re-purchased before their expiry date
+`OD-9951`
+
+== Web fixes
+
+* Error when paying with class voucher for several enrolments at once
+`OD-10099`
+* Error messages are oddly aligned for some portal profile fields
+`OD-10157`
+* Display discounts on web correctly when they have a discount from date
+set `OD-10206`
+* Increase portal Contact Information phone/postcode length conditions
+to 20 characters when country is not Australia `OD-1907`

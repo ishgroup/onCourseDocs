@@ -1,0 +1,59 @@
+= Release 8.6
+10 Dec 2015
+
+
+== Major features
+
+Improve performance across the application, and especially in the class
+edit view. Over slow internet links the performance can be up to 10
+times faster for certain actions.
+
+== Reports and scripts
+
+* A new set of scripts has been added that links the maximum number of
+places between two classes taught in the same room by the same tutor
+called 'Increase maximum places' and 'decrease maximum places'. These
+scripts are included in onCourse, but not enabled by default. `#26194`
+* Images uploaded to the onCourse document management system can be
+embedded into onCourse reports `#26503`
+* Scripts can now 'print' and email onCourse PDF reports and send them
+as attachments to related contacts e.g. class students and tutors
+`#26805`
+
+== Minor features
+
+* Improvement to add courses process from voucher, to use the same sheet
+and options as the add discount window `#25449`
+* Simplification to the onCourse chart of accounts, by removing
+reference to expense accounts that can not be posted to `#26410`
+* Date Created column added to the enrolment list inside the contact
+record, and the attached documents list `#24647`
+
+== Fixes
+
+* Make it easier to add brand new classes to discount strategies
+`#26409`
+* Improvement to AVETMISS reporting collection of outcomes to ensure
+self paced outcomes in the date range when their start and/or end dates
+are in the reporting period nominated `#26518`
+* Fix issue where users who did not have access rights to edit enrolment
+outcomes could not view any class record data `#26783`
+* Fix to allow correct deletion of pay lines for tutors who are attached
+to the class record multiple times with different pay roles `#26795`
+* Ensure all outgoing emails use the from address set in the messaging
+window, where this is different to the default from address `#26866`
+* Fix to display the time format with hours and minutes correctly across
+timezones `#26668`
+* In custom drop down fields, show the word 'Other' when the option * is
+chosen `#26676`
+* Correctly switch between % and $ value when discount type is changed
+during set up `#26697`
+* Ensure tag edit view fields grow with window resize `#26698`
+* Fix to advanced search payment in to allow search on date banked
+window `#26704`
+* Display all sessions in timetable when a contact is both a student and
+a tutor `#26727`
+* https:// added to the URL for all documents so they open correctly
+without certificate warnings `#26796`
+* Fix Quick Enrol switching between company and student contacts
+`#26819`

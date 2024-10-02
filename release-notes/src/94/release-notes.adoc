@@ -1,0 +1,39 @@
+= Release 94
+20 Aug. 2021
+
+== Important changes
+
+=== Accounts used for payment reversals
+
+Prior to onCourse version 94, when you reversed a payment, that reversal was attached to the asset account set in your onCourse financial preferences ( https://acme.cloud.oncourse.cc/preferences/financial ). So if you had a payment into bank account A, but your preferences set to bank account B, then the reversal would be linked to bank account B.
+
+From this release, any new payment reversals will be linked to the bank account from the original payment. The preference is no longer used.
+
+This change will not affect payment reversals which have already been created even if they aren't banked. When you go to bank these payments, they will still automatically post to the preference asset account which existed at the time you created that reversal.
+
+== Major features
+
+=== Leads
+
+A new concept has been added to onCourse to enhance the CRM functionality. Leads represent a relationship between a contact (person or company) and zero or more products or courses. In this way you can track prospects and leads right from first contact, or even a mailing list entry through to conversion into a sale.
+
+Contacts can also have multiple leads, making it useful to track numerous varying requests from your contacts at any one time. If you handle bulk or corporate training requests, this is how you can manage it, with ease, right within the onCourse software.
+
+=== Quotes
+
+You can also now create quotes, which are just like invoices except you can edit them right until they are sent to the customer. If accepted, they can be really easily converted into an invoice, from which point they can no longer be edited or changed.
+
+Typically, you would attach quotes to a lead in order to track the progression of the sales process.
+
+== Minor features
+* Scripts now allow multi-line content in a message block `OD-16332`
+* Remove a number of internal Java classes and interfaces which are no longer used `OD-16015`
+* Remove ldap and budget licenses. Everyone gets these features now! `OD-16196`
+* Payslip - add pay type column to list view `OD-16329`
+* Show "Shared with website visitors" flag for documents attached to contact records `OD-16352`
+* Hide reversed payments from deposit banking list `OD-16368`
+
+== Fixes
+* Fixed issue where if a tutor was added to a class in more than one role, the tutor was shown twice as an assessment assessor in submissions `OD-16244`
+* Fixed an issue where 'Enrol highlighted student' option in Waiting Lists didn't work correctly `OD-16325`
+* For discounts which require more than one enrolment, make sure all enrolments are in the discount class list rather than just one `OD-16317`

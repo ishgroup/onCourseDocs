@@ -1,0 +1,47 @@
+= Release 1.7.5
+29 Jun 2009
+
+
+== Important changes
+
+This release is a stability and bugfix release.
+
+== Fixes
+
+* Refunding of credit card payments is now possible directly through the
+user interface. This allows you to directly refund students who
+previously paid by credit card, without knowing their credit card
+details or logging into SecurePay.
+* When taking a payment for a contact with multiple invoices, the
+selection of which invoice are being paid has been made clearer.
+* When merging contacts, the password is no longer visible to the user
+* General ledger account codes no longer need to start with a special
+digit.
+* Merging contacts now merges tags from both contacts
+* Fixed a problem could sometimes result in the AVETMISS export failing.
+* The field of education ID should be disabled and display the data from
+the qualification record. The field should only be editable by the user
+when a qualification has not been selected.
+* Students had a "Special Needs" field that had been removed from the
+user interface in a previous release. This is now back.
+* Sorting on contacts is now by lastname, then first name. Previously
+only last name was considered
+* When searching for contacts in the enrolments list you can now type
+"lastname, firstname"
+* Tag groups across the list views are now sorted by weight then
+alphabetical
+* Updated the budget report
+* Credit card declined message made clearer
+* The concession/promotional interface has been reworked to make setting
+up discounts clearer.
+* Fixed a bug which severely slowed the update of Modules and
+Qualifications to new and sample databases.
+* Attachments – images over 500kb are not allowed to replicate to the
+web site. All other file types are restricted to 5MB
+* Speed improvements within Quick Enrol, particularly when used from a
+remote office over the internet
+* Within Quick Enrol, entering the full code of a class with no
+vacancies will no longer automatically select the first non-full class
+available.
+* When records have mandatory tags required, they now have a message
+displayed to indicate to the user that this is so.

@@ -1,0 +1,110 @@
+= Release 9.14
+10 Oct 2019
+
+
+== Important changes
+
+With export templates, integrations and scripts now moved to the new
+Automation window and the new user interface, we've locked down all
+built-in onCourse exports so they can't be modified. Instead, you can
+duplicate and modify your own copy of those exports whenever you need
+to. This means that the built-in exports will automatically update with
+any new features or bug fixes in each release of onCourse.
+
+We've reviewed all our customer systems and for any exports you have
+modified, we've duplicated them for you already so that your changes are
+not overwritten.
+
+== Major features
+
+=== Contact merge
+
+The contact merging has been redesigned to be easier to use.
+
+=== Simplify access to advanced search
+
+Instead of having to switch between advanced and simple search, the
+search field figures out what you are trying to do and displays the
+records you are looking for.
+
+=== Exports with variables and options
+
+Exports can now be given variables to be entered at the time of the
+export. For example, you might create an export for a date range and
+prompt the user at the time of export for the date.
+
+== Reports and scripts
+
+* Historic debtors with aging `OD-13209`
+
+=== Minor features
+
+* Moved Export Templates to Automation window `OD-12791`
+* Moved Scripts to Automation window `OD-13137`
+* Add PDF/CSV/XML export for Messages `OD-13182`
+* Add hardcoded variables to exports `OD-13232`
+* Add automation sidebar search and collapse to for all similar views
+`OD-13259`
+* Change common app bar cogwheel with material speed dial `OD-13261`
+* Added common sidebar quick filters and collapse `OD-13262`
+* Added new Export output types `OD-13287`
+* Rebuilt Contact Merge `OD-13289`
+* Remove 'Create GL journal entry' from financial menu `OD-13299`
+* Add AQL search for nested list component I.E. Classes within
+Discounts`OD-13303`
+* Add multi Entities option for AQL search component `OD-13304`
+* Update all exports on server start `OD-13307`
+* Remove full screen edit icon. Double-click to open full screen edit
+`OD-13312`
+* Improve share dialog for exports with new variables `OD-13316`
+* Merge save/success search icons in AQL search field `OD-13333`
+* Remove 'Limit to Classes' switch from discounts since you always need
+to add at least one class or product `OD-13335`
+
+=== Fixes
+
+* Fixed issue where no title displayed if window is opened from main
+menu `OD-12856`
+* Removed run(args) from scripts `OD-13270`
+* Discounts: Fixed spelling errors `OD-13088`
+* Adding new documents to class/course record no longer bypasses privacy
+settings `OD-13194`
+* Fixed Budget/Tutor Pay correlation issues `OD-13243`
+* Transactions: using Find Related now opens new UI lists `OD-13250`
+* Banking - Double clicking a Payment In record no longer opens old UI
+`OD-13253`
+* Broken export script no longer stops the server starting `OD-13256`
+* Student Feedback now opens correctly from the Activity menu `OD-13260`
+* Payment In: No longer unable to set 'Date banked' `OD-13272`
+* Disable non-editable options for Subjects tag `OD-13273`
+* New Certificates window no longer omitting some search results
+`OD-13275`
+* List views will show more than 5 columns when requested `OD-13278`
+* Advanced Search icon changes `OD-13279`
+* Share Icon should is now available when you have no records selected
+`OD-13280`
+* Advanced Search no longer hides print/cogwheel icons `OD-13281`
+* Active vouchers value remaining now shows correctly `OD-13282`
+* Tag re-ordering now working as expected `OD-13283`
+* Can now sort payment window by Contact `OD-13288`
+* QE no longer fails when enrolled course is tagged with multiple 'Limit
+to one' tags `OD-13290`
+* Added validation for setting tag: 'Mandatory' & 'Limit to one'
+`OD-13291`
+* Manual Invoices: fixed issues where billing address wasn't populated,
+invoice due date was wrong `OD-13292`
+* fixed issue with Banking reconciliation `OD-13301`
+* Invoices: Invoice line. No longer unable to select tax type 'N'
+`OD-13308`
+* Windows with new UI now show titles `OD-13313`
+* Valid dates for discounts will now displayed on first view `OD-13314`
+* Invoices window no longer breaks when finding contact with brackets in
+name `OD-13315`
+* AVETMISS 8 window wouldn't open new UI on a date which was exactly the
+end of a quarter `OD-13319`
+* Search no longer loses context when losing focus `OD-13322`
+* Finalise period: All elements no longer become inactive after clicking
+outside dialog `OD-13327`
+* Banking Deposits: Add button (+) now works as expected in 3-column
+view `OD-13330`
+* Sales 'purchased by' now sorts by last name `OD-13334`

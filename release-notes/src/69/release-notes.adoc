@@ -1,0 +1,16 @@
+= Release 69
+2 Mar. 2021
+
+== Major features
+
+To help fix any missing emails not sent out during version 68, this release introduces a new script which runs each morning and checks that all enrolment confirmations, invoices and payment receipts have been emailed. If not, it will trigger the usual script to ensure they get sent.
+
+== Minor features
+* New script: check critical emails are sent `OD-15655`
+
+== Fixes
+* Canvas script not finding courses when there were more than 100 `OD-15611`
+* DSL Documentation for new azure and S3 closures `OD-15632`
+* Fix automation not running in v68
+
+

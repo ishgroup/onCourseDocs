@@ -1,0 +1,28 @@
+= Release 82
+25 May 2021
+
+== Major features
+
+Custom fields for Products:: We've added the ability to create custom fields for all product types in onCourse, meaning you can create custom fields for memberships, products and vouchers.
+
+Data Collection for Products:: Alongside the ability to create custom fields for product types, we've also added full data collection to all product types as well. Vouchers, products and memberships can all have their own separate data collection forms for use on your website, allowing you to capture more useful information for any type of transaction.
+
+== Minor features
+* Improved API docs `OD-15547`
+* Added custom fields for product sales `OD-15908`
+* Added data collection rules for product sales `OD-15922`
+* Simplified the common confirm dialog interface `OD-16069`
+* The attendance section in classes is now hidden for self-paced classes `OD-16112`
+* Class Assessment Submissions - Submitted column functionality updates `OD-16114`
+* Class Assessment Submissions - Marked column functionality updates `OD-16115`
+* Class Assessment Submissions - If assessment has no grading type set we no longer show the Marked or Grade columns `OD-16116`
+* Outcome edit view - If dates are in future, actual colun will simply show 'Not yet Started' and 'Not yet finished' `OD-16125`
+* Outcome edit view - added tool tips to Training Plan and Actual date fields `OD-16126`
+
+== Fixes
+* Fixed an issue where custom field query in search and scripts weren't working `OD-16099`
+* Fixed issue where could not set entity for a new script `OD-16101`
+* Fixed issue where invoice due date could be set before the invoice creation date in checkout `OD-16103`
+* Fixed an issue where the content section of 'Message' card could strip content from the field `OD-16104`
+* Fixed an issue in invoice where the payment due could be set incorrectly after transferring an enrolment `OD-16110`
+* Fixed an email validation issue where users could use a period directly after an @ symbol in their eail address `OD-16124`

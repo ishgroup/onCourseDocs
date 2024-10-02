@@ -1,0 +1,453 @@
+[[scripts]]
+== onCourse Automations and Custom Workflow
+
+onCourse has a powerful scripting engine which can be used to implement your own specific workflow rules into onCourse. This scripting engine is powered from the Automations section within the Automations window.
+
+You can use automations to send emails or SMS, change records inside the system, integrate with third party tools such as analytics or mailing lists, export data to finance systems or your LMS. Automations allow your student management system to become a completely customisable tool with your business workflow engine built right into onCourse. You can create and update onCourse records on an event, send messages to key contacts when a record is created or changed, or automating the publishing, exporting or printing of data how and when you require it. Every script has a description field to help explain its purpose.
+
+Scripting allows you to write directly to the database, calling your own program code that can automate almost any business practice you can imagine. Any database changes they attempt are subject to similar validation as data input manually.
+
+Automations often work hand in hand with <<emailTemplates, message templates>>, sending automated messages to onCourse contacts.
+
+[[scripts-navigatingViews]]
+=== Navigating the Automations view and library
+
+Click the 'Automation' heading in the Automation window to open the Installed Automations view. Here you will see all the Automations installed and available for use in your system. You can install and remove different automations any time you need to.
+
+The Automations Library shows the full-list of available automations, grouped by category. You can review the different scripts and categories later in this chapter.
+
+image::images/automation_list_view.png[title='The Automations window']
+
+[[scripts-installingScripts]]
+=== Installing and removing Automations
+
+To install a new automation from the Automation Library, click the 'Add New' button to open the library and browse the selection. Click the chevron on the right-side of a category to expand or collapse the view.
+
+Any non-greyed out automations are available for installation. Simply click an automation entry to install it.
+
+Any automations already installed to your system will be greyed out and show as 'Added'.
+
+You can remove automations from your installed automation list. Hovering your mouse over a record will display a bin icon. Click the bin icon to remove the automation from your installed list.
+
+[NOTE]
+====
+Installed automations must still be made active before it will run.
+====
+
+[[scripts-enableDisableScripts]]
+=== Enabling and Disabling Installed Automations
+
+When viewing your installed automations, active automations will appear with a green dot next to them, while inactive automations will appear with a grey dot.
+
+image::images/inactive_active_automation.png[title='Both of these automations are installed, but the top one is inactive while the bottom one is active.']
+
+To enable a disabled automation, click the automation to open it in edit view, then turn on the switch within the trigger and click Save.
+
+image::images/active_automation.png[title='An active automation.']
+
+To disable an automation, turn this switch off and click Save.
+
+image::images/disabled_automation.png[title='An inactive automation.']
+
+[[scripts-editScripts]]
+=== Automation edit view
+
+Automations have two separate views; a cards view and code view. You can switch between the two view modes by hovering over the cogwheel and then clicking the switch view icon.
+
+image::images/scripts_change_view.png[title='Click this icon to change the view mode']
+
+Card view:: For standard users. Gives a simpler way to view, or craft, automations without needing to write any code. Of course, you can still write code in this view if you wish.
+
+image::images/scripts_card_view.png[title='Card view breaks the code into easy to read cards.']
+
+Code view:: Does away with separate cards, instead showing pure code with which you can edit. This mode is recommended for advanced users.
+
+image::images/scripts_code_view.png[title='Code view shows just the trigger and the script code']
+
+[[scripts-whatYouCanDo]]
+=== What can you do with automations?
+
+Some simple ideas that could be implemented with a custom onCourse automation:
+
+* Run a daily transaction export at 2am for the prior 24 hours and email it to your Accounts Manager
+* Automatically send an email to a student on their birthday containing a $10 gift voucher
+* Notify tutors their class is confirmed running when the class minimum enrolment number has been reached
+* Notify coordinators one week before a class is due to commence if the class is under the minimum
+* Automatically notify all students on a course waiting list when you publish a new instance of class to the web
+* Send a monthly notification to debtors or creditors of their onCourse balance outstanding
+* Send your Enrolment Manager a daily email of students who failed to complete the online enrolment process so they can manually follow them up
+* Send the CEO weekly summary of enrolments, income and trending programs
+* Schedule a series of daily reports to print rooms labels, class rolls and sign in sheets every business day morning, and for all weekend classes on a Friday morning
+* Print and send reports to site coordinators for all sessions running at their venue the following week
+* Email students at the conclusion of their course suggesting other courses they might be interested in, with a time limited discount offer
+* Email VET students' employers three months after the conclusion of their course requesting they complete the Employer Satisfaction Survey
+* Integrate with an LMS such as Moodle or Canvas where you push student enrolments in real time as enrolments are created. You can use onCourse tags to control which courses are handled in this manner.
+* Integrate with MailChimp or other mailing list manager to synchronise mailing list contacts in both directions
+* Verify that course administrators are writing at least 100 words of course description before putting the course onto your website
+* Send an email to your administrator if a course administrator schedules a course for a public holiday
+* Automate integration with your accounting system
+* Email students the day before their class starts
+* SMS to tutors one hour before the should be teaching
+* Automate compliance exports such as VET FEE HELP or AVETMISS
+* Update course content on your website with data from some other source
+* Automate of creating Facebook or Twitter comments from "what's hot today" or new courses being published
+* Push course enrolment events to Google analytics so that you can see office enrolments alongside web enrolments in your statistical reports
+
+[[scripts-Permissions]]
+=== Who can use automations?
+
+All onCourse license options can choose to enable or disable automations provided by ish, and alter the options within them to suit their own needs.
+
+Some paid license plans can commission changes to existing automations or request new custom automations from ish, or create their own automations for onCourse themselves.
+
+If you have the appropriate license for modifying automations, you can control which users are able to edit them in the user roles. We recommend you only give this permission to users with technical skills to properly make changes to the automations since a bad automation can have far ranging implications for your system.
+
+[[scripts-onCourseDefaultScripts]]
+=== onCourse default automations
+
+All the following default automations come within the onCourse automation library.
+
+==== Auto enabled default automations
+
+These automations are enabled by default in all onCourse databases. Please contact us before you disable them as they have implications for the enrolment and sales processes:
+
+Send enrolment:: Send an email (template - Enrolment Confirmation) to the enrolling student on successful creation of an enrolment, through the office or the website.
+Send invoice:: Send an email (template - Tax Invoice) to the payer of the enrolment where the invoice balance is not zero.
+Send payment receipt:: Send an email (template - Payment Receipt) to the payer when a payment in is processed outside of the enrolment process
+Send voucher:: Send an email (template - Voucher Email) containing the voucher redemption code and details to the purchaser of a voucher
+
+==== Disabled default automations
+
+These automations have been added for all users of onCourse, but are switched off by default. Before enabling these automations you should check the wording of the default email templates they call, and adjust them as necessary.
+
+Prior to enabling a automation, you should open the automations and click on the button 'update to latest version'. This will make sure any improvements to the original automation are downloaded.
+
+You can enable or disable these automations in your database at any time, and make modifications as desired if your licence level allows.
+
+===== Student notifications
+
+Send student class commencement notice:: Automatically send a reminder email (template - Student notice of class commencement) to active enrolled students one day before their class commences
+Send student class commencement notice 7 days:: Automatically send a reminder email (template - Student notice of class commencement) to active enrolled students seven days before their class commences.
++
+NOTE: Depending on your business processes, you may wish to enable only one of the reminder automations (1 day before or 7 days before), or both. By default, these automations use the same email template.
+
+Send class cancellation:: Send an email (template - Class Cancellation) to the students who were enrolled with information about class cancellation options, when a class is cancelled
+Send application received notification:: When an application has been created via the web or in the office, send the student an email (template - Enrolment application received) to notify them, and send an email to the default admin email address to schedule the follow up process.
+Send application decision:: When an application status is set to offered, send an email (template - Enrolment application accepted) to a student to notify them their application has been accepted, what their custom enrolment fee is and how they can enrol. When an application is set to rejected, send an email (template Enrolment application rejected) to the student to notify them.
+Send certificate created notification:: Create a certificate of attendance for non-VET training with your custom certificate_attendance_backgound.pdf, upload the certificate to the portal and send an email (template - Certificate available) to the student containing the link. There are options in the automation to check attendance requirements before creating certificates, which are commented out by default.
+Send class completion survey:: The day after a class is completed send an email (template - Course completion survey) to all classes that are not tagged with "no survey" requesting students complete the skillsOnCourse portal survey process.
+Alert student of assessment release:: This automation runs daily at 8am and checks if any assessments have a release date in the system set as today, and then sends students an email detailing each assessment released.
+
+===== Tutor notifications
+
+Send tutor class commencement notice:: Automatically send a reminder email (template - Tutor notice of class commencement) to all class tutors two days before their class commences
+Cancelled class notice for tutor:: Automatically sends a cancellation email (template - Tutor notice of class cancellation) to the tutor/s if a class they are teaching gets cancelled
+Send enrolment notice for tutors:: Send an email (template - Enrolment notification) on enrolment to the tutors attached to the class to advise them that a student has enrolled in the class. Can use a class tag as a record filter.
+Notify tutor of unmarked attendance:: This automation runs daily and checks every session run on the previous 7 days. If any student attendance is unmarked, the automation sends to the tutors an email notification (template - Tutor notice of unmarked attendance) to mark their class roll. One email is sent for each class with unmarked sessions. Tutors may receive the same email for 7 consecutive days if they do not follow the instructions and mark their attendance. After 7 days from the session date, no further reminder will be sent.
+Alert tutor of assessment release:: This automation runs daily at 8am and checks if any assessments have a release date in the system set as today, and then sends an email to the tutor for each assessment released.
+
+===== VET specific
+
+Send USI reminder:: Automatically send a reminder email (template - USI reminder email) to VET students every 7 days for the next month if they haven't supplied their USI on or shortly after enrolment
+Automatic creation of VET Certificates:: For each enrolment, at 4am every day check for outcomes which have been modified in the previous 24 hrs. If any outcomes attached to the enrolment are not yet marked, skip this enrolment. For students with at least one successful outcome, create the certificate record (Statement of Attainment or Qualification, based on the isFullQual flag at the course level). If the outcome is already joined to a certificate, do not create a new certificate containing that outcome.
+Send certificate VET created notification:: At 5am each day, print to PDF and upload to the portal all unprinted VET certificates, where the student meets the requirements for certification, including having supplied their USI. Send an email (template - Certificate available) to notify the student that their certificate is available in the portal. You must ensure you have created and uploaded into PDF Backgrounds named vet_soa_background.pdf, vet_qualification_background.pdf and vet_skillset_background.pdf before enabling this automation.
+VET course completion Survey:: This automation will send an email (template - VET course completion Survey) to each student two weeks after to the completion of the course.
+
+===== Financial
+
+Send refund advice:: When a successful payment out is created e.g. credit card refund, send an email (template - Refund advice) to the payee
+Send weekly finance summary report:: Send the Trial Balance report for the previous 7 days each Monday morning to the default system administrator email address. There is an option in this automation to change the reporting period from weekly to monthly if that is your reporting period preference.
+Send payment plan reminder:: This automation will send an email (template - payment reminder) to each debtor with an overdue invoice, or an invoice which has a payment due within the next 7 days. Included in the email is a link where the debtor can click to make a credit card payment via the onCourse portal.
+Membership notification renewal:: This automation will send an email (template - Membership Notification Renewal) to each contact with an active membership 7 days prior to its expiry to remind them to purchase a renewal.
+Send account statement:: This automation will send an email with a PDF attachment of the printed Statement Report for each contact with an outstanding balance, and by default is scheduled to run on the first of the month. The email that is sent to the contact is plain text, embedded within the automation. There is no separate email template to edit and no HTML version available. The email includes the total balance outstanding and a 30 day no login required link to the skillsOnCourse portal where the invoices can be viewed and payments made. There is no copy of this message stored in onCourse against the contact record.
+
+===== Marketing and sales
+
+Synchronise availability (enrolment):: This automation finds all single session classes taught by the same tutor in the same room with overlapping times and keeps the places available in sync. For each enrolment in Class A, the maximum available places in Class B is reduced by one. This is useful if one class is a subset of another (e.g.. a refresher First Aid class where students need only come to the second half of the regular First Aid class). If you enable this automation, you'll also want to enable 'Synchronise availability (cancellation)'
+Synchronise availability (cancellation):: This automation finds all single session classes taught by the same tutor in the same room with overlapping times and keeps the places available in sync. For each enrolment in Class A, the maximum available places in Class B is reduced by one. This is useful if one class is a subset of another (e.g.. a refresher First Aid class where students need only come to the second half of the regular First Aid class). If you enable this sautomation, you'll also want to enable 'Synchronise availability (enrolment)'
+Send waiting list reminder:: for students who have been added to a waiting list, send them an email (template - Waiting List reminder) every 7 days of the classes currently available for the courses they are on wait lists for.
++
+NOTE: There is also a message template called 'Waiting list notification' that is designed to be sent manually when a class has limited vacancies available, to students on the wait list for the course.
+
+Alert students of related class:: DO NOT ENABLE THIS AUTOMATION!
+
+It is designed to be manually triggered as needed on a class by class basis. Access the automation from the class cogwheel, by single clicking on the class you want to promote to past students of the same class tutor, and choosing 'Execute script for 1 record' > alert students of related class.
++
+This automation finds all students who have enrolled in a class in the last 18 months with the tutor(s) assigned to the first class session, who aren't currently enrolled in this class, and sends them an email (template - alert students of related class) to encourage them to enrol in this class.
+
+===== Administrative
+
+Send product purchased email:: Each time a product is purchased on the website, and email is sent to the admin email address to notify them of the purchase, using the same admin email as the 'From' address. Rather than using a message template, the email layout is a simple plain text email inside the automation itself. To change the text, you need to edit the automation directly. This automation is disabled by default.
+Notification of unmarked attendance:: This management automation is set to run daily and check for sessions run the previous day where at least one of the enrolled students has an unmarked attendance record. If an unmarked record is found, an email is sent to the admin contact so they can initiate a follow up process with the tutor. Optionally, only courses tagged with 'checkAttendance' will be checked, so if attendance marking is important for some programs, like VET, you can ignore unmarked attendance for your leisure courses.
+
+===== Integrations
+
+A number of 3rd party integrations are included with onCourse and as standard, and each integration includes integration automations to enable you to fine tune how the integration works. For more information about 3rd party application integrations refer to our <<externalintegrations, integrations chapter>>.
+
+CloudAssess course enrolment create:: Creates an enrolment in cloud assess where the onCourse course code and cloudAssess course code are the same
+Moodle enrol:: Create an enrolment in moodle where the course has the tag defined in the moodle integration
+Coassemble enrol:: Create an enrolment in Coassemble LMS.
+Mailchimp subscribe:: Subscribe contacts to mailchimp mailing lists using the onCourse mailing list feature. NB The name of the integration must match the name of the mailing list exactly for this automation to work. You can set up multiple integrations, one for each mailing list. You only need to enable this one automation to run them all.
+Mailchimp subscribe on enrolment:: Subscribe all enrolling students to a mailchimp mailing list, where the integration name is 'Enrolment'. NB you must set up the integration before enabling this automation.
+Mailchimp subscripbe on attribute changing:: Whenever the email marketing permissions for a contact is updated to 'allowEmail', subscribe contact to mailchimp
+Mailchimp unsubscribe:: Unsubscribe contacts from mailchimp mailing lists using the onCourse mailing list unsubscribe feature
+Alchemer send invite on enrolment:: Send a survey invite (template
+- survey invite) on enrolment in a course tagged with the tag defined in the Alchemer integration
+Alchemer send invite on completion:: Send a survey invite (template
+- survey invite) on class completion in a course tagged with the tag defined in the Alchemer integration
+SurveyMonkey send invite on enrolment:: Send a survey invite (template
+- survey invite) on enrolment in a course tagged with the tag defined in the SurveyMonkey integration
+SurveyMonkey send invite on enrolment completion:: Send a survey invite (template - survey invite) on class completion in a course tagged with the tag defined in the SurveyMonkey integration
+Xero manual journal:: Create a Xero set of journals for the total transactions for each account created on the previous day
+Xero payroll:: Pushes tutor pay data to Xero
+MYOB manual journal:: Create a MYOB set of journals for the total transactions for each account created on the previous day
+
+[[scripts-scriptTriggers]]
+=== Automation triggers
+
+Each automation is triggered by an event. An event can be time based (cron) or linked to a record change.
+
+==== Time based events
+
+onCourse automations can be triggered by a cron expression for firing at a repeating interval. cron is a Unix tool that has existed since the 1970s and is extremely powerful and flexible.
+
+Some pre-defined cron expressions are available to select from the drop down list in the automation (daily, weekly or hourly), or you can create your own custom cron using this simple tool http://www.cronmaker.com/?0
+
+You need only write six fields separated by spaces to describe the recurring timing. For example, you can specify "every Monday at 9am" or "1am on the first Sunday of every month".
+
+Seconds::
+Allowed values: 0-59
+Minutes::
+Allowed values: 0-59
+Hours::
+Allowed values: 0-23
+Day of month::
+Allowed values: 1-31
+ +
+Special characters: ?
+L W
+Month::
+Allowed values: 1-12 or JAN-DEC
+Day of week::
+Allowed values: 1-7 or MON-SUN
+ +
+Special characters: ?
+L #
+
+Every field allows the special option '*' which means all values. For example, '*' in the minute field means every minute. In each field you can also use ranges. For example '13-15' in the hour field means 1pm, 2pm and 3pm. And ',' can be used for multiple values such as 'mon,wed,fri' in the day of week field. You can specify a repeating increment in a field with a '/'. For instance "0/15" in the hour field means every 15 minutes starting at the hour. Or "2/3" in the day of month field means every three days starting on the second day of the month.
+
+? ("no value")::
+Because day-of-month and day-of-week overlap in meaning, one of those two fields should always be '?'.
+L ("last")::
+has different meaning in each of the two fields in which it is allowed. For example, the value "L" in the day-of-month field means "the last day of the month" - day 31 for January, day 28 for February on non-leap years. If used in the day-of-week field by itself, it simply means "7" or "SAT". But if used in the day-of-week field after another value, it means "the last xxx day of the month" - for example "6L" means "the last Friday of the month". When using the 'L' option, it is important not to specify lists, or ranges of values, as you'll get confusing results.
+W ("weekday")::
+used to specify the weekday (Monday-Friday) nearest the given day. As an example, if you were to specify "15W" as the value for the day-of-month field, the meaning is: "the nearest weekday to the 15th of the month". So if the 15th is a Saturday, the trigger will fire on Friday the 14th. If the 15th is a Sunday, the trigger will fire on Monday the 16th. If the 15th is a Tuesday, then it will fire on Tuesday the 15th. However if you specify "1W" as the value for day-of-month, and the 1st is a Saturday, the trigger will fire on Monday the 3rd, as it will not 'jump' over the boundary of a month's days. The 'W' character can only be specified when the day-of-month is a single day, not a range or list of days.
+ +
+The 'L' and 'W' characters can also be combined in the day-of-month field to yield 'LW', which translates to "last weekday of the month".
+#::
+used to specify "the nth" XXX day of the month. For example, the value of "6#3" in the day-of-week field means "the third Friday of the month" (day 6 = Friday and "#3" = the 3rd one in the month). Other examples: "2#1" = the first Monday of the month and "4#5" = the fifth Wednesday of the month. Note that if you specify "#5" and there is not 5 of the given day-of-week in the month, then no firing will occur that month.
+
+The legal characters and the names of months and days of the week are not case-sensitive. MON is the same as mon.
+
+.Examples
+[cols=",",]
+|===
+|0 0 12 * * ? |Fire at 12pm (noon) every day
+
+|0 15 10 ? * * |Fire at 10:15am every day
+
+|0 15 10 * * ? |Fire at 10:15am every day
+
+|0 15 10 * * ? * |Fire at 10:15am every day
+
+|0 15 10 * * ? 2005 |Fire at 10:15am every day during the year 2005
+
+|0 * 14 * * ? |Fire every minute starting at 2pm and ending at 2:59pm,
+every day
+
+|0 0/5 14 * * ? |Fire every 5 minutes starting at 2pm and ending at
+2:55pm, every day
+
+|0 0/5 14,18 * * ? |Fire every 5 minutes starting at 2pm and ending at
+2:55pm, AND fire every 5 minutes starting at 6pm and ending at 6:55pm,
+every day
+
+|0 0-5 14 * * ? |Fire every minute starting at 2pm and ending at 2:05pm,
+every day
+
+|0 10,44 14 ? 3 WED |Fire at 2:10pm and at 2:44pm every Wednesday in the
+month of March.
+
+|0 15 10 ? * MON-FRI |Fire at 10:15am every Monday, Tuesday, Wednesday,
+Thursday and Friday
+
+|0 15 10 15 * ? |Fire at 10:15am on the 15th day of every month
+
+|0 15 10 L * ? |Fire at 10:15am on the last day of every month
+
+|0 15 10 ? * 6L |Fire at 10:15am on the last Friday of every month
+
+|0 15 10 ? * 6L |Fire at 10:15am on the last Friday of every month
+
+|0 15 10 ? * 6L 2002-2005 |Fire at 10:15am on every last Friday of every
+month during the years 2002, 2003, 2004 and 2005
+
+|0 15 10 ? * 6#3 |Fire at 10:15am on the third Friday of every month
+
+|0 0 12 1/5 * ? |Fire at 12pm (noon) every 5 days every month, starting
+on the first day of the month.
+
+|0 11 11 11 11 ? |Fire every November 11th at 11:11am.
+|===
+
+==== Entity events
+
+Rather than a specific time, the trigger for a automation can instead be a record change, otherwise known as an entity event. You are able to specify the entity name and the type of change to trigger the automation: create, update, create or update, or remove. Note that entity names are mostly the same as database table names, but there is a difference. Some entities don't map directly to the database.
+
+You can even set this to trigger when a specific entity attribute is edited; for example you could easily create a script that sends out an email the moment a contact allows for email marketing, or a confirmation email of a last name change.
+
+
+
+For more details of what entities are available, please consult our detailed API documentation.
+
+==== onCourse events
+
+There are also specific events in onCourse that can be used to trigger automations, called onCourse events. These events relate entirely to cancellation and/or creation of enrolments as well as the publishing and/or cancelling of classes. The events types are specified as: enrolment successful, enrolment cancelled, class published and class cancelled.
+
+==== On Demand automations
+
+When a automation is set as On Demand it means the automation can only be triggered manually by the user via the cogwheel menu in onCourse. The entity class defines from which screen in onCourse the automation can be triggered. If an entity is not defined, then the automation can only be run from the main navigation menu under 'Favourites'. This latter function only appears for users with admin priveliges. You can also add the script to your Favourites by clicking the heart icon that appears when you hover your mouse over it.
+
+Click the automation icon in the list to open a new dialog box. For some automation, this will shows some questions to be answered, depending on the automation definitions. Click Run Now to run it. The run history is shown as a series of ticks and crosses representing each time the automation has run either successfully or failed. Hovering your mouse over the icon will show you the corresponding date and time it was run.
+
+image::images/on_demand_dashboard.png[title='Look for the above icon after clicking 'Edit' on the main dashboard navigation.']
+
+[[basic-Scripts]]
+=== Creating Automations
+
+To create a custom automation, from the Library view in the Advanced category, select 'Automation'. This will create a new automation.
+
+Automations require a name, and have space for two descriptions. One is a short description that will display in the automation library, the other gives room for a more detailed description of how the automation is intended for use. They also require a unique key code.
+
+Automations can be constructed by via blocks that represent certain behaviours and actions in onCourse.
+Each block has a specific function. Automations execute the function of each block starting from the 'top' block.
+
+image::images/new_automation.png[title='The edit view for a new automation.']
+
+To add a block, click the 'Add Step/Action' button. This will show you a drop-down of the blocks available to add to your automation. Click and drag to reposition a block. You can change the order of blocks within your automation by clicking and dragging the reposition icon. Click and drag to reposition a block.
+
+image::images/automation_blocks.png[title='The blocks available when building an automation.']
+
+You can add additional steps in-between others by using the timeline to the left of each block.
+
+[[basic-Scripts-Blocks]]
+=== Automation blocks
+
+There are a number of different blocks that can be used to construct an automation.
+
+TRIGGER::
+Each automation must start with a trigger block. This tells the automation how/how frequently it is run, or what should trigger the automation to run. 'Schedule' means the automation is triggered by a CRON. Other trigger types are on record creation, or record creation and edit for example. In these cases you can select an entity, or even a specific field within an entity, making it possible to trigger a automation when you check a certain checkbox, for example.
+IMPORT::
+The Import block allows you to import external Java and Groovy libraries to be used in your automation. These libraries can give you access to certain methods or classes to be used in an Advanced automation block. Import block importing the Apache Common StringUtils library
+QUERY::
+The Query block allows you to retrieve records from your database. You must specify what entity type is to be returned from you query, as well as provide a name to reference the returned objects. Additionally, an AQL query can be provided to further filter down the returned objects. Querying a database to return all classes that are not cancelled and finish on the day of automation execution.
+MESSAGE::
+The message block allows you to set a meeage template to be sent out by the automation, or create a message within the automation itself to be emailed to a set email address. Messages sent using the latter method are not recorded to a contact or in the onCourse message window.
+REPORT::
+The report block allows you to set a report that is generated by the running of a automation. The reports to choose from in this list come from the PDF reports section of your Automation window.
+SCRIPT::
+The script block is where the code that drives the automation lives.
+
+[[scripts-Content]]
+=== Writing custom automations with Groovy
+
+Custom automations give you power to implement almost any workflow using the onCourse Domain Scripting Language (DSL). The onCourse DSL provides an interface you can use to interact and edit with your onCourse data. You can interact with the onCourse DSL using the Apache Groovy scripting language.
+
+==== Break down of an automation
+
+Let's pull apart a sample automation. This one sends an email when an invoice is created.
+
+[source,groovy]
+----
+def i = args.entity
+
+if (i.confirmationStatus == ConfirmationStatus.NOT_SENT) {
+    def m = Email.create("Tax Invoice")
+    m.bind(invoice: i)
+    m.to(i.contact)
+
+    m.send()
+
+    i.setConfirmationStatus(ConfirmationStatus.SENT)
+    args.context.commitChanges()
+}
+
+----
+
+In that variable "args" you will get access to important objects to help you write your script. The most important two are:
+
+args.entity::
+This is the object which caused the script to run. It is null if this script was triggered by a cron event.
+args.context::
+This is the Cayenne context within which the script runs. You'll use this to perform searches for other records or to commit changes back to the database.
+args.loggedInUser::
+This object contains data about the user that triggered this script. It can only be used in scripts that are triggered by hand. The most useful fields are loggedInUser.email, loggedInUser.firstName, loggedInUser.lastName.
+
+[source,groovy]
+----
+def i = args.entity
+def userEmail = args.loggedInUser.email
+----
+
+For convenience we've assigned this object to a variable with a nicer name. This just makes the rest of our script easier to read.
+
+[source,groovy]
+----
+if (i.confirmationStatus == ConfirmationStatus.NOT_SENT)
+----
+
+So our invoice has an attribute confirmationStatus. We can find these attributes documented in the onCourse javadocs. In this case we just want to check to see that we still need to send this email. We don't want to send it if the invoice was part of a failed payment and reversal, or if the user already received it.
+
+[source,groovy]
+----
+def m = Email.create("Tax Invoice")
+----
+
+So let's make a new email and call it "m".
+
+[source,groovy]
+----
+m.bind(invoice: i)
+----
+
+That email template has a property called "invoice" and we'll bind our invoice object to that property.
+
+[source,groovy]
+----
+m.to(i.contact)
+----
+
+The invoice has a property called 'contact' and we'll make sure the message will be sent to that person.
+
+[source,groovy]
+----
+m.send()
+----
+
+And we are done. This will finish all the work of creating the message.
+
+[source,groovy]
+----
+i.setConfirmationStatus(ConfirmationStatus.SENT)
+----
+
+We better now set the invoice to sent so that we don't send this email again. For example, this script might be triggered because we edit the invoice to change the due date. In that case, the script will be triggered.
+
+[source,groovy]
+----
+args.context.commitChanges()
+----
+
+This last step is very important. All the changes we made (including the email we created) exist only in memory and not saved to the database until this step. Unless we save it, no email will go out and no other user will see our changes. When we commit, all the validation will run. For example, onCourse will prevent you from sending an email which has no 'to' contact and so the commit will fail. onCourse will also synchronise any objects with your onCourse website. This allows you to programmatically modify website content directly from these scripts.
+
+For full details of the groovy language consult the official documentation here http://groovy.codehaus.org/ Groovy has very nice support for iterating through collections (such as a big list of database objects), regular expression matching and much more. Plus you get to use all the Java libraries already included inside of onCourseServer plus the full Java JRE.

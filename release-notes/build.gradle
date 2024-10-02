@@ -1,0 +1,208 @@
+import groovy.json.JsonSlurper
+import org.apache.tools.ant.filters.ReplaceTokens
+import org.asciidoctor.gradle.jvm.AsciidoctorTask
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'org.codehaus.groovy:groovy-json:3.0.9'
+  }
+}
+
+asciidoctor {
+  sources {
+    include '**/release-notes.adoc'
+    exclude 'index.adoc'
+  }
+  options doctype: 'book'
+  attributes 'source-highlighter': 'coderay',
+          'linkcss': true,
+          'toc': null,
+          'icons': 'font',
+          'docinfo': 'shared',
+          'docinfodir': "${projectDir}/src",
+          'revnumber': null,
+          'revdate': null,
+          'stylesheet': '../css/oncourse.css'
+}
+
+task buildIndex(type: Copy) {
+  def versions = file('src').listFiles().collect{it.name}.findAll{ it[0].isNumber() }
+  versions.sort() { a, b ->
+
+    List verA = a.tokenize('.')
+    List verB = b.tokenize('.')
+
+    def commonIndices = Math.min(verA.size(), verB.size())
+
+    for (int i = 0; i < commonIndices; ++i) {
+      def numA = verA[i] as int
+      def numB = verB[i] as int
+      if (numA != numB) {
+        return numA <=> numB
+      }
+    }
+    // If we got this far then all the common indices are identical, so whichever version is longer must be more recent
+    verA.size() <=> verB.size()
+  }
+
+  // convert the list of versions into map with version and release date
+  Map versionWithDate = versions.reverse().collectEntries { v -> [ v, getReleaseDate(v)] }
+  from "src/index.adoc"
+  into "${buildDir}/processed"
+  filter(ReplaceTokens,tokens: [
+          versions: versionWithDate.collect { v, releaseDate -> "* link:./${v}/release-notes.html[Release ${v}] ${releaseDate}" }.join('\n'),
+  ])
+}
+
+task outputIndex(type: AsciidoctorTask, dependsOn: buildIndex) {
+  doFirst {
+    copy {
+      from "${rootDir}/src"
+      include "../css/oncourse.css"
+      into "${buildDir}/processed"
+    }
+  }
+  baseDir "${buildDir}/processed"
+  sourceDir baseDir
+  sources {
+    include 'index.adoc'
+  }
+  outputDir "${buildDir}/dist"
+  options doctype: 'book'
+  asciidoctorj {
+    attributes 'source-highlighter': 'coderay',
+              'linkcss': true,
+              'icons': 'font',
+              'docinfo': 'shared',
+              'revnumber': null,
+              'revdate': null,
+              'docinfodir': "${rootDir}/src",
+              'stylesheet': './css/oncourse.css'
+  }
+}
+asciidoctor.dependsOn outputIndex
+
+asciidoctor.doLast {
+  copy {
+    from "src"
+    into "${buildDir}/dist"
+    exclude '**/*.adoc'
+  }
+}
+
+// Run the following task to create new release notes from squish
+// ./gradlew release-notes:releaseNotes -PreleaseVersion=1.1
+task releaseNotes(type: ReleaseNotes) {
+  if (project.hasProperty('releaseVersion')) {
+  	version = releaseVersion
+  }
+  outputPath = new File(project.projectDir, "/src/")
+  jiraURL = project.property('jiraURL') as String
+  jiraUsername = project.property('jiraUsername') as String
+  jiraPassword = project.property('jiraPassword') as String
+}
+
+class ReleaseNotes extends DefaultTask {
+  @Input
+  String version
+
+  @Input
+  String jiraURL
+
+  @Input
+  String jiraUsername
+
+  @Input
+  String jiraPassword
+
+  @OutputDirectory
+  File outputPath
+
+  @TaskAction
+  def generateNotes() {
+    def issues = getJiraResponse("fixVersion='${version} angel'").issues as Collection
+    logger.lifecycle "Found ${issues.size()} issues..."
+
+    // split the version on dots or hyphens and take just the first part
+    def version_major = version.split('[-.]').first()
+    def outputFile = new File(outputPath, "${version_major}/release-notes.adoc")
+
+    outputFile.parentFile.mkdirs()
+    new File(outputFile.parentFile, "images").mkdirs()
+
+    outputFile.append(createRelease(version, version_major, issues))
+  }
+
+  def getJiraResponse(jql) {
+    // https://developer.atlassian.com/cloud/jira/platform/rest/
+    def squish = new URL("${jiraURL}rest/api/3/search?jql=${URLEncoder.encode(jql, 'UTF-8')}&maxResults=1000").openConnection() as HttpURLConnection
+    squish.setRequestProperty('Authorization', 'Basic ' + "${jiraUsername}:${jiraPassword}".bytes.encodeBase64().toString())
+    squish.setRequestProperty('Accept', 'application/json')
+    return squish.inputStream.withCloseable { inStream ->
+      new JsonSlurper().parse( inStream as InputStream )
+    }
+  }
+
+  String createRelease(version, version_major, Collection issues) {
+    issues.sort { issue -> issue.key }
+    issues.each { issue ->
+      logger.lifecycle "${issue.key} ${issue.fields.summary}"
+    }
+    def issues_reports, issues_web, issues_angel
+    def WEB_APPS = ['web', 'enrol', 'editor', 'portal', 'search', 'usi']
+    (issues_web, issues_angel) = issues.split { issue -> issue.fields.components.any { WEB_APPS.contains(it.name) } }
+    (issues_reports, issues_angel) = issues_angel.split { issue -> issue.fields.summary.contains('report') }
+
+    def output = "= Release ${version_major}" + "\n"
+    output += new Date().format('d MMM yyyy') + "\n"
+    output += "\n"
+    output += "== Important changes" + "\n"
+    output += "\n"
+
+    output += "== Major features" + "\n"
+    output += "\n"
+
+    output += "== Reports and scripts" + "\n"
+    issues_reports.each { issue ->
+      output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
+    }
+    output += "\n"
+
+    output += "== Minor features" + "\n"
+    issues_angel.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
+      output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
+    }
+    output += "\n"
+
+    output += "== Fixes" + "\n"
+    issues_angel.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
+      output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
+    }
+    output += "\n"
+
+    output += "== Web" + "\n"
+    issues_web.findAll { issue -> issue.fields.issuetype.name != "Defect" }.each { issue ->
+      output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
+    }
+    output += "\n"
+
+    output += "== Web fixes" + "\n"
+    issues_web.findAll { issue -> issue.fields.issuetype.name == "Defect" }.each { issue ->
+      output += "* ${issue.fields.summary} `${issue.key}`" + "\n"
+    }
+    output += "\n"
+
+    return output
+  }
+}
+
+String getReleaseDate(version) {
+  def releaseDate
+  project.file("src/${version}/release-notes.adoc").withReader { reader ->
+    reader.readLine() // skip first line
+    releaseDate = reader.readLine()
+  }
+}

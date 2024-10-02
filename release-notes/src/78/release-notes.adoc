@@ -1,0 +1,30 @@
+= Release 78
+6 May 2021
+
+== Major features
+
+=== Script widgets
+
+We've had attractive cards for queries when creating automation script for ages now. In this release we've added similar cards to all common closures (actions within { } ).
+
+
+=== Script trigger on specific attribute change
+
+Before you could trigger scripts on edit/create/delete events for any type of object. Now you can cause those triggers to only run when a specific attribute is changed. For example, this makes it much easier to run an event when a contact changes their 'do not contact for marketing' flag, or a value is added to special needs.
+
+=== Assessment grading
+
+Assessments now have a grading feature and you can define your own grade schemas. Score assessments out of 100, 10 or any other number. Assign thresholds to certain scores. Or just create a dropdown list of grades such as A to F or pass/fail.
+
+
+== Minor features
+* Site and Room fields in Sessions are now drop-down boxes `OD-13928`
+* Improved error messages for when voucher is expired or redeemed `OD-15351`
+* Scripts: add a new system script for MailChimp `OD-15903`
+* Custom fields with regular expression matching `OD-15915`
+
+
+== Fixes
+* Fixed an issue where membership scripts trigger was missing `OD-15659`
+* createAdminUsers.txt doesn't reset passwords `OD-15989`
+* Fixed issue where bulk changes to sessions weren't updating properly for sessions not yet saved `OD-16009`

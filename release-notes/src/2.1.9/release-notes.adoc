@@ -1,0 +1,31 @@
+= Release 2.1.9
+02 Dec 2011
+
+
+== Fixes
+
+* Failed and 'in transaction' enrolments should not be able to be
+refunded.
+* Setting 'is Offered' and 'reportable hours' for qualifications would
+sometimes be reset
+* Sending lots of tags to the website at once sometimes did not work.
+* Mailing lists were not updating on the website
+* A successful enrolment/payment could sometimes report as failed in
+onCourse.
+* Display of class budgeted income, was not accounting for some costs
+* Upgrading onCourse from 1.7 version to 2.1.8 might fail due to some
+data upgrades.
+* Attendance would sometimes fail to update on the website, meaning that
+the skillsOnCourse portal would be missing some students in the class
+roll.
+* Some outcome records would not update on the website
+* Preferences window layout was visually ugly when credit card payments
+are enabled
+* Rolling over a class potentially resulted in start/end dates one day
+out for 2012, due to improper handling of daylight savings and leap
+year.
+* Reduced memory usage for some data upgrades
+* Enrolment last modification timestamp was not recorded properly in the
+database.
+* Changing Courses and Classes subject tags did not apply correctly to
+the website

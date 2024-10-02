@@ -1,0 +1,120 @@
+= Release 8.17
+25 May 2016
+
+
+== Major features
+
+=== Distribution of VET Certificates through the portal
+
+A new script has been added to automatically print and distribute VET
+Certificates through the skillsOnCourse portal called 'send certificate
+vet created notification'. Like all new scripts, it is disabled by
+default and you will need to enable it if you wish to use it.
+
+Each day, all unprinted VET Certificates for student who have a
+validated USI will be printed to PDF and saved to the student's
+enrolment record.
+
+You will need to make sure you have created and uploaded the following
+three two page background documents to onCourse before enabling this
+script: vet_qualification_background.pdf, vet_skillset_background.pdf,
+and vet_soa_background.pdf. The script will overlay the certificate
+template on the correct background type during the print process.
+
+The Certificate will then be uploaded to the student portal, and the
+student sent an email notifying them is available for download.
+
+The same email template, 'Certificate available', also called on by the
+non-VET Certificate of Attendance distribution script is sent. Ensure
+any modifications you make to the template suit the recipient of both
+VET and non-VET certificates, or create a copy of the template to send a
+different email to VET certified students.
+
+== Reports and scripts
+
+* Update to the printed invoice report template to show the number of
+product items purchased on an invoice`#28218`
+
+== Minor features
+
+* Changed advanced search date operates 'before' and 'after' to say
+'before and on' and 'after and on' so the meaning is clearer `#27589`
+* Removed the print and export 'all' option from the user interface for
+simplification. All records can still be printed or exported by ensuring
+the list view contains all the records prior to selecting print or
+export `#2772`
+* Add the ability to cancel an enrolment from inside the contact and
+class record using the delete icon`#27928`
+* Moved the display of the payer name inside Quick Enrol from next to
+the items list to the payment list for improved clarity as to which
+contact in the process is the debtor`#28088`
+* Improved linking inside onCourse to the specific sections of the user
+documentation`#28268`
+
+== Fixes
+
+* Scroll bar added to preferences window left hand pane `#27873`
+* Fix to record status updates from inside edit view process to
+immediately update status change in related list views `#28117`
+* Allow payment plan payment due dates to be set prior to the invoice
+creation date `#27557`
+* Fix to 'add this discount when creating or duplicating classes' to add
+the discount to all classes, including those where it did not previously
+apply `#27679`
+* Improvement to the merge student process to prevent merging when both
+students have active enrolments in the same class `#27787`
+* Where prior learning data is non-VET, export it for AVETMISS with the
+module code ISH+ID of the record to ensure there are no inadvertent
+duplications of NAT00060 records`#27878`
+* Restore the display of the invoice number in the contact education tab
+record`#27944`
+* Prevent deletion of a prior learning record where one of it's outcomes
+are joined to a certificate record`#28004`
+* Fix to update contact details screen for students with a validated USI
+to show mouse cursor in the correct position`#28015`
+* Improved mouse scroll behavious in large text fields, such as scripts
+and templates`#28013`
+* Improved colour coding of classes in list view to indicate enrolment
+status. Classes that are disabled for enrolment or cancelled show in
+light grey font, classes with enrolment enabled via onCourse only in
+dark grey font, and classes where enrolment is allowed online in black
+font`#28058`
+* Display time of creation for invoics in the contact financial
+tab`#28088`
+* Allow access to open document attachments from inside Quick
+Enrol`#28101`
+* Fix to allow bulk tagging via mouse right click from the enrolments,
+waiting lists and payslips list view windows`#28144`
+* Scrolling through record edit views in the contact list using the next
+and previous options will attempt to load the next record on the same
+tab as the previous record. Where that tab is not available, the next
+tab is selected `#28247`
+* Fix to the VET Fee Help 'Fee charged' value, which was displaying
+$0.00 for some enrolment records, rather than the fee charged`#28343`
+* Prevent outcome start date from being reset to the class start date
+when the end date is edited manually`#28394`
+* Ensure data entered from inside a sheet opened from within a record
+edit view prompts the user to save when leaving the record`#28137`
+* Correctly export AVETMISS NAT00120 Specific Funding Identifer data
+from outcome record `#28196`
+* Improvement to CloudAssess integration to check for student duplicates
+on enrolment in a cloudAssess class`#28397`
+
+== Web fixes
+
+* Allow students to manage their unsubscriptions without a login using
+$\{contact.getPortalLink("subscriptions")} in email templates `#27344`
+* Fix to the CMS editing process to allow multiple tabs to be open and
+edited at the same time`#28195`
+* Improvement to attendance marking replication process between the
+skillsOnCourse portal and onCourse where a class has multiple sessions
+on the same day`#27761`
+* Allow office onCourse users to successfully complete an enrolment for
+a student who abandoned their enrolment part way through on the web, but
+did not cancel it`#28168`
+* Improvement to the use of CorporatePass on the web to ensure any
+discount that applies to corporate pass users is removed if the
+purchaser changes their mind and instead enrols and pays with a credit
+card`#26731`
+* Upgrade to the Solr search engine used on the web to improve speed and
+mutli faceted search options`#26731`

@@ -1,0 +1,63 @@
+= Release 111
+17 Feb 2022
+
+== Important changes
+
+Phone numbers have now been stripped of all non-numerical content. This 'normalisation' makes it possible to search for phone numbers in the checkout.
+
+== Major features
+
+=== Abandoned cart
+
+If you are using an onCourse website, any time a user gets part way through checkout and does not complete, a record of their shopping basket will be kept against their contact record. This makes it possible to send them reminders to complete the checkout and for you to help them complete the process if necessary.
+
+When you use the onCourse checkout, you'll be prompted to load a customer's abandoned cart if one exists. In the future, we'll add scripts to the system to send them a reminder to return to your website and complete the checkout.
+
+=== Checkout enchancements
+
+We've expanded the search in the Checkout. In the contact field you can type a contact's name, phone number or email address to find their contact record.
+
+We've also enhanced the lead creation process, allowing you to create a lead from directly within the Checkout. If you add a single contact and a course (without selecting a class) to the shopping cart.
+
+While we're on the subject of Leads, you can now use the 'convert to sale' function within the Leads cogwheel menu to send the lead to the checkout. This will populate the checkout with the contact record and the courses they expressed interest in, allowing you to quickly select classes and accept payment.
+
+== Reports and scripts
+* Optionally expand 'Historic aged debtor' report to include transaction lines `OD-17006`
+* Removed Historic aged debtor script, was a duplicate with the Historic aged debtor export.
+* Moved Historic aged debtor export to be run from the Contacts window.
+
+== Minor features
+* Search for a contact by name, email and phone when in the Checkout `OD-16895`
+* Can create a lead from directly within Checkout `OD-16897`
+* In Leads, you can now directly send a lead to the checkout with 'convert to sale' cogwheel function.  `OD-16899`
+* In Contacts > Financial, added Abandoned checkout shopping carts UI showing the number of abandoned carts for that contact.  `OD-16915`
+* Find related Product Sales `OD-11165`
+* Added Tutor pay core filters `OD-12898`
+* Detect upgrade and refresh UI `OD-14721`
+* 'Student contact hours' class budget type should use actual session time, not tutor payable time `OD-16644`
+* Query to find students enrolled in numerous classes `OD-16663`
+* Tutor roster - Change pay confirmation status labels `OD-16787`
+* Tutor roster - Allow confirmation of tutor pay for future sessions `OD-16788`
+* Tutor roster - design tidyup `OD-16789`
+* Tutor roster - connect tutor roster/pay status to tutor pay in budget `OD-16790`
+* Hide course graph for new records `OD-17025`
+* Course print brochure description should be under marketing `OD-17026`
+* Convert lead to application action `OD-17063`
+* Custom field key validation - allow underscores `OD-15387`
+
+
+== Fixes
+* Fixed an issue where the edit icon for the class fee was missing from the right sidebar `OD-16916`
+* Fixed some inconsistent naming of Product entity fields in UI `OD-16928`
+* Fixed an issue where in Data Collection Forms, the Save button incorrectly showed a warning icon `OD-16959`
+* Fixed an issue where the Historic debtors export could miss invoices when checking on due date `OD-17007`
+* Class timetable clashes - change clash alert text `OD-16710`
+* Searching for room name using a number string isn't producing any search results `OD-16806`
+* Waiting List search query - can't search for tag names `OD-16976`
+* Fixed scroll bars flickering in batch payments in `OD-17001`
+* Payment no longer allows 'banking date' older than 'date paid' `OD-17008`
+* 'Invoice remittance instructions' field is no longer null for new colleges `OD-17017`
+* Fixed session start time bulk change didn't update tutor roster time `OD-17028`
+* Fixed Tutor roster bulk change error `OD-17029`
+* Fixed wrong font sizes in Security `OD-17031`
+* Fixed Profile Picture not uploading when creating a new contact. `OD-17045`

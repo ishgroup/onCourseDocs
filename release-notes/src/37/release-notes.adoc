@@ -1,0 +1,103 @@
+= Release 37
+18 Aug 2020
+
+
+== Important changes
+
+We recently informed all onCourse users via an update on the onCourse
+dashboard that we would be periodically updating scripts in the system
+with newer versions of these scripts. This work is now completed in
+version 37, so you'll notice in your system now several 'new' scripts.
+If you had the default scripts turned off in your system, then the old
+ones have been simply updated with the new ones, and there's nothing for
+you to do. if you had any default scripts turned on and they hadn't had
+their name changed from their default name, these will now appear with
+the word 'old' in the title. This denotes that you are still using an
+old script.
+
+The newer scripts are much more user-friendly in that they allow all
+users the ability to edit the variables within the script. These
+variables change per script, but typically they are used to set the
+message templates referenced by the script. This, as well as
+re-factoring the script code to make them run more efficiently, was the
+main goal of these script changes.
+
+We've also implemented some nice new usability features like the drag
+and drop UI for uploading new documents to onCourse.
+
+== Reports and scripts
+
+* script: send-weekly-finance-summary-report `OD-14410`
+* script: alert-students-of-assessment-release `OD-14368`
+* script: alert-students-of-related-class `OD-14369`
+* script: alert-tutors-of-assessment-release `OD-14370`
+* script: canvas-enrol `OD-14371`
+* script: mailchimp-subscribe-on-enrolment `OD-14376`
+* script: mailchimp-subscribe `OD-14377`
+* script: mailchimp-unsubscribe `OD-14378`
+* script: membership-notification-renewal `OD-14379`
+* script: micropower-update-members `OD-14380`
+* script: moodle-enrol `OD-14381`
+* script: notification-of-unmarked-attendance `OD-14383`
+* script: notify-tutor-of-unmarked-attendance `OD-14384`
+* script: send-account-statement `OD-14386`
+* script: send-application-decision `OD-14387`
+* script: send-application-received-notification `OD-14388`
+* script: send-birthday-voucher `OD-14389`
+* script: send-certificate-created-notification `OD-14390`
+* script: send-certificate-vet-created-notification `OD-14392`
+* script: send-class-cancellation `OD-14394`
+* script: send-class-confirmed `OD-14395`
+* script: send-enrolment-notice-for-tutors `OD-14396`
+* script: send-enrolment `OD-14397`
+* script: send-invoice `OD-14398`
+* script: send-payment-plan-reminder `OD-14399`
+* script: send-payment-receipt `OD-14400`
+* script: send-refund-advice `OD-14401`
+* script: send-student-class-commencement-notice-7-days `OD-14402`
+* script: send-student-class-commencement-notice `OD-14403`
+* script: send-tutor-class-cancellation-notice `OD-14405`
+* script: send-voucher `OD-14408`
+* script: send-waiting-list-reminder `OD-14409`
+* script: surveygizmo-send-invite-on-completion `OD-14411`
+* script: surveygizmo-send-invite-on-enrolment `OD-14412`
+* script: surveymonkey-send-invite-on-completion `OD-14413`
+* script: surveymonkey-send-invite-on-enrolment `OD-14414`
+* script: sync-availability-cancellation `OD-14415`
+* script: sync-availability-enrolment `OD-14416`
+* script: xero-journal `OD-14417`
+
+== Minor features
+
+* Display discounted prices in right-hand column of class edit view
++
+OD-14807
+* Implementation of drag and drop feature in Documents UI `OD-14826`
+* Extend custom field types with new data types `OD-14827`
+* Reviewed and improved AVETMISS export code `OD-14875`
+* Added Message template variable type `OD-14890`
+* Integration closure, name is no longer mandatory `OD-14905`
+* Made script trigger entity a dropdown box `OD-14920`
+* Query closures now use context variable by default `OD-14921`
+* New message template: alert students of assessment release `OD-14930`
+* New message template: alert tutors of assessment release `OD-14931`
+
+== Fixes
+
+* Removed a redundant horizontal scrolling sidebar from the Dashboard
+`OD-14882`
+* Fixed error where CourseClass/Traineeship clash validation worked
+incorrectly `OD-14878`
+* Fixed error when navigating between related sites and rooms `OD-14888`
+* Fixed Import error `OD-14894`
+* Now allow last outcome to be deleted if enrolment is cancelled
+`OD-14897`
+* Fixed error where Latest Activity cleared on Dashboard refresh. No
+longer clears on refresh, only logout `OD-14901`
+* Fixed an error where money fields allowed more than 2 digits after dot
+`OD-14902`
+* Removed validation of Entity field in message templates `OD-14903`
+* Updated 'List ID' field label in Mailchimp integration to 'Audience
+ID' `OD-14910`
+* Fixed error where Daylight saving time was not shown in date entry
+helper in onCourse `OD-14919`

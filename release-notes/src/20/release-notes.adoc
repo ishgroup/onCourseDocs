@@ -1,0 +1,64 @@
+= Release 20
+8 May 2020
+
+
+== Important changes
+
+With this release we strongly recommend you run onCourse from Firefox or
+Chrome using the new pure web interface. Use the URL
+https://***.cloud.oncourse.cc and replace *** with the name of your
+college. We're very proud of our work up to this point, and would like
+to thank those of you who helped shape this new onCourse UI with your
+excellent feedback. We've incorporated almost all of your suggestions
+along the way, and onCourse is the better for it.
+
+From this point on, we'll be rolling out changes more often, but they
+will be much less dramatic. Mostly you'd not even notice the changes
+other than things working faster or more intuitively. So we'll not be
+emailing you notifications before each release, unless there is
+something important to tell you. Instead, you'll notice an enhanced news
+panel within the dashboard. There you will see webinars, new changes and
+other useful information.
+
+== Major features
+
+Checkout has now been added to onCourse, replacing the old Quick Enrol
+with something that is faster, better and easier to use. We've covered
+the four main steps of the Checkout process
+https://www.youtube.com/playlist?list=PLMUUqiowAJZeO70mfaEIz6xiA3x2n8uFC[in
+a set of videos.]
+
+There are a couple of things still missing from checkout which you'll
+need to hold Shift and use the old window for. We are working hard to
+bring those to you as soon as possible.
+
+* Traineeships
+* Voucher redemption
+
+== Minor features
+
+* Show detailed error message from USI agency if there's a setup error
+`OD-14443`
+
+== Fixes
+
+* Fixed an error where Print Certificate without USI permissions
+checkboxes in User Roles didn't function `OD-13593`
+* Added UI warning if user tries to unlink tutor from session where
+payline already exists
++
+`OD-14157`
+* Recovering a deleted document `OD-14352`
+* Fixed an error in Contacts - VET > Achieved In Year validation
+`OD-14354`
+* Fixed flickering scroll bar problem `OD-14366`
+* Fixed an error where Contact relations appeared broken `OD-14420`
+* Fixed an error that occurred when email template had no html or plain
+body `OD-14421`
+* Fixed issue around adding payment plan to class with already defined
+enrolment fee `OD-14423`
+* Fixed and issue where Module Name and Code weren't updating when
+scrolling in 3 column view `OD-14424`
+* Fixed error where users couldn't save Query script block `OD-14431`
+* Fixed an error where outcome list fails to open class outcomes
+`OD-14444`

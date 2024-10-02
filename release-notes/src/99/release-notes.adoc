@@ -1,0 +1,35 @@
+= Release 99
+25 Sep. 2021
+
+== Important changes
+
+=== Removal of old password algorithm
+Where a user has not logged in since January 2021 and had their password hash converted to the new more secure Argon algorith, they will now no longer be able to log in. An administrator will have to create a password reset request if they still require access.
+
+=== Edit view visual upgrade
+A number of changes have been made to improve the usability of the edit view. We've made it easier to read, and only slightly decreased the amount of information you can see on one screen before you have to scroll. Our goal is to make it easier for you to find the information you are looking for as a balance between readability and density. Remember that our views are all responsive, so they detect the width of your screen and arrange themselves accordingly.
+
+Remember too that you can change the theme from the icon at the top right of the dashboard.
+
+
+== Major features
+* More columns available for all list views `OD-16387`
+* A search filter 'is empty' should include empty and null value, not only a null value `OD-16251`
+
+
+== Minor features
+* Jetty 10 upgrade `OD-15942`
+* Custom fields can be sorted alphabetically `OD-16152`
+* Show Automation Status to all users `OD-16302`
+* Assign new tags a colour at random on creation `OD-16431`
+* Filtering untagged applications that have a New status `OD-16459`
+* Clearer selection of tutor/student/company `OD-16507`
+* Default and custom fields width in edit views `OD-16536`
+* Add bulk edit endpoint for Lead `OD-16437`
+* Add bulk tag edit for Invoices list `OD-16458`
+
+== Fixes
+* Left-column in the dashboard sometimes closes for no reason `OD-15988`
+* Custom field accessors should return correct data type `OD-16376`
+* Merging error code for attendance `OD-16377`
+* Can't add tags to Quotes or Invoices in edit view `OD-16466`

@@ -1,0 +1,48 @@
+= Release 108
+18 Nov 2021
+
+== Major features
+
+=== Rostering overrides
+
+You can now override the start and end time per tutor within the class timetable. That means that one tutor might arrive at a different time to another and at a different time to the scheduled class times. You'll not be able to more easily roster tutors for additional setup time, or have an assistant come in for just part of a class.
+
+This also means that the schema around CourseSession and SessionCourseClassTutor has changed a little, so if you have custom scripts depending on this please review them.
+
+
+=== Edit view design update
+
+Significant work has gone into the edit views to make them easier to read and less cluttered. We hope you enjoy the changes. We've hidden the pencil icons until you hover over each field and introduced a slightly larger and darker font in the default theme. Fields are a little more spaced to make them more readable.
+
+We've introduced new page titles in the edit view which are clearer, but also get out of the way as you scroll down.
+
+Sections are all collapsible and remember the last state you left them in, on that particular browser. So if you rarely need to look at the VET section, that will stay collapsed out of the way.
+
+All our themes have been updated to ensure they have sufficient contrast to be easily readable, and to ensure they collapse nicely on smaller screens or tablets.
+
+With our upgrade to the latest material design UI libraries, you'll also see some improved widgets like the calendar picker.
+
+
+== Minor features
+* Combined site and room element into a single nested drop down menu `OD-16581`
+* Dashboard styling `OD-16627`
+* Links to contact from message creation view `OD-16554`
+* Rostering UI for session component  `OD-16579`
+* TutorAttendance start/end date fields `OD-16583`
+* Remove Session.payableDuration field `OD-16586`
+* Use tutor roster for clash validation `OD-16587`
+* Combine Session and Tutor attendance models  `OD-16656`
+* Adjust custom resources to use tutor rostering fields instead of session dates `OD-16662`
+* Point versions. From this release you'll see the version as 108.2603 rather than just 108. This will make it easier to see which releases are purely part of our release process testing and which introduce new features. Only major releases will get release notes.
+* Leads edit view - Change heading label for Invoices in Leads edit view `OD-16646`
+* Remove Christmas theme `OD-16755`
+
+== Fixes
+* Tag pencil should be hidden until hover `OD-16545`
+* More space between columns `OD-16546`
+* Corporate pass discounts should only apply if payer matches `OD-16645`
+* USI validation failing in Certificates window when USIs are already verified `OD-16750`
+* Classes - Bulk Change Sessions > Tutors > 'Something went wrong' `OD-16759`
+* Tags not appearing in Documents view `OD-16760`
+* News post with defined page shouldn't be visible in dashboard news `OD-16762`
+* ckeditor/ckeditor5-dev-utils pulls in security issue in dependency `OD-16765`

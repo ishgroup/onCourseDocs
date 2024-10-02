@@ -1,0 +1,165 @@
+= Release 8.23
+22 August 2016
+
+
+== Major features
+
+=== onCourse portal refresh
+
+A major refresh of the onCourse portal application is currently underway
+to significantly improve the functionality for students, tutors,
+employers, agents and parents. These improvements have begun rolling
+out, and more will be added in the next few months.
+
+In the last few weeks, the new group timetable view, scrolling schedule
+timetable view, improved class roll attendance marking and payment
+gateway has been deployed. A brand new dashboard, outcome marking module
+and certificate verification service are in the works. Watch this space!
+
+=== Default invoice terms per contact
+
+A new field has been added to the general preferences to allow for a
+default due date for all invoices to be set. Previously, the default due
+date was always the day of creation. In addition, each contact in
+onCourse can have their own default due date that overrides the default,
+so you can offer a range of relative terms like 7 days, 14 days, 31 days
+to auto calculate an invoice due date for your corporate clients. This
+features ties in with the new invoice payment due reminder script and
+portal payment gateway also included in this release.
+
+== Reports and scripts
+
+* A new script has been added to onCourse called 'notification of
+unmarked attendance'. When enabled, this script sends a daily
+notification to advise an admin user of any sessions run the previous
+day where attendance was all or partially unmarked. If you have scripts
+enabled that rely on tutors electronically marking the roll, we suggest
+you enable this monitoring script also. `#26608`
+* A new script has been added to onCourse called 'send payment plan
+reminder'. When enabled, this script sends a reminder to the invoice
+payer if they have a payment due within the next 7 days or if they have
+a payment overdue. The email template link includes a password free one
+time login to the portal payment gateway to make the payment via credit
+card `#28806`
+* Fix to Payment In an Payment Out reports to render company names
+correctly `#28802`
+* Addition of the 'createdOn' field to the Transaction CSV report, to
+assist with identifying transaction effective and record creation dates
+`#29160`
+* Addition of a default notification to the admin email address when a
+student completes an online application. Open the 'send application
+received notification' script and click 'update to latest version' to
+add this option to your default script `#29187`
+* Replace unsubscribe link in waiting list email template from one that
+required the user to login to unsubscribe, to a timed no login needed
+link. The updated template copy can be access on the
+https://github.com/ari/oncourse-scripts[Github repository] `#29422`
+
+== Minor features
+
+* All list view pre-fetches have been reviewed and updated, to ensure
+all onCourse windows are opening in the fastest possible time. Windows
+with noticeable delays, like Applications and Payment In load
+significantly faster `#29058`
+* Allow the change of settlement date for deposited banking records
+`#28972`
+* Only allow payment reversals to be processed on unbanked payments.
+Banked payments can be unbanked if they require reversing`#29707`
+* Add reversed payments to the deposit banking process, so bounced check
+payments in and subsequent reversals can be banked on the correct dates
+of receipt and bounce. On upgrade you may find a number of unbanked
+reversals in your 'deposit banking' window. Be sure to bank them so the
+reversal is correctly processed against your bank account balance.
+Contact ish support if you require assistance with this process `#29232`
+* Addition of a certificate icon next to outcomes that are linked to a
+certificate. Text colour changes to light grey to indicate an outcome is
+no longer editable because it is joined to an issued certificate
+`#28832`
+* Redesign of the CorporatePass to improve clarity in 'limit to classes'
+feature`#29037`
+* Addition of core filters to the payment in window for faster searching
+and filtering `#29230`
+* Addition of payment date field in Quick Enrol, so payments received in
+the past e.g. direct deposit into your bank account, can be recorded
+with the actual date of payment`#29240`
+* Payment out date is now editable, and can be changed to a date in the
+past or the future `#29241`
+
+== Fixes
+
+* Fix to wait list link in course record to open filtered list view of
+waiting list entries for that course only `#27584`
+* Improvement to editing of attendance records to ensure if cancel is
+chosen, instead of save, no changes to the attendance records are saved
+`#28793`
+* Improvements to the WA RAPT report have been implemented to export the
+start and end date of self paced outcomes which have been overridden,
+calculate the course fee based on the enrolment fee divided by the units
+of competency, and export the USI data `#28933`
+* Fix to the deposit bank 'dank banked' field to allow the date to be
+typed into the field rather than just chosen from the calendar tool
+`#29164`
+* Improve finalise period window options to show unreconciled and
+unbanked payments in the period, and open the related record
+windows`#29204, #29227`
+* Automatically reconcile any unreconciled but banked payments when a
+period is locked `#29229`
+* Widen the Quick Enrol Course Code field to display more code
+data`#28836`
+* Remove SSL option from login window, as onCourse client always
+connects to the server via SSL `#29139`
+* Automatically remove 'is reconciled' flag from any payments that are
+changed from 'banked and reconciled' to 'unbanked' `#29165`
+* Suppress display of voucher payments in banking or reconciliation
+windows `#29166`
+* Improve display of banking deposit records when clicking 'next' and
+'previous' buttons `#29224`
+* Improvement in Quick Enrol voucher redemption process, to
+automatically add the defined voucher invoice contact to Quick Enrol as
+the payer `#29025`
+
+== Web features
+
+* The onCourse credit card payment gateway has been added to the
+skillsOnCourse portal, to allow debtors to make payments against their
+outstanding invoices or payment plans `#19455`
+* A design refresh of the portal timetable has been implemented to show
+sessions in a continual scrolling schedule. Each session can be clicked
+on to expand and show additional notes and links `#28496`
+* A new team timetable view has been implemented for users with group
+permissions for other users in the portal. In this view you will see the
+attendees scheduled for each session `#28496`
+* An all new and improved design for tutors marking attendance via the
+portal now includes the CRICOS marking options for partial attendance
+and absent with reason `#27482`
+* A feature for marking the class roll has been added to show the
+attendance percentage of each student `#27482`
+* Students (and their approved portal contacts) can see information
+about the student's attendance for each class, showing the marked roll
+results for each session as well as an overall attendance calculation
+`#28804`
+* A new feature has been added to the skillsOnCourse login screen to
+auto detect first time visitors to the site, when following a login link
+from onCourse. They system will auto populate their name and email
+address and prompt them to set up a password on their first visit
+`#28881`
+* A new feature for adding hero images to course descriptions using tags
+in onCourse. The
+http://www.ish.com.au/s/onCourse/doc/web/images_and_attachments.html#d5e1057[Images
+and Attachments] of the web documentation has detailed instructions on
+how to implement this feature `#29198`
+
+== Web fixes
+
+* Improvement to the web enrolment process when redeeming a voucher to
+auto assign the defined voucher contact as the payer by default,
+allowing vouchers to be redeemed by any student, but still ensuring the
+invoice on redemption is sent to designated voucher contact `#29138`
+* Improved display of invoices in the portal to better match onCourse
+email templates and print reports `#28286`
+* Hide payments in the portal of $0, including internal system payments
+and failed payment attempts `#29162`
+* Ensure new attendance sessions are created in the portal when sessions
+in the class are added or adjusted when the class is in progress
+`#29521`
+* Fix to ensure course images display in the portal correctly `#29607`

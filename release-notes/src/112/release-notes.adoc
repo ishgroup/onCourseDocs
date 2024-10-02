@@ -1,0 +1,32 @@
+= Release 112
+18 Mar. 2022
+
+== Important changes
+
+== Major features
+
+=== New automation view
+
+All the automation windows have been updated with a new more informative view. Gone is the clutter of a thousand scripts in the left sidebar and instead there is a new library style view with descriptions of the actions you might like to add.
+
+Install any number of automations from the library, and then enable or disable them as you please.
+
+
+== Reports and scripts
+* Remove class cancelled print report which was faulty and add new columns to the class budget export to show cancelled enrolments and total credits given  `OD-17091`
+* Default export for contact in json format `OD-17098`
+
+
+== Minor features
+* Removed IS_VOCABULARY field from Tag entity, use getParent() instead `OD-11515`
+* Removed unused Payslip.paymentInLines/paymentOutLines reationships `OD-12515`
+* Can now restrict financial data on dashboard with access control. This is controlled by the Invoices permission. `OD-12897`
+* Better debugging of failing automations, we now display in the error the line in the automation from which the error originates `OD-15574`
+* Added categories to automations `OD-16921`
+* onCourse systems with custom scripts that drop to a lower-level licence plan will no longer be able to use those custom scripts. `OD-17043`
+
+== Fixes
+* Fixed spelling error in Assessments section of Class `OD-17061`
+* Fixed an issue with enrolment transfers `OD-17076`
+* Fixed an issue where the document shareable link would not be versioned when it shouldn't be `OD-17081`
+* Removed additional validation that was constraining saving new tags with certain characters `OD-17082`

@@ -1,0 +1,82 @@
+= Release 9.12.1
+1 Jul 2019
+
+
+== Major features
+
+=== Timetable
+
+We've implemented a new Timetable within the Sites & Rooms windows, to
+help offer a visual guide to where you have gaps in your scheduling. You
+can view this by going to either the Sites or Rooms window in onCourse,
+clicking a record, then clicking the Timetable button. You can review
+the Timetable's current functionality in the
+https://www.ish.com.au/s/onCourse/doc/latest/manual/timetable.html[Timetable
+chapter of our manual.]
+
+image::images/timetable_gap_hours.png[title='Gap (hours) view mode shows classes grouped by hours of the day ']
+
+=== Canvas Integration
+
+We've added a Canvas integration to the onCourse integrations list. The
+integration will allow you to automatically create classes, students and
+enrolments in the Canvas LMS using the data created in onCourse.
+
+== Reports and scripts
+
+* Print: Add message for user when report has no data `OD-12490`
+* Applications > Share: No templates for PDF/XML reports `OD-12953`
+
+=== Minor features
+
+The following API implementations are useful for developers wanting to
+integrate with onCourse.
+
+* Discount API `OD-12430`
+* Applications API `OD-12763`
+* Assessments API `OD-12766`
+* Certificates API `OD-12769`
+* Voucher products API `OD-12798`
+* Membership products API `OD-12799`
+* Article products API `OD-12804`
+* Outcomes API `OD-12814`
+* Student Feedback API `OD-12821`
+* Tutor roles API `OD-12833`
+* Waiting lists API `OD-12834`
+* Timetable API `OD-12930`
+
+=== Fixes
+
+* Preferences > Scripts: No audit trail record after new script creating
+`OD-12115`
+* Search bug on Sites window list view `OD-12508`
+* Sites - Map doesn't generate after adding new Site `OD-12533`
+* ClassCost.perUnitAmountExTax becomes not null when duplicating class
+`OD-12618`
+* Overly long script error message `OD-12623`
+* Quarterly AVETMISS date range fix `OD-12675`
+* Audits. No new records are created for transactions `OD-12872`
+* Preferences > Funding Contract: Mandatory field is not highlighted in
+red `OD-12883`
+* List: 3-column view. The right-side panel is broken when clicking on
+an already selected record `OD-12925`
+* Qualifications: The nominal hours field should default to 'No Value'
+and not '0' `OD-12934`
+* Tutor Pay no longer fails to run in new user interface `OD-12936`
+* Dashboard "Something went wrong" message fixed `OD-12937`
+* Corporate Passes New Interface not finding classes by name `OD-12938`
+* Old user interface lists are not updating changed records immediately
++
+OD-12945
+* Sites/Rooms > Kiosk. Link now opens in default browser `OD-12956`
+* Fixed Funding Source - National field changing values unexpectedly
+`OD-12959`
+* Contact merge shows error message incorrectly `OD-12967`
+* Fixed New dashboard reliability issues
++
+OD-12970
+* Transaction journal entries are no longer posted in reverse `OD-12981`
+* AVETMISS 66 outcomes should not appear in user interface `OD-12985`
+* Search for contact in the new Corporate Pass screen `OD-12988`
+* Waiting List custom fields sometimes don't synchronise with website
+`OD-13008`

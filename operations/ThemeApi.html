@@ -1,0 +1,339 @@
+<div class="main-content">
+    <h1><a name="ThemeApi"></a>theme</h1>
+    <p></p>
+    <p></p>
+            <h2><a name="createTheme"></a>createTheme</h2>
+            <p></p>
+            <p>Add new theme.</p>
+
+            <div class="method">
+                <button class="btn method-POST">POST</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//theme</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> New theme with unique id</span>
+                        <span class="dataType model" data-model="Theme"><a href="#Theme">Theme</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Theme"><a href="">Theme</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "blocks" : {
+    "top" : [ {
+      "id" : 12,
+      "position" : 2,
+      "title" : "left-sidebar"
+    }, {
+      "id" : 12,
+      "position" : 2,
+      "title" : "left-sidebar"
+    } ],
+    "left" : [ null, null ],
+    "footer" : [ null, null ],
+    "centre" : [ null, null ],
+    "right" : [ null, null ]
+  },
+  "paths" : [ {
+    "path" : "/about",
+    "exactMatch" : true
+  }, {
+    "path" : "/about",
+    "exactMatch" : true
+  } ],
+  "id" : 0,
+  "title" : "default",
+  "layoutId" : 6
+}</pre>
+                </div>
+
+            <h2><a name="deleteTheme"></a>deleteTheme</h2>
+            <p></p>
+            <p>Remove theme.</p>
+
+            <div class="method">
+                <button class="btn method-DELETE">DELETE</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//theme/{id}</code>
+            </div>
+
+                <h3 class="field-label">Path parameters</h3>
+                <div class="field-items">
+                        <div class="param">
+                            <span class="param-base">id</span> (required)
+                        </div>
+                        <div class="param-desc">
+                            Id of theme which will be deleted 
+                        </div>
+                </div>
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Theme successfully deleted</span>
+                        <span class="dataType model" data-model=""><a href="#"></a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                    Nothing
+            </div>
+
+
+            <h2><a name="getLayouts"></a>getLayouts</h2>
+            <p></p>
+            <p>Get list of layouts.</p>
+
+            <div class="method">
+                <button class="btn method-GET">GET</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//layout</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> List of layouts</span>
+                        
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Layout"><a href="">List</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">[ {
+  "id" : 0,
+  "title" : "layout-B"
+}, {
+  "id" : 0,
+  "title" : "layout-B"
+} ]</pre>
+                </div>
+
+            <h2><a name="getThemes"></a>getThemes</h2>
+            <p></p>
+            <p>Get list of themes.</p>
+
+            <div class="method">
+                <button class="btn method-GET">GET</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//theme</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> List of themes</span>
+                        
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Theme"><a href="">List</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">[ {
+  "blocks" : {
+    "top" : [ {
+      "id" : 12,
+      "position" : 2,
+      "title" : "left-sidebar"
+    }, {
+      "id" : 12,
+      "position" : 2,
+      "title" : "left-sidebar"
+    } ],
+    "left" : [ null, null ],
+    "footer" : [ null, null ],
+    "centre" : [ null, null ],
+    "right" : [ null, null ]
+  },
+  "paths" : [ {
+    "path" : "/about",
+    "exactMatch" : true
+  }, {
+    "path" : "/about",
+    "exactMatch" : true
+  } ],
+  "id" : 0,
+  "title" : "default",
+  "layoutId" : 6
+}, {
+  "blocks" : {
+    "top" : [ {
+      "id" : 12,
+      "position" : 2,
+      "title" : "left-sidebar"
+    }, {
+      "id" : 12,
+      "position" : 2,
+      "title" : "left-sidebar"
+    } ],
+    "left" : [ null, null ],
+    "footer" : [ null, null ],
+    "centre" : [ null, null ],
+    "right" : [ null, null ]
+  },
+  "paths" : [ {
+    "path" : "/about",
+    "exactMatch" : true
+  }, {
+    "path" : "/about",
+    "exactMatch" : true
+  } ],
+  "id" : 0,
+  "title" : "default",
+  "layoutId" : 6
+} ]</pre>
+                </div>
+
+            <h2><a name="updateTheme"></a>updateTheme</h2>
+            <p></p>
+            <p>Save theme params.</p>
+
+            <div class="method">
+                <button class="btn method-PUT">PUT</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//theme</code>
+            </div>
+
+
+                <h3>Request body</h3>
+                <div class="field-items">
+                        <div class="param">
+                            body <span class="model" data-model="Theme"><a href="#Theme">Theme </a></span>
+                            (required)
+                        </div>
+                        <div class="param-desc">
+                            Theme with new params 
+                        </div>
+                </div>
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Theme object with updated params</span>
+                        <span class="dataType model" data-model="Theme"><a href="#Theme">Theme</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Theme"><a href="">Theme</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "blocks" : {
+    "top" : [ {
+      "id" : 12,
+      "position" : 2,
+      "title" : "left-sidebar"
+    }, {
+      "id" : 12,
+      "position" : 2,
+      "title" : "left-sidebar"
+    } ],
+    "left" : [ null, null ],
+    "footer" : [ null, null ],
+    "centre" : [ null, null ],
+    "right" : [ null, null ]
+  },
+  "paths" : [ {
+    "path" : "/about",
+    "exactMatch" : true
+  }, {
+    "path" : "/about",
+    "exactMatch" : true
+  } ],
+  "id" : 0,
+  "title" : "default",
+  "layoutId" : 6
+}</pre>
+                </div>
+
+</div>

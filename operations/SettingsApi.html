@@ -1,0 +1,337 @@
+<div class="main-content">
+    <h1><a name="SettingsApi"></a>settings</h1>
+    <p></p>
+    <p></p>
+            <h2><a name="getCheckoutSettings"></a>getCheckoutSettings</h2>
+            <p></p>
+            <p>Get checkout settings.</p>
+
+            <div class="method">
+                <button class="btn method-GET">GET</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//settings/checkout</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Checkout settings object</span>
+                        <span class="dataType model" data-model="CheckoutSettings"><a href="#CheckoutSettings">CheckoutSettings</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="CheckoutSettings"><a href="">CheckoutSettings</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "termsLabel" : "termsLabel",
+  "termsUrl" : "termsUrl",
+  "contactAgeWhenNeedParent" : 0,
+  "allowCreateContact" : true,
+  "allowChangeContactDetails" : true
+}</pre>
+                </div>
+
+            <h2><a name="getSkillsOnCourseSettings"></a>getSkillsOnCourseSettings</h2>
+            <p></p>
+            <p>Get SkillsOnCourse settings.</p>
+
+            <div class="method">
+                <button class="btn method-GET">GET</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//settings/skillsOnCourse</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> SkillsOnCourse settings object</span>
+                        <span class="dataType model" data-model="SkillsOnCourseSettings"><a href="#SkillsOnCourseSettings">SkillsOnCourseSettings</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="SkillsOnCourseSettings"><a href="">SkillsOnCourseSettings</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "tutorFeedbackEmail" : "tutors@acme.edu.au",
+  "hideStudentDetails" : true,
+  "enableOutcomeMarking" : true
+}</pre>
+                </div>
+
+            <h2><a name="getWebsiteSettings"></a>getWebsiteSettings</h2>
+            <p></p>
+            <p>Get Website settings.</p>
+
+            <div class="method">
+                <button class="btn method-GET">GET</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//settings/website</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Website settings object</span>
+                        <span class="dataType model" data-model="WebsiteSettings"><a href="#WebsiteSettings">WebsiteSettings</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="WebsiteSettings"><a href="">WebsiteSettings</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "enableForCourse" : true,
+  "classAge" : {
+    "hideClass" : {
+      "condition" : "afterClassStarts",
+      "offset" : 2
+    }
+  },
+  "subjectsAsEntity" : true,
+  "extendedSearchTypes" : true,
+  "enableForWebpage" : true,
+  "suburbAutocompleteState" : "ACT",
+  "enableSocialMedia" : true,
+  "addThisId" : "agd5465274",
+  "searchableEntities" : [ "Course", "Course" ]
+}</pre>
+                </div>
+
+            <h2><a name="updateCheckoutSettings"></a>updateCheckoutSettings</h2>
+            <p></p>
+            <p>Save checkout settings.</p>
+
+            <div class="method">
+                <button class="btn method-PUT">PUT</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//settings/checkout</code>
+            </div>
+
+
+                <h3>Request body</h3>
+                <div class="field-items">
+                        <div class="param">
+                            body <span class="model" data-model="CheckoutSettings"><a href="#CheckoutSettings">CheckoutSettings </a></span>
+                            (required)
+                        </div>
+                        <div class="param-desc">
+                            Website settings object 
+                        </div>
+                </div>
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Updated website settings object</span>
+                        <span class="dataType model" data-model="CheckoutSettings"><a href="#CheckoutSettings">CheckoutSettings</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="CheckoutSettings"><a href="">CheckoutSettings</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "termsLabel" : "termsLabel",
+  "termsUrl" : "termsUrl",
+  "contactAgeWhenNeedParent" : 0,
+  "allowCreateContact" : true,
+  "allowChangeContactDetails" : true
+}</pre>
+                </div>
+
+            <h2><a name="updateSkillsOnCourseSettings"></a>updateSkillsOnCourseSettings</h2>
+            <p></p>
+            <p>Save SkillsOnCourse settings.</p>
+
+            <div class="method">
+                <button class="btn method-PUT">PUT</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//settings/skillsOnCourse</code>
+            </div>
+
+
+                <h3>Request body</h3>
+                <div class="field-items">
+                        <div class="param">
+                            body <span class="model" data-model="SkillsOnCourseSettings"><a href="#SkillsOnCourseSettings">SkillsOnCourseSettings </a></span>
+                            (required)
+                        </div>
+                        <div class="param-desc">
+                            SkillsOnCourse settings object 
+                        </div>
+                </div>
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Updated SkillsOnCourse settings object</span>
+                        <span class="dataType model" data-model="SkillsOnCourseSettings"><a href="#SkillsOnCourseSettings">SkillsOnCourseSettings</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="SkillsOnCourseSettings"><a href="">SkillsOnCourseSettings</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "tutorFeedbackEmail" : "tutors@acme.edu.au",
+  "hideStudentDetails" : true,
+  "enableOutcomeMarking" : true
+}</pre>
+                </div>
+
+            <h2><a name="updateWebsiteSettings"></a>updateWebsiteSettings</h2>
+            <p></p>
+            <p>Save website settings.</p>
+
+            <div class="method">
+                <button class="btn method-PUT">PUT</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//settings/website</code>
+            </div>
+
+
+                <h3>Request body</h3>
+                <div class="field-items">
+                        <div class="param">
+                            body <span class="model" data-model="WebsiteSettings"><a href="#WebsiteSettings">WebsiteSettings </a></span>
+                            (required)
+                        </div>
+                        <div class="param-desc">
+                            Website settings object 
+                        </div>
+                </div>
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Updated website settings object</span>
+                        <span class="dataType model" data-model="WebsiteSettings"><a href="#WebsiteSettings">WebsiteSettings</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="WebsiteSettings"><a href="">WebsiteSettings</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "enableForCourse" : true,
+  "classAge" : {
+    "hideClass" : {
+      "condition" : "afterClassStarts",
+      "offset" : 2
+    }
+  },
+  "subjectsAsEntity" : true,
+  "extendedSearchTypes" : true,
+  "enableForWebpage" : true,
+  "suburbAutocompleteState" : "ACT",
+  "enableSocialMedia" : true,
+  "addThisId" : "agd5465274",
+  "searchableEntities" : [ "Course", "Course" ]
+}</pre>
+                </div>
+
+</div>

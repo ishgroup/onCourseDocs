@@ -1,0 +1,151 @@
+<div class="main-content">
+    <h1><a name="AuthApi"></a>auth</h1>
+    <p></p>
+    <p></p>
+            <h2><a name="createSession"></a>createSession</h2>
+            <p></p>
+            <p>Authenticate user by email and password. Returns session token. For all subsequent requests to the API you should ensure a cookie called ESESSIONID is set with this token value. </p>
+
+            <div class="method">
+                <button class="btn method-POST">POST</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//session</code>
+            </div>
+
+
+                <h3>Request body</h3>
+                <div class="field-items">
+                        <div class="param">
+                            body <span class="model" data-model="LoginRequest"><a href="#LoginRequest">LoginRequest </a></span>
+                            (required)
+                        </div>
+                        <div class="param-desc">
+                            Parameters for request user authorization. 
+                        </div>
+                </div>
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Valid session token</span>
+                        <span class="dataType model" data-model="String"><a href="#String">String</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">406</span>
+                        <span class="message"> Login unsuccessful. Invalid login name or password.</span>
+                        <span class="dataType model" data-model=""><a href="#"></a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">409</span>
+                        <span class="message"> There is more than one user with the same login details.</span>
+                        <span class="dataType model" data-model=""><a href="#"></a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="string"><a href="">String</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">""</pre>
+                </div>
+
+            <h2><a name="destroySession"></a>destroySession</h2>
+            <p></p>
+            <p>De-authorise user from editor.</p>
+
+            <div class="method">
+                <button class="btn method-DELETE">DELETE</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//session</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Successful logout. The session token is no longer valid.</span>
+                        <span class="dataType model" data-model=""><a href="#"></a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                    Nothing
+            </div>
+
+
+            <h2><a name="getUser"></a>getUser</h2>
+            <p></p>
+            <p>Get current logged in user.</p>
+
+            <div class="method">
+                <button class="btn method-GET">GET</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//user</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Current user</span>
+                        <span class="dataType model" data-model="User"><a href="#User">User</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="User"><a href="">User</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "firstName" : "John",
+  "lastName" : "Smith"
+}</pre>
+                </div>
+
+</div>

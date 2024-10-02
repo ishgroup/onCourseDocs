@@ -1,0 +1,139 @@
+<div class="main-content">
+    <h1><a name="SpecialPageApi"></a>specialPage</h1>
+    <p></p>
+    <p></p>
+            <h2><a name="getSpecialPages"></a>getSpecialPages</h2>
+            <p></p>
+            <p>Get special page redirects for the whole site.</p>
+
+            <div class="method">
+                <button class="btn method-GET">GET</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//settings/specialPage</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> A list of redirects</span>
+                        <span class="dataType model" data-model="SpecialPages"><a href="#SpecialPages">SpecialPages</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="SpecialPages"><a href="">SpecialPages</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "warnings" : [ {
+    "message" : "message"
+  }, {
+    "message" : "message"
+  } ],
+  "rules" : [ {
+    "specialPage" : "Courses",
+    "matchType" : "EXACT",
+    "from" : "/subject/art",
+    "error" : "This URL is already being redirected\n"
+  }, {
+    "specialPage" : "Courses",
+    "matchType" : "EXACT",
+    "from" : "/subject/art",
+    "error" : "This URL is already being redirected\n"
+  } ]
+}</pre>
+                </div>
+
+            <h2><a name="updateSpecialPages"></a>updateSpecialPages</h2>
+            <p></p>
+            <p>Update all special redirects for web site</p>
+
+            <div class="method">
+                <button class="btn method-PUT">PUT</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//settings/specialPage</code>
+            </div>
+
+
+                <h3>Request body</h3>
+                <div class="field-items">
+                        <div class="param">
+                            body <span class="model" data-model="SpecialPages"><a href="#SpecialPages">SpecialPages </a></span>
+                            (required)
+                        </div>
+                        <div class="param-desc">
+                            List of special pages 
+                        </div>
+                </div>
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> List of special pages</span>
+                        <span class="dataType model" data-model="SpecialPages"><a href="#SpecialPages">SpecialPages</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">400</span>
+                        <span class="message"> Special redirects not saved. Returns list of redirects, some of which may have errors and/or warnings.</span>
+                        
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="SpecialPages"><a href="">SpecialPages</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "warnings" : [ {
+    "message" : "message"
+  }, {
+    "message" : "message"
+  } ],
+  "rules" : [ {
+    "specialPage" : "Courses",
+    "matchType" : "EXACT",
+    "from" : "/subject/art",
+    "error" : "This URL is already being redirected\n"
+  }, {
+    "specialPage" : "Courses",
+    "matchType" : "EXACT",
+    "from" : "/subject/art",
+    "error" : "This URL is already being redirected\n"
+  } ]
+}</pre>
+                </div>
+
+</div>

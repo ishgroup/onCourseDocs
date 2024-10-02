@@ -1,0 +1,258 @@
+<div class="main-content">
+    <h1><a name="PageApi"></a>page</h1>
+    <p></p>
+    <p></p>
+            <h2><a name="createPage"></a>createPage</h2>
+            <p></p>
+            <p>Add new page</p>
+
+            <div class="method">
+                <button class="btn method-POST">POST</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//page</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> New page with unique id and URL</span>
+                        <span class="dataType model" data-model="Page"><a href="#Page">Page</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Page"><a href="">Page</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "urls" : [ {
+    "isDefault" : true,
+    "link" : "/contact"
+  }, {
+    "isDefault" : true,
+    "link" : "/contact"
+  } ],
+  "visible" : true,
+  "themeId" : 6,
+  "id" : 0,
+  "title" : "Contact us",
+  "suppressOnSitemap" : true,
+  "content" : "Phone us on (02) 9550 5001 to find out more."
+}</pre>
+                </div>
+
+            <h2><a name="deletePage"></a>deletePage</h2>
+            <p></p>
+            <p>Remove page by id.</p>
+
+            <div class="method">
+                <button class="btn method-DELETE">DELETE</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//page/{id}</code>
+            </div>
+
+                <h3 class="field-label">Path parameters</h3>
+                <div class="field-items">
+                        <div class="param">
+                            <span class="param-base">id</span> (required)
+                        </div>
+                        <div class="param-desc">
+                            id of page to be deleted 
+                        </div>
+                </div>
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Page successfully deleted</span>
+                        <span class="dataType model" data-model=""><a href="#"></a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                    Nothing
+            </div>
+
+
+            <h2><a name="getPages"></a>getPages</h2>
+            <p></p>
+            <p>Get list of pages.</p>
+
+            <div class="method">
+                <button class="btn method-GET">GET</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//page</code>
+            </div>
+
+
+
+
+                <h3>Query parameters</h3>
+                <div class="field-items">
+                        <div class="param">
+                            pageLink (optional)
+                        </div>
+                        <div class="param-desc">
+                            Optional page link to return a list containing just one page 
+                        </div>
+                </div>
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> List of pages</span>
+                        
+                    </p>
+                    <p>
+                        
+                        <span class="code">403</span>
+                        <span class="message"> Special system page cannot be retrieved</span>
+                        <span class="dataType model" data-model=""><a href="#"></a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Page"><a href="">List</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">[ {
+  "urls" : [ {
+    "isDefault" : true,
+    "link" : "/contact"
+  }, {
+    "isDefault" : true,
+    "link" : "/contact"
+  } ],
+  "visible" : true,
+  "themeId" : 6,
+  "id" : 0,
+  "title" : "Contact us",
+  "suppressOnSitemap" : true,
+  "content" : "Phone us on (02) 9550 5001 to find out more."
+}, {
+  "urls" : [ {
+    "isDefault" : true,
+    "link" : "/contact"
+  }, {
+    "isDefault" : true,
+    "link" : "/contact"
+  } ],
+  "visible" : true,
+  "themeId" : 6,
+  "id" : 0,
+  "title" : "Contact us",
+  "suppressOnSitemap" : true,
+  "content" : "Phone us on (02) 9550 5001 to find out more."
+} ]</pre>
+                </div>
+
+            <h2><a name="updatePage"></a>updatePage</h2>
+            <p></p>
+            <p>Save page parameters.</p>
+
+            <div class="method">
+                <button class="btn method-PUT">PUT</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//page</code>
+            </div>
+
+
+                <h3>Request body</h3>
+                <div class="field-items">
+                        <div class="param">
+                            body <span class="model" data-model="Page"><a href="#Page">Page </a></span>
+                            (required)
+                        </div>
+                        <div class="param-desc">
+                            Page with new params 
+                        </div>
+                </div>
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Page object with updated params</span>
+                        <span class="dataType model" data-model="Page"><a href="#Page">Page</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Page"><a href="">Page</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "urls" : [ {
+    "isDefault" : true,
+    "link" : "/contact"
+  }, {
+    "isDefault" : true,
+    "link" : "/contact"
+  } ],
+  "visible" : true,
+  "themeId" : 6,
+  "id" : 0,
+  "title" : "Contact us",
+  "suppressOnSitemap" : true,
+  "content" : "Phone us on (02) 9550 5001 to find out more."
+}</pre>
+                </div>
+
+</div>

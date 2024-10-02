@@ -1,0 +1,258 @@
+<div class="main-content">
+    <h1><a name="BlockApi"></a>block</h1>
+    <p></p>
+    <p></p>
+            <h2><a name="createBlock"></a>createBlock</h2>
+            <p></p>
+            <p>Add new block.</p>
+
+            <div class="method">
+                <button class="btn method-POST">POST</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//block</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> New block with unique id</span>
+                        <span class="dataType model" data-model="Block"><a href="#Block">Block</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Block"><a href="">Block</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "id" : 0,
+  "title" : "sidebar",
+  "content" : "h3. Subjects\n{tags}"
+}</pre>
+                </div>
+
+            <h2><a name="deleteBlock"></a>deleteBlock</h2>
+            <p></p>
+            <p>Remove block</p>
+
+            <div class="method">
+                <button class="btn method-DELETE">DELETE</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//block/{id}</code>
+            </div>
+
+                <h3 class="field-label">Path parameters</h3>
+                <div class="field-items">
+                        <div class="param">
+                            <span class="param-base">id</span> (required)
+                        </div>
+                        <div class="param-desc">
+                            Identifier of block which will be deleted. 
+                        </div>
+                </div>
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Block successfully deleted</span>
+                        <span class="dataType model" data-model=""><a href="#"></a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                    Nothing
+            </div>
+
+
+            <h2><a name="getBlockById"></a>getBlockById</h2>
+            <p></p>
+            <p>Get block </p>
+
+            <div class="method">
+                <button class="btn method-GET">GET</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//block/{id}</code>
+            </div>
+
+                <h3 class="field-label">Path parameters</h3>
+                <div class="field-items">
+                        <div class="param">
+                            <span class="param-base">id</span> (required)
+                        </div>
+                        <div class="param-desc">
+                            unique block identifier 
+                        </div>
+                </div>
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> block object</span>
+                        <span class="dataType model" data-model="Block"><a href="#Block">Block</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Block"><a href="">Block</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "id" : 0,
+  "title" : "sidebar",
+  "content" : "h3. Subjects\n{tags}"
+}</pre>
+                </div>
+
+            <h2><a name="getBlocks"></a>getBlocks</h2>
+            <p></p>
+            <p>Get list of blocks.</p>
+
+            <div class="method">
+                <button class="btn method-GET">GET</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//block</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Response with array of blocks</span>
+                        
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Block"><a href="">List</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">[ {
+  "id" : 0,
+  "title" : "sidebar",
+  "content" : "h3. Subjects\n{tags}"
+}, {
+  "id" : 0,
+  "title" : "sidebar",
+  "content" : "h3. Subjects\n{tags}"
+} ]</pre>
+                </div>
+
+            <h2><a name="updateBlock"></a>updateBlock</h2>
+            <p></p>
+            <p>Update an existing block.</p>
+
+            <div class="method">
+                <button class="btn method-PUT">PUT</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//block</code>
+            </div>
+
+
+                <h3>Request body</h3>
+                <div class="field-items">
+                        <div class="param">
+                            body <span class="model" data-model="Block"><a href="#Block">Block </a></span>
+                            (required)
+                        </div>
+                        <div class="param-desc">
+                            Block with new params 
+                        </div>
+                </div>
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Block object with updated params</span>
+                        <span class="dataType model" data-model="Block"><a href="#Block">Block</a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Block"><a href="">Block</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">{
+  "id" : 0,
+  "title" : "sidebar",
+  "content" : "h3. Subjects\n{tags}"
+}</pre>
+                </div>
+
+</div>

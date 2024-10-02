@@ -1,0 +1,61 @@
+        <h2>Version</h2>
+        
+        <p class='model-description'>A version of the website. One version is considered published at any time and one version is draft at any time.</p>
+            <ul class="parameter">
+                <li class="param-required-false">
+                    <div>
+                        id <span class="model" data-model="integer"><a href="#integer">integer </a></span>
+                        (optional default: null)
+                    </div>
+                    <div class="param-desc">
+                        unique id of this version
+                    </div>
+                </li>
+            </ul>
+            <ul class="parameter">
+                <li class="param-required-false">
+                    <div>
+                        author <span class="model" data-model="string"><a href="#string">string </a></span>
+                        (optional default: null)
+                    </div>
+                    <div class="param-desc">
+                        First and last name of the user who published this version, or null if still in draft
+                    </div>
+                </li>
+            </ul>
+            <ul class="parameter">
+                <li class="param-required-false">
+                    <div>
+                        changes <span class="model" data-model="integer"><a href="#integer">integer </a></span>
+                        (optional default: null)
+                    </div>
+                    <div class="param-desc">
+                        Count of changes introduced in this version
+                    </div>
+                </li>
+            </ul>
+            <ul class="parameter">
+                <li class="param-required-false">
+                    <div>
+                        publishedOn <span class="model" data-model="DateTime"><a href="#DateTime">DateTime </a></span>
+                        (optional default: null)
+                    </div>
+                    <div class="param-desc">
+                        date and time when version was published or null if it is still in draft
+                    </div>
+                </li>
+            </ul>
+            <ul class="parameter">
+                <li class="param-required-false">
+                    <div>
+                        status <span class="model" data-model="VersionStatus"><a href="#VersionStatus">VersionStatus </a></span>
+                        (optional default: null)
+                    </div>
+                    <div class="param-desc">
+                        
+                    </div>
+                </li>
+            </ul>
+
+
+

@@ -1,0 +1,130 @@
+<div class="main-content">
+    <h1><a name="VersionApi"></a>version</h1>
+    <p></p>
+    <p></p>
+            <h2><a name="getVersions"></a>getVersions</h2>
+            <p></p>
+            <p>Get list of site versions including the current published site and current draft site. Historical versions will be also available here up to a limit which is set by the editor server. Older versions (or beyond a certain number of versions) will be discarded and not avaiable. </p>
+
+            <div class="method">
+                <button class="btn method-GET">GET</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//version</code>
+            </div>
+
+
+
+
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> List of versions</span>
+                        
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                <div class="model" data-model="Version"><a href="">List</a></div>
+            </div>
+
+                <div class="examples">
+                        <h3 class="example">Example data</h3>
+                        <label>Content-Type: application/json</label>
+                        <pre class=".pre-scrollable">[ {
+  "author" : "Jane Smith",
+  "changes" : 12,
+  "publishedOn" : "2000-01-23T04:56:07.000+00:00",
+  "id" : 0,
+  "status" : "published"
+}, {
+  "author" : "Jane Smith",
+  "changes" : 12,
+  "publishedOn" : "2000-01-23T04:56:07.000+00:00",
+  "id" : 0,
+  "status" : "published"
+} ]</pre>
+                </div>
+
+            <h2><a name="updateVersion"></a>updateVersion</h2>
+            <p></p>
+            <p>Change version status. Useage example (put current draft version to production): PATCH /editor/v1/version/123  HTTP/1.1 Host: template-a.oncourse.cc Cookie: ESESSIONID&#x3D;ypCWJgivYKMRM7Hpa8HS Content-Type: application/json  { \&quot;status\&quot;: \&quot;published\&quot; } </p>
+
+            <div class="method">
+                <button class="btn method-PATCH">PATCH</button>
+                <code>https://{siteKey}.oncourse.cc/editor/{versionPath}//version/{id}</code>
+            </div>
+
+                <h3 class="field-label">Path parameters</h3>
+                <div class="field-items">
+                        <div class="param">
+                            <span class="param-base">id</span> (required)
+                        </div>
+                        <div class="param-desc">
+                            id of version 
+                        </div>
+                </div>
+
+                <h3>Request body</h3>
+                <div class="field-items">
+                        <div class="param">
+                            body <span class="model" data-model="Version"><a href="#Version">Version </a></span>
+                            (required)
+                        </div>
+                        <div class="param-desc">
+                            Typically only the published state is modifable for existing versions 
+                        </div>
+                </div>
+
+
+                <h3>Query parameters</h3>
+                <div class="field-items">
+                        <div class="param">
+                            description (required)
+                        </div>
+                        <div class="param-desc">
+                            Commit message 
+                        </div>
+                </div>
+
+
+            <div class="responses">
+                <h3>Responses</h3>
+                    <p>
+                        
+                        <span class="code">200</span>
+                        <span class="message"> Version changed successfully</span>
+                        <span class="dataType model" data-model=""><a href="#"></a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">423</span>
+                        <span class="message"> Version can not be modified at this time - locked by another background task. Please wait for a few minutes and try again. </span>
+                        <span class="dataType model" data-model=""><a href="#"></a></span>
+                    </p>
+                    <p>
+                        
+                        <span class="code">0</span>
+                        <span class="message"> Unexpected error</span>
+                        <span class="dataType model" data-model="UnexpectedError"><a href="#UnexpectedError">UnexpectedError</a></span>
+                    </p>
+            </div>
+
+
+            <div class="return">
+                <h3>Returns</h3>
+                    Nothing
+            </div>
+
+
+</div>
